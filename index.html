@@ -4,14 +4,12 @@
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="1to1lmgptPdQBO6SsdgpAv8meSroswl34D89V78Xvnk" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLOOMTV - نتائج مباشرة تلقائية + ذكاء اصطناعي</title>
-<meta name="description" content="SLOOMTV - نتائج مباشرة تلقائية لجميع مباريات اليوم مع مساعد ذكي">
+<title>SLOOMTV - ChatGPT حقيقي بدون مفتاح</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Tahoma,sans-serif;background:#080810;color:#fff}
 .h{background:linear-gradient(135deg,#14142a,#1e1e4a);padding:20px;text-align:center;border-bottom:3px solid #ff0040}
 .logo{font-size:42px;font-weight:900}.logo span{color:#ffeb3b}
-.badge{background:#0f2815;border:1px solid #22c55e;color:#22c55e;padding:6px 16px;border-radius:30px;display:inline-block;font-size:12px;margin-top:10px;font-weight:800;animation:pulse 2s infinite}
-@keyframes pulse{0%{opacity:1}50%{opacity:0.6}100%{opacity:1}}
+.badge{background:#0f2815;border:1px solid #22c55e;color:#22c55e;padding:6px 16px;border-radius:30px;display:inline-block;font-size:12px;margin-top:10px;font-weight:800}
 .ticker{background:#ff0040;color:#fff;padding:8px;text-align:center;font-size:13px;font-weight:700}
 .container{max-width:750px;margin:0 auto;padding:15px}
 .card{background:#12122a;border:1px solid #222;border-radius:16px;padding:18px;margin-bottom:15px}
@@ -20,110 +18,70 @@
 .score{font-size:32px;font-weight:900;color:#ffeb3b;text-align:center}
 .status{font-size:11px;color:#22c55e;font-weight:700;text-align:center;margin-top:4px}
 .league{font-size:11px;color:#888;margin-bottom:10px;text-align:center}
-.article-card{background:#12122a;border:1px solid #222;border-radius:16px;padding:16px;margin-bottom:14px;border-right:4px solid #ffeb3b}
-.auto-update{text-align:center;color:#888;font-size:11px;margin-top:20px}
-.loading{text-align:center;padding:40px;color:#888}
-/* AI BOT */
-#ai-btn{position:fixed;bottom:20px;left:20px;background:#ffeb3b;color:#000;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;cursor:pointer;box-shadow:0 4px 20px rgba(255,235,59,0.4);z-index:9999;font-weight:900;animation:float 3s infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-#ai-chat{position:fixed;bottom:90px;left:20px;width:340px;max-width:92vw;height:440px;background:#12122a;border:1px solid #333;border-radius:18px;display:none;flex-direction:column;z-index:9999;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.7)}
-#ai-header{background:linear-gradient(90deg,#ff0040,#ff6b6b);padding:12px;text-align:center;font-weight:900;font-size:14px}
-#ai-messages{flex:1;padding:12px;overflow-y:auto;font-size:13px;display:flex;flex-direction:column}
+#ai-btn{position:fixed;bottom:20px;left:20px;background:#ffeb3b;color:#000;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;box-shadow:0 4px 20px rgba(255,235,59,0.5);z-index:9999}
+#ai-chat{position:fixed;bottom:90px;left:20px;width:360px;max-width:93vw;height:480px;background:#12122a;border:1px solid #333;border-radius:18px;display:none;flex-direction:column;z-index:9999;overflow:hidden}
+#ai-header{background:linear-gradient(90deg,#ff0040,#ff6b6b);padding:12px;text-align:center;font-weight:900;font-size:14px;display:flex;justify-content:space-between}
+#ai-messages{flex:1;padding:12px;overflow-y:auto;font-size:13px;display:flex;flex-direction:column;gap:6px}
 #ai-input{display:flex;border-top:1px solid #222;background:#080810}
-#ai-input input{flex:1;background:transparent;border:0;color:white;padding:13px;outline:none;font-size:13px}
-#ai-input button{background:#ffeb3b;border:0;padding:0 18px;font-weight:900;cursor:pointer;font-size:16px}
-.msg-user{background:#ffeb3b;color:#000;padding:8px 12px;border-radius:14px 14px 2px 14px;margin:6px 0;align-self:flex-end;max-width:80%}
-.msg-ai{background:#1e1e3a;padding:8px 12px;border-radius:14px 14px 14px 2px;margin:6px 0;align-self:flex-start;max-width:85%;color:#ddd;line-height:1.5}
+#ai-input input{flex:1;background:transparent;border:0;color:white;padding:13px;outline:none}
+#ai-input button{background:#ffeb3b;border:0;padding:0 18px;font-weight:900;cursor:pointer}
+.msg-user{background:#ffeb3b;color:#000;padding:9px 12px;border-radius:14px 14px 2px 14px;align-self:flex-end;max-width:85%}
+.msg-ai{background:#1e1e3a;padding:9px 12px;border-radius:14px 14px 14px 2px;align-self:flex-start;max-width:88%;color:#ddd;line-height:1.6;white-space:pre-wrap}
 </style>
 </head>
 <body>
-<div class="h">
-<div class="logo">SLOOM<span>TV</span></div>
-<div class="badge">● LIVE - نتائج تلقائية + AI</div>
-</div>
-<div class="ticker">⚽ النتائج تتحدث تلقائيا كل 60 ثانية + اسأل الذكاء الاصطناعي 💬</div>
+<div class="h"><div class="logo">SLOOM<span>TV</span></div><div class="badge">● LIVE + AI حقيقي بدون مفتاح</div></div>
+<div class="ticker">⚽ نتائج تلقائية + ذكاء اصطناعي حقيقي مجاني 💬</div>
+<div class="container" id="matches"><div style="text-align:center;padding:40px;color:#888">جاري جلب المباريات... ⏳</div></div>
 
-<div class="container" id="matches">
-<div class="loading">جاري جلب المباريات الحية... ⏳</div>
-</div>
-
-<div class="auto-update">آخر تحديث: <span id="time"></span> | تحديث تلقائي</div>
-
-<!-- زر وبوت الذكاء الاصطناعي -->
-<div id="ai-btn" onclick="toggleAI()">💬</div>
+<div id="ai-btn" onclick="toggleAI()">🤖</div>
 <div id="ai-chat">
-<div id="ai-header">🤖 SLOOM AI - مساعدك الكروي الذكي</div>
-<div id="ai-messages"><div class="msg-ai">أهلاً يا بطل! 👋<br><br>أنا SLOOM AI، أقدر أجاوبك على:<br>• نتيجة باريس اليوم؟<br>• من هداف الدوري؟<br>• حلل مباراة لوهافر<br>• مباريات اليوم؟<br><br>اسألني أي شي!</div></div>
-<div id="ai-input"><input id="ai-q" placeholder="اكتب سؤالك هنا..." onkeypress="if(event.key==='Enter')askAI()"><button onclick="askAI()">➤</button></div>
+<div id="ai-header"><span>🤖 SLOOM GPT</span><span style="cursor:pointer" onclick="toggleAI()">✕</span></div>
+<div id="ai-messages"><div class="msg-ai">أهلاً! أنا SLOOM GPT الحقيقي 🧠
+
+بدون مفتاح ولا تسجيل - اسألني أي شي:
+• نتيجة مباراة؟
+• تحليل؟
+• واجب، برمجة، قصة؟
+• أي سؤال في الحياة!
+
+جرب الحين 👇</div></div>
+<div id="ai-input"><input id="ai-q" placeholder="اسأل أي شي..." onkeypress="if(event.key==='Enter')askAI()"><button onclick="askAI()">➤</button></div>
 </div>
 
 <script>
 async function loadMatches(){
   try{
-    const res = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard`);
+    const res = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard`);
     const data = await res.json();
     let events = data.events || [];
-    const leagues = ['fra.1','esp.1','ger.1','ita.1'];
-    for(let lg of leagues){
-      try{
-        const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg}/scoreboard`);
-        const d = await r.json();
-        if(d.events) events = events.concat(d.events.slice(0,2));
-      }catch(e){}
-    }
-    const container = document.getElementById('matches');
-    container.innerHTML = '';
-    if(events.length === 0){
-      container.innerHTML = `<div class="card"><div class="match-head"><div class="team">لوهافر</div><div style="text-align:center"><div class="score">1 - 5</div><div class="status">انتهت</div></div><div class="team">باريس</div></div><div style="text-align:center;color:#888;font-size:12px;margin-top:10px">الدوري الفرنسي - نتيجة اليوم</div></div>`;
-    }
-    events.slice(0,10).forEach(ev=>{
-      const comp = ev.competitions[0];
-      const home = comp.competitors[0];
-      const away = comp.competitors[1];
-      const status = comp.status.type.state;
-      let statusText = 'لم تبدأ';
-      if(status === 'in') statusText = 'مباشر ●';
-      if(status === 'post') statusText = 'انتهت';
-      container.innerHTML += `<div class="card"><div class="league">${comp.notes ? comp.notes[0].headline : 'كرة القدم'}</div><div class="match-head"><div class="team">${home.team.abbreviation}</div><div style="text-align:center"><div class="score">${home.score || 0} - ${away.score || 0}</div><div class="status">${statusText} ${comp.status.displayClock || ''}</div></div><div class="team">${away.team.abbreviation}</div></div></div>`;
+    const container=document.getElementById('matches'); container.innerHTML='';
+    if(events.length===0) container.innerHTML=`<div class="card"><div class="match-head"><div class="team">لوهافر</div><div style="text-align:center"><div class="score">1 - 5</div><div class="status">انتهت</div></div><div class="team">باريس</div></div></div>`;
+    events.slice(0,8).forEach(ev=>{
+      const comp=ev.competitions[0]; const home=comp.competitors[0]; const away=comp.competitors[1];
+      container.innerHTML+=`<div class="card"><div class="match-head"><div class="team">${home.team.abbreviation}</div><div style="text-align:center"><div class="score">${home.score||0} - ${away.score||0}</div><div class="status">${comp.status.type.description}</div></div><div class="team">${away.team.abbreviation}</div></div></div>`;
     });
-    container.innerHTML += `<div style="margin-top:25px"><div style="font-size:18px;font-weight:900;border-right:4px solid #ff0040;padding-right:12px;margin-bottom:15px">📰 مقالات وتحليلات</div><div class="article-card"><h3 style="margin:5px 0">مبابي يواصل التألق مع باريس بعد خماسية لوهافر</h3><p style="color:#aaa;font-size:13px">تحليل لأداء باريس سان جيرمان بعد الفوز الكبير 5-1 وأبرز النقاط التكتيكية.</p></div></div>`;
-  }catch(err){
-    document.getElementById('matches').innerHTML = '<div class="loading">جاري المحاولة...</div>';
-  }
+  }catch(e){}
 }
-function updateTime(){document.getElementById('time').innerText = new Date().toLocaleTimeString('ar-EG');}
-updateTime(); loadMatches();
-setInterval(updateTime,1000);
-setInterval(loadMatches,60000);
+loadMatches(); setInterval(loadMatches,60000);
+function toggleAI(){let c=document.getElementById('ai-chat'); c.style.display=c.style.display==='flex'?'none':'flex';}
 
-// AI BOT LOGIC
-function toggleAI(){
-  let c=document.getElementById('ai-chat');
-  c.style.display=c.style.display==='flex'?'none':'flex';
-}
-function askAI(){
-  let q=document.getElementById('ai-q');
-  if(!q.value.trim())return;
-  let m=document.getElementById('ai-messages');
-  m.innerHTML+=`<div class="msg-user">${q.value}</div>`;
-  let userQ=q.value;
-  q.value='';
+async function askAI(){
+  let q=document.getElementById('ai-q'); if(!q.value.trim())return;
+  let m=document.getElementById('ai-messages'); let question=q.value;
+  m.innerHTML+=`<div class="msg-user">${question}</div>`; q.value='';
+  m.innerHTML+=`<div class="msg-ai" id="typing">يكتب... ⏳</div>`; m.scrollTop=m.scrollHeight;
+  try{
+    // API مجاني 100% بدون مفتاح
+    const res = await fetch(`https://text.pollinations.ai/${encodeURIComponent(`أنت مساعد ذكي عربي اسمه SLOOM AI في موقع رياضي SLOOMTV. جاوب باختصار وود بالعربية. السؤال: ${question}`)}`);
+    const text = await res.text();
+    document.getElementById('typing').remove();
+    m.innerHTML+=`<div class="msg-ai">${text}</div>`;
+  }catch(err){
+    document.getElementById('typing')?.remove();
+    m.innerHTML+=`<div class="msg-ai">جرب مرة ثانية، الاتصال بطيء شوي. اسألني: نتيجة باريس؟ أو أي شي!</div>`;
+  }
   m.scrollTop=m.scrollHeight;
-  setTimeout(()=>{
-    let ans=getAnswer(userQ);
-    m.innerHTML+=`<div class="msg-ai">${ans}</div>`;
-    m.scrollTop=m.scrollHeight;
-  },600);
-}
-function getAnswer(q){
-  q=q.toLowerCase();
-  if(q.includes('باريس')||q.includes('لوهافر')||q.includes('5-1')) return 'باريس فاز 5-1 على لوهافر اليوم 🔥<br><br>• ديمبيلي سجل 12\'<br>• لوهافر تعادل 35\'<br>• مبابي حسمها 58\'<br><br>سيطرة كاملة لباريس بعد الدقيقة 50. الفريق متصدر الدوري الفرنسي!';
-  if(q.includes('هداف')) return 'هداف الدوري الفرنسي:<br>1. مبابي - 12 هدف ⚽<br>2. ديمبيلي - 8 أهداف<br>3. لاكازيت - 7 أهداف<br><br>مبابي يواصل التألق مع باريس!';
-  if(q.includes('تحليل')||q.includes('حلل')) return 'تحليل SLOOM AI لمباراة باريس - لوهافر:<br><br>✅ باريس لعب 4-3-3 هجومي<br>✅ الضغط العالي خنق لوهافر<br>✅ نقطة التحول: تبديل الدقيقة 60<br>✅ مبابي استغل المساحات بذكاء<br><br>النتيجة مستحقة 100% 👏';
-  if(q.includes('اليوم')||q.includes('مباريات')) return 'مباريات اليوم الحية تجدها فوق في الصفحة 👆<br>الموقع يحدث كل 60 ثانية تلقائيا من ESPN.<br><br>عندنا: إنجليزي، فرنسي، إسباني، إيطالي!';
-  if(q.includes('سلام')||q.includes('هلا')||q.includes('مرحبا')) return 'هلا والله يا أسطورة SLOOMTV! 😍🔥<br>جاهز أساعدك، اسألني عن أي مباراة!';
-  if(q.includes('من انت')||q.includes('انت مين')) return 'أنا SLOOM AI 🤖 مساعدك الذكي في موقع SLOOMTV<br>أقدر أجاوبك عن النتائج، التحليل، الهدافين، وأي شي كروي!<br>قريباً راح أصير بذكاء ChatGPT الحقيقي وأجاوب على كل شي في الحياة!';
-  return `سؤالك: "${q}"<br><br>أنا الحين أتعلم من نتائج موقعك الحية ⚽<br><br>جرب تسألني:<br>• نتيجة باريس؟<br>• تحليل مباراة لوهافر؟<br>• من هداف الدوري؟<br><br>ولو تبي ذكاء خارق مثل ChatGPT، قول لي أركب لك Groq API المجاني!`;
 }
 </script>
 </body>
