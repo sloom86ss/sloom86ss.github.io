@@ -26,7 +26,88 @@ body{margin:0;font-family:Tahoma;background:#08080f;color:#fff}
 </head>
 <body>
 <div class="header"><h1>⚽ سلوم للمباريات اليوم</h1><p>جدول مرتب حسب الدوريات - كل العالم</p><p id="today" style="font-size:12px;opacity:.8"></p></div>
-<div class="container" id="groups"><div style="text-align:center;padding:30px">⏳ جاري ترتيب الدوريات...</div></div>
+<div<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سلوم للمباريات | أخبار أول بأول وجدول مرتب</title>
+<style>
+body{margin:0;font-family:Tahoma;background:#08080f;color:#fff}
+.header{background:linear-gradient(90deg,#8b5cf6,#3b82f6);padding:20px;text-align:center}
+.news-ticker{background:#d00;color:#fff;padding:8px;white-space:nowrap;overflow:hidden}
+.news-ticker span{display:inline-block;animation:scroll 40s linear infinite}
+@keyframes scroll{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.container{max-width:1000px;margin:auto;padding:15px}
+.news-section{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+@media(max-width:700px){.news-section{grid-template-columns:1fr}}
+.news-card{background:#15151f;border-radius:12px;padding:12px;border:1px solid #222}
+.news-card h3{margin:0 0 6px 0;font-size:13px;line-height:1.4}
+.news-card p{color:#888;font-size:11px;margin:0}
+.news-card a{color:#8b5cf6;text-decoration:none;font-size:11px}
+.league-group{background:#15151f;border-radius:15px;margin-bottom:18px;overflow:hidden;border:1px solid #222}
+.league-head{background:#1e1e2e;padding:10px 15px;font-weight:bold;border-right:4px solid #8b5cf6;display:flex;justify-content:space-between}
+.match-row{display:flex;justify-content:space-between;align-items:center;padding:12px 15px;border-bottom:1px solid #222}
+.match-row:hover{background:#1f1f2f}
+.score-box{background:#000;color:#22c55e;padding:5px 10px;border-radius:6px;font-weight:bold}
+.live{background:#ef4444;color:#fff;padding:3px 7px;border-radius:15px;font-size:10px;margin-right:5px}
+</style>
+</head>
+<body>
+<div class="header"><h1>⚽ سلوم للمباريات اليوم</h1><p>📰 أخبار أول بأول + جدول مرتب حسب الدوريات</p><p id="today" style="font-size:12px"></p></div>
+<div class="news-ticker"><span id="ticker">🔴 مباشر: جاري جلب الأخبار أول بأول من كل دوريات العالم...</span></div>
+<div class="container">
+<h2 style="color:#8b5cf6">📰 آخر الأخبار - تحديث لحظي</h2>
+<div class="news-section" id="newsBox"><p>⏳ جاري جلب الأخبار...</p></div>
+<h2 style="color:#22c55e">📊 جدول المباريات المرتب</h2>
+<div id="groups"><p>⏳ جاري تحميل الجدول...</p></div>
+</div>
+<script>
+document.getElementById('today').innerText=new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+async function loadNews(){
+try{
+let r=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/all/news');
+let d=await r.json();
+let html=''; let tickerText='';
+d.articles.slice(0,6).forEach((a,i)=>{
+let title=a.headline||a.title;
+html+=`<div class="news-card"><h3>🔥 ${title}</h3><p>${(a.description||'').substring(0,90)}...</p><a href="${a.links.web.href}" target="_blank">اقرأ الخبر كامل ←</a><p>⏰ ${new Date(a.published).toLocaleTimeString('ar-EG')}</p></div>`;
+tickerText+=` 🚨 ${title} • `;
+});
+document.getElementById('newsBox').innerHTML=html;
+document.getElementById('ticker').innerText='🔴 عاجل أول بأول: '+tickerText;
+}catch(e){document.getElementById('newsBox').innerHTML='<p>أخبار كرة القدم تتحدث تلقائياً</p>';}
+}
+async function loadMatches(){
+try{
+let res=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard');
+let data=await res.json();
+let leagues={};
+data.events.forEach(ev=>{
+let lg=ev.leagues?ev.leagues[0].name:'دوريات أخرى';
+if(!leagues[lg]) leagues[lg]=[];
+leagues[lg].push(ev);
+});
+let html='';
+for(let lg in leagues){
+let icon= lg.includes('Saudi')?'🇸🇦': lg.includes('LaLiga')||lg.includes('Spanish')?'🇪🇸': lg.includes('Premier')?'🏴󠁧󠁢󠁥󠁮󠁧󠁿': lg.includes('Serie')?'🇮🇹': lg.includes('Bundes')?'🇩🇪': lg.includes('Champions')?'⭐':'🏆';
+html+=`<div class="league-group"><div class="league-head"><span>${icon} ${lg}</span><span style="color:#888;font-size:11px">${leagues[lg].length} مباريات</span></div>`;
+leagues[lg].forEach(ev=>{
+let home=ev.competitions[0].competitors[0];
+let away=ev.competitions[0].competitors[1];
+let isLive=ev.status.type.name=='STATUS_IN_PROGRESS';
+html+=`<div class="match-row"><div>${home.team.displayName} VS ${away.team.displayName} ${isLive?'<span class="live">مباشر</span>':''}</div><div class="score-box">${home.score||0} - ${away.score||0}</div></div>`;
+});
+html+='</div>';
+}
+document.getElementById('groups').innerHTML=html;
+}catch(e){}
+}
+loadNews(); loadMatches();
+setInterval(()=>{loadNews(); loadMatches();},60000);
+</script>
+</body>
+</html> style="text-align:center;padding:30px">⏳ جاري ترتيب الدوريات...</div></div>
 <script>
 document.getElementById('today').innerText=new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 async function load(){
