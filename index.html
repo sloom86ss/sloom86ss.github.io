@@ -1,191 +1,331 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- SEO -->
-<title>سلوم تيفي | نتائج مباشرة لحظية | sloomtv</title>
-<meta name="description" content="سلوم تيفي - نتائج مباشرة لحظية، أهداف، بطاقات، جدول ترتيب الدوريات الخمسة الكبرى، إحصائيات - sloomtv الرسمي">
-<meta name="keywords" content="سلوم تيفي,sloomtv,نتائج مباشرة,روشن,الدوري الإنجليزي,ترتيب">
-<meta property="og:title" content="سلوم تيفي - مثل 365">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsEvent","name":"SLOOM TV Live","organizer":{"@type":"Organization","name":"سلوم تيفي"}}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سلوم تيفي | SLOOM TV</title>
+<meta name="description" content="سلوم تيفي - نتائج مباريات كرة القدم المباشرة ومواعيد المباريات">
+<meta name="theme-color" content="#121212">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;font-family:'Tajawal',sans-serif;margin:0}
-body{background:#121212;color:#fff;overflow-x:hidden}
-.header365{background:#1f1f1f;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #00d084;position:sticky;top:0;z-index:30}
-.logo365{background:linear-gradient(135deg,#6a2db8,#00d084);color:#fff;padding:8px 18px;border-radius:10px;font-weight:900;font-size:18px}
-
-/* 1. النتائج المباشرة في الأعلى */
-.ticker365{background:#ff1744;color:#fff;padding:7px 0;font-weight:900;font-size:12px;white-space:nowrap;overflow:hidden}
-.ticker365 span{display:inline-block;animation:scroll 40s linear infinite;padding-right:100%}
-@keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
-
-.time365{background:#1f1f1f;padding:8px;display:flex;justify-content:space-around;font-size:11px;color:#888;border-bottom:1px solid #222}
-.time365 bdi{color:#fff;font-weight:900}
-.wrap365{max-width:600px;margin:0 auto;padding:8px}
-.title365{background:#1f1f1f;color:#00d084;padding:12px;text-align:center;border-radius:10px;font-weight:900;border:1px solid #2a2a2a;margin-bottom:8px}
-.tabs365{display:flex;gap:6px;margin-bottom:8px}
-.tab365{flex:1;padding:11px;background:#2a2a2a;border:none;color:#aaa;border-radius:8px;font-weight:900;font-size:12px;cursor:pointer}
-.tab365.active{background:#00d084;color:#000}
-.chips365{display:flex;gap:6px;overflow-x:auto;padding:6px 0;margin-bottom:8px;scrollbar-width:none}
-.chips365::-webkit-scrollbar{display:none}
-.chip365{padding:6px 12px;background:#2a2a2a;color:#fff;border-radius:20px;font-size:11px;font-weight:700;flex-shrink:0;border:1px solid #333;cursor:pointer}
-.chip365.active{background:#6a2db8;border-color:#6a2db8}
-.leagueHeader{background:#1f1f1f;color:#00d084;padding:8px 12px;border-radius:8px 8px 0 0;font-size:11px;font-weight:900;border:1px solid #2a2a2a;border-bottom:none;display:flex;justify-content:space-between}
-.card365{background:#1f1f1f;border:1px solid #2a2a2a;border-radius:0 0 10px 10px;margin-bottom:12px;overflow:hidden}
-.row365{display:flex;justify-content:space-between;align-items:center;padding:12px;border-bottom:1px solid #222}
-.team365{display:flex;align-items:center;gap:8px;width:38%;font-weight:700;font-size:13px}
-.team365.right{justify-content:flex-end;flex-direction:row-reverse}
-.logo365img{width:32px;height:32px;border-radius:50%;background:#fff;padding:4px;object-fit:contain}
-.score365{width:24%;text-align:center}
-.num365{font-size:20px;font-weight:900;direction:ltr}
-.minute365{font-size:10px;padding:4px 8px;border-radius:10px;font-weight:900;margin-top:3px;display:inline-block}
-.live365{background:#ff1744;color:#fff;animation:blink 1s infinite}
-.ft365{background:#333;color:#aaa}
-.soon365{background:#00d084;color:#000}
-@keyframes blink{50%{opacity:.4}}
-.sloom365{text-align:center;padding:7px;background:#161616;color:#6a2db8;font-size:10px;font-weight:700}
-/* 4. جدول الترتيب */
-.table365{width:100%;background:#1f1f1f;border-radius:10px;border:1px solid #2a2a2a;overflow:hidden;margin-bottom:12px}
-.table365 th{background:#2a2a2a;color:#00d084;padding:10px 6px;font-size:11px}
-.table365 td{padding:9px 6px;font-size:12px;text-align:center;border-top:1px solid #222}
+*{box-sizing:border-box;font-family:Tajawal,sans-serif}
+body{margin:0;background:#121212;color:#fff}
+.header{background:#1f1f1f;padding:14px;display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #00d084;position:sticky;top:0;z-index:10}
+.logo{background:linear-gradient(135deg,#6a2db8,#00d084);padding:9px 17px;border-radius:10px;font-weight:900;font-size:19px}
+.live-label{background:#00d084;color:#000;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:900}
+.ticker{background:#b81736;padding:9px;text-align:center;font-size:12px;font-weight:900;min-height:36px}
+.time{display:flex;justify-content:space-around;background:#1f1f1f;padding:10px;color:#aaa;font-size:12px}
+.time b{color:#fff}
+.wrap{max-width:650px;margin:auto;padding:10px}
+.title{background:#1f1f1f;color:#00d084;padding:13px;text-align:center;border-radius:10px;font-weight:900;margin-bottom:10px}
+.tabs{display:flex;gap:6px;margin-bottom:10px}
+.tab{flex:1;padding:11px 5px;background:#292929;border:0;border-radius:8px;color:#aaa;font-weight:900;cursor:pointer}
+.tab.active{background:#00d084;color:#000}
+.filters{display:flex;gap:7px;overflow-x:auto;padding:5px 0 12px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.chip{flex-shrink:0;background:#292929;color:#fff;border:1px solid #444;border-radius:20px;padding:7px 13px;font-size:12px;cursor:pointer}
+.chip.active{background:#6a2db8;border-color:#6a2db8}
+.league{background:#1f1f1f;color:#00d084;padding:10px;border-radius:9px 9px 0 0;font-size:12px;font-weight:900;margin-top:10px}
+.match{background:#1f1f1f;border:1px solid #303030;padding:13px 8px;display:flex;align-items:center;justify-content:space-between;gap:4px}
+.team{width:38%;display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700}
+.team:last-child{justify-content:flex-end}
+.team img{width:29px;height:29px;object-fit:contain;background:#fff;border-radius:50%;padding:3px}
+.score{width:24%;text-align:center}
+.numbers{font-size:19px;font-weight:900;direction:ltr}
+.status{display:inline-block;margin-top:4px;padding:4px 7px;border-radius:12px;font-size:10px;font-weight:900;background:#333;color:#ddd}
+.status.live{background:#ff1744;color:#fff}
+.status.pre{background:#00d084;color:#000}
+.status.done{background:#333;color:#aaa}
+.footer{background:#161616;text-align:center;color:#777;padding:9px;font-size:10px}
+.message{background:#1f1f1f;border:1px solid #333;border-radius:10px;padding:22px;text-align:center;color:#bbb;margin:12px 0;line-height:2}
+.refresh{display:block;margin:12px auto;background:#00d084;color:#000;border:0;border-radius:8px;padding:10px 20px;font-weight:900;cursor:pointer}
+.small{font-size:11px;color:#888;text-align:center;margin:10px}
+@keyframes blink{50%{opacity:.5}}
+.status.live{animation:blink 1.2s infinite}
+@media(max-width:380px){.team{font-size:10px}.team img{width:24px;height:24px}.numbers{font-size:16px}.tab{font-size:11px}}
 </style>
 </head>
+
 <body>
-<div class="header365">
-<div class="logo365">سلوم تيفي</div>
-<div style="display:flex;gap:6px;align-items:center"><button onclick="toggleLang()" id="lb" style="background:#2a2a2a;color:#fff;border:1px solid #444;border-radius:20px;padding:5px 10px;font-size:10px">EN</button><div style="background:#00d084;color:#000;padding:5px 10px;border-radius:20px;font-weight:900;font-size:11px">● LIVE</div></div>
+<header class="header">
+  <div class="logo">سلوم تيفي</div>
+  <div class="live-label">● LIVE</div>
+</header>
+
+<div class="ticker" id="ticker">سلوم تيفي | جاري تحميل المباريات...</div>
+
+<div class="time">
+  <div>🇴🇲 مسقط <b id="oma">--:--:--</b></div>
+  <div>🇸🇦 الرياض <b id="ksa">--:--:--</b></div>
 </div>
 
-<!-- 1. واجهة النتائج المباشرة لحظيا في الأعلى -->
-<div class="ticker365"><span id="ticker">🔴 LIVE الآن: جاري تحميل الأهداف والبطاقات... - sloomtv - ملخصات باسم سلوم تي في</span></div>
+<main class="wrap">
+  <div class="title" id="pageTitle">مباريات اليوم</div>
 
-<div class="time365"><div>🇴🇲 مسقط <bdi id="oma">--:--:--</bdi></div><div>🇸🇦 الرياض <bdi id="ksa">--:--:--</bdi></div><div>⏱️ تحديث 10 ثواني</div></div>
+  <div class="tabs">
+    <button class="tab" data-day="-1" onclick="selectDay(-1,this)">الأمس</button>
+    <button class="tab active" data-day="0" onclick="selectDay(0,this)">اليوم</button>
+    <button class="tab" data-day="1" onclick="selectDay(1,this)">الغد</button>
+  </div>
 
-<div class="wrap365">
-<div class="title365" id="tt">مباريات اليوم - LIVE</div>
-<div class="tabs365"><button class="tab365" id="tabAms" onclick="show('ams')">الأمس</button><button class="tab365 active" id="tabToday" onclick="show('today')">اليوم LIVE</button><button class="tab365" id="tabGhad" onclick="show('ghad')">الغد</button><button class="tab365" id="tabTable" onclick="show('table')">الترتيب</button></div>
-<div class="chips365" id="lbar"></div>
-<div id="list">سلوم تيفي - جاري تحميل المباريات...</div>
-<div id="tableBox" style="display:none"></div>
-</div>
+  <div class="filters" id="filters"></div>
+  <div id="matches">
+    <div class="message">جاري تحميل المباريات...</div>
+  </div>
+
+  <button class="refresh" onclick="loadAll()">تحديث النتائج ↻</button>
+  <div class="small">يتم جلب البيانات من خدمة ESPN الرياضية. قد تختلف التغطية حسب الدوري.</div>
+</main>
+
+<footer class="footer">© SLOOM TV - سلوم تيفي</footer>
 
 <script>
-let cur='today',curL='all',lang='ar';
 const leagues=[
-{id:'all',n:'الكل',en:'All'},
-{id:'sau.1',n:'روشن 🇸🇦',en:'Roshn'},
-{id:'eng.1',n:'الإنجليزي',en:'Premier'},
-{id:'esp.1',n:'الإسباني',en:'LaLiga'},
-{id:'ita.1',n:'الإيطالي',en:'Serie A'},
-{id:'ger.1',n:'الألماني',en:'Bundes'},
-{id:'fra.1',n:'الفرنسي',en:'Ligue1'},
-{id:'uefa.champions',n:'الأبطال',en:'UCL'}
+ {id:"all",name:"كل الدوريات"},
+ {id:"sau.1",name:"الدوري السعودي"},
+ {id:"eng.1",name:"الدوري الإنجليزي"},
+ {id:"esp.1",name:"الدوري الإسباني"},
+ {id:"ita.1",name:"الدوري الإيطالي"},
+ {id:"ger.1",name:"الدوري الألماني"},
+ {id:"fra.1",name:"الدوري الفرنسي"},
+ {id:"uefa.champions",name:"دوري الأبطال"}
 ];
-const logos={
-'MAN':'https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg',
-'CHE':'https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg',
-'BOU':'https://upload.wikimedia.org/wikipedia/en/e/e5/AFC_Bournemouth_%282013%29.svg',
-'MCI':'https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg',
-'ARS':'https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg',
-'HIL':'https://upload.wikimedia.org/wikipedia/en/a/a7/Al_Hilal_SFC_logo.svg',
-'ITT':'https://upload.wikimedia.org/wikipedia/commons/7/7d/Al-Ittihad_logo.svg',
-'NAS':'https://upload.wikimedia.org/wikipedia/commons/4/43/Al-Nassr_logo.svg',
-'FCB':'https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg',
-'RMA':'https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg'
+
+const arabicNames={
+ "Al Hilal":"الهلال","Al-Hilal":"الهلال",
+ "Al Nassr":"النصر","Al-Nassr":"النصر",
+ "Al Ittihad":"الاتحاد","Al-Ittihad":"الاتحاد",
+ "Al Ahli":"الأهلي","Al-Ahli":"الأهلي",
+ "Manchester United":"مانشستر يونايتد",
+ "Manchester City":"مانشستر سيتي",
+ "Chelsea":"تشيلسي","Arsenal":"أرسنال",
+ "Liverpool":"ليفربول","Barcelona":"برشلونة",
+ "Real Madrid":"ريال مدريد","Atletico Madrid":"أتلتيكو مدريد",
+ "Bayern Munich":"بايرن ميونخ",
+ "Paris Saint-Germain":"باريس سان جيرمان"
 };
-const nameAR={
-"Al Hilal":"الهلال","Al Ittihad":"الاتحاد","Al Nassr":"النصر","Manchester United":"مانشستر يونايتد","Chelsea":"تشيلسي","Bournemouth":"بورنموث","Manchester City":"مانشستر سيتي","Arsenal":"أرسنال","Leeds United":"ليدز","Barcelona":"برشلونة","Real Madrid":"ريال مدريد","Leeds":"ليدز"
-};
 
-let store={today:[],ams:[],ghad:[]};
-function dateStr(o=0){let d=new Date();d.setDate(d.getDate()+o);return d.toISOString().slice(0,10).replace(/-/g,'');}
+let selectedDay=0;
+let selectedLeague="all";
+let matches={ "-1":[], "0":[], "1":[] };
+let loading=false;
 
-async function bot365(league,date){
-try{
-let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${league}/scoreboard?dates=${date}`,{cache:'no-store'});
-let j=await r.json();
-if(!j.events) return [];
-return j.events.map(ev=>{
-let c=ev.competitions[0]; let h=c.competitors.find(x=>x.homeAway==='home'); let a=c.competitors.find(x=>x.homeAway==='away');
-let state=c.status.type.state;
-let minute= state==='in'? (c.status.displayClock||'LIVE 67\'') : state==='pre'? c.status.type.shortDetail : `FT ${h.score||0}-${a.score||0}`;
-let hEN=h.team.displayName,aEN=a.team.displayName;
-let hAR=nameAR[hEN]||hEN,aAR=nameAR[aEN]||aEN;
-let colorH='#'+(h.team.color||'6a2db8'), colorA='#'+(a.team.color||'333');
-return {h:hAR,a:aAR,hs:h.score||'0',as:a.score||'0',minute:minute,state:state,lg:league,sh:h.team.abbreviation?.slice(0,3).toUpperCase()||hAR.slice(0,3),sa:a.team.abbreviation?.slice(0,3).toUpperCase()||aAR.slice(0,3),logoH:logos[h.team.abbreviation?.slice(0,3).toUpperCase()]||'',logoA:logos[a.team.abbreviation?.slice(0,3).toUpperCase()]||'',c1:colorH,c2:colorA}
-});
-}catch{return []}
+function dateForOffset(offset){
+ const parts=new Intl.DateTimeFormat("en-CA",{
+  timeZone:"Asia/Muscat",
+  year:"numeric",month:"2-digit",day:"2-digit"
+ }).formatToParts(new Date());
+
+ const p={};
+ parts.forEach(x=>p[x.type]=x.value);
+
+ const d=new Date(Date.UTC(
+  Number(p.year),Number(p.month)-1,Number(p.day)+offset
+ ));
+
+ return d.getUTCFullYear()+
+  String(d.getUTCMonth()+1).padStart(2,"0")+
+  String(d.getUTCDate()).padStart(2,"0");
 }
 
-async function load365(){
-let t=dateStr(0);
-let all=await Promise.all(leagues.filter(l=>l.id!=='all').map(l=>bot365(l.id,t)));
-let tt=all.flat();
-if(tt.length===0){
-tt=[
-{h:"الهلال",a:"الاتحاد",hs:"2",as:"1",minute:"FT 2-1 ⚽ ميتروفيتش",state:"post",lg:"sau.1",sh:"HIL",sa:"ITT",logoH:logos['HIL'],logoA:logos['ITT'],c1:"#1a2aff",c2:"#ffcc00"},
-{h:"مانشستر يونايتد",a:"تشيلسي",hs:"0",as:"1",minute:"67' 🟨 بطاقة",state:"in",lg:"eng.1",sh:"MAN",sa:"CHE",logoH:logos['MAN'],logoA:logos['CHE'],c1:"#DA020E",c2:"#034694"},
-{h:"مانشستر سيتي",a:"أرسنال",hs:"1",as:"0",minute:"34' ⚽ هالاند",state:"in",lg:"eng.1",sh:"MCI",sa:"ARS",logoH:logos['MCI'],logoA:logos['ARS'],c1:"#6CABDF",c2:"#FF0000"},
-{h:"برشلونة",a:"ريال مدريد",hs:"0",as:"0",minute:"22:00",state:"pre",lg:"esp.1",sh:"FCB",sa:"RMA",logoH:logos['FCB'],logoA:logos['RMA'],c1:"#A50044",c2:"#fff"}
-];
-}
-tt.sort((a,b)=>{if(a.state==='in'&&b.state!=='in')return -1;if(b.state==='in'&&a.state!=='in')return 1;return 0;});
-store.today=tt;store.ams=tt;store.ghad=tt;
-render();
-// تحديث شريط الأهداف المباشر فوق
-let live=tt.filter(m=>m.state==='in').map(m=>`🔴 ${m.h} ${m.hs}-${m.as} ${m.a} ${m.minute}`).join(' - ');
-if(live) document.getElementById('ticker').textContent=live+' - ملخصات باسم سلوم تي في - sloomtv';
+function teamName(name){
+ return arabicNames[name]||name||"فريق";
 }
 
-function logoEl(abbr,url,color){
-if(url) return `<img src="${url}" class="logo365img" loading="lazy" onerror="this.outerHTML='<div class=logo365img style=background:${color};color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px>${abbr}</div>'">`;
-return `<div class="logo365img" style="background:${color};color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px">${abbr}</div>`;
+async function getLeagueMatches(league,date){
+ const url=`https://site.api.espn.com/apis/site/v2/sports/soccer/${league}/scoreboard?dates=${date}`;
+
+ try{
+  const response=await fetch(url,{cache:"no-store"});
+  if(!response.ok) throw new Error("API error");
+
+  const data=await response.json();
+  if(!Array.isArray(data.events)) return [];
+
+  return data.events.map(event=>{
+   const competition=event.competitions?.[0];
+   if(!competition) return null;
+
+   const home=competition.competitors?.find(x=>x.homeAway==="home");
+   const away=competition.competitors?.find(x=>x.homeAway==="away");
+   if(!home||!away) return null;
+
+   const status=competition.status?.type;
+   const state=status?.state||"pre";
+
+   return {
+    home:teamName(home.team?.displayName),
+    away:teamName(away.team?.displayName),
+    homeScore:home.score??"-",
+    awayScore:away.score??"-",
+    homeLogo:home.team?.logo||"",
+    awayLogo:away.team?.logo||"",
+    league:league,
+    state:state,
+    clock:state==="in"
+      ?(competition.status?.displayClock||"مباشر")
+      :state==="post"
+       ?(status?.shortDetail||"انتهت")
+       :(status?.shortDetail||"لم تبدأ"),
+    kickoff:event.date||""
+   };
+  }).filter(Boolean);
+
+ }catch(error){
+  console.warn("تعذر تحميل الدوري:",league,error);
+  return [];
+ }
+}
+
+async function getDay(offset){
+ const date=dateForOffset(offset);
+
+ const results=await Promise.all(
+  leagues.filter(x=>x.id!=="all")
+   .map(x=>getLeagueMatches(x.id,date))
+ );
+
+ return results.flat().sort((a,b)=>{
+  if(a.state==="in"&&b.state!=="in") return -1;
+  if(b.state==="in"&&a.state!=="in") return 1;
+  return new Date(a.kickoff)-new Date(b.kickoff);
+ });
+}
+
+async function loadAll(){
+ if(loading)return;
+ loading=true;
+
+ document.getElementById("matches").innerHTML=
+  '<div class="message">جاري تحديث النتائج...</div>';
+
+ try{
+  const days=await Promise.all([-1,0,1].map(async offset=>{
+   return [offset,await getDay(offset)];
+  }));
+
+  days.forEach(([offset,data])=>{
+   matches[String(offset)]=data;
+  });
+
+  render();
+  updateTicker();
+
+ }catch(error){
+  document.getElementById("matches").innerHTML=
+   '<div class="message">تعذر تحميل البيانات حالياً. تحقق من اتصال الإنترنت وحاول مجدداً.</div>';
+ }finally{
+  loading=false;
+ }
+}
+
+function logo(url){
+ if(!url)return "";
+ return `<img src="${url}" loading="lazy" alt="" onerror="this.style.display='none'">`;
 }
 
 function render(){
-if(cur==='table'){showTable();return;}
-document.getElementById('tableBox').style.display='none';
-document.getElementById('list').style.display='block';
-let list=store[cur].filter(m=>curL==='all'||m.lg===curL);
-let html='', grouped={};
-list.forEach(m=>{if(!grouped[m.lg]) grouped[m.lg]=[];grouped[m.lg].push(m);});
-for(let lg in grouped){
-html+=`<div class="leagueHeader"><div>🏆 ${lg.toUpperCase()}</div><div>${grouped[lg].length} مباريات</div></div><div class="card365">`;
-grouped[lg].forEach(m=>{
-let badge=m.state==='in'?'live365':m.state==='post'?'ft365':'soon365';
-html+=`<div class="row365"><div class="team365">${logoEl(m.sh,m.logoH,m.c1)}<span>${m.h}</span></div><div class="score365"><div class="num365">${m.hs} - ${m.as}</div><div class="minute365 ${badge}">${m.minute}</div></div><div class="team365 right"><span>${m.a}</span>${logoEl(m.sa,m.logoA,m.c2)}</div></div>`;
-});
-html+=`<div class="sloom365">ملخصات باسم سلوم تي في - sloomtv</div></div>`;
-}
-document.getElementById('list').innerHTML=html||'لا توجد مباريات';
+ const title=selectedDay===-1?"مباريات الأمس":
+  selectedDay===1?"مباريات الغد":"مباريات اليوم";
+
+ document.getElementById("pageTitle").textContent=title;
+
+ let list=matches[String(selectedDay)]||[];
+
+ if(selectedLeague!=="all"){
+  list=list.filter(x=>x.league===selectedLeague);
+ }
+
+ const container=document.getElementById("matches");
+
+ if(!list.length){
+  container.innerHTML=
+   '<div class="message">لا توجد مباريات مسجلة لهذا اليوم أو تعذر جلب بياناتها من المصدر.</div>';
+  return;
+ }
+
+ const groups={};
+
+ list.forEach(match=>{
+  if(!groups[match.league])groups[match.league]=[];
+  groups[match.league].push(match);
+ });
+
+ let html="";
+
+ Object.keys(groups).forEach(id=>{
+  const league=leagues.find(x=>x.id===id);
+  html+=`<div class="league">${league?.name||id.toUpperCase()} · ${groups[id].length} مباريات</div>`;
+
+  groups[id].forEach(m=>{
+   const statusClass=m.state==="in"?"live":
+    m.state==="post"?"done":"pre";
+
+   html+=`
+    <div class="match">
+     <div class="team">${logo(m.homeLogo)}<span>${m.home}</span></div>
+     <div class="score">
+      <div class="numbers">${m.homeScore} - ${m.awayScore}</div>
+      <span class="status ${statusClass}">${m.clock}</span>
+     </div>
+     <div class="team">${logo(m.awayLogo)}<span>${m.away}</span></div>
+    </div>`;
+  });
+
+  html+='<div class="footer">SLOOM TV | سلوم تيفي</div>';
+ });
+
+ container.innerHTML=html;
 }
 
-function showTable(){
-document.getElementById('list').style.display='none';
-let box=document.getElementById('tableBox');
-box.style.display='block';
-box.innerHTML=`
-<div class="table365"><table style="width:100%"><tr><th>#</th><th>الفريق</th><th>لعب</th><th>نقاط</th></tr>
-<tr><td style="color:#00d084;font-weight:900">1</td><td style="text-align:right">الهلال</td><td>12</td><td>30</td></tr>
-<tr><td style="color:#00d084">2</td><td style="text-align:right">الاتحاد</td><td>12</td><td>28</td></tr>
-<tr><td>3</td><td style="text-align:right">النصر</td><td>12</td><td>25</td></tr>
-<tr><td>4</td><td style="text-align:right">الأهلي</td><td>12</td><td>22</td></tr>
-</table><div class="sloom365">جدول روشن - sloomtv</div></div>
-<div class="table365"><table style="width:100%"><tr><th>اللاعب</th><th>الفريق</th><th>أهداف</th></tr>
-<tr><td>ميتروفيتش</td><td>الهلال</td><td>11 ⚽</td></tr>
-<tr><td>رونالدو</td><td>النصر</td><td>9 ⚽</td></tr>
-<tr><td>هالاند</td><td>مانشستر سيتي</td><td>8 ⚽</td></tr>
-</table><div class="sloom365">إحصائيات اللاعبين - سلوم تي في</div></div>`;
+function renderFilters(){
+ document.getElementById("filters").innerHTML=
+  leagues.map(l=>`
+   <button class="chip ${selectedLeague===l.id?"active":""}"
+    onclick="selectLeague('${l.id}')">${l.name}</button>
+  `).join("");
 }
 
-function renderL(){let h='';leagues.forEach(l=>{h+=`<div class="chip365 ${curL===l.id?'active':''}" onclick="curL='${l.id}';renderL();render();">${lang==='ar'?l.n:l.en}</div>`});document.getElementById('lbar').innerHTML=h;}
-window.show=(d)=>{cur=d;document.querySelectorAll('.tab365').forEach(t=>t.classList.remove('active'));let id=d==='today'?'tabToday':d==='ams'?'tabAms':d==='ghad'?'tabGhad':'tabTable';if(document.getElementById(id))document.getElementById(id).classList.add('active');render();}
-function toggleLang(){lang=lang==='ar'?'en':'ar';document.documentElement.dir=lang==='ar'?'rtl':'ltr';renderL();}
-function clock(){let n=new Date();document.getElementById('ksa').textContent=n.toLocaleTimeString('en-GB',{timeZone:'Asia/Riyadh',hour12:false});document.getElementById('oma').textContent=n.toLocaleTimeString('en-GB',{timeZone:'Asia/Muscat',hour12:false});}
-setInterval(clock,1000);clock();renderL();load365();setInterval(load365,10000);
+function selectLeague(id){
+ selectedLeague=id;
+ renderFilters();
+ render();
+}
+
+function selectDay(day,button){
+ selectedDay=day;
+ document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+ button.classList.add("active");
+ render();
+}
+
+function updateTicker(){
+ const live=matches["0"].filter(x=>x.state==="in");
+
+ document.getElementById("ticker").textContent=live.length
+  ? "🔴 مباشر الآن: "+live.map(x=>
+    `${x.home} ${x.homeScore}-${x.awayScore} ${x.away}`
+   ).join(" | ")
+  : "سلوم تيفي | تابع نتائج ومواعيد مباريات اليوم";
+}
+
+function updateClocks(){
+ const now=new Date();
+
+ document.getElementById("oma").textContent=
+  now.toLocaleTimeString("en-GB",{timeZone:"Asia/Muscat",hour12:false});
+
+ document.getElementById("ksa").textContent=
+  now.toLocaleTimeString("en-GB",{timeZone:"Asia/Riyadh",hour12:false});
+}
+
+renderFilters();
+updateClocks();
+setInterval(updateClocks,1000);
+loadAll();
+setInterval(loadAll,60000);
 </script>
 </body>
 </html>
