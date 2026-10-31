@@ -10,11 +10,17 @@
   .header{background:linear-gradient(90deg,#0d1b2a,#1b263b);padding:15px;text-align:center;border-bottom:3px solid #00ff88;position:sticky;top:0;z-index:100}
   .logo{font-size:28px;font-weight:900;color:#00ff88}
   .logo span{color:#fff}
-  /* الساعة الاحترافية */
   .clock-box{background:linear-gradient(135deg,#111827,#1f2937);border:1px solid #00ff8855;border-radius:15px;padding:15px;margin:15px;text-align:center;box-shadow:0 0 20px #00ff8822}
   .clock-time{font-size:36px;font-weight:900;letter-spacing:2px;color:#00ff88;text-shadow:0 0 10px #00ff88}
   .clock-date{font-size:14px;color:#9ca3af;margin-top:5px}
   .clock-city{font-size:12px;color:#00ff88;background:#00ff8822;padding:3px 10px;border-radius:20px;display:inline-block;margin-top:8px}
+  /* شبكة البوتات */
+  .bots-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:15px}
+  .bot-card{background:#111827;border-radius:10px;padding:10px;font-size:11px;border-right:3px solid var(--c);position:relative;overflow:hidden}
+  .bot-card::before{content:'';position:absolute;top:0;right:0;width:100%;height:2px;background:var(--c);animation:load 5s linear infinite}
+  @keyframes load{0%{width:0}100%{width:100%}}
+  .bot-name{font-weight:900;color:var(--c);font-size:12px}
+  .bot-time{color:#9ca3af;margin-top:4px;font-size:10px}
   .match-card{background:#111827;margin:12px;border-radius:12px;padding:15px;border-right:4px solid #00ff88}
   .league{color:#00ff88;font-size:13px;font-weight:700}
   .teams{display:flex;justify-content:space-between;align-items:center;margin:10px 0;font-size:18px;font-weight:700}
@@ -27,45 +33,70 @@
 <body>
 
 <div class="header">
-  <div class="logo">SLOOM <span>TV LIVE</span></div>
+  <div class="logo">SLOOM <span>TV LIVE - 10 BOTS ⚡</span></div>
 </div>
 
-<!-- الساعة الاحترافية -->
 <div class="clock-box">
   <div class="clock-time" id="clock">00:00:00</div>
   <div class="clock-date" id="date">جاري التحميل...</div>
-  <div class="clock-city">📍 توقيت مسقط - البريمي 🇴🇲</div>
+  <div class="clock-city">📍 توقيت مسقط - البريمي 🇴🇲 | 10 بوتات نشطة</div>
 </div>
+
+<!-- 10 بوتات -->
+<div class="bots-grid" id="botsGrid"></div>
 
 <div class="match-card">
   <div class="league">🏆 دوري روشن السعودي <span class="live-badge">● مباشر</span></div>
-  <div class="teams">
-    <span>التعاون</span><span class="vs">1 - 1</span><span>الاتفاق</span>
-  </div>
+  <div class="teams"><span>التعاون</span><span class="vs">1 - 1</span><span>الاتفاق</span></div>
   <a class="btn" href="#">شاهد التفاصيل مباشر</a>
 </div>
 
 <div class="match-card">
   <div class="league">🏆 دوري روشن السعودي <span class="live-badge">● مباشر 84'</span></div>
-  <div class="teams">
-    <span>الفيحاء</span><span class="vs">3 - 1</span><span>الفيصلي</span>
-  </div>
+  <div class="teams"><span>الفيحاء</span><span class="vs">3 - 1</span><span>الفيصلي</span></div>
   <a class="btn" href="#">تابع المباراة لحظة بلحظة</a>
 </div>
 
 <script>
-// ساعة احترافية بتوقيت مسقط
+// الساعة
 function updateClock(){
   const now = new Date();
-  // توقيت مسقط GMT+4
-  const optionsTime = {timeZone:'Asia/Muscat',hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'};
-  const optionsDate = {timeZone:'Asia/Muscat',weekday:'long',year:'numeric',month:'long',day:'numeric'};
-  
-  document.getElementById('clock').textContent = now.toLocaleTimeString('ar-EG',optionsTime);
-  document.getElementById('date').textContent = now.toLocaleDateString('ar-EG',optionsDate);
+  const oT = {timeZone:'Asia/Muscat',hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'};
+  const oD = {timeZone:'Asia/Muscat',weekday:'long',year:'numeric',month:'long',day:'numeric'};
+  document.getElementById('clock').textContent = now.toLocaleTimeString('ar-EG',oT);
+  document.getElementById('date').textContent = now.toLocaleDateString('ar-EG',oD);
 }
-setInterval(updateClock,1000);
-updateClock();
+setInterval(updateClock,1000); updateClock();
+
+// 🔥 10 بوتات - كل دوري بوت اسرع
+const BOTS = [
+  {id:1, name:"روشن", league:"دوري روشن", sec:5, color:"#00ff88"},
+  {id:2, name:"بريمييرليج", league:"Premier League", sec:6, color:"#ff0040"},
+  {id:3, name:"الليغا", league:"La Liga", sec:7, color:"#ffcc00"},
+  {id:4, name:"بوندسليغا", league:"Bundesliga", sec:8, color:"#ff0000"},
+  {id:5, name:"الكالتشيو", league:"Serie A", sec:9, color:"#0080ff"},
+  {id:6, name:"ليغ 1", league:"Ligue 1", sec:10, color:"#8000ff"},
+  {id:7, name:"الأبطال", league:"Champions", sec:5, color:"#00ffff"},
+  {id:8, name:"آسيا", league:"AFC", sec:11, color:"#ff8000"},
+  {id:9, name:"أوروبا", league:"Europa", sec:12, color:"#ff0080"},
+  {id:10, name:"الكأس", league:"King Cup", sec:5, color:"#ffff00"},
+];
+
+const grid = document.getElementById('botsGrid');
+BOTS.forEach(b=>{
+  const div = document.createElement('div');
+  div.className='bot-card';
+  div.style.setProperty('--c', b.color);
+  div.innerHTML=`<div class="bot-name">🤖 BOT ${b.id} - ${b.name}</div><div>${b.league}</div><div class="bot-time" id="bot-${b.id}">يبدأ...</div>`;
+  grid.appendChild(div);
+  
+  setInterval(()=>{
+    const t = new Date().toLocaleTimeString('ar-EG',{timeZone:'Asia/Muscat',hour12:false});
+    document.getElementById(`bot-${b.id}`).textContent=`⚡ يحدث : ${t} | كل ${b.sec} ث`;
+    // هنا تحط كود جلب البيانات الحقيقي لكل دوري
+    console.log(`[${b.name}] تحديث`);
+  }, b.sec*1000);
+});
 </script>
 
 </body>
