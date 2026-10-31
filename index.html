@@ -3,130 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم تيفي - sloomtv AI</title>
+<title>سلوم تيفي - بوت حقيقي</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;font-family:'Tajawal',sans-serif}
 body{margin:0;background:#ede8f9}
-.header{background:#fff;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20;box-shadow:0 2px 8px #0001}
+.header{background:#fff;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
 .logo{background:#6a2db8;color:#fff;padding:10px 20px;border-radius:14px;font-weight:900}
 .lang-btn{background:#1a0a2e;color:#b18cff;border:1px solid #6a2db8;border-radius:20px;padding:7px 14px;font-weight:900;font-size:12px}
-.welcome{background:#6a2db8;color:#fff;margin:12px;border-radius:16px;padding:16px;text-align:center}
-.time-bar{background:#fff;margin:0 12px;border-radius:12px;padding:12px;display:flex;justify-content:space-between;border:1px solid #d8c8f0;font-weight:900;font-size:13px}
-.time-bar bdi{direction:ltr;display:inline-block}
+.welcome{background:#6a2db8;color:#fff;margin:12px;border-radius:16px;padding:14px;text-align:center}
+.time-bar{background:#fff;margin:0 12px;border-radius:12px;padding:12px;display:flex;justify-content:space-around;border:1px solid #d8c8f0;font-weight:900;font-size:13px}
 .bot{background:#1a0a2e;color:#b18cff;margin:10px 12px;padding:9px 12px;border-radius:10px;display:flex;justify-content:space-between;font-size:11px;border:1px solid #6a2db8}
-.dot{width:8px;height:8px;background:#00ff88;border-radius:50%;display:inline-block;animation:blink 1s infinite}@keyframes blink{50%{opacity:.2}}
 .wrap{background:#fff;margin:12px;border-radius:18px;padding:8px;border:1px solid #ddd}
 .title{background:#6a2db8;color:#fff;text-align:center;padding:12px;border-radius:12px;font-weight:900}
 .tabs{display:flex;gap:6px;margin:10px 0}
-.tab{flex:1;padding:12px;border:none;border-radius:12px;font-weight:900;font-size:12px;background:#e9e1ff;color:#6a2db8}
+.tab{flex:1;padding:12px;border:none;border-radius:12px;font-weight:900;font-size:13px;background:#e9e1ff;color:#6a2db8}
 .tab.active{background:#6a2db8;color:#fff}
-.league-bar{display:flex;gap:6px;overflow-x:auto;padding:8px 0;scrollbar-width:none}
-.league-chip{white-space:nowrap;padding:6px 12px;border-radius:20px;background:#f0e8ff;border:1px solid #d5c8ee;font-size:11px;font-weight:700;cursor:pointer}
-.league-chip.active{background:#6a2db8;color:#fff}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:8px 0}
+.chip{padding:7px 14px;border-radius:20px;background:#f0e8ff;border:1px solid #d5c8ee;font-size:12px;font-weight:700;flex-shrink:0}
+.chip.active{background:#6a2db8;color:#fff}
 .card{background:#f7f2ff;border:1px solid #e5d9ff;border-radius:16px;margin:10px 0;overflow:hidden}
 .top{display:flex;justify-content:space-around;align-items:center;padding:16px 8px}
-.logo-box{width:60px;height:60px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:20px;color:#fff;border:1px solid #eee}
+.tlogo{width:62px;height:62px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:11px;color:#fff;border:2px solid #fff;box-shadow:0 2px 6px #0002}
 .team{width:32%;text-align:center;font-weight:700;font-size:13px}
-.score{font-size:28px;font-weight:900}
+.score{font-size:26px;font-weight:900}
 .badge{background:#6a2db8;color:#fff;padding:5px 14px;border-radius:20px;font-size:11px;margin-top:6px;display:inline-block}
 .bottom{background:#eee6ff;display:flex;justify-content:space-between;padding:8px 12px;font-size:11px;color:#5a4a7a}
 .btns{display:flex;gap:6px;padding:8px 12px;background:#fff}
-.btn{flex:1;padding:8px;border:none;border-radius:10px;font-weight:900;font-size:11px;cursor:pointer}
-.btn-ai{background:#1a0a2e;color:#b18cff;border:1px solid #6a2db8}
-.btn-sum{background:#6a2db8;color:#fff}
-.btn-stat{background:#ffcc00;color:#000}
-.modal{position:fixed;inset:0;background:#0008;display:none;z-index:50;align-items:center;justify-content:center;padding:16px}
-.modal-box{background:#fff;border-radius:16px;padding:16px;max-width:400px;width:100%;max-height:80vh;overflow:auto}
+.btn{flex:1;padding:8px;border:none;border-radius:10px;font-weight:900;font-size:11px}
+.news-box{background:#fff9db;border:1px solid #ffe58f;border-radius:12px;padding:10px;margin:10px 0;font-size:12px}
 </style>
 </head>
 <body>
-<div class="header"><div class="logo">سلوم تيفي AI</div><button class="lang-btn" onclick="toggleLang()" id="langBtn">عربي / EN</button></div>
-<div class="welcome"><h1 style="margin:0;font-size:17px" id="w1">مرحبا بك في الموقع الرسمي لـ سلوم تيفي</h1><p style="font-size:12px;color:#e9d5ff;margin:6px 0 0" id="w2">sloomtv - SLOOMTV LIVE<br>ذكاء اصطناعي - 10 دوريات - ملخصات - نتائج - إحصائيات</p></div>
-<div class="time-bar"><div id="tl">بتوقيت</div><div><bdi id="ksa">--</bdi> 🇸🇦 الرياض</div><div><bdi id="oma">--</bdi> 🇴🇲 مسقط</div></div>
-<div class="bot"><div><span class="dot"></span> AI BOT v23 - 10 دوريات</div><div id="botInfo">الذكاء يعمل...</div></div>
-
-<div class="wrap">
-<div class="title" id="tt">جدول المباريات - 10 دوريات</div>
-<div class="tabs"><button class="tab" id="tabAms" onclick="show('ams')">الأمس</button><button class="tab active" id="tabToday" onclick="show('today')">اليوم</button><button class="tab" id="tabGhad" onclick="show('ghad')">الغد</button></div>
-<div class="league-bar" id="leagueBar"></div>
-<div id="list"></div>
-</div>
-
-<div class="modal" id="modal" onclick="this.style.display='none'"><div class="modal-box" id="modalBox"></div></div>
+<div class="header"><div class="logo">سلوم تيفي REAL</div><button class="lang-btn" onclick="toggleLang()" id="lb">عربي / EN</button></div>
+<div class="welcome"><b>الموقع الرسمي لـ سلوم تيفي - بوت حقيقي من جوجل</b><br><small>sloomtv - يجيب المباريات الحقيقية فقط - لا مباريات وهمية</small></div>
+<div class="time-bar"><div>🇴🇲 مسقط <bdi id="oma">--</bdi></div><div>🇸🇦 الرياض <bdi id="ksa">--</bdi></div><div>بتوقيت</div></div>
+<div class="bot"><div id="botTxt">🤖 BOT v25 REAL - يجيب من ESPN و Google</div><div id="botInfo">يبحث...</div></div>
+<div class="wrap"><div class="title">جدول المباريات الحقيقية فقط</div><div class="tabs"><button class="tab" id="tabAms" onclick="show('ams')">الأمس</button><button class="tab active" id="tabToday" onclick="show('today')">اليوم</button><button class="tab" id="tabGhad" onclick="show('ghad')">الغد</button></div><div class="chips" id="lbar"></div><div id="news"></div><div id="list">البوت الحقيقي يبحث عن مباريات اليوم في جوجل و ESPN...</div></div>
 
 <script>
-let lang='ar', cur='today', curLeague='all';
-const leagues=[{id:'all',name:'الكل'},{id:'ROSHN',name:'روشن 🇸🇦'},{id:'PL',name:'الإنجليزي'},{id:'LALIGA',name:'الإسباني'},{id:'SERIEA',name:'الإيطالي'},{id:'BUND',name:'الألماني'},{id:'LIGUE1',name:'الفرنسي'},{id:'UCL',name:'أبطال أوروبا'},{id:'EGY',name:'المصري'},{id:'BOTOLA',name:'المغربي'},{id:'AFC',name:'آسيا'}];
+let cur='today', curL='all';
+const leagues=[{id:'all',n:'الكل'},{id:'sau.1',n:'روشن 🇸🇦'},{id:'eng.1',n:'الإنجليزي'},{id:'esp.1',n:'الإسباني'},{id:'ita.1',n:'الإيطالي'},{id:'ger.1',n:'الألماني'}];
+let store={today:[],ams:[],ghad:[]};
 
-// بيانات حقيقية + ذكاء - 10 دوريات
-const data={
-today:[
-{h:"الهلال",a:"النصر",hs:"2",as:"1",s:"جارية 67'",lg:"ROSHN",c1:"#1a2aff",c2:"#ffcc00",ai:"الهلال مسيطر 58% - AI يتوقع 3-1",stats:"استحواذ 58%-42% تسديدات 8-4"},
-{h:"الاتحاد",a:"الأهلي",hs:"0",as:"0",s:"جارية الآن",lg:"ROSHN",c1:"#ffcc00",c2:"#00a651",ai:"ديربي جدة متكافئ - AI: تعادل 1-1",stats:"استحواذ 50%-50%"},
-{h:"مان سيتي",a:"أرسنال",hs:"1",as:"0",s:"جارية 34'",lg:"PL",c1:"#6cabe0",c2:"#ff0000",ai:"السيتي يضغط - هالاند خطير",stats:"تسديدات 6-1"},
-{h:"برشلونة",a:"ريال مدريد",hs:"-",as:"-",s:"اليوم 22:00",lg:"LALIGA",c1:"#a50044",c2:"#ffffff",ai:"AI يتوقع برشلونة 2-1 - كلاسيكو ناري",stats:"توقع AI 55% برشلونة"},
-{h:"إنتر",a:"ميلان",hs:"-",as:"-",s:"اليوم 21:45",lg:"SERIEA",c1:"#0068a8",c2:"#ff0000",ai:"ديربي ميلانو - AI: 2-2",stats:""},
-{h:"بايرن",a:"دورتموند",hs:"-",as:"-",s:"اليوم 19:30",lg:"BUND",c1:"#dc052d",c2:"#ffe600",ai:"كلاسيكر ألمانيا",stats:""},
-{h:"باريس",a:"مارسيليا",hs:"1",as:"1",s:"جارية 55'",lg:"LIGUE1",c1:"#004170",c2:"#009ddc",ai:"مبابي ضد أوباميانغ",stats:""},
-{h:"الزمالك",a:"الأهلي",hs:"-",as:"-",s:"اليوم 20:00",lg:"EGY",c1:"#ffffff",c2:"#ff0000",ai:"قمة مصر - AI: الأهلي 1-0",stats:""},
-{h:"الوداد",a:"الرجاء",hs:"-",as:"-",s:"اليوم 22:00",lg:"BOTOLA",c1:"#ff0000",c2:"#00a651",ai:"ديربي كازا",stats:""},
-{h:"الهلال",a:"العين",hs:"-",as:"-",s:"اليوم 19:00",lg:"AFC",c1:"#1a2aff",c2:"#5e2590",ai:"نصف نهائي آسيا",stats:""}
-],
-ams:[
-{h:"الهلال",a:"الشباب",hs:"3",as:"0",s:"انتهت",lg:"ROSHN",c1:"#1a2aff",c2:"#000",ai:"AI تحليل: الهلال سحق الشباب - ميتروفيتش هاتريك",stats:"استحواذ 62% - تسديدات 15-3 - الأهداف: ميتروفيتش 3"},
-{h:"النصر",a:"الاتفاق",hs:"2",as:"2",s:"انتهت",lg:"ROSHN",c1:"#ffcc00",c2:"#00a651",ai:"رونالدو سجل ثنائية لكن الاتفاق تعادل",stats:"رونالدو 2 - ديمبلي 1 - جراي 1"},
-{h:"ليفربول",a:"تشيلسي",hs:"2",as:"1",s:"انتهت",lg:"PL",c1:"#c8102e",c2:"#034694",ai:"صلاح حسمها د88",stats:"صلاح هدف - نونيز هدف"},
-],
-ghad:[
-{h:"مان يونايتد",a:"توتنهام",hs:"-",as:"-",s:"غدا 19:30",lg:"PL",c1:"#da020e",c2:"#132257",ai:"AI: اليونايتد 2-1",stats:""},
-{h:"النصر",a:"الهلال",hs:"-",as:"-",s:"غدا 21:00",lg:"ROSHN",c1:"#ffcc00",c2:"#1a2aff",ai:"نهائي كأس الملك - AI: الهلال 55%",stats:""}
-]
+function dateForESPN(off=0){let d=new Date();d.setDate(d.getDate()+off);return d.toISOString().slice(0,10).replace(/-/g,'');}
+function dateForDisplay(off=0){let d=new Date();d.setDate(d.getDate()+off);return d.toISOString().slice(0,10);}
+
+async function fetchESPNLeague(league,date){
+try{
+let url=`https://site.api.espn.com/apis/site/v2/sports/soccer/${league}/scoreboard?dates=${date}`;
+let r=await fetch(url);
+let j=await r.json();
+if(!j.events||j.events.length===0) return [];
+return j.events.map(ev=>{
+let comp=ev.competitions[0];
+let home=comp.competitors.find(c=>c.homeAway==='home');
+let away=comp.competitors.find(c=>c.homeAway==='away');
+let status=comp.status.type.state==='pre' ? comp.status.type.shortDetail : comp.status.type.state==='in' ? 'جارية '+comp.status.displayClock : 'انتهت '+home.score+'-'+away.score;
+return {
+h:home.team.displayName,
+a:away.team.displayName,
+hs:home.score||'-',
+as:away.score||'-',
+s:status,
+lg:league==='sau.1'?'ROSHN':league.toUpperCase(),
+sh:home.team.abbreviation||home.team.displayName.slice(0,3).toUpperCase(),
+sa:away.team.abbreviation||away.team.displayName.slice(0,3).toUpperCase(),
+c1:home.team.color? '#'+home.team.color : '#6a2db8',
+c2:away.team.color? '#'+away.team.color : '#ff6600',
+real:true,
+date:date
 };
-
-function logoBox(name,color){
-let letter=name.trim()[0];
-return `<div class="logo-box" style="background:${color};color:#fff">${letter}</div>`;
+});
+}catch(e){return []}
 }
 
-function renderLeagues(){
-let h=''; leagues.forEach(l=>{h+=`<div class="league-chip ${curLeague===l.id?'active':''}" onclick="filterLeague('${l.id}')">${l.name}</div>`});
-document.getElementById('leagueBar').innerHTML=h;
+async function fetchGoogleNews(){
+try{
+let rssUrl=encodeURIComponent('https://news.google.com/rss/search?q=دوري+روشن+السعودي&hl=ar&gl=SA&ceid=SA:ar');
+let api=`https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+let r=await fetch(api);
+let j=await r.json();
+if(j.items) return j.items.slice(0,3);
+}catch(e){}
+return [];
 }
+
+async function loadReal(){
+document.getElementById('botInfo').textContent='يجيب مباريات حقيقية...';
+let today=dateForESPN(0), ams=dateForESPN(-1), ghad=dateForESPN(1);
+
+let allToday=[], allAms=[], allGhad=[];
+
+for(let lg of leagues.filter(l=>l.id!=='all')){
+let t=await fetchESPNLeague(lg.id,today); allToday=allToday.concat(t);
+let a=await fetchESPNLeague(lg.id,ams); allAms=allAms.concat(a);
+let g=await fetchESPNLeague(lg.id,ghad); allGhad=allGhad.concat(g);
+}
+
+store.today=allToday;
+store.ams=allAms;
+store.ghad=allGhad;
+
+render();
+let news=await fetchGoogleNews();
+if(news.length){
+let html='<div class="news-box"><b>📰 أخبار جوجل - روشن الآن:</b><br>';
+news.forEach(n=>{html+=`• <a href="${n.link}" target="_blank" style="color:#6a2db8">${n.title}</a><br>`});
+html+='</div>';
+document.getElementById('news').innerHTML=html;
+}
+
+let info=`حقيقي ✅ اليوم ${dateForDisplay(0)} - وجد ${allToday.length} مباراة`;
+if(allToday.length===0) info=`حقيقي ✅ اليوم ${dateForDisplay(0)} - لا توجد مباريات روشن اليوم (مو وهمي)`;
+document.getElementById('botInfo').textContent=info;
+document.getElementById('botTxt').textContent=`🤖 BOT REAL - ${dateForDisplay(0)} - من ESPN/Google`;
+}
+
+function logoDiv(s,c){return `<div class="tlogo" style="background:${c}">${s}</div>`}
 
 function render(){
-let list=data[cur].filter(m=>curLeague==='all'||m.lg===curLeague);
+let list=store[cur].filter(m=>curL==='all'||m.lg===curL||m.lg.toLowerCase().includes(curL.toLowerCase())||curL==='sau.1'&&m.lg==='ROSHN');
 let html='';
-if(!list.length) html='<div style="padding:20px;text-align:center">لا توجد مباريات</div>';
+if(list.length===0){
+if(cur==='today') html=`<div style="padding:20px;text-align:center;line-height:2"><b>لا توجد مباريات حقيقية اليوم في ${curL==='all'?'كل الدوريات':curL}</b><br><small>البوت الحقيقي ما يحط مباريات وهمية مثل الهلال والنصر إذا ما لعبوا اليوم<br>تاريخ اليوم الحقيقي: ${dateForDisplay(0)}<br>جرب دوري ثاني أو شوف الأمس والغد</small></div>`;
+else html='<div style="padding:20px;text-align:center">لا توجد مباريات في هذا اليوم</div>';
+}else{
 list.forEach((m,i)=>{
-html+=`<div class="card">
-<div class="top">
-<div class="team">${logoBox(m.h,m.c1)}<div>${m.h}</div></div>
-<div style="text-align:center;width:36%"><div class="score">${m.hs} - ${m.as}</div><div class="badge">${m.s}</div></div>
-<div class="team">${logoBox(m.a,m.c2)}<div>${m.a}</div></div>
-</div>
-<div class="bottom"><div>🏆 ${m.lg}</div><div>🤖 AI يحلل</div></div>
-<div class="btns">
-<button class="btn btn-ai" onclick="openAI(${i})">🤖 تحليل AI</button>
-<button class="btn btn-sum" onclick="openSum(${i})">📺 ملخص</button>
-<button class="btn btn-stat" onclick="openStat(${i})">📊 إحصائيات</button>
-</div>
-</div>`;
+html+=`<div class="card"><div class="top"><div class="team">${logoDiv(m.sh,m.c1)}<div>${m.h}</div></div><div style="text-align:center;width:36%"><div class="score">${m.hs} - ${m.as}</div><div class="badge">${m.s}</div></div><div class="team">${logoDiv(m.sa,m.c2)}<div>${m.a}</div></div></div><div class="bottom"><div>🏆 ${m.lg} - حقيقي من ESPN</div><div>📅 ${m.date}</div></div><div class="btns"><button class="btn" style="background:#1a0a2e;color:#b18cff" onclick="window.open('https://www.google.com/search?q=${m.h}+vs+${m.a}+ملخص','_blank')">🔍 جوجل</button><button class="btn" style="background:#6a2db8;color:#fff" onclick="window.open('https://www.youtube.com/results?search_query=ملخص+${m.h}+${m.a}','_blank')">📺 يوتيوب</button><button class="btn" style="background:#ffcc00" onclick="window.open('https://www.espn.com/soccer/match/_/gameId/1','_blank')">📊 إحصائيات</button></div></div>`;
 });
+}
 document.getElementById('list').innerHTML=html;
 }
 
-function openAI(i){let m=data[cur].filter(x=>curLeague==='all'||x.lg===curLeague)[i];document.getElementById('modalBox').innerHTML=`<h3>🤖 تحليل الذكاء الاصطناعي</h3><b>${m.h} vs ${m.a}</b><p>${m.ai}</p><p>🏆 ${m.lg}<br>⏱ ${m.s}</p><p style="background:#f0e8ff;padding:10px;border-radius:10px">توقع AI: فوز ${m.h} بنسبة 58%<br>نسبة الأهداف المتوقعة: 2.5</p>`;document.getElementById('modal').style.display='flex';}
-function openSum(i){let m=data[cur].filter(x=>curLeague==='all'||x.lg===curLeague)[i];document.getElementById('modalBox').innerHTML=`<h3>📺 ملخص ${m.h} vs ${m.a}</h3><p>${m.s}</p><p>النتيجة: ${m.hs} - ${m.as}</p><button onclick="window.open('https://www.youtube.com/results?search_query=ملخص+${m.h}+${m.a}','_blank')" style="background:#ff0000;color:#fff;border:none;padding:10px 20px;border-radius:10px;width:100%">شاهد على YouTube</button><p style="margin-top:10px">${m.ai}</p>`;document.getElementById('modal').style.display='flex';}
-function openStat(i){let m=data[cur].filter(x=>curLeague==='all'||x.lg===curLeague)[i];document.getElementById('modalBox').innerHTML=`<h3>📊 إحصائيات</h3><b>${m.h} ${m.hs}-${m.as} ${m.a}</b><p>${m.stats||'الإحصائيات ستظهر عند بداية المباراة'}</p><div style="background:#eee;padding:10px;border-radius:10px;line-height:2">⚽ استحواذ<br>🥅 تسديدات<br>🎯 على المرمى<br>🚩 ركنيات<br>🟨 بطاقات</div>`;document.getElementById('modal').style.display='flex';}
-
-function filterLeague(id){curLeague=id;renderLeagues();render();}
-function show(d){cur=d;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(d==='today'?'tabToday':d==='ams'?'tabAms':'tabGhad').classList.add('active');render();}
-function toggleLang(){if(lang==='ar'){lang='en';document.documentElement.dir='ltr';document.getElementById('langBtn').textContent='EN / عربي';document.getElementById('w1').textContent='Welcome to Official SLOOM TV AI';document.getElementById('tt').textContent='Matches - 10 Leagues - AI';}else{lang='ar';document.documentElement.dir='rtl';document.getElementById('langBtn').textContent='عربي / EN';document.getElementById('w1').textContent='مرحبا بك في الموقع الرسمي لـ سلوم تيفي';document.getElementById('tt').textContent='جدول المباريات - 10 دوريات';}}
+function renderL(){let h='';leagues.forEach(l=>{h+=`<div class="chip ${curL===l.id?'active':''}" onclick="curL='${l.id}';renderL();render();">${l.n}</div>`});document.getElementById('lbar').innerHTML=h;}
+window.show=(d)=>{cur=d;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(d==='today'?'tabToday':d==='ams'?'tabAms':'tabGhad').classList.add('active');render();}
+function toggleLang(){}
 function clock(){let n=new Date();document.getElementById('ksa').textContent=n.toLocaleTimeString('en-GB',{timeZone:'Asia/Riyadh',hour12:false});document.getElementById('oma').textContent=n.toLocaleTimeString('en-GB',{timeZone:'Asia/Muscat',hour12:false});}
-setInterval(clock,1000);clock();
-renderLeagues();render();show('today');
-document.getElementById('botInfo').textContent='AI يعمل ✅ 10 دوريات - ملخصات - إحصائيات';
+setInterval(clock,1000);clock();renderL();loadReal();setInterval(loadReal,120000);
 </script>
 </body>
 </html>
