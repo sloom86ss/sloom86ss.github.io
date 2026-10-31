@@ -4,98 +4,117 @@
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="1to1lmgptPdQBO6SsdgpAv8meSroswl34D89V78Xvnk" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLOOMTV - نتائج مباشرة وأخبار كرة القدم | نتيجة باريس 5-1 لوهافر اليوم</title>
-<meta name="description" content="SLOOMTV - متابعة حية لمباراة باريس سان جيرمان ضد لوهافر 5-1 وجميع مباريات اليوم، تحليلات ومقالات صحفية حصرية وتحديث كل 30 ثانية.">
+<title>SLOOMTV - نتائج مباشرة تلقائية</title>
+<meta name="description" content="SLOOMTV - نتائج مباشرة تلقائية لجميع مباريات اليوم من كل الدوريات">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma,sans-serif;background:#080810;color:#fff;overflow-x:hidden}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,sans-serif;background:#080810;color:#fff}
 .h{background:linear-gradient(135deg,#14142a,#1e1e4a);padding:20px;text-align:center;border-bottom:3px solid #ff0040}
-.logo{font-size:42px;font-weight:900;line-height:1}.logo span{color:#ffeb3b}
+.logo{font-size:42px;font-weight:900}.logo span{color:#ffeb3b}
 .badge{background:#0f2815;border:1px solid #22c55e;color:#22c55e;padding:6px 16px;border-radius:30px;display:inline-block;font-size:12px;margin-top:10px;font-weight:800;animation:pulse 2s infinite}
 @keyframes pulse{0%{opacity:1}50%{opacity:0.6}100%{opacity:1}}
 .ticker{background:#ff0040;color:#fff;padding:8px;text-align:center;font-size:13px;font-weight:700}
 .container{max-width:750px;margin:0 auto;padding:15px}
 .card{background:#12122a;border:1px solid #222;border-radius:16px;padding:18px;margin-bottom:15px}
-.match-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
-.team{font-weight:800;font-size:18px}.score{font-size:32px;font-weight:900;color:#ffeb3b}
-.time{font-size:12px;color:#22c55e;font-weight:700}
-.events{border-top:1px solid #222;padding-top:12px;margin-top:12px}
-.event{display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed #222;font-size:14px}
-.event .min{color:#ff0040;font-weight:800;min-width:35px}
-.summary{background:#1a1a35;border-radius:10px;padding:12px;margin-top:12px;font-size:14px;line-height:1.6;color:#ccc}
-.article-section{margin-top:25px}
-.article-title{font-size:20px;font-weight:900;border-right:4px solid #ff0040;padding-right:12px;margin-bottom:15px}
+.match-head{display:flex;justify-content:space-between;align-items:center}
+.team{font-weight:800;font-size:16px;width:90px;text-align:center}
+.score{font-size:32px;font-weight:900;color:#ffeb3b;text-align:center}
+.status{font-size:11px;color:#22c55e;font-weight:700;text-align:center;margin-top:4px}
+.league{font-size:11px;color:#888;margin-bottom:10px;text-align:center}
 .article-card{background:#12122a;border:1px solid #222;border-radius:16px;padding:16px;margin-bottom:14px;border-right:4px solid #ffeb3b}
-.article-card h3{margin:8px 0;color:#fff;font-size:17px;line-height:1.4}
-.article-card p{color:#aaa;font-size:13px;line-height:1.7;margin:0}
-.tag{display:inline-block;font-size:10px;padding:3px 10px;border-radius:20px;font-weight:800}
-.tag-yellow{background:#ffeb3b;color:#000}.tag-green{background:#22c55e;color:#fff}.tag-red{background:#ff0040;color:#fff}
 .auto-update{text-align:center;color:#888;font-size:11px;margin-top:20px}
+.loading{text-align:center;padding:40px;color:#888}
 </style>
 </head>
 <body>
 <div class="h">
 <div class="logo">SLOOM<span>TV</span></div>
-<div class="badge">● LIVE - تحديث تلقائي كل 30 ثانية</div>
+<div class="badge">● LIVE - نتائج تلقائية من جميع الدوريات</div>
 </div>
-<div class="ticker">⚽ مجريات المباريات - تحديث مستمر</div>
+<div class="ticker">⚽ النتائج تتحدث تلقائيا كل 60 ثانية</div>
 
-<div class="container">
-
-<div class="card">
-<div class="match-head">
-<div class="team">لوهافر</div>
-<div style="text-align:center"><div class="score">1 - 5</div><div class="time">انتهت</div></div>
-<div class="team">باريس</div>
-</div>
-<div class="events">
-<div class="event"><span class="min">12'</span><span>⚽ هدف باريس - ديمبيلي</span></div>
-<div class="event"><span class="min">35'</span><span>⚽ هدف لوهافر</span></div>
-<div class="event"><span class="min">58'</span><span>⚽ هدف باريس - مبابي</span></div>
-<div class="event"><span class="min">78'</span><span>🔄 تبديل لوهافر</span></div>
-</div>
-<div class="summary">
-<b>ملخص:</b> فوز كبير لباريس خارج أرضه بخماسية، سيطرة كاملة بعد الدقيقة 50.
-</div>
+<div class="container" id="matches">
+<div class="loading">جاري جلب المباريات الحية... ⏳</div>
 </div>
 
-<!-- المقالات الصحفية - الجديد -->
-<div class="article-section">
-<div class="article-title">📰 مقالات وتحليلات SLOOMTV</div>
-
-<div class="article-card">
-<span class="tag tag-yellow">تحليل فني</span>
-<h3>لماذا اكتسح باريس لوهافر بخماسية؟ 3 نقاط تكتيكية حسمت المباراة</h3>
-<p>اعتمد باريس سان جيرمان على الضغط العالي في الشوط الثاني، مع تحركات ديمبيلي الذكية خلف الظهير الأيسر. التبديل في الدقيقة 60 منح الفريق السيطرة الكاملة وفتح المساحات لمبابي الذي استغلها ببراعة.</p>
-<p style="color:#666;font-size:11px;margin-top:10px">بقلم: SLOOMTV • منذ ساعتين • الدوري الفرنسي</p>
-</div>
-
-<div class="article-card">
-<span class="tag tag-green">أخبار عاجلة</span>
-<h3>مبابي يواصل التألق: هدف وصناعة أمام لوهافر ويتصدر الهدافين</h3>
-<p>رفع كيليان مبابي رصيده إلى 12 هدفا هذا الموسم في الدوري الفرنسي بعد تألقه اليوم. النجم الفرنسي أكد مرة أخرى أنه أحد أفضل مهاجمي العالم حاليا.</p>
-<p style="color:#666;font-size:11px;margin-top:10px">بقلم: SLOOMTV • منذ 3 ساعات • باريس سان جيرمان</p>
-</div>
-
-<div class="article-card">
-<span class="tag tag-red">تقرير المباراة</span>
-<h3>جماهير لوهافر تودع فريقها بتصفيق رغم الخسارة الثقيلة 1-5</h3>
-<p>رغم الخسارة الثقيلة أمام باريس، بقيت جماهير لوهافر تشجع حتى صافرة النهاية. المدرب صرح بعد المباراة: "واجهنا فريقا من كوكب آخر، لكننا تعلمنا الكثير".</p>
-<p style="color:#666;font-size:11px;margin-top:10px">بقلم: SLOOMTV • منذ 4 ساعات • لوهافر</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="auto-update">آخر تحديث: <span id="time"></span> | يتحدث تلقائياً كل 30 ثانية</div>
+<div class="auto-update">آخر تحديث: <span id="time"></span> | تحديث تلقائي كل 60 ثانية</div>
 
 <script>
+// جلب المباريات تلقائيا
+async function loadMatches(){
+  try{
+    const today = new Date().toISOString().split('T')[0].replace(/-/g,'');
+    // نجيب مباريات اليوم من كل الدوريات
+    const res = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=${new Date().toISOString().split('T')[0]}`);
+    const data = await res.json();
+    
+    // لو مافي مباريات انجليزية، نجيب كل المباريات
+    let events = data.events || [];
+    
+    // جلب دوريات اضافية
+    const leagues = ['fra.1','esp.1','ger.1','ita.1','saudi.1'];
+    for(let lg of leagues){
+      try{
+        const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg}/scoreboard`);
+        const d = await r.json();
+        if(d.events) events = events.concat(d.events.slice(0,3));
+      }catch(e){}
+    }
+
+    const container = document.getElementById('matches');
+    container.innerHTML = '';
+
+    if(events.length === 0){
+      container.innerHTML = `
+      <div class="card"><div class="match-head">
+      <div class="team">لوهافر</div>
+      <div style="text-align:center"><div class="score">1 - 5</div><div class="status">انتهت</div></div>
+      <div class="team">باريس</div>
+      </div><div style="text-align:center;color:#888;font-size:12px;margin-top:10px">الدوري الفرنسي - نتيجة محفوظة</div></div>`;
+    }
+
+    events.slice(0,12).forEach(ev=>{
+      const comp = ev.competitions[0];
+      const home = comp.competitors[0];
+      const away = comp.competitors[1];
+      const status = comp.status.type.state;
+      let statusText = 'لم تبدأ';
+      if(status === 'in') statusText = 'مباشر ●';
+      if(status === 'post') statusText = 'انتهت';
+      
+      container.innerHTML += `
+      <div class="card">
+      <div class="league">${ev.leagues ? ev.leagues[0].name : ev.competitions[0].league || 'كرة القدم'}</div>
+      <div class="match-head">
+      <div class="team">${home.team.abbreviation || home.team.displayName}</div>
+      <div style="text-align:center"><div class="score">${home.score || 0} - ${away.score || 0}</div><div class="status">${statusText} ${comp.status.displayClock || ''}</div></div>
+      <div class="team">${away.team.abbreviation || away.team.displayName}</div>
+      </div>
+      </div>`;
+    });
+
+    // قسم المقالات الصحفية (ثابت - تقدر تغيره)
+    container.innerHTML += `
+    <div style="margin-top:25px">
+    <div style="font-size:20px;font-weight:900;border-right:4px solid #ff0040;padding-right:12px;margin-bottom:15px">📰 مقالات وتحليلات</div>
+    <div class="article-card">
+    <h3 style="margin:5px 0">مبابي يواصل التألق مع باريس بعد خماسية لوهافر</h3>
+    <p style="color:#aaa;font-size:13px">تحليل لأداء باريس سان جيرمان بعد الفوز الكبير 5-1 وأبرز النقاط التكتيكية التي حسمت اللقاء.</p>
+    </div>
+    </div>`;
+
+  }catch(err){
+    console.log(err);
+    document.getElementById('matches').innerHTML = '<div class="loading">خطأ في الجلب - سيتم المحاولة مرة أخرى</div>';
+  }
+}
+
 function updateTime(){
 document.getElementById('time').innerText = new Date().toLocaleTimeString('ar-EG');
 }
 updateTime();
+loadMatches();
 setInterval(updateTime,1000);
-setInterval(()=>{ location.reload(); }, 30000);
+setInterval(loadMatches,60000); // تحديث كل دقيقة
 </script>
 
 </body>
