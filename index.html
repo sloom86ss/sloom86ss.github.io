@@ -3,62 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم للمباريات اليوم | جدول احترافي</title>
+<title>سلوم للمباريات اليوم | جدول مرتب حسب الدوريات</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Tahoma;background:#0a0a0f;color:#fff}
-.header{padding:15px;background:#111119;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #222}
-.logo{font-size:22px;font-weight:bold;background:linear-gradient(90deg,#8b5cf6,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.nav{display:flex;gap:8px}
-.nav span{background:#2a2a3a;padding:6px 12px;border-radius:20px;font-size:12px}
-.hero{padding:20px}
-.hero h1{font-size:32px;margin:0}
-.purple-bar{background:linear-gradient(90deg,#8b5cf6,#6366f1);padding:12px 20px;border-radius:15px 15px 0 0;font-weight:bold;display:flex;justify-content:space-between}
-.table-wrap{background:#171721;border-radius:0 0 15px 15px;overflow:hidden;margin:0 20px 20px 20px}
-table{width:100%;border-collapse:collapse}
-th{padding:15px 10px;color:#aaa;font-size:13px;text-align:center;border-bottom:1px solid #2a2a3a}
-td{padding:14px 10px;text-align:center;border-bottom:1px solid #222;font-size:13px}
-.match-row:hover{background:#1e1e2e}
-.badge-live{background:#ef4444;color:#fff;padding:4px 10px;border-radius:20px;font-size:11px;animation:pulse 1s infinite}
-.badge-end{background:#444;padding:4px 10px;border-radius:20px;font-size:11px}
-.badge-soon{background:linear-gradient(90deg,#8b5cf6,#6366f1);padding:4px 10px;border-radius:20px;font-size:11px}
-.score{font-weight:bold;font-size:16px}
-.vs{color:#666;background:#222;padding:2px 8px;border-radius:10px}
-@keyframes pulse{0%,100%{opacity:1} 50%{opacity:.6}}
-.date{color:#aaa;font-size:11px}
+body{margin:0;font-family:Tahoma;background:#08080f;color:#fff}
+.header{background:linear-gradient(90deg,#8b5cf6,#3b82f6);padding:20px;text-align:center}
+.header h1{margin:0;font-size:28px}
+.container{max-width:1000px;margin:auto;padding:15px}
+.league-group{background:#15151f;border-radius:15px;margin-bottom:20px;overflow:hidden;border:1px solid #222}
+.league-head{background:#1e1e2e;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;font-weight:bold;border-right:4px solid #8b5cf6}
+.league-head span{font-size:14px}
+.match-row{display:flex;justify-content:space-between;align-items:center;padding:14px 15px;border-bottom:1px solid #222}
+.match-row:last-child{border:0}
+.match-row:hover{background:#1f1f2f}
+.teams{flex:1}
+.team-name{font-weight:bold}
+.vs{color:#666;margin:0 10px}
+.score-box{background:#000;color:#22c55e;padding:6px 12px;border-radius:8px;font-weight:bold;min-width:60px;text-align:center}
+.live{color:#fff;background:#ef4444;padding:4px 8px;border-radius:20px;font-size:10px;margin-right:8px;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.5}}
+.date{color:#888;font-size:11px;margin-top:4px}
 </style>
 </head>
 <body>
-<div class="header"><div class="logo">⚽ سلوم للمباريات اليوم</div><div class="nav"><span>الفرق</span><span>الأخبار</span><span>البطولات</span><span style="background:#8b5cf6;color:#fff">المباريات</span></div></div>
-<div class="hero"><h1>نتائج المباريات مباشر</h1><p style="color:#aaa">تابع آخر النتائج والمباريات المباشرة لحظة بلحظة بدقة وتحديث مستمر</p></div>
-<div style="margin:0 20px"><div class="purple-bar"><span>جدول المباريات - مباشر الآن</span><span id="todayDate" style="background:rgba(255,255,255,.2);padding:4px 10px;border-radius:20px;font-size:12px"></span></div>
-<div class="table-wrap">
-<table>
-<thead><tr><th>التاريخ</th><th>الدوري</th><th>المباراة</th><th>النتيجة</th><th>الحالة</th></tr></thead>
-<tbody id="tbody"><tr><td colspan="5">⏳ جاري تحميل الجدول الجميل...</td></tr></tbody>
-</table>
-<div style="padding:12px;text-align:center;color:#777;font-size:12px">🔄 يتم التحديث تلقائياً كل 30 ثانية</div>
-</div></div>
+<div class="header"><h1>⚽ سلوم للمباريات اليوم</h1><p>جدول مرتب حسب الدوريات - كل العالم</p><p id="today" style="font-size:12px;opacity:.8"></p></div>
+<div class="container" id="groups"><div style="text-align:center;padding:30px">⏳ جاري ترتيب الدوريات...</div></div>
 <script>
-document.getElementById('todayDate').innerText = new Date().toLocaleDateString('ar-EG',{day:'numeric',month:'long',year:'numeric'});
+document.getElementById('today').innerText=new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 async function load(){
 try{
-let r=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard');
-let d=await r.json();
-let h='';
-d.events.forEach(ev=>{
-let lg=ev.leagues?ev.leagues[0].name:'دوري عالمي';
+let res=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard');
+let data=await res.json();
+let leagues={};
+data.events.forEach(ev=>{
+let lgName=ev.leagues && ev.leagues[0] ? ev.leagues[0].name : 'دوريات أخرى';
+if(!leagues[lgName]) leagues[lgName]=[];
+leagues[lgName].push(ev);
+});
+let html='';
+for(let lg in leagues){
+let icon='🏆';
+if(lg.includes('Saudi') || lg.includes('سعودي')) icon='🇸🇦';
+else if(lg.includes('LaLiga') || lg.includes('Spanish') || lg.includes('Esp')) icon='🇪🇸';
+else if(lg.includes('Premier') || lg.includes('England')) icon='🏴󠁧󠁢󠁥󠁮󠁧󠁿';
+else if(lg.includes('Serie') || lg.includes('Italy')) icon='🇮🇹';
+else if(lg.includes('Bundes') || lg.includes('German')) icon='🇩🇪';
+else if(lg.includes('Ligue') || lg.includes('France')) icon='🇫🇷';
+else if(lg.includes('Champions')) icon='⭐';
+html+=`<div class="league-group"><div class="league-head"><span>${icon} ${lg}</span><span style="color:#888;font-size:12px">${leagues[lg].length} مباريات</span></div>`;
+leagues[lg].forEach(ev=>{
 let home=ev.competitions[0].competitors[0];
 let away=ev.competitions[0].competitors[1];
-let st=ev.status.type.name;
-let badge= st=='STATUS_IN_PROGRESS'?'<span class="badge-live">🔴 مباشر</span>': st=='STATUS_FINAL'?'<span class="badge-end">انتهت</span>':'<span class="badge-soon">بعد قليل</span>';
-let date=new Date(ev.date);
-let dateStr=date.toLocaleDateString('ar-EG',{day:'numeric',month:'short'})+' • '+date.toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'});
-let sH=home.score||'0'; let sA=away.score||'0';
-h+=`<tr class="match-row"><td><span class="date">${dateStr}</span></td><td>${lg}</td><td>${home.team.displayName} <span class="vs">VS</span> ${away.team.displayName}</td><td><span class="score">${sH} - ${sA}</span></td><td>${badge}</td></tr>`;
+let isLive=ev.status.type.name=='STATUS_IN_PROGRESS';
+let scoreH=home.score||'0';
+let scoreA=away.score||'0';
+let d=new Date(ev.date);
+let time=d.toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'});
+html+=`<div class="match-row"><div class="teams"><div><span class="team-name">${home.team.displayName}</span><span class="vs">VS</span><span class="team-name">${away.team.displayName}</span>${isLive?'<span class="live">🔴 مباشر</span>':''}</div><div class="date">📅 ${time}</div></div><div class="score-box">${scoreH} - ${scoreA}</div></div>`;
 });
-document.getElementById('tbody').innerHTML=h||'<tr><td colspan="5">لا توجد مباريات</td></tr>';
-}catch(e){document.getElementById('tbody').innerHTML='<tr><td colspan="5">جاري التحديث...</td></tr>';}
+html+='</div>';
+}
+document.getElementById('groups').innerHTML=html||'<p>لا توجد مباريات اليوم</p>';
+}catch(e){document.getElementById('groups').innerHTML='<p style="text-align:center">جاري التحديث...</p>';}
 }
 load(); setInterval(load,30000);
 </script>
