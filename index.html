@@ -3,128 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم تيفي - sloomtv - البث المباشر</title>
-<meta name="description" content="سلوم تيفي - sloomtv - SLOOM TV LIVE - البث المباشر لجميع الدوريات">
-<meta name="keywords" content="سلوم تيفي, sloomtv, SLOOM TV, سلوم تيفي مباشر, sloomtv live">
-<!-- خطوط سريعة -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
-
+<title>سلوم تيفي - sloomtv</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
 <style>
-  body{font-family:'Tajawal',sans-serif;background:#0a0e13;color:#fff;margin:0;padding:0}
-  .header{background:linear-gradient(90deg,#0d1b2a,#1b263b);padding:15px;border-bottom:3px solid #00ff88;position:sticky;top:0;z-index:100}
-  .header-top{display:flex;justify-content:space-between;align-items:center}
-  .logo{font-size:26px;font-weight:900;color:#00ff88}
-  .logo span.en{font-family:'Orbitron',sans-serif;letter-spacing:1px}
-  .logo span.live{color:#fff;font-size:14px}
-  .lang-btn{background:#00ff88;color:#000;border:none;padding:6px 14px;border-radius:20px;font-weight:900;font-size:12px;cursor:pointer}
-  .sub{font-size:11px;color:#9ca3af;margin-top:4px}
-  .clock-box{background:linear-gradient(135deg,#111827,#1f2937);border:1px solid #00ff8855;border-radius:15px;padding:15px;margin:15px;text-align:center;box-shadow:0 0 20px #00ff8822}
-  .clock-time{font-size:36px;font-weight:900;letter-spacing:2px;color:#00ff88;text-shadow:0 0 10px #00ff88;font-family:'Orbitron',sans-serif}
-  .clock-date{font-size:14px;color:#9ca3af;margin-top:5px}
-  .clock-city{font-size:12px;color:#00ff88;background:#00ff8822;padding:3px 10px;border-radius:20px;display:inline-block;margin-top:8px}
-  .bots-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:15px}
-  .bot-card{background:#111827;border-radius:10px;padding:10px;font-size:11px;border-right:3px solid var(--c);position:relative;overflow:hidden}
-  .bot-card::before{content:'';position:absolute;top:0;right:0;width:100%;height:2px;background:var(--c);animation:load 5s linear infinite}
-  @keyframes load{0%{width:0}100%{width:100%}}
-  .bot-name{font-weight:900;color:var(--c);font-size:12px}
-  .bot-time{color:#9ca3af;margin-top:4px;font-size:10px}
-  .match-card{background:#111827;margin:12px;border-radius:12px;padding:15px;border-right:4px solid #00ff88}
-  .league{color:#00ff88;font-size:13px;font-weight:700}
-  .teams{display:flex;justify-content:space-between;align-items:center;margin:10px 0;font-size:18px;font-weight:700}
-  .vs{color:#666}
-  .live-badge{background:red;color:#fff;padding:2px 8px;border-radius:5px;font-size:11px;animation:blink 1s infinite}
-  @keyframes blink{0%,100%{opacity:1}50%{opacity:0.5}}
-  .btn{background:#00ff88;color:#000;padding:10px;border-radius:8px;text-align:center;font-weight:900;margin-top:10px;display:block;text-decoration:none}
+*{box-sizing:border-box;font-family:'Tajawal',sans-serif}
+body{margin:0;background:#0f0f0f;color:#fff}
+.top{background:#1a1a1a;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #00ff88}
+.top b{color:#00ff88;font-size:22px}
+.top span{color:#ffeb3b}
+.lang{background:#00ff88;color:#000;border:none;border-radius:20px;padding:5px 14px;font-weight:900;font-size:12px}
+.clock-bar{background:#222;padding:8px 15px;display:flex;justify-content:space-between;font-size:12px;color:#aaa}
+.clock-bar #clock{color:#00ff88;font-weight:900}
+.bots{background:#111;display:grid;grid-template-columns:repeat(10,1fr);gap:1px;padding:1px}
+.bots div{background:#1e1e1e;text-align:center;padding:6px 2px;font-size:8px;color:#888}
+.bots b{color:#00ff88;display:block;font-size:9px}
+.league{padding:12px 15px;font-weight:900;color:#00ff88;font-size:14px;display:flex;justify-content:space-between;background:#151515;margin-top:10px}
+.card{background:#1e1e1e;border-radius:18px;border:1px solid #333;margin:8px 10px;padding:14px 12px;display:flex;justify-content:space-between;align-items:center}
+.card .team{width:28%;text-align:center;font-size:12px;font-weight:700;color:#fff}
+.card .score{width:44%;display:flex;justify-content:space-between;align-items:center;font-size:26px;font-weight:900}
+.card .score .min{color:#00ff88;font-size:18px}
 </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="header-top">
-    <div class="logo">
-      <span id="logoAr">سلوم تيفي</span>
-      <span id="logoEn" class="en" style="display:none">SLOOMTV</span>
-      <span class="live"> LIVE</span>
-    </div>
-    <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
-  </div>
-  <div class="sub">
-    <span id="subAr">sloomtv - البث المباشر لجميع الدوريات ⚡ 10 بوتات</span>
-    <span id="subEn" style="display:none">سلوم تيفي - sloomtv - 10 BOTS Live ⚡</span>
-  </div>
+<div class="top">
+  <div><b>SLOOMTV</b> <span>LIVE | سلوم تيفي - sloomtv</span></div>
+  <button class="lang">عربي / EN</button>
 </div>
 
-<div class="clock-box">
-  <div class="clock-time" id="clock">00:00:00</div>
-  <div class="clock-date" id="date">جاري التحميل...</div>
-  <div class="clock-city">📍 توقيت مسقط - البريمي 🇴🇲 | 10 بوتات نشطة</div>
+<div class="clock-bar">
+  <div>📍 البريمي 🇴🇲 - مسقط</div>
+  <div id="clock">22:30:00</div>
+  <div>10 BOTS ● LIVE</div>
 </div>
 
-<div class="bots-grid" id="botsGrid"></div>
+<div class="bots" id="botsGrid"></div>
 
-<div class="match-card">
-  <div class="league">🏆 دوري روشن السعودي <span class="live-badge">● مباشر</span></div>
-  <div class="teams"><span>التعاون</span><span class="vs">1 - 1</span><span>الاتفاق</span></div>
-  <a class="btn" href="#">شاهد التفاصيل مباشر</a>
-</div>
+<div class="league"><span>⌃</span><span>الدوري الإنجليزي الممتاز - مباشر</span></div>
+
+<div id="matches"></div>
 
 <script>
-let lang = localStorage.getItem('sloom-lang') || 'ar';
-function toggleLang(){
-  lang = lang==='ar'?'en':'ar';
-  localStorage.setItem('sloom-lang',lang);
-  applyLang();
-}
-function applyLang(){
-  const isAr = lang==='ar';
-  document.documentElement.lang=isAr?'ar':'en';
-  document.documentElement.dir=isAr?'rtl':'ltr';
-  document.getElementById('logoAr').style.display=isAr?'inline':'none';
-  document.getElementById('logoEn').style.display=isAr?'none':'inline';
-  document.getElementById('subAr').style.display=isAr?'inline':'none';
-  document.getElementById('subEn').style.display=isAr?'none':'inline';
-  document.getElementById('langBtn').textContent=isAr?'EN':'عربي';
-  document.title=isAr?'سلوم تيفي - sloomtv - البث المباشر':'SLOOMTV - سلوم تيفي Live';
-}
-applyLang();
-
-function updateClock(){
-  const now=new Date();
-  const oT={timeZone:'Asia/Muscat',hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'};
-  const oD={timeZone:'Asia/Muscat',weekday:'long',year:'numeric',month:'long',day:'numeric'};
-  const locale=lang==='ar'?'ar-EG':'en-GB';
-  document.getElementById('clock').textContent=now.toLocaleTimeString(locale,oT);
-  document.getElementById('date').textContent=now.toLocaleDateString(locale,oD);
-}
-setInterval(updateClock,1000); updateClock();
-
-const BOTS=[
-  {id:1,name:"روشن",nameEn:"Roshn",league:"دوري روشن",sec:5,color:"#00ff88"},
-  {id:2,name:"بريمييرليج",nameEn:"Premier",league:"Premier League",sec:6,color:"#ff0040"},
-  {id:3,name:"الليغا",nameEn:"LaLiga",league:"La Liga",sec:7,color:"#ffcc00"},
-  {id:4,name:"بوندسليغا",nameEn:"Bundes",league:"Bundesliga",sec:8,color:"#ff0000"},
-  {id:5,name:"الكالتشيو",nameEn:"Serie A",league:"Serie A",sec:9,color:"#0080ff"},
-  {id:6,name:"ليغ 1",nameEn:"Ligue 1",league:"Ligue 1",sec:10,color:"#8000ff"},
-  {id:7,name:"الأبطال",nameEn:"UCL",league:"Champions",sec:5,color:"#00ffff"},
-  {id:8,name:"آسيا",nameEn:"AFC",league:"AFC",sec:11,color:"#ff8000"},
-  {id:9,name:"أوروبا",nameEn:"Europa",league:"Europa",sec:12,color:"#ff0080"},
-  {id:10,name:"الكأس",nameEn:"Cup",league:"King Cup",sec:5,color:"#ffff00"},
+const data=[
+  {h:"كوفتنري",a:"سندرلاند",hs:3,as:1,m:"71'"},
+  {h:"برينتفورد",a:"نوتنغهام",hs:1,as:0,m:"72'"},
+  {h:"هال",a:"إبسويتش",hs:1,as:1,m:"69'"},
+  {h:"مان سيتي",a:"برايتون",hs:0,as:1,m:"70'"},
+  {h:"بورنموث",a:"ليدز",hs:1,as:0,m:"68'"},
 ];
+function render(){
+  let html='';
+  data.forEach(d=>{
+    html+=`<div class="card">
+      <div class="team">${d.h}</div>
+      <div class="score"><span>${d.hs}</span><span class="min">${d.m}</span><span>${d.as}</span></div>
+      <div class="team">${d.a}</div>
+    </div>`;
+  });
+  document.getElementById('matches').innerHTML=html;
+}
+render();
+
+const bots=["روشن","PL","LaLiga","Bundes","SerieA","Ligue1","UCL","AFC","Europa","Cup"];
 const grid=document.getElementById('botsGrid');
-BOTS.forEach(b=>{
-  const div=document.createElement('div');
-  div.className='bot-card';
-  div.style.setProperty('--c',b.color);
-  div.innerHTML=`<div class="bot-name">🤖 BOT ${b.id} - <span class="bn">${b.name}</span></div><div>${b.league}</div><div class="bot-time" id="bot-${b.id}">يبدأ...</div>`;
-  grid.appendChild(div);
+bots.forEach((n,i)=>{
+  const el=document.createElement('div');
+  el.innerHTML=`<b>BOT ${i+1}</b>${n}<br><span id="b${i}">OK</span>`;
+  grid.appendChild(el);
   setInterval(()=>{
-    const t=new Date().toLocaleTimeString(lang==='ar'?'ar-EG':'en-GB',{timeZone:'Asia/Muscat',hour12:false});
-    const el=document.getElementById(`bot-${b.id}`);
-    if(el) el.textContent=`⚡ ${lang==='ar'?'يحدث':'Update'} : ${t} | كل ${b.sec} ث`;
-  },b.sec*1000);
+    document.getElementById(`b${i}`).textContent=new Date().toLocaleTimeString('ar-EG',{timeZone:'Asia/Muscat',hour12:false,second:'2-digit'});
+  },(5+i)*800);
 });
+
+setInterval(()=>{
+  document.getElementById('clock').textContent=new Date().toLocaleTimeString('ar-EG',{timeZone:'Asia/Muscat',hour12:false});
+},1000);
 </script>
 </body>
 </html>
