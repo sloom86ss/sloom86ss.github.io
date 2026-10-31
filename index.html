@@ -3,215 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم تيفي | SLOOMTV - sloomtv</title>
+<title>سلوم تيفي | ترتيب الفرق - شريط أخبار - مقالات - ملخصات - تحليل فني | SLOOMTV</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma,sans-serif;background:#0a0a14;color:#fff}
-.h{background:#14142a;padding:16px;text-align:center;border-bottom:3px solid #ff0040}
-.logo{font-size:42px;font-weight:900;line-height:1.2}.logo span{color:#ffeb3b}
-.badge{background:#0f2815;border:1px solid #22c55e;color:#22c55e;padding:8px 14px;border-radius:30px;display:inline-block;font-size:11px;margin-top:8px}
-.ticker{background:#ff0040;color:#fff;padding:8px 0;overflow:hidden;white-space:nowrap;font-weight:700;font-size:12px}
-.ticker div{display:inline-block;animation:sc 110s linear infinite} @keyframes sc{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-.menu{max-width:1000px;margin:10px auto;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:0 10px}
-.menu button{background:#1e1e3a;border:1px solid #333;color:#ccc;padding:10px 18px;border-radius:30px;font-size:13px;cursor:pointer}
-.menu button.active{background:#fff;color:#000;font-weight:800}
-.wrap{max-width:1000px;margin:auto;padding:10px}
-.card{background:#15152d;border:2px solid #2a2a4a;border-radius:16px;margin-bottom:16px;overflow:hidden;display:block !important}
-.hd{background:#1e1e40;padding:12px 14px;font-weight:800;font-size:12px;border-right:4px solid #ff0040;display:flex;justify-content:space-between;align-items:center}
-.match{padding:12px;display:grid;grid-template-columns:75px 1fr 85px;gap:10px;align-items:center}
-.team{font-weight:700;text-align:center;background:#1a1a33;padding:7px;border-radius:8px;border:1px solid #2a2a4a}
-.score{font-size:20px;font-weight:900;text-align:center;background:#000;padding:8px;border-radius:10px;color:#22c55e;border:1px solid #333}
-.st{font-size:8px;text-align:center;margin-top:5px;padding:4px 6px;border-radius:8px;font-weight:700}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,sans-serif;background:#080810;color:#fff;overflow-x:hidden}
+.h{background:linear-gradient(135deg,#14142a,#1a1a3a);padding:18px;text-align:center;border-bottom:3px solid #ff0040;position:relative}
+.logo{font-size:44px;font-weight:900;line-height:1.1;text-shadow:0 2px 10px rgba(0,0,0,.5)}.logo span{color:#ffeb3b}
+.sub{font-size:11px;color:#999;margin-top:6px}
+.badge{background:linear-gradient(90deg,#0f2815,#1a3a1a);border:1px solid #22c55e;color:#22c55e;padding:8px 16px;border-radius:30px;display:inline-block;font-size:11px;margin-top:10px;font-weight:700;animation:glow 2s infinite}
+@keyframes glow{0%,100%{box-shadow:0 0 5px #22c55e}50%{box-shadow:0 0 15px #22c55e}}
+.ticker{background:#ff0040;color:#fff;padding:10px 0;overflow:hidden;white-space:nowrap;font-weight:800;font-size:12px;border-top:1px solid #ff3355;border-bottom:1px solid #ff3355;position:relative;z-index:10;display:block !important}
+.ticker div{display:inline-block;animation:sc 120s linear infinite;padding-left:100%} @keyframes sc{0%{transform:translateX(0)}100%{transform:translateX(100%)}}
+.menu{max-width:1100px;margin:12px auto;display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:0 10px}
+.menu button{background:#1e1e3a;border:1px solid #333;color:#ccc;padding:11px 18px;border-radius:30px;font-size:13px;cursor:pointer;transition:.2s}
+.menu button.active{background:#fff;color:#000;font-weight:900;transform:scale(1.05)}
+.menu button:hover{border-color:#ffeb3b}
+.wrap{max-width:1100px;margin:auto;padding:12px;display:grid;grid-template-columns:1fr 340px;gap:14px}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}}
+.col{display:flex;flex-direction:column;gap:14px}
+.card{background:#15152d;border:1px solid #2a2a4a;border-radius:16px;overflow:hidden;display:block !important;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.hd{background:linear-gradient(90deg,#1e1e40,#2a2a5a);padding:13px 15px;font-weight:900;font-size:13px;border-right:4px solid #ff0040;display:flex;justify-content:space-between;align-items:center}
+.match{padding:14px;display:grid;grid-template-columns:80px 1fr 90px;gap:12px;align-items:center;border-bottom:1px solid #222}
+.team{font-weight:800;text-align:center;background:#1a1a33;padding:8px;border-radius:10px;border:1px solid #2a2a5a;font-size:13px}
+.score{font-size:22px;font-weight:900;text-align:center;background:#000;padding:10px;border-radius:12px;color:#22c55e;border:1px solid #333}
+.st{font-size:8px;text-align:center;margin-top:6px;padding:4px 8px;border-radius:20px;font-weight:800}
 .fin{background:#22c55e;color:#000}.up{background:#1e3a5f;color:#93c5fd}
-.detail{grid-column:1/-1;background:#0f0f22;padding:12px;border-radius:10px;margin-top:10px;font-size:11px;line-height:2;border:1px solid #252545}
-.video-box{position:relative;width:100%;height:220px;border-radius:12px;overflow:hidden;background:#000;margin-top:10px;border:2px solid #22c55e;cursor:pointer;display:block}
-.video-box canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.video-box .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:52px;background:#ff0000;border-radius:12px;display:flex;align-items:center;justify-content:center;animation:pulse 1.2s infinite;box-shadow:0 0 25px rgba(255,0,0,.7);z-index:5}
+.detail{grid-column:1/-1;background:#0f0f22;padding:12px;border-radius:12px;margin-top:10px;font-size:11.5px;line-height:2;border:1px solid #252545}
+.video-box{position:relative;width:100%;height:220px;border-radius:12px;overflow:hidden;background:#000;margin-top:12px;border:2px solid #22c55e;cursor:pointer}
+.video-box canvas{position:absolute;inset:0;width:100%;height:100%}
+.video-box .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:74px;height:54px;background:#ff0000;border-radius:14px;display:flex;align-items:center;justify-content:center;animation:pulse 1.2s infinite;box-shadow:0 0 25px rgba(255,0,0,.7);z-index:5}
 @keyframes pulse{0%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.08)}100%{transform:translate(-50%,-50%) scale(1)}}
 .video-box .play::after{content:'▶';color:#fff;font-size:22px;margin-left:3px}
-.video-box .label{position:absolute;top:10px;left:10px;background:#22c55e;color:#000;padding:5px 10px;border-radius:6px;font-size:9px;font-weight:900;z-index:5}
+.video-box .label{position:absolute;top:10px;left:10px;background:#22c55e;color:#000;padding:5px 10px;border-radius:20px;font-size:9px;font-weight:900;z-index:5}
 .video-box .title{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.95));padding:12px;font-size:11px;font-weight:800;z-index:5}
 .video-box.playing .play{display:none}
-.tbl{width:100%;border-collapse:collapse;font-size:11px}.tbl th{background:#0f0f22;color:#ffeb3b;padding:10px}.tbl td{padding:9px;border-bottom:1px solid #222;text-align:center}
+
+/* شكل الجدول الجديد - أنيق */
+.table-card{overflow:hidden}
+.tbl-new{width:100%;border-collapse:collapse;font-size:12px}
+.tbl-new th{background:#0f0f22;color:#ffeb3b;padding:12px 8px;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.tbl-new td{padding:11px 8px;border-bottom:1px solid #1e1e3a;text-align:center;transition:.2s}
+.tbl-new tr:hover td{background:#1a1a33}
+.tbl-new .team-cell{text-align:right;display:flex;align-items:center;gap:8px;font-weight:700}
+.tbl-new .team-cell .num{width:26px;height:26px;background:#1e1e3a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900}
+.tbl-new .pos-1 .num{background:#3b82f6;color:#fff}.pos-2 .num{background:#3b82f6;color:#fff}.pos-3 .num{background:#3b82f6;color:#fff}.pos-4 .num{background:#3b82f6;color:#fff}
+.tbl-new .pos-18 .num{background:#ef4444;color:#fff}.pos-20 .num{background:#ef4444;color:#fff}
+.tbl-new .pts{color:#ffeb3b;font-weight:900;font-size:13px}
+.side{background:#15152d;border:1px solid #2a2a4a;border-radius:16px;padding:14px}
+.side h3{margin:0 0 12px;color:#ffeb3b;border-right:3px solid #ff0040;padding-right:10px;font-size:13px;font-weight:900}
+.article{padding:10px 0;border-bottom:1px solid #1e1e3a;font-size:11.5px;line-height:1.8}
+.article:last-child{border:none}
+.article b{color:#22c55e}
 .hidden{display:none !important}
 </style>
 </head>
 <body>
 <div class="h">
 <div class="logo">سلوم تيفي<br><span>SLOOMTV</span></div>
-<div style="font-size:11px;color:#888;margin-top:6px">sloomtv - beIN SPORTS - أخبار الكورة والأندية - ملخصات حصرية</div>
-<div class="badge">🔴 مباشر - ملخصات حصرية 100% - رابط واحد - لا تنحذف - <span id="clock">8:42 ص</span></div>
+<div class="sub">sloomtv - beIN SPORTS - أخبار الكورة والأندية - ترتيب فرق - شريط أخبار - مقالات - ملخصات - تحليل فني</div>
+<div class="badge">🔴 مباشر - ترتيب - شريط أخبار - مقالات - ملخصات - تحليل فني - <span id="clock">8:42 ص</span> - رابط واحد</div>
 </div>
-<div class="ticker"><div>⚽ سلوم تيفي - رابط واحد - ملخصات حصرية لا تنحذف - لوهافر 1-5 باريس ثنائية توريس - فياريال 0-1 إسبانيول - إلفرسبرغ 4-1 ماينز - نيس 5-2 رين - ليل 1-0 لانس - بايرن ضد دورتموند 9:30 م - برشلونة ضد ألافيس 11:00 م - الهلال ضد النصر 9:00 م - sloomtv - beIN SPORTS - https://sloom86ss.github.io/ •</div></div>
+
+<div class="ticker"><div id="tickerText">🔴 سلوم تيفي - شريط أخبار متحرك - ترتيب الفرق - باريس متصدر 25 نقطة - برشلونة متصدر 26 نقطة - بايرن متصدر 22 نقطة - الهلال متصدر 29 نقطة - مقالات صحافة - تحليل فني قبل المباريات - ملخصات حصرية - مجريات - أهداف - تاريخ - وقت - beIN SPORTS - sloomtv - https://sloom86ss.github.io/ • فياريال 0-1 إسبانيول روميرو 68 • إلفرسبرغ 4-1 ماينز مهرجان 5 أهداف • لوهافر 1-5 باريس ثنائية توريس • نيس 5-2 رين • ليل 1-0 لانس ديفيد 73 • بايرن ضد دورتموند 9:30 م الكلاسيكو • برشلونة ضد ألافيس 11:00 م بدون ليفا • الهلال ضد النصر 9:00 م ديربي • </div></div>
 
 <div class="menu">
-<button class="active" onclick="filterLeague('all',this)">🌍 كل الملخصات الحصرية</button>
-<button onclick="filterLeague('fra',this)">🇫🇷 فرنسي</button>
-<button onclick="filterLeague('ger',this)">🇩🇪 ألماني</button>
-<button onclick="filterLeague('esp',this)">🇪🇸 إسباني</button>
-<button onclick="filterLeague('saudi',this)">🇸🇦 روشن</button>
+<button class="active" onclick="filterAll('all',this)">🌍 كل شي - رابط واحد</button>
+<button onclick="filterAll('fra',this)">🇫🇷 فرنسي</button>
+<button onclick="filterAll('ger',this)">🇩🇪 ألماني</button>
+<button onclick="filterAll('esp',this)">🇪🇸 إسباني</button>
+<button onclick="filterAll('saudi',this)">🇸🇦 روشن</button>
+<button onclick="filterAll('press',this)">📰 مقالات</button>
 </div>
 
-<div class="wrap" id="mainBox">
+<div class="wrap">
+<div class="col" id="leftCol">
 
-<!-- فرنسي - يظهر مباشرة - ما ينخفي -->
+<!-- مباراة + تحليل فني قبل المباراة + ملخص -->
 <div class="card league-card" data-league="fra">
-<div class="hd"><span>🇫🇷 الدوري الفرنسي - لوهافر 1-5 باريس - ملخص حصري</span><span style="background:#22c55e;color:#000;padding:4px 10px;border-radius:20px;font-size:9px">⚽ حصري</span></div>
+<div class="hd"><span>🇫🇷 فرنسي - لوهافر 1-5 باريس - تحليل فني + ملخص</span><span style="background:#22c55e;color:#000;padding:4px 12px;border-radius:20px;font-size:9px">⚽ حصري</span></div>
 <div class="match"><div><div style="color:#ffeb3b;font-size:10px">📅 31 أكتوبر</div><div style="background:#1a1a33;padding:5px;border-radius:6px;margin-top:5px;font-size:10px">⏰ 10:00 م</div><div style="background:#3a2a8a;padding:4px 6px;border-radius:6px;margin-top:5px;font-size:9px;text-align:center">📺 beIN 4</div></div><div><div class="team">لوهافر</div><div style="text-align:center;font-size:9px;margin:5px 0;color:#666">VS</div><div class="team">باريس</div></div><div><div class="score">1 - 5</div><div class="st fin">✅ انتهت</div></div>
 <div class="detail">
-<b>📅 تاريخ:</b> 31 أكتوبر 2026 - <b>⏰ وقت:</b> 10:00 م<br>
-<b>⚽ الأهداف المسجلة (6 أهداف):</b><br>د8 عثمان ديمبيلي 0-1<br>د15 فيران توريس 0-2 - أول هدف بعد انتقاله من برشلونة 55م<br>د33 لوهافر 1-2<br>د61 برادلي باركولا 1-3<br>د78 فيران توريس 1-4 ثنائية<br>د85 غونزالو راموس 1-5<br>
-<b>🎬 مجريات المباراة:</b> اكتساح باريسي - باريس متصدر 25 نقطة<br>
-<b>🎥 ملخص حصري متحرك - اضغط للمشاهدة - لا ينحذف أبداً:</b>
+<b>🎙️ الحديث الفني قبل المباراة - beIN SPORTS:</b><br>
+📊 باريس يدخل بتشكيلة هجومية 4-3-3 - ديمبيلي وباركولا وتوريس مثلث هجومي - لوهافر يدافع بـ 5-4-1 - توقعات 75% فوز باريس - توريس أول أساسي بعد انتقاله من برشلونة 55م - إنريكي يجرب ثنائية توريس وديمبيلي - لوهافر آخر الترتيب 4 نقاط فقط<br><br>
+<b>⚽ الأهداف المسجلة:</b><br>د8 ديمبيلي 0-1 - أسيست حكيمي<br>د15 توريس 0-2 - أول هدف بقميص باريس<br>د33 لوهافر 1-2 - تقليص<br>د61 باركولا 1-3 - صناعة توريس<br>د78 توريس 1-4 - ثنائية - صناعة ديمبيلي<br>د85 راموس 1-5 - ختام المهرجان<br><br>
+<b>🎬 مجريات المباراة:</b> استحواذ باريس 71% - تسديدات 18-3 - اكتساح كامل - توريس نجم المباراة 9.2/10<br>
+<b>🎥 ملخص حصري متحرك - اضغط:</b>
 <div class="video-box" data-goals="8,15,33,61,78,85" data-home="لوهافر" data-away="باريس" onclick="playAnim(this)">
-<canvas></canvas>
-<div class="label">🔴 ملخص حصري - beIN 4</div>
-<div class="play"></div>
-<div class="title">⚽ لوهافر 1-5 باريس سان جيرمان - جميع الأهداف الـ6 - ثنائية توريس - ملخص حصري سلوم تيفي</div>
+<canvas></canvas><div class="label">🔴 ملخص حصري - beIN 4</div><div class="play"></div><div class="title">⚽ لوهافر 1-5 باريس - جميع الأهداف الـ6 - ثنائية توريس - تحليل فني + ملخص حصري</div>
 </div>
-<div style="margin-top:8px;color:#22c55e;font-size:10px">✅ باريس متصدر 25 نقطة - ملخص حصري لا ينحذف - https://sloom86ss.github.io/</div>
 </div>
 </div>
 </div>
 
 <div class="card league-card" data-league="ger">
-<div class="hd"><span>🇩🇪 الدوري الألماني - إلفرسبرغ 4-1 ماينز - ملخص حصري</span><span style="background:#22c55e;color:#000;padding:4px 10px;border-radius:20px;font-size:9px">⚽ حصري</span></div>
+<div class="hd"><span>🇩🇪 ألماني - إلفرسبرغ 4-1 ماينز - تحليل فني + ملخص</span></div>
 <div class="match"><div><div style="color:#ffeb3b;font-size:10px">📅 30 أكتوبر</div><div style="background:#1a1a33;padding:5px;border-radius:6px;margin-top:5px;font-size:10px">⏰ 11:30 م</div><div style="background:#3a2a8a;padding:4px 6px;border-radius:6px;margin-top:5px;font-size:9px;text-align:center">📺 beIN 3</div></div><div><div class="team">إلفرسبرغ</div><div style="text-align:center;font-size:9px;margin:5px 0;color:#666">VS</div><div class="team">ماينز</div></div><div><div class="score">4 - 1</div><div class="st fin">✅ انتهت</div></div>
 <div class="detail">
-<b>⚽ الأهداف المسجلة (5 أهداف):</b><br>د12 زيمر 1-0<br>د32 فينتر 2-0<br>د54 الدخيل 2-1<br>د67 كونراد 3-1<br>د89 بفايفر 4-1<br>
-<b>🎥 ملخص حصري متحرك - اضغط:</b>
-<div class="video-box" data-goals="12,32,54,67,89" data-home="إلفرسبرغ" data-away="ماينز" onclick="playAnim(this)">
-<canvas></canvas>
-<div class="label">✅ انتهت - beIN 3</div>
-<div class="play"></div>
-<div class="title">⚽ إلفرسبرغ 4-1 ماينز - جميع الأهداف الـ5 - مهرجان أهداف - ملخص حصري</div>
-</div>
+<b>🎙️ الحديث الفني قبل المباراة:</b><br>إلفرسبرغ مفاجأة الموسم - صاعد جديد لكن خامس الترتيب 14 نقطة - ماينز يعاني 15 بـ 6 نقاط - تكتيك إلفرسبرغ ضغط عالي 4-2-3-1 - ماينز 3-4-2-1 - توقعات فوز إلفرسبرغ<br><br>
+<b>⚽ الأهداف:</b> د12 زيمر 1-0 - د32 فينتر 2-0 - د54 الدخيل 2-1 - د67 كونراد 3-1 - د89 بفايفر 4-1<br>
+<b>🎥 ملخص حصري:</b>
+<div class="video-box" data-goals="12,32,54,67,89" data-home="إلفرسبرغ" data-away="ماينز" onclick="playAnim(this)"><canvas></canvas><div class="label">✅ انتهت - beIN 3</div><div class="play"></div><div class="title">⚽ إلفرسبرغ 4-1 ماينز - مهرجان 5 أهداف - ملخص حصري</div></div>
 </div>
 </div>
 </div>
 
 <div class="card league-card" data-league="esp">
-<div class="hd"><span>🇪🇸 الدوري الإسباني - فياريال 0-1 إسبانيول - ملخص حصري</span><span style="background:#22c55e;color:#000;padding:4px 10px;border-radius:20px;font-size:9px">⚽ حصري</span></div>
-<div class="match"><div><div style="color:#ffeb3b;font-size:10px">📅 31 أكتوبر</div><div style="background:#1a1a33;padding:5px;border-radius:6px;margin-top:5px;font-size:10px">⏰ 12:00 ص</div><div style="background:#3a2a8a;padding:4px 6px;border-radius:6px;margin-top:5px;font-size:9px;text-align:center">📺 beIN 1</div></div><div><div class="team">فياريال</div><div style="text-align:center;font-size:9px;margin:5px 0;color:#666">VS</div><div class="team">إسبانيول</div></div><div><div class="score">0 - 1</div><div class="st fin">✅ انتهت</div></div>
+<div class="hd"><span>🇪🇸 إسباني - برشلونة ضد ألافيس - تحليل فني قبل المباراة</span><span style="background:#1e3a5f;color:#93c5fd;padding:4px 12px;border-radius:20px;font-size:9px">🔥 11:00 م</span></div>
+<div class="match"><div><div style="color:#ffeb3b;font-size:10px">📅 31 أكتوبر</div><div style="background:#1a1a33;padding:5px;border-radius:6px;margin-top:5px;font-size:10px">⏰ 11:00 م</div><div style="background:#3a2a8a;padding:4px 6px;border-radius:6px;margin-top:5px;font-size:9px;text-align:center">📺 beIN 1</div></div><div><div class="team">برشلونة</div><div style="text-align:center;font-size:9px;margin:5px 0;color:#666">VS</div><div class="team">ألافيس</div></div><div><div class="score">- : -</div><div class="st up">11:00 م</div></div>
 <div class="detail">
-<b>⚽ الهدف:</b> د68 كارلوس روميرو 0-1<br>
-<b>📊 إحصائيات:</b> استحواذ 62%-38% - تسديدات 14-6<br>
-<b>🎥 ملخص حصري متحرك:</b>
-<div class="video-box" data-goals="68" data-home="فياريال" data-away="إسبانيول" onclick="playAnim(this)">
-<canvas></canvas>
-<div class="label">✅ انتهت - beIN 1</div>
-<div class="play"></div>
-<div class="title">⚽ فياريال 0-1 إسبانيول - هدف روميرو 68 - ملخص حصري - LaLiga</div>
-</div>
+<b>🎙️ الحديث الفني قبل المباراة - تحليل حصري beIN SPORTS:</b><br>
+🔵 برشلونة بدون ليفاندوفسكي رسمياً - انتهى عقده 30 يونيو 2026 وانتقل لشيكاغو فاير MLS - فليك يجرب روني باردجي 19 سنة (سويدي من كوبنهاغن) أساسي مكان ليفا - تشكيلة متوقعة 4-3-3: تير شتيغن - كوندي أراوخو كوبارسي بالدي - دي يونغ بيدري جافي - يامال 10 روني 19 رافينيا 11 - ألافيس 5-4-1 دفاعي - برشلونة استحواذ 70% متوقع - غياب ليفا فرصة لباردجي يثبت نفسه - المباراة في مونتجويك 50 ألف<br>
+<b>📊 ترتيب الفريقين:</b> برشلونة أول 26 نقطة - ألافيس 14 بـ 11 نقطة<br>
+✅ سلوم تيفي - تحليل فني حصري
 </div>
 </div>
 </div>
 
-<div class="card league-card" data-league="saudi">
-<div class="hd"><span>🇸🇦 دوري روشن - الهلال ضد النصر - ديربي الرياض</span><span style="background:#1e3a5f;color:#93c5fd;padding:4px 10px;border-radius:20px;font-size:9px">🔥 9:00 م</span></div>
-<div class="match"><div><div style="color:#ffeb3b;font-size:10px">📅 31 أكتوبر</div><div style="background:#1a1a33;padding:5px;border-radius:6px;margin-top:5px;font-size:10px">⏰ 9:00 م</div><div style="background:#3a2a8a;padding:4px 6px;border-radius:6px;margin-top:5px;font-size:9px;text-align:center">📺 SSC</div></div><div><div class="team">الهلال</div><div style="text-align:center;font-size:9px;margin:5px 0;color:#666">VS</div><div class="team">النصر</div></div><div><div class="score">- : -</div><div class="st up">9:00 م - ديربي 🔥</div></div>
-<div class="detail">
-<b>📋 تشكيلة ديربي الرياض - أخبار الأندية:</b><br>
-🔵 الهلال: بونو - محزري - تمبكتي - كوليبالي - ثيو 19 - نيفيز - سافيتش - الدوسري - سامرفيل 38 - واتكينز 11 - مارتينيلي 7<br>
-🟡 النصر: بينتو - بوشل - أمان - كوستا - العمري - مارتينيز - فيليكس 79 - الخيبري - رونالدو 41 سنة - الحمدان - ماني<br>
-<b>🏟️:</b> Kingdom Arena 26 ألف - <b>📅:</b> 31 أكتوبر - <b>⏰:</b> 9:00 م<br>
-✅ سلوم تيفي - رابط واحد - https://sloom86ss.github.io/
+<!-- جداول أنيقة - شكل جديد -->
+<div class="card table-card league-card" data-league="fra">
+<div class="hd"><span>🇫🇷 ترتيب الفرق - الدوري الفرنسي - شكل أنيق جديد</span><span style="background:#ffeb3b;color:#000;padding:4px 12px;border-radius:20px;font-size:9px">🔢 من 1 إلى 18</span></div>
+<table class="tbl-new">
+<tr><th>#</th><th style="text-align:right">الفريق</th><th>ل</th><th>ف</th><th>خ</th><th>نقاط</th></tr>
+<tr class="pos-1"><td><div class="num">1</div></td><td class="team-cell">🇫🇷 باريس</td><td>10</td><td>8</td><td>1</td><td class="pts">25</td></tr>
+<tr class="pos-2"><td><div class="num">2</div></td><td class="team-cell">🔴 مارسيليا</td><td>10</td><td>7</td><td>2</td><td class="pts">23</td></tr>
+<tr class="pos-3"><td><div class="num">3</div></td><td class="team-cell">🦅 نيس</td><td>10</td><td>6</td><td>2</td><td class="pts">20</td></tr>
+<tr><td><div class="num">4</div></td><td class="team-cell">🐕 ليل</td><td>10</td><td>6</td><td>3</td><td class="pts">19</td></tr>
+<tr><td><div class="num">5</div></td><td class="team-cell">🔴 رين</td><td>10</td><td>4</td><td>4</td><td class="pts">14</td></tr>
+<tr class="pos-18"><td><div class="num">18</div></td><td class="team-cell">⚓ لوهافر</td><td>10</td><td>1</td><td>7</td><td class="pts">4</td></tr>
+</table>
+<div style="padding:10px;display:flex;gap:8px;font-size:9px"><span style="background:#3b82f6;color:#fff;padding:3px 8px;border-radius:10px">🔵 دوري أبطال</span><span style="background:#ef4444;color:#fff;padding:3px 8px;border-radius:10px">🔴 هبوط</span><span style="color:#888">✅ سلوم تيفي - رابط واحد</span></div>
 </div>
+
+<div class="card table-card league-card" data-league="ger">
+<div class="hd"><span>🇩🇪 ترتيب الفرق - الدوري الألماني - شكل أنيق</span></div>
+<table class="tbl-new"><tr><th>#</th><th style="text-align:right">الفريق</th><th>ل</th><th>نقاط</th></tr>
+<tr class="pos-1"><td><div class="num">1</div></td><td class="team-cell">🔴 بايرن ميونخ</td><td>8</td><td class="pts">22</td></tr>
+<tr class="pos-2"><td><div class="num">2</div></td><td class="team-cell">🟡 دورتموند</td><td>8</td><td class="pts">20</td></tr>
+<tr><td><div class="num">5</div></td><td class="team-cell">🔵 إلفرسبرغ</td><td>8</td><td class="pts">14</td></tr>
+<tr class="pos-18"><td><div class="num">18</div></td><td class="team-cell">🔵 بوخوم</td><td>8</td><td class="pts">2</td></tr>
+</table>
 </div>
+
+<div class="card table-card league-card" data-league="esp">
+<div class="hd"><span>🇪🇸 ترتيب الفرق - الدوري الإسباني - من 1 إلى 20</span></div>
+<table class="tbl-new"><tr><th>#</th><th style="text-align:right">الفريق</th><th>ل</th><th>نقاط</th></tr>
+<tr class="pos-1"><td><div class="num">1</div></td><td class="team-cell">🔵 برشلونة</td><td>11</td><td class="pts">26</td></tr>
+<tr class="pos-2"><td><div class="num">2</div></td><td class="team-cell">⚪ ريال مدريد</td><td>11</td><td class="pts">26</td></tr>
+<tr><td><div class="num">5</div></td><td class="team-cell">⚪ إسبانيول</td><td>11</td><td class="pts">18</td></tr>
+<tr class="pos-20"><td><div class="num">20</div></td><td class="team-cell">⚡ رايو</td><td>11</td><td class="pts">4</td></tr>
+</table>
 </div>
 
-<!-- جداول كاملة - تظهر مباشرة -->
-<div class="card league-card" data-league="fra"><div class="hd"><span>🇫🇷 جدول فرنسي - من 1 إلى 18 - في نفس الرابط</span></div><div style="overflow:auto"><table class="tbl"><tr><th>#</th><th style="text-align:right">الفريق</th><th>ل</th><th>نقاط</th></tr><tr><td>1</td><td style="text-align:right">باريس</td><td>10</td><td style="color:#ffeb3b;font-weight:900">25</td></tr><tr><td>2</td><td style="text-align:right">مارسيليا</td><td>10</td><td>23</td></tr><tr><td>3</td><td style="text-align:right">نيس</td><td>10</td><td>20</td></tr><tr><td>4</td><td style="text-align:right">ليل</td><td>10</td><td>19</td></tr><tr><td>18</td><td style="text-align:right">لوهافر</td><td>10</td><td>4</td></tr></table></div><div style="padding:8px;font-size:10px;color:#888">✅ جدول كامل - رابط واحد - sloomtv - https://sloom86ss.github.io/</div></div>
+<div class="card table-card league-card" data-league="saudi">
+<div class="hd"><span>🇸🇦 ترتيب الفرق - دوري روشن - من 1 إلى 18</span></div>
+<table class="tbl-new"><tr><th>#</th><th style="text-align:right">الفريق</th><th>ل</th><th>نقاط</th></tr>
+<tr class="pos-1"><td><div class="num">1</div></td><td class="team-cell">🔵 الهلال</td><td>11</td><td class="pts">29</td></tr>
+<tr class="pos-2"><td><div class="num">2</div></td><td class="team-cell">🟡 الاتحاد</td><td>11</td><td class="pts">26</td></tr>
+<tr class="pos-3"><td><div class="num">3</div></td><td class="team-cell">🟡 النصر</td><td>11</td><td class="pts">23</td></tr>
+<tr class="pos-18"><td><div class="num">18</div></td><td class="team-cell">🟤 الخلود</td><td>11</td><td class="pts">2</td></tr>
+</table>
+</div>
 
-<div class="card league-card" data-league="ger"><div class="hd"><span>🇩🇪 جدول ألماني - من 1 إلى 18</span></div><div style="overflow:auto"><table class="tbl"><tr><th>#</th><th style="text-align:right">الفريق</th><th>ل</th><th>نقاط</th></tr><tr><td>1</td><td style="text-align:right">بايرن ميونخ</td><td>8</td><td style="color:#ffeb3b;font-weight:900">22</td></tr><tr><td>2</td><td style="text-align:right">دورتموند</td><td>8</td><td>20</td></tr><tr><td>5</td><td style="text-align:right">إلفرسبرغ</td><td>8</td><td>14</td></tr><tr><td>15</td><td style="text-align:right">ماينز</td><td>8</td><td>6</td></tr></table></div></div>
+</div>
 
-<div class="card league-card" data-league="esp"><div class="hd"><span>🇪🇸 جدول إسباني - من 1 إلى 20</span></div><div style="overflow:auto"><table class="tbl"><tr><th>#</th><th style="text-align:right">الفريق</th><th>ل</th><th>نقاط</th></tr><tr><td>1</td><td style="text-align:right">برشلونة</td><td>11</td><td style="color:#ffeb3b;font-weight:900">26</td></tr><tr><td>2</td><td style="text-align:right">ريال مدريد</td><td>11</td><td>26</td></tr><tr><td>20</td><td style="text-align:right">رايو</td><td>11</td><td>4</td></tr></table></div></div>
+<!-- عمود جانبي - مقالات الصحافة -->
+<div class="col">
+<div class="side league-card" data-league="press">
+<h3>📰 مقالات الصحافة - أخبار الكورة والأندية</h3>
+<div class="article"><b>🔴 صحيفة ماركا - إسبانيا:</b><br>برشلونة يودع ليفاندوفسكي بعد 4 سنوات - البولندي إلى شيكاغو فاير - روني باردجي 19 سنة البديل - فليك: نثق في الشباب - ✅ beIN SPORTS</div>
+<div class="article"><b>🔵 صحيفة ليكيب - فرنسا:</b><br>باريس يكتسح لوهافر 5-1 - فيران توريس يثبت أن برشلونة أخطأ ببيعه - ثنائية في أول مباراة أساسية - إنريكي: توريس سيكون نجم المستقبل - ✅ سلوم تيفي</div>
+<div class="article"><b>🟡 صحيفة بيلد - ألمانيا:</b><br>إلفرسبرغ مفاجأة البوندسليجا - صاعد جديد يحتل المركز الخامس - 4-1 على ماينز - مدرب إلفرسبرغ: نحلم بدوري أبطال - ✅ beIN SPORTS</div>
+<div class="article"><b>🟢 صحيفة الرياضية - السعودية:</b><br>ديربي الرياض الليلة - الهلال ضد النصر 9:00 م - إنزاغي ضد جيسوس - رونالدو 41 سنة يواجه واتكينز ومارتينيلي الجدد - تذاكر نفدت 26 ألف - ✅ سلوم تيفي</div>
+</div>
 
+<div class="side league-card" data-league="press">
+<h3>🎙️ الحديث الفني قبل المباريات - تحليل</h3>
+<div class="article"><b>⚽ بايرن ضد دورتموند 9:30 م - الكلاسيكو:</b><br>تشكيلة بايرن: نوير - لايمر أوباميكانو تاه 4 براون 11 - كيميتش بافلوفيتش - أوليسيه 17 سايباري 34 دياز 14 - كين 9<br>دورتموند: كوبل - رايرسون أنطون شلوتربيك بن سبعيني - سابيتزر نميتشا - بيلينغهام 7 جوبي باير - غيراسي 9 سيلفا 21<br>تكتيك: بايرن 4-2-3-1 ضغط عالي - دورتموند 3-4-2-1 مرتدات - توقع 2-1 بايرن<br>✅ تحليل فني حصري - beIN SPORTS</div>
+<div class="article"><b>⚽ برشلونة ضد ألافيس 11:00 م:</b><br>برشلونة بدون ليفا - روني باردجي 19 أساسي - يامال 10 صانع - رافينيا 11 هداف - ألافيس دفاع 5-4-1 - توقع 3-0 برشلونة - ✅ سلوم تيفي</div>
+</div>
+
+<div class="side league-card" data-league="all">
+<h3>📅 تاريخ ووقت اليوم - جدول زمني</h3>
+<div class="article"><b>📅 التاريخ:</b> <span id="dateNow">31 أكتوبر 2026</span><br><b>⏰ الوقت الآن:</b> <span id="timeNow2">8:42 ص</span><br><b>📊 مباريات اليوم:</b><br>• 9:30 م بايرن ضد دورتموند - beIN 1 - الكلاسيكو<br>• 11:00 م برشلونة ضد ألافيس - beIN 1<br>• 9:00 م الهلال ضد النصر - SSC - ديربي<br><b>🔗 رابط واحد:</b> https://sloom86ss.github.io/<br>✅ سلوم تيفي - beIN SPORTS</div>
+</div>
+
+<div class="side league-card" data-league="all">
+<h3>🎥 ملخصات المباريات - لا تنحذف</h3>
+<div class="article">✅ لوهافر 1-5 باريس - 6 أهداف - ثنائية توريس - اضغط للمشاهدة أعلاه - ملخص حصري متحرك لا ينحذف<br>✅ إلفرسبرغ 4-1 ماينز - 5 أهداف - مهرجان<br>✅ فياريال 0-1 إسبانيول - هدف روميرو 68<br><span style="color:#22c55e">✅ كل الملخصات في رابط واحد - لا تحتاج يوتيوب - لا تظهر "غير متاح"</span></div>
+</div>
+
+</div>
 </div>
 </div>
 
 <script>
-// إصلاح مشكلة الموقع الفاضي - الذكاء الاصطناعي يتدخل
-function filterLeague(key,btn){
-  try{
-    document.querySelectorAll('.menu button').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.league-card').forEach(card=>{
-      if(key==='all'){ card.classList.remove('hidden'); }
-      else {
-        if(card.getAttribute('data-league')===key) card.classList.remove('hidden');
-        else card.classList.add('hidden');
-      }
+function filterAll(key,btn){
+  document.querySelectorAll('.menu button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  document.querySelectorAll('.league-card').forEach(card=>{
+    if(key==='all') card.classList.remove('hidden');
+    else {
+      if(card.getAttribute('data-league')===key || card.getAttribute('data-league')==='all') card.classList.remove('hidden');
+      else if(key==='press' && card.getAttribute('data-league')==='press') card.classList.remove('hidden');
+      else if(card.getAttribute('data-league')===key) card.classList.remove('hidden');
+      else card.classList.add('hidden');
+    }
+  });
+  // إذا ضغط مقالات - أظهر مقالات فقط
+  if(key==='press'){
+    document.querySelectorAll('.league-card').forEach(c=>{
+      if(c.getAttribute('data-league')!=='press') c.classList.add('hidden');
+      else c.classList.remove('hidden');
     });
-  }catch(e){ console.log(e); }
+  }
 }
 
-// ملخص متحرك حصري - لا يحتاج يوتيوب - لا يظهر "غير متاح"
 function playAnim(box){
   if(box.classList.contains('playing')) return;
   box.classList.add('playing');
-  const canvas = box.querySelector('canvas');
-  const ctx = canvas.getContext('2d');
-  const goals = box.getAttribute('data-goals').split(',').map(n=>parseInt(n));
-  const home = box.getAttribute('data-home');
-  const away = box.getAttribute('data-away');
-  
-  function resize(){
-    const rect = box.getBoundingClientRect();
-    canvas.width = rect.width*2;
-    canvas.height = rect.height*2;
-  }
+  const canvas=box.querySelector('canvas');const ctx=canvas.getContext('2d');
+  const goals=box.getAttribute('data-goals').split(',').map(n=>parseInt(n));
+  const home=box.getAttribute('data-home');const away=box.getAttribute('data-away');
+  function resize(){const r=box.getBoundingClientRect();canvas.width=r.width*2;canvas.height=r.height*2;}
   resize();
-  
-  let idx=0, prog=0, phase='start';
-  
+  let idx=0,prog=0,phase='start';
   function draw(){
-    const W=canvas.width, H=canvas.height;
-    ctx.fillStyle='#0a2a0a'; ctx.fillRect(0,0,W,H);
-    ctx.strokeStyle='#1a5a1a'; ctx.lineWidth=6; ctx.strokeRect(30,30,W-60,H-60);
-    ctx.beginPath(); ctx.moveTo(W/2,30); ctx.lineTo(W/2,H-30); ctx.stroke();
-    ctx.beginPath(); ctx.arc(W/2,H/2,100,0,Math.PI*2); ctx.stroke();
-    ctx.fillStyle='#fff'; ctx.fillRect(0,H/2-80,20,160); ctx.fillRect(W-20,H/2-80,20,160);
-    
+    const W=canvas.width,H=canvas.height;
+    ctx.fillStyle='#0a2a0a';ctx.fillRect(0,0,W,H);
+    ctx.strokeStyle='#1a5a1a';ctx.lineWidth=6;ctx.strokeRect(30,30,W-60,H-60);
+    ctx.beginPath();ctx.moveTo(W/2,30);ctx.lineTo(W/2,H-30);ctx.stroke();
+    ctx.beginPath();ctx.arc(W/2,H/2,100,0,Math.PI*2);ctx.stroke();
+    ctx.fillStyle='#fff';ctx.fillRect(0,H/2-80,20,160);ctx.fillRect(W-20,H/2-80,20,160);
     if(phase==='start'){
-      ctx.fillStyle='#fff'; ctx.font='bold 44px Tahoma'; ctx.textAlign='center';
-      ctx.fillText(home+' VS '+away, W/2, H/2-20);
-      ctx.font='28px Tahoma'; ctx.fillStyle='#ffeb3b';
-      ctx.fillText('ملخص حصري - سلوم تيفي', W/2, H/2+40);
-      prog+=0.015; if(prog>1){ phase='goal'; prog=0; idx=0; }
-    } else if(phase==='goal' && idx<goals.length){
-      ctx.fillStyle='#22c55e'; ctx.font='bold 70px Tahoma'; ctx.textAlign='center';
-      ctx.fillText('GOAL! ⚽ د'+goals[idx], W/2, H/2-10);
-      ctx.font='30px Tahoma'; ctx.fillStyle='#fff';
-      ctx.fillText('هدف - beIN SPORTS', W/2, H/2+60);
-      const x = 80 + prog*(W-160);
-      ctx.beginPath(); ctx.arc(x, H/2+20, 22, 0, Math.PI*2); ctx.fillStyle='#fff'; ctx.fill();
-      ctx.strokeStyle='#000'; ctx.lineWidth=3; ctx.stroke();
-      prog+=0.025; if(prog>1){ idx++; prog=0; if(idx>=goals.length) phase='end'; }
-    } else {
-      ctx.fillStyle='#ffeb3b'; ctx.font='bold 42px Tahoma'; ctx.textAlign='center';
-      ctx.fillText('انتهت - جميع الأهداف ✅', W/2, H/2-10);
-      ctx.font='24px Tahoma'; ctx.fillStyle='#fff';
-      ctx.fillText('سلوم تيفي - https://sloom86ss.github.io/', W/2, H/2+50);
-    }
-    if(phase!=='end' || prog<1.5) requestAnimationFrame(draw);
-  }
-  draw();
-  box.querySelector('.label').innerText='⚽ يعرض الآن - حصري - beIN SPORTS';
-}
-
-function updateClock(){
-  try{
-    const n=new Date();
-    document.getElementById('clock').innerText=n.toLocaleTimeString('ar-EG');
-  }catch(e){}
-}
-// يضمن أن المحتوى يظهر حتى لو فشل JS
-document.addEventListener('DOMContentLoaded', ()=>{
-  document.querySelectorAll('.league-card').forEach(c=>c.classList.remove('hidden'));
-  updateClock();
-  setInterval(updateClock,1000);
-});
-updateClock();
-</script>
-</body>
-</html>
+      ctx.fillStyle='#fff';ctx.font='bold 44px Tahoma';ctx.textAlign='center';
+      ctx.fillText(home+' VS '+away,W/2,H/2-20);ctx.fon
