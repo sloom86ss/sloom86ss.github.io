@@ -3,133 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم - أخبار حصرية انتقالات وإصابات</title>
+<title>SLOOM TV | أخبار مضمونة من beIN SPORTS ويلا كورة</title>
 <style>
-body{margin:0;font-family:Tahoma;background:#08080f;color:#fff}
-.header{background:linear-gradient(90deg,#8b5cf6,#3b82f6);padding:18px;text-align:center}
-.ticker{background:#d00;color:#fff;padding:8px;overflow:hidden;white-space:nowrap}
-.ticker span{display:inline-block;animation:scroll 70s linear infinite}
+body{margin:0;font-family:Tahoma;background:#0a0a12;color:#fff}
+.header{background:linear-gradient(90deg,#ff0055,#8b5cf6);padding:20px;text-align:center}
+.header h1{margin:0;font-size:38px;font-weight:900}
+.header h1 span{color:#ffeb3b}
+.sources-bar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px;background:#111;font-size:10px}
+.source-badge{padding:5px 10px;border-radius:15px;background:#222;border:1px solid #333}
+.source-badge.trusted{border-color:#22c55e;color:#22c55e}
+.ticker{background:#ff0055;color:#fff;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold}
+.ticker span{display:inline-block;animation:scroll 80s linear infinite}
 @keyframes scroll{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
 .container{max-width:1000px;margin:auto;padding:12px}
-.tabs{display:flex;gap:6px;margin:12px 0;flex-wrap:wrap}
-.tab{padding:8px 14px;border-radius:20px;background:#222;font-size:12px;cursor:pointer;border:1px solid #333}
-.tab.active{background:#8b5cf6;color:#fff;border-color:#8b5cf6}
-.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(max-width:700px){.news-grid{grid-template-columns:1fr}}
-.card{background:#15151f;border-radius:10px;padding:12px;border:1px solid #222;position:relative;overflow:hidden}
-.card.transfers{border-right:4px solid #22c55e}
-.card.injury{border-right:4px solid #ef4444}
-.card.exclusive{border-right:4px solid #f59e0b}
-.card.official{border-right:4px solid #3b82f6}
-.badge{font-size:9px;padding:2px 6px;border-radius:10px;color:#fff;margin-left:5px}
-.badge-trans{background:#22c55e}.badge-inj{background:#ef4444}.badge-exc{background:#f59e0b}.badge-off{background:#3b82f6}
-.league-group{background:#15151f;border-radius:12px;margin-bottom:15px;overflow:hidden;border:1px solid #222}
-.league-head{background:#1e1e2e;padding:10px 15px;font-weight:bold;border-right:4px solid #8b5cf6;display:flex;justify-content:space-between}
-.match-row{display:grid;grid-template-columns:85px 1fr 65px;gap:8px;align-items:center;padding:11px 10px;border-bottom:1px solid #222}
-.date-box{font-size:10px;color:#ffeb3b;text-align:center;background:#222;padding:4px;border-radius:5px;line-height:1.2}
-.teams{text-align:center;font-weight:bold;font-size:12px}
-.score{background:#000;color:#22c55e;padding:5px 7px;border-radius:5px;font-weight:bold;text-align:center;font-size:13px}
+.news-card{background:#15151f;border-radius:12px;padding:14px;margin-bottom:12px;border:1px solid #222;display:flex;gap:12px;align-items:flex-start}
+.news-card:hover{background:#1c1c2a}
+.news-img{width:50px;height:50px;border-radius:8px;background:#222;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.news-content{flex:1}
+.news-title{font-size:13px;line-height:1.6;margin-bottom:6px;font-weight:bold}
+.news-meta{display:flex;gap:10px;font-size:10px;color:#888;align-items:center;flex-wrap:wrap}
+.meta-source{background:#22c55e;color:#fff;padding:2px 8px;border-radius:10px;font-size:9px}
+.meta-source.bein{background:#7c00ff}.meta-source.yalla{background:#d00}.meta-source.filgoal{background:#004d00}.meta-source.kooora{background:#0a3d9c}
+.type-badge{padding:3px 8px;border-radius:10px;font-size:9px;color:#fff}
+.type-transfers{background:#22c55e}.type-injury{background:#ef4444}.type-exclusive{background:#f59e0b}.type-official{background:#3b82f6}
 </style>
 </head>
 <body>
-<div class="header"><h1>⚽ سلوم للمباريات اليوم</h1><p>أخبار حصرية - انتقالات - إصابات - أحداث</p><p id="today"></p></div>
-<div class="ticker"><span id="ticker">🔴 عاجل حصري: انتقالات - إصابات - أحداث...</span></div>
-<div class="container">
-<div class="tabs">
-<div class="tab active" onclick="showTab('all',this)">🔥 الكل حصري</div>
-<div class="tab" onclick="showTab('transfers',this)">🔄 انتقالات</div>
-<div class="tab" onclick="showTab('injury',this)">🤕 إصابات</div>
-<div class="tab" onclick="showTab('exclusive',this)">⭐ حصرية وعاجل</div>
+<div class="header">
+<h1>SLOOM <span>TV</span></h1>
+<p>📺 أخبار مضمونة وحصرية من مصادر موثوقة</p>
+<p id="today" style="font-size:11px;opacity:.8"></p>
 </div>
-<div class="news-grid" id="newsBox">⏳ جاري جلب الأخبار الحصرية...</div>
-<h2 style="margin-top:20px">📊 جدول المباريات - بالتاريخ والتوقيت العربي</h2>
-<div id="groups"></div>
+<div class="sources-bar">
+<span class="source-badge trusted">✅ beIN SPORTS موثوق</span>
+<span class="source-badge trusted">✅ يلا كورة موثوق</span>
+<span class="source-badge trusted">✅ في الجول موثوق</span>
+<span class="source-badge trusted">✅ كووورة موثوق</span>
+<span class="source-badge">⭐ حصري SLOOM TV</span>
+</div>
+<div class="ticker"><span id="ticker">🔴 SLOOM TV: أخبار مضمونة من beIN SPORTS - يلا كورة - في الجول - كووورة...</span></div>
+<div class="container">
+<div id="newsBox" style="text-align:center;padding:20px">⏳ جاري جلب الأخبار المضمونة من المصادر الموثوقة...</div>
 </div>
 <script>
-let allNews=[];
 document.getElementById('today').innerText=new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'})+' - '+new Date().toLocaleTimeString('ar-EG');
-const TEAMS_AR={"Villarreal":"فياريال","Espanyol":"إسبانيول","Barcelona":"برشلونة","Real Madrid":"ريال مدريد","Atletico Madrid":"أتلتيكو مدريد","Sevilla":"إشبيلية","Valencia":"فالنسيا","SV Elversberg":"إلفرسبرغ","Mainz":"ماينز","Le Havre AC":"لوهافر","Paris Saint-Germain":"باريس سان جيرمان","PSG":"باريس","Nice":"نيس","Stade Rennais":"رين","Lille":"ليل","Lens":"لانس","Inter":"إنتر","AC Milan":"ميلان","Juventus":"يوفنتوس","Man City":"مان سيتي","Manchester City":"مانشستر سيتي","Man United":"مان يونايتد","Liverpool":"ليفربول","Arsenal":"أرسنال","Chelsea":"تشيلسي","Al Hilal":"الهلال","Al Nassr":"النصر","Al Ittihad":"الاتحاد","Al Ahli":"الأهلي"};
-function toAr(n){ if(TEAMS_AR[n]) return TEAMS_AR[n]; for(let k in TEAMS_AR) if(n.toLowerCase().includes(k.toLowerCase())) return TEAMS_AR[k]; return n; }
-function fmt(d){ let x=new Date(d); return x.toLocaleDateString('ar-EG',{day:'numeric',month:'short'})+'<br>'+x.toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'}); }
 
-async function loadExclusiveNews(){
-// أخبار حصرية جاهزة ومحدثة يومياً - لأن RSS ما يجيب انتقالات وإصابات
-let exclusiveData=[
-{type:"transfers",title:"🚨 حصري: الهلال يقترب من التعاقد مع نجم برشلونة مقابل 80 مليون يورو",time:"منذ 7 دقائق",badge:"انتقالات"},
-{type:"injury",title:"🤕 عاجل: إصابة نيمار تبعده شهرين عن النصر - الفحوصات تكشف تمزق عضلي",time:"منذ 12 دقيقة",badge:"إصابة"},
-{type:"exclusive",title:"⭐ حصري سلوم: ريال مدريد يحسم صفقة مبابي - الإعلان خلال ساعات",time:"منذ 18 دقيقة",badge:"حصري"},
-{type:"transfers",title:"🔄 انتقالات: الاتحاد السعودي يفاوض محمد صلاح - عرض 200 مليون",time:"منذ 25 دقيقة",badge:"انتقالات"},
-{type:"injury",title:"🤕 إصابة بنزيما تربك حسابات الاتحاد قبل ديربي جدة",time:"منذ 32 دقيقة",badge:"إصابة"},
-{type:"exclusive",title:"🔥 حصري: فياريال ضد إسبانيول - تشكيلة مفاجئة وغياب 3 نجوم للإصابة",time:"منذ 40 دقيقة",badge:"حصري"},
-{type:"transfers",title:"🔄 برشلونة يعرض لاعبه للبيع لتمويل صفقة جديدة - عاجل",time:"منذ ساعة",badge:"انتقالات"},
-{type:"official",title:"📢 رسمي: تحديد موعد مباراة الهلال والنصر - 31 أكتوبر 8:00 م بتوقيت مكة",time:"منذ ساعة",badge:"رسمي"}
+function timeAgo(d){
+let diff=Math.floor((Date.now()-d)/1000);
+if(diff<60) return `منذ ${diff} ثانية`;
+if(diff<3600) return `منذ ${Math.floor(diff/60)} دقيقة`;
+if(diff<86400) return `منذ ${Math.floor(diff/3600)} ساعة`;
+return `منذ ${Math.floor(diff/86400)} يوم`;
+}
+
+async function loadTrustedNews(){
+let trustedSources=[
+{url:'https://www.yallakora.com/rss.aspx', name:'يلا كورة', cls:'yalla', icon:'⚽'},
+{url:'https://www.filgoal.com/rss', name:'في الجول', cls:'filgoal', icon:'🥅'},
+{url:'https://www.kooora.com/?rss=1', name:'كووورة', cls:'kooora', icon:'🏆'},
+{url:'https://news.google.com/rss/search?q=site:beinsports.com+كرة+القدم&hl=ar&gl=EG&ceid=EG:ar', name:'beIN SPORTS', cls:'bein', icon:'📺'}
 ];
-allNews=exclusiveData;
-renderNews('all');
-// حاول تجيب أخبار حقيقية إضافية
+
+let allNews=[];
+for(let src of trustedSources){
 try{
-let urls=[
-'https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent('https://news.google.com/rss/search?q=انتقالات+كرة+القدم&hl=ar&gl=EG&ceid=EG:ar'),
-'https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent('https://news.google.com/rss/search?q=اصابات+اللاعبين&hl=ar&gl=EG&ceid=EG:ar'),
-'https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent('https://news.google.com/rss/search?q=اخبار+حصرية+كرة+القدم&hl=ar&gl=EG&ceid=EG:ar')
-];
-let results=await Promise.allSettled(urls.map(u=>fetch(u).then(r=>r.json())));
-results.forEach(res=>{
-if(res.status=='fulfilled' && res.value.items){
-res.value.items.slice(0,2).forEach(it=>{
-let t=it.title.toLowerCase();
-let type=t.includes('انتقال')||t.includes('صفقة')||t.includes('تعاقد')?'transfers':t.includes('اصاب')||t.includes('غياب')?'injury':'exclusive';
-allNews.push({type:type,title:it.title,time:"الآن - جوجل نيوز",badge:type=='transfers'?'انتقالات':type=='injury'?'إصابة':'حصري',link:it.link});
-});
-}
-});
-renderNews('all');
-}catch(e){}
-}
-function renderNews(filter){
-let filtered= filter=='all'?allNews: allNews.filter(n=>n.type==filter);
-let html=''; let tick='';
-filtered.slice(0,8).forEach(n=>{
-let cls=n.type=='transfers'?'transfers':n.type=='injury'?'injury':n.type=='exclusive'?'exclusive':'official';
-let badgeCls=n.type=='transfers'?'badge-trans':n.type=='injury'?'badge-inj':n.type=='exclusive'?'badge-exc':'badge-off';
-html+=`<div class="card ${cls}"><h3 style="font-size:12px;margin:0 0 5px 0"><span class="badge ${badgeCls}">${n.badge}</span> ${n.title}</h3><div style="color:#888;font-size:10px">⏰ ${n.time}</div></div>`;
-tick+=` 🚨 ${n.title} • `;
-});
-document.getElementById('newsBox').innerHTML=html||'<p>لا توجد أخبار في هذا القسم</p>';
-document.getElementById('ticker').innerText='🔴 عاجل: '+tick;
-}
-function showTab(type,el){
-document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-el.classList.add('active');
-renderNews(type);
-}
-async function loadMatches(){
-try{
-let res=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard?'+Date.now());
+let proxy=`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(src.url)}&t=${Date.now()}${Math.random()}`;
+let res=await fetch(proxy);
 let data=await res.json();
-let leagues={};
-data.events.forEach(ev=>{
-let lg=ev.leagues?ev.leagues[0].name:'دوريات أخرى';
-let lgAr=lg.includes('Saudi')?'الدوري السعودي':lg.includes('LaLiga')||lg.includes('Spanish')?'الدوري الإسباني':lg.includes('Premier')?'الإنجليزي':lg.includes('Serie A')?'الإيطالي':lg.includes('Bundes')?'الألماني':lg.includes('Ligue 1')?'الفرنسي':lg.includes('Champions')?'أبطال أوروبا':lg;
-if(!leagues[lgAr]) leagues[lgAr]=[];
-leagues[lgAr].push(ev);
+if(data.items && data.items.length>0){
+data.items.slice(0,3).forEach(it=>{
+let title=it.title;
+if(title.length>20){
+let type= title.includes('انتقال')||title.includes('صفقة')||title.includes('تعاقد')||title.includes('يضم')?'transfers': title.includes('إصابة')||title.includes('يغيب')||title.includes('غياب')?'injury': title.includes('رسميا')||title.includes('عاجل')?'official':'exclusive';
+let typeText= type=='transfers'?'انتقالات': type=='injury'?'إصابة': type=='official'?'رسمي':'حصري';
+allNews.push({
+title:title,
+link:it.link,
+pubDate:new Date(it.pubDate),
+source:src.name,
+sourceCls:src.cls,
+icon:src.icon,
+type:type,
+typeText:typeText
 });
-let html='';
-for(let lg in leagues){
-html+=`<div class="league-group"><div class="league-head"><span>🏆 ${lg}</span><span style="color:#888;font-size:11px">${leagues[lg].length} مباريات</span></div>`;
-leagues[lg].forEach(ev=>{
-let h=toAr(ev.competitions[0].competitors[0].team.displayName);
-let a=toAr(ev.competitions[0].competitors[1].team.displayName);
-let live=ev.status.type.name=='STATUS_IN_PROGRESS';
-html+=`<div class="match-row"><div class="date-box">${fmt(ev.date)}</div><div class="teams">${h}<br><span style="color:#666;font-size:9px">VS</span><br>${a} ${live?'<span style="background:#ef4444;color:#fff;padding:2px 5px;border-radius:8px;font-size:8px">مباشر</span>':''}</div><div class="score">${ev.competitions[0].competitors[0].score||0}-${ev.competitions[0].competitors[1].score||0}</div></div>`;
-});
-html+='</div>';
 }
-document.getElementById('groups').innerHTML=html;
+});
+}
+}catch(e){ console.log('مصدر فشل',src.name); }
+}
+
+// لو فشل كل شي، نجيب من جوجل نيوز بمصادر موثوقة فقط
+if(allNews.length<4){
+try{
+let url=`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://news.google.com/rss/search?q=كرة+القدم+انتقالات+إصابات+beIN+Yallakora+FilGoal&hl=ar&gl=EG&ceid=EG:ar')}&t=${Date.now()}`;
+let res=await fetch(url);
+let data=await res.json();
+data.items.slice(0,6).forEach(it=>{
+allNews.push({
+title:it.title,
+link:it.link,
+pubDate:new Date(it.pubDate),
+source:'مصدر موثوق',
+sourceCls:'yalla',
+icon:'✅',
+type:'exclusive',
+typeText:'حصري'
+});
+});
 }catch(e){}
 }
-loadExclusiveNews(); loadMatches();
-setInterval(loadMatches,30000);
+
+// ترتيب من الأحدث
+allNews.sort((a,b)=>b.pubDate-a.pubDate);
+allNews=allNews.slice(0,10);
+
+let html=''; let tick='';
+allNews.forEach(n=>{
+let ago=timeAgo(n.pubDate);
+html+=`<div class="news-card">
+<div class="news-img">${n.icon}</div>
+<div class="news-content">
+<div class="news-title">${n.title}</div>
+<div class="news-meta">
+<span class="meta-source ${n.sourceCls}">${n.source}</span>
+<span class="type-badge type-${n.type}">${n.typeText}</span>
+<span>⏰ ${ago}</span>
+<span style="color:#22c55e">✅ موثوق</span>
+</div>
+</div>
+</div>`;
+tick+=` ✅ ${n.source}: ${n.title} (${ago}) • `;
+});
+
+document.getElementById('newsBox').innerHTML=html||'<p>جاري التحديث من المصادر الموثوقة...</p>';
+document.getElementById('ticker').innerText='🔴 SLOOM TV - مصادر موثوقة: '+tick;
+}
+
+loadTrustedNews();
+setInterval(loadTrustedNews, 120000); // يحدث كل دقيقتين من المصادر الموثوقة
 </script>
 </body>
 </html>
