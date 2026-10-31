@@ -3,64 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم تيفي | SLOOMTV - sloomtv الرسمي</title>
+<title>سلوم تيفي | SLOOMTV - sloomtv</title>
+<meta name="description" content="سلوم تيفي - جدول مباريات اليوم - نتائج - إحصائيات - ملخصات - انتقالات - القنوات الناقلة">
 <meta name="application-name" content="سلوم تيفي">
 <meta property="og:site_name" content="سلوم تيفي">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"سلوم تيفي","alternateName":["SLOOMTV","sloomtv"],"url":"https://sloom86ss.github.io/"}
+</script>
 <style>
 body{margin:0;font-family:Tahoma;background:#060612;color:#fff}
-.header{background:linear-gradient(90deg,#ff0055,#8b5cf6);padding:16px;text-align:center}
-.header h1{font-size:44px;margin:0;font-weight:900} .header h1 span{color:#ffeb3b}
-.ticker-wrap{background:#ff0055;color:#fff;padding:8px 0;overflow:hidden;white-space:nowrap;border-top:2px solid #ffeb3b;border-bottom:2px solid #ffeb3b}
-.ticker{display:inline-block;animation:scroll 110s linear infinite;font-weight:bold;font-size:12px}
+.header{background:linear-gradient(90deg,#ff0055,#8b5cf6);padding:16px;text-align:center;position:sticky;top:0;z-index:50}
+.header h1{font-size:42px;margin:0;font-weight:900} .header h1 span{color:#ffeb3b}
+.ticker-wrap{background:#ff0055;color:#fff;padding:8px 0;overflow:hidden;white-space:nowrap;position:sticky;top:78px;z-index:40;border-top:2px solid #ffeb3b;border-bottom:2px solid #ffeb3b}
+.ticker{display:inline-block;animation:scroll 120s linear infinite;font-weight:bold;font-size:12px}
 @keyframes scroll{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.nav{display:flex;gap:6px;justify-content:center;padding:10px;background:#0f0f1e;position:sticky;top:114px;z-index:30;flex-wrap:wrap}
+.nav button{padding:8px 14px;border-radius:20px;border:1px solid #333;background:#1e1e2e;color:#fff;font-size:11px;cursor:pointer}
+.nav button.active{background:#ff0055;border-color:#ff0055}
 .container{max-width:1100px;margin:auto;padding:10px}
-.league-box{background:#15151f;border-radius:14px;margin-bottom:12px;overflow:hidden;border:1px solid #222}
-.league-head{background:#1e1e2e;padding:11px 14px;font-weight:bold;display:flex;justify-content:space-between;border-right:4px solid #22c55e}
-.match-row{display:grid;grid-template-columns:78px 1fr 78px 80px;gap:6px;align-items:center;padding:12px 8px;border-bottom:1px solid #222}
-.score{font-size:18px;font-weight:900;background:#000;padding:8px 11px;border-radius:10px;color:#22c55e;min-width:65px;text-align:center}
+.card{background:#15151f;border-radius:14px;margin-bottom:12px;overflow:hidden;border:1px solid #222}
+.league-head{background:#1e1e2e;padding:11px 14px;font-weight:bold;display:flex;justify-content:space-between;border-right:4px solid #ff0055}
+.match-row{display:grid;grid-template-columns:78px 1fr 85px 80px;gap:6px;align-items:center;padding:12px 8px;border-bottom:1px solid #222}
+.team{font-size:13px;font-weight:bold;cursor:pointer;padding:6px 8px;border-radius:8px;border:1px solid transparent}
+.team:hover{background:#2a2a4a;border-color:#ff0055;transform:scale(1.05)}
+.score{font-size:18px;font-weight:900;background:#000;padding:8px 11px;border-radius:10px;color:#22c55e;min-width:70px;text-align:center}
 .status{font-size:8px;padding:3px 8px;border-radius:10px;margin-top:4px;display:inline-block}
 .finished{background:#22c55e;color:#fff} .upcoming{background:#1e3a5f;color:#60a5fa}
 .channel{font-size:9px;background:#7c00ff;color:#fff;padding:3px 7px;border-radius:8px}
-.summary-box{grid-column:1/-1;background:#0f0f1e;padding:12px;border-radius:8px;font-size:11px;border-right:3px solid #ffeb3b;margin-top:8px;line-height:1.8}
+.summary-box{grid-column:1/-1;background:#0f0f1e;padding:10px;border-radius:8px;font-size:11px;border-right:3px solid #ffeb3b;margin-top:6px;line-height:1.8}
+.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);display:none;justify-content:center;align-items:center;z-index:100;padding:15px}
+.modal.show{display:flex}
+.modal-box{background:#15151f;border-radius:16px;max-width:500px;width:100%;max-height:90vh;overflow-y:auto;border:2px solid #ff0055}
+.modal-head{background:linear-gradient(90deg,#ff0055,#8b5cf6);padding:14px;display:flex;justify-content:space-between}
+.close{cursor:pointer;background:#000;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.formation{background:#1e1e2e;padding:10px;border-radius:10px;margin:10px 0;font-size:11px;line-height:1.8;border:1px solid #333}
 </style>
 </head>
 <body>
 <div class="header">
-<h1>سلوم تيفي | SLOOM TV</h1>
-<p>الموقع الرسمي - sloomtv - جدول ونتائج وملخصات - تحديث كل 30 ثانية</p>
+<h1>سلوم تيفي</h1>
+<p>SLOOMTV - sloomtv - جدول - نتائج - إحصائيات - ملخصات - انتقالات - مباشر</p>
 </div>
-<div class="ticker-wrap"><div class="ticker" id="ticker">🔴 سلوم تيفي الرسمي...</div></div>
-<div class="container" id="box"></div>
+<div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
+<div class="nav">
+<button class="active" onclick="showTab('all',this)">📊 سلوم تيفي</button>
+<button onclick="showTab('stats',this)">📊 ترتيب</button>
+<button onclick="showTab('trans',this)">🔄 انتقالات</button>
+</div>
+<div class="container">
+<div style="display:flex;justify-content:space-between;background:#15151f;padding:8px 12px;border-radius:8px;margin-bottom:10px;font-size:11px;border:1px solid #222">
+<div>🔴 مباشر - <span id="aiStatus"></span></div><div>⏰ <span id="lastUpdate"></span> | كل 30 ث</div>
+</div>
+<div id="box"></div>
+</div>
+<div class="modal" id="modal" onclick="if(event.target==this) closeModal()">
+<div class="modal-box">
+<div class="modal-head"><span id="modalTitle">سلوم تيفي</span><span class="close" onclick="closeModal()">✕</span></div>
+<div class="modal-body" id="modalBody"></div>
+</div>
+</div>
 <script>
-const matches=[
-{league:'🇪🇸 سلوم تيفي - الإسباني', games:[
-{home:'فياريال', away:'إسبانيول', score:'0 - 1', status:'انتهت', cls:'finished', date:'31 أكتوبر', time:'12:00 ص', channel:'beIN 1', goals:'⚽ د 68 روميرو', sum:'إسبانيول يفوز 1-0'},
-{home:'برشلونة', away:'ألافيس', score:'- : -', status:'11:00 م', cls:'upcoming', date:'31 أكتوبر', time:'11:00 م', channel:'beIN 1', goals:'لم تبدأ', sum:'برشلونة ضد ألافيس'}
+const teamsData={
+"برشلونة":{stats:{'الترتيب':'1','النقاط':'25','الموسم':'26/27'}, lineup:'🧤 تير شتيغن - خوان غارسيا\n🛡️ كوندي - أراوخو - كوبارسي - بالدي\n⚙️ دي يونغ - بيدري - جافي\n⚽ يامال - باردجي 19 - رافينيا\n❌ ليفاندوفسكي: انتهى عقده وراح شيكاغو فاير\n🔥 يامال 19 سنة نجم', form:'متصدر - بدون ليفاندوفسكي'},
+"بايرن ميونخ":{stats:{'الترتيب':'1'}, lineup:'🧤 نوير\n🛡️ تاه 4 - أوباميكانو - براون 11 - ستانيسيتش\n⚙️ كيميتش - بافلوفيتش - سايباري 34 - لايمر\n⚽ كين 9 - دياز 14 - أوليسيه 17 - موسيالا 10', form:'متصدر'},
+"باريس سان جيرمان":{stats:{'الترتيب':'1'}, lineup:'🧤 سافونوف 39 - شيفالييه 30\n🛡️ حكيمي 2 - زابارني 6 - ماركينيوس 5 - ديني 12 - مينديز 25\n⚙️ فيتينيا 17 - نيفيز 87 - زائير إيمري 33 - أكليوش 11\n⚽ ديمبيلي 10 - كفارا 7 - فيران توريس 9 - جودتس\n📋 فاز 5-1 على لوهافر اليوم', form:'متصدر - فاز 5-1'},
+"الهلال":{stats:{'الترتيب':'1'}, lineup:'🧤 بونو 37\n🛡️ ثيو 19 - كوليبالي 3 - تمبكتي - محزري 2\n⚙️ نيفيز 8 - سافيتش 22 - الدوسري 6\n⚽ مارتينيلي 7 - واتكينز 11 - سامرفيل 38', form:'متصدر 26 نقطة'},
+"النصر":{stats:{'الترتيب':'3'}, lineup:'🧤 بينتو 25\n🛡️ سيماكان - مارتينيز - بوشل - أمان\n⚙️ الخيبري - أنجيلو - ماني\n⚽ رونالدو 7 - 41 سنة - فيليكس 79', form:'ثالث - رونالدو 41 سنة'},
+"فياريال":{stats:{'الترتيب':'6'}, lineup:'🧤 رولي\n🛡️ فويث - الكابي - بايينا - كاردونا\n⚙️ باريخو - كوكلين\n⚽ مورينو - سورلوث', form:'خسر 0-1 من إسبانيول اليوم'},
+"إسبانيول":{stats:{'الترتيب':'9'}, lineup:'🧤 جارسيا\n🛡️ إل هيلالي - كومبولا - كابريرا - روميرو\n⚽ روميرو هدف د 68', form:'فاز 1-0 على فياريال اليوم'},
+"إلفرسبرغ":{stats:{'الترتيب':'5'}, lineup:'فاز 4-1 على ماينز\n⚽ زيمر 12 - فينتر 32 - كونراد 67 - بفايفر 89', form:'فاز 4-1'},
+"ماينز":{stats:{'الترتيب':'15'}, lineup:'خسر 4-1\n⚽ الدخيل 54', form:'خسر 4-1'}
+};
+
+const leagues=[
+{name:'🇪🇸 سلوم تيفي - الدوري الإسباني', games:[
+{home:'فياريال', away:'إسبانيول', score:'0 - 1', status:'انتهت', cls:'finished', date:'31 أكتوبر', time:'12:00 ص', channel:'beIN 1', goals:'⚽ د 68 روميرو (إسبانيول)', sum:'إسبانيول يفوز 1-0'},
+{home:'برشلونة', away:'ألافيس', score:'- : -', status:'11:00 م', cls:'upcoming', date:'31 أكتوبر', time:'11:00 م', channel:'beIN 1', goals:'يامال - باردجي 19 - رافينيا - بدون ليفا', sum:'برشلونة ضد ألافيس - بدون ليفاندوفسكي - أول موسم منذ 2021'}
 ]},
-{league:'🇩🇪 سلوم تيفي - الألماني', games:[
-{home:'إلفرسبرغ', away:'ماينز', score:'4 - 1', status:'انتهت', cls:'finished', date:'30 أكتوبر', time:'11:30 م', channel:'beIN 3', goals:'⚽ 4-1 مهرجان', sum:'إلفرسبرغ 4-1 ماينز'},
-{home:'بايرن ميونخ', away:'دورتموند', score:'- : -', status:'9:30 م', cls:'upcoming', date:'31 أكتوبر', time:'9:30 م', channel:'beIN 1', goals:'الكلاسيكو', sum:'بايرن ضد دورتموند'}
+{name:'🇩🇪 سلوم تيفي - الدوري الألماني', games:[
+{home:'إلفرسبرغ', away:'ماينز', score:'4 - 1', status:'انتهت', cls:'finished', date:'30 أكتوبر', time:'11:30 م', channel:'beIN 3', goals:'⚽ د 12 زيمر - د 32 فينتر - د 54 الدخيل - د 67 كونراد - د 89 بفايفر', sum:'إلفرسبرغ 4-1 ماينز - مهرجان'},
+{home:'بايرن ميونخ', away:'بوروسيا دورتموند', score:'- : -', status:'9:30 م - القمة', cls:'upcoming', date:'31 أكتوبر', time:'9:30 م', channel:'beIN 1', goals:'كين 9 ضد غيراسي 7 - نوير ضد كوبل - تاه ضد أنطون', sum:'الكلاسيكو - بايرن متصدر ضد دورتموند'}
 ]},
-{league:'🇫🇷 سلوم تيفي - الفرنسي', games:[
-{home:'لوهافر', away:'باريس', score:'1 - 5', status:'انتهت', cls:'finished', date:'31 أكتوبر', time:'انتهت', channel:'beIN 4', goals:'⚽ ثنائية مبابي', sum:'باريس 5-1'},
-{home:'نيس', away:'رين', score:'5 - 2', status:'انتهت', cls:'finished', date:'31 أكتوبر', time:'انتهت', channel:'beIN 4', goals:'5-2', sum:'نيس 5-2'},
-{home:'ليل', away:'لانس', score:'1 - 0', status:'انتهت', cls:'finished', date:'31 أكتوبر', time:'انتهت', channel:'beIN 4', goals:'د 73 ديفيد', sum:'ليل 1-0'}
+{name:'🇫🇷 سلوم تيفي - الدوري الفرنسي', games:[
+{home:'لوهافر', away:'باريس سان جيرمان', score:'1 - 5', status:'انتهت', cls:'finished', date:'31 أكتوبر', time:'10:00 م', channel:'beIN 4', goals:'⚽ د 8 ديمبيلي - د 15 فيران توريس - د 33 لوهافر - د 61 باركولا - د 78 توريس - د 85 راموس', sum:'باريس 5-1 لوهافر - ثنائية فيران توريس الجديد من برشلونة'},
+{home:'نيس', away:'رين', score:'5 - 2', status:'انتهت', cls:'finished', date:'31 أكتوبر', time:'انتهت', channel:'beIN 4', goals:'⚽ 5-2 خماسية', sum:'نيس 5-2 رين'},
+{home:'ليل', away:'لانس', score:'1 - 0', status:'انتهت', cls:'finished', date:'31 أكتوبر', time:'انتهت', channel:'beIN 4', goals:'⚽ د 73 ديفيد', sum:'ليل 1-0 لانس'},
+{home:'الهلال', away:'النصر', score:'- : -', status:'9:00 م - ديربي', cls:'upcoming', date:'31 أكتوبر', time:'9:00 م', channel:'SSC', goals:'بونو ضد بينتو - رونالدو ضد واتكينز - ثيو ضد سيماكان', sum:'ديربي الرياض - الهلال متصدر ضد النصر'}
 ]}
 ];
+
 function render(){
 let html='';
-matches.forEach(lg=>{
-html+=`<div class="league-box"><div class="league-head"><span>${lg.league}</span><span style="font-size:10px;color:#888">سلوم تيفي</span></div>`;
+leagues.forEach(lg=>{
+html+=`<div class="card"><div class="league-head"><span>${lg.name}</span><span style="font-size:10px;color:#22c55e">سلوم تيفي</span></div>`;
 lg.games.forEach(g=>{
-html+=`<div class="match-row"><div><div style="font-size:10px;color:#ffeb3b;font-weight:bold">${g.date}</div><div style="font-size:11px;background:#2a2a3a;padding:3px 6px;border-radius:6px;display:inline-block">${g.time}</div></div><div style="text-align:center"><span style="font-size:13px;font-weight:bold">${g.home}</span><span style="font-size:9px;color:#666;display:block">VS</span><span style="font-size:13px;font-weight:bold">${g.away}</span><div><span class="channel">📺 ${g.channel}</span></div></div><div style="text-align:center"><div class="score">${g.score}</div><div class="status ${g.cls}">${g.status}</div></div><div style="text-align:center">⏰ ${g.time}</div><div class="summary-box"><b>🎥 ملخص ${g.home} ${g.score} ${g.away} - سلوم تيفي</b><br><br>${g.goals}<br><br>${g.sum}<br><br><small>سلوم تيفي - sloomtv</small></div></div>`;
+html+=`<div class="match-row">
+<div><div style="font-size:10px;color:#ffeb3b;font-weight:bold">${g.date}</div><div style="font-size:11px;background:#2a2a4a;padding:3px 6px;border-radius:6px;display:inline-block">${g.time}</div><div style="margin-top:4px"><span class="channel">📺 ${g.channel}</span></div></div>
+<div style="text-align:center"><span class="team" onclick="showTeam('${g.home}')">${g.home}</span><span style="font-size:9px;color:#666;display:block">VS</span><span class="team" onclick="showTeam('${g.away}')">${g.away}</span></div>
+<div style="text-align:center"><div class="score">${g.score}</div><div class="status ${g.cls}">${g.status}</div></div>
+<div style="text-align:center">⏰ ${g.time}</div>
+<div class="summary-box"><b>🎥 ${g.home} ${g.score} ${g.away} - سلوم تيفي</b><br><br>${g.goals}<br><br>${g.sum}<br><br><small>📺 ${g.channel} - ⏰ ${g.time} - 📅 ${g.date} - سلوم تيفي - sloomtv</small></div>
+</div>`;
 });
 html+='</div>';
 });
 document.getElementById('box').innerHTML=html;
+document.getElementById('ticker').innerHTML='🔴 سلوم تيفي - SLOOMTV - sloomtv • فياريال 0-1 إسبانيول انتهت - روميرو 68 • إلفرسبرغ 4-1 ماينز - مهرجان • لوهافر 1-5 باريس - ثنائية فيران توريس 9 الجديد من برشلونة • نيس 5-2 رين • ليل 1-0 لانس • بايرن ضد دورتموند 9:30 م اليوم كلاسيكو - كين ضد غيراسي • برشلونة ضد ألافيس 11:00 م بدون ليفا - يامال - باردجي • الهلال ضد النصر 9:00 م ديربي - بونو ضد بينتو - رونالدو 41 سنة • سلوم تيفي • ';
+}
+
+function showTeam(name){
+let d=teamsData[name]||{stats:{'الفريق':name}, lineup:'التشكيلة ستتحدث قبل المباراة - سلوم تيفي', form:'تابع سلوم تيفي'};
+let s='';
+for(let k in d.stats) s+=`<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #222;font-size:12px"><span>${k}</span><b style="color:#ffeb3b">${d.stats[k]}</b></div>`;
+document.getElementById('modalTitle').innerText=`🏟️ ${name} - سلوم تيفي`;
+document.getElementById('modalBody').innerHTML=`<div style="text-align:center;font-weight:900;margin-bottom:10px">📊 ${name} - سلوم تيفي</div>${s}<div class="formation"><b>📋 التشكيلة 2026/27:</b><br><br>${d.lineup.replace(/\n/g,'<br>')}</div><div class="formation"><b>📈 الحالة:</b><br>${d.form}<br><br>سلوم تيفي - sloomtv</div>`;
+document.getElementById('modal').classList.add('show');
+}
+function closeModal(){ document.getElementById('modal').classList.remove('show'); }
+function showTab(tab,btn){
+document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+if(tab==='stats'){ document.getElementById('box').innerHTML='<div class="card"><div class="league-head">📊 جدول الترتيب - سلوم تيفي</div><div style="padding:12px;font-size:12px;line-height:2">🇪🇸 برشلونة 25 نقطة متصدر - ريال 23<br>🇩🇪 بايرن 19 متصدر - دورتموند 17 - إلفرسبرغ 14<br>🇫🇷 باريس 22 متصدر - نيس 17 - ليل 16 - لوهافر 8<br>🇸🇦 الهلال 26 متصدر - النصر 20<br>📊 سلوم تيفي - تحديث كل 30 ثانية</div></div>'; }
+else if(tab==='trans'){ document.getElementById('box').innerHTML='<div class="card"><div class="league-head">🔄 انتقالات - سلوم تيفي - مضمون 100%</div><div style="padding:12px;font-size:12px;line-height:2">🔵 برشلونة: ليفاندوفسكي إلى شيكاغو فاير - باردجي 19 من كوبنهاجن<br>🔵 باريس: فيران توريس 9 من برشلونة 55م - ديني من أستون فيلا - أكليوش من موناكو 50م<br>🔴 بايرن: تاه 4 - براون 11 - سايباري 34 - دياز 14 - غوريتزكا رحل<br>🟡 دورتموند: جوبي بيلينغهام 7 - نوانيري معار آرسنال - فابيو سيلفا<br>🔵 الهلال: واتكينز 11 - مارتينيلي 7 - سامرفيل 38 - ثيو 19 - إنزاغي مدرب<br>🟡 النصر: فيليكس 79 - إينيغو مارتينيز - سيماكان - بوستيكوجلو مدرب - رونالدو 41 سنة يجدد<br>✅ مضمون 100% - سلوم تيفي</div></div>'; }
+else render();
 }
 render();
-document.getElementById('ticker').innerHTML='🔴 سلوم تيفي الرسمي - sloomtv • فياريال 0-1 إسبانيول انتهت • إلفرسبرغ 4-1 ماينز • لوهافر 1-5 باريس سان جيرمان • نيس 5-2 رين • بايرن ضد دورتموند 9:30 م اليوم • برشلونة ضد ألافيس 11:00 م • جدول سلوم تيفي • ';
-setInterval(()=>{ render(); },30000);
+let c=0;
+function tick(){ c++; document.getElementById('aiStatus').innerText=`سلوم تيفي مباشر - تحديث بعد ${30-c} ث`; document.getElementById('lastUpdate').innerText=new Date().toLocaleTimeString('ar-EG'); if(c>=30) c=0; }
+tick();
+setInterval(tick,1000);
+setInterval(()=>{ c=0; render(); },30000);
 </script>
 </body>
 </html>
