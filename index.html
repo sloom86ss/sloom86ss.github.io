@@ -3,64 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم للمباريات اليوم | بث مباشر وملخصات وأهداف</title>
-<meta name="description" content="موقع سلوم للمباريات اليوم - ملخصات وأهداف جميع المباريات، نتائج مباشرة لكل دوريات العالم">
+<title>سلوم للمباريات اليوم | نتائج مباشرة وملخصات لكل دوريات العالم</title>
+<meta name="description" content="موقع سلوم للمباريات اليوم - نتائج مباشرة لحظية لكل دوريات العالم، ملخصات وأهداف الدوري السعودي والإسباني والإنجليزي ودوري أبطال أوروبا">
 <style>
-body{font-family:Tahoma;background:#f5f5f5;margin:0}
-.header{background:#111;color:#fff;padding:20px;text-align:center}
-.live-bar{background:#d00;color:#fff;padding:10px;text-align:center;font-weight:bold}
+body{font-family:Tahoma;background:#0f0f0f;color:#fff;margin:0}
+.header{background:#111;padding:20px;text-align:center;border-bottom:3px solid #d00}
+.live-bar{background:#d00;color:#fff;padding:10px;text-align:center;font-weight:bold;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.6}}
 .container{max-width:900px;margin:auto;padding:15px}
-.card{background:#fff;padding:15px;margin-bottom:15px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-.match{display:flex;justify-content:space-between;padding:12px;border-bottom:1px solid #eee}
-.badge{background:#007bff;color:#fff;padding:3px 8px;border-radius:5px;font-size:12px}
-.video-box{margin-top:10px}
-.video-box iframe{width:100%;height:220px;border-radius:10px;border:0}
-.video-title{font-weight:bold;margin:8px 0}
+.card{background:#1e1e1e;padding:15px;margin-bottom:15px;border-radius:12px}
+.match{background:#2a2a2a;padding:12px;margin:8px 0;border-radius:8px;display:flex;justify-content:space-between;align-items:center}
+.team{font-weight:bold}
+.score{color:#0f0;background:#000;padding:5px 10px;border-radius:5px;font-weight:bold}
+.league{color:#ff0;font-size:12px;margin-bottom:5px}
+.video-box iframe{width:100%;height:220px;border-radius:10px;border:0;margin-top:10px}
 </style>
 </head>
 <body>
-<div class="header"><h1>⚽ سلوم للمباريات اليوم</h1><p id="today"></p></div>
-<div class="live-bar">🔴 ملخصات وأهداف اليوم - جميع دوريات العالم</div>
-
-<div class="container" id="content">
-</div>
-
-<script>
-document.getElementById('today').innerText = new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-
-let html = `
-<div class="card"><h2>⚽ مباريات اليوم</h2>
-<div class="match"><span>الهلال vs النصر - 9:00 م</span><span class="badge">السعودي</span></div>
-<div class="match"><span>برشلونة vs ريال مدريد - 10:00 م</span><span class="badge">الإسباني</span></div>
-<div class="match"><span>مان سيتي vs ليفربول - 6:30 م</span><span class="badge">الإنجليزي</span></div>
-</div>
-
+<div class="header"><h1>⚽ سلوم للمباريات اليوم</h1><p id="today"></p><p>🌍 كل دوريات العالم - نتائج حية</p></div>
+<div class="live-bar">🔴 LIVE - نتائج مباشرة الآن</div>
+<div class="container">
+<div id="live-matches" class="card"><h2>⏳ جاري جلب نتائج اليوم من كل العالم...</h2></div>
 <div class="card">
 <h2>🎥 ملخصات وأهداف اليوم</h2>
-<p style="color:#666">يتم التحديث تلقائياً بعد نهاية كل مباراة</p>
-
-<div class="video-box">
-<div class="video-title">ملخص مباراة الهلال والنصر - أهداف اليوم</div>
-<iframe src="https://www.youtube.com/embed/?listType=search&list=ملخص+الهلال+والنصر+اليوم" allowfullscreen></iframe>
+<div class="video-box"><p>أهداف الدوري السعودي اليوم</p>
+<iframe src="https://www.youtube.com/embed/?listType=search&list=اهداف+الدوري+السعودي+اليوم" allowfullscreen></iframe>
 </div>
-
-<div class="video-box">
-<div class="video-title">ملخص مباريات الدوري الإسباني اليوم</div>
-<iframe src="https://www.youtube.com/embed/?listType=search&list=ملخص+الدوري+الاسباني+اليوم" allowfullscreen></iframe>
-</div>
-
-<div class="video-box">
-<div class="video-title">أهداف دوري أبطال أوروبا اليوم</div>
+<div class="video-box"><p>أهداف دوري أبطال أوروبا اليوم</p>
 <iframe src="https://www.youtube.com/embed/?listType=search&list=اهداف+دوري+ابطال+اوروبا+اليوم" allowfullscreen></iframe>
 </div>
-
 </div>
-
-<div class="card"><h2>🏆 لماذا سلوم للمباريات اليوم؟</h2>
-<p>نقدم لك ملخصات وأهداف سريعة بعد المباراة مباشرة لجميع دوريات العالم - السعودي، الإسباني، الإنجليزي، دوري أبطال أوروبا.</p>
 </div>
-`;
-document.getElementById('content').innerHTML = html;
+<script>
+document.getElementById('today').innerText = new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+async function loadLive(){
+try{
+let res = await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard');
+let data = await res.json();
+let html = '<h2>⚽ نتائج اليوم - كل دوريات العالم</h2>';
+if(data.events && data.events.length>0){
+data.events.forEach(ev=>{
+let lg = ev.leagues?ev.leagues[0].name:'دوري عالمي';
+let home = ev.competitions[0].competitors[0];
+let away = ev.competitions[0].competitors[1];
+let status = ev.status.type.detail;
+let scoreH = home.score||'0';
+let scoreA = away.score||'0';
+html+=`<div class="match"><div><div class="league">${lg} - ${status}</div><span class="team">${home.team.displayName}</span> vs <span class="team">${away.team.displayName}</span></div><div class="score">${scoreH} - ${scoreA}</div></div>`;
+});
+}else{
+html+='<p>لا توجد مباريات حالياً - سيتم التحديث تلقائياً</p>';
+}
+html+='<p style="color:#888;font-size:12px;margin-top:10px">* يتحدث تلقائياً كل 60 ثانية</p>';
+document.getElementById('live-matches').innerHTML = html;
+}catch(e){
+document.getElementById('live-matches').innerHTML = '<h2>⚽ مباريات اليوم</h2><div class="match"><span>الهلال vs النصر</span><span class="score">9:00 م</span></div><div class="match"><span>برشلونة vs الريال</span><span class="score">10:00 م</span></div><p style="color:#888">* يتم التحديث تلقائياً</p>';
+}
+}
+loadLive();
+setInterval(loadLive,60000);
 </script>
 </body>
 </html>
