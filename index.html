@@ -3,144 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم تيفي - بوت حقيقي</title>
+<title>سلوم تيفي - الموقع الرسمي | sloomtv</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;font-family:'Tajawal',sans-serif}
 body{margin:0;background:#ede8f9}
-.header{background:#fff;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
-.logo{background:#6a2db8;color:#fff;padding:10px 20px;border-radius:14px;font-weight:900}
-.lang-btn{background:#1a0a2e;color:#b18cff;border:1px solid #6a2db8;border-radius:20px;padding:7px 14px;font-weight:900;font-size:12px}
-.welcome{background:#6a2db8;color:#fff;margin:12px;border-radius:16px;padding:14px;text-align:center}
+.header{background:#fff;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20;box-shadow:0 2px 8px #0001}
+.logo{background:#6a2db8;color:#fff;padding:10px 22px;border-radius:14px;font-weight:900;font-size:18px}
+.lang-btn{background:#fff;border:1px solid #6a2db8;color:#6a2db8;border-radius:20px;padding:7px 14px;font-weight:900;font-size:12px;cursor:pointer}
+.welcome{background:#6a2db8;color:#fff;margin:12px;border-radius:16px;padding:18px;text-align:center;line-height:1.8}
+.welcome h1{margin:0;font-size:19px;font-weight:900}
+.welcome span{font-size:12px;color:#e9d5ff}
 .time-bar{background:#fff;margin:0 12px;border-radius:12px;padding:12px;display:flex;justify-content:space-around;border:1px solid #d8c8f0;font-weight:900;font-size:13px}
-.bot{background:#1a0a2e;color:#b18cff;margin:10px 12px;padding:9px 12px;border-radius:10px;display:flex;justify-content:space-between;font-size:11px;border:1px solid #6a2db8}
+.live-dot{width:8px;height:8px;background:#00e676;border-radius:50%;display:inline-block;animation:blink 1s infinite;margin-left:4px}@keyframes blink{50%{opacity:.2}}
 .wrap{background:#fff;margin:12px;border-radius:18px;padding:8px;border:1px solid #ddd}
-.title{background:#6a2db8;color:#fff;text-align:center;padding:12px;border-radius:12px;font-weight:900}
+.title{background:#6a2db8;color:#fff;text-align:center;padding:12px;border-radius:12px;font-weight:900;font-size:16px}
 .tabs{display:flex;gap:6px;margin:10px 0}
-.tab{flex:1;padding:12px;border:none;border-radius:12px;font-weight:900;font-size:13px;background:#e9e1ff;color:#6a2db8}
+.tab{flex:1;padding:12px;border:none;border-radius:12px;font-weight:900;font-size:13px;background:#e9e1ff;color:#6a2db8;cursor:pointer}
 .tab.active{background:#6a2db8;color:#fff}
-.chips{display:flex;gap:6px;overflow-x:auto;padding:8px 0}
-.chip{padding:7px 14px;border-radius:20px;background:#f0e8ff;border:1px solid #d5c8ee;font-size:12px;font-weight:700;flex-shrink:0}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:8px 0;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{padding:7px 14px;border-radius:20px;background:#f0e8ff;border:1px solid #d5c8ee;font-size:12px;font-weight:700;flex-shrink:0;cursor:pointer;white-space:nowrap}
 .chip.active{background:#6a2db8;color:#fff}
 .card{background:#f7f2ff;border:1px solid #e5d9ff;border-radius:16px;margin:10px 0;overflow:hidden}
 .top{display:flex;justify-content:space-around;align-items:center;padding:16px 8px}
 .tlogo{width:62px;height:62px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:11px;color:#fff;border:2px solid #fff;box-shadow:0 2px 6px #0002}
 .team{width:32%;text-align:center;font-weight:700;font-size:13px}
-.score{font-size:26px;font-weight:900}
+.score{font-size:26px;font-weight:900;direction:ltr}
 .badge{background:#6a2db8;color:#fff;padding:5px 14px;border-radius:20px;font-size:11px;margin-top:6px;display:inline-block}
 .bottom{background:#eee6ff;display:flex;justify-content:space-between;padding:8px 12px;font-size:11px;color:#5a4a7a}
-.btns{display:flex;gap:6px;padding:8px 12px;background:#fff}
-.btn{flex:1;padding:8px;border:none;border-radius:10px;font-weight:900;font-size:11px}
-.news-box{background:#fff9db;border:1px solid #ffe58f;border-radius:12px;padding:10px;margin:10px 0;font-size:12px}
+.status-live{background:#ff1744!important;color:#fff!important;animation:blink 1s infinite}
 </style>
 </head>
 <body>
-<div class="header"><div class="logo">سلوم تيفي REAL</div><button class="lang-btn" onclick="toggleLang()" id="lb">عربي / EN</button></div>
-<div class="welcome"><b>الموقع الرسمي لـ سلوم تيفي - بوت حقيقي من جوجل</b><br><small>sloomtv - يجيب المباريات الحقيقية فقط - لا مباريات وهمية</small></div>
-<div class="time-bar"><div>🇴🇲 مسقط <bdi id="oma">--</bdi></div><div>🇸🇦 الرياض <bdi id="ksa">--</bdi></div><div>بتوقيت</div></div>
-<div class="bot"><div id="botTxt">🤖 BOT v25 REAL - يجيب من ESPN و Google</div><div id="botInfo">يبحث...</div></div>
-<div class="wrap"><div class="title">جدول المباريات الحقيقية فقط</div><div class="tabs"><button class="tab" id="tabAms" onclick="show('ams')">الأمس</button><button class="tab active" id="tabToday" onclick="show('today')">اليوم</button><button class="tab" id="tabGhad" onclick="show('ghad')">الغد</button></div><div class="chips" id="lbar"></div><div id="news"></div><div id="list">البوت الحقيقي يبحث عن مباريات اليوم في جوجل و ESPN...</div></div>
+<div class="header">
+<div class="logo">سلوم تيفي</div>
+<button class="lang-btn" onclick="toggleLang()" id="langBtn">عربي / EN</button>
+</div>
+
+<div class="welcome" id="welcomeBox">
+<h1 id="w1">مرحبا بك في الموقع الرسمي لـ سلوم تيفي</h1>
+<span id="w2">sloomtv - SLOOMTV LIVE</span>
+</div>
+
+<div class="time-bar">
+<div>🇴🇲 مسقط <bdi id="oma">--:--:--</bdi></div>
+<div>🇸🇦 الرياض <bdi id="ksa">--:--:--</bdi></div>
+<div id="timeLabel">بتوقيت <span class="live-dot"></span></div>
+</div>
+
+<div class="wrap">
+<div class="title" id="tableTitle">جدول المباريات</div>
+<div class="tabs">
+<button class="tab" id="tabAms" onclick="show('ams')">مباريات الأمس</button>
+<button class="tab active" id="tabToday" onclick="show('today')">مباريات اليوم</button>
+<button class="tab" id="tabGhad" onclick="show('ghad')">مباريات الغد</button>
+</div>
+<div class="chips" id="lbar"></div>
+<div id="list" style="padding:20px;text-align:center">جاري جمع المباريات...</div>
+</div>
 
 <script>
-let cur='today', curL='all';
-const leagues=[{id:'all',n:'الكل'},{id:'sau.1',n:'روشن 🇸🇦'},{id:'eng.1',n:'الإنجليزي'},{id:'esp.1',n:'الإسباني'},{id:'ita.1',n:'الإيطالي'},{id:'ger.1',n:'الألماني'}];
+// ===== البوت الخاص السري - يجمع بدقة بدون ما يظهر اسمه فوق =====
+let cur='today', curL='all', lang='ar';
+const leagues=[
+{id:'all',n:'الكل',en:'All'},
+{id:'sau.1',n:'روشن 🇸🇦',en:'Roshn 🇸🇦'},
+{id:'eng.1',n:'الإنجليزي',en:'Premier'},
+{id:'esp.1',n:'الإسباني',en:'LaLiga'},
+{id:'ita.1',n:'الإيطالي',en:'Serie A'},
+{id:'ger.1',n:'الألماني',en:'Bundes'},
+{id:'fra.1',n:'الفرنسي',en:'Ligue 1'},
+{id:'uefa.champions',n:'أبطال أوروبا',en:'UCL'},
+{id:'egy.1',n:'المصري',en:'Egypt'},
+{id:'mar.1',n:'المغربي',en:'Botola'}
+];
 let store={today:[],ams:[],ghad:[]};
 
-function dateForESPN(off=0){let d=new Date();d.setDate(d.getDate()+off);return d.toISOString().slice(0,10).replace(/-/g,'');}
-function dateForDisplay(off=0){let d=new Date();d.setDate(d.getDate()+off);return d.toISOString().slice(0,10);}
+function dateStr(o=0){let d=new Date();d.setDate(d.getDate()+o);return d.toISOString().slice(0,10).replace(/-/g,'');}
 
-async function fetchESPNLeague(league,date){
+async function botFetch(league,date){
 try{
-let url=`https://site.api.espn.com/apis/site/v2/sports/soccer/${league}/scoreboard?dates=${date}`;
-let r=await fetch(url);
+let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${league}/scoreboard?dates=${date}`);
 let j=await r.json();
-if(!j.events||j.events.length===0) return [];
+if(!j.events) return [];
 return j.events.map(ev=>{
-let comp=ev.competitions[0];
-let home=comp.competitors.find(c=>c.homeAway==='home');
-let away=comp.competitors.find(c=>c.homeAway==='away');
-let status=comp.status.type.state==='pre' ? comp.status.type.shortDetail : comp.status.type.state==='in' ? 'جارية '+comp.status.displayClock : 'انتهت '+home.score+'-'+away.score;
+let c=ev.competitions[0];
+let h=c.competitors.find(x=>x.homeAway==='home');
+let a=c.competitors.find(x=>x.homeAway==='away');
+let state=c.status.type.state;
+let short=c.status.type.shortDetail;
+let timeStr= state==='pre' ? short : state==='in' ? `جارية ${c.status.displayClock||''}` : `انتهت`;
 return {
-h:home.team.displayName,
-a:away.team.displayName,
-hs:home.score||'-',
-as:away.score||'-',
-s:status,
-lg:league==='sau.1'?'ROSHN':league.toUpperCase(),
-sh:home.team.abbreviation||home.team.displayName.slice(0,3).toUpperCase(),
-sa:away.team.abbreviation||away.team.displayName.slice(0,3).toUpperCase(),
-c1:home.team.color? '#'+home.team.color : '#6a2db8',
-c2:away.team.color? '#'+away.team.color : '#ff6600',
-real:true,
+h:h.team.displayName, a:a.team.displayName,
+hs:h.score||'-', as:a.score||'-',
+s:timeStr, state:state,
+lg:league==='sau.1'?'ROSHN':league==='eng.1'?'PL':league==='esp.1'?'LALIGA':league==='ita.1'?'SERIE A':league==='ger.1'?'BUND':league==='fra.1'?'LIGUE1':league==='uefa.champions'?'UCL':league.toUpperCase(),
+sh:h.team.abbreviation||h.team.shortDisplayName.slice(0,3).toUpperCase(),
+sa:a.team.abbreviation||a.team.shortDisplayName.slice(0,3).toUpperCase(),
+c1:'#'+(h.team.color||'6a2db8'), c2:'#'+(a.team.color||'5a4a7a'),
 date:date
-};
+}
 });
-}catch(e){return []}
+}catch{return []}
 }
 
-async function fetchGoogleNews(){
-try{
-let rssUrl=encodeURIComponent('https://news.google.com/rss/search?q=دوري+روشن+السعودي&hl=ar&gl=SA&ceid=SA:ar');
-let api=`https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
-let r=await fetch(api);
-let j=await r.json();
-if(j.items) return j.items.slice(0,3);
-}catch(e){}
-return [];
-}
-
-async function loadReal(){
-document.getElementById('botInfo').textContent='يجيب مباريات حقيقية...';
-let today=dateForESPN(0), ams=dateForESPN(-1), ghad=dateForESPN(1);
-
-let allToday=[], allAms=[], allGhad=[];
-
+async function silentBot(){
+let t=dateStr(0), am=dateStr(-1), gh=dateStr(1);
+let tt=[],aa=[],gg=[];
 for(let lg of leagues.filter(l=>l.id!=='all')){
-let t=await fetchESPNLeague(lg.id,today); allToday=allToday.concat(t);
-let a=await fetchESPNLeague(lg.id,ams); allAms=allAms.concat(a);
-let g=await fetchESPNLeague(lg.id,ghad); allGhad=allGhad.concat(g);
+tt=tt.concat(await botFetch(lg.id,t));
+aa=aa.concat(await botFetch(lg.id,am));
+gg=gg.concat(await botFetch(lg.id,gh));
 }
-
-store.today=allToday;
-store.ams=allAms;
-store.ghad=allGhad;
-
+store.today=tt; store.ams=aa; store.ghad=gg;
 render();
-let news=await fetchGoogleNews();
-if(news.length){
-let html='<div class="news-box"><b>📰 أخبار جوجل - روشن الآن:</b><br>';
-news.forEach(n=>{html+=`• <a href="${n.link}" target="_blank" style="color:#6a2db8">${n.title}</a><br>`});
-html+='</div>';
-document.getElementById('news').innerHTML=html;
-}
-
-let info=`حقيقي ✅ اليوم ${dateForDisplay(0)} - وجد ${allToday.length} مباراة`;
-if(allToday.length===0) info=`حقيقي ✅ اليوم ${dateForDisplay(0)} - لا توجد مباريات روشن اليوم (مو وهمي)`;
-document.getElementById('botInfo').textContent=info;
-document.getElementById('botTxt').textContent=`🤖 BOT REAL - ${dateForDisplay(0)} - من ESPN/Google`;
 }
 
 function logoDiv(s,c){return `<div class="tlogo" style="background:${c}">${s}</div>`}
 
 function render(){
-let list=store[cur].filter(m=>curL==='all'||m.lg===curL||m.lg.toLowerCase().includes(curL.toLowerCase())||curL==='sau.1'&&m.lg==='ROSHN');
+let list=store[cur].filter(m=>curL==='all'||m.lg===curL|| (curL==='sau.1'&&m.lg==='ROSHN') || m.lg.includes(curL.toUpperCase()));
 let html='';
 if(list.length===0){
-if(cur==='today') html=`<div style="padding:20px;text-align:center;line-height:2"><b>لا توجد مباريات حقيقية اليوم في ${curL==='all'?'كل الدوريات':curL}</b><br><small>البوت الحقيقي ما يحط مباريات وهمية مثل الهلال والنصر إذا ما لعبوا اليوم<br>تاريخ اليوم الحقيقي: ${dateForDisplay(0)}<br>جرب دوري ثاني أو شوف الأمس والغد</small></div>`;
-else html='<div style="padding:20px;text-align:center">لا توجد مباريات في هذا اليوم</div>';
+html=`<div style="padding:30px;text-align:center;line-height:2"><b>${lang==='ar'?'لا توجد مباريات في هذا الدوري اليوم':'No matches today in this league'}</b><br><small>${lang==='ar'?'البوت يبحث أول بأول - جرب الأمس أو الغد':'Bot checking live - try yesterday or tomorrow'}</small></div>`;
 }else{
-list.forEach((m,i)=>{
-html+=`<div class="card"><div class="top"><div class="team">${logoDiv(m.sh,m.c1)}<div>${m.h}</div></div><div style="text-align:center;width:36%"><div class="score">${m.hs} - ${m.as}</div><div class="badge">${m.s}</div></div><div class="team">${logoDiv(m.sa,m.c2)}<div>${m.a}</div></div></div><div class="bottom"><div>🏆 ${m.lg} - حقيقي من ESPN</div><div>📅 ${m.date}</div></div><div class="btns"><button class="btn" style="background:#1a0a2e;color:#b18cff" onclick="window.open('https://www.google.com/search?q=${m.h}+vs+${m.a}+ملخص','_blank')">🔍 جوجل</button><button class="btn" style="background:#6a2db8;color:#fff" onclick="window.open('https://www.youtube.com/results?search_query=ملخص+${m.h}+${m.a}','_blank')">📺 يوتيوب</button><button class="btn" style="background:#ffcc00" onclick="window.open('https://www.espn.com/soccer/match/_/gameId/1','_blank')">📊 إحصائيات</button></div></div>`;
+list.forEach(m=>{
+let liveClass=m.state==='in'?'status-live':'';
+html+=`<div class="card"><div class="top"><div class="team">${logoDiv(m.sh,m.c1)}<div>${m.h}</div></div><div style="text-align:center;width:36%"><div class="score">${m.hs} - ${m.as}</div><div class="badge ${liveClass}">${m.s}</div></div><div class="team">${logoDiv(m.sa,m.c2)}<div>${m.a}</div></div></div><div class="bottom"><div>🏆 ${m.lg}</div><div>⏰ ${m.date.slice(0,4)}-${m.date.slice(4,6)}-${m.date.slice(6,8)}</div></div></div>`;
 });
 }
 document.getElementById('list').innerHTML=html;
 }
 
-function renderL(){let h='';leagues.forEach(l=>{h+=`<div class="chip ${curL===l.id?'active':''}" onclick="curL='${l.id}';renderL();render();">${l.n}</div>`});document.getElementById('lbar').innerHTML=h;}
+function renderL(){let h='';leagues.forEach(l=>{h+=`<div class="chip ${curL===l.id?'active':''}" onclick="curL='${l.id}';renderL();render();">${lang==='ar'?l.n:l.en}</div>`});document.getElementById('lbar').innerHTML=h;}
 window.show=(d)=>{cur=d;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(d==='today'?'tabToday':d==='ams'?'tabAms':'tabGhad').classList.add('active');render();}
-function toggleLang(){}
+
+function toggleLang(){
+if(lang==='ar'){
+lang='en';document.documentElement.dir='ltr';
+document.getElementById('langBtn').textContent='EN / عربي';
+document.getElementById('w1').textContent='Welcome to Official SLOOM TV';
+document.getElementById('w2').textContent='sloomtv - Official Website';
+document.getElementById('timeLabel').innerHTML='Time <span class="live-dot"></span>';
+document.getElementById('tableTitle').textContent='Match Fixtures';
+document.getElementById('tabAms').textContent='Yesterday';
+document.getElementById('tabToday').textContent='Today';
+document.getElementById('tabGhad').textContent='Tomorrow';
+}else{
+lang='ar';document.documentElement.dir='rtl';
+document.getElementById('langBtn').textContent='عربي / EN';
+document.getElementById('w1').textContent='مرحبا بك في الموقع الرسمي لـ سلوم تيفي';
+document.getElementById('w2').textContent='sloomtv - SLOOMTV LIVE';
+document.getElementById('timeLabel').innerHTML='بتوقيت <span class="live-dot"></span>';
+document.getElementById('tableTitle').textContent='جدول المباريات';
+document.getElementById('tabAms').textContent='مباريات الأمس';
+document.getElementById('tabToday').textContent='مباريات اليوم';
+document.getElementById('tabGhad').textContent='مباريات الغد';
+}
+renderL();render();
+}
 function clock(){let n=new Date();document.getElementById('ksa').textContent=n.toLocaleTimeString('en-GB',{timeZone:'Asia/Riyadh',hour12:false});document.getElementById('oma').textContent=n.toLocaleTimeString('en-GB',{timeZone:'Asia/Muscat',hour12:false});}
-setInterval(clock,1000);clock();renderL();loadReal();setInterval(loadReal,120000);
+setInterval(clock,1000);clock();
+renderL();silentBot();
+setInterval(silentBot,60000);
 </script>
 </body>
 </html>
