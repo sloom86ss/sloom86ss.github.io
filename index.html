@@ -3,35 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLOOM - مثل beIN SPORTS</title>
+<title>SLOOM TV - مثل beIN</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma;background:#f5f5f7;color:#111}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma;background:#f5f5f7;color:#111;padding-bottom:80px}
 .top{padding:10px 12px;display:flex;justify-content:space-between;align-items:center;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:20}
-.tabs-days{display:flex;gap:18px;padding:10px 12px;background:#fff;overflow-x:auto;border-bottom:1px solid #eee}
-.day{font-size:12px;text-align:center;white-space:nowrap;color:#888;cursor:pointer;min-width:55px}
+.tabs-days{display:flex;gap:16px;padding:10px 12px;background:#fff;overflow-x:auto;border-bottom:1px solid #eee}
+.day{font-size:12px;text-align:center;white-space:nowrap;color:#888;min-width:55px;line-height:1.4}
 .day.active{color:#5a189a;font-weight:900;border-bottom:2px solid #5a189a;padding-bottom:6px}
 .league-title{padding:10px 12px;font-weight:900;font-size:14px;display:flex;justify-content:space-between;background:#fff;margin-top:6px}
-.bein-card{background:#fff;border:1.5px solid #e5e5e5;border-radius:16px;margin:8px 10px;padding:12px 8px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
-.bein-card:hover{border-color:#5a189a}
-.team{text-align:center;width:90px}
+.bein-card{background:#fff;border:1.6px solid #e6e6e6;border-radius:16px;margin:8px 10px;padding:12px 8px;display:flex;justify-content:space-between;align-items:center}
+.team{text-align:center;width:95px}
 .team img{width:44px;height:44px;object-fit:contain}
-.team .ar-name{font-size:12px;font-weight:700;margin-top:4px;color:#222}
+.team .ar-name{font-size:11px;font-weight:800;margin-top:5px;color:#222}
 .center{text-align:center;flex:1}
-.center .minute{color:#0a8a0a;font-weight:900;font-size:20px;direction:ltr}
-.center .score{font-weight:900;font-size:24px;color:#111;margin-top:2px}
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;display:flex;justify-content:space-around;padding:6px 0;z-index:30}
-.bottom-nav div{text-align:center;font-size:10px;color:#5a189a}
-.bottom-nav .active{color:#5a189a;font-weight:900}
-#modal{position:fixed;inset:0;background:#f5f5f7;z-index:100;display:none;overflow:auto;padding-bottom:70px}
-.detail-header{background:#1a1a1a;color:#fff;padding:15px;text-align:center}
-.detail-score{font-size:36px;font-weight:900;margin:8px 0}
-.detail-tabs{display:flex;gap:20px;padding:10px 12px;background:#1a1a1a;color:#888;overflow-x:auto}
+.center .minute{color:#0a8a0a;font-weight:900;font-size:19px;direction:ltr}
+.center .score{font-weight:900;font-size:22px}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;display:flex;justify-content:space-around;padding:6px 0;z-index:40}
+.bottom-nav div{text-align:center;font-size:10px;color:#5a189a;line-height:1.2}
+.bottom-nav .dot{width:52px;height:52px;background:#5a189a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;margin-top:-22px}
+
+/* شريط SLOOM TV المتحرك بدل شريط beIN */
+.sloom-ticker{position:relative;background:#5a189a;color:#fff;overflow:hidden;white-space:nowrap;height:38px;display:flex;align-items:center;margin:8px 0}
+.sloom-ticker-track{display:flex;animation:scroll 25s linear infinite;gap:40px}
+.sloom-ticker-track span{font-weight:900;font-size:13px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+@keyframes scroll{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+#modal{position:fixed;inset:0;background:#f5f5f7;z-index:100;display:none;overflow:auto;padding-bottom:80px}
+.detail-header{background:#111;color:#fff;padding:14px}
+.detail-score{font-size:36px;font-weight:900}
+.detail-tabs{display:flex;gap:20px;padding:10px 12px;background:#111;color:#888}
 .detail-tabs .active{color:#fff;border-bottom:2px solid #fff;padding-bottom:6px;font-weight:900}
-.moment{background:#fff;border:1px solid #eee;border-radius:12px;margin:10px;padding:12px;display:flex;justify-content:space-between;align-items:center}
+.moment{background:#fff;border:1px solid #eee;border-radius:12px;margin:8px 10px;padding:12px;display:flex;justify-content:space-between}
 </style>
 </head>
 <body>
-<div class="top"><div style="font-weight:900">كرة القدم</div><div style="display:flex;gap:12px;font-size:18px">⚙️ 📅 <span style="background:#eee;padding:4px 10px;border-radius:20px;font-size:13px">مباشر</span> 🔍 ☰</div></div>
+<div class="top"><div style="font-weight:900;font-size:16px">كرة القدم</div><div style="display:flex;gap:12px">⚙️ 📅 <span style="background:#eee;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:900">مباشر</span> 🔍 ☰</div></div>
 
 <div class="tabs-days">
 <div class="day">الخميس<br>29 أكتوبر</div>
@@ -41,28 +47,31 @@
 <div class="day">الإثنين<br>02 نوفمبر</div>
 </div>
 
+<!-- شريط SLOOM TV المتحرك بدل إعلان beIN -->
+<div class="sloom-ticker"><div class="sloom-ticker-track" id="sloomTrack"></div></div>
+
 <div class="league-title"><span>الدوري الإنجليزي الممتاز</span><span>⌃</span></div>
 <div id="list"></div>
 
 <div class="bottom-nav">
-<div>🏠<br>الرئيسية</div>
-<div>🏆<br>الرياضة</div>
-<div>▶️<br>الفيديو</div>
-<div style="background:#5a189a;color:#fff;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;margin-top:-20px">▶</div>
-<div>📡<br>مباشر</div>
-<div style="color:#5a189a;font-weight:900">📊<br>نتائج مباشرة</div>
 <div>📋<br>جدول البث</div>
+<div>📊<br>نتائج مباشرة</div>
+<div>📡<br>مباشر</div>
+<div class="dot">▶</div>
+<div>▶️<br>الفيديو</div>
+<div>🏆<br>الرياضة</div>
+<div>🏠<br>الرئيسية</div>
 </div>
 
 <div id="modal">
 <div class="detail-header">
-<div style="display:flex;justify-content:space-between"><button onclick="closeM()" style="background:#333;color:#fff;border:0;padding:6px 14px;border-radius:20px">✕</button><span>⬆️</span></div>
-<div style="display:flex;justify-content:space-between;align-items:center;margin-top:15px">
-<div class="team" style="color:#fff"><img id="dLogo1" src=""><div id="dName1" class="ar-name" style="color:#fff"></div></div>
-<div><div class="minute" style="color:#2ecc71" id="dMinute">72'</div><div style="font-size:12px">(HT 0 - 1)</div><div class="detail-score" id="dScore">0 - 1</div><div style="font-size:11px;color:#aaa">الموسم الحالي</div></div>
-<div class="team" style="color:#fff"><img id="dLogo2" src=""><div id="dName2" class="ar-name" style="color:#fff"></div></div>
+<div style="display:flex;justify-content:space-between"><button onclick="closeM()" style="background:#333;color:#fff;border:0;padding:6px 14px;border-radius:20px">✕ إغلاق</button><span>↗️</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+<div class="team"><img id="d1" src="" style="width:56px;height:56px"><div id="n1" class="ar-name" style="color:#fff;font-size:13px"></div></div>
+<div style="text-align:center"><div id="dMin" style="color:#2ecc71;font-weight:900">72'</div><div style="font-size:11px;color:#aaa" id="dHT">(HT 0 - 1)</div><div class="detail-score" id="dScore">0 - 1</div></div>
+<div class="team"><img id="d2" src="" style="width:56px;height:56px"><div id="n2" class="ar-name" style="color:#fff;font-size:13px"></div></div>
 </div>
-<div style="margin-top:12px;font-size:13px" id="dEvent">⚽ نيكولا ميلينكوفيتش... 30'</div>
+<div id="dEv" style="margin-top:12px;text-align:center">⚽ نيكولا ميلينكوفيتش 30'</div>
 </div>
 <div class="detail-tabs"><div>تعليق</div><div>فرق</div><div>احصائيات</div><div class="active">ملخص</div></div>
 <div style="padding:12px;font-weight:900">لحظات مهمة</div>
@@ -70,64 +79,71 @@
 </div>
 
 <script>
-const AR_NAMES={
- "Atlético Madrid":"أتلتيكو مدريد","Levante":"ليفانتي","Celta Vigo":"سيلتا فيغو","Rayo Vallecano":"رايو فاليكانو","Málaga":"ملقا","Real Betis":"ريال بيتيس","Manchester United":"مانشستر يونايتد","Chelsea":"تشيلسي","Leeds United":"ليدز يونايتد","Bournemouth":"بورنموث","AFC Bournemouth":"بورنموث","Nottingham Forest":"نوتنغهام فورست","Brentford":"برينتفورد","Sunderland":"سندرلاند","Coventry":"كوفنتري","Coventry City":"كوفنتري","Hull City":"هال","Ipswich Town":"إبسويتش تاون","Brighton & Hove Albion":"برايتون","Manchester City":"مانشستر سيتي","Leeds":"ليدز يونايتد","Al Ettifaq":"الاتفاق","Al Taawoun":"التعاون","Sunderland AFC":"سندرلاند"
-};
+const AR={"Sunderland":"سندرلاند","Coventry":"كوفنتري","Coventry City":"كوفنتري","Nottingham Forest":"نوتنغهام فورست","Brentford":"برينتفورد","Ipswich Town":"إبسويتش تاون","Hull City":"هال","Brighton":"برايتون","Brighton & Hove Albion":"برايتون","Manchester City":"مانشستر سيتي","Leeds United":"ليدز يونايتد","Leeds":"ليدز يونايتد","Bournemouth":"بورنموث","AFC Bournemouth":"بورنموث","Atlético Madrid":"أتلتيكو مدريد","Levante":"ليفانتي","Al Nassr":"النصر","Al Hilal":"الهلال","Al Ittihad":"الاتحاد","Al Ahli":"الأهلي"};
+function ar(n){return AR[n]||n;}
 
-function ar(name){ return AR_NAMES[name] || name; }
+function buildTicker(){
+  let now=new Date();
+  let ksa=now.toLocaleString('ar-SA',{timeZone:'Asia/Riyadh',hour:'2-digit',minute:'2-digit'});
+  let oman=now.toLocaleString('ar-SA',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'});
+  let items=[
+    `🔴 SLOOM TV مباشر 🇴🇲 عمان ${oman} | 🇸🇦 السعودية ${ksa}`,
+    `⚽ الدوري الإنجليزي الآن 72' - مباريات حية`,
+    `📊 جميع الشعارات بالعربي - سندرلاند - برينتفورد - مانشستر سيتي`,
+    `🔥 SLOOM LIVE - أفضل من beIN - تحديث كل ثانية`,
+    `🏆 الدوري السعودي - النصر - الهلال - الاتحاد`,
+  ];
+  let track=document.getElementById('sloomTrack');
+  track.innerHTML=(items.concat(items).concat(items)).map(t=>`<span>${t} • </span>`).join('');
+}
+setInterval(buildTicker,10000); buildTicker();
 
 async function load(){
- let leagues=['esp.1','eng.1','ksa.1'];
- let list=document.getElementById('list'); list.innerHTML='';
- for(let lg of leagues){
-  try{
-   let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg}/scoreboard`);
+ let list=document.getElementById('list');
+ // مباريات مثل صورتك تماما
+ list.innerHTML=`
+ <div class="bein-card" style="border-color:#0a8a0a" onclick="openM('1','كوفنتري','سندرلاند','https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F384.png','https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F328.png','1','3','71\\'')">
+   <div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F328.png"><div class="ar-name">سندرلاند</div></div>
+   <div class="center"><div class="score">1</div><div class="minute">71'</div><div class="score">3</div></div>
+   <div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F384.png"><div class="ar-name">كوفنتري</div></div>
+ </div>
+ <div class="bein-card" style="border-color:#c00" onclick="openM('2','برينتفورد','نوتنغهام فورست','https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F361.png','https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F370.png','1','0','72\\'')">
+   <div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F370.png"><div class="ar-name">نوتنغهام فورست</div></div>
+   <div class="center"><div class="score">0</div><div class="minute">72'</div><div class="score">1</div></div>
+   <div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F361.png"><div class="ar-name">برينتفورد</div></div>
+ </div>
+ <div class="bein-card"><div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F14821.png"><div class="ar-name">إبسويتش تاون</div></div><div class="center"><div class="score">1</div><div class="minute">69'</div><div class="score">1</div></div><div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F322.png"><div class="ar-name">هال</div></div></div>
+ <div class="bein-card"><div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F331.png"><div class="ar-name">برايتون</div></div><div class="center"><div class="score">1</div><div class="minute">70'</div><div class="score">0</div></div><div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F382.png"><div class="ar-name">مانشستر سيتي</div></div></div>
+ <div class="bein-card"><div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F362.png"><div class="ar-name">ليدز يونايتد</div></div><div class="center"><div class="score">0</div><div class="minute">68'</div><div class="score">1</div></div><div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F349.png"><div class="ar-name">بورنموث</div></div></div>
+ `;
+ // جلب مباريات حية إضافية
+ try{
+   let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard`);
    let d=await r.json();
-   (d.events||[]).slice(0,6).forEach(ev=>{
-    let c=ev.competitions[0];
-    let h=c.competitors.find(x=>x.homeAway==='home')||c.competitors[0];
-    let a=c.competitors.find(x=>x.homeAway==='away')||c.competitors[1];
-    let minute=c.status.type.detail||Math.floor(Math.random()*40+60)+"'";
-    let scoreH=h.score||Math.floor(Math.random()*3);
-    let scoreA=a.score||Math.floor(Math.random()*3);
-    let logoH=h.team.logos?.[0]?.href||`https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F${h.team.id}.png&w=50`;
-    let logoA=a.team.logos?.[0]?.href||`https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F${a.team.id}.png&w=50`;
-    let border=c.status.type.state==='in'?'#0a8a0a':'#ddd';
-    list.innerHTML+=`
-    <div class="bein-card" style="border-color:${border}" onclick="openM('${ev.id}','${lg}','${h.team.displayName}','${a.team.displayName}','${logoH}','${logoA}','${scoreH} - ${scoreA}','${minute}')">
-      <div class="team"><img src="${logoH}" onerror="this.src='https://via.placeholder.com/44'"><div class="ar-name">${ar(h.team.displayName)}</div></div>
-      <div class="center"><div class="score">${scoreA}</div><div class="minute">${minute}</div><div class="score">${scoreH}</div></div>
-      <div class="team"><img src="${logoA}" onerror="this.src='https://via.placeholder.com/44'"><div class="ar-name">${ar(a.team.displayName)}</div></div>
-    </div>`;
+   (d.events||[]).slice(0,2).forEach(ev=>{
+     let c=ev.competitions[0];
+     let h=c.competitors[0]; let a=c.competitors[1];
+     let lh=h.team.logos?.[0]?.href; let la=a.team.logos?.[0]?.href;
+     list.innerHTML+=`<div class="bein-card" style="border-color:#0a8a0a"><div class="team"><img src="${lh}"><div class="ar-name">${ar(h.team.displayName)}</div></div><div class="center"><div class="score">${h.score||0}</div><div class="minute">${c.status.type.detail||"مباشر"}</div><div class="score">${a.score||0}</div></div><div class="team"><img src="${la}"><div class="ar-name">${ar(a.team.displayName)}</div></div></div>`;
    });
-  }catch(e){}
- }
- // إضافة مباريات مثل الصورة تماما
- if(list.innerHTML===''){
-  list.innerHTML=`
-    <div class="bein-card" style="border-color:#0a8a0a"><div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F328.png"><div class="ar-name">سندرلاند</div></div><div class="center"><div class="score">1</div><div class="minute">71'</div><div class="score">3</div></div><div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F384.png"><div class="ar-name">كوفنتري</div></div></div>
-    <div class="bein-card" style="border-color:#c00"><div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F370.png"><div class="ar-name">نوتنغهام فورست</div></div><div class="center"><div class="score">0</div><div class="minute">72'</div><div class="score">1</div></div><div class="team"><img src="https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F361.png"><div class="ar-name">برينتفورد</div></div></div>
-  `;
- }
+ }catch(e){}
 }
 load();
 
-function openM(id,lg,nameH,nameA,logoH,logoA,score,minute){
+function openM(id,home,away,logoH,logoA,sH,sA,min){
  document.getElementById('modal').style.display='block';
- document.getElementById('dLogo1').src=logoH;
- document.getElementById('dLogo2').src=logoA;
- document.getElementById('dName1').textContent=ar(nameH);
- document.getElementById('dName2').textContent=ar(nameA);
- document.getElementById('dScore').textContent=score;
- document.getElementById('dMinute').textContent=minute;
+ document.getElementById('d1').src=logoH; document.getElementById('d2').src=logoA;
+ document.getElementById('n1').textContent=away; document.getElementById('n2').textContent=home;
+ document.getElementById('dScore').textContent=sH+' - '+sA;
+ document.getElementById('dMin').textContent=min;
+ document.getElementById('dHT').textContent='(HT 0 - 1)';
+ document.getElementById('dEv').textContent='⚽ نيكولا ميلينكوفيتش... 30\\'';
  document.getElementById('dContent').innerHTML=`
-   <div class="moment"><div>بطاقة صفراء</div><div style="width:20px;height:28px;background:#ffeb3b;border-radius:4px"></div><div>68'</div></div>
-   <div class="moment"><div>مايكل كايودي (برينتفورد) تحصل على بطاقة صفراء.</div><div></div><div></div></div>
-   <div class="moment"><div>هدف ⚽ نيكولا ميلينكوفيتش</div><div>30'</div></div>
-   <div style="text-align:center;color:#888;font-size:11px;margin-top:15px">🇴🇲🇸🇦 مباشر - SLOOM LIVE مثل beIN</div>
+   <div class="moment"><div style="display:flex;align-items:center;gap:8px"><div style="width:18px;height:26px;background:#ffeb3b;border-radius:4px"></div> بطاقة صفراء</div><div>68'</div></div>
+   <div class="moment"><div>مايكل كايودي (برينتفورد) تحصل على بطاقة صفراء.</div></div>
+   <div style="text-align:center;color:#5a189a;font-weight:900;margin-top:15px">🔴 SLOOM TV LIVE 🇴🇲🇸🇦</div>
  `;
 }
-
 function closeM(){document.getElementById('modal').style.display='none'}
 </script>
 </body>
