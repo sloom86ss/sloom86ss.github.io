@@ -3,142 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLOOM TV ULTIMATE - بوت مباشر</title>
+<title>SLOOM TV LIVE</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma;background:#f5f5f7;color:#111;padding-bottom:80px}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma;background:#f5f5f7;color:#111;padding-bottom:15px}
 .top{padding:10px;background:#fff;border-bottom:1px solid #eee;display:flex;justify-content:space-between;position:sticky;top:0;z-index:30}
 .days{display:flex;gap:12px;padding:10px;background:#fff;overflow-x:auto;border-bottom:1px solid #eee}
-.day{font-size:11px;text-align:center;min-width:60px;color:#888;cursor:pointer}
+.day{font-size:11px;text-align:center;min-width:60px;color:#888}
 .day.active{color:#5a189a;font-weight:900;border-bottom:2px solid #5a189a}
 .sloom-ticker{background:#5a189a;color:#fff;height:36px;overflow:hidden;display:flex;align-items:center;position:relative}
-.track{display:flex;animation:marq 30s linear infinite;gap:50px;white-space:nowrap}
+.track{display:flex;animation:marq 120s linear infinite;gap:60px;white-space:nowrap}
+.track span{font-size:13px;font-weight:700}
 @keyframes marq{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
 .league{background:#fff;margin-top:8px;padding:10px 12px;font-weight:900;display:flex;justify-content:space-between;border-bottom:1px solid #eee}
-.card{background:#fff;border:1.5px solid #e8e8e8;border-radius:16px;margin:8px 10px;padding:10px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
-.card.live{border-color:#0a8a0a;box-shadow:0 0 0 2px rgba(10,138,10,0.1)}
-.card.live .minute{animation:blink 1s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.4}}
-.team{width:90px;text-align:center}
-.team img{width:42px;height:42px;object-fit:contain}
-.ar{font-size:11px;font-weight:800;margin-top:4px}
-.center{flex:1;text-align:center}
-.minute{color:#0a8a0a;font-weight:900;font-size:18px;direction:ltr}
-.score{font-weight:900;font-size:22px}
-.bot-status{position:fixed;top:60px;left:10px;background:#111;color:#0f0;padding:4px 10px;border-radius:20px;font-size:10px;z-index:50;font-family:monospace}
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;display:flex;justify-content:space-around;padding:6px 0;z-index:40}
+.card{background:#fff;border:1.5px solid #e8e8e8;border-radius:16px;margin:8px 10px;padding:10px;display:flex;justify-content:space-between;align-items:center}
+.card.live{border-color:#0a8a0a}
+.team{width:90px;text-align:center}.team img{width:42px;height:42px}.ar{font-size:11px;font-weight:800;margin-top:4px}
+.center{flex:1;text-align:center}.minute{color:#0a8a0a;font-weight:900;font-size:18px;direction:ltr}.score{font-weight:900;font-size:22px}
+.bot-status{position:fixed;top:60px;left:10px;background:#111;color:#0f0;padding:4px 10px;border-radius:20px;font-size:10px;z-index:50}
 #modal{position:fixed;inset:0;background:#f5f5f7;z-index:100;display:none;overflow:auto}
-.detail-header{background:#111;color:#fff;padding:14px;text-align:center}
 </style>
 </head>
 <body>
-<div class="top"><div style="font-weight:900">SLOOM TV 🔴 LIVE</div><div>☰ 🔍 <span style="background:#eee;padding:4px 10px;border-radius:20px;font-size:11px">مباشر</span></div></div>
-<div class="days"><div class="day">29 أكتوبر</div><div class="day">30 أكتوبر</div><div class="day active">اليوم 31 أكتوبر</div><div class="day">01 نوفمبر</div><div class="day">02 نوفمبر</div></div>
+<div class="top"><div style="font-weight:900">SLOOM TV 🔴 LIVE</div><div>☰ 🔍</div></div>
+<div class="days"><div class="day">29 أكتوبر</div><div class="day">30 أكتوبر</div><div class="day active">اليوم 31 أكتوبر</div><div class="day">01 نوفمبر</div></div>
 <div class="sloom-ticker"><div class="track" id="track"></div></div>
-<div class="bot-status" id="bot">🤖 BOT: يحدث الآن...</div>
+<div class="bot-status" id="bot">🤖 BOT يحدث...</div>
 <div id="all"></div>
-<div class="bottom-nav"><div>📋 جدول البث</div><div>📊 نتائج</div><div>📡 مباشر</div><div style="background:#5a189a;color:#fff;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:-18px">▶</div><div>▶ الفيديو</div><div>🏆 الرياضة</div><div>🏠 الرئيسية</div></div>
-<div id="modal"><div class="detail-header"><button onclick="closeM()" style="background:#333;color:#fff;border:0;padding:6px 14px;border-radius:20px">✕ إغلاق</button><div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center"><div class="team"><img id="m1" style="width:56px"><div id="mn1" class="ar" style="color:#fff"></div></div><div><div id="mMin" style="color:#2ecc71;font-weight:900">72'</div><div id="mScore" style="font-size:32px;font-weight:900">0 - 1</div></div><div class="team"><img id="m2" style="width:56px"><div id="mn2" class="ar" style="color:#fff"></div></div></div></div><div id="mContent" style="padding:12px"></div></div>
-
+<div id="modal"><div style="background:#111;color:#fff;padding:14px"><button onclick="document.getElementById('modal').style.display='none'" style="background:#333;color:#fff;border:0;padding:6px 14px;border-radius:20px">✕ إغلاق</button><div id="mContent" style="padding:12px;text-align:center;margin-top:20px">تفاصيل المباراة</div></div></div>
 <script>
-// ===== قاعدة بيانات كل أندية العالم بالعربي =====
-const AR_TEAMS={
- // السعودية روشن
- "Al Hilal":"الهلال","Al Nassr":"النصر","Al Ittihad":"الاتحاد","Al Ahli":"الأهلي","Al Shabab":"الشباب","Al Ettifaq":"الاتفاق","Al Taawoun":"التعاون","Al Fateh":"الفتح","Al Khaleej":"الخليج","Al Okhdood":"الأخدود","Al Raed":"الرائد","Al Wehda":"الوحدة","Al Feiha":"الفيحاء","Abha":"أبها","Al Hazem":"الحزم","Al Riyadh":"الرياض","Al Taee":"الطائي","Dhamk":"ضمك","Dhamac":"ضمك",
- // إنجليزي
- "Arsenal":"أرسنال","Manchester City":"مانشستر سيتي","Liverpool":"ليفربول","Chelsea":"تشيلسي","Manchester United":"مانشستر يونايتد","Tottenham Hotspur":"توتنهام","Newcastle United":"نيوكاسل","Brighton & Hove Albion":"برايتون","Aston Villa":"أستون فيلا","West Ham United":"وست هام","Crystal Palace":"كريستال بالاس","Fulham":"فولهام","Wolverhampton Wanderers":"ولفرهامبتون","Everton":"إيفرتون","Brentford":"برينتفورد","Nottingham Forest":"نوتنغهام فورست","Luton Town":"لوتون تاون","Burnley":"بيرنلي","Sheffield United":"شيفيلد","Bournemouth":"بورنموث","Leeds United":"ليدز يونايتد","Leicester City":"ليستر سيتي","Sunderland":"سندرلاند","Coventry City":"كوفنتري","Ipswich Town":"إبسويتش تاون","Hull City":"هال",
- // إسباني
- "Real Madrid":"ريال مدريد","Barcelona":"برشلونة","Atlético Madrid":"أتلتيكو مدريد","Sevilla":"إشبيلية","Real Sociedad":"ريال سوسيداد","Villarreal":"فياريال","Real Betis":"ريال بيتيس","Athletic Bilbao":"أتلتيك بلباو","Valencia":"فالنسيا","Levante":"ليفانتي","Celta Vigo":"سيلتا فيغو","Rayo Vallecano":"رايو فاليكانو",
- // عالمي
- "Bayern Munich":"بايرن ميونخ","Borussia Dortmund":"دورتموند","Paris Saint-Germain":"باريس سان جيرمان","Inter Milan":"إنتر ميلان","AC Milan":"ميلان","Juventus":"يوفنتوس","Ajax":"أياكس"
-};
-function ar(name){return AR_TEAMS[name]||name;}
-
-// ===== كل الدوريات =====
-const LEAGUES=[
- {id:'ksa.1', name:'🇸🇦 دوري روشن السعودي'},
- {id:'eng.1', name:'🏴󠁧󠁢󠁥󠁮󠁧󠁿 الدوري الإنجليزي الممتاز'},
- {id:'esp.1', name:'🇪🇸 الدوري الإسباني'},
- {id:'ita.1', name:'🇮🇹 الدوري الإيطالي'},
- {id:'ger.1', name:'🇩🇪 الدوري الألماني'},
- {id:'fra.1', name:'🇫🇷 الدوري الفرنسي'},
- {id:'uefa.champions', name:'🏆 دوري أبطال أوروبا'},
- {id:'uefa.europa', name:'🏆 الدوري الأوروبي'}
-];
-
-// ===== شريط SLOOM المتحرك =====
+const AR={"Al Hilal":"الهلال","Al Nassr":"النصر","Al Ittihad":"الاتحاد","Al Ahli":"الأهلي","Al Shabab":"الشباب","Al Ettifaq":"الاتفاق","Al Taawoun":"التعاون","Al Fateh":"الفتح","Al Faisaly":"الفيصلي","Al Fayha":"الفيحاء","Sunderland":"سندرلاند","Brentford":"برينتفورد","Manchester City":"مانشستر سيتي","Arsenal":"أرسنال","Liverpool":"ليفربول"};
+function ar(n){return AR[n]||n;}
+const LEAGUES=[{id:'ksa.1',name:'🇸🇦 دوري روشن السعودي'},{id:'eng.1',name:'🏴󠁧󠁢󠁥󠁮󠁧󠁿 الدوري الإنجليزي الممتاز'},{id:'esp.1',name:'🇪🇸 الدوري الإسباني'}];
 function ticker(){
  let now=new Date();
  let ksa=now.toLocaleTimeString('ar-SA',{timeZone:'Asia/Riyadh',hour:'2-digit',minute:'2-digit'});
  let oman=now.toLocaleTimeString('ar-SA',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'});
- let msgs=[
-  `🔴 SLOOM TV مباشر - 🇴🇲 عمان ${oman} | 🇸🇦 السعودية ${ksa}`,
-  `🤖 البوت يحدث كل 30 ثانية - لحظة بلحظة`,
-  `🇸🇦 الهلال - النصر - الاتحاد - الأهلي - الشباب - الاتفاق`,
-  `⚽ كل دوريات العالم - إنجليزي - إسباني - إيطالي - أبطال أوروبا`,
-  `📊 جميع الشعارات + الأسماء عربي 100%`,
- ];
+ let msgs=[`🔴 SLOOM TV مباشر - 🇴🇲 عمان ${oman} | 🇸🇦 السعودية ${ksa}`,`🤖 البوت يحدث كل 30 ثانية - لحظة بلحظة`,`🇸🇦 الهلال - النصر - الاتحاد - الأهلي - الاتفاق - التعاون`,`⚽ جميع المباريات بتوقيت السعودية وعمان`];
  document.getElementById('track').innerHTML=msgs.concat(msgs).map(m=>`<span>${m} • </span>`).join('');
 }
-setInterval(ticker,1000); ticker();
-
-// ===== البوت الرئيسي - يحدث كل شيء =====
-let botCount=0;
+setInterval(ticker,1000);ticker();
 async function BOT_UPDATE(){
- botCount++;
- document.getElementById('bot').textContent=`🤖 BOT ${botCount}: يحدث ${new Date().toLocaleTimeString('ar-SA',{timeZone:'Asia/Riyadh'})}`;
- let all=document.getElementById('all');
- all.innerHTML='';
+ document.getElementById('bot').textContent=`🤖 BOT يحدث ${new Date().toLocaleTimeString('ar-SA',{timeZone:'Asia/Riyadh'})}`;
+ let all=document.getElementById('all'); all.innerHTML='';
  for(let lg of LEAGUES){
   try{
    let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg.id}/scoreboard`);
    let data=await r.json();
-   if(!data.events||data.events.length===0) continue;
+   if(!data.events) continue;
    all.innerHTML+=`<div class="league"><span>${lg.name}</span><span style="color:#0a8a0a">● ${data.events.length} مباريات</span></div>`;
-   data.events.slice(0,4).forEach(ev=>{
-    let comp=ev.competitions[0];
-    let h=comp.competitors.find(x=>x.homeAway==='home')||comp.competitors[0];
-    let a=comp.competitors.find(x=>x.homeAway==='away')||comp.competitors[1];
-    let isLive=comp.status.type.state==='in';
-    let minute=comp.status.type.detail||'';
-    // توقيت عمان والسعودية
+   data.events.slice(0,5).forEach(ev=>{
+    let comp=ev.competitions[0];let h=comp.competitors[0];let a=comp.competitors[1];
+    let isLive=comp.status.type.state==='in';let minute=comp.status.type.detail||'';
     let matchTime=new Date(ev.date);
-    let ksaTime=matchTime.toLocaleString('ar-SA',{timeZone:'Asia/Riyadh',hour:'2-digit',minute:'2-digit'});
-    let omanTime=matchTime.toLocaleString('ar-SA',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'});
+    let ksaTime=matchTime.toLocaleTimeString('ar-SA',{timeZone:'Asia/Riyadh',hour:'2-digit',minute:'2-digit'});
+    let omanTime=matchTime.toLocaleTimeString('ar-SA',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'});
     let logoH=h.team.logos?.[0]?.href||`https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F${h.team.id}.png&w=60`;
     let logoA=a.team.logos?.[0]?.href||`https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F${a.team.id}.png&w=60`;
-    all.innerHTML+=`
-    <div class="card ${isLive?'live':''}" onclick="openMatch('${ev.id}','${lg.id}','${h.team.displayName}','${a.team.displayName}','${logoH}','${logoA}')">
-      <div class="team"><img src="${logoH}" onerror="this.style.display='none'"><div class="ar">${ar(h.team.displayName)}</div><div style="font-size:9px;color:#888">${ksaTime} KSA</div></div>
-      <div class="center"><div class="score">${h.score||0} - ${a.score||0}</div><div class="minute">${isLive?minute+' 🔴':ksaTime}</div><div style="font-size:9px;color:#888">🇴🇲 ${omanTime}</div></div>
-      <div class="team"><img src="${logoA}" onerror="this.style.display='none'"><div class="ar">${ar(a.team.displayName)}</div><div style="font-size:9px;color:#888">${isLive?'مباشر':'قادمة'}</div></div>
-    </div>`;
+    all.innerHTML+=`<div class="card ${isLive?'live':''}"><div class="team"><img src="${logoH}"><div class="ar">${ar(h.team.displayName)}</div><div style="font-size:9px;color:#888">قادمة</div></div><div class="center"><div class="score">${h.score||0} - ${a.score||0}</div><div class="minute">${isLive?minute:ksaTime+' م'}</div><div style="font-size:9px">🇴🇲 ${omanTime}</div></div><div class="team"><img src="${logoA}"><div class="ar">${ar(a.team.displayName)}</div><div style="font-size:9px;color:#888">KSA ${ksaTime}</div></div></div>`;
    });
-  }catch(e){ console.log('خطأ',lg.id); }
+  }catch(e){}
  }
 }
-BOT_UPDATE();
-setInterval(BOT_UPDATE, 30000); // البوت يحدث كل 30 ثانية لحظة بلحظة
-
-function openMatch(id,lgId,nameH,nameA,logoH,logoA){
- document.getElementById('modal').style.display='block';
- document.getElementById('m1').src=logoH; document.getElementById('m2').src=logoA;
- document.getElementById('mn1').textContent=ar(nameH); document.getElementById('mn2').textContent=ar(nameA);
- document.getElementById('mContent').innerHTML=`
-  <div style="background:#fff;border-radius:12px;padding:12px;margin-bottom:10px;text-align:center">
-    <div style="font-weight:900">🤖 البوت يحدث هذه المباراة لحظة بلحظة</div>
-    <div style="font-size:11px;color:#888;margin-top:6px">كل 30 ثانية يجيب النتيجة والدقيقة</div>
-  </div>
-  <div style="background:#fff;border-radius:12px;padding:12px">
-    <div style="font-weight:900;margin-bottom:10px">لحظات مهمة - عربي 100%</div>
-    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee"><span>تم إعلان التشكيلة</span><span>0'</span></div>
-    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee"><span>بداية الشوط الأول</span><span>1'</span></div>
-    <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee"><span>⚽ هدف - ${ar(nameH)}</span><span>30'</span></div>
-    <div style="display:flex;justify-content:space-between;padding:8px 0"><span>🟨 بطاقة صفراء</span><span>68'</span></div>
-  </div>
-  <div style="text-align:center;margin-top:15px"><span style="background:#5a189a;color:#fff;padding:8px 16px;border-radius:20px;font-size:12px">🔴 SLOOM TV - بوت مباشر 🇴🇲🇸🇦</span></div>
- `;
-}
-function closeM(){document.getElementById('modal').style.display='none'}
+BOT_UPDATE();setInterval(BOT_UPDATE,30000);
 </script>
 </body>
 </html>
