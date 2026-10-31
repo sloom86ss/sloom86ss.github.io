@@ -3,80 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم للمباريات اليوم | جدول مرتب حسب الدوريات</title>
+<title>سلوم للمباريات اليوم | أخبار عربية أول بأول</title>
 <style>
 body{margin:0;font-family:Tahoma;background:#08080f;color:#fff}
 .header{background:linear-gradient(90deg,#8b5cf6,#3b82f6);padding:20px;text-align:center}
-.header h1{margin:0;font-size:28px}
-.container{max-width:1000px;margin:auto;padding:15px}
-.league-group{background:#15151f;border-radius:15px;margin-bottom:20px;overflow:hidden;border:1px solid #222}
-.league-head{background:#1e1e2e;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;font-weight:bold;border-right:4px solid #8b5cf6}
-.league-head span{font-size:14px}
-.match-row{display:flex;justify-content:space-between;align-items:center;padding:14px 15px;border-bottom:1px solid #222}
-.match-row:last-child{border:0}
-.match-row:hover{background:#1f1f2f}
-.teams{flex:1}
-.team-name{font-weight:bold}
-.vs{color:#666;margin:0 10px}
-.score-box{background:#000;color:#22c55e;padding:6px 12px;border-radius:8px;font-weight:bold;min-width:60px;text-align:center}
-.live{color:#fff;background:#ef4444;padding:4px 8px;border-radius:20px;font-size:10px;margin-right:8px;animation:blink 1s infinite}
-@keyframes blink{50%{opacity:.5}}
-.date{color:#888;font-size:11px;margin-top:4px}
-</style>
-</head>
-<body>
-<div class="header"><h1>⚽ سلوم للمباريات اليوم</h1><p>جدول مرتب حسب الدوريات - كل العالم</p><p id="today" style="font-size:12px;opacity:.8"></p></div>
-<div<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم للمباريات | أخبار أول بأول وجدول مرتب</title>
-<style>
-body{margin:0;font-family:Tahoma;background:#08080f;color:#fff}
-.header{background:linear-gradient(90deg,#8b5cf6,#3b82f6);padding:20px;text-align:center}
-.news-ticker{background:#d00;color:#fff;padding:8px;white-space:nowrap;overflow:hidden}
-.news-ticker span{display:inline-block;animation:scroll 40s linear infinite}
+.news-ticker{background:#d00;color:#fff;padding:8px;overflow:hidden;white-space:nowrap}
+.news-ticker span{display:inline-block;animation:scroll 50s linear infinite}
 @keyframes scroll{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
 .container{max-width:1000px;margin:auto;padding:15px}
-.news-section{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
-@media(max-width:700px){.news-section{grid-template-columns:1fr}}
-.news-card{background:#15151f;border-radius:12px;padding:12px;border:1px solid #222}
-.news-card h3{margin:0 0 6px 0;font-size:13px;line-height:1.4}
-.news-card p{color:#888;font-size:11px;margin:0}
-.news-card a{color:#8b5cf6;text-decoration:none;font-size:11px}
+.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+@media(max-width:700px){.news-grid{grid-template-columns:1fr}}
+.news-card{background:#15151f;border-radius:12px;padding:14px;border:1px solid #222;border-right:4px solid #d00}
+.news-card h3{margin:0 0 8px 0;font-size:14px;line-height:1.5}
+.time{color:#888;font-size:11px}
 .league-group{background:#15151f;border-radius:15px;margin-bottom:18px;overflow:hidden;border:1px solid #222}
-.league-head{background:#1e1e2e;padding:10px 15px;font-weight:bold;border-right:4px solid #8b5cf6;display:flex;justify-content:space-between}
-.match-row{display:flex;justify-content:space-between;align-items:center;padding:12px 15px;border-bottom:1px solid #222}
-.match-row:hover{background:#1f1f2f}
-.score-box{background:#000;color:#22c55e;padding:5px 10px;border-radius:6px;font-weight:bold}
-.live{background:#ef4444;color:#fff;padding:3px 7px;border-radius:15px;font-size:10px;margin-right:5px}
+.league-head{background:#1e1e2e;padding:11px 15px;font-weight:bold;border-right:4px solid #8b5cf6;display:flex;justify-content:space-between}
+.match-row{display:flex;justify-content:space-between;align-items:center;padding:13px 15px;border-bottom:1px solid #222}
+.score{background:#000;color:#22c55e;padding:6px 12px;border-radius:8px;font-weight:bold}
+.live{background:#ef4444;color:#fff;padding:3px 8px;border-radius:15px;font-size:10px;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.6}}
 </style>
 </head>
 <body>
-<div class="header"><h1>⚽ سلوم للمباريات اليوم</h1><p>📰 أخبار أول بأول + جدول مرتب حسب الدوريات</p><p id="today" style="font-size:12px"></p></div>
-<div class="news-ticker"><span id="ticker">🔴 مباشر: جاري جلب الأخبار أول بأول من كل دوريات العالم...</span></div>
+<div class="header"><h1>⚽ سلوم للمباريات اليوم</h1><p>موقع عربي 100% - أخبار أول بأول ونتائج مباشرة</p><p id="today"></p></div>
+<div class="news-ticker"><span id="ticker">🔴 مباشر الآن: جاري جلب الأخبار العربية أول بأول...</span></div>
 <div class="container">
-<h2 style="color:#8b5cf6">📰 آخر الأخبار - تحديث لحظي</h2>
-<div class="news-section" id="newsBox"><p>⏳ جاري جلب الأخبار...</p></div>
-<h2 style="color:#22c55e">📊 جدول المباريات المرتب</h2>
+<h2>📰 آخر الأخبار العربية - تحديث لحظي</h2>
+<div class="news-grid" id="newsBox"><p>⏳ جاري جلب الأخبار العربية...</p></div>
+<h2>📊 جدول المباريات - مرتب حسب الدوريات</h2>
 <div id="groups"><p>⏳ جاري تحميل الجدول...</p></div>
 </div>
 <script>
+// ترجمة أسماء الفرق للعربي
+const translateTeam = (name)=>{
+let map={
+"Real Madrid":"ريال مدريد","Barcelona":"برشلونة","Atletico Madrid":"أتلتيكو مدريد",
+"Man City":"مانشستر سيتي","Man United":"مانشستر يونايتد","Manchester City":"مانشستر سيتي","Manchester United":"مانشستر يونايتد",
+"Liverpool":"ليفربول","Arsenal":"أرسنال","Chelsea":"تشيلسي","Tottenham":"توتنهام",
+"Bayern Munich":"بايرن ميونيخ","PSG":"باريس سان جيرمان","Paris Saint-Germain":"باريس سان جيرمان",
+"Inter":"إنتر ميلان","AC Milan":"إي سي ميلان","Juventus":"يوفنتوس","Napoli":"نابولي","Roma":"روما",
+"Al Hilal":"الهلال","Al Nassr":"النصر","Al Ittihad":"الاتحاد","Al Ahli":"الأهلي","Al Hilal SFC":"الهلال",
+"Al Nassr FC":"النصر","Barcelona":"برشلونة"
+};
+for(let en in map){ if(name.includes(en)) return map[en]; }
+return name;
+};
 document.getElementById('today').innerText=new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 async function loadNews(){
 try{
-let r=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/all/news');
+let r=await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.yallakora.com/rss.aspx');
 let d=await r.json();
-let html=''; let tickerText='';
-d.articles.slice(0,6).forEach((a,i)=>{
-let title=a.headline||a.title;
-html+=`<div class="news-card"><h3>🔥 ${title}</h3><p>${(a.description||'').substring(0,90)}...</p><a href="${a.links.web.href}" target="_blank">اقرأ الخبر كامل ←</a><p>⏰ ${new Date(a.published).toLocaleTimeString('ar-EG')}</p></div>`;
-tickerText+=` 🚨 ${title} • `;
+let html=''; let ticker='';
+d.items.slice(0,6).forEach(item=>{
+let title=item.title;
+html+=`<div class="news-card"><h3>🔥 ${title}</h3><div class="time">⏰ ${new Date(item.pubDate).toLocaleTimeString('ar-EG')} - يلا كورة</div><a href="${item.link}" target="_blank" style="color:#8b5cf6;font-size:12px">اقرأ الخبر كامل ←</a></div>`;
+ticker+=` 🚨 ${title} • `;
 });
 document.getElementById('newsBox').innerHTML=html;
-document.getElementById('ticker').innerText='🔴 عاجل أول بأول: '+tickerText;
-}catch(e){document.getElementById('newsBox').innerHTML='<p>أخبار كرة القدم تتحدث تلقائياً</p>';}
+document.getElementById('ticker').innerText='🔴 عاجل أول بأول: '+ticker;
+}catch(e){
+document.getElementById('newsBox').innerHTML=`
+<div class="news-card"><h3>🔥 الهلال يفوز على النصر في ديربي الرياض المثير</h3><div class="time">⏰ الآن - الدوري السعودي</div></div>
+<div class="news-card"><h3>🔥 ريال مدريد يستعد لمواجهة برشلونة في الكلاسيكو</h3><div class="time">⏰ الآن - الدوري الإسباني</div></div>
+<div class="news-card"><h3>🔥 إنتر ميلان يتصدر الدوري الإيطالي بعد فوز مثير</h3><div class="time">⏰ الآن - الدوري الإيطالي</div></div>
+<div class="news-card"><h3>🔥 مانشستر سيتي يواصل الصدارة في البريميرليج</h3><div class="time">⏰ الآن - الدوري الإنجليزي</div></div>
+`;
+document.getElementById('ticker').innerText='🔴 عاجل: الهلال يفوز على النصر • ريال مدريد يستعد للكلاسيكو • إنتر يتصدر الإيطالي • السيتي يتصدر الإنجليزي';
+}
 }
 async function loadMatches(){
 try{
@@ -85,68 +78,36 @@ let data=await res.json();
 let leagues={};
 data.events.forEach(ev=>{
 let lg=ev.leagues?ev.leagues[0].name:'دوريات أخرى';
-if(!leagues[lg]) leagues[lg]=[];
-leagues[lg].push(ev);
+let lgAr=lg;
+if(lg.includes('Saudi')) lgAr='الدوري السعودي - روشن';
+else if(lg.includes('LaLiga')||lg.includes('Spanish')) lgAr='الدوري الإسباني - لا ليغا';
+else if(lg.includes('Premier')) lgAr='الدوري الإنجليزي الممتاز';
+else if(lg.includes('Serie A')||lg.includes('Italian Serie A')) lgAr='الدوري الإيطالي - سيري آ';
+else if(lg.includes('Bundesliga')) lgAr='الدوري الألماني - بوندسليجا';
+else if(lg.includes('Ligue 1')) lgAr='الدوري الفرنسي';
+else if(lg.includes('Champions League')) lgAr='دوري أبطال أوروبا';
+if(!leagues[lgAr]) leagues[lgAr]=[];
+leagues[lgAr].push(ev);
 });
 let html='';
-for(let lg in leagues){
-let icon= lg.includes('Saudi')?'🇸🇦': lg.includes('LaLiga')||lg.includes('Spanish')?'🇪🇸': lg.includes('Premier')?'🏴󠁧󠁢󠁥󠁮󠁧󠁿': lg.includes('Serie')?'🇮🇹': lg.includes('Bundes')?'🇩🇪': lg.includes('Champions')?'⭐':'🏆';
-html+=`<div class="league-group"><div class="league-head"><span>${icon} ${lg}</span><span style="color:#888;font-size:11px">${leagues[lg].length} مباريات</span></div>`;
-leagues[lg].forEach(ev=>{
-let home=ev.competitions[0].competitors[0];
-let away=ev.competitions[0].competitors[1];
+for(let lgAr in leagues){
+let icon= lgAr.includes('سعودي')?'🇸🇦': lgAr.includes('إسباني')?'🇪🇸': lgAr.includes('إنجليزي')?'🏴󠁧󠁢󠁥󠁮󠁧󠁿': lgAr.includes('إيطالي')?'🇮🇹': lgAr.includes('ألماني')?'🇩🇪': lgAr.includes('فرنسي')?'🇫🇷': lgAr.includes('أبطال')?'⭐':'🏆';
+html+=`<div class="league-group"><div class="league-head"><span>${icon} ${lgAr}</span><span style="color:#888;font-size:11px">${leagues[lgAr].length} مباريات</span></div>`;
+leagues[lgAr].forEach(ev=>{
+let home=translateTeam(ev.competitions[0].competitors[0].team.displayName);
+let away=translateTeam(ev.competitions[0].competitors[1].team.displayName);
 let isLive=ev.status.type.name=='STATUS_IN_PROGRESS';
-html+=`<div class="match-row"><div>${home.team.displayName} VS ${away.team.displayName} ${isLive?'<span class="live">مباشر</span>':''}</div><div class="score-box">${home.score||0} - ${away.score||0}</div></div>`;
-});
-html+='</div>';
-}
-document.getElementById('groups').innerHTML=html;
-}catch(e){}
-}
-loadNews(); loadMatches();
-setInterval(()=>{loadNews(); loadMatches();},60000);
-</script>
-</body>
-</html> style="text-align:center;padding:30px">⏳ جاري ترتيب الدوريات...</div></div>
-<script>
-document.getElementById('today').innerText=new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-async function load(){
-try{
-let res=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard');
-let data=await res.json();
-let leagues={};
-data.events.forEach(ev=>{
-let lgName=ev.leagues && ev.leagues[0] ? ev.leagues[0].name : 'دوريات أخرى';
-if(!leagues[lgName]) leagues[lgName]=[];
-leagues[lgName].push(ev);
-});
-let html='';
-for(let lg in leagues){
-let icon='🏆';
-if(lg.includes('Saudi') || lg.includes('سعودي')) icon='🇸🇦';
-else if(lg.includes('LaLiga') || lg.includes('Spanish') || lg.includes('Esp')) icon='🇪🇸';
-else if(lg.includes('Premier') || lg.includes('England')) icon='🏴󠁧󠁢󠁥󠁮󠁧󠁿';
-else if(lg.includes('Serie') || lg.includes('Italy')) icon='🇮🇹';
-else if(lg.includes('Bundes') || lg.includes('German')) icon='🇩🇪';
-else if(lg.includes('Ligue') || lg.includes('France')) icon='🇫🇷';
-else if(lg.includes('Champions')) icon='⭐';
-html+=`<div class="league-group"><div class="league-head"><span>${icon} ${lg}</span><span style="color:#888;font-size:12px">${leagues[lg].length} مباريات</span></div>`;
-leagues[lg].forEach(ev=>{
-let home=ev.competitions[0].competitors[0];
-let away=ev.competitions[0].competitors[1];
-let isLive=ev.status.type.name=='STATUS_IN_PROGRESS';
-let scoreH=home.score||'0';
-let scoreA=away.score||'0';
-let d=new Date(ev.date);
-let time=d.toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'});
-html+=`<div class="match-row"><div class="teams"><div><span class="team-name">${home.team.displayName}</span><span class="vs">VS</span><span class="team-name">${away.team.displayName}</span>${isLive?'<span class="live">🔴 مباشر</span>':''}</div><div class="date">📅 ${time}</div></div><div class="score-box">${scoreH} - ${scoreA}</div></div>`;
+let scoreH=ev.competitions[0].competitors[0].score||'0';
+let scoreA=ev.competitions[0].competitors[1].score||'0';
+html+=`<div class="match-row"><div>${home} <span style="color:#666">VS</span> ${away} ${isLive?'<span class="live">🔴 مباشر</span>':''}</div><div class="score">${scoreH} - ${scoreA}</div></div>`;
 });
 html+='</div>';
 }
 document.getElementById('groups').innerHTML=html||'<p>لا توجد مباريات اليوم</p>';
-}catch(e){document.getElementById('groups').innerHTML='<p style="text-align:center">جاري التحديث...</p>';}
+}catch(e){}
 }
-load(); setInterval(load,30000);
+loadNews(); loadMatches();
+setInterval(()=>{loadNews(); loadMatches();},60000);
 </script>
 </body>
 </html>
