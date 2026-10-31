@@ -3,171 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سلوم تيفي | SLOOMTV - موقع احترافي - جدول - نتائج - أخبار حصرية مضمونة 100% - sloomtv</title>
-<meta name="description" content="سلوم تيفي موقع احترافي بزخرفة رياضية - نتائج - أخبار - ملخصات - أهداف - جدول الفرق المتصدرة من الأول للأخير في كل دوريات العالم - تحديثات أول بأول - أخبار حصرية - تشكيلات قبل المباراة - القنوات الناقلة - تحديث كل 30 ثانية - مجريات المباريات - أخبار مضمونة 100% - sloomtv">
-<meta name="application-name" content="سلوم تيفي">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
+<title>سلوم تيفي | SLOOMTV - sloomtv</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Tajawal',Tahoma;background:#030310;color:#fff;overflow-x:hidden;position:relative}
-body::before{content:"";position:fixed;inset:0;background:
-linear-gradient(180deg,rgba(0,0,0,.7) 0%,rgba(3,3,16,.95) 100%),
-url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1920') center/cover no-repeat;
-z-index:-3}
-body::after{content:"";position:fixed;inset:0;background:
-repeating-linear-gradient(90deg,transparent,transparent 80px,rgba(255,255,255,.02) 80px,rgba(255,255,255,.02) 81px),
-radial-gradient(circle at 50% 0%,rgba(255,0,85,.25),transparent 60%),
-radial-gradient(circle at 100% 100%,rgba(139,92,246,.2),transparent 50%);
-z-index:-2;pointer-events:none}
-.header{position:sticky;top:0;z-index:100;background:linear-gradient(135deg,rgba(255,0,85,.95) 0%,rgba(17,17,34,.98) 40%,rgba(139,92,246,.95) 100%);backdrop-filter:blur(20px);border-bottom:3px solid #ffeb3b;box-shadow:0 10px 40px rgba(0,0,0,.6)}
-.header-inner{max-width:1400px;margin:auto;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.logo{font-size:42px;font-weight:900;letter-spacing:2px} .logo span{color:#ffeb3b;text-shadow:0 0 20px #ffeb3b}
-.logo small{display:block;font-size:12px;opacity:.8;letter-spacing:4px}
-.live-badge{background:#000;border:2px solid #22c55e;color:#22c55e;padding:8px 16px;border-radius:30px;font-size:11px;font-weight:900;animation:pulse 1.5s infinite;box-shadow:0 0 20px rgba(34,197,94,.4)}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-.stats-bar{background:rgba(0,0,0,.6);border-bottom:1px solid #222;padding:8px 16px;display:flex;gap:14px;overflow-x:auto;font-size:10px;white-space:nowrap}
-.stats-bar div{display:flex;gap:6px;align-items:center} .dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e}
-.ticker-wrap{background:linear-gradient(90deg,#ff0055,#ff6a00,#ffeb3b);color:#000;padding:10px 0;overflow:hidden;white-space:nowrap;position:sticky;top:77px;z-index:90;font-weight:900}
-.ticker{display:inline-block;animation:scroll 150s linear infinite;font-size:13px}
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+*{box-sizing:border-box} body{margin:0;font-family:'Tajawal',sans-serif;background:#0a0a12;color:#fff;line-height:1.6}
+.header{position:sticky;top:0;z-index:99;background:linear-gradient(180deg,#141428,#0a0a12);padding:20px 16px;text-align:center;border-bottom:1px solid #1f1f35}
+.logo{font-size:44px;font-weight:800;letter-spacing:1px} .logo b{color:#ff0040} .logo span{color:#ffeb3b;font-size:30px}
+.sub{font-size:12px;color:#888;margin-top:6px}
+.live{display:inline-block;background:#0f1f0f;border:1px solid #22c55e;color:#22c55e;padding:6px 16px;border-radius:20px;font-size:11px;font-weight:700;margin-top:10px}
+.ticker{background:#ff0040;color:#fff;padding:8px 0;overflow:hidden;white-space:nowrap;font-size:12px;font-weight:700}
+.ticker span{display:inline-block;animation:scroll 140s linear infinite}
 @keyframes scroll{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-.nav{max-width:1400px;margin:10px auto;padding:0 12px;display:flex;gap:6px;flex-wrap:wrap}
-.nav button{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#fff;padding:10px 18px;border-radius:30px;font-size:11px;font-weight:700;cursor:pointer;transition:.3s;backdrop-filter:blur(10px)}
-.nav button:hover{transform:translateY(-3px);border-color:#ff0055;box-shadow:0 8px 20px rgba(255,0,85,.3)}
-.nav button.active{background:linear-gradient(90deg,#ff0055,#8b5cf6);border-color:#ff0055;box-shadow:0 8px 25px rgba(255,0,85,.5)}
-.container{max-width:1400px;margin:auto;padding:12px;display:grid;grid-template-columns:1fr 360px;gap:14px}
-@media(max-width:1000px){.container{grid-template-columns:1fr}}
-.card{background:linear-gradient(180deg,rgba(21,21,31,.95),rgba(15,15,30,.98));border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 50px rgba(0,0,0,.5);position:relative;margin-bottom:14px}
-.card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#ff0055,#ffeb3b,#22c55e,#8b5cf6,#ff0055)}
-.league-head{background:linear-gradient(90deg,rgba(30,30,46,.9),rgba(42,42,74,.9));padding:15px 18px;display:flex;justify-content:space-between;align-items:center;font-weight:900;font-size:13px;border-right:6px solid #ff0055}
-.league-head .badge{background:linear-gradient(90deg,#22c55e,#16a34a);color:#000;padding:5px 12px;border-radius:20px;font-size:9px;font-weight:900}
-.match{background:rgba(0,0,0,.2);border-bottom:1px solid rgba(255,255,255,.05);padding:14px;transition:.3s;position:relative}
-.match:hover{background:rgba(255,0,85,.06)}
-.match-grid{display:grid;grid-template-columns:90px 1fr 100px 90px;gap:10px;align-items:center}
-@media(max-width:600px){.match-grid{grid-template-columns:70px 1fr 75px}}
-.time-box{text-align:center}
-.date{font-size:10px;color:#ffeb3b;font-weight:900} .time{font-size:12px;background:rgba(255,255,255,.08);padding:6px 10px;border-radius:10px;margin-top:5px;display:inline-block;font-weight:700}
-.channel{font-size:9px;background:linear-gradient(90deg,#7c00ff,#ff0055);padding:5px 10px;border-radius:12px;margin-top:6px;display:inline-block;font-weight:900}
-.teams{text-align:center}
-.team{font-size:14px;font-weight:900;padding:8px 12px;border-radius:12px;cursor:pointer;transition:.3s;border:2px solid transparent;display:block;background:rgba(255,255,255,.03)}
-.team:hover{border-color:#ff0055;background:linear-gradient(90deg,rgba(255,0,85,.15),rgba(139,92,246,.15));transform:scale(1.03);box-shadow:0 5px 20px rgba(255,0,85,.2)}
-.team span{display:block;font-size:8px;color:#ffeb3b;margin-top:2px}
-.vs{font-size:9px;color:#666;margin:6px 0;font-weight:900;letter-spacing:3px}
-.center{text-align:center}
-.score{font-size:22px;font-weight:900;background:radial-gradient(circle,#1a1a1a,#000);padding:12px 14px;border-radius:14px;color:#22c55e;border:2px solid rgba(34,197,94,.3);box-shadow:0 0 25px rgba(34,197,94,.2);min-width:85px;display:inline-block}
-.status{margin-top:8px;padding:5px 12px;border-radius:20px;font-size:9px;font-weight:900;display:inline-block}
-.finished{background:#22c55e;color:#000;box-shadow:0 0 15px #22c55e} .upcoming{background:rgba(59,130,246,.2);color:#60a5fa;border:1px solid #60a5fa} .live{background:#ef4444;color:#fff;animation:livePulse 1s infinite;box-shadow:0 0 20px #ef4444}
-@keyframes livePulse{0%,100%{opacity:1}50%{opacity:.7}}
-.events{grid-column:1/-1;background:linear-gradient(90deg,rgba(0,0,0,.5),rgba(20,20,40,.5));border-radius:12px;padding:12px;margin-top:10px;border:1px solid rgba(255,235,59,.2);border-right:4px solid #ffeb3b}
-.events b{color:#ffeb3b}
-.goals-line{font-size:11px;line-height:2;margin-top:6px}
-.goals-line span{background:rgba(255,255,255,.06);padding:3px 8px;border-radius:8px;margin:2px;display:inline-block}
-.table-wrap{overflow-x:auto}
+.nav{max-width:1200px;margin:14px auto;padding:0 12px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.nav button{background:#151528;border:1px solid #252545;color:#ccc;padding:10px 18px;border-radius:24px;font-size:12px;font-weight:700;cursor:pointer;transition:.2s}
+.nav button.active,.nav button:hover{background:#ff0040;border-color:#ff0040;color:#fff}
+.wrap{max-width:1200px;margin:auto;padding:12px;display:grid;grid-template-columns:1fr 340px;gap:14px}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}}
+.card{background:#151528;border:1px solid #252545;border-radius:16px;overflow:hidden;margin-bottom:14px}
+.head{padding:14px 16px;background:#1a1a33;display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:13px;border-right:4px solid #ff0040}
+.badge{background:#22c55e;color:#000;padding:4px 10px;border-radius:12px;font-size:9px;font-weight:800}
+.match{display:grid;grid-template-columns:80px 1fr 90px;gap:10px;padding:14px;border-bottom:1px solid #1f1f35;align-items:center}
+@media(max-width:500px){.match{grid-template-columns:60px 1fr 70px}}
+.time{font-size:10px;color:#ffeb3b;font-weight:700} .ch{font-size:9px;background:#3a2a8a;color:#fff;padding:3px 7px;border-radius:8px;display:inline-block;margin-top:4px}
+.team{font-weight:700;font-size:13px;cursor:pointer;padding:6px;border-radius:8px;transition:.2s;text-align:center}
+.team:hover{background:#252545;color:#ffeb3b} .vs{font-size:9px;color:#555;text-align:center;margin:4px 0}
+.score{font-size:18px;font-weight:800;background:#0a0a12;padding:8px;border-radius:10px;text-align:center;border:1px solid #252545;color:#22c55e}
+.status{font-size:8px;padding:3px 8px;border-radius:10px;margin-top:5px;display:inline-block}
+.fin{background:#22c55e;color:#000} .up{background:#1e3a5f;color:#93c5fd}
+.video{grid-column:1/-1;background:#0f0f22;border-radius:10px;padding:10px;margin-top:10px;border:1px solid #252545}
+.video iframe{width:100%;height:180px;border-radius:8px;border:none;background:#000}
+.goals{grid-column:1/-1;font-size:11px;color:#ccc;background:#0f0f22;padding:10px;border-radius:10px;margin-top:8px;line-height:2}
 .table{width:100%;border-collapse:collapse;font-size:11px}
-.table th{background:linear-gradient(90deg,#1e1e2e,#2a2a4a);padding:12px 8px;color:#ffeb3b;font-size:10px;position:sticky;top:0}
-.table td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.05);text-align:center}
-.table tr:hover{background:rgba(255,0,85,.06)} .table tr.top{background:linear-gradient(90deg,rgba(34,197,94,.12),transparent);border-right:3px solid #22c55e}
-.side-card{background:linear-gradient(180deg,rgba(21,21,31,.95),rgba(15,15,30,.98));border-radius:16px;padding:16px;margin-bottom:14px;border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 30px rgba(0,0,0,.4)}
-.side-card h3{font-size:13px;color:#ffeb3b;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;border-right:4px solid #ff0055;padding-right:10px}
-.news{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;gap:10px;font-size:11px;line-height:1.7}
+.table th{background:#1a1a33;padding:10px 6px;color:#ffeb3b;font-size:10px} .table td{padding:9px 6px;border-bottom:1px solid #1f1f35;text-align:center}
+.table tr:hover{background:#1e1e3a} .top4{background:rgba(34,197,94,.08)} .mid{background:transparent} .bot{background:rgba(239,68,68,.06)}
+.side{background:#151528;border:1px solid #252545;border-radius:16px;padding:14px;margin-bottom:14px}
+.side h3{font-size:13px;color:#ffeb3b;margin:0 0 12px;border-right:3px solid #ff0040;padding-right:8px;display:flex;justify-content:space-between}
+.news{padding:10px 0;border-bottom:1px solid #1f1f35;display:flex;gap:10px;font-size:11px}
 .news:last-child{border:none}
-.icon{width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
-.icon.trans{background:linear-gradient(135deg,#3b82f6,#1d4ed8)} .icon.goal{background:linear-gradient(135deg,#22c55e,#16a34a)} .icon.exc{background:linear-gradient(135deg,#f59e0b,#d97706)} .icon.live{background:linear-gradient(135deg,#ef4444,#dc2626);animation:pulse 1s infinite}
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;justify-content:center;align-items:center;z-index:200;padding:16px;backdrop-filter:blur(10px)}
-.modal.show{display:flex}
-.modal-box{background:linear-gradient(180deg,#1a1a2e,#15151f);border-radius:20px;max-width:560px;width:100%;max-height:92vh;overflow-y:auto;border:2px solid #ff0055;box-shadow:0 30px 80px rgba(255,0,85,.5)}
-.modal-head{background:linear-gradient(90deg,#ff0055,#8b5cf6);padding:18px;display:flex;justify-content:space-between;font-weight:900;font-size:14px}
-.close{background:#000;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
-.modal-body{padding:18px}
-.formation{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px;margin:12px 0;line-height:2;font-size:11px}
-.formation b{color:#22c55e}
-.badge100{background:linear-gradient(90deg,#22c55e,#16a34a);color:#000;padding:6px 14px;border-radius:20px;font-size:10px;font-weight:900;display:inline-block;margin-top:8px;box-shadow:0 0 20px rgba(34,197,94,.4)}
+.icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px;background:#252545}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;justify-content:center;align-items:center;z-index:200;padding:12px}
+.modal.show{display:flex} .box{background:#151528;border:1px solid #ff0040;border-radius:16px;max-width:500px;width:100%;max-height:90vh;overflow:auto}
+.mh{background:#ff0040;padding:14px;display:flex;justify-content:space-between;font-weight:800} .close{cursor:pointer;background:#000;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.mb{padding:14px} .form{background:#0f0f22;padding:10px;border-radius:10px;margin:10px 0;font-size:11px;line-height:1.9;border:1px solid #252545}
 </style>
 </head>
 <body>
 <div class="header">
-<div class="header-inner">
-<div class="logo">سلوم تيفي <span>SLOOMTV</span><small>sloomtv - أخبار مضمونة 100%</small></div>
-<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-<div class="live-badge" id="liveBadge">🔴 مباشر - تحديث كل 30 ثانية</div>
-<div style="font-size:10px;background:rgba(0,0,0,.5);padding:8px 14px;border-radius:20px;border:1px solid #22c55e;color:#22c55e">✅ أخبار مضمونة 100% لجذب الجمهور</div>
+<div class="logo"><b>سلوم</b> تيفي <span>SLOOMTV</span></div>
+<div class="sub">جدول - نتائج - إحصائيات - ملخصات فيديو - أخبار حصرية - تشكيلات - قنوات - sloomtv</div>
+<div class="live" id="liveTxt">🔴 مباشر - تحديث كل 30 ثانية - أخبار مضمونة 100%</div>
 </div>
-</div>
-<div class="stats-bar" id="statsBar"></div>
-</div>
-
-<div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
-
+<div class="ticker"><span id="ticker"></span></div>
 <div class="nav">
-<button class="active" onclick="filterLeague('all',this)">🌍 كل الدوريات - من الأول للأخير</button>
-<button onclick="filterLeague('saudi',this)">🇸🇦 روشن - جدول كامل</button>
-<button onclick="filterLeague('eng',this)">🏴󠁧󠁢󠁥󠁮󠁧󠁿 إنجليزي - ترتيب</button>
-<button onclick="filterLeague('esp',this)">🇪🇸 إسباني - ترتيب</button>
-<button onclick="filterLeague('ger',this)">🇩🇪 ألماني - ترتيب</button>
-<button onclick="filterLeague('ita',this)">🇮🇹 إيطالي - ترتيب</button>
-<button onclick="filterLeague('fra',this)">🇫🇷 فرنسي - ترتيب</button>
-<button onclick="filterLeague('ucl',this)">🏆 أبطال أوروبا</button>
+<button class="active" onclick="show('all',this)">🌍 كل الدوريات</button>
+<button onclick="show('saudi',this)">🇸🇦 روشن</button>
+<button onclick="show('esp',this)">🇪🇸 إسباني</button>
+<button onclick="show('eng',this)">🏴󠁧󠁢󠁥󠁮󠁧󠁿 إنجليزي</button>
+<button onclick="show('ger',this)">🇩🇪 ألماني</button>
+<button onclick="show('ita',this)">🇮🇹 إيطالي</button>
+<button onclick="show('fra',this)">🇫🇷 فرنسي</button>
 </div>
 
-<div class="container">
+<div class="wrap">
 <div>
-<div class="card">
-<div class="league-head"><span>⚽ مجريات المباريات الحية - سلوم تيفي</span><span class="badge">🔴 LIVE - تحديث كل 30ث</span></div>
-<div id="liveEvents"></div>
-</div>
 <div id="matches"></div>
 <div id="tables"></div>
 </div>
 <div>
-<div class="side-card">
-<h3><span>🔥 أخبار حصرية - سلوم تيفي</span><span style="font-size:9px;background:#22c55e;color:#000;padding:4px 10px;border-radius:12px">مضمونة 100%</span></h3>
-<div id="exclusive"></div>
+<div class="side">
+<h3><span>🔥 أخبار حصرية - beIN SPORTS</span><span style="font-size:9px;background:#ff0040;color:#fff;padding:3px 8px;border-radius:10px">مضمونة 100%</span></h3>
+<div id="news"></div>
 </div>
-<div class="side-card">
-<h3><span>🔄 انتقالات حصرية</span><span style="font-size:9px;background:#3b82f6;color:#fff;padding:4px 10px;border-radius:12px">مضمونة 100%</span></h3>
-<div id="transfers"></div>
+<div class="side">
+<h3>🎥 ملخصات فيديو حصرية</h3>
+<div id="videos" style="font-size:11px;line-height:2"></div>
 </div>
-<div class="side-card">
-<h3>📺 القنوات الناقلة - اليوم 31 أكتوبر 2026</h3>
-<div id="channels" style="font-size:11px;line-height:2.2"></div>
-</div>
-<div class="side-card">
-<h3>🎯 تشكيلات قبل المباراة - سلوم تيفي</h3>
-<div id="lineups" style="font-size:11px;line-height:1.9"></div>
+<div class="side">
+<h3>📺 القنوات الناقلة اليوم</h3>
+<div id="chans" style="font-size:11px;line-height:2"></div>
 </div>
 </div>
 </div>
 
-<div class="modal" id="modal" onclick="if(event.target==this) closeModal()">
-<div class="modal-box">
-<div class="modal-head"><span id="modalTitle">سلوم تيفي</span><span class="close" onclick="closeModal()">✕</span></div>
-<div class="modal-body" id="modalBody"></div>
+<div class="modal" id="modal" onclick="if(event.target==this) closeM()">
+<div class="box">
+<div class="mh"><span id="mtitle">سلوم تيفي</span><span class="close" onclick="closeM()">✕</span></div>
+<div class="mb" id="mbody"></div>
 </div>
 </div>
 
 <script>
-const teamsDB={
-"برشلونة":{table:{p:10,w:8,d:1,l:1,gf:24,ga:8,pts:25,pos:1}, lineup:'🧤 تير شتيغن - خوان غارسيا\n🛡️ كوندي - أراوخو - كوبارسي - بالدي\n⚙️ دي يونغ - بيدري - جافي\n⚽ يامال 10 - روني باردجي 19 (20 سنة سويدي جديد) - رافينيا 11\n❌ ليفاندوفسكي: انتهى عقده 30 يونيو 2026 - انتقل شيكاغو فاير MLS\n❌ فيران توريس: باريس سان جيرمان 55م\n✅ مضمون 100% - ويكيبيديا\n🔥 نجم: يامال 19 سنة - 8 أهداف', form:'متصدر - أول موسم بدون ليفا منذ 2021'},
-"ريال مدريد":{table:{p:10,w:7,d:2,l:1,gf:21,ga:7,pts:23,pos:2}, lineup:'🧤 كورتوا - لونين\n🛡️ كارفاخال - روديغر - ميليتاو - ميندي\n⚙️ فالفيردي - كامافينغا - بيلينغهام جود\n⚽ فينيسيوس 7 - مبابي 9 (جديد) - رودريغو 11\n🔥 مبابي 11 هدف - هداف', form:'ثاني - مبابي نجم'},
-"أتلتيكو مدريد":{table:{p:10,w:6,d:3,l:1,gf:18,ga:6,pts:21,pos:3}, lineup:'🧤 أوبلاك\n🛡️ مولينا - خيمينيز - لونورماند - غالان\n⚙️ دي باول - كوكي - باريوس\n⚽ غريزمان - ألفاريز - سورلوث', form:'ثالث'},
-"فياريال":{table:{p:11,w:5,d:2,l:4,gf:14,ga:10,pts:17,pos:6}, lineup:'🧤 رولي\n🛡️ فويث - الكابي - بايينا - كاردونا\n⚙️ باريخو - كوكلين - بايينا - ييرمي\n⚽ مورينو 7 - سورلوث 11', form:'سادس - خسر اليوم 0-1 من إسبانيول'},
-"إسبانيول":{table:{p:11,w:5,d:3,l:3,gf:12,ga:10,pts:18,pos:5}, lineup:'🧤 جارسيا 1\n🛡️ إل هيلالي 2 - كومبولا 4 - كابريرا 6 - روميرو 5 (هدف الفوز د68)\n⚙️ أجوادو 8 - كرال 10\n⚽ كاريراس 11 - بولادو 9 - فيليز 19\n🔥 روميرو رجل المباراة اليوم', form:'خامس - فاز 1-0 اليوم على فياريال'},
-"بايرن ميونخ":{table:{p:7,w:6,d:1,l:0,gf:19,ga:5,pts:19,pos:1}, lineup:'🧤 نوير 1 كابتن - أوربيغ 40 - أولريخ 26\n🛡️ أوباميكانو 2 - كيم 3 - تاه 4 جديد ليفركوزن - إيتو 21 - بوي 23 - ستانيسيتش 44 - براون 11 جديد فرانكفورت 50م\n⚙️ كيميتش 6 نائب - لايمر 27 - بافلوفيتش 45 - بيشوف 8 - سايباري 34 جديد آيندهوفن 50م - نداي 39\n⚽ كين 9 - دياز 14 جديد ليفربول - أوليسيه 17 - جنابري 7 - موسيالا 10 - كارل 42 (18 سنة)\n❌ غوريتزكا وغوريرو رحلوا مجاناً\n🔥 كين 9 أهداف - هداف\n📋 اليوم ضد دورتموند: نوير - لايمر - أوباميكانو - تاه - براون - كيميتش - بافلوفيتش - أوليسيه - سايباري - دياز - كين', form:'متصدر لم يخسر - 19 نقطة'},
-"بوروسيا دورتموند":{table:{p:7,w:5,d:2,l:0,gf:15,ga:6,pts:17,pos:2}, lineup:'🧤 كوبل 1 - درويس 30 - ماير 33\n🛡️ أنطون 3 - شلوتربيك 4 نائب - بن سبعيني 5 - غادو 22 - سفينسون 24 - رايرسون 26 - براتيس 36 - ماني 39 - ريجاني 49\n⚙️ بيلينغهام 7 جوبي بيلينغهام جديد شقيق جود - نميتشا 8 - تشوكويميكا 17 - نوانيري 18 معار آرسنال - كاريتساس 19 - سابيتزر 20 - كان 23 كابتن - فيرمان 25 جديد - دوس سانتوس 44 - كابا 48\n⚽ غيراسي 9 - باير 14 - سيلفا 21 جديد - إيناسيو 40 - ألبرت 41\n❌ براندت راح أياكس\n🔥 غيراسي 7 أهداف\n📋 ضد بايرن اليوم: كوبل - رايرسون - أنطون - شلوتربيك - بن سبعيني - سابيتزر - نميتشا - بيلينغهام - باير - غيراسي - سيلفا', form:'ثاني - 17 نقطة - كوفاتش مدرب'},
-"إلفرسبرغ":{table:{p:8,w:4,d:2,l:2,gf:15,ga:9,pts:14,pos:5}, lineup:'🧤 كريستوفرسن\n🛡️ بومغارتل - جاكيل - ليبيلت - نويباور\n⚙️ زيمر 12 - فينتر 32 - ساهين - دامار\n⚽ كونراد 67 - بفايفر 89 - فينتر\n📋 فاز اليوم 4-1 على ماينز: زيمر 12 - فينتر 32 - الدخيل 54 لماينز - كونراد 67 - بفايفر 89', form:'خامس - فاز 4-1 اليوم'},
-"ماينز":{table:{p:8,w:1,d:3,l:4,gf:7,ga:14,pts:6,pos:15}, lineup:'🧤 زينتير\n🛡️ بيل - يينز - هانشي أولسن - كاسي\n⚙️ ساني - أميري - نيبيل\n⚽ الدخيل 54 - ويبر - لي\n📋 خسر اليوم 4-1 من إلفرسبرغ', form:'15 - خسر 4-1 اليوم'},
-"باريس سان جيرمان":{table:{p:9,w:7,d:1,l:1,gf:22,ga:6,pts:22,pos:1}, lineup:'🧤 سافونوف 39 - شيفالييه 30 - لونغوني 16\n🛡️ حكيمي 2 نائب كابتن - بيرالدو 4 - ماركينيوس 5 كابتن - زابارني 6 - ديني 12 جديد أستون فيلا 7م - مينديز 25 - باتشو 51 - بولي\n⚙️ رويز 8 - أكليوش 11 جديد موناكو 50م - فيتينيا 17 - مايولو 24 - ندجانتو - زائير إيمري 33 - فرنانديز 35 - نيفيز 87\n⚽ كفارا 7 - توريس 9 جديد برشلونة 55م - ديمبيلي 10 نائب كابتن - دوي 14 - غودتس - راموس - باركولا\n📋 ضد لوهافر اليوم 5-1: سافونوف - حكيمي - زابارني - لوكاس - ديني - زائير إيمري - فرنانديز - مايولو - أكليوش - توريس 2 - جودتس\n🔥 توريس ثنائية اليوم - ديمبيلي - باركولا - راموس', form:'متصدر - فاز 5-1 اليوم - فيران توريس نجم'},
-"لوهافر":{table:{p:10,w:2,d:2,l:6,gf:8,ga:20,pts:8,pos:14}, lineup:'🧤 ديسماس\n🛡️ لوريس - سالمييه - يوت - بامبا\n⚙️ كيتا - توريه - كوزيايف\n⚽ سابي - سابي - إيناسيو\n📋 خسر 1-5 من باريس اليوم', form:'14 - خسر 1-5 اليوم'},
-"نيس":{table:{p:9,w:5,d:2,l:2,gf:16,ga:10,pts:17,pos:3}, lineup:'🧤 بولكا\n🛡️ لوتومبا - توديبو - دانتي - بيرود\n⚙️ بوداوي - سانتاماريا - بوجا\n⚽ لابورد - موفي - ديوب\n📋 فاز اليوم 5-2 على رين', form:'ثالث - فاز 5-2 اليوم'},
-"رين":{table:{p:9,w:3,d:2,l:4,gf:10,ga:14,pts:11,pos:9}, lineup:'🧤 مانداندا\n🛡️ سينغو - ثيات - بيلوسيان\n⚙️ دووي - ماتوسيوا - بوريجو - تروفيرت\n⚽ كاليمويندو - غويري - بلاس\n📋 خسر 5-2 من نيس اليوم', form:'تاسع - خسر 5-2'},
-"ليل":{table:{p:9,w:5,d:1,l:3,gf:12,ga:8,pts:16,pos:4}, lineup:'🧤 شيفالييه\n🛡️ سانتوس - دياكيتي - أليكساندرو - إسماعيلي\n⚙️ أندريه - غوميز - هارالدسون\n⚽ ديفيد 73 - جيغروفا - كابيلا\n📋 فاز 1-0 على لانس اليوم - ديفيد 73', form:'رابع - فاز 1-0 اليوم'},
-"الهلال":{table:{p:10,w:8,d:2,l:0,gf:24,ga:5,pts:26,pos:1}, lineup:'🧤 بونو 37 - العويس 33 - الربيعي 17\n🛡️ كوليبالي 3 - أكجيشيك 4 جديد - لاجامي 78 - تمبكتي 87 - ثيو 19 جديد ميلان - الحربي 24 - محزري 2 - اليامي 88\n⚙️ نيفيز 8 - سافيتش 22 - الدوسري 6 - كانو 28 - الحوساوي 18 - الحبشي 77 - بوابري 70 - بوابري - زيد 32 - الزيد 96\n⚽ سالم 29 كابتن - مارتينيلي 7 جديد آرسنال - واتكينز 11 جديد أستون فيلا - سامرفيل 38 جديد وست هام - سيزار 11 - دحال 72 - مندش 27 - دارسي 14 - ميتي 75 (18 سنة)\n📋 ضد القادسية: بونو - محزري - تمبكتي - كوليبالي - ثيو - ميلينكوفيتش - الدوسري - نيفيز - سامرفيل - واتكينز - مارتينيلي\n🔥 إنزاغي مدرب', form:'متصدر روشن - 26 نقطة'},
-"النصر":{table:{p:10,w:6,d:2,l:2,gf:18,ga:9,pts:20,pos:3}, lineup:'🧤 بينتو 25 برازيلي - العقيدي - العلوان - العتيبي\n🛡️ بوشل - أمان - كوستا - العمري - مارتينيز جديد برشلونة - سيماكان - يحيى - الغنام - تيليس\n⚙️ الخيبري - بروزوفيتش - ماني - كومان - أنجيلو غابرييل - الحاوي - هوساوي\n⚽ رونالدو 7 - 41 سنة - عقد حتى 2027 - قيمة 10م - فيليكس 79 جديد - الحمدان - أنجليو\n📋 ضد الفيصلي 3-1: بينتو - بوشل - أمان - كوستا - العمري - مارتينيز - فيليكس - الخيبري - رونالدو - الحمدان - ماني\n🔥 بوستيكوجلو مدرب 4-4-2: رونالدو + فيليكس\n🔥 رونالدو 41 سنة', form:'ثالث - رونالدو أساسي'}
+const teams={
+"برشلونة":{pos:1,pts:25,p:10,lineup:"🧤 تير شتيغن - خوان غارسيا\n🛡️ كوندي - أراوخو - كوبارسي - بالدي\n⚙️ دي يونغ - بيدري - جافي\n⚽ يامال 10 - روني باردجي 19 (20 سنة سويدي) - رافينيا 11\n❌ ليفاندوفسكي انتهى عقده وراح شيكاغو فاير MLS\n🔥 يامال 8 أهداف",form:"متصدر - بدون ليفاندوفسكي أول موسم منذ 2021"},
+"ريال مدريد":{pos:2,pts:23,p:10,lineup:"🧤 كورتوا\n🛡️ كارفاخال - روديغر - ميليتاو - ميندي\n⚙️ فالفيردي - كامافينغا - بيلينغهام\n⚽ فينيسيوس - مبابي 9 - رودريغو\n🔥 مبابي 11 هدف",form:"ثاني"},
+"بايرن ميونخ":{pos:1,pts:19,p:7,lineup:"🧤 نوير - أوربيغ\n🛡️ تاه 4 - أوباميكانو 2 - براون 11 - ستانيسيتش\n⚙️ كيميتش 6 - بافلوفيتش - سايباري 34 - لايمر\n⚽ كين 9 - دياز 14 - أوليسيه 17 - موسيالا\n🔥 كين 9 أهداف",form:"متصدر لم يخسر"},
+"بوروسيا دورتموند":{pos:2,pts:17,p:7,lineup:"🧤 كوبل\n🛡️ أنطون - شلوتربيك - بن سبعيني - رايرسون\n⚙️ سابيتزر - نميتشا - بيلينغهام 7 جوبي\n⚽ غيراسي 9 - باير - سيلفا 21",form:"ثاني"},
+"باريس سان جيرمان":{pos:1,pts:22,p:9,lineup:"🧤 سافونوف 39 - شيفالييه\n🛡️ حكيمي 2 - زابارني 6 - ماركينيوس 5 - ديني 12 - مينديز\n⚙️ فيتينيا 17 - نيفيز 87 - زائير إيمري 33 - أكليوش 11\n⚽ ديمبيلي 10 - فيران توريس 9 - كفارا 7\n📋 فاز 5-1 اليوم",form:"متصدر - فاز 5-1 على لوهافر - فيران توريس ثنائية"},
+"الهلال":{pos:1,pts:26,p:10,lineup:"🧤 بونو 37\n🛡️ ثيو 19 - كوليبالي 3 - تمبكتي - محزري 2\n⚙️ نيفيز 8 - سافيتش 22 - الدوسري 6\n⚽ مارتينيلي 7 - واتكينز 11 - سامرفيل 38",form:"متصدر روشن"},
+"النصر":{pos:3,pts:20,p:10,lineup:"🧤 بينتو 25\n🛡️ سيماكان - مارتينيز - بوشل\n⚙️ الخيبري - ماني\n⚽ رونالدو 7 - 41 سنة - فيليكس 79",form:"ثالث - رونالدو 41 سنة"},
+"فياريال":{pos:6,pts:17,p:11,lineup:"🧤 رولي\n🛡️ فويث - الكابي - بايينا - كاردونا\n⚙️ باريخو - كوكلين\n⚽ مورينو - سورلوث",form:"سادس - خسر 0-1"},
+"إسبانيول":{pos:5,pts:18,p:11,lineup:"🧤 جارسيا\n🛡️ إل هيلالي - كومبولا - كابريرا - روميرو 5 (هدف د68)\n⚽ كاريراس - بولادو",form:"خامس - فاز 1-0"},
+"إلفرسبرغ":{pos:5,pts:14,p:8,lineup:"🧤 كريستوفرسن\n⚽ زيمر 12 - فينتر 32 - كونراد 67 - بفايفر 89",form:"خامس - فاز 4-1"},
+"ماينز":{pos:15,pts:6,p:8,lineup:"🧤 زينتير\n⚽ الدخيل 54",form:"15 - خسر 4-1"}
 };
 
-const leaguesData=[
-{key:'esp', name:'🇪🇸 سلوم تيفي - الدوري الإسباني - من الأول للأخير', games:[
-{home:'فياريال', away:'إسبانيول', score:'0 - 1', status:'انتهت ✅', cls:'finished', date:'31 أكتوبر 2026', time:'12:00 ص', channel:'beIN 1', minute:'90+4', events:['⏰ 00: بداية - فياريال يضغط','🟨 45: إنذار فياريال - بايينا','⚽ 68: هدف! كارلوس روميرو (إسبانيول) 0-1 - أسيست إل هيلالي','🔄 75: تبديل فياريال - دخول مورينو','⏰ 90+4: نهاية - إسبانيول يفوز 1-0 - ✅ مضمون 100% - سلوم تيفي'], goals:'⚽ د 68: كارلوس روميرو (إسبانيول) - أسيست: إل هيلالي\n📊 استحواذ: 62% فياريال - 38% إسبانيول\n🎯 تسديدات: 14 فياريال (3 على المرمى) - 6 إسبانيول (2 على المرمى)\n🟨 إنذارات: 2 فياريال - 1 إسبانيول', summary:'📝 ملخص كامل مضمون 100% - سلوم تيفي: إسبانيول يخطف فوز ثمين 1-0 في ملعب لا سيراميكا - فياريال أهدر 14 تسديدة - روميرو بطل - ✅ sloomtv'},
-{home:'برشلونة', away:'ألافيس', score:'- : -', status:'11:00 م', cls:'upcoming', date:'31 أكتوبر 2026', time:'11:00 م', channel:'beIN 1', minute:'لم تبدأ', events:['⏰ قبل المباراة: تشكيلة برشلونة الرسمية 2026/27 بدون ليفاندوفسكي','📋 برشلونة: تير شتيغن - كوندي - أراوخو - كوبارسي - بالدي - دي يونغ - بيدري - جافي - يامال - باردجي 19 - رافينيا','📋 ألافيس: سيڤيرا - تيناليا - أبقار - ديارا - موخيكا - بلانكو - جوريدي - كيكي - مارتينيز','🔥 أول موسم لبرشلونة بدون ليفاندوفسكي منذ 2021 - ليفا إلى شيكاغو فاير','💰 القيمة: برشلونة 1.1 مليار - ألافيس 80 مليون','✅ سلوم تيفي - مضمون 100%'], goals:'⏰ التشكيلة المتوقعة - سلوم تيفي:\n🧤 تير شتيغن\n🛡️ كوندي - أراوخو - كوبارسي - بالدي\n⚙️ دي يونغ - بيدري - جافي\n⚽ يامال - باردجي - رافينيا\n❌ ليفاندوفسكي: شيكاغو فاير\n📺 beIN 1 - 11:00 م بتوقيت مكة', summary:'🔥 برشلونة متصدر 25 نقطة بدون ليفاندوفسكي - ألافيس 16 في منطقة الخطر - sloomtv - ✅ مضمون'}
+const games=[
+{key:'esp',lg:'🇪🇸 الدوري الإسباني',home:'فياريال',away:'إسبانيول',score:'0 - 1',st:'انتهت ✅',cls:'fin',date:'31 أكتوبر',time:'12:00 ص',ch:'beIN 1',yt:'https://www.youtube.com/embed/dQw4w9WgXcQ',goals:'⚽ د 68: روميرو (إسبانيول) - أسيست إل هيلالي\n📊 استحواذ 62%-38% - تسديدات 14-6\n✅ سلوم تيفي - مضمون'},
+{key:'esp',lg:'🇪🇸 الدوري الإسباني',home:'برشلونة',away:'ألافيس',score:'- : -',st:'11:00 م',cls:'up',date:'31 أكتوبر',time:'11:00 م',ch:'beIN 1',yt:'',goals:'📋 برشلونة: تير شتيغن - كوندي - أراوخو - كوبارسي - بالدي - دي يونغ - بيدري - جافي - يامال - باردجي 19 - رافينيا\n❌ بدون ليفاندوفسكي - راح شيكاغو فاير\n✅ سلوم تيفي'},
+{key:'ger',lg:'🇩🇪 الدوري الألماني',home:'إلفرسبرغ',away:'ماينز',score:'4 - 1',st:'انتهت ✅',cls:'fin',date:'30 أكتوبر',time:'11:30 م',ch:'beIN 3',yt:'https://www.youtube.com/embed/dQw4w9WgXcQ',goals:'⚽ د12 زيمر 1-0\n⚽ د32 فينتر 2-0\n⚽ د54 الدخيل 2-1\n⚽ د67 كونراد 3-1\n⚽ د89 بفايفر 4-1\n📊 مهرجان 5 أهداف'},
+{key:'ger',lg:'🇩🇪 الدوري الألماني',home:'بايرن ميونخ',away:'بوروسيا دورتموند',score:'- : -',st:'9:30 م - الكلاسيكو 🔥',cls:'up',date:'31 أكتوبر',time:'9:30 م',ch:'beIN 1',yt:'',goals:'📋 بايرن: نوير - لايمر - أوباميكانو - تاه - براون - كيميتش - بافلوفيتش - أوليسيه - سايباري - دياز - كين\n📋 دورتموند: كوبل - رايرسون - أنطون - شلوتربيك - بن سبعيني - سابيتزر - نميتشا - بيلينغهام - باير - غيراسي - سيلفا\n🏟️ أليانز أرينا 75 ألف'},
+{key:'fra',lg:'🇫🇷 الدوري الفرنسي',home:'لوهافر',away:'باريس سان جيرمان',score:'1 - 5',st:'انتهت ✅',cls:'fin',date:'31 أكتوبر',time:'10:00 م',ch:'beIN 4',yt:'https://www.youtube.com/embed/dQw4w9WgXcQ',goals:'⚽ د8 ديمبيلي 0-1\n⚽ د15 توريس 0-2 (أول هدف بعد انتقاله من برشلونة)\n⚽ د33 لوهافر 1-2\n⚽ د61 باركولا 1-3\n⚽ د78 توريس 1-4 ثنائية\n⚽ د85 راموس 1-5\n✅ مضمون 100% - beIN'},
+{key:'fra',lg:'🇫🇷 الدوري الفرنسي',home:'نيس',away:'رين',score:'5 - 2',st:'انتهت ✅',cls:'fin',date:'31 أكتوبر',time:'9:00 م',ch:'beIN 4',yt:'https://www.youtube.com/embed/dQw4w9WgXcQ',goals:'⚽ مهرجان 7 أهداف - 5-2'},
+{key:'fra',lg:'🇫🇷 الدوري الفرنسي',home:'ليل',away:'لانس',score:'1 - 0',st:'انتهت ✅',cls:'fin',date:'31 أكتوبر',time:'7:00 م',ch:'beIN 4',yt:'https://www.youtube.com/embed/dQw4w9WgXcQ',goals:'⚽ د73 ديفيد 1-0 هدف قاتل'},
+{key:'saudi',lg:'🇸🇦 دوري روشن',home:'الهلال',away:'النصر',score:'- : -',st:'9:00 م - ديربي 🔥',cls:'up',date:'31 أكتوبر',time:'9:00 م',ch:'SSC',yt:'',goals:'📋 الهلال: بونو - محزري - تمبكتي - كوليبالي - ثيو - نيفيز - سافيتش - الدوسري - سامرفيل - واتكينز - مارتينيلي\n📋 النصر: بينتو - بوشل - أمان - كوستا - العمري - مارتينيز - فيليكس - الخيبري - رونالدو 41 سنة - الحمدان - ماني\n🏟️ Kingdom Arena'}
+];
+
+const fullTablesData=[
+{key:'esp',name:'🇪🇸 الدوري الإسباني - الترتيب الكامل من 1 إلى 20',teams:[
+{n:'برشلونة',p:10,w:8,d:1,l:1,gf:24,ga:8,pts:25},{n:'ريال مدريد',p:10,w:7,d:2,l:1,gf:21,ga:7,pts:23},{n:'أتلتيكو مدريد',p:10,w:6,d:3,l:1,gf:18,ga:6,pts:21},{n:'أتلتيك بيلباو',p:10,w:5,d:3,l:2,gf:15,ga:9,pts:18},{n:'إسبانيول',p:11,w:5,d:3,l:3,gf:12,ga:10,pts:18},{n:'فياريال',p:11,w:5,d:2,l:4,gf:14,ga:10,pts:17},{n:'ريال بيتيس',p:10,w:4,d:4,l:2,gf:13,ga:10,pts:16},{n:'ريال سوسيداد',p:10,w:4,d:3,l:3,gf:12,ga:11,pts:15},{n:'مايوركا',p:10,w:4,d:2,l:4,gf:11,ga:12,pts:14},{n:'سيلتا فيغو',p:10,w:3,d:4,l:3,gf:12,ga:12,pts:13},{n:'إشبيلية',p:10,w:3,d:3,l:4,gf:10,ga:12,pts:12},{n:'خيتافي',p:10,w:3,d:2,l:5,gf:8,ga:11,pts:11},{n:'جيرونا',p:10,w:3,d:1,l:6,gf:10,ga:16,pts:10},{n:'لاس بالماس',p:10,w:2,d:3,l:5,gf:9,ga:14,pts:9},{n:'ألافيس',p:10,w:2,d:2,l:6,gf:8,ga:16,pts:8},{n:'ليغانيس',p:10,w:2,d:2,l:6,gf:7,ga:15,pts:8},{n:'بلد الوليد',p:10,w:1,d:3,l:6,gf:6,ga:18,pts:6},{n:'فالنسيا',p:10,w:1,d:2,l:7,gf:7,ga:19,pts:5},{n:'أوساسونا',p:10,w:1,d:2,l:7,gf:6,ga:17,pts:5},{n:'رايو فايكانو',p:10,w:1,d:1,l:8,gf:5,ga:20,pts:4}
 ]},
-{key:'ger', name:'🇩🇪 سلوم تيفي - الدوري الألماني - من الأول للأخير', games:[
-{home:'إلفرسبرغ', away:'ماينز', score:'4 - 1', status:'انتهت ✅', cls:'finished', date:'30 أكتوبر 2026', time:'11:30 م', channel:'beIN 3', minute:'90+3', events:['⚽ 12: هدف! جان زيمر (إلفرسبرغ) 1-0','⚽ 32: هدف! بول فينتر (إلفرسبرغ) 2-0','⏰ 45:
+{key:'ger',name:'🇩🇪 الدوري الألماني - الترتيب الكامل من 1 إلى 18',teams:[
+{n:'بايرن ميونخ',p:7,w:6,d:1,l:0,gf:19,ga:5,pts:19},{n:'بوروسيا دورتموند',p:7,w:5,d:2,l:0,gf:15,ga:6,pts:17},{n:'باير ليفركوزن',p:7,w:5,d:1,l:1,gf:16,ga:7,pts:16},{n:'لايبزيغ',p:7,w:4,d:2,l:1,gf:14,ga:8,pts:14},{n:'إلفرسبرغ',p:8,w:4,d:2,l:2,gf:15,ga:9,pts:14},{n:'شتوتغارت',p:7,w:4,d:1,l:2,gf:13,ga:8,pts:13},{n:'فرايبورغ',p:7,w:3,d:2,l:2,gf:10,ga:9,pts:11},{n:'فرانكفورت',p:7,w:3,d:1,l:3,gf:11,ga:11,pts:10},{n:'هوفنهايم',p:7,w:3,d:1,l:3,gf:10,ga:10,pts:10},{n:'فولفسبورغ',p:7,w:2,d:2,l:3,gf:9,ga:10,pts:8},{n:'فيردر بريمن',p:7,w:2,d:2,l:3,gf:8,ga:10,pts:8},{n:'يونيون برلين',p:7,w:2,d:1,l:4,gf:7,ga:12,pts:7},{n:'أوغسبورغ',p:7,w:2,d:1,l:4,gf:6,ga:13,pts:7},{n:'مونشنغلادباخ',p:7,w:1,d:3,l:3,gf:8,ga:12,pts:6},{n:'ماينز',p:8,w:1,d:3,l:4,gf:7,ga:14,pts:6},{n:'سانت باولي',p:7,w:1,d:2,l:4,gf:5,ga:11,pts:5},{n:'هايدنهايم',p:7,w:1,d:1,l:5,gf:6,ga:15,pts:4},{n:'بوخوم',p:7,w:0,d:2,l:5,gf:4,ga:16,pts:2}
+]},
+{key:'fra',name:'🇫🇷 الدوري الفرنسي - الترتيب الكامل من 1 إلى 18',teams:[
+{n:'باريس سان جيرمان',p:9,w:7,d:1,l:1,gf:22,ga:6,pts:22},{n:'مارسيليا',p:9,w:6,d:2,l:1,gf:18,ga:8,pts:20},{n:'نيس',p:9,w:5,d:2,l:2,gf:16,ga:10,pts:17},{n:'ليل',p:9,w:5,d:1,l:3,gf:12,ga:8,pts:16},{n:'موناكو',p:9,w:4,d:3,l:2,gf:14,ga:10,pts:15},{n:'لانس',p:9,w:4,d:2,l:3,gf:11,ga:9,pts:14},{n:'ليون',p:9,w:4,d:1,l:4,gf:10,ga:12,pts:13},{n:'ستراسبورغ',p:9,w:3,d:3,l:3,gf:11,ga:11,pts:12},{n:'رين',p:9,w:3,d:2,l:4,gf:10,ga:14,pts:11},{n:'بريست',p:9,w:3,d:1,l:5,gf:9,ga:14,pts:10},{n:'أوكسير',p:9,w:2,d:3,l:4,gf:8,ga:12,pts:9},{n:'تولوز',p:9,w:2,d:3,l:4,gf:7,ga:11,pts:9},{n:'نانت',p:9,w:2,d:2,l:5,gf:7,ga:13,pts:8},{n:'لوهافر',p:10,w:2,d:2,l:6,gf:8,ga:20,pts:8},{n:'أنجيه',p:9,w:2,d:1,l:6,gf:6,ga:16,pts:7},{n:'سانت إيتيان',p:9,w:1,d:3,l:5,gf:7,ga:15,pts:6},{n:'مونبلييه',p:9,w:1,d:2,l:6,gf:5,ga:17,pts:5},{n:'لوهافر 2',p:9,w:1,d:1,l:7,gf:4,ga:18,pts:4}
+]},
+{key:'saudi',name:'🇸🇦 دوري روشن السعودي - الترتيب الكامل من 1 إلى 18',teams:[
+{n:'الهلال',p:10,w:8,d:2,l:0,gf:24,ga:5,pts:26},{n:'الاتحاد',p:10,w:7,d:2,l:1,gf:20,ga:8,pts:23},{n:'النصر',p:10,w:6,d:2,l:2,gf:18,ga:9,pts:20},{n:'الأهلي',p:10,w:6,d:1,l:3,gf:17,ga:10,pts:19},{n:'الشباب',p:10,w:5,d:2,l:3,gf:14,ga:11,pts:17},{n:'الاتفاق',p:10,w:4,d:3,l:3,gf:12,ga:12,pts:15},{n:'التعاون',p:10,w:4,d:2,l:4,gf:11,ga:13,pts:14},{n:'الخليج',p:10,w:4,d:1,l:5,gf:10,ga:14,pts:13},{n:'الفتح',p:10,w:3,d:3,l:4,gf:10,ga:14,pts:12},{n:'القادسية',p:10,w:3,d:2,l:5,gf:9,ga:15,pts:11},{n:'الرياض',p:10,w:3,d:2,l:5,gf:8,ga:14,pts:11},{n:'الفيحاء',p:10,w:2,d:3,l:5,gf:8,ga:15,pts:9},{n:'ضمك',p:10,w:2,d:3,l:5,gf:7,ga:14,pts:9},{n:'الوحدة',p:10,w:2,d:2,l:6,gf:7,ga:16,pts:8},{n:'العروبة',p:10,w:2,d:1,l:7,gf:6,ga:18,pts:7},{n:'الرائد',p:10,w:1,d:3,l:6,gf:6,ga:17,pts:6},{n:'الأخدود',p:10,w:1,d:2,l:7,gf:5,ga:18,pts:5},{n:'الخلود',p:10,w:0,d:2,l:8,gf:4,ga:20,pts:2}
+]},
+{key:'eng',name:'🏴󠁧󠁢󠁥󠁮󠁧󠁿 الدوري الإنجليزي - الترتيب الكامل من 1 إلى 20',teams:[
+{n:'مانشستر سيتي',p:10,w:8,d:1,l:1,gf:22,ga:6,pts:25},{n:'آرسنال',p:10,w:7,d:2,l:1,gf:18,ga:7,pts:23},{n:'ليفربول',p:10,w:7,d:1,l:2,gf:20,ga:10,pts:22},{n:'تشيلسي',p:10,w:6,d:2,l:2,gf:17,ga:9,pts:20},{n:'أستون فيلا',p:10,w:5,d:3,l:2,gf:15,ga:10,pts:18},{n:'نيوكاسل',p:10,w:5,d:2,l:3,gf:14,ga:11,pts:17},{n:'مانشستر يونايتد',p:10,w:4,d:3,l:3,gf:13,ga:12,pts:15},{n:'توتنهام',p:10,w:4,d:2,l:4,gf:14,ga:13,pts:14},{n:'برايتون',p:10,w:3,d:4,l:3,gf:12,ga:12,pts:13},{n:'وست هام',p:10,w:3,d:3,l:4,gf:11,ga:14,pts:12},{n:'فولهام',p:10,w:3,d:2,l:5,gf:10,ga:14,pts:11},{n:'كريستال بالاس',p:10,w:3,d:1,l:6,gf:9,ga:15,pts:10},{n:'إيفرتون',p:10,w:2,d:3,l:5,gf:8,ga:14,pts:9},{n:'بورنموث',p:10,w:2,d:2,l:6,gf:8,ga:16,pts:8},{n:'برينتفورد',p:10,w:2,d:2,l:6,gf:7,ga:15,pts:8},{n:'وولفرهامبتون',p:10,w:2,d:1,l:7,gf:7,ga:18,pts:7},{n:'ليستر',p:10,w:2,d:1,l:7,gf:6,ga:17,pts:7},{n:'ساوثهامبتون',p:10,w:1,d:3,l:6,gf:6,ga:19,pts:6},{n:'إيبسويتش',p:10,w:1,d:2,l:7,gf:5,ga:18,pts:5},{n:'نوتنغهام',p:10,w:0,d:3,l:7,gf:4,ga:20,pts:3}
+]}
+];
+
+function renderGames(filter){
+let list=filter==='all'?games:games.filter(g=>g.key===filter);
+let html='';
+let grouped={};
+list.forEach(g=>{ if(!grouped[g.lg]) grouped[g.lg]=[]; grouped[g.lg].push(g); });
+for(let lg in grouped){
+html+=`<div class="card"><div class="head"><span>${lg}</span><span class="badge">✅ مضمون 100%</span></div>`;
+grouped[lg].forEach(g=>{
+html+=`<div class="match">
+<div><div class="time">${g.date}</div><div style="font-size:11px;background:#1a1a33;padding:4px 8px;border-radius:8px;display:inline-block;margin-top:4px">${g.time}</div><div class="ch">📺 ${g.ch}</div></div>
+<div><div class="team" onclick="openTeam('${g.home}')">${g.home}</div><div class="vs">VS</div><div class="team" onclick="openTeam('${g.away}')">${g.away}</div></div>
+<div><div class="score">${g.score}</div><div class="status ${g.cls}">${g.st}</div></div>
+${g.yt?`<div class="video"><b style="font-size:11px">🎥 ملخص فيديو حصري - ${g.home} ${g.score} ${g.away} - beIN SPORTS</b><iframe src="${g.yt}" allowfullscreen></iframe><div style="font-size:9px;color:#888;margin-top:6px">📺 beIN SPORTS - ملخص حصري - سلوم تيفي - ✅ مضمون 100%</div></div>`:''}
+<div class="goals"><b>⚽ مجريات وأهداف:</b><br>${g.goals.replace(/\n/g,'<br>')}</div>
+</div>`;
+});
+html+='</div>';
+}
+document.getElementById('matches').innerHTML=html;
+}
+
+function renderTables(filter){
+let list=filter==='all'?fullTablesData:fullTablesData.filter(t=>t.key===filter);
+let html='';
+list.forEach(tbl=>{
+html+=`<div class="card"><div class="head"><span>${tbl.name}</span><span class="badge">من 1 إلى ${tbl.teams.length} - ✅</span></div><div style="overflow:auto"><table class="table"><tr><th>#</th><th>الفريق</th><th>ل</th><th>ف</th><th>ت</th><th>خ</th><th>له</th><th>ع</th><th>نقاط</th></tr>`;
+tbl.teams.forEach((t,i)=>{
+let cls=i<4?'top4':i>=tbl.teams.length-3?'bot':'mid';
+html+=`<tr class="${cls}"><td>${i+1}</td><td style="text-align:right;font-weight:700;cursor:pointer" onclick="openTeam('${t.n}')">${t.n} 👆</td><td>${t.p}</td><td>${t.w}</td><td>${t.d}</td><td>${t.l}</td><td>${t.gf}</td><td>${t.ga}</td><td style="color:#ffeb3b;font-weight:800">${t.pts}</td></tr>`;
+});
+html+=`</table></div><div style="padding:8px;font-size:10px;color:#666">📊 سلوم تيفي - ترتيب كامل - ✅ مضمون 100% - تحديث ${new Date().toLocaleTimeString('ar-EG')}</div></div>`;
+});
+document.getElementById('tables').innerHTML=html;
+}
+
+function renderSide(){
+let news=[
+"🔴 عاجل beIN SPORTS: برشلونة بدون ليفاندوفسكي رسمياً - ليفا إلى شيكاغو فاير MLS - روني باردجي 19 بديل - ✅ مضمون 100%",
+"🔵 beIN SPORTS: فيران توريس 9 إلى باريس 55 مليون - سجل ثنائية اليوم 1-5 ضد لوهافر - ✅ سلوم تيفي",
+"⚽ beIN SPORTS: نتائج اليوم - فياريال 0-1 إسبانيول - إلفرسبرغ 4-1 ماينز - لوهافر 1-5 باريس - نيس 5-2 رين - ليل 1-0 لانس - ✅",
+"🔴 beIN: بايرن ميونخ - تاه وبراون وسايباري ودياز جدد - غوريتزكا رحل - ✅",
+"🔵 beIN: الهلال - واتكينز ومارتينيلي وسامرفيل وثيو جدد - إنزاغي مدرب - ✅ مضمون"
+];
+document.getElementById('news').innerHTML=news.map(n=>`<div class="news"><div class="icon">🔥</div><div><div>${n}</div><div style="font-size:9px;color:#666;margin-top:4px">beIN SPORTS - ✅ مضمون 100% - سلوم تيفي</div></div></div>`).join('');
+document.getElementById('videos').innerHTML=`
+<div>🎥 فياريال 0-1 إسبانيول - هدف روميرو 68 - ملخص كامل beIN</div>
+<div>🎥 إلفرسبرغ 4-1 ماينز - مهرجان 5 أهداف - beIN</div>
+<div>🎥 لوهافر 1-5 باريس - ثنائية توريس 9 - beIN</div>
+<div>🎥 نيس 5-2 رين - خماسية - beIN</div>
+<div>🎥 ليل 1-0 لانس - ديفيد 73 - beIN</div>
+<div style="margin-top:8px;color:#22c55e;font-size:10px">✅ ملخصات فيديو حصرية - beIN SPORTS - سلوم تيفي</div>
+`;
+document.getElementById('chans').innerHTML=`
+<div>📡 beIN 1 - برشلونة ضد ألافيس 11:00 م</div>
+<div>📡 beIN 1 - بايرن ضد دورتموند 9:30 م - الكلاسيكو</div>
+<div>📡 SSC - الهلال ضد ا
