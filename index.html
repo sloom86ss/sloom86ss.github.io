@@ -4,16 +4,17 @@
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="1to1lmgptPdQBO6SsdgpAv8meSroswl34D89V78Xvnk" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLOOMTV - الدوريات الـ10 LIVE 2026-2034</title>
+<title>SLOOMTV - بوت خاص + إحصائيات LIVE</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Tahoma,sans-serif;background:#080810;color:#fff}
 .h{background:linear-gradient(135deg,#14142a,#1e1e4a);padding:20px;text-align:center;border-bottom:3px solid #ff0040;position:sticky;top:0;z-index:100}
 .logo{font-size:42px;font-weight:900}.logo span{color:#ffeb3b}
 .badge{background:#0f2815;border:1px solid #22c55e;color:#22c55e;padding:6px 16px;border-radius:30px;display:inline-block;font-size:12px;margin-top:10px;font-weight:800}
-.ticker{background:#ff0040;color:#fff;padding:8px;text-align:center;font-size:13px;font-weight:700;position:sticky;top:89px;z-index:99}
+.ticker{background:linear-gradient(90deg,#ff0040,#9c0026);color:#fff;padding:8px;text-align:center;font-size:13px;font-weight:700;position:sticky;top:89px;z-index:99;display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
 .container{max-width:800px;margin:0 auto;padding:15px}
-.league-title{background:linear-gradient(90deg,#1a1a3a,#12122a);border-right:4px solid #ffeb3b;padding:10px 14px;border-radius:8px;margin:20px 0 10px 0;font-weight:900;font-size:15px;display:flex;justify-content:space-between;align-items:center}
-.card{background:#12122a;border:1px solid #222;border-radius:16px;padding:14px;margin-bottom:12px}
+.league-title{background:linear-gradient(90deg,#1a1a3a,#12122a);border-right:4px solid #ffeb3b;padding:10px 14px;border-radius:8px;margin:20px 0 10px 0;font-weight:900;font-size:15px;display:flex;justify-content:space-between}
+.card{background:#12122a;border:1px solid #222;border-radius:16px;padding:14px;margin-bottom:12px;cursor:pointer;transition:0.2s}
+.card:hover{border-color:#ffeb3b;transform:scale(1.01)}
 .match-head{display:flex;justify-content:space-between;align-items:center}
 .team{font-weight:800;font-size:14px;width:110px;text-align:center}
 .score{font-size:28px;font-weight:900;color:#ffeb3b;text-align:center;min-width:90px}
@@ -24,9 +25,8 @@
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.6}}
 .match-time{font-size:11px;color:#888;text-align:center;margin-top:6px}
 .ksa-time{color:#ffeb3b;font-weight:800}
-.loading{text-align:center;padding:40px;color:#888}
 #ai-btn{position:fixed;bottom:20px;left:20px;background:#ffeb3b;color:#000;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;box-shadow:0 4px 20px rgba(255,235,59,0.5);z-index:9999;font-weight:900}
-#ai-chat{position:fixed;bottom:90px;left:20px;width:370px;max-width:94vw;height:500px;background:#12122a;border:1px solid #333;border-radius:18px;display:none;flex-direction:column;z-index:9999;overflow:hidden}
+#ai-chat{position:fixed;bottom:90px;left:20px;width:380px;max-width:94vw;height:520px;background:#12122a;border:1px solid #333;border-radius:18px;display:none;flex-direction:column;z-index:9999;overflow:hidden}
 #ai-header{background:linear-gradient(90deg,#ff0040,#ff6b6b);padding:12px;text-align:center;font-weight:900;font-size:14px;display:flex;justify-content:space-between}
 #ai-messages{flex:1;padding:12px;overflow-y:auto;font-size:13px;display:flex;flex-direction:column;gap:8px}
 #ai-input{display:flex;border-top:1px solid #222;background:#080810}
@@ -34,111 +34,166 @@
 #ai-input button{background:#ffeb3b;border:0;padding:0 18px;font-weight:900;cursor:pointer}
 .msg-user{background:#ffeb3b;color:#000;padding:9px 12px;border-radius:14px 14px 2px 14px;align-self:flex-end;max-width:85%}
 .msg-ai{background:#1e1e3a;padding:9px 12px;border-radius:14px 14px 14px 2px;align-self:flex-start;max-width:88%;color:#ddd;line-height:1.6;white-space:pre-wrap}
+/* نافذة الاحصائيات */
+#stats-modal{position:fixed;inset:0;background:rgba(0,0,0,0.85);display:none;align-items:center;justify-content:center;z-index:10000;padding:15px}
+#stats-box{background:#12122a;border:2px solid #ffeb3b;border-radius:20px;width:100%;max-width:500px;max-height:85vh;overflow-y:auto;padding:18px}
+#stats-box h3{text-align:center;color:#ffeb3b;margin:0 0 12px 0}
+.stat-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #222;font-size:13px}
+.stat-bar{background:#222;height:6px;border-radius:10px;overflow:hidden;margin-top:4px}
+.stat-fill{height:100%;background:#ffeb3b}
 </style>
 </head>
 <body>
-<div class="h"><div class="logo">SLOOM<span>TV</span></div><div class="badge">● 10 دوريات • 2026-2034 • بتوقيت KSA</div></div>
-<div class="ticker" id="ticker">⏰ جاري التحميل...</div>
-<div class="container" id="matches"><div class="loading">جاري جلب الدوريات الـ10 الكبرى... ⏳</div></div>
+<div class="h"><div class="logo">SLOOM<span>TV</span></div><div class="badge">● بوت خاص • 10 دوريات • 2026-2034 • KSA & OMAN</div></div>
+<div class="ticker" id="ticker">⏰ جاري تحميل الوقت...</div>
+<div class="container" id="matches"><div style="text-align:center;padding:40px">جاري جلب المباريات... ⏳</div></div>
 
+<!-- بوت خاص -->
 <div id="ai-btn" onclick="toggleAI()">🤖</div>
 <div id="ai-chat">
-<div id="ai-header"><span>🤖 SLOOM GPT 2026-2034 🇸🇦</span><span style="cursor:pointer" onclick="toggleAI()">✕</span></div>
-<div id="ai-messages"><div class="msg-ai">أهلاً! أنا SLOOM GPT الخارق 2026-2034 🧠🇸🇦🏆
+<div id="ai-header"><span>🤖 SLOOM BOT الخاص 2026-2034 🇴🇲🇸🇦</span><span style="cursor:pointer" onclick="toggleAI()">✕</span></div>
+<div id="ai-messages"><div class="msg-ai">أهلاً في SLOOM BOT الخاص! 🧠
 
-✅ أغطي:
-2026: مونديال أمريكا
-2028: يورو بريطانيا
-2030: مونديال المغرب/إسبانيا/البرتغال
-2034: مونديال السعودية 🇸🇦🏆
+أنا بوت موقعك الخاص - ما أألف!
 
-كل الأوقات بتوقيت السعودية!
+✅ أغطي 2026-2034
+✅ أجيب نتائج حقيقية من الملعب
+✅ كل الأوقات عمان + السعودية
 
-اسألني: متى مباراة الهلال؟ برشلونة؟</div></div>
-<div id="ai-input"><input id="ai-q" placeholder="اسأل من 2026 لـ 2034..." onkeypress="if(event.key==='Enter')askAI()"><button onclick="askAI()">➤</button></div>
+اسألني: متى مباراة برشلونة؟</div></div>
+<div id="ai-input"><input id="ai-q" placeholder="اسأل بوتك الخاص..." onkeypress="if(event.key==='Enter')askAI()"><button onclick="askAI()">➤</button></div>
+</div>
+
+<!-- نافذة الاحصائيات -->
+<div id="stats-modal" onclick="if(event.target===this)closeStats()">
+<div id="stats-box">
+<h3 id="stats-title">📊 إحصائيات المباراة</h3>
+<div id="stats-content">جاري التحميل...</div>
+<div style="text-align:center;margin-top:15px"><button onclick="closeStats()" style="background:#ffeb3b;border:0;padding:10px 25px;border-radius:30px;font-weight:900;cursor:pointer">إغلاق ✕</button></div>
+</div>
 </div>
 
 <script>
 const LEAGUES = [
-  {id:'eng.1', name:'الدوري الإنجليزي الممتاز', icon:'🏴󠁧󠁢󠁥󠁮󠁧󠁿'},
-  {id:'esp.1', name:'الدوري الإسباني - لا ليغا', icon:'🇪🇸'},
-  {id:'ita.1', name:'الدوري الإيطالي', icon:'🇮🇹'},
-  {id:'ger.1', name:'الدوري الألماني', icon:'🇩🇪'},
-  {id:'fra.1', name:'الدوري الفرنسي', icon:'🇫🇷'},
-  {id:'ksa.1', name:'دوري روشن السعودي', icon:'🇸🇦'},
-  {id:'uefa.champions', name:'دوري أبطال أوروبا', icon:'🏆'},
-  {id:'ned.1', name:'الدوري الهولندي', icon:'🇳🇱'},
-  {id:'por.1', name:'الدوري البرتغالي', icon:'🇵🇹'},
-  {id:'tur.1', name:'الدوري التركي', icon:'🇹🇷'}
+  {id:'eng.1', name:'الإنجليزي', icon:'🏴󠁧󠁢󠁥󠁮󠁧󠁿'},
+  {id:'esp.1', name:'الإسباني', icon:'🇪🇸'},
+  {id:'ita.1', name:'الإيطالي', icon:'🇮🇹'},
+  {id:'ger.1', name:'الألماني', icon:'🇩🇪'},
+  {id:'fra.1', name:'الفرنسي', icon:'🇫🇷'},
+  {id:'ksa.1', name:'دوري روشن', icon:'🇸🇦'},
+  {id:'uefa.champions', name:'أبطال أوروبا', icon:'🏆'},
+  {id:'ned.1', name:'الهولندي', icon:'🇳🇱'},
+  {id:'por.1', name:'البرتغالي', icon:'🇵🇹'},
+  {id:'tur.1', name:'التركي', icon:'🇹🇷'}
 ];
 
+// شريط الوقت عمان + السعودية LIVE
+function updateTicker(){
+  const now = new Date();
+  const ksa = now.toLocaleString('ar-SA',{timeZone:'Asia/Riyadh', weekday:'short', hour:'2-digit', minute:'2-digit', second:'2-digit'});
+  const oman = now.toLocaleString('ar-SA',{timeZone:'Asia/Muscat', weekday:'short', hour:'2-digit', minute:'2-digit', second:'2-digit'});
+  document.getElementById('ticker').innerHTML = `<span>🇸🇦 السعودية: ${ksa}</span><span>🇴🇲 عمان: ${oman}</span><span>⚽ اضغط على أي مباراة للإحصائيات</span>`;
+}
+setInterval(updateTicker,1000); updateTicker();
+
 function formatKSA(isoDate){
-  try{
-    const d = new Date(isoDate);
-    const dateStr = d.toLocaleDateString('ar-SA', {timeZone:'Asia/Riyadh', weekday:'short', day:'2-digit', month:'short'});
-    const timeStr = d.toLocaleTimeString('ar-SA', {timeZone:'Asia/Riyadh', hour:'2-digit', minute:'2-digit', hour12:true});
-    return `${dateStr} - ${timeStr} KSA`;
-  }catch(e){return '';}
+  const d=new Date(isoDate);
+  return d.toLocaleString('ar-SA',{timeZone:'Asia/Riyadh', day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'});
+}
+function formatOman(isoDate){
+  const d=new Date(isoDate);
+  return d.toLocaleString('ar-SA',{timeZone:'Asia/Muscat', hour:'2-digit', minute:'2-digit'});
 }
 
 async function loadAllLeagues(){
-  const container = document.getElementById('matches');
-  const ticker = document.getElementById('ticker');
-  container.innerHTML = '';
-  const nowKSA = new Date().toLocaleString('ar-SA', {timeZone:'Asia/Riyadh', weekday:'long', day:'numeric', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit'});
-  ticker.textContent = `⏰ ${nowKSA} بتوقيت مكة • 10 دوريات • 2026-2034`;
-
+  const container=document.getElementById('matches'); container.innerHTML='';
   for(let league of LEAGUES){
     try{
-      const res = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${league.id}/scoreboard`);
-      const data = await res.json();
-      let events = (data.events || []).slice(0,4);
+      const res=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${league.id}/scoreboard`);
+      const data=await res.json();
+      let events=(data.events||[]).slice(0,4);
       if(events.length>0){
-        container.innerHTML += `<div class="league-title"><span>${league.icon} ${league.name}</span><span>${events.length} مباريات</span></div>`;
+        container.innerHTML+=`<div class="league-title"><span>${league.icon} الدوري ${league.name}</span><span>اضغط للمزيد 👆</span></div>`;
         events.forEach(ev=>{
-          const comp = ev.competitions[0];
-          const home = comp.competitors.find(c=>c.homeAway==='home') || comp.competitors[0];
-          const away = comp.competitors.find(c=>c.homeAway==='away') || comp.competitors[1];
-          const statusState = comp.status.type.state;
-          const ksa = formatKSA(ev.date);
-          let statusClass='soon', statusText=ksa;
+          const comp=ev.competitions[0];
+          const home=comp.competitors.find(c=>c.homeAway==='home')||comp.competitors[0];
+          const away=comp.competitors.find(c=>c.homeAway==='away')||comp.competitors[1];
+          const statusState=comp.status.type.state;
+          let statusClass='soon', statusText=formatKSA(ev.date);
           if(statusState==='in'){statusClass='live'; statusText='مباشر ● LIVE';}
           else if(statusState==='post'){statusClass='finished'; statusText='انتهت';}
-          container.innerHTML += `
-            <div class="card">
+          container.innerHTML+=`
+            <div class="card" onclick="openStats('${ev.id}','${league.id}','${home.team.displayName} vs ${away.team.displayName}')">
               <div class="match-head">
-                <div class="team">${home.team.abbreviation}</div>
+                <div class="team">${home.team.abbreviation}<br><small style="font-size:10px;color:#888">${home.team.displayName.slice(0,10)}</small></div>
                 <div style="text-align:center"><div class="score">${home.score||0} - ${away.score||0}</div><div class="status ${statusClass}">${statusText}</div></div>
-                <div class="team">${away.team.abbreviation}</div>
+                <div class="team">${away.team.abbreviation}<br><small style="font-size:10px;color:#888">${away.team.displayName.slice(0,10)}</small></div>
               </div>
-              <div class="match-time">📅 ${ksa} <span class="ksa-time">بتوقيت السعودية</span></div>
+              <div class="match-time">🇸🇦 ${formatKSA(ev.date)} KSA | 🇴🇲 ${formatOman(ev.date)} عمان • اضغط للإحصائيات 📊</div>
             </div>`;
         });
       }
     }catch(e){}
   }
 }
-loadAllLeagues();
-setInterval(loadAllLeagues,90000);
+loadAllLeagues(); setInterval(loadAllLeagues,90000);
+
 function toggleAI(){let c=document.getElementById('ai-chat'); c.style.display=c.style.display==='flex'?'none':'flex';}
 
+// البوت الخاص - يجيب من الملعب الحقيقي
 async function askAI(){
   let q=document.getElementById('ai-q'); if(!q.value.trim())return;
-  let m=document.getElementById('ai-messages'); let question=q.value;
-  m.innerHTML+=`<div class="msg-user">${question}</div>`; q.value='';
-  m.innerHTML+=`<div class="msg-ai" id="typing">SLOOM GPT 2026-2034 يفكر... 🧠🇸🇦</div>`; m.scrollTop=m.scrollHeight;
+  let m=document.getElementById('ai-messages'); let question=q.value.toLowerCase(); let original=q.value;
+  m.innerHTML+=`<div class="msg-user">${original}</div>`; q.value='';
+  m.innerHTML+=`<div class="msg-ai" id="typing">SLOOM BOT الخاص يجيب من الملعب... 📡</div>`; m.scrollTop=m.scrollHeight;
   try{
-    const prompt = `أنت SLOOM AI الخارق تغطي من 2026 إلى 2034. اليوم 31 أكتوبر 2026. كل الأوقات بتوقيت السعودية Asia/Riyadh KSA. 2026 مونديال أمريكا، 2030 مونديال المغرب/إسبانيا/البرتغال، 2034 مونديال السعودية 🇸🇦. الموسم الحالي 2026/2027. لا تذكر 2024 أبدا. جاوب بالعربية مختصر واذكر توقيت KSA. السؤال: ${question}`;
-    const res = await fetch(`https://text.pollinations.ai/${encodeURIComponent(prompt)}?model=openai`);
-    const text = await res.text();
+    let teamLeague='ksa.1';
+    if(question.includes('برشلونة')||question.includes('ريال')||question.includes('ليغا')) teamLeague='esp.1';
+    if(question.includes('انجليزي')||question.includes('سيتي')||question.includes('ارسنال')) teamLeague='eng.1';
+    const resM=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${teamLeague}/scoreboard`);
+    const dataM=await resM.json();
+    let txt=""; (dataM.events||[]).slice(0,3).forEach(ev=>{
+      const d=new Date(ev.date);
+      const ksa=d.toLocaleString('ar-SA',{timeZone:'Asia/Riyadh', weekday:'long', day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'});
+      const oman=d.toLocaleString('ar-SA',{timeZone:'Asia/Muscat', hour:'2-digit', minute:'2-digit'});
+      const comp=ev.competitions[0];
+      txt+=`• ${comp.competitors[0].team.displayName} vs ${comp.competitors[1].team.displayName} - ${ksa} KSA / ${oman} عمان\n`;
+    });
     document.getElementById('typing').remove();
-    m.innerHTML+=`<div class="msg-ai">${text}</div>`;
-  }catch(err){
+    if(txt){m.innerHTML+=`<div class="msg-ai">⚽ مباريات حقيقية LIVE:\n\n${txt}\n🇴🇲🇸🇦 كل الأوقات عمان + السعودية\n📡 من SLOOM BOT الخاص</div>`;}
+    else{m.innerHTML+=`<div class="msg-ai">أنا SLOOM BOT الخاص بموقعك 2026-2034 🇴🇲🇸🇦\n\nاسأل عن أي دوري وأجيب لك الوقت الحقيقي عمان + السعودية</div>`;}
+  }catch(e){
     document.getElementById('typing')?.remove();
-    m.innerHTML+=`<div class="msg-ai">جرب مرة ثانية ⚽</div>`;
+    m.innerHTML+=`<div class="msg-ai">المباريات فوق 👆 اضغط عليها للإحصائيات</div>`;
   }
   m.scrollTop=m.scrollHeight;
 }
+
+// فتح الاحصائيات عند الضغط على المباراة
+async function openStats(eventId, leagueId, title){
+  document.getElementById('stats-modal').style.display='flex';
+  document.getElementById('stats-title').textContent=title;
+  document.getElementById('stats-content').innerHTML='جاري جلب الإحصائيات الحية... ⏳📊';
+  try{
+    const res=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${leagueId}/summary?event=${eventId}`);
+    const data=await res.json();
+    let html=`<div class="stat-row"><strong>الحالة:</strong><span>${data.header?.competitions[0].status?.type?.detail||'مباشر'}</span></div>`;
+    if(data.header?.competitions[0].venue) html+=`<div class="stat-row"><strong>الملعب:</strong><span>${data.header.competitions[0].venue.fullName}</span></div>`;
+    if(data.boxscore?.teams){
+      data.boxscore.teams.forEach(t=>{
+        html+=`<div style="margin-top:12px;font-weight:900;color:#ffeb3b">${t.team.displayName}</div>`;
+        (t.statistics||[]).slice(0,6).forEach(s=>{
+          html+=`<div class="stat-row"><span>${s.displayValue}</span><span>${s.name||s.label}</span></div>`;
+        });
+      });
+    }
+    if(!data.boxscore) html+=`<div style="text-align:center;padding:20px">📊 النتيجة: ${data.header?.competitions[0].competitors[0].score||0} - ${data.header?.competitions[0].competitors[1].score||0}<br><br>الإحصائيات التفصيلية ستظهر أثناء المباراة مباشرة<br><br>🇴🇲🇸🇦 التوقيت: عمان + السعودية</div>`;
+    document.getElementById('stats-content').innerHTML=html;
+  }catch(e){
+    document.getElementById('stats-content').innerHTML=`<div style="text-align:center;padding:20px">⚽ المباراة: ${title}<br><br>الإحصائيات الحية تظهر عند بدء المباراة<br>🇴🇲🇸🇦 التوقيت عمان + السعودية</div>`;
+  }
+}
+function closeStats(){document.getElementById('stats-modal').style.display='none';}
 </script>
 </body>
 </html>
