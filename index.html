@@ -3,144 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLOOM TV | أخبار مضمونة من beIN SPORTS ويلا كورة</title>
+<title>SLOOM TV | جدول مباريات اليوم نتائج وملخصات - سلوم تيفي</title>
+<meta name="description" content="SLOOM TV - جدول مباريات اليوم بالوقت والتاريخ والنتائج والملخصات - sloom86ss.github.io">
 <style>
-body{margin:0;font-family:Tahoma;background:#0a0a12;color:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma;background:#060612;color:#fff}
 .header{background:linear-gradient(90deg,#ff0055,#8b5cf6);padding:20px;text-align:center}
-.header h1{margin:0;font-size:38px;font-weight:900}
+.header h1{margin:0;font-size:40px;font-weight:900;letter-spacing:2px}
 .header h1 span{color:#ffeb3b}
-.sources-bar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px;background:#111;font-size:10px}
-.source-badge{padding:5px 10px;border-radius:15px;background:#222;border:1px solid #333}
-.source-badge.trusted{border-color:#22c55e;color:#22c55e}
-.ticker{background:#ff0055;color:#fff;padding:8px;overflow:hidden;white-space:nowrap;font-weight:bold}
-.ticker span{display:inline-block;animation:scroll 80s linear infinite}
-@keyframes scroll{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-.container{max-width:1000px;margin:auto;padding:12px}
-.news-card{background:#15151f;border-radius:12px;padding:14px;margin-bottom:12px;border:1px solid #222;display:flex;gap:12px;align-items:flex-start}
-.news-card:hover{background:#1c1c2a}
-.news-img{width:50px;height:50px;border-radius:8px;background:#222;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.news-content{flex:1}
-.news-title{font-size:13px;line-height:1.6;margin-bottom:6px;font-weight:bold}
-.news-meta{display:flex;gap:10px;font-size:10px;color:#888;align-items:center;flex-wrap:wrap}
-.meta-source{background:#22c55e;color:#fff;padding:2px 8px;border-radius:10px;font-size:9px}
-.meta-source.bein{background:#7c00ff}.meta-source.yalla{background:#d00}.meta-source.filgoal{background:#004d00}.meta-source.kooora{background:#0a3d9c}
-.type-badge{padding:3px 8px;border-radius:10px;font-size:9px;color:#fff}
-.type-transfers{background:#22c55e}.type-injury{background:#ef4444}.type-exclusive{background:#f59e0b}.type-official{background:#3b82f6}
+.header p{margin:5px 0 0;opacity:.9;font-size:13px}
+.nav{display:flex;gap:8px;justify-content:center;padding:10px;background:#0f0f1e;flex-wrap:wrap}
+.nav button{padding:8px 16px;border-radius:20px;border:1px solid #333;background:#222;color:#fff;cursor:pointer;font-size:12px}
+.nav button.active{background:#ff0055;border-color:#ff0055}
+.container{max-width:1100px;margin:auto;padding:12px}
+.section-title{font-size:18px;margin:20px 0 10px 0;padding-right:10px;border-right:4px solid #ff0055}
+/* NEWS */
+.news-card{background:#15151f;border-radius:10px;padding:12px;margin-bottom:8px;border:1px solid #222;border-right:4px solid #22c55e;display:flex;gap:10px}
+.news-title{font-size:12px;line-height:1.5;flex:1}
+.meta{font-size:10px;color:#888;margin-top:4px;display:flex;gap:8px;flex-wrap:wrap}
+.src{background:#22c55e;color:#fff;padding:2px 7px;border-radius:10px;font-size:9px}
+/* MATCH TABLE */
+.league-box{background:#15151f;border-radius:12px;margin-bottom:16px;overflow:hidden;border:1px solid #222}
+.league-head{background:#1e1e2e;padding:12px 15px;font-weight:bold;display:flex;justify-content:space-between;align-items:center;border-right:4px solid #ff0055}
+.match-table{width:100%;border-collapse:collapse}
+.match-row{border-bottom:1px solid #222;display:grid;grid-template-columns:90px 1fr 90px 70px;gap:6px;align-items:center;padding:12px 8px}
+@media(max-width:700px){.match-row{grid-template-columns:75px 1fr 60px}}
+.date-time{text-align:center;line-height:1.2}
+.date{font-size:11px;color:#ffeb3b;font-weight:bold}
+.time{font-size:11px;color:#fff;background:#2a2a3a;padding:2px 6px;border-radius:6px;display:inline-block;margin-top:2px}
+.teams{text-align:center}
+.team{font-size:13px;font-weight:bold;display:block}
+.vs{font-size:10px;color:#666;margin:2px 0}
+.score-box{text-align:center}
+.score{font-size:16px;font-weight:900;background:#000;padding:6px 8px;border-radius:8px;color:#22c55e;display:inline-block;min-width:55px}
+.status{font-size:9px;padding:2px 6px;border-radius:10px;margin-top:4px;display:inline-block}
+.live{background:#ef4444;color:#fff;animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.5}}
+.finished{background:#222;color:#888}
+.upcoming{background:#1e3a5f;color:#60a5fa}
+.summary{grid-column:1/-1;background:#0f0f1e;padding:8px 12px;font-size:11px;color:#aaa;border-radius:6px;margin-top:6px;display:none}
+.summary.show{display:block}
+.btn-summary{background:#333;border:none;color:#ffeb3b;font-size:10px;padding:3px 8px;border-radius:10px;cursor:pointer;margin-top:4px}
 </style>
 </head>
 <body>
 <div class="header">
 <h1>SLOOM <span>TV</span></h1>
-<p>📺 أخبار مضمونة وحصرية من مصادر موثوقة</p>
-<p id="today" style="font-size:11px;opacity:.8"></p>
+<p>📺 sloom86ss.github.io - جدول ونتائج وملخصات ووقت وتاريخ بتوقيت مكة</p>
+<p id="today"></p>
 </div>
-<div class="sources-bar">
-<span class="source-badge trusted">✅ beIN SPORTS موثوق</span>
-<span class="source-badge trusted">✅ يلا كورة موثوق</span>
-<span class="source-badge trusted">✅ في الجول موثوق</span>
-<span class="source-badge trusted">✅ كووورة موثوق</span>
-<span class="source-badge">⭐ حصري SLOOM TV</span>
+<div class="nav">
+<button class="active" onclick="switchTab('matches',this)">📊 الجدول والنتائج</button>
+<button onclick="switchTab('news',this)">📰 أخبار مضمونة</button>
+<button onclick="switchTab('live',this)">🔴 مباشر الآن</button>
 </div>
-<div class="ticker"><span id="ticker">🔴 SLOOM TV: أخبار مضمونة من beIN SPORTS - يلا كورة - في الجول - كووورة...</span></div>
-<div class="container">
-<div id="newsBox" style="text-align:center;padding:20px">⏳ جاري جلب الأخبار المضمونة من المصادر الموثوقة...</div>
-</div>
-<script>
-document.getElementById('today').innerText=new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'})+' - '+new Date().toLocaleTimeString('ar-EG');
 
-function timeAgo(d){
-let diff=Math.floor((Date.now()-d)/1000);
-if(diff<60) return `منذ ${diff} ثانية`;
-if(diff<3600) return `منذ ${Math.floor(diff/60)} دقيقة`;
-if(diff<86400) return `منذ ${Math.floor(diff/3600)} ساعة`;
-return `منذ ${Math.floor(diff/86400)} يوم`;
+<div class="container">
+<!-- MATCHES SECTION -->
+<div id="matchesSection">
+<h2 class="section-title">📅 جدول مباريات اليوم - الوقت والتاريخ والنتائج - بتوقيت مكة</h2>
+<div id="matchesBox">⏳ جاري تحميل الجدول الكامل بالوقت والتاريخ والنتائج...</div>
+</div>
+
+<!-- NEWS SECTION -->
+<div id="newsSection" style="display:none">
+<h2 class="section-title">📰 أخبار مضمونة وحصرية من مصادر موثوقة</h2>
+<div id="newsBox"></div>
+</div>
+
+<!-- LIVE SECTION -->
+<div id="liveSection" style="display:none">
+<h2 class="section-title">🔴 مباريات مباشرة الآن - نتائج لحظية</h2>
+<div id="liveBox"></div>
+</div>
+</div>
+
+<script>
+document.getElementById('today').innerText=new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'})+' - '+new Date().toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'})+' بتوقيت مكة';
+
+const TEAMS_AR={
+"Villarreal":"فياريال","Espanyol":"إسبانيول","Barcelona":"برشلونة","Real Madrid":"ريال مدريد","Atletico Madrid":"أتلتيكو مدريد","Sevilla":"إشبيلية","Valencia":"فالنسيا","Real Betis":"ريال بيتيس",
+"SV Elversberg":"إلفرسبرغ","Mainz":"ماينز","Bayern Munich":"بايرن ميونخ","Borussia Dortmund":"دورتموند",
+"Le Havre AC":"لوهافر","Paris Saint-Germain":"باريس سان جيرمان","PSG":"باريس","Nice":"نيس","Stade Rennais":"رين","Lille":"ليل","Lens":"لانس","Marseille":"مارسيليا","Lyon":"ليون",
+"Inter":"إنتر ميلان","AC Milan":"إيه سي ميلان","Juventus":"يوفنتوس","Napoli":"نابولي","Roma":"روما",
+"Manchester City":"مانشستر سيتي","Man City":"مان سيتي","Manchester United":"مان يونايتد","Liverpool":"ليفربول","Arsenal":"أرسنال","Chelsea":"تشيلسي","Tottenham":"توتنهام",
+"Al Hilal":"الهلال","Al Nassr":"النصر","Al Ittihad":"الاتحاد","Al Ahli":"الأهلي","Al Shabab":"الشباب"
+};
+function toAr(name){
+if(TEAMS_AR[name]) return TEAMS_AR[name];
+for(let k in TEAMS_AR){ if(name.toLowerCase().includes(k.toLowerCase())) return TEAMS_AR[k]; }
+return name;
+}
+function formatDateTime(dateStr){
+let d=new Date(dateStr);
+// تحويل لتوقيت مكة +3
+let mecca=new Date(d.toLocaleString('en-US',{timeZone:'Asia/Riyadh'}));
+let dateTxt=mecca.toLocaleDateString('ar-EG',{day:'numeric',month:'short'});
+let timeTxt=mecca.toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'});
+let dayName=mecca.toLocaleDateString('ar-EG',{weekday:'short'});
+return {date:dateTxt, time:timeTxt, day:dayName, full:mecca};
+}
+
+async function loadAllMatches(){
+try{
+let res=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/all/scoreboard?dates='+new Date().toISOString().split('T')[0]+'&t='+Date.now());
+let data=await res.json();
+let leagues={};
+let liveGames=[];
+data.events.forEach(ev=>{
+let lgName=ev.leagues && ev.leagues[0] ? ev.leagues[0].name : 'دوريات أخرى';
+let lgAr= lgName.includes('Saudi')?'🇸🇦 الدوري السعودي': lgName.includes('Spanish LaLiga')||lgName.includes('LaLiga')?'🇪🇸 الدوري الإسباني': lgName.includes('Premier')?'🏴󠁧󠁢󠁥󠁮󠁧󠁿 الدوري الإنجليزي': lgName.includes('Serie A')?'🇮🇹 الدوري الإيطالي': lgName.includes('Bundes')?'🇩🇪 الدوري الألماني': lgName.includes('Ligue 1')||lgName.includes('French')?'🇫🇷 الدوري الفرنسي': lgName.includes('Champions')?'🏆 دوري أبطال أوروبا': '🏆 '+lgName;
+if(!leagues[lgAr]) leagues[lgAr]=[];
+leagues[lgAr].push(ev);
+if(ev.status.type.name=='STATUS_IN_PROGRESS') liveGames.push(ev);
+});
+
+let html='';
+for(let lg in leagues){
+html+=`<div class="league-box"><div class="league-head"><span>${lg}</span><span style="font-size:11px;color:#888">${leagues[lg].length} مباريات اليوم</span></div>`;
+leagues[lg].forEach(ev=>{
+let comp=ev.competitions[0];
+let homeRaw=comp.competitors[0].team.displayName;
+let awayRaw=comp.competitors[1].team.displayName;
+let home=toAr(homeRaw);
+let away=toAr(awayRaw);
+let scoreHome=comp.competitors[0].score||'0';
+let scoreAway=comp.competitors[1].score||'0';
+let statusType=ev.status.type.name;
+let statusText= statusType=='STATUS_IN_PROGRESS'?'مباشر': statusType=='STATUS_FINAL'?'انتهت': 'لم تبدأ';
+let statusCls= statusType=='STATUS_IN_PROGRESS'?'live': statusType=='STATUS_FINAL'?'finished':'upcoming';
+let dt=formatDateTime(ev.date);
+let detail=ev.status.type.detail||'';
+let summaryHtml='';
+if(comp.details){
+let goals=comp.details.filter(d=>d.type && d.type.text && d.type.text.toLowerCase().includes('goal')).slice(0,3).map(g=>`⚽ ${g.clock?.displayValue||''} ${g.athletesInvolved?g.athletesInvolved[0].displayName:''}`).join('<br>');
+if(goals) summaryHtml=`<div class="summary" id="sum-${ev.id}"><b>ملخص الأهداف:</b><br>${goals}<br><small>التفاصيل: ${detail}</small></div><button class="btn-summary" onclick="document.getElementById('sum-${ev.id}').classList.toggle('show')">📝 ملخص</button>`;
+}
+
+html+=`<div class="match-row">
+<div class="date-time"><div class="date">${dt.day} ${dt.date}</div><div class="time">${dt.time}</div><div style="font-size:9px;color:#666">${dt.full.toLocaleDateString('ar-EG',{year:'numeric'})}</div></div>
+<div class="teams"><span class="team">${home}</span><span class="vs">VS</span><span class="team">${away}</span>${summaryHtml}</div>
+<div class="score-box"><div class="score">${scoreHome} - ${scoreAway}</div><div class="status ${statusCls}">${statusText}</div><div style="font-size:9px;color:#666;margin-top:2px">${detail}</div></div>
+<div style="text-align:center;font-size:10px;color:#888">⏰<br>${dt.time}</div>
+</div>`;
+});
+html+='</div>';
+}
+document.getElementById('matchesBox').innerHTML=html||'<p style="text-align:center">لا توجد مباريات اليوم - سيتم التحديث</p>';
+
+// LIVE
+let liveHtml='';
+if(liveGames.length==0) liveHtml='<p style="text-align:center;color:#888">لا توجد مباريات مباشرة الآن</p>';
+else{
+liveGames.forEach(ev=>{
+let comp=ev.competitions[0];
+let h=toAr(comp.competitors[0].team.displayName);
+let a=toAr(comp.competitors[1].team.displayName);
+let dt=formatDateTime(ev.date);
+liveHtml+=`<div class="league-box"><div class="match-row"><div class="date-time"><div class="date">🔴 مباشر</div><div class="time">${dt.time}</div></div><div class="teams"><span class="team">${h}</span><span class="vs">VS</span><span class="team">${a}</span></div><div class="score-box"><div class="score">${comp.competitors[0].score}-${comp.competitors[1].score}</div><div class="status live">${ev.status.type.detail}</div></div><div style="text-align:center">🔴</div></div></div>`;
+});
+}
+document.getElementById('liveBox').innerHTML=liveHtml;
+
+}catch(e){
+document.getElementById('matchesBox').innerHTML='<p style="text-align:center;color:#ff5555">فشل تحميل الجدول - جاري إعادة المحاولة...</p>';
+}
 }
 
 async function loadTrustedNews(){
-let trustedSources=[
-{url:'https://www.yallakora.com/rss.aspx', name:'يلا كورة', cls:'yalla', icon:'⚽'},
-{url:'https://www.filgoal.com/rss', name:'في الجول', cls:'filgoal', icon:'🥅'},
-{url:'https://www.kooora.com/?rss=1', name:'كووورة', cls:'kooora', icon:'🏆'},
-{url:'https://news.google.com/rss/search?q=site:beinsports.com+كرة+القدم&hl=ar&gl=EG&ceid=EG:ar', name:'beIN SPORTS', cls:'bein', icon:'📺'}
-];
-
-let allNews=[];
-for(let src of trustedSources){
 try{
-let proxy=`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(src.url)}&t=${Date.now()}${Math.random()}`;
-let res=await fetch(proxy);
-let data=await res.json();
-if(data.items && data.items.length>0){
-data.items.slice(0,3).forEach(it=>{
-let title=it.title;
-if(title.length>20){
-let type= title.includes('انتقال')||title.includes('صفقة')||title.includes('تعاقد')||title.includes('يضم')?'transfers': title.includes('إصابة')||title.includes('يغيب')||title.includes('غياب')?'injury': title.includes('رسميا')||title.includes('عاجل')?'official':'exclusive';
-let typeText= type=='transfers'?'انتقالات': type=='injury'?'إصابة': type=='official'?'رسمي':'حصري';
-allNews.push({
-title:title,
-link:it.link,
-pubDate:new Date(it.pubDate),
-source:src.name,
-sourceCls:src.cls,
-icon:src.icon,
-type:type,
-typeText:typeText
-});
-}
-});
-}
-}catch(e){ console.log('مصدر فشل',src.name); }
-}
-
-// لو فشل كل شي، نجيب من جوجل نيوز بمصادر موثوقة فقط
-if(allNews.length<4){
-try{
-let url=`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://news.google.com/rss/search?q=كرة+القدم+انتقالات+إصابات+beIN+Yallakora+FilGoal&hl=ar&gl=EG&ceid=EG:ar')}&t=${Date.now()}`;
+let url=`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://news.google.com/rss/search?q=كرة+القدم+انتقالات+إصابة+beIN+Yallakora&hl=ar&gl=EG&ceid=EG:ar')}&t=${Date.now()}`;
 let res=await fetch(url);
 let data=await res.json();
-data.items.slice(0,6).forEach(it=>{
-allNews.push({
-title:it.title,
-link:it.link,
-pubDate:new Date(it.pubDate),
-source:'مصدر موثوق',
-sourceCls:'yalla',
-icon:'✅',
-type:'exclusive',
-typeText:'حصري'
+let html='';
+data.items.slice(0,8).forEach(it=>{
+let ago=Math.floor((Date.now()-new Date(it.pubDate))/1000/60);
+let agoTxt= ago<60?`منذ ${ago} دقيقة`: `منذ ${Math.floor(ago/60)} ساعة`;
+html+=`<div class="news-card"><div class="news-title">🔥 ${it.title}<div class="meta"><span class="src">✅ موثوق - ${it.source||'SLOOM TV'}</span><span>⏰ ${agoTxt}</span><span>📅 اليوم</span></div></div></div>`;
 });
-});
-}catch(e){}
+document.getElementById('newsBox').innerHTML=html;
+}catch(e){ document.getElementById('newsBox').innerHTML='<p>جاري تحميل الأخبار الموثوقة...</p>'; }
 }
 
-// ترتيب من الأحدث
-allNews.sort((a,b)=>b.pubDate-a.pubDate);
-allNews=allNews.slice(0,10);
-
-let html=''; let tick='';
-allNews.forEach(n=>{
-let ago=timeAgo(n.pubDate);
-html+=`<div class="news-card">
-<div class="news-img">${n.icon}</div>
-<div class="news-content">
-<div class="news-title">${n.title}</div>
-<div class="news-meta">
-<span class="meta-source ${n.sourceCls}">${n.source}</span>
-<span class="type-badge type-${n.type}">${n.typeText}</span>
-<span>⏰ ${ago}</span>
-<span style="color:#22c55e">✅ موثوق</span>
-</div>
-</div>
-</div>`;
-tick+=` ✅ ${n.source}: ${n.title} (${ago}) • `;
-});
-
-document.getElementById('newsBox').innerHTML=html||'<p>جاري التحديث من المصادر الموثوقة...</p>';
-document.getElementById('ticker').innerText='🔴 SLOOM TV - مصادر موثوقة: '+tick;
+function switchTab(tab,btn){
+document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+document.getElementById('matchesSection').style.display= tab=='matches'?'block':'none';
+document.getElementById('newsSection').style.display= tab=='news'?'block':'none';
+document.getElementById('liveSection').style.display= tab=='live'?'block':'none';
 }
 
+loadAllMatches();
 loadTrustedNews();
-setInterval(loadTrustedNews, 120000); // يحدث كل دقيقتين من المصادر الموثوقة
+setInterval(loadAllMatches, 60000);
+setInterval(loadTrustedNews, 120000);
 </script>
 </body>
 </html>
