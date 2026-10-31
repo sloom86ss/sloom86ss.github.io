@@ -3,18 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLOOM TV LIVE - البث المباشر</title>
+<title>سلوم تيفي - sloomtv - البث المباشر</title>
+<meta name="description" content="سلوم تيفي - sloomtv - SLOOM TV LIVE - البث المباشر لجميع الدوريات">
+<meta name="keywords" content="سلوم تيفي, sloomtv, SLOOM TV, سلوم تيفي مباشر, sloomtv live">
+<!-- خطوط سريعة -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
   body{font-family:'Tajawal',sans-serif;background:#0a0e13;color:#fff;margin:0;padding:0}
-  .header{background:linear-gradient(90deg,#0d1b2a,#1b263b);padding:15px;text-align:center;border-bottom:3px solid #00ff88;position:sticky;top:0;z-index:100}
-  .logo{font-size:28px;font-weight:900;color:#00ff88}
-  .logo span{color:#fff}
+  .header{background:linear-gradient(90deg,#0d1b2a,#1b263b);padding:15px;border-bottom:3px solid #00ff88;position:sticky;top:0;z-index:100}
+  .header-top{display:flex;justify-content:space-between;align-items:center}
+  .logo{font-size:26px;font-weight:900;color:#00ff88}
+  .logo span.en{font-family:'Orbitron',sans-serif;letter-spacing:1px}
+  .logo span.live{color:#fff;font-size:14px}
+  .lang-btn{background:#00ff88;color:#000;border:none;padding:6px 14px;border-radius:20px;font-weight:900;font-size:12px;cursor:pointer}
+  .sub{font-size:11px;color:#9ca3af;margin-top:4px}
   .clock-box{background:linear-gradient(135deg,#111827,#1f2937);border:1px solid #00ff8855;border-radius:15px;padding:15px;margin:15px;text-align:center;box-shadow:0 0 20px #00ff8822}
-  .clock-time{font-size:36px;font-weight:900;letter-spacing:2px;color:#00ff88;text-shadow:0 0 10px #00ff88}
+  .clock-time{font-size:36px;font-weight:900;letter-spacing:2px;color:#00ff88;text-shadow:0 0 10px #00ff88;font-family:'Orbitron',sans-serif}
   .clock-date{font-size:14px;color:#9ca3af;margin-top:5px}
   .clock-city{font-size:12px;color:#00ff88;background:#00ff8822;padding:3px 10px;border-radius:20px;display:inline-block;margin-top:8px}
-  /* شبكة البوتات */
   .bots-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:15px}
   .bot-card{background:#111827;border-radius:10px;padding:10px;font-size:11px;border-right:3px solid var(--c);position:relative;overflow:hidden}
   .bot-card::before{content:'';position:absolute;top:0;right:0;width:100%;height:2px;background:var(--c);animation:load 5s linear infinite}
@@ -33,7 +42,18 @@
 <body>
 
 <div class="header">
-  <div class="logo">SLOOM <span>TV LIVE - 10 BOTS ⚡</span></div>
+  <div class="header-top">
+    <div class="logo">
+      <span id="logoAr">سلوم تيفي</span>
+      <span id="logoEn" class="en" style="display:none">SLOOMTV</span>
+      <span class="live"> LIVE</span>
+    </div>
+    <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+  </div>
+  <div class="sub">
+    <span id="subAr">sloomtv - البث المباشر لجميع الدوريات ⚡ 10 بوتات</span>
+    <span id="subEn" style="display:none">سلوم تيفي - sloomtv - 10 BOTS Live ⚡</span>
+  </div>
 </div>
 
 <div class="clock-box">
@@ -42,7 +62,6 @@
   <div class="clock-city">📍 توقيت مسقط - البريمي 🇴🇲 | 10 بوتات نشطة</div>
 </div>
 
-<!-- 10 بوتات -->
 <div class="bots-grid" id="botsGrid"></div>
 
 <div class="match-card">
@@ -51,53 +70,61 @@
   <a class="btn" href="#">شاهد التفاصيل مباشر</a>
 </div>
 
-<div class="match-card">
-  <div class="league">🏆 دوري روشن السعودي <span class="live-badge">● مباشر 84'</span></div>
-  <div class="teams"><span>الفيحاء</span><span class="vs">3 - 1</span><span>الفيصلي</span></div>
-  <a class="btn" href="#">تابع المباراة لحظة بلحظة</a>
-</div>
-
 <script>
-// الساعة
+let lang = localStorage.getItem('sloom-lang') || 'ar';
+function toggleLang(){
+  lang = lang==='ar'?'en':'ar';
+  localStorage.setItem('sloom-lang',lang);
+  applyLang();
+}
+function applyLang(){
+  const isAr = lang==='ar';
+  document.documentElement.lang=isAr?'ar':'en';
+  document.documentElement.dir=isAr?'rtl':'ltr';
+  document.getElementById('logoAr').style.display=isAr?'inline':'none';
+  document.getElementById('logoEn').style.display=isAr?'none':'inline';
+  document.getElementById('subAr').style.display=isAr?'inline':'none';
+  document.getElementById('subEn').style.display=isAr?'none':'inline';
+  document.getElementById('langBtn').textContent=isAr?'EN':'عربي';
+  document.title=isAr?'سلوم تيفي - sloomtv - البث المباشر':'SLOOMTV - سلوم تيفي Live';
+}
+applyLang();
+
 function updateClock(){
-  const now = new Date();
-  const oT = {timeZone:'Asia/Muscat',hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'};
-  const oD = {timeZone:'Asia/Muscat',weekday:'long',year:'numeric',month:'long',day:'numeric'};
-  document.getElementById('clock').textContent = now.toLocaleTimeString('ar-EG',oT);
-  document.getElementById('date').textContent = now.toLocaleDateString('ar-EG',oD);
+  const now=new Date();
+  const oT={timeZone:'Asia/Muscat',hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'};
+  const oD={timeZone:'Asia/Muscat',weekday:'long',year:'numeric',month:'long',day:'numeric'};
+  const locale=lang==='ar'?'ar-EG':'en-GB';
+  document.getElementById('clock').textContent=now.toLocaleTimeString(locale,oT);
+  document.getElementById('date').textContent=now.toLocaleDateString(locale,oD);
 }
 setInterval(updateClock,1000); updateClock();
 
-// 🔥 10 بوتات - كل دوري بوت اسرع
-const BOTS = [
-  {id:1, name:"روشن", league:"دوري روشن", sec:5, color:"#00ff88"},
-  {id:2, name:"بريمييرليج", league:"Premier League", sec:6, color:"#ff0040"},
-  {id:3, name:"الليغا", league:"La Liga", sec:7, color:"#ffcc00"},
-  {id:4, name:"بوندسليغا", league:"Bundesliga", sec:8, color:"#ff0000"},
-  {id:5, name:"الكالتشيو", league:"Serie A", sec:9, color:"#0080ff"},
-  {id:6, name:"ليغ 1", league:"Ligue 1", sec:10, color:"#8000ff"},
-  {id:7, name:"الأبطال", league:"Champions", sec:5, color:"#00ffff"},
-  {id:8, name:"آسيا", league:"AFC", sec:11, color:"#ff8000"},
-  {id:9, name:"أوروبا", league:"Europa", sec:12, color:"#ff0080"},
-  {id:10, name:"الكأس", league:"King Cup", sec:5, color:"#ffff00"},
+const BOTS=[
+  {id:1,name:"روشن",nameEn:"Roshn",league:"دوري روشن",sec:5,color:"#00ff88"},
+  {id:2,name:"بريمييرليج",nameEn:"Premier",league:"Premier League",sec:6,color:"#ff0040"},
+  {id:3,name:"الليغا",nameEn:"LaLiga",league:"La Liga",sec:7,color:"#ffcc00"},
+  {id:4,name:"بوندسليغا",nameEn:"Bundes",league:"Bundesliga",sec:8,color:"#ff0000"},
+  {id:5,name:"الكالتشيو",nameEn:"Serie A",league:"Serie A",sec:9,color:"#0080ff"},
+  {id:6,name:"ليغ 1",nameEn:"Ligue 1",league:"Ligue 1",sec:10,color:"#8000ff"},
+  {id:7,name:"الأبطال",nameEn:"UCL",league:"Champions",sec:5,color:"#00ffff"},
+  {id:8,name:"آسيا",nameEn:"AFC",league:"AFC",sec:11,color:"#ff8000"},
+  {id:9,name:"أوروبا",nameEn:"Europa",league:"Europa",sec:12,color:"#ff0080"},
+  {id:10,name:"الكأس",nameEn:"Cup",league:"King Cup",sec:5,color:"#ffff00"},
 ];
-
-const grid = document.getElementById('botsGrid');
+const grid=document.getElementById('botsGrid');
 BOTS.forEach(b=>{
-  const div = document.createElement('div');
+  const div=document.createElement('div');
   div.className='bot-card';
-  div.style.setProperty('--c', b.color);
-  div.innerHTML=`<div class="bot-name">🤖 BOT ${b.id} - ${b.name}</div><div>${b.league}</div><div class="bot-time" id="bot-${b.id}">يبدأ...</div>`;
+  div.style.setProperty('--c',b.color);
+  div.innerHTML=`<div class="bot-name">🤖 BOT ${b.id} - <span class="bn">${b.name}</span></div><div>${b.league}</div><div class="bot-time" id="bot-${b.id}">يبدأ...</div>`;
   grid.appendChild(div);
-  
   setInterval(()=>{
-    const t = new Date().toLocaleTimeString('ar-EG',{timeZone:'Asia/Muscat',hour12:false});
-    document.getElementById(`bot-${b.id}`).textContent=`⚡ يحدث : ${t} | كل ${b.sec} ث`;
-    // هنا تحط كود جلب البيانات الحقيقي لكل دوري
-    console.log(`[${b.name}] تحديث`);
-  }, b.sec*1000);
+    const t=new Date().toLocaleTimeString(lang==='ar'?'ar-EG':'en-GB',{timeZone:'Asia/Muscat',hour12:false});
+    const el=document.getElementById(`bot-${b.id}`);
+    if(el) el.textContent=`⚡ ${lang==='ar'?'يحدث':'Update'} : ${t} | كل ${b.sec} ث`;
+  },b.sec*1000);
 });
 </script>
-
 </body>
 </html>
