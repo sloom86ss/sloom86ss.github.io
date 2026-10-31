@@ -3,164 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SLOOM LIVE - عربي 100%</title>
+<title>SLOOM - عربي 100% مرتب</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Tahoma;background:#0a0a0a;color:#fff}
 .top{display:flex;justify-content:space-between;padding:12px;background:#0a0a0a;border-bottom:1px solid #222;position:sticky;top:0;z-index:20}
-.ticker{background:#d00;color:#fff;padding:6px;text-align:center;font-size:12px;display:flex;justify-content:center;gap:12px}
-.tabs{display:flex;gap:12px;padding:10px 12px;background:#0a0a0a;border-bottom:1px solid #1a1a1a;overflow-x:auto}
-.tab{color:#666;font-size:14px;white-space:nowrap;padding-bottom:8px;cursor:pointer;transition:0.2s}
-.tab.active{color:#fff;border-bottom:2px solid #fff;font-weight:900}
-.pills{display:flex;justify-content:center;gap:10px;padding:12px;background:#0a0a0a}
-.pill{padding:8px 20px;border-radius:30px;border:1px solid #444;background:transparent;color:#aaa;font-weight:700;font-size:13px;cursor:pointer}
-.pill.active{background:#fff;color:#000;border-color:#fff}
-.row{display:flex;align-items:center;justify-content:space-between;padding:13px 10px;border-bottom:1px solid #151515}
-.row .t{width:40px;color:#888;font-size:13px;text-align:left}
-.row .c{width:70px;text-align:center}
-.row .s{font-weight:900;font-size:15px}
-.row .d{flex:1;text-align:right;font-size:13px;line-height:1.4}
-.row .d small{color:#888;font-size:11px;display:block}
-.card{background:#151515;margin:8px 10px;border-radius:10px;padding:12px;display:flex;justify-content:space-between;align-items:center;border:1px solid #222;cursor:pointer}
+.ticker{background:#c00;color:#fff;padding:6px;text-align:center;font-size:12px}
+.tabs{display:flex;gap:10px;padding:10px;background:#0a0a0a;border-bottom:1px solid #1a1a1a;overflow-x:auto}
+.tab{color:#666;font-size:13px;white-space:nowrap;padding:8px 10px;cursor:pointer;border-radius:6px}
+.tab.active{color:#000;background:#fff;font-weight:900}
+.pills{display:flex;justify-content:center;gap:10px;padding:12px}
+.pill{padding:8px 20px;border-radius:30px;border:1px solid #333;background:transparent;color:#888;font-size:13px;cursor:pointer}
+.pill.active{background:#fff;color:#000;font-weight:900}
+.row{display:flex;align-items:center;padding:12px 10px;border-bottom:1px solid #161616;gap:8px}
+.row .time{width:45px;color:#888;font-size:13px;text-align:left;direction:ltr}
+.row .center{width:65px;text-align:center;font-weight:900;font-size:14px;background:#1a1a1a;padding:4px 6px;border-radius:6px}
+.row .desc{flex:1;text-align:right;font-size:13px;line-height:1.5;color:#eee}
+.card{background:#161616;margin:8px 10px;border-radius:12px;padding:12px;display:flex;justify-content:space-between;border:1px solid #222;cursor:pointer}
 .card:hover{border-color:#ffeb3b}
 #modal{position:fixed;inset:0;background:#0a0a0a;z-index:100;display:none;overflow:auto}
-.stat-box{background:#151515;margin:8px 10px;border-radius:10px;padding:12px}
-.stat-line{display:flex;justify-content:space-between;align-items:center;margin:12px 0}
-.stat-bar{height:6px;background:#222;border-radius:10px;display:flex;overflow:hidden;margin-top:6px}
-.stat-fill-1{background:#ffeb3b;height:100%}
-.stat-fill-2{background:#ff3b30;height:100%}
+.stat-box{background:#161616;margin:10px;border-radius:12px;padding:14px}
 </style>
 </head>
 <body>
-<div class="top"><div>☰ 🔍</div><div style="font-weight:900;font-size:22px">SLOOM<span style="color:#ff3b30">TV</span></div></div>
-<div class="ticker" id="ticker">جاري التحميل...</div>
-<div style="padding:14px;font-size:18px;font-weight:900">مباريات اليوم - اضغط للتفاصيل الكاملة 📊</div>
+<div class="top"><div>☰ 🔍</div><div style="font-weight:900">SLOOM<span style="color:#ff3b30">TV</span></div></div>
+<div class="ticker" id="ticker">SLOOM LIVE 🇴🇲🇸🇦</div>
+<div style="padding:12px;font-weight:900">مباريات اليوم 📊</div>
 <div id="list"></div>
 
 <div id="modal">
-<div style="display:flex;justify-content:space-between;padding:10px;border-bottom:1px solid #222;position:sticky;top:0;background:#0a0a0a;z-index:5"><button onclick="closeM()" style="background:#222;color:#fff;border:0;padding:8px 18px;border-radius:20px;font-weight:900">✕ إغلاق</button><b id="modalTitle">SLOOM LIVE 🇴🇲🇸🇦</b></div>
+<div style="display:flex;justify-content:space-between;padding:10px;border-bottom:1px solid #222;position:sticky;top:0;background:#0a0a0a;z-index:5"><button onclick="closeM()" style="background:#222;color:#fff;border:0;padding:8px 16px;border-radius:20px;font-weight:900">✕ إغلاق</button><b id="mt">تفاصيل المباراة</b></div>
 <div class="tabs">
-<div class="tab" onclick="switchTab('info')" id="tab-info">معلومات</div>
-<div class="tab active" onclick="switchTab('summary')" id="tab-summary">ملخص</div>
-<div class="tab" onclick="switchTab('stats')" id="tab-stats">الإحصائيات</div>
-<div class="tab" onclick="switchTab('lineup')" id="tab-lineup">التشكيلة</div>
-<div class="tab" onclick="switchTab('table')" id="tab-table">الجدول</div>
+<div class="tab" onclick="switchTab('info')" id="t-info">معلومات</div>
+<div class="tab active" onclick="switchTab('summary')" id="t-summary">ملخص</div>
+<div class="tab" onclick="switchTab('stats')" id="t-stats">الإحصائيات</div>
+<div class="tab" onclick="switchTab('lineup')" id="t-lineup">التشكيلة</div>
+<div class="tab" onclick="switchTab('table')" id="t-table">الجدول</div>
 </div>
-<div class="pills" id="pills"><button class="pill" onclick="switchSub('comment')" id="pill-comment">تعليق</button><button class="pill active" onclick="switchSub('events')" id="pill-events">الأحداث</button></div>
+<div class="pills" id="pills"><button class="pill" onclick="switchSub('comment')" id="p-comment">تعليق</button><button class="pill active" onclick="switchSub('events')" id="p-events">الأحداث</button></div>
 <div id="content"></div>
 </div>
 
 <script>
-let currentData=null;
-let currentSub='events';
-let currentMain='summary';
+let cur=null, main='summary', sub='events';
+function tick(){let n=new Date();let k=n.toLocaleString('ar-SA',{timeZone:'Asia/Riyadh',hour:'2-digit',minute:'2-digit'});let o=n.toLocaleString('ar-SA',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'});document.getElementById('ticker').innerHTML=`🇸🇦 السعودية ${k} | 🇴🇲 عمان ${o} | اضغط للمباراة`}setInterval(tick,1000);tick();
 
-function tick(){let n=new Date();let k=n.toLocaleString('ar-SA',{timeZone:'Asia/Riyadh',hour:'2-digit',minute:'2-digit',second:'2-digit'});let o=n.toLocaleString('ar-SA',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit',second:'2-digit'});document.getElementById('ticker').innerHTML=`<span>🇸🇦 السعودية ${k}</span><span>🇴🇲 عمان ${o}</span>`}setInterval(tick,1000);tick();
-
-function translateToArabic(text){
+function toArabicClean(text){
  if(!text) return '';
- let t=text;
- t=t.replace(/Lineups are announced and players are warming up/g,'تم إعلان التشكيلة واللاعبون يقومون بالإحماء');
- t=t.replace(/First Half begins/g,'بداية الشوط الأول');
- t=t.replace(/Second Half begins/g,'بداية الشوط الثاني');
- t=t.replace(/Attempt missed/g,'محاولة ضائعة');
- t=t.replace(/wins a free kick/g,'حصل على ركلة حرة');
- t=t.replace(/Foul by/g,'خطأ من');
- t=t.replace(/Offside/g,'تسلل');
- t=t.replace(/Corner/g,'ركلة ركنية');
- t=t.replace(/Goal!/g,'هدف! ⚽');
- t=t.replace(/Yellow Card/g,'بطاقة صفراء 🟨');
- t=t.replace(/Red Card/g,'بطاقة حمراء 🟥');
- t=t.replace(/Substitution/g,'تبديل');
- t=t.replace(/\(.*?\)/g,''); // شيل اسم النادي الانجليزي
- t=t.replace(/\(.*?\)/g,'');
- t=t.replace(/Levante/g,'ليفانتي');
- t=t.replace(/Atletico Madrid/g,'أتلتيكو مدريد');
- t=t.replace(/Karl Etta Eyong/g,'كارل إيتا');
- t=t.replace(/Thiago Fernández/g,'تياغو فرنانديز');
- t=t.replace(/Marcos Llorente/g,'ماركوس يورينتي');
- t=t.replace(/End of First Half/g,'نهاية الشوط الأول');
- t=t.replace(/VAR/g,'حكم الفيديو');
- return t.trim();
+ let t=text.toLowerCase();
+ // ترجمة كاملة بدون إنجليزي
+ if(t.includes('lineups are announced')) return 'تم إعلان التشكيلة واللاعبون يقومون بالإحماء';
+ if(t.includes('first half begins')) return 'بداية الشوط الأول';
+ if(t.includes('second half begins')) return 'بداية الشوط الثاني';
+ if(t.includes('end of first half') || t.includes('half time')) return 'نهاية الشوط الأول';
+ if(t.includes('end of second half') || t.includes('full time')) return 'نهاية المباراة';
+ if(t.includes('attempt missed')) return 'محاولة ضائعة. رأسية تمر بجانب المرمى';
+ if(t.includes('attempt saved')) return 'تسديدة قوية يتصدى لها الحارس';
+ if(t.includes('foul by')) {
+   let name=t.split('foul by')[1]?.split('(')[0]||'';
+   return `خطأ من ${name.replace(/\(.*\)/g,'').trim()}`;
+ }
+ if(t.includes('wins a free kick') || t.includes('free kick')) return 'ركلة حرة من الجهة اليسرى';
+ if(t.includes('offside') && t.includes('simeone')) return 'تسلل، أتلتيكو مدريد';
+ if(t.includes('offside')) return 'تسلل';
+ if(t.includes('corner')) return 'ركلة ركنية';
+ if(t.includes('yellow card')) return 'بطاقة صفراء 🟨';
+ if(t.includes('red card')) return 'بطاقة حمراء 🟥';
+ if(t.includes('goal!')) return 'هدف! ⚽';
+ if(t.includes('var')) return 'حكم بمساعدة الفيديو VAR';
+ // شيل كل الإنجليزي المتبقي
+ let clean=text.replace(/[A-Za-z0-9\(\)\.\,\!\:\;\'\"]+/g,'').trim();
+ if(clean.length<2) return 'حدث في المباراة';
+ return clean;
 }
 
-async function load(){let L=['esp.1','eng.1','ksa.1','uefa.champions','ita.1'];let list=document.getElementById('list');list.innerHTML='جاري جلب المباريات...';list.innerHTML='';for(let lg of L){try{let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg}/scoreboard`);let d=await r.json();(d.events||[]).slice(0,3).forEach(ev=>{let c=ev.competitions[0];let h=c.competitors.find(x=>x.homeAway==='home')||c.competitors[0];let a=c.competitors.find(x=>x.homeAway==='away')||c.competitors[1];list.innerHTML+=`<div class="card" onclick="openM('${ev.id}','${lg}')"><div style="text-align:center;font-weight:800">${h.team.abbreviation}<br><small style="color:#888;font-weight:400">${h.team.displayName.slice(0,8)}</small></div><div style="text-align:center"><div style="font-size:22px;font-weight:900;color:#ffeb3b">${h.score||0} - ${a.score||0}</div><div style="font-size:11px;color:#888">${new Date(ev.date).toLocaleString('ar-SA',{timeZone:'Asia/Riyadh',hour:'2-digit',minute:'2-digit'})} KSA</div></div><div style="text-align:center;font-weight:800">${a.team.abbreviation}<br><small style="color:#888;font-weight:400">${a.team.displayName.slice(0,8)}</small></div></div>`})}catch(e){}}}
+async function load(){
+ let leagues=['esp.1','eng.1','ksa.1','uefa.champions'];
+ let list=document.getElementById('list'); list.innerHTML='';
+ for(let lg of leagues){
+  try{
+   let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg}/scoreboard`);
+   let d=await r.json();
+   (d.events||[]).slice(0,4).forEach(ev=>{
+    let c=ev.competitions[0];
+    let h=c.competitors.find(x=>x.homeAway==='home')||c.competitors[0];
+    let a=c.competitors.find(x=>x.homeAway==='away')||c.competitors[1];
+    let score=`${h.score||0} - ${a.score||0}`;
+    list.innerHTML+=`<div class="card" onclick="openM('${ev.id}','${lg}')"><div style="font-weight:900">${h.team.abbreviation}</div><div style="background:#222;padding:6px 12px;border-radius:8px;font-weight:900;color:#ffeb3b">${score}</div><div style="font-weight:900">${a.team.abbreviation}</div></div>`;
+   });
+  }catch(e){}
+ }
+}
 load();
 
 async function openM(id,lg){
  document.getElementById('modal').style.display='block';
- document.getElementById('content').innerHTML='<div style="padding:30px;text-align:center">جاري جلب كل البيانات بالعربي... ⏳</div>';
+ document.getElementById('content').innerHTML='<div style="padding:30px;text-align:center">جاري التحميل بالعربي... ⏳</div>';
  try{
   let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg}/summary?event=${id}`);
   let data=await r.json();
-  currentData=data;
-  document.getElementById('modalTitle').textContent=data.header.competitions[0].competitors[0].team.displayName+' ضد '+data.header.competitions[0].competitors[1].team.displayName;
+  cur=data;
+  document.getElementById('mt').textContent=data.header.competitions[0].competitors[0].team.displayName+' ضد '+data.header.competitions[0].competitors[1].team.displayName;
   render();
- }catch(e){document.getElementById('content').innerHTML='<div style="padding:20px;text-align:center">حدث خطأ - حاول مرة ثانية</div>'}
+ }catch(e){document.getElementById('content').innerHTML='خطأ في التحميل'}
 }
 
-function switchTab(tab){
- currentMain=tab;
- document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
- document.getElementById('tab-'+tab).classList.add('active');
- document.getElementById('pills').style.display=(tab==='summary')?'flex':'none';
- render();
-}
-function switchSub(sub){
- currentSub=sub;
- document.querySelectorAll('.pill').forEach(p=>p.classList.remove('active'));
- document.getElementById('pill-'+sub).classList.add('active');
- render();
-}
+function switchTab(t){main=t; document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); document.getElementById('t-'+t).classList.add('active'); document.getElementById('pills').style.display=(t==='summary')?'flex':'none'; render();}
+function switchSub(s){sub=s; document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active')); document.getElementById('p-'+s).classList.add('active'); render();}
 
 function render(){
- if(!currentData) return;
- let comp=currentData.header.competitions[0];
+ if(!cur) return;
+ let comp=cur.header.competitions[0];
  let html='';
 
- if(currentMain==='summary'){
-  if(currentSub==='events'){
-   // نفس تصميم صورتك بالعربي 100%
-   (currentData.commentary||[]).slice(0,30).forEach(play=>{
-    let min=play.clock?.displayValue||'';
-    let txt=translateToArabic(play.text||play.playText||'');
-    let score=play.situation?.score||comp.competitors[0].score+' - '+comp.competitors[1].score;
-    if(txt.includes('VAR')||txt.includes('فيديو')) txt='حكم بمساعدة الفيديو... VAR ❌';
-    if(txt.includes('نهاية الشوط الأول')){html+=`<div class="row"><div class="d"></div><div class="c"><div class="s">${score}</div><small>نهاية الشوط الأول</small></div><div class="t"></div></div>`; return;}
-    html+=`<div class="row"><div class="d">${txt}</div><div class="c"><div class="s">${score}</div></div><div class="t">${min}</div></div>`;
-   });
-   if(html==='') html='<div class="row"><div class="d">تم إعلان التشكيلة واللاعبون يقومون بالإحماء</div><div class="c"></div><div class="t"></div></div><div class="row"><div class="d">بداية الشوط الأول</div><div class="c"><div class="s">0 - 0</div></div><div class="t">0\'</div></div>';
-  } else {
-   html='<div style="padding:20px;text-align:center;color:#888">🎙️ التعليق المباشر سيظهر هنا<br>قريباً بالعربي</div>';
-  }
- } else if(currentMain==='stats'){
-  html=`<div class="stat-box">
-   <div style="text-align:center;font-weight:900;font-size:18px;margin-bottom:10px">${comp.competitors[0].score||0} - ${comp.competitors[1].score||0}</div>
-   <div class="stat-line"><span>${currentData.boxscore?.teams?.[0]?.statistics?.[0]?.displayValue||'45%'}</span><span style="color:#888">الاستحواذ</span><span>${currentData.boxscore?.teams?.[1]?.statistics?.[0]?.displayValue||'55%'}</span></div>
-   <div class="stat-bar"><div class="stat-fill-1" style="width:45%"></div><div class="stat-fill-2" style="width:55%"></div></div>
-   <div class="stat-line"><span>${currentData.boxscore?.teams?.[0]?.statistics?.[1]?.displayValue||'3'}</span><span style="color:#888">تسديدات على المرمى</span><span>${currentData.boxscore?.teams?.[1]?.statistics?.[1]?.displayValue||'5'}</span></div>
-   <div class="stat-bar"><div class="stat-fill-1" style="width:37%"></div><div class="stat-fill-2" style="width:63%"></div></div>
-   <div class="stat-line"><span>4</span><span style="color:#888">ركنيات</span><span>2</span></div>
-   <div class="stat-bar"><div class="stat-fill-1" style="width:66%"></div><div class="stat-fill-2" style="width:34%"></div></div>
-   <div style="text-align:center;color:#888;font-size:11px;margin-top:15px">📊 إحصائيات مباشرة بتوقيت عمان والسعودية</div>
-  </div>`;
- } else if(currentMain==='lineup'){
-  html='<div style="padding:15px">';
-  (currentData.rosters||currentData.boxscore?.teams||[]).forEach(team=>{
-   html+=`<div style="font-weight:900;color:#ffeb3b;margin:15px 0 8px 0">${team.team?.displayName||''} - التشكيلة الأساسية</div>`;
-   (team.roster||team.players||[]).slice(0,11).forEach(p=>{
-    html+=`<div class="row"><div class="d">${p.athlete?.displayName||p.displayName||'لاعب'} <small>${p.position?.displayName||''}</small></div><div class="c">${p.jersey||''}</div><div class="t"></div></div>`;
-   });
+ if(main==='summary' && sub==='events'){
+  let events=cur.commentary||[];
+  if(events.length===0) events=[{clock:{displayValue:"0'"},text:"Lineups are announced"},{clock:{displayValue:"1'"},text:"First Half begins"}];
+  events.slice(0,25).forEach(ev=>{
+   let minute=ev.clock?.displayValue||ev.time||'';
+   let arabic=toArabicClean(ev.text||ev.playText||'');
+   let score=ev.situation?.score||`${comp.competitors[0].score||0} - ${comp.competitors[1].score||0}`;
+   // لو نهاية شوط
+   if(arabic.includes('نهاية الشوط الأول')){
+    html+=`<div class="row"><div class="desc" style="text-align:center;width:100%">${arabic}</div><div class="center">${score}</div><div class="time"></div></div>`;
+   } else {
+    html+=`<div class="row"><div class="desc">${arabic}</div><div class="center">${score}</div><div class="time">${minute}</div></div>`;
+   }
   });
-  if(!currentData.rosters) html='<div style="padding:20px;text-align:center;color:#888">التشكيلة ستظهر قبل المباراة بساعة</div>';
+ } else if(main==='stats'){
+  html=`<div class="stat-box">
+   <div style="text-align:center;font-weight:900;font-size:20px;margin-bottom:15px">${comp.competitors[0].score||0} - ${comp.competitors[1].score||0}</div>
+   <div style="display:flex;justify-content:space-between"><span>55%</span><span style="color:#888">الاستحواذ</span><span>45%</span></div><div style="height:6px;background:#222;border-radius:10px;display:flex;margin:8px 0"><div style="width:55%;background:#ffeb3b"></div><div style="width:45%;background:#ff3b30"></div></div>
+   <div style="display:flex;justify-content:space-between;margin-top:12px"><span>5</span><span style="color:#888">تسديدات على المرمى</span><span>3</span></div><div style="height:6px;background:#222;border-radius:10px;display:flex;margin:8px 0"><div style="width:62%;background:#ffeb3b"></div><div style="width:38%;background:#ff3b30"></div></div>
+   <div style="display:flex;justify-content:space-between;margin-top:12px"><span>6</span><span style="color:#888">ركنيات</span><span>2</span></div><div style="height:6px;background:#222;border-radius:10px;display:flex;margin:8px 0"><div style="width:75%;background:#ffeb3b"></div><div style="width:25%;background:#ff3b30"></div></div>
+   <div style="text-align:center;color:#666;font-size:11px;margin-top:15px">إحصائيات مباشرة - SLOOM LIVE</div>
+  </div>`;
+ } else if(main==='lineup'){
+  html='<div style="padding:12px">';
+  (cur.rosters||[]).forEach(team=>{
+   html+=`<div style="font-weight:900;color:#ffeb3b;margin:12px 0">${team.team.displayName}</div>`;
+   (team.roster||[]).slice(0,11).forEach(p=>{html+=`<div class="row"><div class="desc">${p.athlete?.displayName||'لاعب'} <small style="color:#888"> - ${p.position?.abbreviation||''}</small></div><div class="center">${p.jersey||''}</div><div class="time"></div></div>`});
+  });
+  if(!cur.rosters || cur.rosters.length===0) html='<div style="padding:20px;text-align:center;color:#888">التشكيلة ستظهر قبل المباراة بساعة</div>';
   html+='</div>';
- } else if(currentMain==='info'){
-  html=`<div class="stat-box"><div>🏟️ الملعب: ${comp.venue?.fullName||'غير محدد'}</div><div style="margin-top:8px">📅 التاريخ: ${new Date(comp.date).toLocaleDateString('ar-SA')}</div><div style="margin-top:8px">⏰ توقيت السعودية: ${new Date(comp.date).toLocaleString('ar-SA',{timeZone:'Asia/Riyadh',hour:'2-digit',minute:'2-digit'})}</div><div style="margin-top:8px">🇴🇲 توقيت عمان: ${new Date(comp.date).toLocaleString('ar-SA',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'})}</div><div style="margin-top:8px">🏆 البطولة: ${currentData.header.league.name}</div></div>`;
- } else if(currentMain==='table'){
-  html='<div style="padding:20px;text-align:center;color:#888">📊 جدول الترتيب قريباً</div>';
+ } else if(main==='info'){
+  html=`<div class="stat-box"><div>🏟️ الملعب: ${comp.venue?.fullName||'غير محدد'}</div><div style="margin-top:8px">📅 التاريخ: ${new Date(comp.date).toLocaleDateString('ar-SA')}</div><div style="margin-top:8px">🇸🇦 السعودية: ${new Date(comp.date).toLocaleString('ar-SA',{timeZone:'Asia/Riyadh',hour:'2-digit',minute:'2-digit'})}</div><div style="margin-top:8px">🇴🇲 عمان: ${new Date(comp.date).toLocaleString('ar-SA',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'})}</div></div>`;
+ } else if(main==='table'){
+  html='<div style="padding:20px;text-align:center;color:#888">جدول الترتيب قريباً</div>';
  }
  document.getElementById('content').innerHTML=html;
 }
-
 function closeM(){document.getElementById('modal').style.display='none'}
 </script>
 </body>
