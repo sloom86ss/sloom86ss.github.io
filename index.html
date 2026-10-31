@@ -8,103 +8,94 @@
 <style>
 *{box-sizing:border-box;font-family:'Tajawal',sans-serif}
 body{margin:0;background:#0a0a0a;color:#fff}
-.header{background:#111;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #00ff88}
+.header{background:#111;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #00ff88;position:sticky;top:0;z-index:10}
 .header b{color:#00ff88;font-size:22px}
 .header span{color:#ffeb3b;font-size:13px}
 .lang{background:#00ff88;color:#000;border:none;border-radius:22px;padding:6px 14px;font-weight:900}
-.clock-bar{background:#1a1a1a;padding:7px 12px;display:flex;justify-content:space-between;font-size:11px;color:#aaa}
-.clock-bar #clock{color:#00ff88;font-weight:900;font-size:13px}
+.clock-bar{background:#1a1a1a;padding:8px 12px;display:flex;justify-content:space-between;font-size:11px;color:#aaa;gap:8px;flex-wrap:wrap}
+.clock-bar div{white-space:nowrap}
+#clockSA{color:#00ff88;font-weight:900;font-size:12px}
+#clockOM{color:#ffeb3b;font-weight:900;font-size:12px}
 .bots{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#000;padding:2px}
-.bot{background:#1e1e1e;padding:8px 4px;text-align:center;border-top:2px solid var(--c)}
-.bot b{color:var(--c);display:block;font-size:12px}
-.bot small{font-size:9px;color:#888}
-.bot .league{font-size:10px;color:#fff;margin-top:2px}
-.league-title{padding:12px;color:#00ff88;font-weight:900;background:#151515;margin-top:8px;display:flex;justify-content:space-between}
-.card{background:#1e1e1e;border-radius:18px;border:1px solid #333;margin:8px 10px;padding:16px 12px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;transition:0.2s}
-.card:active{transform:scale(0.98);border-color:#00ff88}
-.card .team{width:28%;text-align:center;font-size:12px}
-.card .score{width:44%;display:flex;justify-content:space-between;align-items:center;font-size:26px;font-weight:900}
-.card .score .min{color:#00ff88}
-/* مودال beIN */
+.bot{background:#1e1e1e;padding:10px 4px;text-align:center;border-top:3px solid var(--c)}
+.bot b{color:var(--c);display:block;font-size:13px}
+.bot small{font-size:10px;color:#00ff88}
+.bot .league{font-size:10px;color:#fff;margin-top:3px}
+.league-title{padding:12px;color:#00ff88;font-weight:900;background:#151515;margin-top:8px;display:flex;justify-content:space-between;border-right:3px solid #00ff88}
+.card{background:#1e1e1e;border-radius:18px;border:1px solid #333;margin:8px 10px;padding:16px 12px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.card .team{width:28%;text-align:center;font-size:13px;font-weight:700}
+.card .score{width:44%;display:flex;justify-content:space-between;align-items:center;font-size:28px;font-weight:900}
+.card .score .min{color:#00ff88;font-size:20px}
 .modal{position:fixed;top:0;left:0;right:0;bottom:0;background:#0a0a0a;z-index:99;display:none;overflow:auto}
-.modal-head{background:#6a2db8;padding:12px;color:#fff;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}
-.modal-head button{background:#fff;color:#6a2db8;border:none;border-radius:20px;padding:4px 12px;font-weight:900}
-.event{padding:10px 15px;border-bottom:1px solid #222;display:flex;justify-content:space-between;font-size:13px}
+.modal-head{background:#111;padding:12px;color:#fff;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;border-bottom:2px solid #00ff88}
+.modal-head button{background:#00ff88;color:#000;border:none;border-radius:20px;padding:6px 14px;font-weight:900}
+.event{padding:12px 15px;border-bottom:1px solid #222;display:flex;justify-content:space-between;font-size:14px}
 .event .time{color:#00ff88;font-weight:900}
-.summary{background:#1a1a1a;margin:10px;border-radius:12px;padding:12px}
-.summary h3{color:#ffeb3b;margin:0 0 8px;font-size:13px}
+.summary{background:#1a1a1a;margin:10px;border-radius:12px;padding:12px;border:1px solid #222}
+.summary h3{color:#ffeb3b;margin:0 0 8px;font-size:14px}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <div><b>SLOOMTV</b> LIVE <span>| سلوم تيفي - sloomtv</span></div>
-  <button class="lang">عربي / EN</button>
+<div><b>SLOOMTV</b> LIVE <span>| سلوم تيفي - sloomtv</span></div>
+<button class="lang">عربي / EN</button>
 </div>
+
 <div class="clock-bar">
-  <div>📍 البريمي 🇴🇲 مسقط</div>
-  <div id="clock">22:31:04</div>
-  <div>BOTS 3 ● LIVE</div>
+<div>📍 البريمي - بين البلدين</div>
+<div id="clockSA">🇸🇦 الرياض 11:31:04 م</div>
+<div id="clockOM">🇴🇲 مسقط 00:31:04 ص</div>
+<div>BOTS 3 ● LIVE</div>
 </div>
 
 <div class="bots">
-  <div class="bot" style="--c:#00ff88"><b>BOT 1</b><small id="b1">متصل</small><div class="league">🏴󠁧󠁢󠁥󠁮󠁧󠁿 الإنجليزي + 🇫🇷 الفرنسي</div></div>
-  <div class="bot" style="--c:#ffeb3b"><b>BOT 2</b><small id="b2">متصل</small><div class="league">🇪🇸 الإسباني + 🇮🇹 الإيطالي + 🇵🇹 البرتغالي</div></div>
-  <div class="bot" style="--c:#ff0066"><b>BOT 3</b><small id="b3">متصل</small><div class="league">🌏 الآسيوي + 🇳🇱 الهولندي + 🇧🇷 البرازيلي</div></div>
+<div class="bot" style="--c:#00ff88"><b>BOT 1</b><small id="b1">متصل</small><div class="league">🏴󠁧󠁢󠁥󠁮󠁧󠁿 الإنجليزي + 🇫🇷 الفرنسي</div></div>
+<div class="bot" style="--c:#ffeb3b"><b>BOT 2</b><small id="b2">متصل</small><div class="league">🇪🇸 الإسباني + 🇮🇹 الإيطالي + 🇵🇹 البرتغالي</div></div>
+<div class="bot" style="--c:#ff0066"><b>BOT 3</b><small id="b3">متصل</small><div class="league">🌏 الآسيوي + 🇳🇱 الهولندي + 🇧🇷 البرازيلي</div></div>
 </div>
 
 <div id="matchesList"></div>
 
 <div class="modal" id="modal">
-  <div class="modal-head">
-    <div id="modalTitle">مجريات المباراة</div>
-    <button onclick="document.getElementById('modal').style.display='none'">X إغلاق</button>
-  </div>
-  <div id="modalContent"></div>
+<div class="modal-head"><div id="modalTitle"></div><button onclick="document.getElementById('modal').style.display='none'">X إغلاق</button></div>
+<div id="modalContent"></div>
 </div>
 
 <script>
 const matches=[
- {id:1,h:"كوفتنري",a:"سندرلاند",hs:3,as:1,m:"71'",lg:"الإنجليزي الممتاز",events:[{t:"10'",e:"⚽ هدف - كوفتنري"},{t:"34'",e:"🟨 بطاقة صفراء - سندرلاند"},{t:"58'",e:"⚽ هدف - سندرلاند"},{t:"71'",e:"⚽ هدف - كوفتنري"}],summary:"ملخص: كوفتنري يسيطر على اللقاء بثلاثية مقابل هدف حتى الآن."},
- {id:2,h:"برينتفورد",a:"نوتنغهام",hs:1,as:0,m:"72'",lg:"الإنجليزي الممتاز",events:[{t:"22'",e:"⚽ هدف - برينتفورد"},{t:"72'",e:"🔄 تبديل - نوتنغهام"}],summary:"ملخص: برينتفورد متقدم بهدف نظيف."},
- {id:3,h:"الهلال",a:"النصر",hs:1,as:1,m:"69'",lg:"الآسيوي - روشن",events:[{t:"15'",e:"⚽ الهلال"},{t:"44'",e:"⚽ النصر - رونالدو"}],summary:"ملخص ديربي الرياض مشتعل 1-1"},
- {id:4,h:"برشلونة",a:"ريال مدريد",hs:0,as:1,m:"70'",lg:"الإسباني LaLiga",events:[{t:"33'",e:"⚽ فينيسيوس"}],summary:"الكلاسيكو: ريال متقدم"},
- {id:5,h:"ميلان",a:"إنتر",hs:1,as:0,m:"68'",lg:"الإيطالي",events:[{t:"55'",e:"⚽ لياو"}],summary:"ديربي ميلانو"},
- {id:6,h:"أياكس",a:"آيندهوفن",hs:2,as:2,m:"78'",lg:"الهولندي",events:[{t:"12'",e:"⚽ أياكس"},{t:"78'",e:"⚽ تعادل"}],summary:"قمة هولندا 2-2"},
- {id:7,h:"بنفيكا",a:"بورتو",hs:0,as:0,m:"45'",lg:"البرتغالي",events:[{t:"30'",e:"🟥 طرد - بورتو"}],summary:"كلاسيكو البرتغال"},
- {id:8,h:"فلامينغو",a:"بالميراس",hs:1,as:0,m:"60'",lg:"البرازيلي",events:[{t:"60'",e:"⚽ هدف"}],summary:"فلامينغو متقدم"},
- {id:9,h:"باريس",a:"مارسيليا",hs:2,as:1,m:"80'",lg:"الفرنسي",events:[{t:"80'",e:"⚽ مبابي"}],summary:"باريس قريب من الفوز"},
+{id:1,h:"كوفتنري",a:"سندرلاند",hs:3,as:1,m:"71'",lg:"الإنجليزي الممتاز",events:[{t:"10'",e:"⚽ هدف - كوفتنري"},{t:"34'",e:"🟨 بطاقة صفراء"},{t:"71'",e:"⚽ هدف - كوفتنري"}],summary:"كوفتنري يسيطر 3-1"},
+{id:3,h:"الهلال",a:"النصر",hs:1,as:1,m:"69'",lg:"الآسيوي - روشن",events:[{t:"15'",e:"⚽ الهلال - ميتروفيتش"},{t:"44'",e:"⚽ النصر - رونالدو"}],summary:"ديربي الرياض 1-1"},
+{id:4,h:"برشلونة",a:"ريال مدريد",hs:0,as:1,m:"70'",lg:"الإسباني",events:[{t:"33'",e:"⚽ فينيسيوس"}],summary:"الكلاسيكو 0-1"},
+{id:6,h:"أياكس",a:"آيندهوفن",hs:2,as:2,m:"78'",lg:"الهولندي",events:[{t:"12'",e:"⚽ أياكس"},{t:"78'",e:"⚽ تعادل"}],summary:"قمة هولندا 2-2"},
 ];
 
 function render(){
- let html='';
- let curLg='';
- matches.forEach(m=>{
-   if(curLg!==m.lg){html+=`<div class="league-title"><span>${m.lg}</span><span>^</span></div>`;curLg=m.lg;}
-   html+=`<div class="card" onclick="openMatch(${m.id})">
-     <div class="team">${m.h}</div>
-     <div class="score"><span>${m.hs}</span><span class="min">'${m.m}</span><span>${m.as}</span></div>
-     <div class="team">${m.a}</div>
-   </div>`;
- });
- document.getElementById('matchesList').innerHTML=html;
+let html='',curLg='';
+matches.forEach(m=>{
+if(curLg!==m.lg){html+=`<div class="league-title"><span>${m.lg}</span><span>^</span></div>`;curLg=m.lg;}
+html+=`<div class="card" onclick="openMatch(${m.id})"><div class="team">${m.h}</div><div class="score"><span>${m.hs}</span><span class="min">'${m.m}</span><span>${m.as}</span></div><div class="team">${m.a}</div></div>`;
+});
+document.getElementById('matchesList').innerHTML=html;
 }
 function openMatch(id){
- const m=matches.find(x=>x.id===id);
- document.getElementById('modalTitle').innerText=`${m.h} ${m.hs} - ${m.as} ${m.a} | ${m.lg}`;
- let evHtml=m.events.map(ev=>`<div class="event"><span>${ev.e}</span><span class="time">${ev.t}</span></div>`).join('');
- document.getElementById('modalContent').innerHTML=`
-   <div class="summary"><h3>📝 ${m.summary}</h3><p style="font-size:12px;color:#aaa">تحديث مباشر من بوت سلوم تيفي - sloomtv</p></div>
-   <div class="summary"><h3>🎬 ملخص الفيديو</h3><div style="background:#000;height:120px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#00ff88">▶️ شاهد الأهداف - قريبا</div></div>
-   <div style="padding:10px 15px;font-weight:900;color:#00ff88">مجريات المباراة - Live</div>
-   ${evHtml}
- `;
- document.getElementById('modal').style.display='block';
+const m=matches.find(x=>x.id===id);
+document.getElementById('modalTitle').innerText=`${m.h} ${m.hs} - ${m.as} ${m.a} | ${m.lg}`;
+let ev=m.events.map(ev=>`<div class="event"><span>${ev.e}</span><span class="time">${ev.t}</span></div>`).join('');
+document.getElementById('modalContent').innerHTML=`<div class="summary"><h3>📝 ${m.summary}</h3></div>${ev}<div class="summary"><h3>🎬 ملخص فيديو</h3><div style="background:#000;height:120px;display:flex;align-items:center;justify-content:center;color:#00ff88">▶️ شاهد الأهداف</div></div>`;
+document.getElementById('modal').style.display='block';
 }
 render();
+
+// توقيت السعودية وعمان LIVE
+function updateClocks(){
+const now=new Date();
+document.getElementById('clockSA').textContent='🇸🇦 الرياض ' + now.toLocaleTimeString('ar-EG',{timeZone:'Asia/Riyadh',hour12:true});
+document.getElementById('clockOM').textContent='🇴🇲 مسقط ' + now.toLocaleTimeString('ar-EG',{timeZone:'Asia/Muscat',hour12:true});
+}
+setInterval(updateClocks,1000);updateClocks();
 setInterval(()=>{
- document.getElementById('clock').textContent=new Date().toLocaleTimeString('ar-EG',{timeZone:'Asia/Muscat',hour12:false});
- ["b1","b2","b3"].forEach((id,i)=>document.getElementById(id).textContent=new Date().toLocaleTimeString('ar-EG',{timeZone:'Asia/Muscat',second:'2-digit',hour12:false})+` - تحديث ${(i+2)*2}ث`);
+["b1","b2","b3"].forEach(id=>document.getElementById(id).textContent=new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Riyadh',second:'2-digit',hour12:false})+' LIVE');
 },2000);
 </script>
 </body>
