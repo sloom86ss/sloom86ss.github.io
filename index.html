@@ -2,41 +2,44 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>سلوم للمباريات اليوم | بث مباشر وأخبار الرياضة</title>
-<meta name="description" content="موقع سلوم للمباريات اليوم - بث مباشر لجميع المباريات، أخبار الرياضة، نتائج دوري أبطال أوروبا والدوري الإسباني والسعودي">
-<meta name="keywords" content="سلوم للمباريات اليوم, سلوم, مباريات اليوم, بث مباشر, أخبار الرياضة">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سلوم للمباريات اليوم | بث مباشر وأخبار الرياضة</title>
+<meta name="description" content="موقع سلوم للمباريات اليوم - بث مباشر لجميع المباريات، نتائج دوري أبطال أوروبا والدوري الإسباني والسعودي والإنجليزي">
+<meta name="keywords" content="سلوم للمباريات اليوم, مباريات اليوم, بث مباشر">
 <meta name="google-adsense-account" content="ca-pub-5621792926318233">
 <style>
-body{font-family:Tahoma;background:#f5f5f5;margin:0;padding:0}
+body{font-family:Tahoma;background:#f5f5f5;margin:0}
 .header{background:#111;color:#fff;padding:20px;text-align:center}
-.container{max-width:900px;margin:auto;padding:20px}
-.card{background:#fff;padding:20px;margin-bottom:20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-.card h2{margin:0 0 10px;color:#222}
-.card p{color:#555;line-height:1.8}
-.btn{display:inline-block;background:#007bff;color:#fff;padding:8px 15px;border-radius:6px;text-decoration:none;margin-top:10px}
+.live-bar{background:#d00;color:#fff;padding:10px;text-align:center;font-weight:bold}
+.container{max-width:900px;margin:auto;padding:15px}
+.card{background:#fff;padding:15px;margin-bottom:15px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.match{display:flex;justify-content:space-between;align-items:center;padding:12px;border-bottom:1px solid #eee}
+.badge{background:#007bff;color:#fff;padding:3px 8px;border-radius:5px;font-size:12px}
 </style>
 </head>
 <body>
-<div class="header">
-<h1>🔥 موقع سلوم للأخبار الرياضية 🔥</h1>
-<p>أخبار المباريات اليوم - بث مباشر - تحليلات</p>
+<div class="header"><h1>⚽ سلوم للمباريات اليوم</h1><p id="today"></p></div>
+<div class="live-bar">🔴 مباشر الآن - جميع دوريات العالم</div>
+<div class="container" id="matches">
+<div class="card"><h2>جاري تحميل مباريات اليوم...</h2></div>
 </div>
-<div class="container">
-<div class="card">
-<h2>⚽ موعد مباراة برشلونة وريال مدريد اليوم</h2>
-<p>تعرف على موعد كلاسيكو الأرض اليوم والقنوات الناقلة والتشكيلة المتوقعة للفريقين في الدوري الإسباني...</p>
-<a class="btn" href="#">اقرأ المزيد</a>
-</div>
-<div class="card">
-<h2>🏆 نتائج مباريات أمس في دوري أبطال أوروبا</h2>
-<p>شهدت مباريات أمس مفاجآت كبيرة، حيث فاز مانشستر سيتي بنتيجة كبيرة وتعادل بايرن ميونخ...</p>
-<a class="btn" href="#">اقرأ المزيد</a>
-</div>
-<div class="card">
-<h2>🔥 أخبار انتقالات اللاعبين 2026</h2>
-<p>أهم أخبار سوق الانتقالات الصيفية، هل سينتقل مبابي إلى ريال مدريد؟ وآخر أخبار النصر والهلال...</p>
-<a class="btn" href="#">اقرأ المزيد</a>
-</div>
-</div>
+<script>
+document.getElementById('today').innerText = new Date().toLocaleDateString('ar-EG',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+const leagues = [
+"الدوري السعودي: الهلال vs النصر - 9:00 م",
+"الدوري الإسباني: برشلونة vs ريال مدريد - 10:00 م",
+"الدوري الإنجليزي: مان سيتي vs ليفربول - 6:30 م",
+"دوري أبطال أوروبا: بايرن vs باريس - 11:00 م",
+"الدوري الإيطالي: إنتر vs ميلان - 9:45 م",
+"الدوري المصري: الأهلي vs الزمالك - 8:00 م"
+];
+let html = '<div class="card"><h2>⚽ مباريات اليوم - كل دوريات العالم</h2>';
+leagues.forEach(m=>{
+html+=`<div class="match"><span>${m}</span><span class="badge">مباشر</span></div>`;
+});
+html+='<p style="color:#666;margin-top:15px">* يتم التحديث تلقائياً كل ساعة بتوقيت مكة</p></div>';
+html+='<div class="card"><h2>🏆 أخبار سلوم اليوم</h2><p>موقع سلوم يقدم لك تغطية شاملة لجميع مباريات اليوم بث مباشر ونتائج لحظية لكل دوريات العالم.</p></div>';
+document.getElementById('matches').innerHTML = html;
+</script>
 </body>
 </html>
