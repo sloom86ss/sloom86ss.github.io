@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """SLOOM TV data collector. ESPN public endpoints; failed feeds never erase good data."""
-import json, os, time, urllib.request, urllib.error
+import json, os, time, re, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
@@ -28,6 +28,61 @@ FEEDS = {
     "mma/ufc": ("UFC والفنون القتالية", "other"),
 }
 NOW = lambda: datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+RSS_FEEDS = [
+    ("BBC Sport", "https://feeds.bbci.co.uk/sport/rss.xml"),
+    ("Sky Sports", "https://www.skysports.com/rss/0,20514,11095,00.xml"),
+]
+
+def fetch_rss_news(previous=None):
+    """Collect attributed headlines from independent publisher RSS feeds."""
+    items, errors = [], []
+    for source, url in RSS_FEEDS:
+        try:
+            req = urllib.request.Request(url, headers={
+                "User-Agent": "Mozilla/5.0 (compatible; SLOOM-TV/2.0; RSS reader)",
+                "Accept": "application/rss+xml, application/xml, text/xml"
+            })
+            with urllib.request.urlopen(req, timeout=15) as response:
+                root = ET.fromstring(response.read())
+            nodes = root.findall(".//item")
+            if not nodes:
+                nodes = root.findall(".//{*}entry")
+            for node in nodes[:18]:
+                def val(name):
+                    found = node.find(name)
+                    if found is None:
+                        found = node.find("{*}" + name)
+                    return (found.text or "").strip() if found is not None else ""
+                title = val("title")
+                link = val("link")
+                if not link:
+                    link_node = node.find("{*}link")
+                    if link_node is not None:
+                        link = link_node.attrib.get("href", "")
+                description = val("description") or val("summary")
+                description = re.sub(r"<[^>]+>", " ", description)
+                description = re.sub(r"\\s+", " ", description).strip()
+                if title and link:
+                    items.append({
+                        "headline": title,
+                        "description": description[:500],
+                        "link": link,
+                        "published": val("pubDate") or val("published") or val("updated"),
+                        "source": source
+                    })
+        except Exception as exc:
+            errors.append(source + ": " + str(exc)[:120])
+    # Preserve the last known headlines from a source if its RSS endpoint is temporarily unavailable.
+    if previous:
+        fresh_sources = {x["source"] for x in items}
+        for old in previous:
+            if old.get("source") not in fresh_sources:
+                items.extend([x for x in previous if x.get("source") == old.get("source")][:18])
+    unique = {}
+    for item in items:
+        unique[item["link"]] = item
+    return list(unique.values())[:36], errors
 
 def get_json(url, attempts=3):
     last = None
@@ -148,6 +203,7 @@ def main():
         previous = {}
     old_leagues = previous.get("leagues", previous if isinstance(previous, dict) else {})
     output = {"generated_at": NOW(), "timezone": "Asia/Muscat", "provider": "ESPN public API", "leagues": {}}
+    output["news_sources"], output["news_errors"] = fetch_rss_news(previous.get("news_sources", []))
     success = 0
     with ThreadPoolExecutor(max_workers=8) as pool:
         futures = [pool.submit(fetch_feed, item) for item in FEEDS.items()]
