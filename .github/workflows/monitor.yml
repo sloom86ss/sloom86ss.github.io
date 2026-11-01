@@ -23,7 +23,7 @@ jobs:
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ vars.NTFY_SERVER }}
-          SLOOM_SITE_URL: https://sloom86ssgithubio.vercel.app
+          SLOOM_SITE_URL: https://sloom86ss.github.io
         run: python monitor.py
       - name: Save monitor state
         if: always()
