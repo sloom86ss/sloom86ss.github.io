@@ -1,0 +1,35 @@
+name: Monitor SLOOM360
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check website and football data
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location --max-time 25 https://sloom86ss.github.io/ -o /tmp/home.html
+          grep -qi "SLOOM360" /tmp/home.html
+          curl --fail --silent --show-error --location --max-time 25 https://sloom86ss.github.io/data.json -o /tmp/data.json
+          python - <<'PY'
+          import json, datetime, sys
+          from pathlib import Path
+          data=json.loads(Path('/tmp/data.json').read_text())
+          stamp=data.get('generated_at')
+          if not stamp:
+              raise SystemExit('ALERT: generated_at is missing')
+          dt=datetime.datetime.fromisoformat(stamp.replace('Z','+00:00'))
+          age=(datetime.datetime.now(datetime.timezone.utc)-dt).total_seconds()/60
+          if age < -5:
+              raise SystemExit('ALERT: data timestamp is in the future')
+          if age > 90:
+              raise SystemExit(f'ALERT: football data is stale ({age:.0f} minutes old)')
+          leagues=data.get('leagues') or {}
+          if not leagues:
+              raise SystemExit('ALERT: no leagues found in data.json')
+          print(f'OK: site reachable; data age {age:.0f} minutes; {len(leagues)} leagues')
+          PY
