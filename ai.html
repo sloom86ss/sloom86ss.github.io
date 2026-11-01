@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>سلوم AI - ذكاء اصطناعي مجاني</title>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>سلوم AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@900&display=swap" rel="stylesheet">
 <style>
-*{font-family:Tajawal;box-sizing:border-box;margin:0}
-body{background:#000;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-.card{background:#111;border:1px solid #222;border-radius:24px;padding:28px;width:100%;max-width:420px;text-align:center}
-.logo{width:80px;height:80px;background:#d4ff00;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:40px;margin:0 auto 16px}
-h1{font-size:28px;font-weight:900;margin-bottom:8px}
-p{color:#888;line-height:1.6;margin-bottom:20px}
-.btn{display:block;background:#d4ff00;color:#000;padding:16px;border-radius:16px;font-weight:900;font-size:18px;text-decoration:none;margin-bottom:12px}
-.btn2{display:block;background:#222;color:#fff;padding:14px;border-radius:16px;text-decoration:none;border:1px solid #333}
-.features{display:flex;gap:10px;margin:20px 0}
-.f{background:#1a1a1a;border:1px solid #222;border-radius:14px;padding:12px;flex:1;font-size:13px;color:#aaa}
-.f b{display:block;color:#d4ff00;font-size:16px;margin-bottom:4px}
+*{font-family:Tajawal;box-sizing:border-box;margin:0}body{background:#000;color:#fff;height:100vh;display:flex;flex-direction:column}
+.h{padding:14px;background:#0f0f0f;border-bottom:1px solid #222;display:flex;justify-content:space-between}
+.chat{flex:1;overflow:auto;padding:14px;max-width:600px;margin:0 auto;width:100%}
+.m{padding:12px 16px;border-radius:18px;margin-bottom:10px;max-width:85%;line-height:1.6}
+.u{background:#d4ff00;color:#000;margin-left:auto}.b{background:#1a1a1a;border:1px solid #222}
+.i{display:flex;gap:10px;padding:12px;background:#0f0f0f;border-top:1px solid #222;max-width:600px;margin:0 auto;width:100%}
+.i input{flex:1;background:#222;border:1px solid #333;border-radius:24px;padding:12px 18px;color:#fff;outline:none}
+.i button{background:#d4ff00;border:none;width:48px;height:48px;border-radius:50%;font-weight:900}
 </style>
 </head>
 <body>
-<div class="card">
-<div class="logo">🤖</div>
-<h1>سلوم AI</h1>
-<p>ذكاء اصطناعي رياضي مجاني - يحلل المباريات ويتوقع النتائج بذكاء GPT-5.4</p>
-
-<div class="features">
-<div class="f"><b>⚡ سريع</b>رد فوري</div>
-<div class="f"><b>🆓 مجاني</b>100% بلا حدود</div>
-<div class="f"><b>⚽ ذكي</b>تحليل مباريات</div>
-</div>
-
-<a class="btn" href="https://poe.com/SloomAI" target="_blank">🚀 فتح الشات الآن</a>
-<a class="btn2" href="/">← الرجوع للموقع الرئيسي</a>
-
-<p style="margin-top:18px;font-size:12px;color:#555">مدعوم من Poe.com - مجاني بدون API Key</p>
-</div>
+<div class="h"><b>🤖 سلوم AI</b><a href="/" style="color:#888;text-decoration:none">الرئيسية</a></div>
+<div class="chat" id="c"><div class="m b">أهلاً! أنا سلوم AI ⚽ اسألني عن أي مباراة</div></div>
+<div class="i"><input id="q" placeholder="متى مباراة برشلونة؟" onkeydown="if(event.key=='Enter')go()"><button onclick="go()">➤</button></div>
+<script>
+async function go(){
+ let q=document.getElementById('q').value.trim();if(!q)return;
+ let c=document.getElementById('c');
+ c.innerHTML+=`<div class="m u">${q}</div>`;
+ document.getElementById('q').value='';
+ let id='a'+Date.now();c.innerHTML+=`<div class="m b" id="${id}">يكتب...</div>`;c.scrollTop=c.scrollHeight;
+ try{
+  let res=await fetch('https://text.pollinations.ai/openai',{
+   method:'POST',headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({messages:[{role:'system',content:'أنت سلوم AI مساعد موقع سلوم تيفي. جاوب بالعربية باختصار عن كرة القدم'},{role:'user',content:q}],model:'openai',stream:false})
+  });
+  let j=await res.json();let ans=j.choices?.[0]?.message?.content||'جرب مرة ثانية';
+  document.getElementById(id).innerText=ans;
+ }catch{ 
+  // محاولة ثانية بسيطة
+  try{
+   let r2=await fetch('https://text.pollinations.ai/'+encodeURIComponent(q));
+   let t2=await r2.text();
+   document.getElementById(id).innerText=t2;
+  }catch{ document.getElementById(id).innerText='النت ضعيف، جرب مرة ثانية'; }
+ }
+ c.scrollTop=c.scrollHeight;
+}
+</script>
 </body>
 </html>
