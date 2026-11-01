@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths-ignore:
       - 'data.json'
+      - 'monitor_state.json'
 
 permissions:
   contents: write
