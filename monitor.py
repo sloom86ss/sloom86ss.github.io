@@ -21,7 +21,7 @@ def notify(title, message, priority="default"):
     if not topic:
         print("NTFY_TOPIC is not configured; mobile alerts are disabled.")
         return
-    server = os.getenv("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
+    server = (os.getenv("NTFY_SERVER") or "https://ntfy.sh").rstrip("/")
     req = urllib.request.Request(server + "/" + topic, data=message.encode("utf-8"),
         headers={"Title": title, "Priority": priority, "Tags": "warning"},
         method="POST")
