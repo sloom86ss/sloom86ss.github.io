@@ -3,127 +3,128 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>سلوم تيفي</title>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&family=Inter:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
 <style>
-*{font-family:'Tajawal','Inter',sans-serif;box-sizing:border-box;margin:0}body{background:#000;color:#fff;transition:.3s}
+*{font-family:'Tajawal',sans-serif;box-sizing:border-box;margin:0}body{background:#000;color:#fff;padding-bottom:80px}
 .head{padding:12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#000;z-index:20;border-bottom:1px solid #111}
 .logoBox{display:flex;align-items:center;gap:10px}
-.logoImg{width:42px;height:42px;background:#d4ff00;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-weight:900;font-size:20px;box-shadow:0 0 15px #d4ff0088}
+.logoImg{width:42px;height:42px;background:#d4ff00;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-weight:900;font-size:20px}
 .logoTxt{font-weight:900;font-size:18px}.logoTxt span{color:#d4ff00}
 .tools{display:flex;gap:8px;align-items:center}
-.iconBtn{width:36px;height:36px;background:#1c1c1c;border:1px solid #222;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px}
-.aiBtn{background:#d4ff00;color:#000;border:none;border-radius:20px;padding:8px 14px;font-weight:900;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:4px}
-.timeBox{text-align:left;font-size:11px;line-height:1.3}.timeBox b{color:#d4ff00}
+.iconBtn{width:36px;height:36px;background:#1c1c1c;border:1px solid #222;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.timeBox{text-align:left;font-size:11px}.timeBox b{color:#d4ff00}
 .ticker{background:#d4ff00;color:#000;overflow:hidden;white-space:nowrap;padding:7px 0;font-weight:900;font-size:13px}
 .ticker-track{display:inline-block;animation:scroll 30s linear infinite}
 @keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
 .tabs{display:flex;gap:6px;padding:10px;max-width:500px;margin:0 auto}
-.tab{flex:1;padding:10px 4px;border-radius:22px;text-align:center;background:#1c1c1c;border:1px solid #222;font-weight:700;font-size:12px;cursor:pointer;transition:.2s}
-.tab.active{background:#d4ff00;color:#000;border-color:#d4ff00;font-weight:900;transform:scale(1.05)}
+.tab{flex:1;padding:10px 4px;border-radius:22px;text-align:center;background:#1c1c1c;border:1px solid #222;font-weight:700;font-size:12px;cursor:pointer}
+.tab.active{background:#d4ff00;color:#000;font-weight:900}
 .box{max-width:500px;margin:0 auto;padding:10px}
-.leagueTitle{background:linear-gradient(90deg,#1c1c1c,#222);color:#d4ff00;padding:8px 12px;border-radius:12px;font-size:11px;font-weight:900;margin-top:14px;border:1px solid #222;display:flex;justify-content:space-between;align-items:center}
-.card{background:#1c1c1c;border-radius:16px;padding:12px;margin-bottom:8px;border:1px solid #222;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
-.card:hover{transform:translateY(-1px);border-color:#333}
-.cardLive{background:#d4ff00;color:#000;border-radius:16px;padding:12px;margin-bottom:8px;box-shadow:0 4px 20px #d4ff0044;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 4px 20px #d4ff0044}50%{box-shadow:0 4px 30px #d4ff00aa}}
+.leagueTitle{background:#1c1c1c;color:#d4ff00;padding:8px 12px;border-radius:12px;font-size:11px;font-weight:900;margin-top:14px;border:1px solid #222;display:flex;justify-content:space-between}
+.card{background:#1c1c1c;border-radius:16px;padding:12px;margin-bottom:8px;border:1px solid #222;position:relative}
+.cardLive{background:#d4ff00;color:#000;border-radius:16px;padding:12px;margin-bottom:8px}
 .row{display:flex;justify-content:space-between;align-items:center}
 .sc{font-size:20px;font-weight:900;direction:ltr;text-align:center}
 .tm{width:32%;text-align:center;font-size:12px;font-weight:700}
 .badge{font-size:9px;padding:3px 8px;border-radius:10px;font-weight:900;margin-top:4px;display:inline-block}
 .bLive{background:#000;color:#d4ff00}.bFT{background:#333;color:#fff}.bPre{background:#333;color:#aaa}
-.statsBox{display:none;margin-top:10px;border-top:1px dashed #333;padding-top:8px;font-size:11px;line-height:1.8}
-.newsCard{background:#1c1c1c;border-radius:16px;padding:14px;margin-bottom:10px;border:1px solid #222;display:flex;gap:10px}
-.newsCard img{width:70px;height:70px;border-radius:12px;object-fit:cover;background:#222}
-.newsTitle{font-size:13px;font-weight:700;line-height:1.4}
-.fav{position:absolute;top:8px;left:8px;font-size:16px}
-.langEn{font-family:'Inter',sans-serif}
-.aiBox{background:linear-gradient(135deg,#111,#1a1a1a);border:1px solid #222;border-radius:20px;padding:18px;text-align:center}
-.aiIcon{width:70px;height:70px;background:#d4ff00;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 12px}
-.floatAI{position:fixed;bottom:20px;left:20px;background:#d4ff00;color:#000;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;box-shadow:0 4px 20px #d4ff0088;cursor:pointer;z-index:99;animation:floatPulse 2s infinite}
-@keyframes floatPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.fav{position:absolute;top:8px;left:8px;font-size:16px;cursor:pointer}
+.newsCard{background:#1c1c1c;border-radius:16px;padding:14px;margin-bottom:10px;border:1px solid #222}
+.newsTitle{font-size:13px;font-weight:700}
+
+/* AI Chat */
+.aiChat{height:52vh;overflow:auto;display:flex;flex-direction:column;gap:10px;padding:12px;background:#0a0a0a;border-radius:16px;border:1px solid #1a1a1a;margin-bottom:10px}
+.m{padding:11px 14px;border-radius:16px;max-width:85%;line-height:1.7;font-size:13px;white-space:pre-wrap}
+.u{background:#d4ff00;color:#000;align-self:flex-end;border-bottom-left-radius:4px}
+.bBot{background:#1c1c1c;border:1px solid #222;align-self:flex-start;border-bottom-right-radius:4px}
+.m img{max-width:100%;border-radius:10px;margin-top:6px}
+.aiInput{display:flex;gap:8px}
+.aiInput input{flex:1;background:#1c1c1c;border:1px solid #333;border-radius:22px;padding:12px 16px;color:#fff;outline:none}
+.aiInput button{background:#d4ff00;color:#000;border:none;min-width:44px;height:44px;border-radius:50%;font-weight:900;cursor:pointer}
+.qs{display:flex;gap:6px;overflow-x:auto;padding:6px 0;margin-bottom:8px}
+.qs button{background:#111;border:1px solid #222;color:#888;padding:6px 10px;border-radius:18px;font-size:10px;white-space:nowrap;cursor:pointer}
+
+/* زر عائم ذكي - ما يغطي */
+.floatAI{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#d4ff00;color:#000;padding:12px 22px;border-radius:30px;display:flex;align-items:center;gap:8px;font-weight:900;font-size:14px;box-shadow:0 8px 30px rgba(212,255,0,.4);cursor:pointer;z-index:99;border:2px solid #000;animation:floatUp 2s infinite}
+@keyframes floatUp{0%,100%{bottom:20px}50%{bottom:26px}}
+.floatAI b{background:#000;color:#d4ff00;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
 </style>
 </head>
 <body>
 <div class="head">
 <div class="logoBox"><div class="logoImg">س</div><div class="logoTxt">سلوم <span>تيفي</span></div></div>
 <div class="tools">
-<button class="aiBtn" onclick="openAI()">🤖 AI</button>
 <div class="iconBtn" onclick="toggleLang()" id="langBtn">EN</div>
 <div class="iconBtn" onclick="toggleFavView()" id="favBtn">⭐</div>
 <div class="timeBox"><div id="ksaTime">--</div><div id="mctTime">--</div></div>
 </div>
 </div>
 
-<div class="ticker"><div class="ticker-track" id="tickerTxt">مرحبا بكم في موقع سلوم تي في • مباريات اليوم • </div></div>
+<div class="ticker"><div class="ticker-track">مرحبا بكم في سلوم تيفي • سلوم AI التسويقي الشامل الآن متاح • يجاوب عن كل شي + يحلل الصور + يكتب إعلانات • </div></div>
 
 <div class="tabs">
-<div class="tab active" id="tab1" onclick="showTab('matches',this)">⚽ المباريات</div>
-<div class="tab" id="tab2" onclick="showTab('stats',this)">📊 الإحصائيات</div>
-<div class="tab" id="tab3" onclick="showTab('news',this)">📰 الأخبار</div>
-<div class="tab" id="tab4" onclick="showTab('ai',this)">🤖 سلوم AI</div>
+<div class="tab active" id="t1" onclick="showTab('matches',this)">⚽ المباريات</div>
+<div class="tab" id="t2" onclick="showTab('stats',this)">📊 الإحصائيات</div>
+<div class="tab" id="t3" onclick="showTab('news',this)">📰 الأخبار</div>
+<div class="tab" id="t4" onclick="showTab('ai',this)">🤖 سلوم AI</div>
 </div>
 
 <div class="box">
-<div id="matchesTab"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><b id="todayTxt">مباريات اليوم</b><span id="cnt" style="color:#777;font-size:11px"></span></div><div id="list">...</div></div>
+<div id="matchesTab"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><b>مباريات اليوم</b><span id="cnt" style="color:#777;font-size:11px"></span></div><div id="list">...</div></div>
 <div id="statsTab" style="display:none"><div id="statsList"></div></div>
 <div id="newsTab" style="display:none"><div id="newsList"></div></div>
 <div id="aiTab" style="display:none">
-<div class="aiBox">
-<div class="aiIcon">🤖</div>
-<h2 style="font-weight:900;margin-bottom:6px">سلوم AI</h2>
-<p style="color:#888;font-size:13px;line-height:1.6;margin-bottom:16px">ذكاء اصطناعي رياضي مجاني - يحلل المباريات، يتوقع النتائج، ويعطيك تشكيلة الفرق فوراً</p>
-<a href="https://poe.com/SloomAI" target="_blank" style="display:block;background:#d4ff00;color:#000;padding:16px;border-radius:14px;font-weight:900;text-decoration:none;margin-bottom:10px">🚀 فتح شات سلوم AI</a>
-<a href="ai.html" style="display:block;background:#222;border:1px solid #333;color:#fff;padding:14px;border-radius:14px;text-decoration:none;font-weight:700">📱 صفحة AI الكاملة</a>
-<div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
-<div style="background:#000;border:1px solid #222;border-radius:12px;padding:10px;font-size:11px"><b style="color:#d4ff00;display:block">⚡ سريع</b>رد لحظي</div>
-<div style="background:#000;border:1px solid #222;border-radius:12px;padding:10px;font-size:11px"><b style="color:#d4ff00;display:block">🆓 مجاني</b>بدون حدود</div>
-<div style="background:#000;border:1px solid #222;border-radius:12px;padding:10px;font-size:11px"><b style="color:#d4ff00;display:block">⚽ ذكي</b>GPT-5.4</div>
+<div class="qs">
+<button onclick="quickAI('اكتب لي إعلان تسويقي لموقع سلوم تيفي')">📢 إعلان</button>
+<button onclick="quickAI('أفكار محتوى انستقرام')">📱 انستا</button>
+<button onclick="quickAI('خطة تسويقية لزيادة المتابعين')">📈 تسويق</button>
+<button onclick="quickAI('اكتب وصف منتج احترافي')">🛍️ منتج</button>
+<button onclick="quickAI('أفكار مشروع مربح')">💡 مشروع</button>
 </div>
+<div class="aiChat" id="aiChat">
+<div class="m bBot">أهلاً! أنا <b>سلوم AI 🤖</b>
+
+مساعدك التسويقي الشامل! أجاوب عن كل شي تسألني:
+
+🎯 <b>تسويق:</b> إعلانات، محتوى، خطط، زيادة متابعين
+⚽ <b>رياضة:</b> تحليل مباريات، توقعات، أخبار
+📚 <b>دراسة:</b> شروحات، تلخيص، واجبات
+💼 <b>عمل:</b> سيرة ذاتية، أفكار مشاريع
+💬 <b>عام:</b> أي سؤال في بالك
+
+📎 <b>ارفع صورة</b> وأنا أحللها لك تسويقياً
+⬇️ <b>حمّل المحادثة</b> في أي وقت
+
+اسألني الحين: "كيف أزيد زيارات موقعي؟"</div>
+</div>
+<div class="aiInput">
+<button onclick="document.getElementById('fileInput').click()" style="background:#222;color:#fff;border:1px solid #333">📎</button>
+<input type="file" id="fileInput" accept="image/*" style="display:none" onchange="handleFile(event)">
+<input id="aiInp" placeholder="اسأل عن أي شي... تسويق، دراسة، رياضة..." onkeydown="if(event.key=='Enter')sendAI()">
+<button onclick="sendAI()">➤</button>
+</div>
+<div style="display:flex;gap:8px;margin-top:8px">
+<button onclick="downloadAI()" style="flex:1;background:#111;border:1px solid #222;color:#888;padding:8px;border-radius:10px;font-size:11px">⬇️ تحميل</button>
+<button onclick="clearAI()" style="flex:1;background:#111;border:1px solid #222;color:#888;padding:8px;border-radius:10px;font-size:11px">🗑️ مسح</button>
 </div>
 </div>
 </div>
 
-<div class="floatAI" onclick="openAI()">🤖</div>
+<div class="floatAI" onclick="openAI()"><b>🤖</b> اسأل سلوم AI - يجاوب عن كل شي</div>
 
 <script>
-let LANG='ar';
-const T={
- ar:{matches:'⚽ المباريات',stats:'📊 الإحصائيات',news:'📰 الأخبار',ai:'🤖 سلوم AI',today:'مباريات اليوم',welcome:'مرحبا بكم في موقع سلوم تي في • مباريات اليوم من كل دوريات العالم • سلوم AI الآن متوفر مجانا •',live:'مباشر',finished:'انتهت',time:'⏰ توقيت المباراة',noMatch:'لا توجد مباريات اليوم',fav:'المفضلة'},
- en:{matches:'⚽ Matches',stats:'📊 Stats',news:'📰 News',ai:'🤖 Sloum AI',today:"Today's Matches",welcome:'Welcome to Sloum TV • Live matches • Sloum AI now free • Best experience •',live:'LIVE',finished:'FT',time:'⏰ Match Time',noMatch:'No matches today',fav:'Favorites'}
-};
-const AR={"Al Hilal":"الهلال","Al Ittihad":"الاتحاد","Manchester City":"السيتي","Manchester United":"مان يونايتد","Chelsea":"تشيلسي","Arsenal":"أرسنال","Liverpool":"ليفربول","Barcelona":"برشلونة","Real Madrid":"ريال مدريد"};
-const LEAGUES=[{id:'eng.1',nameAr:'الإنجليزي 🏴󠁧󠁢󠁥󠁮󠁧󠁿',nameEn:'Premier League'},{id:'esp.1',nameAr:'الإسباني 🇪🇸',nameEn:'La Liga'},{id:'ita.1',nameAr:'الإيطالي 🇮🇹',nameEn:'Serie A'},{id:'ger.1',nameAr:'الألماني 🇩🇪',nameEn:'Bundesliga'},{id:'fra.1',nameAr:'الفرنسي 🇫🇷',nameEn:'Ligue 1'},{id:'sau.1',nameAr:'روشن 🇸🇦',nameEn:'Saudi League'},{id:'uefa.champions',nameAr:'الأبطال 🏆',nameEn:'Champions League'}];
-let allMatches=[],favOnly=false;
-
-function openAI(){window.open('https://poe.com/SloomAI','_blank')}
-function toggleLang(){
- LANG=LANG==='ar'?'en':'ar';
- document.documentElement.lang=LANG;
- document.documentElement.dir=LANG==='ar'?'rtl':'ltr';
- document.getElementById('langBtn').textContent=LANG==='ar'?'EN':'ع';
- document.getElementById('tab1').textContent=T[LANG].matches;
- document.getElementById('tab2').textContent=T[LANG].stats;
- document.getElementById('tab3').textContent=T[LANG].news;
- document.getElementById('tab4').textContent=T[LANG].ai;
- document.getElementById('todayTxt').textContent=T[LANG].today;
- document.getElementById('tickerTxt').textContent=T[LANG].welcome;
- document.body.classList.toggle('langEn',LANG==='en');
- renderMatches(); loadStats();
-}
-function toggleFavView(){favOnly=!favOnly;document.getElementById('favBtn').style.background=favOnly?'#d4ff00':'#1c1c1c';renderMatches();}
+const LEAGUES=[{id:'eng.1',nameAr:'الإنجليزي 🏴󠁧󠁢󠁥󠁮󠁧󠁿'},{id:'esp.1',nameAr:'الإسباني 🇪🇸'},{id:'ita.1',nameAr:'الإيطالي 🇮🇹'},{id:'ger.1',nameAr:'الألماني 🇩🇪'},{id:'fra.1',nameAr:'الفرنسي 🇫🇷'},{id:'sau.1',nameAr:'روشن 🇸🇦'},{id:'uefa.champions',nameAr:'الأبطال 🏆'}];
+let allMatches=[],favOnly=false,attachedImage=null;
 function getFav(){try{return JSON.parse(localStorage.getItem('sloom_fav')||'[]');}catch{return []}}
 function toggleFav(id){let f=getFav();if(f.includes(id)) f=f.filter(x=>x!==id);else f.push(id);localStorage.setItem('sloom_fav',JSON.stringify(f));renderMatches();}
+function toggleFavView(){favOnly=!favOnly;document.getElementById('favBtn').style.background=favOnly?'#d4ff00':'#1c1c1c';renderMatches();}
+function toggleLang(){}
 function updateTimes(){
  let now=new Date();
  let ksa=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Riyadh'}));
  let mct=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Muscat'}));
- if(LANG==='ar'){
-  document.getElementById('ksaTime').innerHTML='<b>🇸🇦</b> '+ksa.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit'});
-  document.getElementById('mctTime').innerHTML='<b>🇴🇲</b> '+mct.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit'});
- }else{
-  document.getElementById('ksaTime').innerHTML='<b>🇸🇦 KSA</b> '+ksa.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
-  document.getElementById('mctTime').innerHTML='<b>🇴🇲 Muscat</b> '+mct.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
- }
+ document.getElementById('ksaTime').innerHTML='<b>🇸🇦</b> '+ksa.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit'});
+ document.getElementById('mctTime').innerHTML='<b>🇴🇲</b> '+mct.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit'});
 }
 setInterval(updateTimes,1000);updateTimes();
 function showTab(t,el){
@@ -134,6 +135,11 @@ function showTab(t,el){
  document.getElementById('aiTab').style.display=t==='ai'?'block':'none';
  if(t==='news') loadNews(); if(t==='stats') loadStats();
 }
+function openAI(){
+ document.getElementById('t4').click();
+ window.scrollTo({top:0,behavior:'smooth'});
+ document.getElementById('aiInp').focus();
+}
 async function loadMatches(){
  let date=new Date().toISOString().slice(0,10).replace(/-/g,'');
  allMatches=[];
@@ -143,66 +149,75 @@ async function loadMatches(){
    let j=await r.json();
    (j.events||[]).forEach(ev=>{
     let c=ev.competitions[0],h=c.competitors.find(x=>x.homeAway==='home'),a=c.competitors.find(x=>x.homeAway==='away');
-    allMatches.push({lgAr:lg.nameAr,lgEn:lg.nameEn,id:ev.id,h:h.team.displayName,a:a.team.displayName,hs:h.score||'0',as:a.score||'0',state:c.status.type.state,min:c.status.type.state==='in'?(c.status.displayClock||T[LANG].live):c.status.type.state==='pre'?new Date(c.date).toLocaleTimeString(LANG==='ar'?'ar-SA':'en-US',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Riyadh'}):T[LANG].finished,hAb:h.team.abbreviation||'',aAb:a.team.abbreviation||''});
+    allMatches.push({lgAr:lg.nameAr,id:ev.id,h:h.team.displayName,a:a.team.displayName,hs:h.score||'0',as:a.score||'0',state:c.status.type.state,min:c.status.type.state==='in'?(c.status.displayClock||'مباشر'):c.status.type.state==='pre'?new Date(c.date).toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Riyadh'}):'انتهت',hAb:h.team.abbreviation||'',aAb:a.team.abbreviation||''});
    });
-  }catch{}
- }
- if(allMatches.length===0){
-  try{
-   let r=await fetch('https://www.thesportsdb.com/api/v1/json/3/latestsoccer.php');let j=await r.json();
-   (j.events||[]).slice(0,12).forEach(m=>{allMatches.push({lgAr:'مباريات',lgEn:'Matches',id:m.idEvent||Math.random(),h:m.strHomeTeam,a:m.strAwayTeam,hs:m.intHomeScore||'0',as:m.intAwayScore||'0',state:'in',min:m.strStatus||T[LANG].live,hAb:'',aAb:''});});
   }catch{}
  }
  renderMatches();
 }
 function renderMatches(){
  let listEl=document.getElementById('list');
- if(allMatches.length===0){listEl.innerHTML=`<div style="text-align:center;color:#777;padding:30px">${T[LANG].noMatch}</div>`;return;}
- let fav=getFav();
- let filtered=favOnly?allMatches.filter(m=>fav.includes(m.id)):allMatches;
- if(filtered.length===0 && favOnly){listEl.innerHTML=`<div style="text-align:center;color:#777;padding:30px">${LANG==='ar'?'لا توجد مفضلة بعد - اضغط ⭐':'No favorites yet'}</div>`;return;}
- document.getElementById('cnt').textContent=filtered.filter(x=>x.state==='in').length+' '+T[LANG].live+' • '+filtered.length;
- let grouped={};filtered.forEach(m=>{let key=LANG==='ar'?m.lgAr:m.lgEn;if(!grouped[key]) grouped[key]=[];grouped[key].push(m);});
- let html='';for(let lgName in grouped){
-  html+=`<div class="leagueTitle"><span>${lgName}</span><span>${grouped[lgName].length}</span></div>`;
-  grouped[lgName].forEach((m)=>{
-   let isLive=m.state==='in';let hAR=LANG==='ar'?(AR[m.h]||m.h):m.h;let aAR=LANG==='ar'?(AR[m.a]||m.a):m.a;let badgeCls=isLive?'bLive':m.state==='post'?'bFT':'bPre';let isFav=fav.includes(m.id);
-   html+=`<div class="${isLive?'cardLive':'card'}" onclick="toggleStats('${m.id}')"><div class="fav" onclick="event.stopPropagation();toggleFav('${m.id}')">${isFav?'⭐':'☆'}</div><div class="row"><div class="tm">${hAR}<div style="font-size:10px;opacity:.6">${m.hAb}</div></div><div style="text-align:center;width:36%"><div class="sc">${m.hs} : ${m.as}</div><div class="badge ${badgeCls}">${m.min}</div><div style="font-size:9px;margin-top:2px;opacity:.7">${m.state==='pre'?T[LANG].time:''}</div></div><div class="tm">${aAR}<div style="font-size:10px;opacity:.6">${m.aAb}</div></div></div><div id="stat-${m.id}" class="statsBox">${LANG==='ar'?'⏱️ التوقيت':'⏱️ Time'}: ${m.min}<br>${LANG==='ar'?'📍 الدوري':'📍 League'}: ${lgName}<br>${LANG==='ar'?'🔢 النتيجة':'🔢 Score'}: ${m.hs} - ${m.as}</div></div>`;
+ if(allMatches.length===0){listEl.innerHTML=`<div style="text-align:center;color:#777;padding:30px">لا توجد مباريات</div>`;return;}
+ let fav=getFav();let filtered=favOnly?allMatches.filter(m=>fav.includes(m.id)):allMatches;
+ document.getElementById('cnt').textContent=filtered.filter(x=>x.state==='in').length+' مباشر • '+filtered.length;
+ let grouped={};filtered.forEach(m=>{let k=m.lgAr;if(!grouped[k]) grouped[k]=[];grouped[k].push(m);});
+ let html='';for(let lg in grouped){
+  html+=`<div class="leagueTitle"><span>${lg}</span><span>${grouped[lg].length}</span></div>`;
+  grouped[lg].forEach(m=>{
+   let isLive=m.state==='in';let isFav=fav.includes(m.id);
+   html+=`<div class="${isLive?'cardLive':'card'}"><div class="fav" onclick="toggleFav('${m.id}')">${isFav?'⭐':'☆'}</div><div class="row"><div class="tm">${m.h}<div style="font-size:10px;opacity:.6">${m.hAb}</div></div><div style="text-align:center;width:36%"><div class="sc">${m.hs} : ${m.as}</div><div class="badge ${isLive?'bLive':m.state==='post'?'bFT':'bPre'}">${m.min}</div></div><div class="tm">${m.a}<div style="font-size:10px;opacity:.6">${m.aAb}</div></div></div></div>`;
   });
  }
  listEl.innerHTML=html;
 }
-function toggleStats(id){let el=document.getElementById('stat-'+id);if(el) el.style.display=el.style.display==='block'?'none':'block';}
 async function loadNews(){
  try{
-  let r=await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss/search?q=football&hl='+(LANG==='ar'?'ar':'en')+'&gl='+(LANG==='ar'?'SA':'US')+'&ceid='+(LANG==='ar'?'SA:ar':'US:en'));
-  let j=await r.json();
-  if(j.items && j.items.length>0){
-   let html='';j.items.slice(0,10).forEach(a=>{html+=`<div class="newsCard"><div><div class="newsTitle">${a.title}</div><div style="font-size:10px;color:#777;margin-top:4px">${new Date(a.pubDate).toLocaleDateString(LANG==='ar'?'ar-SA':'en-US')}</div></div></div>`;});
-   document.getElementById('newsList').innerHTML=html;return;
-  }
- }catch{}
- try{
-  let r=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/news?limit=10');
-  let j=await r.json();
-  let html='';(j.articles||[]).slice(0,8).forEach(a=>{html+=`<div class="newsCard"><img src="${a.images?.[0]?.url||'https://via.placeholder.com/70'}"><div><div class="newsTitle">${a.headline||a.title}</div></div></div>`;});
+  let r=await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss/search?q=football&hl=ar&gl=SA&ceid=SA:ar');
+  let j=await r.json();let html='';j.items.slice(0,10).forEach(a=>{html+=`<div class="newsCard"><div class="newsTitle">${a.title}</div></div>`;});
   document.getElementById('newsList').innerHTML=html;
- }catch{document.getElementById('newsList').innerHTML='...';}
+ }catch{}
 }
 function loadStats(){
- let live=allMatches.filter(x=>x.state==='in').length;
- let total=allMatches.length;
- document.getElementById('statsList').innerHTML=`
- <div class="card"><div class="row"><span>${LANG==='ar'?'📅 مباريات اليوم':'📅 Today'}</span><b style="color:#d4ff00">${total}</b></div></div>
- <div class="card"><div class="row"><span>🔴 ${T[LANG].live}</span><b style="color:#d4ff00">${live}</b></div></div>
- <div class="card"><div class="row"><span>✅ ${LANG==='ar'?'منتهية':'Finished'}</span><b>${allMatches.filter(x=>x.state==='post').length}</b></div></div>
- <div class="card"><div class="row"><span>⏰ ${LANG==='ar'?'قادمة':'Upcoming'}</span><b>${allMatches.filter(x=>x.state==='pre').length}</b></div></div>
- <div class="card"><div class="row"><span>⭐ ${LANG==='ar'?'المفضلة':'Favorites'}</span><b>${getFav().length}</b></div></div>
- `;
+ document.getElementById('statsList').innerHTML=`<div class="card"><div class="row"><span>📅 اليوم</span><b style="color:#d4ff00">${allMatches.length}</b></div></div><div class="card"><div class="row"><span>🔴 مباشر</span><b style="color:#d4ff00">${allMatches.filter(x=>x.state==='in').length}</b></div></div>`;
 }
-loadMatches();
-setInterval(loadMatches,30000);
-document.getElementById('tickerTxt').textContent=T.ar.welcome;
+loadMatches();setInterval(loadMatches,30000);
+
+// AI - يجاوب عن كل شي + تسويقي
+function quickAI(t){document.getElementById('aiInp').value=t;sendAI();}
+function handleFile(e){
+ let file=e.target.files[0];if(!file)return;
+ let reader=new FileReader();
+ reader.onload=function(ev){
+  attachedImage=ev.target.result;
+  document.getElementById('aiChat').innerHTML+=`<div class="m u">📸 صورة:<br><img src="${attachedImage}" style="max-width:200px"></div>`;
+  document.getElementById('aiChat').scrollTop=9999;
+ };
+ reader.readAsDataURL(file);
+}
+async function sendAI(){
+ let q=document.getElementById('aiInp').value.trim();if(!q && !attachedImage)return;
+ let chat=document.getElementById('aiChat');
+ let html=q||'حلل الصورة';if(attachedImage) html+=`<br><img src="${attachedImage}">`;
+ chat.innerHTML+=`<div class="m u">${html}</div>`;
+ let query=q;let img=attachedImage;
+ document.getElementById('aiInp').value='';attachedImage=null;
+ let id='a'+Date.now();chat.innerHTML+=`<div class="m bBot" id="${id}">سلوم AI يكتب...</div>`;chat.scrollTop=9999;
+ try{
+  let prompt=`أنت سلوم AI - مساعد تسويقي شامل وخبير عام. اسمك سلوم AI، تابع لموقع سلوم تيفي. مهمتك: تجاوب عن أي سؤال يسأله المستخدم بذكاء تسويقي. إذا سأل عن تسويق اكتب إعلان احترافي، إذا عن دراسة اشرح، إذا عن رياضة حلل، إذا عن عمل اعط أفكار، إذا عن أي شي عام جاوب بذكاء. دائما جاوب بالعربية، بأسلوب تسويقي جذاب ومفيد، واستخدم إيموجي. السؤال: ${query}`;
+  let body={messages:[{role:'system',content:'أنت سلوم AI مساعد تسويقي شامل تجيب عن كل شيء بالعربية بأسلوب تسويقي ذكي وجذاب'},{role:'user',content:prompt}],model:'openai',stream:false};
+  if(img){body.messages[1].content=[{type:'text',text:prompt},{type:'image_url',image_url:{url:img}}];}
+  let res=await fetch('https://text.pollinations.ai/openai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  let j=await res.json();let ans=j.choices?.[0]?.message?.content||'جرب مرة ثانية';
+  document.getElementById(id).innerText=ans;
+ }catch{document.getElementById(id).innerText='النت ضعيف، جرب مرة ثانية';}
+ chat.scrollTop=9999;
+}
+function downloadAI(){
+ let text=document.getElementById('aiChat').innerText;
+ let blob=new Blob([text],{type:'text/plain;charset=utf-8'});
+ let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='sloom-ai.txt';a.click();
+}
+function clearAI(){if(confirm('مسح؟')){document.getElementById('aiChat').innerHTML=`<div class="m bBot">تم المسح! اسألني عن أي شي 🤖</div>`;}}
 </script>
 </body>
 </html>
