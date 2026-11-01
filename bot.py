@@ -110,7 +110,9 @@ def fetch_rss_news():
     unique = {}
     for item in items:
         unique[item["link"]] = item
-    return list(unique.values())[:36], errors
+    # Sort all publishers together before applying the cap, so early feeds
+    # cannot crowd Google News and later sources out of the published list.
+    return sorted(unique.values(), key=lambda item: item["published"], reverse=True)[:100], errors
 
 def get_json(url, attempts=3):
     last = None
