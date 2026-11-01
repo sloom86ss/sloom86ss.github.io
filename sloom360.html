@@ -166,5 +166,4 @@ $('send').addEventListener('click',ask);$('question').addEventListener('keydown'
 async function load(){try{const r=await fetch('data.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);data=await r.json();render();translateNews();}catch(e){$('news').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً.</div>';}}
 setLanguage(false);load();setInterval(load,120000);
 </script>
-<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(err=>console.warn("SLOOM360 offline support unavailable",err)));}</script>
 </body></html>
