@@ -1,0 +1,22 @@
+{
+  "healthy": true,
+  "checked_at": "2026-11-01T23:05:20.004643+00:00",
+  "checks": {
+    "homepage": {
+      "ok": true,
+      "detail": "HTTP 200"
+    },
+    "football_page": {
+      "ok": true,
+      "detail": "HTTP 200"
+    },
+    "sports_data": {
+      "ok": true,
+      "detail": "HTTP 200"
+    },
+    "chat_api": {
+      "ok": true,
+      "detail": "HTTP 405"
+    }
+  }
+}
