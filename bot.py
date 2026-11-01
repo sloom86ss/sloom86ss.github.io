@@ -31,6 +31,10 @@ RSS_FEEDS = [
     ("Sky Sports", "https://www.skysports.com/rss/11095"),
     ("ESPN FC", "https://www.espn.com/espn/rss/soccer/news"),
     ("The Guardian", "https://www.theguardian.com/football/rss"),
+    ("Google News", "https://news.google.com/rss/search?q=football%20soccer&hl=en-US&gl=US&ceid=US:en"),
+    ("Google News", "https://news.google.com/rss/search?q=%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=OM&ceid=OM:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84%D8%A7%D8%AA%20%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=SA&ceid=SA:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%20%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=SA&ceid=SA:ar"),
 ]
 
 def parse_published(value):
@@ -82,18 +86,22 @@ def fetch_rss_news():
                     "BBC Sport": ("bbc.co.uk", "bbc.com"),
                     "Sky Sports": ("skysports.com",),
                     "ESPN FC": ("espn.com",),
-                    "The Guardian": ("theguardian.com",)
+                    "The Guardian": ("theguardian.com",),
+                    "Google News": ("news.google.com",)
                 }
                 host = (urlparse(link).hostname or '').lower()
                 valid_link = any(host == domain or host.endswith('.' + domain) for domain in allowed_hosts[source])
                 if title and link.startswith('https://') and valid_link and published_dt and 0 <= age <= 7 * 86400:
+                    publisher = val("source") if source == "Google News" else ""
+                    display_source = (publisher + " عبر Google News") if publisher else source
                     items.append({
                         "headline": title,
                         "description": description[:500],
                         "link": link,
                         "published": published_dt.isoformat(timespec="seconds").replace("+00:00", "Z"),
                         "fetched_at": NOW(),
-                        "source": source,
+                        "source": display_source,
+                        "discovery_source": source,
                         "category": "transfers" if re.search(r"transfer|signs|signing|deal|loan|gossip|انتقال|صفقة|ضم|تعاقد", title, re.I) else "news"
                     })
         except Exception as exc:
