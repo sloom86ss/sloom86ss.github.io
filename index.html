@@ -5,78 +5,76 @@
 <title>سلوم تيفي</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;font-family:'Tajawal',sans-serif;margin:0}body{background:#0a0a0a;color:#fff}
-.headerApp{background:#0a0a0a;padding:16px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
-.logoApp{background:#c6ff00;color:#000;padding:10px 22px;border-radius:22px;font-weight:900;font-size:19px}
-.liveTop{background:#c6ff00;color:#000;padding:8px 16px;border-radius:22px;font-weight:900;font-size:13px}
-.appWrap{max-width:440px;margin:0 auto;padding:12px}
-.cardDark{background:#1a1a1a;border-radius:26px;padding:16px;border:1px solid #2a2a2a}
-.dateBar{display:flex;gap:8px;overflow-x:auto;padding:8px 0;margin-bottom:12px;scrollbar-width:none}.dateBar::-webkit-scrollbar{display:none}
-.dateItem{padding:10px 14px;background:#242424;border-radius:18px;text-align:center;min-width:50px;font-size:12px;color:#888;border:1px solid #333;cursor:pointer;flex-shrink:0}.dateItem.active{background:#c6ff00;color:#000;border-color:#c6ff00;font-weight:900}
-.liveCard{background:#1a1a1a;border-radius:22px;padding:14px;margin-bottom:12px;border:1px solid #2a2a2a}
-.cardLime{background:#c6ff00;border-radius:22px;padding:14px;margin-bottom:12px;color:#000}
-.sc{font-size:24px;font-weight:900;direction:ltr}
-.badgeLive{font-size:10px;padding:4px 10px;border-radius:12px;font-weight:900;background:#000;color:#c6ff00;display:inline-block;margin-top:4px}
-.badgePre{font-size:10px;padding:4px 10px;border-radius:12px;background:#333;color:#aaa}
+*{font-family:'Tajawal',sans-serif;box-sizing:border-box;margin:0}body{background:#000;color:#fff}
+.head{padding:14px;display:flex;justify-content:center;position:sticky;top:0;background:#000;z-index:10;border-bottom:1px solid #111}
+.logo{background:#d4ff00;color:#000;padding:10px 22px;border-radius:22px;font-weight:900;font-size:18px}
+
+/* شريط متحرك */
+.ticker{background:#d4ff00;color:#000;overflow:hidden;white-space:nowrap;padding:8px 0;font-weight:900;font-size:14px;direction:ltr}
+.ticker-track{display:inline-block;animation:scroll 25s linear infinite;padding-left:100%}
+.ticker-track span{margin:0 20px}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+
+.box{max-width:440px;margin:0 auto;padding:10px}
+.card{background:#1c1c1c;border-radius:18px;padding:12px;margin-bottom:10px;border:1px solid #222;display:flex;justify-content:space-between;align-items:center}
+.cardLive{background:#d4ff00;color:#000;border-radius:18px;padding:12px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.sc{font-size:22px;font-weight:900;direction:ltr}.tm{font-size:12px;font-weight:700;width:35%;text-align:center}
+.badge{font-size:9px;padding:3px 8px;border-radius:10px;font-weight:900;margin-top:4px;display:inline-block}
+.bLive{background:#000;color:#d4ff00}.bFT{background:#333;color:#fff}.bPre{background:#333;color:#aaa}
+.leagueTitle{background:#1c1c1c;color:#d4ff00;padding:8px 12px;border-radius:12px;font-size:11px;font-weight:900;margin-top:12px;border:1px solid #222}
 </style>
 </head>
 <body>
-<div class="headerApp"><div class="liveTop">● LIVE</div><div class="logoApp">سلوم تيفي</div></div>
 
-<div class="appWrap">
-<div class="cardDark">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><div style="font-weight:900;font-size:16px">مباريات اليوم</div><div style="color:#888;font-size:12px" id="count">...</div></div>
-<div class="dateBar" id="dateBar"></div>
-<div id="list">جاري تحميل المباريات...</div>
-</div>
+<div class="head"><div class="logo">سلوم تيفي</div></div>
+
+<!-- شريط متحرك -->
+<div class="ticker"><div class="ticker-track" id="ticker">
+<span>مرحبا بكم في موقع سلوم تي في</span> • 
+<span id="ksa">السعودية --:--</span> • 
+<span id="muscat">مسقط --:--</span> • 
+<span>مرحبا بكم في موقع سلوم تي في</span> • 
+<span id="ksa2">السعودية --:--</span> • 
+<span id="muscat2">مسقط --:--</span>
+</div></div>
+
+<div class="box">
+<div style="display:flex;justify-content:space-between;margin:10px 0"><b>مباريات اليوم</b><span id="cnt" style="color:#777;font-size:11px"></span></div>
+<div id="list">جاري جلب مباريات العالم...</div>
 </div>
 
 <script>
-const nameAR={"Al Hilal":"الهلال","Al Ittihad":"الاتحاد","Al Nassr":"النصر","Al Ahli":"الأهلي","Manchester United":"مان يونايتد","Chelsea":"تشيلسي","Manchester City":"السيتي","Arsenal":"أرسنال","Barcelona":"برشلونة","Real Madrid":"ريال مدريد","Liverpool":"ليفربول"};
-const leagues=['sau.1','eng.1','esp.1','ita.1','ger.1','fra.1','uefa.champions'];
-
-let dates=[12,13,14,15,16,17,18];let days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-document.getElementById('dateBar').innerHTML=dates.map((d,i)=>`<div class="dateItem ${d===15?'active':''}" onclick="load(${d})"><div>${days[i]}</div><div style="font-weight:900;font-size:14px;margin-top:2px">${d}</div></div>`).join('');
-
-function dateStr(day){let now=new Date();now.setDate(day);return now.toISOString().slice(0,10).replace(/-/g,'');}
-
-async function load(day=15){
- document.getElementById('list').innerHTML='جاري تحميل المباريات...';
- let dStr=dateStr(day);
- let all=await Promise.all(leagues.map(async lg=>{
-  try{
-   let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg}/scoreboard?dates=${dStr}`);
-   let j=await r.json();
-   return (j.events||[]).map(ev=>{
-    let c=ev.competitions[0],h=c.competitors.find(x=>x.homeAway==='home'),a=c.competitors.find(x=>x.homeAway==='away');
-    return {h:h.team.displayName,a:a.team.displayName,hs:h.score||'0',as:a.score||'0',state:c.status.type.state,minute:c.status.type.state==='in'?(c.status.displayClock||'LIVE'):c.status.type.shortDetail,hAb:h.team.abbreviation||'H',aAb:a.team.abbreviation||'A'}
-   });
-  }catch{return []}
- }));
- let flat=all.flat();
- if(flat.length===0){
-  flat=[
-   {h:'Al Hilal',a:'Al Ittihad',hs:'2',as:'1',state:'in',minute:"67'",hAb:'HIL',aAb:'ITT'},
-   {h:'Manchester United',a:'Chelsea',hs:'0',as:'1',state:'in',minute:"34'",hAb:'MAN',aAb:'CHE'},
-   {h:'Barcelona',a:'Real Madrid',hs:'0',as:'0',state:'pre',minute:"22:00",hAb:'FCB',aAb:'RMA'}
-  ];
- }
- document.getElementById('count').textContent=flat.filter(x=>x.state==='in').length+' مباشر';
- let html='';
- flat.slice(0,12).forEach(m=>{
-  let hAR=nameAR[m.h]||m.h, aAR=nameAR[m.a]||m.a;
-  let isLive=m.state==='in';
-  html+=`<div class="${isLive?'cardLime':'liveCard'}">
-   <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="text-align:center;width:30%"><div style="width:46px;height:46px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-size:11px;font-weight:900;margin:0 auto">${m.hAb}</div><div style="font-size:12px;font-weight:900;margin-top:6px">${hAR}</div></div>
-    <div style="text-align:center;width:40%"><div class="sc">${m.hs} : ${m.as}</div><div class="${isLive?'badgeLive':'badgePre'}">${m.minute}</div></div>
-    <div style="text-align:center;width:30%"><div style="width:46px;height:46px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-size:11px;font-weight:900;margin:0 auto">${m.aAb}</div><div style="font-size:12px;font-weight:900;margin-top:6px">${aAR}</div></div>
-   </div>
-  </div>`;
- });
- document.getElementById('list').innerHTML=html||'لا توجد مباريات اليوم';
+// توقيت السعودية ومسقط
+function updateTimes(){
+ let now=new Date();
+ let ksa=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Riyadh'}));
+ let mct=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Muscat'}));
+ let ksaStr=ksa.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit',hour12:true});
+ let mctStr=mct.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit',hour12:true});
+ document.getElementById('ksa').textContent='🇸🇦 السعودية '+ksaStr;
+ document.getElementById('ksa2').textContent='🇸🇦 السعودية '+ksaStr;
+ document.getElementById('muscat').textContent='🇴🇲 مسقط '+mctStr;
+ document.getElementById('muscat2').textContent='🇴🇲 مسقط '+mctStr;
 }
-load(15);
+updateTimes(); setInterval(updateTimes,1000);
+
+// مباريات
+const AR={"Al Hilal":"الهلال","Al Ittihad":"الاتحاد","Manchester City":"السيتي","Manchester United":"مان يونايتد","Chelsea":"تشيلسي","Arsenal":"أرسنال","Liverpool":"ليفربول","Barcelona":"برشلونة","Real Madrid":"ريال مدريد"};
+const LEAGUES=[{id:'eng.1',name:'الإنجليزي 🏴󠁧󠁢󠁥󠁮󠁧󠁿'},{id:'esp.1',name:'الإسباني 🇪🇸'},{id:'ger.1',name:'الألماني 🇩🇪'},{id:'ita.1',name:'الإيطالي 🇮🇹'},{id:'fra.1',name:'الفرنسي 🇫🇷'},{id:'sau.1',name:'روشن 🇸🇦'},{id:'uefa.champions',name:'أبطال أوروبا 🏆'}];
+async function load(){
+ let date=new Date().toISOString().slice(0,10).replace(/-/g,'');
+ let all=[];
+ for(let lg of LEAGUES){
+  try{let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg.id}/scoreboard?dates=${date}`);let j=await r.json();(j.events||[]).forEach(ev=>{let c=ev.competitions[0],h=c.competitors.find(x=>x.homeAway==='home'),a=c.competitors.find(x=>x.homeAway==='away');all.push({lg:lg.name,h:h.team.displayName,a:a.team.displayName,hs:h.score||'0',as:a.score||'0',state:c.status.type.state,min:c.status.type.state==='in'?(c.status.displayClock||'مباشر'):c.status.type.state==='pre'?c.status.type.shortDetail:'انتهت',hAb:h.team.abbreviation||'',aAb:a.team.abbreviation||''});});}catch{}
+ }
+ if(all.length===0){document.getElementById('list').innerHTML='<div style="text-align:center;color:#777;padding:30px">لا توجد مباريات اليوم</div>';document.getElementById('cnt').textContent='0 مباراة';return;}
+ document.getElementById('cnt').textContent=all.filter(x=>x.state==='in').length+' مباشر • '+all.length+' مباراة';
+ let grouped={};all.forEach(m=>{if(!grouped[m.lg]) grouped[m.lg]=[];grouped[m.lg].push(m);});
+ let html='';for(let lgName in grouped){html+=`<div class="leagueTitle">${lgName}</div>`;grouped[lgName].forEach(m=>{let isLive=m.state==='in';let hAR=AR[m.h]||m.h,aAR=AR[m.a]||m.a;let badgeCls=isLive?'bLive':m.state==='post'?'bFT':'bPre';html+=`<div class="${isLive?'cardLive':'card'}"><div class="tm">${hAR}<div style="font-size:10px;opacity:.6">${m.hAb}</div></div><div style="text-align:center;width:30%"><div class="sc">${m.hs} : ${m.as}</div><div class="badge ${badgeCls}">${m.min}</div></div><div class="tm">${aAR}<div style="font-size:10px;opacity:.6">${m.aAb}</div></div></div>`;});}
+ document.getElementById('list').innerHTML=html;
+}
+load();
+setInterval(load,30000);
 </script>
 </body>
 </html>
