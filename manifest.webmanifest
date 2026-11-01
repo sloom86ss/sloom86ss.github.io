@@ -1,4 +1,5 @@
 {
+  "id": "/sloom360.html",
   "name": "SLOOM360 - كرة القدم بالعربية",
   "short_name": "SLOOM360",
   "description": "مباريات وأخبار ونتائج كرة القدم من مصادر موثوقة",
@@ -7,14 +8,16 @@
   "start_url": "/sloom360.html",
   "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#080c0a",
   "theme_color": "#b7f34a",
+  "categories": ["sports", "news"],
   "icons": [
     {
       "src": "/assets/sloom360-logo.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }
