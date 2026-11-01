@@ -51,6 +51,10 @@ jobs:
           git config user.email 'sloom-tv-bot@users.noreply.github.com'
           git add data.json
           git diff --cached --quiet && echo "No data changes" && exit 0
-          git commit -m "Update sports scores, clubs and standings"
-          git pull --rebase origin main
-          git push
+          git commit -m "Update football scores, clubs and standings"
+          git fetch origin main
+          git reset --soft origin/main
+          git add data.json
+          git diff --cached --quiet && echo "No data changes after sync" && exit 0
+          git commit -m "Publish latest football data"
+          git push origin main
