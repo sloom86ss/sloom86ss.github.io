@@ -1,38 +1,6 @@
 {
-  "uefa.champions": {
-    "matches": [
-      {
-        "name": "Real Madrid vs Barcelona",
-        "competitions": [
-          {
-            "competitors": [
-              {
-                "homeAway": "home",
-                "score": "2",
-                "team": {
-                  "shortDisplayName": "Real Madrid",
-                  "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/86.png"
-                }
-              },
-              {
-                "homeAway": "away",
-                "score": "1",
-                "team": {
-                  "shortDisplayName": "Barcelona",
-                  "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/83.png"
-                }
-              }
-            ],
-            "status": {
-              "type": {
-                "state": "in",
-                "detail": "65'"
-              }
-            }
-          }
-        ]
-      }
-    ],
-    "news": []
-  }
+  "generated_at": null,
+  "timezone": "Asia/Muscat",
+  "provider": "ESPN public API",
+  "leagues": {}
 }
