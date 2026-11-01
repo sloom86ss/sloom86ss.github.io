@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kora Pro - بث مباشر</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B0E11;--surface:#151A21;--surface-2:#1C232C;--border:#232B36;--neon:#C6F432;--text:#FFF;--muted:#7C8797;--live:#FF3B5C;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
+body{background:var(--bg);color:var(--text);display:flex;justify-content:center;padding-bottom:90px;}
+.app{width:100%;max-width:480px;padding:20px 18px;}
+.hero{background:linear-gradient(135deg,#1F2A1F,#141B14);border-radius:24px;padding:22px;margin-bottom:22px;border:1px solid rgba(198,244,50,0.15);}
+.hero h1{font-size:24px;font-weight:900;margin-bottom:6px}
+.hero h1 span{color:var(--neon)}
+.hero-match{margin-top:20px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.35);border-radius:18px;padding:16px;}
+.hero-team{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;}
+.hero-team img{width:44px;height:44px;object-fit:contain;}
+.hero-score .num{font-size:26px;font-weight:900;color:var(--neon);line-height:1;text-align:center;}
+.match{background:var(--surface);border-radius:18px;padding:14px 16px;border:1px solid var(--border);margin-bottom:10px;}
+.match-body{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;}
+.team{display:flex;align-items:center;gap:10px;}
+.team.away{flex-direction:row-reverse;text-align:left}
+.team img{width:34px;height:34px;object-fit:contain;}
+.team span{font-size:13px;font-weight:700;}
+.score-cell .score{font-size:18px;font-weight:900;background:var(--surface-2);padding:6px 12px;border-radius:10px;}
+.news-scroll{display:flex;gap:12px;overflow-x:auto;padding-bottom:10px;}
+.news{flex:0 0 220px;background:var(--surface);border-radius:18px;overflow:hidden;border:1px solid var(--border);}
+.news-img{height:110px;width:100%;object-fit:cover;}
+.news-body{padding:12px}
+.loader{text-align:center;padding:30px;color:var(--muted);}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="hero">
+    <h1>تابع أفضل <span>المباريات</span><br>لحظة بلحظة</h1>
+    <div class="hero-match" id="heroMatch">
+      <div class="hero-team"><div style="width:44px;height:44px;background:#333;border-radius:50%"></div></div>
+      <div class="hero-score"><div class="num">- : -</div></div>
+      <div class="hero-team"><div style="width:44px;height:44px;background:#333;border-radius:50%"></div></div>
+    </div>
+  </div>
+  <h3 style="margin-bottom:14px;">مباريات اليوم</h3>
+  <div id="matches"><div class="loader">جاري التحميل...</div></div>
+  <h3 style="margin:20px 0 14px;">آخر الأخبار</h3>
+  <div class="news-scroll" id="news"></div>
+</div>
+
+<script>
+const LEAGUE = 'uefa.champions';
+
+async function loadData() {
+    try {
+        // قراءة ملف البيانات الذي يحدثه البوت
+        const res = await fetch('data.json?t=' + new Date().getTime()); // منع الكاش
+        const data = await res.json();
+        
+        const leagueData = data[LEAGUE];
+        if(!leagueData) return;
+
+        const events = leagueData.matches || [];
+        const articles = leagueData.news || [];
+        
+        const box = document.getElementById('matches');
+        box.innerHTML = '';
+        
+        if (events.length === 0) {
+            box.innerHTML = '<div class="loader">لا توجد مباريات اليوم</div>';
+        } else {
+            let heroSet = false;
+            events.slice(0, 6).forEach(ev => {
+                const comp = ev.competitions[0];
+                const home = comp.competitors.find(c => c.homeAway === 'home');
+                const away = comp.competitors.find(c => c.homeAway === 'away');
+                if (!home || !away) return;
+                
+                const isLive = comp.status?.type?.state === 'in';
+                const isFinal = comp.status?.type?.state === 'post';
+                let timeTxt = isLive ? comp.status.type.detail : (isFinal ? 'انتهت' : new Date(ev.date).toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'}));
+                const hs = (isLive||isFinal) ? (home.score ?? '0') : '-';
+                const as = (isLive||isFinal) ? (away.score ?? '0') : '-';
+
+                if (!heroSet) {
+                    heroSet = true;
+                    document.getElementById('heroMatch').innerHTML = `
+                        <div class="hero-team"><img src="${home.team.logo}"><span>${home.team.shortDisplayName}</span></div>
+                        <div class="hero-score"><div class="num">${hs} : ${as}</div></div>
+                        <div class="hero-team"><img src="${away.team.logo}"><span>${away.team.shortDisplayName}</span></div>
+                    `;
+                }
+
+                box.insertAdjacentHTML('beforeend', `
+                    <div class="match">
+                        <div class="match-body">
+                            <div class="team"><img src="${home.team.logo}"><span>${home.team.shortDisplayName}</span></div>
+                            <div class="score-cell"><div class="score">${hs} : ${as}</div></div>
+                            <div class="team away"><img src="${away.team.logo}"><span>${away.team.shortDisplayName}</span></div>
+                        </div>
+                    </div>
+                `);
+            });
+        }
+
+        const newsBox = document.getElementById('news');
+        newsBox.innerHTML = '';
+        articles.forEach(a => {
+            const img = a.images?.[0]?.url || 'https://ui-avatars.com/api/?name=News';
+            newsBox.insertAdjacentHTML('beforeend', `
+                <div class="news">
+                    <img class="news-img" src="${img}">
+                    <div class="news-body"><h4>${a.headline}</h4></div>
+                </div>
+            `);
+        });
+    } catch (err) {
+        console.error("خطأ:", err);
+        document.getElementById('matches').innerHTML = '<div class="loader">⚠️ تعذر جلب البيانات. تأكد من وجود ملف data.json</div>';
+    }
+}
+loadData();
+</script>
+</body>
+</html>
