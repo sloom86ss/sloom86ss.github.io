@@ -69,8 +69,7 @@ async function translateNews(){
  const sig=JSON.stringify([news.map(n=>n.headline),teams]);if(sig===translationSignature)return;translationSignature=sig;
  try{
   const req=items=>fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'translate',items})}).then(r=>r.json().then(p=>({ok:r.ok,p})));
-  const nr=await req(news.map(n=>({headline:n.headline,description:n.description||''})));
-  if(nr.ok&&Array.isArray(nr.p.translations))translatedNews=nr.p.translations;else throw Error(nr.p.error||'translation');
+  if(news.length){const nr=await req(news.map(n=>({headline:n.headline,description:n.description||''})));if(nr.ok&&Array.isArray(nr.p.translations))translatedNews=nr.p.translations;else throw Error(nr.p.error||'translation');}
   for(let i=0;i<teams.length;i+=100){const batch=teams.slice(i,i+100);const tr=await req(batch.map(name=>({headline:name,description:''})));if(tr.ok&&Array.isArray(tr.p.translations))batch.forEach((name,j)=>{translatedTeams[name]=tr.p.translations[j]?.headline||name;});}
   $('newsstamp').textContent='الأخبار وأسماء الفرق بالعربية';render();
  }catch(e){$('newsstamp').textContent='الترجمة الآلية تحتاج مفتاح Gemini';}
