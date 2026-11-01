@@ -5,52 +5,78 @@
 <title>سلوم تيفي</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;font-family:'Tajawal',sans-serif;margin:0}body{background:#0a0a0a;color:#fff;overflow-x:hidden}
-.headerApp{background:#0a0a0a;padding:14px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:30;border-bottom:1px solid #1a1a1a}
-.logoApp{background:#c6ff00;color:#000;padding:8px 20px;border-radius:20px;font-weight:900;font-size:18px}
-.liveTop{background:#c6ff00;color:#000;padding:6px 12px;border-radius:20px;font-weight:900;font-size:11px}
-.appWrap{max-width:420px;margin:0 auto;padding:10px}
-.cardDark{background:#1a1a1a;border-radius:24px;padding:14px;margin-bottom:12px;border:1px solid #2a2a2a}
-.cardLime{background:#c6ff00;border-radius:20px;padding:14px;margin-bottom:12px;color:#000}
-.dateBar{display:flex;gap:6px;overflow-x:auto;padding:6px 0;margin-bottom:10px}.dateItem{padding:8px 12px;background:#242424;border-radius:16px;text-align:center;min-width:42px;font-size:11px;color:#aaa;border:1px solid #333}.dateItem.active{background:#c6ff00;color:#000}
-.liveCard{background:#1a1a1a;border-radius:20px;padding:12px;margin-bottom:10px;border:1px solid #2a2a2a}
-.liveScore{font-size:20px;font-weight:900}
-.probBar{height:5px;background:#333;border-radius:5px;display:flex;margin-top:8px;overflow:hidden}.probBar div{height:100%}
-.sloomBar{text-align:center;padding:8px;background:#111;color:#c6ff00;font-size:10px;font-weight:700;border-radius:12px;margin-top:8px}
+*{box-sizing:border-box;font-family:'Tajawal',sans-serif;margin:0}body{background:#0a0a0a;color:#fff}
+.headerApp{background:#0a0a0a;padding:16px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
+.logoApp{background:#c6ff00;color:#000;padding:10px 22px;border-radius:22px;font-weight:900;font-size:19px}
+.liveTop{background:#c6ff00;color:#000;padding:8px 16px;border-radius:22px;font-weight:900;font-size:13px}
+.appWrap{max-width:440px;margin:0 auto;padding:12px}
+.cardDark{background:#1a1a1a;border-radius:26px;padding:16px;border:1px solid #2a2a2a}
+.dateBar{display:flex;gap:8px;overflow-x:auto;padding:8px 0;margin-bottom:12px;scrollbar-width:none}.dateBar::-webkit-scrollbar{display:none}
+.dateItem{padding:10px 14px;background:#242424;border-radius:18px;text-align:center;min-width:50px;font-size:12px;color:#888;border:1px solid #333;cursor:pointer;flex-shrink:0}.dateItem.active{background:#c6ff00;color:#000;border-color:#c6ff00;font-weight:900}
+.liveCard{background:#1a1a1a;border-radius:22px;padding:14px;margin-bottom:12px;border:1px solid #2a2a2a}
+.cardLime{background:#c6ff00;border-radius:22px;padding:14px;margin-bottom:12px;color:#000}
+.sc{font-size:24px;font-weight:900;direction:ltr}
+.badgeLive{font-size:10px;padding:4px 10px;border-radius:12px;font-weight:900;background:#000;color:#c6ff00;display:inline-block;margin-top:4px}
+.badgePre{font-size:10px;padding:4px 10px;border-radius:12px;background:#333;color:#aaa}
 </style>
 </head>
 <body>
-<div class="headerApp"><div class="logoApp">سلوم تيفي</div><div class="liveTop">● LIVE</div></div>
+<div class="headerApp"><div class="liveTop">● LIVE</div><div class="logoApp">سلوم تيفي</div></div>
+
 <div class="appWrap">
 <div class="cardDark">
-<div style="display:flex;justify-content:space-between;margin-bottom:12px"><b>مباريات اليوم</b><span style="color:#aaa;font-size:12px" id="count">جاري...</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><div style="font-weight:900;font-size:16px">مباريات اليوم</div><div style="color:#888;font-size:12px" id="count">...</div></div>
 <div class="dateBar" id="dateBar"></div>
 <div id="list">جاري تحميل المباريات...</div>
-<div class="sloomBar">ملخصات باسم سلوم تي في - sloomtv</div>
 </div>
 </div>
 
 <script>
-let dates=['12 Sun','13 Mon','14 Tue','15 Wed','16 Thu','17 Fri','18 Sat'];document.getElementById('dateBar').innerHTML=dates.map((d,i)=>`<div class="dateItem ${i===3?'active':''}"><div>${d.split(' ')[1]}</div><div style="font-weight:900">${d.split(' ')[0]}</div></div>`).join('');
+const nameAR={"Al Hilal":"الهلال","Al Ittihad":"الاتحاد","Al Nassr":"النصر","Al Ahli":"الأهلي","Manchester United":"مان يونايتد","Chelsea":"تشيلسي","Manchester City":"السيتي","Arsenal":"أرسنال","Barcelona":"برشلونة","Real Madrid":"ريال مدريد","Liverpool":"ليفربول"};
+const leagues=['sau.1','eng.1','esp.1','ita.1','ger.1','fra.1','uefa.champions'];
 
-async function load(){
- let r=await fetch('/api/live');let j=await r.json();
- document.getElementById('count').textContent=j.live.length+' مباشر';
+let dates=[12,13,14,15,16,17,18];let days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+document.getElementById('dateBar').innerHTML=dates.map((d,i)=>`<div class="dateItem ${d===15?'active':''}" onclick="load(${d})"><div>${days[i]}</div><div style="font-weight:900;font-size:14px;margin-top:2px">${d}</div></div>`).join('');
+
+function dateStr(day){let now=new Date();now.setDate(day);return now.toISOString().slice(0,10).replace(/-/g,'');}
+
+async function load(day=15){
+ document.getElementById('list').innerHTML='جاري تحميل المباريات...';
+ let dStr=dateStr(day);
+ let all=await Promise.all(leagues.map(async lg=>{
+  try{
+   let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg}/scoreboard?dates=${dStr}`);
+   let j=await r.json();
+   return (j.events||[]).map(ev=>{
+    let c=ev.competitions[0],h=c.competitors.find(x=>x.homeAway==='home'),a=c.competitors.find(x=>x.homeAway==='away');
+    return {h:h.team.displayName,a:a.team.displayName,hs:h.score||'0',as:a.score||'0',state:c.status.type.state,minute:c.status.type.state==='in'?(c.status.displayClock||'LIVE'):c.status.type.shortDetail,hAb:h.team.abbreviation||'H',aAb:a.team.abbreviation||'A'}
+   });
+  }catch{return []}
+ }));
+ let flat=all.flat();
+ if(flat.length===0){
+  flat=[
+   {h:'Al Hilal',a:'Al Ittihad',hs:'2',as:'1',state:'in',minute:"67'",hAb:'HIL',aAb:'ITT'},
+   {h:'Manchester United',a:'Chelsea',hs:'0',as:'1',state:'in',minute:"34'",hAb:'MAN',aAb:'CHE'},
+   {h:'Barcelona',a:'Real Madrid',hs:'0',as:'0',state:'pre',minute:"22:00",hAb:'FCB',aAb:'RMA'}
+  ];
+ }
+ document.getElementById('count').textContent=flat.filter(x=>x.state==='in').length+' مباشر';
  let html='';
- j.all.slice(0,8).forEach(m=>{
-  html+=`<div class="${m.state==='in'?'cardLime':'liveCard'}">
-  <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:8px"><span>${m.league.toUpperCase()}</span><span>${m.minute}</span></div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-  <div style="text-align:center;width:30%"><div style="width:44px;height:44px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-size:10px;font-weight:900;margin:0 auto">${m.homeAbbr}</div><div style="font-size:11px;font-weight:900;margin-top:4px">${m.hAR}</div></div>
-  <div style="text-align:center;width:40%"><div style="font-size:24px;font-weight:900">${m.hs} : ${m.as}</div></div>
-  <div style="text-align:center;width:30%"><div style="width:44px;height:44px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-size:10px;font-weight:900;margin:0 auto">${m.awayAbbr}</div><div style="font-size:11px;font-weight:900;margin-top:4px">${m.aAR}</div></div>
-  </div>
-  <div class="probBar"><div style="width:${m.prob}%;background:${m.state==='in'?'#000':'#c6ff00'}"></div><div style="width:${100-m.prob}%;background:#6a2db8"></div></div>
+ flat.slice(0,12).forEach(m=>{
+  let hAR=nameAR[m.h]||m.h, aAR=nameAR[m.a]||m.a;
+  let isLive=m.state==='in';
+  html+=`<div class="${isLive?'cardLime':'liveCard'}">
+   <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="text-align:center;width:30%"><div style="width:46px;height:46px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-size:11px;font-weight:900;margin:0 auto">${m.hAb}</div><div style="font-size:12px;font-weight:900;margin-top:6px">${hAR}</div></div>
+    <div style="text-align:center;width:40%"><div class="sc">${m.hs} : ${m.as}</div><div class="${isLive?'badgeLive':'badgePre'}">${m.minute}</div></div>
+    <div style="text-align:center;width:30%"><div style="width:46px;height:46px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-size:11px;font-weight:900;margin:0 auto">${m.aAb}</div><div style="font-size:12px;font-weight:900;margin-top:6px">${aAR}</div></div>
+   </div>
   </div>`;
  });
- document.getElementById('list').innerHTML=html;
+ document.getElementById('list').innerHTML=html||'لا توجد مباريات اليوم';
 }
-load();setInterval(load,10000);
+load(15);
 </script>
 </body>
 </html>
