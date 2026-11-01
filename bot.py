@@ -4,5 +4,3 @@ permissions:
   contents: write
 
 on:
-  schedule:
-...
