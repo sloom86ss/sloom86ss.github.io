@@ -15,12 +15,23 @@ export default async function handler(req,res){
  const context=body.context;
  if(!question||question.length>1000)return res.status(400).json({error:"اكتب سؤالاً لا يتجاوز 1000 حرف."});
  if(!context||typeof context!=="object")return res.status(400).json({error:"بيانات الرياضة غير متاحة."});
- if(!key)return res.status(200).json({answer:localAnswer(question,context),mode:"local",notice:"المساعد يعمل بالبيانات الحالية، لكن التحليل التوليدي يحتاج إعداد مفتاح Gemini سري على الاستضافة."});
- const system="أنت SLOOM360، مساعد متخصص بكرة القدم العالمية فقط، ومحلل رياضي ومراسل عربي محترف. أجب بالعربية الفصحى حصراً، حتى لو كانت أسماء الفرق والأخبار في المصدر بالإنجليزية. استخدم أسماء الأندية العربية المعروفة، ويمكن وضع الاسم الأصلي بين قوسين عند الحاجة. اعتمد فقط على JSON المرفق. حلل النتائج والأداء والاتجاهات الحسابية المتاحة، ولخص الأخبار والمباريات مع ذكر المصدر. افصل بين الحقائق والتحليل. لا تخترع أحداثاً أو إحصائيات أو تشكيلات أو إصابات أو مواعيد. إذا لم تتوفر معلومة فقل ذلك صراحة. انتبه إلى stale=true ووقت التحديث والمنطقة الزمنية Asia/Muscat. لا تدّع أنك بحثت خارج البيانات. عند السؤال عن انتقالات أو خبر عاجل، اذكر وقت النشر والمصدر والرابط إن توفرت، وميّز الشائعة عن التأكيد الرسمي. لا تصف خبراً بأنه حصري إلا إذا نص المصدر على ذلك.";
+ const now=Date.now();
+ const generated=Date.parse(context.generated_at||"");
+ const datasetFresh=Number.isFinite(generated)&&now-generated>=0&&now-generated<=90*60*1000;
+ const isRecent=(value,hours)=>{const t=Date.parse(value||'');return Number.isFinite(t)&&now-t>=0&&now-t<=hours*60*60*1000;};
+ const allLeagues=Array.isArray(context.leagues)?context.leagues:Object.values(context.leagues||{});
+ const safeContext={provider:context.provider,generated_at:context.generated_at,timezone:'Asia/Muscat',dataset_fresh:datasetFresh,
+  news_sources:datasetFresh?(context.news_sources||[]).filter(n=>isRecent(n.published,7)):[],
+  leagues:datasetFresh?allLeagues.filter(l=>!l.stale&&isRecent(l.updated_at,1.5)).map(l=>({...l,news:(l.news||[]).filter(n=>isRecent(n.published,7))})):[]};
+ if(!key)return res.status(200).json({answer:localAnswer(question,safeContext),mode:"local",notice:datasetFresh?"المعلومات حديثة وفق آخر تحديث مؤكد. التحليل التوليدي يحتاج إعداد مفتاح Gemini.":"توقف البوت لأن آخر تحديث تجاوز 90 دقيقة؛ لا نعرض بيانات قديمة على أنها مباشرة."});
+ const prompt="بيانات الرياضة المفلترة زمنياً بصيغة JSON:\n"+JSON.stringify(safeContext)+"\n\nسؤال المستخدم: "+question;
+ return callGemini(req,res,key,prompt,false,system);
+ const system="أنت SLOOM360، مساعد متخصص بكرة القدم العالمية فقط، ومحلل رياضي ومراسل عربي محترف. أجب بالعربية الفصحى حصراً، حتى لو كانت أسماء الفرق والأخبار في المصدر بالإنجليزية. استخدم أسماء الأندية العربية المعروفة، ويمكن وضع الاسم الأصلي بين قوسين عند الحاجة. اعتمد فقط على JSON المرفق. حلل النتائج والأداء والاتجاهات الحسابية المتاحة، ولخص الأخبار والمباريات مع ذكر المصدر. افصل بين الحقائق والتحليل. لا تخترع أحداثاً أو إحصائيات أو تشكيلات أو إصابات أو مواعيد. إذا كانت dataset_fresh=false فلا تعرض نتائج أو أخباراً أو حالة مباشرة. لا تعرض خبراً يتجاوز سبعة أيام أو بلا تاريخ نشر، ولا تستخدم دورياً موسوماً stale=true. إذا لم تتوفر معلومة فقل ذلك صراحة. انتبه إلى stale=true ووقت التحديث والمنطقة الزمنية Asia/Muscat. لا تدّع أنك بحثت خارج البيانات. عند السؤال عن انتقالات أو خبر عاجل، اذكر وقت النشر والمصدر والرابط إن توفرت، وميّز الشائعة عن التأكيد الرسمي. لا تصف خبراً بأنه حصري إلا إذا نص المصدر على ذلك.";
  const prompt="بيانات الرياضة بصيغة JSON:\n"+JSON.stringify(context)+"\n\nسؤال المستخدم: "+question;
  return callGemini(req,res,key,prompt,false,system);
 }
 function localAnswer(q,c){
+ if(!c.dataset_fresh)return 'توقفت عن عرض النتائج والأخبار لأن آخر تحديث مؤكد تجاوز 90 دقيقة. لا أستطيع تأكيد الحالة الحالية الآن؛ حاول بعد نجاح التحديث القادم.';
  const s=q.toLowerCase(), leagues=Object.values(c.leagues||{}), matches=leagues.flatMap(l=>(l.matches||[]).map(m=>({...m,league:l.name||"بطولة"}))), news=[...(c.news_sources||[]),...leagues.flatMap(l=>l.news||[])];
  const arabicNames={"Manchester City":"مانشستر سيتي","Manchester United":"مانشستر يونايتد","Liverpool":"ليفربول","Arsenal":"أرسنال","Chelsea":"تشيلسي","Real Madrid":"ريال مدريد","Barcelona":"برشلونة","Bayern Munich":"بايرن ميونخ","Al Hilal":"الهلال","Al Nassr":"النصر","Al-Ittihad":"الاتحاد","Al Ahli":"الأهلي"};
  const team=n=>arabicNames[n]||n||"الفريق";
