@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="manifest" href="/manifest.webmanifest"> <meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="SLOOM360"><meta name="theme-color" content="#080c0a">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080c0a">
 <title>مساعد SLOOM360 | SLOOM360</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
@@ -81,5 +80,4 @@ async function go(){
  finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight;}
 }
 send.addEventListener('click',go);field.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
-</script><script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(err=>console.warn("SLOOM360 offline support unavailable",err)));}</script>
-</body></html>
+</script></body></html>

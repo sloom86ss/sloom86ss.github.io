@@ -61,4 +61,5 @@ function render(){
 document.getElementById('teamSearch').addEventListener('input',render);
 async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();sportsData=d.leagues||d;sportsData.news_sources=d.news_sources||[];render()}catch(e){document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
 document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,120000);
-</script></body></html>
+</script><script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(err=>console.warn("SLOOM360 offline support unavailable",err)));}</script>
+</body></html>
