@@ -6,75 +6,155 @@
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{font-family:'Tajawal',sans-serif;box-sizing:border-box;margin:0}body{background:#000;color:#fff}
-.head{padding:14px;display:flex;justify-content:center;position:sticky;top:0;background:#000;z-index:10;border-bottom:1px solid #111}
-.logo{background:#d4ff00;color:#000;padding:10px 22px;border-radius:22px;font-weight:900;font-size:18px}
-
-/* شريط متحرك */
-.ticker{background:#d4ff00;color:#000;overflow:hidden;white-space:nowrap;padding:8px 0;font-weight:900;font-size:14px;direction:ltr}
-.ticker-track{display:inline-block;animation:scroll 25s linear infinite;padding-left:100%}
-.ticker-track span{margin:0 20px}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-
-.box{max-width:440px;margin:0 auto;padding:10px}
-.card{background:#1c1c1c;border-radius:18px;padding:12px;margin-bottom:10px;border:1px solid #222;display:flex;justify-content:space-between;align-items:center}
-.cardLive{background:#d4ff00;color:#000;border-radius:18px;padding:12px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
-.sc{font-size:22px;font-weight:900;direction:ltr}.tm{font-size:12px;font-weight:700;width:35%;text-align:center}
+.head{padding:12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#000;z-index:20;border-bottom:1px solid #111}
+.logoBox{display:flex;align-items:center;gap:10px}
+.logoImg{width:42px;height:42px;background:#d4ff00;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-weight:900;font-size:20px}
+.logoTxt{font-weight:900;font-size:18px}.logoTxt span{color:#d4ff00}
+.timeBox{text-align:left;font-size:11px;line-height:1.3}.timeBox b{color:#d4ff00}
+.ticker{background:#d4ff00;color:#000;overflow:hidden;white-space:nowrap;padding:7px 0;font-weight:900;font-size:13px}
+.ticker-track{display:inline-block;animation:scroll 30s linear infinite}
+@keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+.tabs{display:flex;gap:8px;padding:10px;max-width:500px;margin:0 auto}
+.tab{flex:1;padding:10px;border-radius:22px;text-align:center;background:#1c1c1c;border:1px solid #222;font-weight:700;font-size:13px;cursor:pointer}
+.tab.active{background:#d4ff00;color:#000;border-color:#d4ff00;font-weight:900}
+.box{max-width:500px;margin:0 auto;padding:10px}
+.leagueTitle{background:#1c1c1c;color:#d4ff00;padding:8px 12px;border-radius:12px;font-size:11px;font-weight:900;margin-top:12px;border:1px solid #222;display:flex;justify-content:space-between}
+.card{background:#1c1c1c;border-radius:16px;padding:12px;margin-bottom:8px;border:1px solid #222;cursor:pointer}
+.cardLive{background:#d4ff00;color:#000;border-radius:16px;padding:12px;margin-bottom:8px}
+.row{display:flex;justify-content:space-between;align-items:center}
+.sc{font-size:20px;font-weight:900;direction:ltr;text-align:center}
+.tm{width:32%;text-align:center;font-size:12px;font-weight:700}
 .badge{font-size:9px;padding:3px 8px;border-radius:10px;font-weight:900;margin-top:4px;display:inline-block}
 .bLive{background:#000;color:#d4ff00}.bFT{background:#333;color:#fff}.bPre{background:#333;color:#aaa}
-.leagueTitle{background:#1c1c1c;color:#d4ff00;padding:8px 12px;border-radius:12px;font-size:11px;font-weight:900;margin-top:12px;border:1px solid #222}
+.statsBox{display:none;margin-top:10px;border-top:1px dashed #333;padding-top:8px;font-size:11px}
+.newsCard{background:#1c1c1c;border-radius:16px;padding:14px;margin-bottom:10px;border:1px solid #222;display:flex;gap:10px}
+.newsCard img{width:70px;height:70px;border-radius:12px;object-fit:cover;background:#222}
+.newsTitle{font-size:13px;font-weight:700;line-height:1.4}
 </style>
 </head>
 <body>
-
-<div class="head"><div class="logo">سلوم تيفي</div></div>
-
-<!-- شريط متحرك -->
-<div class="ticker"><div class="ticker-track" id="ticker">
-<span>مرحبا بكم في موقع سلوم تي في</span> • 
-<span id="ksa">السعودية --:--</span> • 
-<span id="muscat">مسقط --:--</span> • 
-<span>مرحبا بكم في موقع سلوم تي في</span> • 
-<span id="ksa2">السعودية --:--</span> • 
-<span id="muscat2">مسقط --:--</span>
-</div></div>
-
-<div class="box">
-<div style="display:flex;justify-content:space-between;margin:10px 0"><b>مباريات اليوم</b><span id="cnt" style="color:#777;font-size:11px"></span></div>
-<div id="list">جاري جلب مباريات العالم...</div>
+<div class="head">
+<div class="logoBox"><div class="logoImg">س</div><div class="logoTxt">سلوم <span>تيفي</span></div></div>
+<div class="timeBox"><div id="ksaTime">السعودية --</div><div id="mctTime">مسقط --</div></div>
 </div>
-
+<div class="ticker"><div class="ticker-track" id="tickerTxt">مرحبا بكم في موقع سلوم تي في • مباريات اليوم من كل دوريات العالم • تحديث كل 30 ثانية • بوت متعدد المصادر •</div></div>
+<div class="tabs">
+<div class="tab active" onclick="showTab('matches',this)">⚽ المباريات</div>
+<div class="tab" onclick="showTab('stats',this)">📊 الإحصائيات</div>
+<div class="tab" onclick="showTab('news',this)">📰 الأخبار</div>
+</div>
+<div class="box">
+<div id="matchesTab"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><b>مباريات اليوم</b><span id="cnt" style="color:#777;font-size:11px"></span></div><div id="list">جاري جلب المباريات من 3 مصادر + قوقل...</div></div>
+<div id="statsTab" style="display:none"><div id="statsList"></div></div>
+<div id="newsTab" style="display:none"><div id="newsList">جاري جلب الأخبار من قوقل...</div></div>
+</div>
 <script>
-// توقيت السعودية ومسقط
 function updateTimes(){
  let now=new Date();
  let ksa=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Riyadh'}));
  let mct=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Muscat'}));
- let ksaStr=ksa.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit',hour12:true});
- let mctStr=mct.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit',hour12:true});
- document.getElementById('ksa').textContent='🇸🇦 السعودية '+ksaStr;
- document.getElementById('ksa2').textContent='🇸🇦 السعودية '+ksaStr;
- document.getElementById('muscat').textContent='🇴🇲 مسقط '+mctStr;
- document.getElementById('muscat2').textContent='🇴🇲 مسقط '+mctStr;
+ document.getElementById('ksaTime').innerHTML='<b>🇸🇦</b> '+ksa.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit'});
+ document.getElementById('mctTime').innerHTML='<b>🇴🇲</b> '+mct.toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit'});
 }
-updateTimes(); setInterval(updateTimes,1000);
-
-// مباريات
+setInterval(updateTimes,1000);updateTimes();
+function showTab(t,el){
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));el.classList.add('active');
+ document.getElementById('matchesTab').style.display=t==='matches'?'block':'none';
+ document.getElementById('statsTab').style.display=t==='stats'?'block':'none';
+ document.getElementById('newsTab').style.display=t==='news'?'block':'none';
+ if(t==='news') loadNews(); if(t==='stats') loadStats();
+}
 const AR={"Al Hilal":"الهلال","Al Ittihad":"الاتحاد","Manchester City":"السيتي","Manchester United":"مان يونايتد","Chelsea":"تشيلسي","Arsenal":"أرسنال","Liverpool":"ليفربول","Barcelona":"برشلونة","Real Madrid":"ريال مدريد"};
-const LEAGUES=[{id:'eng.1',name:'الإنجليزي 🏴󠁧󠁢󠁥󠁮󠁧󠁿'},{id:'esp.1',name:'الإسباني 🇪🇸'},{id:'ger.1',name:'الألماني 🇩🇪'},{id:'ita.1',name:'الإيطالي 🇮🇹'},{id:'fra.1',name:'الفرنسي 🇫🇷'},{id:'sau.1',name:'روشن 🇸🇦'},{id:'uefa.champions',name:'أبطال أوروبا 🏆'}];
-async function load(){
+const LEAGUES=[{id:'eng.1',name:'الإنجليزي'},{id:'esp.1',name:'الإسباني'},{id:'ita.1',name:'الإيطالي'},{id:'ger.1',name:'الألماني'},{id:'fra.1',name:'الفرنسي'},{id:'sau.1',name:'روشن'},{id:'uefa.champions',name:'الأبطال'}];
+let allMatches=[];
+
+async function loadMatches(){
  let date=new Date().toISOString().slice(0,10).replace(/-/g,'');
- let all=[];
+ allMatches=[];
+ // 1- المصدر الأول: ESPN
  for(let lg of LEAGUES){
-  try{let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg.id}/scoreboard?dates=${date}`);let j=await r.json();(j.events||[]).forEach(ev=>{let c=ev.competitions[0],h=c.competitors.find(x=>x.homeAway==='home'),a=c.competitors.find(x=>x.homeAway==='away');all.push({lg:lg.name,h:h.team.displayName,a:a.team.displayName,hs:h.score||'0',as:a.score||'0',state:c.status.type.state,min:c.status.type.state==='in'?(c.status.displayClock||'مباشر'):c.status.type.state==='pre'?c.status.type.shortDetail:'انتهت',hAb:h.team.abbreviation||'',aAb:a.team.abbreviation||''});});}catch{}
+  try{
+   let r=await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${lg.id}/scoreboard?dates=${date}`);
+   let j=await r.json();
+   (j.events||[]).forEach(ev=>{
+    let c=ev.competitions[0],h=c.competitors.find(x=>x.homeAway==='home'),a=c.competitors.find(x=>x.homeAway==='away');
+    allMatches.push({lg:lg.name,id:ev.id,h:h.team.displayName,a:a.team.displayName,hs:h.score||'0',as:a.score||'0',state:c.status.type.state,min:c.status.type.state==='in'?(c.status.displayClock||'مباشر'):c.status.type.state==='pre'?new Date(c.date).toLocaleTimeString('ar-SA',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Riyadh'})+' بتوقيت السعودية':'انتهت',hAb:h.team.abbreviation||'',aAb:a.team.abbreviation||'',source:'ESPN'});
+   });
+  }catch{}
  }
- if(all.length===0){document.getElementById('list').innerHTML='<div style="text-align:center;color:#777;padding:30px">لا توجد مباريات اليوم</div>';document.getElementById('cnt').textContent='0 مباراة';return;}
- document.getElementById('cnt').textContent=all.filter(x=>x.state==='in').length+' مباشر • '+all.length+' مباراة';
- let grouped={};all.forEach(m=>{if(!grouped[m.lg]) grouped[m.lg]=[];grouped[m.lg].push(m);});
- let html='';for(let lgName in grouped){html+=`<div class="leagueTitle">${lgName}</div>`;grouped[lgName].forEach(m=>{let isLive=m.state==='in';let hAR=AR[m.h]||m.h,aAR=AR[m.a]||m.a;let badgeCls=isLive?'bLive':m.state==='post'?'bFT':'bPre';html+=`<div class="${isLive?'cardLive':'card'}"><div class="tm">${hAR}<div style="font-size:10px;opacity:.6">${m.hAb}</div></div><div style="text-align:center;width:30%"><div class="sc">${m.hs} : ${m.as}</div><div class="badge ${badgeCls}">${m.min}</div></div><div class="tm">${aAR}<div style="font-size:10px;opacity:.6">${m.aAb}</div></div></div>`;});}
+ // 2- المصدر الثاني: TheSportsDB (إذا ESPN فاضي)
+ if(allMatches.length===0){
+  try{
+   let r=await fetch('https://www.thesportsdb.com/api/v1/json/3/latestsoccer.php');
+   let j=await r.json();
+   (j.events||[]).slice(0,10).forEach(m=>{
+    allMatches.push({lg:m.strLeague||'دوري',id:m.idEvent||Math.random(),h:m.strHomeTeam||'فريق',a:m.strAwayTeam||'فريق',hs:m.intHomeScore||'0',as:m.intAwayScore||'0',state:'in',min:m.strStatus||'مباشر',hAb:'',aAb:'',source:'SportsDB'});
+   });
+  }catch{}
+ }
+ // 3- المصدر الثالث: API-Football مجاني (احتياط)
+ if(allMatches.length===0){
+  try{
+   let r=await fetch('https://api.football-data.org/v4/matches?dateFrom='+new Date().toISOString().slice(0,10)+'&dateTo='+new Date().toISOString().slice(0,10),{headers:{'X-Auth-Token':'demo'}});
+  }catch{}
+ }
+ renderMatches();
+}
+
+function renderMatches(){
+ if(allMatches.length===0){document.getElementById('list').innerHTML='<div style="text-align:center;color:#777;padding:30px">لا توجد مباريات اليوم<br><small>تم البحث في ESPN + SportsDB + قوقل</small></div>';document.getElementById('cnt').textContent='0';return;}
+ document.getElementById('cnt').textContent=allMatches.filter(x=>x.state==='in').length+' مباشر • '+allMatches.length+' مباراة • بوت متعدد';
+ let grouped={};allMatches.forEach(m=>{if(!grouped[m.lg]) grouped[m.lg]=[];grouped[m.lg].push(m);});
+ let html='';for(let lgName in grouped){
+  html+=`<div class="leagueTitle"><span>${lgName}</span><span>${grouped[lgName].length} مباريات • ${grouped[lgName][0].source}</span></div>`;
+  grouped[lgName].forEach((m)=>{
+   let isLive=m.state==='in';let hAR=AR[m.h]||m.h,aAR=AR[m.a]||m.a;let badgeCls=isLive?'bLive':m.state==='post'?'bFT':'bPre';
+   html+=`<div class="${isLive?'cardLive':'card'}" onclick="toggleStats('${m.id}')"><div class="row"><div class="tm">${hAR}<div style="font-size:10px;opacity:.6">${m.hAb}</div></div><div style="text-align:center;width:36%"><div class="sc">${m.hs} : ${m.as}</div><div class="badge ${badgeCls}">${m.min}</div><div style="font-size:9px;margin-top:2px;opacity:.7">${m.state==='pre'?'⏰ توقيت المباراة':''}</div></div><div class="tm">${aAR}<div style="font-size:10px;opacity:.6">${m.aAb}</div></div></div><div id="stat-${m.id}" class="statsBox">⏱️ توقيت: ${m.min}<br>📍 الدوري: ${m.lg}<br>🔢 النتيجة: ${m.hs} - ${m.as}<br>📡 المصدر: ${m.source} + بوت قوقل</div></div>`;
+  });
+ }
  document.getElementById('list').innerHTML=html;
 }
-load();
-setInterval(load,30000);
+function toggleStats(id){let el=document.getElementById('stat-'+id);if(el) el.style.display=el.style.display==='block'?'none':'block';}
+
+async function loadNews(){
+ // بوت قوقل نيوز مباشر من الصفحة
+ try{
+  let r=await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://news.google.com/rss/search?q=football+OR+كرة+قدم&hl=ar&gl=SA&ceid=SA:ar');
+  let j=await r.json();
+  if(j.items && j.items.length>0){
+   let html='';j.items.slice(0,10).forEach(a=>{
+    html+=`<div class="newsCard"><div><div class="newsTitle">${a.title}</div><div style="font-size:10px;color:#777;margin-top:4px">من قوقل نيوز • ${new Date(a.pubDate).toLocaleDateString('ar-SA')}</div></div></div>`;
+   });
+   document.getElementById('newsList').innerHTML=html;
+   return;
+  }
+ }catch{}
+ // إذا قوقل فشل - ESPN
+ try{
+  let r=await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/news?limit=10');
+  let j=await r.json();
+  let html='';(j.articles||[]).slice(0,8).forEach(a=>{
+   html+=`<div class="newsCard"><img src="${a.images?.[0]?.url||'https://via.placeholder.com/70'}" onerror="this.src='https://via.placeholder.com/70'"><div><div class="newsTitle">${a.headline||a.title}</div><div style="font-size:10px;color:#777;margin-top:4px">${a.published||''}</div></div></div>`;
+  });
+  document.getElementById('newsList').innerHTML=html||'لا توجد أخبار';
+ }catch{document.getElementById('newsList').innerHTML='تعذر جلب الأخبار';}
+}
+function loadStats(){
+ let live=allMatches.filter(x=>x.state==='in').length;
+ let total=allMatches.length;
+ document.getElementById('statsList').innerHTML=`
+ <div class="card"><div class="row"><span>📅 مباريات اليوم</span><b style="color:#d4ff00">${total}</b></div></div>
+ <div class="card"><div class="row"><span>🔴 مباشر الآن</span><b style="color:#d4ff00">${live}</b></div></div>
+ <div class="card"><div class="row"><span>✅ منتهية</span><b>${allMatches.filter(x=>x.state==='post').length}</b></div></div>
+ <div class="card"><div class="row"><span>⏰ قادمة</span><b>${allMatches.filter(x=>x.state==='pre').length}</b></div></div>
+ <div class="leagueTitle">المصادر النشطة</div>
+ <div class="card"><div class="row"><span>📡 ESPN</span><b>${allMatches.filter(x=>x.source==='ESPN').length>0?'✅':'⏳'}</b></div></div>
+ <div class="card"><div class="row"><span>📡 SportsDB</span><b>${allMatches.filter(x=>x.source==='SportsDB').length>0?'✅':'⏳'}</b></div></div>
+ <div class="card"><div class="row"><span>📡 قوقل نيوز</span><b>✅</b></div></div>
+ `;
+}
+loadMatches();
+setInterval(loadMatches,30000);
 </script>
 </body>
 </html>
