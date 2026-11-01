@@ -1,48 +1,21 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>سلوم AI</title>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@900&display=swap" rel="stylesheet">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080c0a"><title>سلوم AI | SLOOM TV</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-*{font-family:Tajawal;box-sizing:border-box;margin:0}body{background:#000;color:#fff;height:100vh;display:flex;flex-direction:column}
-.h{padding:14px;background:#0f0f0f;border-bottom:1px solid #222;display:flex;justify-content:space-between}
-.chat{flex:1;overflow:auto;padding:14px;max-width:600px;margin:0 auto;width:100%}
-.m{padding:12px 16px;border-radius:18px;margin-bottom:10px;max-width:85%;line-height:1.6}
-.u{background:#d4ff00;color:#000;margin-left:auto}.b{background:#1a1a1a;border:1px solid #222}
-.i{display:flex;gap:10px;padding:12px;background:#0f0f0f;border-top:1px solid #222;max-width:600px;margin:0 auto;width:100%}
-.i input{flex:1;background:#222;border:1px solid #333;border-radius:24px;padding:12px 18px;color:#fff;outline:none}
-.i button{background:#d4ff00;border:none;width:48px;height:48px;border-radius:50%;font-weight:900}
-</style>
-</head>
-<body>
-<div class="h"><b>🤖 سلوم AI</b><a href="/" style="color:#888;text-decoration:none">الرئيسية</a></div>
-<div class="chat" id="c"><div class="m b">أهلاً! أنا سلوم AI ⚽ اسألني عن أي مباراة</div></div>
-<div class="i"><input id="q" placeholder="متى مباراة برشلونة؟" onkeydown="if(event.key=='Enter')go()"><button onclick="go()">➤</button></div>
+*{box-sizing:border-box}body{margin:0;background:#080c0a;color:#f4f8f4;font-family:Cairo,Arial,sans-serif;height:100dvh;display:flex;flex-direction:column}
+header{padding:14px 18px;background:#111915;border-bottom:1px solid #26352b;display:flex;justify-content:space-between;align-items:center}header b{color:#b7f34a}header a{color:#aab8ad;text-decoration:none;font-size:12px}
+.chat{flex:1;overflow:auto;padding:18px;max-width:760px;margin:auto;width:100%}.m{padding:12px 16px;border-radius:17px;margin:0 0 12px;max-width:88%;line-height:1.8;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.u{background:#b7f34a;color:#10170b;margin-right:auto}.b{background:#151f18;border:1px solid #293b2d;margin-left:auto}
+.input{display:flex;gap:9px;padding:12px;background:#111915;border-top:1px solid #26352b;max-width:760px;margin:auto;width:100%}.input input{min-width:0;flex:1;background:#202b23;border:1px solid #344638;border-radius:25px;padding:12px 17px;color:white;font:14px Cairo;outline:none}.input button{background:#b7f34a;border:0;border-radius:50%;width:47px;height:47px;font-size:18px;font-weight:900;cursor:pointer}.input button:disabled{opacity:.5}.hint{text-align:center;color:#829187;font-size:10px;padding:0 10px 8px;background:#111915}
+</style></head>
+<body><header><b>🤖 سلوم AI</b><a href="index.html">العودة إلى سلوم تيفي ←</a></header>
+<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا سلوم AI 🟢 اسألني عن كرة القدم أو السلة أو أي رياضة، أو عن نتائج ومواعيد البطولات.</div></div>
+<div class="input"><input id="question" maxlength="1000" placeholder="اكتب سؤالك الرياضي هنا…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div><div class="hint">قد تحتاج الإجابات عن النتائج الحية إلى التحقق من مصدر رسمي.</div>
 <script>
-async function go(){
- let q=document.getElementById('q').value.trim();if(!q)return;
- let c=document.getElementById('c');
- c.innerHTML+=`<div class="m u">${q}</div>`;
- document.getElementById('q').value='';
- let id='a'+Date.now();c.innerHTML+=`<div class="m b" id="${id}">يكتب...</div>`;c.scrollTop=c.scrollHeight;
- try{
-  let res=await fetch('https://text.pollinations.ai/openai',{
-   method:'POST',headers:{'Content-Type':'application/json'},
-   body:JSON.stringify({messages:[{role:'system',content:'أنت سلوم AI مساعد موقع سلوم تيفي. جاوب بالعربية باختصار عن كرة القدم'},{role:'user',content:q}],model:'openai',stream:false})
-  });
-  let j=await res.json();let ans=j.choices?.[0]?.message?.content||'جرب مرة ثانية';
-  document.getElementById(id).innerText=ans;
- }catch{ 
-  // محاولة ثانية بسيطة
-  try{
-   let r2=await fetch('https://text.pollinations.ai/'+encodeURIComponent(q));
-   let t2=await r2.text();
-   document.getElementById(id).innerText=t2;
-  }catch{ document.getElementById(id).innerText='النت ضعيف، جرب مرة ثانية'; }
- }
- c.scrollTop=c.scrollHeight;
-}
-</script>
-</body>
-</html>
+const chat=document.getElementById('chat'),field=document.getElementById('question'),send=document.getElementById('send');
+function bubble(text,kind){const el=document.createElement('div');el.className='m '+kind;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;return el}
+async function go(){const q=field.value.trim();if(!q||send.disabled)return;field.value='';bubble(q,'u');const answer=bubble('لحظة، أجهز الإجابة…','b');send.disabled=true;
+try{const r=await fetch('https://text.pollinations.ai/openai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'openai',stream:false,messages:[{role:'system',content:'أنت سلوم AI، مساعد رياضي عربي لمنصة سلوم تيفي. أجب بالعربية الواضحة عن جميع الرياضات: كرة القدم والسلة والتنس والسباحة والفورمولا 1 وغيرها. لا تختلق نتائج أو مواعيد أو إصابات أو أخباراً. إذا لم تكن متأكداً من معلومة حديثة أو نتيجة مباشرة فصرّح بذلك واطلب التحقق من مصدر رسمي. اشرح بإيجاز وبأسلوب ودود.'},{role:'user',content:q}]})});if(!r.ok)throw Error('الخدمة غير متاحة الآن');const data=await r.json();answer.textContent=data.choices?.[0]?.message?.content||'لم تصل إجابة. حاول مرة أخرى.'}
+catch(e){answer.textContent='تعذر الاتصال بخدمة الذكاء الاصطناعي الآن. حاول مرة أخرى لاحقاً.'}finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight}}
+send.addEventListener('click',go);field.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
+</script></body></html>
