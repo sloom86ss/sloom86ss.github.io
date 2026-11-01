@@ -1,124 +1,54 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kora Pro - بث مباشر</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090d0b"><meta name="description" content="سلوم تيفي - منصة رياضية مجانية للنتائج المباشرة والأخبار ومواعيد جميع الرياضات">
+<title>سلوم تيفي | SLOOM TV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0B0E11;--surface:#151A21;--surface-2:#1C232C;--border:#232B36;--neon:#C6F432;--text:#FFF;--muted:#7C8797;--live:#FF3B5C;}
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
-body{background:var(--bg);color:var(--text);display:flex;justify-content:center;padding-bottom:90px;}
-.app{width:100%;max-width:480px;padding:20px 18px;}
-.hero{background:linear-gradient(135deg,#1F2A1F,#141B14);border-radius:24px;padding:22px;margin-bottom:22px;border:1px solid rgba(198,244,50,0.15);}
-.hero h1{font-size:24px;font-weight:900;margin-bottom:6px}
-.hero h1 span{color:var(--neon)}
-.hero-match{margin-top:20px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,0.35);border-radius:18px;padding:16px;}
-.hero-team{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1;}
-.hero-team img{width:44px;height:44px;object-fit:contain;}
-.hero-score .num{font-size:26px;font-weight:900;color:var(--neon);line-height:1;text-align:center;}
-.match{background:var(--surface);border-radius:18px;padding:14px 16px;border:1px solid var(--border);margin-bottom:10px;}
-.match-body{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;}
-.team{display:flex;align-items:center;gap:10px;}
-.team.away{flex-direction:row-reverse;text-align:left}
-.team img{width:34px;height:34px;object-fit:contain;}
-.team span{font-size:13px;font-weight:700;}
-.score-cell .score{font-size:18px;font-weight:900;background:var(--surface-2);padding:6px 12px;border-radius:10px;}
-.news-scroll{display:flex;gap:12px;overflow-x:auto;padding-bottom:10px;}
-.news{flex:0 0 220px;background:var(--surface);border-radius:18px;overflow:hidden;border:1px solid var(--border);}
-.news-img{height:110px;width:100%;object-fit:cover;}
-.news-body{padding:12px}
-.loader{text-align:center;padding:30px;color:var(--muted);}
+:root{--bg:#080c0a;--panel:#111915;--panel2:#17211b;--line:#26352b;--green:#b7f34a;--muted:#91a095;--white:#f4f8f4;--red:#ff5364}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#1b3524 0,transparent 48%),var(--bg);color:var(--white);font-family:Cairo,Arial,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}.wrap{width:min(1100px,100%);margin:auto;padding:18px 16px 100px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 22px}.brand{display:flex;align-items:center;gap:10px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(145deg,var(--green),#6d9f23);color:#0a1208;display:grid;place-items:center;font-size:23px;font-weight:900;box-shadow:0 8px 28px #a5e63a30}.brand h1{font-size:21px;line-height:1;margin:0;font-weight:900}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px;direction:ltr;text-align:right;margin-top:5px}.live-pill{border:1px solid #39542f;background:#172719;color:var(--green);padding:7px 12px;border-radius:30px;font-size:11px;font-weight:800}
+.hero{border:1px solid #344b32;background:linear-gradient(120deg,#1b3020,#111a14 70%);border-radius:25px;padding:24px;position:relative;overflow:hidden;margin-bottom:22px}.hero:after{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:#b7f34a12;left:-70px;top:-95px}.hero h2{font-size:clamp(23px,5vw,36px);line-height:1.5;margin:0 0 6px;font-weight:900}.hero h2 span{color:var(--green)}.hero p{color:#b2c1b5;margin:0;font-size:13px}.hero-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.btn{border:1px solid #42573f;background:#1b2a1d;color:var(--white);border-radius:12px;padding:9px 15px;font:700 12px Cairo;cursor:pointer}.btn.primary{background:var(--green);color:#10170b;border-color:var(--green)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 22px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:13px;text-align:center}.stat b{font-size:22px;color:var(--green);display:block}.stat span{font-size:10px;color:var(--muted)}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin:24px 0 12px}.section-head h3{margin:0;font-size:17px}.section-head small{color:var(--muted);font-size:11px}
+.filters{display:flex;gap:8px;overflow:auto;padding:2px 0 12px;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.filter{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:#c3cec5;padding:8px 14px;border-radius:30px;font:700 11px Cairo;cursor:pointer}.filter.active{background:var(--green);border-color:var(--green);color:#10170b}
+.leagues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.league{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:13px;min-width:0}.league-title{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:11px}.league-title b{font-size:12px}.league-title span{font-size:10px;color:var(--muted)}
+.match{border-top:1px solid #243129;padding:11px 0 2px}.match:first-of-type{border-top:0}.teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:7px}.team{display:flex;align-items:center;gap:7px;min-width:0;font-size:11px;font-weight:700}.team.away{justify-content:flex-end;text-align:left}.team img{width:25px;height:25px;object-fit:contain;flex:none}.team span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.score{font-weight:900;font-size:14px;background:var(--panel2);padding:5px 9px;border-radius:9px;white-space:nowrap}.match-meta{display:flex;justify-content:center;gap:8px;color:var(--muted);font-size:10px;margin-top:7px}.live{color:var(--red);font-weight:900}.empty{grid-column:1/-1;background:var(--panel);border:1px dashed var(--line);border-radius:16px;padding:25px;text-align:center;color:var(--muted);font-size:12px}
+.news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.news-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.news-card img{width:100%;height:115px;object-fit:cover;background:var(--panel2)}.news-card div{padding:11px}.news-card b{font-size:11px;line-height:1.7;display:block}.news-card small{color:var(--muted);font-size:10px}
+footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;padding:20px;border-top:1px solid var(--line)}
+@media(min-width:760px){.leagues{grid-template-columns:repeat(3,minmax(0,1fr))}.news{grid-template-columns:repeat(4,minmax(0,1fr))}.wrap{padding-top:25px}.hero{padding:32px}.stats{max-width:520px}}
+@media(max-width:380px){.leagues,.news{grid-template-columns:1fr}.wrap{padding-inline:12px}}
 </style>
 </head>
-<body>
-<div class="app">
-  <div class="hero">
-    <h1>تابع أفضل <span>المباريات</span><br>لحظة بلحظة</h1>
-    <div class="hero-match" id="heroMatch">
-      <div class="hero-team"><div style="width:44px;height:44px;background:#333;border-radius:50%"></div></div>
-      <div class="hero-score"><div class="num">- : -</div></div>
-      <div class="hero-team"><div style="width:44px;height:44px;background:#333;border-radius:50%"></div></div>
-    </div>
-  </div>
-  <h3 style="margin-bottom:14px;">مباريات اليوم</h3>
-  <div id="matches"><div class="loader">جاري التحميل...</div></div>
-  <h3 style="margin:20px 0 14px;">آخر الأخبار</h3>
-  <div class="news-scroll" id="news"></div>
-</div>
-
+<body><main class="wrap">
+<header><div class="brand"><div class="logo">S</div><div><h1>سلوم تيفي</h1><small>SLOOM TV</small></div></div><div class="live-pill">● تغطية رياضية عالمية</div></header>
+<section class="hero"><h2>كل الرياضة في <span>مكان واحد</span></h2><p>نتائج، مباريات، بطولات وأخبار تتحدث تلقائياً — مجاناً.</p><div class="hero-actions"><a class="btn primary" href="#matches">تابع المباريات</a><a class="btn" href="ai.html">🤖 اسأل سلوم AI</a></div></section>
+<section class="stats"><div class="stat"><b id="matchCount">—</b><span>مباراة معروضة</span></div><div class="stat"><b id="liveCount">—</b><span>مباشر الآن</span></div><div class="stat"><b id="updated">—</b><span>آخر تحديث</span></div></section>
+<div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">جميع الرياضات</small></div>
+<nav class="filters" id="filters"><button class="filter active" data-filter="all">الكل</button><button class="filter" data-filter="football">كرة القدم</button><button class="filter" data-filter="basketball">كرة السلة</button><button class="filter" data-filter="americanfootball">كرة القدم الأمريكية</button><button class="filter" data-filter="hockey">هوكي</button><button class="filter" data-filter="baseball">بيسبول</button><button class="filter" data-filter="other">رياضات أخرى</button></nav>
+<div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div>
+<div class="section-head"><h3>📰 آخر الأخبار</h3><small>من مصادر رياضية</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
+<footer>© <span id="year"></span> سلوم تيفي — منصة رياضية مجانية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.</footer>
+</main>
 <script>
-const LEAGUE = 'uefa.champions';
-
-async function loadData() {
-    try {
-        // قراءة ملف البيانات الذي يحدثه البوت
-        const res = await fetch('data.json?t=' + new Date().getTime()); // منع الكاش
-        const data = await res.json();
-        
-        const leagueData = data[LEAGUE];
-        if(!leagueData) return;
-
-        const events = leagueData.matches || [];
-        const articles = leagueData.news || [];
-        
-        const box = document.getElementById('matches');
-        box.innerHTML = '';
-        
-        if (events.length === 0) {
-            box.innerHTML = '<div class="loader">لا توجد مباريات اليوم</div>';
-        } else {
-            let heroSet = false;
-            events.slice(0, 6).forEach(ev => {
-                const comp = ev.competitions[0];
-                const home = comp.competitors.find(c => c.homeAway === 'home');
-                const away = comp.competitors.find(c => c.homeAway === 'away');
-                if (!home || !away) return;
-                
-                const isLive = comp.status?.type?.state === 'in';
-                const isFinal = comp.status?.type?.state === 'post';
-                let timeTxt = isLive ? comp.status.type.detail : (isFinal ? 'انتهت' : new Date(ev.date).toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'}));
-                const hs = (isLive||isFinal) ? (home.score ?? '0') : '-';
-                const as = (isLive||isFinal) ? (away.score ?? '0') : '-';
-
-                if (!heroSet) {
-                    heroSet = true;
-                    document.getElementById('heroMatch').innerHTML = `
-                        <div class="hero-team"><img src="${home.team.logo}"><span>${home.team.shortDisplayName}</span></div>
-                        <div class="hero-score"><div class="num">${hs} : ${as}</div></div>
-                        <div class="hero-team"><img src="${away.team.logo}"><span>${away.team.shortDisplayName}</span></div>
-                    `;
-                }
-
-                box.insertAdjacentHTML('beforeend', `
-                    <div class="match">
-                        <div class="match-body">
-                            <div class="team"><img src="${home.team.logo}"><span>${home.team.shortDisplayName}</span></div>
-                            <div class="score-cell"><div class="score">${hs} : ${as}</div></div>
-                            <div class="team away"><img src="${away.team.logo}"><span>${away.team.shortDisplayName}</span></div>
-                        </div>
-                    </div>
-                `);
-            });
-        }
-
-        const newsBox = document.getElementById('news');
-        newsBox.innerHTML = '';
-        articles.forEach(a => {
-            const img = a.images?.[0]?.url || 'https://ui-avatars.com/api/?name=News';
-            newsBox.insertAdjacentHTML('beforeend', `
-                <div class="news">
-                    <img class="news-img" src="${img}">
-                    <div class="news-body"><h4>${a.headline}</h4></div>
-                </div>
-            `);
-        });
-    } catch (err) {
-        console.error("خطأ:", err);
-        document.getElementById('matches').innerHTML = '<div class="loader">⚠️ تعذر جلب البيانات. تأكد من وجود ملف data.json</div>';
-    }
+let sportsData={},activeFilter='all';
+const labels={football:'كرة القدم',basketball:'كرة السلة',americanfootball:'كرة القدم الأمريكية',hockey:'هوكي',baseball:'بيسبول',other:'رياضات أخرى'};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function getCategory(key){if(key.startsWith('soccer/'))return'football';if(key.startsWith('basketball/'))return'basketball';if(key.startsWith('football/'))return'americanfootball';if(key.startsWith('hockey/'))return'hockey';if(key.startsWith('baseball/'))return'baseball';return'other'}
+function render(){
+ const root=document.getElementById('leagues');root.innerHTML='';let total=0,live=0,shown=0;const news=[];
+ Object.entries(sportsData).forEach(([key,league])=>{const cat=league.category||getCategory(key);(league.news||[]).forEach(n=>news.push(n));const games=league.matches||[];total+=games.length;live+=games.filter(g=>g.status==='in').length;if(activeFilter!=='all'&&activeFilter!==cat)return;if(!games.length)return;shown++;
+ const card=document.createElement('section');card.className='league';card.innerHTML='<div class="league-title"><b>'+esc(league.name||key)+'</b><span>'+games.length+' مباراة</span></div>';
+ games.forEach(g=>{const home=g.home||{},away=g.away||{};const state=g.status==='in'?'<span class="live">● مباشر '+esc(g.detail||'')+'</span>':g.status==='post'?'انتهت':esc(g.time||'لم تبدأ');const score=g.status==='pre'?'— : —':esc(home.score??'0')+' : '+esc(away.score??'0');const m=document.createElement('div');m.className='match';m.innerHTML='<div class="teams"><div class="team"><img loading="lazy" src="'+esc(home.logo||'')+'" onerror="this.style.visibility=\'hidden\'"><span>'+esc(home.name||'الفريق الأول')+'</span></div><div class="score">'+score+'</div><div class="team away"><img loading="lazy" src="'+esc(away.logo||'')+'" onerror="this.style.visibility=\'hidden\'"><span>'+esc(away.name||'الفريق الثاني')+'</span></div></div><div class="match-meta">'+state+'</div>';card.appendChild(m)});root.appendChild(card)});
+ if(!shown)root.innerHTML='<div class="empty">لا توجد مباريات متاحة في هذا التصنيف حالياً.</div>';
+ document.getElementById('matchCount').textContent=total;document.getElementById('liveCount').textContent=live;
+ const stamp=Object.values(sportsData).map(x=>x.updated_at).filter(Boolean).sort().pop();document.getElementById('updated').textContent=stamp?new Date(stamp).toLocaleTimeString('ar',{hour:'2-digit',minute:'2-digit'}):'—';
+ const nb=document.getElementById('news');const unique=new Map();news.forEach(n=>{if(n.headline)unique.set(n.headline,n)});const items=[...unique.values()].slice(0,12);nb.innerHTML=items.length?'':'<div class="empty">لا توجد أخبار متاحة حالياً.</div>';items.forEach(n=>{const el=document.createElement('a');el.className='news-card';el.href=n.link||'#';el.target=n.link?'_blank':'_self';el.rel='noopener';el.innerHTML='<img loading="lazy" src="'+esc(n.image||'https://placehold.co/600x300/17211b/b7f34a?text=SLOOM+TV')+'" alt=""><div><b>'+esc(n.headline)+'</b><small>'+esc(n.source||'أخبار رياضية')+'</small></div>';nb.appendChild(el)});
 }
-loadData();
-</script>
-</body>
-</html>
+document.getElementById('filters').addEventListener('click',e=>{const b=e.target.closest('button[data-filter]');if(!b)return;activeFilter=b.dataset.filter;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));render()});
+async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();sportsData=d.leagues||d;render()}catch(e){document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
+document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,120000);
+</script></body></html>
