@@ -58,7 +58,7 @@ const dateKey=(v)=>{if(!v)return "";const d=new Date(v);if(isNaN(d))return "";re
 const omanToday=()=>dateKey(new Date().toISOString());
 const shiftKey=(key,delta)=>{const [y,m,d]=key.split('-').map(Number);return new Date(Date.UTC(y,m-1,d+delta)).toISOString().slice(0,10)};
 const dayLabel=m=>{const k=dateKey(m.date||m.time),t=omanToday();return k===t?'today':k===shiftKey(t,-1)?'yesterday':k===shiftKey(t,1)?'tomorrow':'other'};
-const fmtKickoff=v=>{if(!v)return 'موعد غير محدد';const d=new Date(v);return isNaN(d)?v:new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'short',hour:'2-digit',minute:'2-digit'}).format(d)};
+const fmtKickoff=v=>{if(!v)return isEnglish?'Time unavailable':'موعد غير محدد';const d=new Date(v);return isNaN(d)?v:new Intl.DateTimeFormat(isEnglish?'en-GB':'ar-OM',{timeZone:'Asia/Muscat',weekday:'short',hour:'2-digit',minute:'2-digit'}).format(d)};
 function newsItems(){const all=[...(data.news_sources||[])];Object.values(data.leagues||{}).forEach(l=>(l.news||[]).forEach(n=>all.push(n)));const m=new Map();all.forEach(n=>{if(n.link)m.set(n.link,n)});return [...m.values()].sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0))}
 function render(){
  const leagues=Object.entries(data.leagues||{}),allMatches=leagues.flatMap(([id,l])=>(l.matches||[]).map(m=>({...m,leagueId:id,league:l.name||id,category:'football',stale:l.stale})));
@@ -88,10 +88,36 @@ async function translateNews(){
 function updateClocks(){const now=new Date();[['time-ksa','time-ksa-copy','Asia/Riyadh'],['time-oman','time-oman-copy','Asia/Muscat'],['time-utc','time-utc-copy','UTC']].forEach(([id,copy,tz])=>{const value=new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(now);if($(id))$(id).textContent=value;if($(copy))$(copy).textContent=value;});}
 updateClocks();setInterval(updateClocks,1000);
 $('daytabs').addEventListener('click',e=>{const b=e.target.closest('[data-day]');if(!b)return;activeDay=b.dataset.day;document.querySelectorAll('.daytab').forEach(x=>x.classList.toggle('active',x===b));if(data)render();});
+function setLanguage(en){
+ isEnglish=en;document.documentElement.lang=en?'en':'ar';document.documentElement.dir=en?'ltr':'rtl';document.body.classList.toggle('english',en);
+ $('langToggle').textContent=en?'العربية':'English';$('closeMatch').textContent=en?'Close ✕':'إغلاق ✕';
+ document.querySelectorAll('[data-ar][data-en]').forEach(el=>{el.innerHTML=en?el.dataset.en:el.dataset.ar;});
+ $('question').placeholder=en?$('question').dataset.placeholderEn:$('question').dataset.placeholderAr;
+ document.querySelectorAll('[data-day]').forEach(b=>b.textContent=(en?({yesterday:'Yesterday',today:'Today',tomorrow:'Tomorrow'}[b.dataset.day]):({yesterday:'أمس',today:'اليوم',tomorrow:'غداً'}[b.dataset.day]))+' · '+new Intl.DateTimeFormat(en?'en-GB':'ar-OM',{timeZone:'Asia/Muscat',day:'2-digit',month:'2-digit'}).format(new Date(Date.now()+(b.dataset.day==='yesterday'?-86400000:b.dataset.day==='tomorrow'?86400000:0))));
+ if(data)render();
+}
+$('langToggle').addEventListener('click',()=>setLanguage(!isEnglish));
+$('newsfilters').addEventListener('click',e=>{const b=e.target.closest('[data-news]');if(!b)return;activeNews=b.dataset.news;if(data)render();});
+$('daytabs').addEventListener('click',e=>{const b=e.target.closest('[data-day]');if(!b)return;activeDay=b.dataset.day;document.querySelectorAll('.daytab').forEach(x=>x.classList.toggle('active',x===b));if(data)render();});
+$('closeMatch').addEventListener('click',()=>{$('matchModal').hidden=true;});
+$('matchModal').addEventListener('click',e=>{if(e.target===$('matchModal'))$('matchModal').hidden=true;});
+async function openMatch(id,league){
+ $('matchModal').hidden=false;$('detailTitle').textContent=isEnglish?'Match details':'تفاصيل المباراة';$('matchDetails').innerHTML='<div class="empty">'+(isEnglish?'Loading match details…':'جارٍ تحميل تفاصيل المباراة…')+'</div>';
+ try{
+  const r=await fetch('/api/match?event='+encodeURIComponent(id)+'&league='+encodeURIComponent(league));const d=await r.json();if(!r.ok)throw Error(d.error||'Details unavailable');
+  const comps=d.competitors||[],events=d.events||[],stats=d.teams||[];
+  const teamCards=comps.map(c=>'<div class="detail-team"><img src="'+esc(c.logo)+'" alt=""><span>'+esc(showTeam(c.name))+'</span><b>'+esc(c.score||'—')+'</b></div>').join('<strong>—</strong>');
+  const eventRows=events.length?events.map(x=>'<div class="detail-line">'+esc(x.clock||'')+' · '+esc(x.team||'')+' · '+esc(x.type||'')+' '+esc(x.athlete||'')+'<br>'+esc(x.text||'')+'</div>').join(''):'<div class="detail-line">'+(isEnglish?'Detailed events are not available from the provider yet.':'لم يوفّر مزود البيانات أحداث المباراة التفصيلية حتى الآن.')+'</div>';
+  const statRows=stats.length?stats.map(t=>'<div class="detail-line"><b>'+esc(showTeam(t.name))+'</b><br>'+t.statistics.map(x=>esc(x.name)+': '+esc(x.value)).join(' · ')+'</div>').join(''):'<div class="detail-line">'+(isEnglish?'Statistics unavailable.':'الإحصائيات غير متاحة من المصدر.')+'</div>';
+  $('matchDetails').innerHTML='<div class="detail-score">'+teamCards+'</div><div class="detail-section"><h3>'+(isEnglish?'Match status':'حالة المباراة')+'</h3><div class="detail-line">'+esc(d.status||'—')+' · '+esc(d.clock||'')+' · '+(d.period?(isEnglish?'Period ':'الشوط ')+esc(d.period):'')+'</div><div class="detail-line">'+(isEnglish?'Venue: ':'الملعب: ')+esc(d.venue||'—')+'</div><div class="detail-line">'+(isEnglish?'Broadcast: ':'القنوات الناقلة: ')+esc((d.broadcast||[]).join(', ')||'غير متوفرة من المصدر')+'</div></div><div class="detail-section"><h3>'+(isEnglish?'Goals, cards & match events':'الأهداف والبطاقات وأحداث المباراة')+'</h3>'+eventRows+'</div><div class="detail-section"><h3>'+(isEnglish?'Team statistics':'إحصائيات الفريقين')+'</h3>'+statRows+'</div><p class="note">'+esc(d.note||'')+'</p>';
+ }catch(e){$('matchDetails').innerHTML='<div class="empty">'+esc(e.message||'تعذر تحميل التفاصيل')+'</div>';}
+}
+$('matches').addEventListener('click',e=>{const card=e.target.closest('[data-event]');if(card)openMatch(card.dataset.event,card.dataset.league);});
+$('matches').addEventListener('keydown',e=>{const card=e.target.closest('[data-event]');if(card&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openMatch(card.dataset.event,card.dataset.league);}});
 function bubble(t,c){const d=document.createElement('div');d.className='bubble '+c;d.textContent=t;$('chat').appendChild(d);$('chat').scrollTop=$('chat').scrollHeight;return d;}
 async function ask(){const q=$('question').value.trim();if(!q)return;$('question').value='';bubble(q,'user');const a=bubble('أراجع النتائج والأخبار وأجهز الملخص…','bot');$('send').disabled=true;try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,context:context()})});const p=await r.json().catch(()=>({}));if(!r.ok)throw Error(p.error||'تعذر الاتصال بالمساعد');a.textContent=p.answer||'لم يصل رد واضح.';}catch(e){a.textContent=e.message||'حدث خطأ مؤقت.';}finally{$('send').disabled=false;$('chat').scrollTop=$('chat').scrollHeight;}}
 $('send').addEventListener('click',ask);$('question').addEventListener('keydown',e=>{if(e.key==='Enter')ask()});
-document.querySelector('.newsfilters').addEventListener('click',e=>{const b=e.target.closest('[data-news]');if(!b)return;activeNews=b.dataset.news;if(data)render();});
+
 async function load(){try{const r=await fetch('data.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);data=await r.json();render();translatedNews=[];translateNews();}catch(e){$('news').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً.</div>';}}
 load();setInterval(load,120000);
 </script>
