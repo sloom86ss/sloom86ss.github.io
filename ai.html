@@ -6,61 +6,88 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#080c0a;color:#f4f8f4;font-family:Cairo,Arial,sans-serif;height:100dvh;display:flex;flex-direction:column}
-header{padding:14px 18px;background:#111915;border-bottom:1px solid #26352b;display:flex;justify-content:space-between;align-items:center}header b{color:#b7f34a}header a{color:#aab8ad;text-decoration:none;font-size:12px}
-.chat{flex:1;overflow:auto;padding:18px;max-width:780px;margin:auto;width:100%}.m{padding:12px 16px;border-radius:17px;margin:0 0 12px;max-width:92%;line-height:1.9;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.u{background:#b7f34a;color:#10170b;margin-right:auto}.b{background:#151f18;border:1px solid #293b2d;margin-left:auto}.b small{color:#a8bbab}
-.input{display:flex;gap:9px;padding:12px;background:#111915;border-top:1px solid #26352b;max-width:780px;margin:auto;width:100%}.input input{min-width:0;flex:1;background:#202b23;border:1px solid #344638;border-radius:25px;padding:12px 17px;color:white;font:14px Cairo;outline:none}.input button{background:#b7f34a;border:0;border-radius:50%;width:47px;height:47px;font-size:18px;font-weight:900;cursor:pointer}.input button:disabled{opacity:.5}.hint{text-align:center;color:#829187;font-size:10px;padding:0 12px 9px;background:#111915}
+header{padding:12px 16px;background:#111915;border-bottom:1px solid #26352b;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}header b{color:#b7f34a}header a{color:#aab8ad;text-decoration:none;font-size:12px}
+.top-actions{display:flex;gap:8px;align-items:center}.connect{border:0;border-radius:20px;background:#b7f34a;color:#10170b;padding:8px 12px;font:700 11px Cairo;cursor:pointer}.connect.connected{background:#243b27;color:#b7f34a;border:1px solid #45633c}
+.notice{max-width:780px;width:100%;margin:10px auto 0;padding:0 14px;color:#aebcaf;font-size:11px;line-height:1.7}.notice strong{color:#b7f34a}
+.chat{flex:1;overflow:auto;padding:18px;max-width:780px;margin:auto;width:100%}.m{padding:12px 16px;border-radius:17px;margin:0 0 12px;max-width:92%;line-height:1.9;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.u{background:#b7f34a;color:#10170b;margin-right:auto}.b{background:#151f18;border:1px solid #293b2d;margin-left:auto}.input{display:flex;gap:9px;padding:12px;background:#111915;border-top:1px solid #26352b;max-width:780px;margin:auto;width:100%}.input input{min-width:0;flex:1;background:#202b23;border:1px solid #344638;border-radius:25px;padding:12px 17px;color:white;font:14px Cairo;outline:none}.input button{background:#b7f34a;border:0;border-radius:50%;width:47px;height:47px;font-size:18px;font-weight:900;cursor:pointer}.input button:disabled,.connect:disabled{opacity:.5}.hint{text-align:center;color:#829187;font-size:10px;padding:0 12px 9px;background:#111915}
 </style></head>
 <body>
-<header><b>🤖 سلوم AI</b><a href="index.html">العودة إلى سلوم تيفي ←</a></header>
-<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا سلوم AI 🟢 أستطيع مساعدتك في فهم الرياضة وقراءة بيانات المباريات والأخبار المتاحة في الموقع. إذا لم تكن النتيجة موجودة في بياناتنا فسأخبرك بذلك ولن أخمّنها.</div></div>
-<div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو قاعدة رياضية…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
-<div class="hint">النتائج والأخبار تعتمد على آخر تحديث وصل إلى الموقع. تحقّق من المصدر الرسمي للمعلومات العاجلة.</div>
+<header><b>🤖 سلوم AI</b><div class="top-actions"><button id="connect" class="connect">ربط الذكاء الاصطناعي</button><a href="index.html">العودة إلى سلوم تيفي ←</a></div></header>
+<div class="notice" id="notice">للتشغيل، اربط حسابك بمزود الذكاء الاصطناعي مرة واحدة. <strong>سيتم استخدام رصيدك الشخصي وفق الحد الذي توافق عليه في صفحة التفويض</strong>، ويمكنك رفضه أو إلغاء المفتاح لاحقاً.</div>
+<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا سلوم AI 🟢 أستطيع تحليل بيانات المباريات والأندية والترتيب والأخبار التي وصلت إلى سلوم تيفي. لن أخترع نتيجة أو تشكيلة أو إصابة غير موجودة في مصدر البيانات.</div></div>
+<div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو بطولة…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
+<div class="hint">بيانات المباريات من ESPN عند توفرها. قد تتأخر بعض المسابقات أو لا تتوفر لها تغطية.</div>
 <script>
-const chat=document.getElementById('chat'),field=document.getElementById('question'),send=document.getElementById('send');
-function bubble(text,kind){const el=document.createElement('div');el.className='m '+kind;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;return el}
+const chat=document.getElementById('chat'),field=document.getElementById('question'),send=document.getElementById('send'),connectBtn=document.getElementById('connect'),notice=document.getElementById('notice');
+const KEY='sloom_polli_key',STATE='sloom_polli_state';
+let apiKey=sessionStorage.getItem(KEY)||'';
 const clean=v=>String(v??'').replace(/<[^>]*>/g,'').slice(0,220);
+function bubble(text,kind){const el=document.createElement('div');el.className='m '+kind;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;return el}
+function status(){const ok=!!apiKey;connectBtn.textContent=ok?'✓ الذكاء الاصطناعي متصل':'ربط الذكاء الاصطناعي';connectBtn.classList.toggle('connected',ok);field.placeholder=ok?'اسأل عن مباراة أو فريق أو بطولة…':'اربط الذكاء الاصطناعي أولاً';}
+function handleCallback(){
+ const hash=new URLSearchParams(location.hash.slice(1)),token=hash.get('api_key'),returned=hash.get('state'),expected=sessionStorage.getItem(STATE);
+ if(token){
+  if(!expected||returned!==expected){notice.textContent='تعذر التحقق من عملية الربط. أعد المحاولة من زر الربط.';history.replaceState(null,'',location.pathname);return}
+  apiKey=token;sessionStorage.setItem(KEY,token);sessionStorage.removeItem(STATE);history.replaceState(null,'',location.pathname);
+  notice.textContent='تم ربط سلوم AI في علامة التبويب الحالية. مفتاح التفويض محفوظ مؤقتاً في الجلسة فقط.';bubble('تم الاتصال بمزود الذكاء الاصطناعي بنجاح. اسألني الآن عن بيانات سلوم تيفي.','b');
+ }else if(hash.get('error')){notice.textContent='لم يتم منح الإذن. يمكنك إعادة المحاولة عندما ترغب.';history.replaceState(null,'',location.pathname);sessionStorage.removeItem(STATE)}
+ status();
+}
+function connect(){
+ const state=Array.from(crypto.getRandomValues(new Uint8Array(24))).map(x=>x.toString(16).padStart(2,'0')).join('');
+ sessionStorage.setItem(STATE,state);
+ const redirect=location.origin+location.pathname;
+ const params=new URLSearchParams({response_type:'code',redirect_uri:redirect,scope:'usage',state,budget:'5',expiry:'7'});
+ // Legacy fragment authorization keeps the temporary user key out of server request logs.
+ const legacy=new URLSearchParams({redirect_uri:redirect,state,budget:'5',expiry:'7'});
+ location.href='https://enter.pollinations.ai/authorize?'+legacy.toString();
+}
 function buildContext(raw){
- const leagues=raw?.leagues||raw||{}, lines=[];
- const generated=raw?.generated_at||raw?.updated_at||'غير متوفر';
- lines.push('وقت إنشاء ملف البيانات: '+generated);
+ const leagues=raw?.leagues||raw||{},lines=[];
+ lines.push('مصدر البيانات: '+clean(raw?.provider||'ESPN public API')+' | وقت إنشاء الملف: '+clean(raw?.generated_at||'غير متوفر')+' | المنطقة الزمنية للعرض: Asia/Muscat');
  for(const [key,l] of Object.entries(leagues)){
   if(!l||typeof l!=='object')continue;
-  const name=clean(l.name||key), updated=clean(l.updated_at||generated);
-  lines.push('\nالبطولة: '+name+' | آخر تحديث: '+updated);
+  const name=clean(l.name||key),updated=clean(l.updated_at||'غير متوفر');
+  lines.push('\nالبطولة: '+name+' | آخر تحديث للنتائج: '+updated+(l.stale?' | تحذير: البيانات قديمة وليست مباشرة':''));
   const games=l.matches||l.events||[];
-  for(const g of games.slice(0,12)){
+  for(const g of games.slice(0,14)){
    let home=g.home,away=g.away,status=g.status||{};
-   if(!home&&!away){const c=(g.competitions||[])[0]||{};const teams=c.competitors||[];home=teams.find(x=>x.homeAway==='home')||{};away=teams.find(x=>x.homeAway==='away')||{};status=c.status?.type||{};}
+   if(!home&&!away){const c=(g.competitions||[])[0]||{},teams=c.competitors||[];home=teams.find(x=>x.homeAway==='home')||{};away=teams.find(x=>x.homeAway==='away')||{};status=c.status?.type||{};}
    const hn=home?.name||home?.team?.displayName||home?.team?.shortDisplayName||'غير معروف';
    const an=away?.name||away?.team?.displayName||away?.team?.shortDisplayName||'غير معروف';
-   const hs=home?.score??'—',as=away?.score??'—';
-   const state=status.state||'غير محدد',detail=status.detail||status.shortDetail||g.detail||'';
-   lines.push('- '+clean(hn)+' '+hs+' - '+as+' '+clean(an)+' | الحالة: '+clean(state)+' '+clean(detail)+' | الموعد: '+clean(g.time||g.date||'غير متوفر'));
+   lines.push('- '+clean(hn)+' '+(home?.score??'—')+' - '+(away?.score??'—')+' '+clean(an)+' | الحالة: '+clean(status.state||'غير محدد')+' '+clean(status.detail||status.shortDetail||g.detail||'')+' | الموعد: '+clean(g.date||g.time||'غير متوفر')+' (يعرض بتوقيت عُمان)');
   }
-  for(const n of (l.news||[]).slice(0,5))lines.push('خبر: '+clean(n.headline||n.title)+' | المصدر: '+clean(n.source||'غير محدد')+' | الرابط: '+clean(n.link||'غير متوفر'));
+  if(l.standings?.length){lines.push('الترتيب: '+l.standings.slice(0,12).map((x,i)=>(x.rank||i+1)+'. '+clean(x.name)+' ('+clean(x.points)+' نقطة)').join('؛ '))}
+  if(l.teams?.length){lines.push('الأندية المتاحة في هذه البطولة: '+l.teams.slice(0,40).map(x=>clean(x.name)).join('، '))}
+  for(const n of (l.news||[]).slice(0,5))lines.push('خبر: '+clean(n.headline||n.title)+' | المصدر: '+clean(n.source||'غير محدد')+' | النشر: '+clean(n.published||'غير متوفر')+' | الرابط: '+clean(n.link||'غير متوفر'));
+  if(l.errors?.length)lines.push('ملاحظة تغطية: '+l.errors.map(clean).join(' | '));
  }
- return lines.join('\n').slice(0,14000);
+ return lines.join('\n').slice(0,18000);
 }
 async function loadContext(){
- try{const r=await fetch('data.json?ai='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return buildContext(await r.json())}
- catch(e){return 'تعذر تحميل بيانات الموقع حالياً. لا توجد بيانات مؤكدة للمباريات أو الأخبار في هذه المحادثة.'}
+ const r=await fetch('data.json?ai='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('تعذر تحميل بيانات الرياضة');return buildContext(await r.json());
 }
 async function go(){
  const q=field.value.trim();if(!q||send.disabled)return;
- field.value='';bubble(q,'u');const answer=bubble('أتحقق من بيانات الموقع ثم أجهز الإجابة…','b');send.disabled=true;
+ if(!apiKey){bubble('اربط الذكاء الاصطناعي أولاً من الزر أعلى الصفحة.','b');return}
+ field.value='';bubble(q,'u');const answer=bubble('أتحقق من آخر البيانات ثم أجهز الإجابة…','b');send.disabled=true;
  try{
   const context=await loadContext();
-  const system='أنت سلوم AI، مساعد رياضي عربي. قواعد إلزامية: 1) استخدم بيانات الموقع المرفقة فقط عند الإجابة عن النتائج المباشرة والمواعيد الحالية والأخبار والإصابات والتشكيلات والترتيب. 2) لا تخترع نتيجة أو موعداً أو اسماً أو إحصائية. إذا لم توجد المعلومة في البيانات أو كان وقت تحديثها غير واضح، قل بوضوح: لا أملك بيانات مؤكدة عنها الآن، ووجّه المستخدم للتحقق من المصدر الرسمي. 3) لا تعتبر مباراة منتهية أو مباشرة إلا إذا كانت حالة البيانات تؤكد ذلك. 4) يمكنك شرح قوانين الرياضات والمفاهيم العامة، لكن لا تدّع أن معلومة عامة هي تحديث حي. 5) أجب بالعربية الواضحة، واذكر اسم البطولة ووقت التحديث عند الاستناد إلى بيانات الموقع. 6) إذا كانت البيانات قديمة فلا تصفها بأنها مباشرة الآن.\n\nبيانات سلوم تيفي الحالية:\n'+context;
-  const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),30000);
+  const system='أنت سلوم AI، مساعد رياضي عربي. قواعد صارمة: استخدم بيانات سلوم تيفي المرفقة عند الإجابة عن النتائج والمواعيد والترتيب والأخبار والأندية. لا تخترع نتائج أو تواريخ أو تشكيلات أو إصابات أو إحصائيات. إذا لم توجد المعلومة، قل لا أملك بيانات مؤكدة عنها الآن. إذا كانت البيانات موسومة قديمة فلا تصفها بأنها مباشرة. فرّق بين الموعد والنتيجة، واذكر البطولة ووقت آخر تحديث عندما يكون متاحاً. قدّم التحليل كرأي مبني على البيانات ولا تعرضه كحقيقة. إذا سئلت عن معلومة غير موجودة في البيانات فاطلب التحقق من المصدر الرسمي. أجب بالعربية الواضحة.
+
+بيانات سلوم تيفي:
+'+context;
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),35000);
   try{
-   const r=await fetch('https://text.pollinations.ai/openai',{method:'POST',headers:{'Content-Type':'application/json'},signal:controller.signal,body:JSON.stringify({model:'openai',temperature:0.15,max_tokens:650,stream:false,messages:[{role:'system',content:system},{role:'user',content:q}]})});
-   if(!r.ok)throw Error('الخدمة أعادت حالة '+r.status);
-   const data=await r.json();const text=data.choices?.[0]?.message?.content;
-   if(!text)throw Error('لم تصل إجابة مفهومة من الخدمة');
-   answer.textContent=text;
+   const r=await fetch('https://gen.pollinations.ai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey},signal:controller.signal,body:JSON.stringify({model:'openai/gpt-5.4-nano',temperature:0.15,max_tokens:800,stream:false,messages:[{role:'system',content:system},{role:'user',content:q}]})});
+   if(r.status===401||r.status===403){sessionStorage.removeItem(KEY);apiKey='';status();throw Error('انتهى التفويض أو لا يملك صلاحية الاستخدام. أعد الربط.')}
+   if(!r.ok)throw Error('خدمة الذكاء الاصطناعي أعادت HTTP '+r.status);
+   const data=await r.json(),reply=data.choices?.[0]?.message?.content;
+   if(!reply)throw Error('لم تصل إجابة من الخدمة');answer.textContent=reply;
   }finally{clearTimeout(timer)}
- }catch(e){answer.textContent=e.name==='AbortError'?'تأخر الرد أكثر من اللازم. حاول مرة أخرى.':'تعذر الحصول على إجابة موثوقة الآن. قد تكون خدمة الذكاء الاصطناعي غير متاحة؛ حاول لاحقاً.'}
+ }catch(e){answer.textContent=e.name==='AbortError'?'تأخر الرد. حاول مرة أخرى.':'تعذر الرد: '+e.message}
  finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight}
 }
-send.addEventListener('click',go);field.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
+connectBtn.addEventListener('click',connect);send.addEventListener('click',go);field.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
+handleCallback();status();
 </script></body></html>
