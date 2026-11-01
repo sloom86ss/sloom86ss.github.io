@@ -5,6 +5,7 @@ The updater never fabricates a result. A failed league request preserves its pre
 payload and marks that league stale so the website can hide it.
 """
 import datetime as dt
+import email.utils
 import json
 import os
 import re
@@ -58,7 +59,13 @@ def iso(value):
             parsed = parsed.replace(tzinfo=UTC)
         return parsed.astimezone(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
     except Exception:
-        return None
+        try:
+            parsed = email.utils.parsedate_to_datetime(str(value))
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=UTC)
+            return parsed.astimezone(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
+        except Exception:
+            return None
 
 def clean(value):
     return re.sub(r"\s+", " ", str(value or "")).strip()
@@ -196,7 +203,8 @@ def main():
             events = scoreboard.get("events") or []
             matches = [m for m in (event_match(e, league_name) for e in events) if m]
             previous["matches"] = sorted(matches, key=lambda x: x.get("date") or "")
-            previous["name"] = clean((scoreboard.get("leagues") or [{}])[0].get("name") or league_name)
+            # Keep the site's Arabic competition label; ESPN's provider label is often English.
+            previous["name"] = league_name
             previous["category"] = "football"
             previous["updated_at"] = NOW_ISO
             previous["stale"] = False
@@ -250,6 +258,12 @@ def main():
             continue
         dedup[item["link"]] = item
     fresh_news = sorted(dedup.values(), key=lambda x: x["published"], reverse=True)[:100]
+    if not fresh_news:
+        for item in old.get("news_sources") or []:
+            published = iso(item.get("published"))
+            if published and dt.datetime.fromisoformat(published.replace("Z", "+00:00")) >= cutoff:
+                fresh_news.append(item)
+        fresh_news = sorted(fresh_news, key=lambda x: x.get("published", ""), reverse=True)[:100]
 
     if successful == 0:
         raise SystemExit("All scoreboard sources failed; keeping the previous data.json unchanged.")
