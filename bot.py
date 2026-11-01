@@ -2,7 +2,8 @@
 """SLOOM TV data collector. ESPN public endpoints; failed feeds never erase good data."""
 import json, os, time, re, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from zoneinfo import ZoneInfo
 
 BASE = "https://site.api.espn.com/apis/site/v2/sports"
 STANDINGS_BASE = "https://site.api.espn.com/apis/v2/sports"
@@ -144,8 +145,15 @@ def fetch_feed(item):
               "teams": [], "standings": [], "updated_at": None, "stale": False}
     errors = []
     try:
-        payload = get_json(f"{BASE}/{key}/scoreboard")
-        for event in payload.get("events", []):
+        # Fetch three local calendar days (yesterday, today, tomorrow) in Oman time.
+        local_today = datetime.now(ZoneInfo("Asia/Muscat")).date()
+        events_by_id = {}
+        for offset in (-1, 0, 1):
+            day = (local_today + timedelta(days=offset)).strftime("%Y%m%d")
+            payload = get_json(f"{BASE}/{key}/scoreboard?dates={day}")
+            for event in payload.get("events", []):
+                events_by_id[str(event.get("id", ""))] = event
+        for event in events_by_id.values():
             comp = (event.get("competitions") or [{}])[0]
             competitors = comp.get("competitors", [])
             home = next((x for x in competitors if x.get("homeAway") == "home"), {})
