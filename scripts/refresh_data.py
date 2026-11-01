@@ -181,13 +181,9 @@ def parse_rss(source, url):
         if not headline or not link.startswith("https://") or not published:
             continue
         category_text = (headline + " " + description).lower()
-        category = "transfers" if any(k in category_text for k in ("transfer", "signing", "deal agreed", "loan move", "joins", "signs for", "انتقال", "صفقة", "تعاقد")) else "news"
-        publisher_node = item.find("source")
-        publisher = clean(publisher_node.text) if source == "Google News" and publisher_node is not None else ""
-        display_source = (publisher + " عبر Google News") if publisher else source
+        category = "transfers" if any(k in category_text for k in ("transfer", "signing", "deal agreed", "loan move", "joins", "signs for")) else "news"
         items.append({"headline": headline, "description": description[:900], "link": link,
-                      "published": published, "fetched_at": NOW_ISO, "source": display_source,
-                      "discovery_source": source, "category": category})
+                      "published": published, "fetched_at": NOW_ISO, "source": source, "category": category})
     return items
 
 def main():
@@ -271,7 +267,7 @@ def main():
 
     if successful == 0:
         raise SystemExit("All scoreboard sources failed; keeping the previous data.json unchanged.")
-    updated["provider"] = "ESPN public API + BBC Sport + Sky Sports + The Guardian + Google News RSS"
+    updated["provider"] = "ESPN public API + BBC Sport + Sky Sports + The Guardian RSS"
     updated["timezone"] = "Asia/Muscat"
     updated["generated_at"] = NOW_ISO
     updated["leagues"] = leagues
