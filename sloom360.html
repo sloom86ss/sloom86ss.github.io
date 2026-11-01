@@ -119,7 +119,39 @@ async function openMatch(id,league){
 $('matches').addEventListener('click',e=>{const card=e.target.closest('[data-event]');if(card)openMatch(card.dataset.event,card.dataset.league);});
 $('matches').addEventListener('keydown',e=>{const card=e.target.closest('[data-event]');if(card&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openMatch(card.dataset.event,card.dataset.league);}});
 function bubble(t,c){const d=document.createElement('div');d.className='bubble '+c;d.textContent=t;$('chat').appendChild(d);$('chat').scrollTop=$('chat').scrollHeight;return d;}
-async function ask(){const q=$('question').value.trim();if(!q)return;$('question').value='';bubble(q,'user');const a=bubble(isEnglish?'Checking football data and preparing the answer…':'أراجع بيانات كرة القدم وأجهز الملخص…','bot');$('send').disabled=true;try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,context:context(),language:isEnglish?'en':'ar'})});const p=await r.json().catch(()=>({}));if(!r.ok)throw Error(p.error||'تعذر الاتصال بالمساعد');a.textContent=p.answer||'لم يصل رد واضح.';}catch(e){a.textContent=e.message||'حدث خطأ مؤقت.';}finally{$('send').disabled=false;$('chat').scrollTop=$('chat').scrollHeight;}}
+function localAssistantAnswer(q){
+ if(!datasetFresh())return 'لا أستطيع تأكيد المعلومات الآن؛ آخر تحديث للبيانات تجاوز 90 دقيقة. لن أعرض معلومات قديمة على أنها حديثة.';
+ const n=norm(q),leagues=Object.entries(data.leagues||{}).filter(([id,l])=>!l.stale&&recent(l.updated_at,1.5));
+ const selected=leagues.filter(([id,l])=>n.includes(norm(l.name||id))||
+  ((n.includes('انجليزي')||n.includes('انجلترا'))&&id==='soccer/eng.1')||
+  ((n.includes('اسباني')||n.includes('اسبانيا'))&&id==='soccer/esp.1')||
+  ((n.includes('ايطالي')||n.includes('ايطاليا'))&&id==='soccer/ita.1')||
+  ((n.includes('الماني')||n.includes('المانيا'))&&id==='soccer/ger.1')||
+  ((n.includes('فرنسي')||n.includes('فرنسا'))&&id==='soccer/fra.1')||
+  (n.includes('سعودي')&&id==='soccer/ksa.1')||
+  (n.includes('ابطال اوروبا')&&id==='soccer/uefa.champions')||
+  (n.includes('الدوري الاوروبي')&&id==='soccer/uefa.europa'));
+ const scope=selected.length?selected:leagues;
+ const stop=['مباريات','مباراة','نتائج','نتيجه','اليوم','غدا','امس','اخبار','خبر','ترتيب','جدول','الدوري','الانجليزي','الاسباني','الايطالي','الالماني','الفرنسي','السعودي','ابطال','اوروبا','متى','موعد','فريق','نادي','عن','في','من','هل'];
+ const terms=n.split(/\s+/).filter(x=>x.length>2&&!stop.includes(x));
+ if(/ترتيب|جدول|متصدر|نقاط/.test(n)){
+  const rows=scope.flatMap(([id,l])=>(l.standings||[]).map((r,i)=>({league:l.name||id,...r,rank:r.rank||i+1})));
+  return rows.length?'الترتيب حسب آخر بيانات المصدر:\n'+rows.slice(0,18).map(r=>r.rank+'. '+showTeam(r.name)+' — '+(r.points||'—')+' نقطة | لعب '+(r.played||'—')).join('\n'):'لا تتوفر بيانات ترتيب مؤكدة لهذه البطولة حالياً.';
+ }
+ if(/اخبار|خبر|انتقال/.test(n)){
+  const items=newsItems().filter(x=>!terms.length||terms.some(t=>norm(x.headline+' '+x.description).includes(t))).slice(0,8);
+  return items.length?'آخر الأخبار المنشورة من المصادر المتاحة (العناوين بلغتها الأصلية):\n'+items.map(x=>'• '+x.headline+' — '+(x.source||'مصدر رياضي')+' '+(x.published||'')+'\n'+x.link).join('\n\n'):'لا توجد أخبار حديثة مطابقة في المصادر الموثوقة حالياً.';
+ }
+ const matches=scope.flatMap(([id,l])=>(l.matches||[]).filter(m=>m.date&&recent(data.generated_at,1.5)).map(m=>({...m,league:l.name||id})));
+ const found=matches.filter(m=>!terms.length||terms.some(t=>norm((m.home?.name||'')+' '+(m.away?.name||'')+' '+m.league).includes(t))).slice(0,12);
+ if(/مباراه|مباريات|نتيجه|نتائج|موعد|متى|يلعب|مواجه/.test(n)||terms.length){
+  return found.length?'المباريات المتاحة في بيانات SLOOM360:\n'+found.map(m=>'• '+showLeague(m.league)+': '+showTeam(m.home?.name)+' '+(m.home?.score??'—')+' - '+(m.away?.score??'—')+' '+showTeam(m.away?.name)+'\n'+(m.status==='in'?'مباشرة':m.status==='post'?'انتهت':'قادمة')+' · '+fmtKickoff(m.date||m.time)+' · '+(m.broadcast||'القنوات غير متوفرة من المصدر')).join('\n\n'):'لم أجد مباريات مطابقة في البيانات الحديثة. جرّب اسم البطولة أو النادي.';
+ }
+ const teams=scope.flatMap(([id,l])=>(l.teams||[]).map(t=>({name:t.name,league:l.name||id}))).filter(t=>!terms.length||terms.some(x=>norm(t.name).includes(x)));
+ if(teams.length)return 'الأندية الموجودة في البيانات:\n'+teams.slice(0,20).map(t=>'• '+showTeam(t.name)+' — '+showLeague(t.league)).join('\n');
+ return 'أنا مساعد SLOOM360. أبحث في بيانات المباريات والترتيب والأخبار والأندية الحديثة فقط. اسألني عن مباراة أو نادٍ أو بطولة محددة.';
+}
+async function ask(){const q=$('question').value.trim();if(!q)return;$('question').value='';bubble(q,'user');const a=bubble('أراجع بيانات كرة القدم وأتأكد من حداثتها…','bot');$('send').disabled=true;try{a.textContent=localAssistantAnswer(q);}catch(e){a.textContent='تعذر قراءة البيانات الحالية. حاول بعد قليل.';}finally{$('send').disabled=false;$('chat').scrollTop=$('chat').scrollHeight;}}
 $('send').addEventListener('click',ask);$('question').addEventListener('keydown',e=>{if(e.key==='Enter')ask()});
 
 async function load(){try{const r=await fetch('data.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);data=await r.json();render();translateNews();}catch(e){$('news').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً.</div>';}}
