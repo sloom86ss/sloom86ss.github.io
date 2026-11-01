@@ -5,7 +5,7 @@ export default async function handler(req,res){
  const mode=body.mode==="translate"?"translate":"chat";
  const key=process.env.GEMINI_API_KEY;
  if(mode==="translate"){
-  const items=Array.isArray(body.items)?body.items.slice(0,18):[];
+  const items=Array.isArray(body.items)?body.items.slice(0,100):[];
   if(!items.length)return res.status(400).json({error:"لا توجد أخبار لترجمتها."});
   if(!key)return res.status(503).json({error:"ترجمة الأخبار تحتاج إعداد GEMINI_API_KEY في إعدادات الاستضافة."});
   const prompt="ترجم عناوين الأخبار وأوصافها إلى العربية الفصحى بأسلوب صحفي رياضي طبيعي. لا تضف حقائق أو تفاصيل. أعد JSON صالحاً فقط بالشكل {\"translations\":[{\"headline\":\"...\",\"description\":\"...\"}]} وبنفس ترتيب وعدد العناصر. البيانات: "+JSON.stringify(items);
