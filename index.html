@@ -1,65 +1,35 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html dir="rtl" lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>SLOOM TV - سلوم تيفي</title>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SloomTV - Live</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
-body{background:#000;color:#fff;overflow-x:hidden}
-header{position:sticky;top:0;z-index:100;background:#0a0a0a;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid #111}
-.ticker{background:#00E676;color:#000;font-size:12px;font-weight:700;white-space:nowrap;overflow:hidden;padding:6px 0}
-.ticker span{display:inline-block;animation:scroll 25s linear infinite;padding-left:100%}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-.tabs{display:flex;gap:8px;padding:10px;overflow:auto}
-.tab{flex:1;background:#1c1c1c;border-radius:24px;padding:10px;text-align:center;font-size:13px;font-weight:700;cursor:pointer;border:1px solid #222;white-space:nowrap}
-.tab.active{background:#00E676;color:#000}
-.newsCard{background:#1c1c1c;border-radius:16px;margin:8px 10px;padding:12px;border:1px solid #222;border-right:4px solid #00E676;display:flex;gap:10px}
-.newsTitleEn{font-size:13px;font-weight:700;line-height:1.5;color:#fff;text-align:left;direction:ltr}
-.newsTitleAr{font-size:11px;color:#888;margin-top:6px}
-.newsMeta{display:flex;justify-content:space-between;margin-top:8px;font-size:10px;color:#666}
-.badge{background:#00E676;color:#000;padding:2px 8px;border-radius:10px;font-weight:800;font-size:10px}
-.thumb{width:56px;height:56px;background:#111;border-radius:10px;flex-shrink:0}
-#toast{position:fixed!important;top:78px!important;bottom:auto!important;left:50%!important;transform:translateX(-50%)!important;z-index:99999!important;background:#00E676!important;color:#000!important;padding:7px 16px!important;border-radius:20px!important;font-size:12px!important;font-weight:900!important;pointer-events:none!important;box-shadow:0 4px 20px rgba(0,230,118,.4);animation:hideToast 2.8s forwards;display:none}
-@keyframes hideToast{0%{opacity:0;transform:translateX(-50%) translateY(-10px)}10%{opacity:1;transform:translateX(-50%) translateY(0)}75%{opacity:1}100%{opacity:0;visibility:hidden}}
-.adBox{max-width:500px;margin:14px auto;padding:0 10px}
-.adInner{background:#111;border:1px dashed #222;border-radius:14px;padding:8px;text-align:center;min-height:90px;display:flex;flex-direction:column;justify-content:center}
-.adLabel{font-size:8px;color:#555;margin-bottom:6px}
-.matchBox{background:#1c1c1c;border-radius:14px;margin:8px 10px;padding:12px;display:flex;justify-content:space-between}
-footer{max-width:500px;margin:20px auto 0;padding:16px;text-align:center;font-size:10px;color:#555;border-top:1px solid #111;line-height:1.6}
+body{background:#0a0e1a;color:#fff;font-family:system-ui;padding:15px}
+h1{text-align:center;color:#00ff88}
+.card{background:#151b2e;border-radius:12px;padding:15px;margin:12px 0;display:flex;justify-content:space-between;align-items:center}
+.team{font-weight:bold;width:40%;text-align:center}
+.score{font-size:24px;color:#00ff88;font-weight:bold;background:#000;padding:5px 12px;border-radius:8px}
+.live{color:#ff0040;font-size:12px}
 </style>
 </head>
 <body>
-<header>
-<div style="display:flex;align-items:center;gap:8px">
-<div style="font-size:11px;line-height:1.2">🇴🇲 <b id="mus">07:34</b><br>🇸🇦 <b id="ksa">06:34</b></div>
-<div style="width:38px;height:38px;background:#00E676;border-radius:50%;display:grid;place-items:center">🤖</div>
-<div style="width:38px;height:38px;background:#222;border-radius:50%;display:grid;place-items:center">⭐</div>
-</div>
-<div style="font-weight:900;font-size:20px">SLOOM TV <span style="color:#00E676;font-size:12px;display:block">سلوم تيفي</span></div>
-</header>
-<div class="ticker"><span id="ticker">• سلوم تيفي • SLOOM TV • مباشر 0 • يجمع كل 5 ث • GMT 03:34 •</span></div>
-<div class="tabs">
-<div class="tab" data-tab="news">الأخبار 📰</div>
-<div class="tab" data-tab="stats">الإحصائيات 📊</div>
-<div class="tab active" data-tab="matches">المباريات ⚽</div>
-</div>
-<div id="toast">⚡ تم جلب 16 مباراة</div>
-<div id="matchesTab"><div style="padding:10px 12px;font-size:13px;color:#888;display:flex;justify-content:space-between"><b style="color:#fff">مباريات اليوم</b><span>Real Matches Only</span></div><div id="list"></div><div class="adBox"><div class="adInner"><div class="adLabel">إعلان</div><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div>
-<div id="newsTab" style="display:none"><div style="padding:10px 12px;font-size:13px;color:#888;display:flex;justify-content:space-between"><b style="color:#fff">الأخبار - مصادر رسمية فقط</b><span>Real News Only</span></div><div id="newsList"></div><div class="adBox"><div class="adInner" style="background:#1c1c1c;border-style:solid"><div class="adLabel">إعلان ممول</div><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXX" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div>
-<div id="statsTab" style="display:none"><div style="padding:10px 12px"><b>الإحصائيات المباشرة</b></div><div style="background:#1c1c1c;border-radius:16px;margin:8px 10px;padding:12px">اختر مباراة لمشاهدة الإحصائيات</div></div>
-<footer>SLOOM TV - لا نقدم بث مباشر، نعرض نتائج وإحصائيات وأخبار فقط من مصادر رسمية<br>المصادر: ESPN, BBC Sport | الأوقات: مسقط - الرياض - غرينتش | BOT يجمع كل 5 ث 🤖<br><br>sloom86ss.github.io</footer>
+<h1>⚽ SloomTV مباشر</h1>
+<div id="loading" style="text-align:center">جاري التحميل...</div>
+<div id="matches"></div>
 <script>
-function tick(){const now=new Date();document.getElementById('mus').textContent=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Muscat'})).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});document.getElementById('ksa').textContent=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Riyadh'})).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});document.getElementById('ticker').textContent=` • سلوم تيفي • SLOOM TV • مباشر ${document.querySelectorAll('.matchBox').length} • يجمع كل 5 ث • GMT ${now.toUTCString().slice(17,22)} • `;}
-setInterval(tick,1000);tick();
-document.querySelectorAll('.tab').forEach(t=>{t.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');document.getElementById('matchesTab').style.display=t.dataset.tab==='matches'?'block':'none';document.getElementById('newsTab').style.display=t.dataset.tab==='news'?'block':'none';document.getElementById('statsTab').style.display=t.dataset.tab==='stats'?'block':'none';}});
-document.querySelector('[data-tab="news"]').click();
-function showToast(c){const t=document.getElementById('toast');t.textContent=`⚡ تم جلب ${c} مباراة`;t.style.display='block';t.style.animation='none';void t.offsetWidth;t.style.animation='hideToast 2.8s forwards';}
-async function loadNews(){const sample=[{title:"Man United Implode at Chelsea, and, make no mistake, they are in a Premier League relegation battle",source:"ESPN/BBC",date:"31/10/2026"},{title:"Premier League VAR review: Did Man United's Martinez deserve a red card?",source:"ESPN/BBC",date:"31/10/2026"},{title:"Carrick brushes off talk of Man Utd in relegation battle",source:"ESPN/BBC",date:"01/11/2026"},{title:"In-form Brighton inflict 2nd straight defeat on City",source:"ESPN/BBC",date:"01/11/2026"}];const list=document.getElementById('newsList');list.innerHTML='';sample.forEach(n=>{const d=document.createElement('div');d.className='newsCard';d.innerHTML=`<div style="flex:1"><div class="newsTitleEn">${n.title}</div><div class="newsTitleAr">ESPN • ترجمة تلقائية متاحة</div><div class="newsMeta"><span>${n.source} • ${n.date}</span><span class="badge">رسمي</span></div></div><div class="thumb"></div>`;list.appendChild(d);});}
-loadNews();
-function loadMatches(){const list=document.getElementById('list');list.innerHTML='';for(let i=0;i<3;i++){const d=document.createElement('div');d.className='matchBox';d.innerHTML=`<span>الهلال ${i+1} - 0 النصر</span><span style="color:#00E676">مباشر</span>`;list.appendChild(d);}showToast(16);}
-loadMatches();setInterval(loadMatches,5000);
+async function load(){
+ const res = await fetch('https://www.thesportsdb.com/api/v1/json/3/livescore.php');
+ const data = await res.json();
+ const c = document.getElementById('matches');
+ document.getElementById('loading').style.display='none';
+ c.innerHTML='';
+ if(!data.events){c.innerHTML='<p style="text-align:center">لا يوجد لايف الان</p>';return}
+ data.events.forEach(m=>{
+  c.innerHTML+=`<div class="card"><div class="team">${m.strHomeTeam}<br><span class="live">● ${m.strStatus}</span></div><div class="score">${m.intHomeScore||0} - ${m.intAwayScore||0}</div><div class="team">${m.strAwayTeam}<br><span style="font-size:11px;color:#888">${m.strLeague}</span></div></div>`;
+ });
+}
+load(); setInterval(load,30000);
 </script>
 </body>
 </html>
