@@ -1,0 +1,32 @@
+name: Update Football Data
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # يعمل كل 30 دقيقة
+  workflow_dispatch: # يتيح لك تشغيله يدوياً
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Bot
+        run: python bot.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'Bot'
+          git config --global user.email 'bot@example.com'
+          git add data.json
+          git commit -m "تحديث بيانات المباريات والأخبار" || exit 0
+          git push
