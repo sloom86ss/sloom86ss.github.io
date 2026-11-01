@@ -5,56 +5,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SloomTV مباشر</title>
 <style>
-body{background:#0a0e1a;color:#fff;font-family:system-ui;margin:0;padding:15px}
-h1{text-align:center;color:#00ff88;margin:30px 0}
-.card{background:#151b2e;border-radius:12px;padding:15px;margin:10px 0;display:flex;justify-content:space-between;align-items:center;border:1px solid #222}
+body{background:#070b18;color:#fff;font-family:system-ui;padding:15px;margin:0}
+h1{text-align:center;color:#00ff88}
+.card{background:#151b2e;border-radius:14px;padding:16px;margin:12px 0;display:flex;justify-content:space-between;align-items:center}
 .score{background:#000;color:#00ff88;padding:6px 14px;border-radius:8px;font-size:22px;font-weight:bold}
-.team{width:38%;text-align:center;font-weight:bold}
-.live{color:#ff3355;font-size:11px}
+.team{width:38%;text-align:center;font-weight:bold;font-size:14px}
+.status{font-size:11px;color:#ff3355}
 </style>
 </head>
 <body>
 <h1>⚽ SloomTV مباشر</h1>
-<div id="status" style="text-align:center">جاري التحميل...</div>
-<div id="box"></div>
+<div id="info" style="text-align:center;color:#888">جاري التحميل...</div>
+<div id="matches"></div>
 
 <script>
-async function getMatches(){
-  const box=document.getElementById('box');
-  const status=document.getElementById('status');
+async function load(){
+  const info=document.getElementById('info');
+  const box=document.getElementById('matches');
   try{
-    // جرب اللايف اول
-    let r = await fetch('https://www.thesportsdb.com/api/v1/json/3/livescore.php');
-    let j = await r.json();
-    let games = j.events;
-
-    // اذا ما فيه لايف، جيب مباريات الدوري السعودي القادمة
-    if(!games || games.length==0){
-      status.innerText="لا يوجد لايف الان - مباريات الدوري السعودي القادمة:";
-      r = await fetch('https://www.thesportsdb.com/api/v1/json/3/eventsnextleague.php?id=4331');
-      j = await r.json();
-      games = j.events ? j.events.slice(0,10) : [];
-    } else {
-      status.innerText="🔴 مباشر الان:";
+    // API مجاني يشتغل على GitHub Pages
+    const res = await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/saudi-pro-league/scoreboard');
+    const data = await res.json();
+    
+    if(!data.events || data.events.length==0){
+      info.innerText="لا توجد مباريات اليوم في الدوري السعودي";
+      // جرب كل الدوريات
+      const res2 = await fetch('https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard');
+      const data2 = await res2.json();
+      data.events = data2.events;
     }
-
+    
+    info.innerText="🔴 مباشر - يتحدث كل دقيقة";
     box.innerHTML="";
-    if(games.length==0){box.innerHTML="<p style='text-align:center'>لا توجد مباريات اليوم</p>";return}
-
-    games.forEach(m=>{
-      const home = m.strHomeTeam || m.strEvent?.split(' vs ')[0];
-      const away = m.strAwayTeam || m.strEvent?.split(' vs ')[1];
-      const hs = m.intHomeScore ?? '-';
-      const as = m.intAwayScore ?? '-';
-      const time = m.strStatus || m.strTime || 'قادمة';
-      box.innerHTML+=`<div class="card"><div class="team">${home}<br><span class="live">${time}</span></div><div class="score">${hs} - ${as}</div><div class="team">${away}</div></div>`;
+    
+    data.events.forEach(ev=>{
+      const comp = ev.competitions[0];
+      const home = comp.competitors[0];
+      const away = comp.competitors[1];
+      const hs = home.score || '0';
+      const as = away.score || '0';
+      const st = comp.status.type.detail;
+      
+      box.innerHTML+=`
+        <div class="card">
+          <div class="team">${home.team.displayName}<br><span class="status">${st}</span></div>
+          <div class="score">${hs} - ${as}</div>
+          <div class="team">${away.team.displayName}</div>
+        </div>
+      `;
     });
   }catch(e){
-    status.innerText="خطأ: "+e.message+" - تأكد انك فاتح النت";
+    info.innerText="جاري المحاولة... "+e.message;
+    console.log(e);
   }
 }
-getMatches();
-setInterval(getMatches, 60000);
+load();
+setInterval(load, 60000);
 </script>
 </body>
 </html>
