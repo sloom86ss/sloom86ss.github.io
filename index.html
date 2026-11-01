@@ -35,7 +35,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 <body><main class="wrap">
 <header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM360" style="width:52px;height:52px;object-fit:contain"><div><h1>سلوم 360</h1><small>SLOOM360</small></div></div><div class="live-pill">● أخبار ونتائج كرة القدم</div></header>
 <div class="ticker" aria-label="شريط الأخبار العاجلة"><div class="ticker-track" id="tickerTrack"><span>● SLOOM360 | نتحقق من آخر الأخبار الكروية…</span></div></div>
-<section class="hero"><h2>كل كرة القدم في <span>مكان واحد</span></h2><p>مباريات اليوم وأمس وغداً، النتائج والترتيب والأخبار والانتقالات من مصادر رياضية موثوقة.</p><div class="hero-actions"><a class="btn primary" href="#matches">تابع المباريات</a><a class="btn" href="sloom360.html">🌐 مركز SLOOM360</a><a class="btn" href="ai.html">🤖 اسأل سلوم AI</a></div></section>
+<section class="hero"><h2>كل كرة القدم في <span>مكان واحد</span></h2><p>مباريات اليوم وأمس وغداً، النتائج والترتيب والأخبار والانتقالات من مصادر رياضية موثوقة.</p><div class="hero-actions"><a class="btn primary" href="#matches">تابع المباريات</a><a class="btn" href="sloom360.html">🌐 مركز SLOOM360</a><a class="btn" href="ai.html">🤖 اسأل سلوم AI</a><button class="btn" id="installApp" type="button" hidden>📲 تثبيت التطبيق</button></div></section>
 <section class="stats"><div class="stat"><b id="matchCount">—</b><span>مباراة معروضة</span></div><div class="stat"><b id="liveCount">—</b><span>مباشر الآن</span></div><div class="stat"><b id="updated">—</b><span>آخر تحديث</span></div></section>
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div>
 
@@ -61,4 +61,11 @@ function render(){
 document.getElementById('teamSearch').addEventListener('input',render);
 async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();sportsData=d.leagues||d;sportsData.news_sources=d.news_sources||[];render()}catch(e){document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
 document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,120000);
+</script>
+<script>
+let sloomInstallPrompt=null;
+window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();sloomInstallPrompt=event;const button=document.getElementById('installApp');if(button)button.hidden=false;});
+document.getElementById('installApp')?.addEventListener('click',async()=>{if(!sloomInstallPrompt)return;await sloomInstallPrompt.prompt();await sloomInstallPrompt.userChoice;sloomInstallPrompt=null;const button=document.getElementById('installApp');if(button)button.hidden=true;});
+window.addEventListener('appinstalled',()=>{const button=document.getElementById('installApp');if(button)button.hidden=true;});
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(error=>console.error('SLOOM360 offline support:',error)));}
 </script></body></html>
