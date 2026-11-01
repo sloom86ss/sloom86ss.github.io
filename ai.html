@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080c0a">
-<title>سلوم AI | SLOOM TV</title>
+<title>مساعد SLOOM360 | SLOOM360</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#080c0a;color:#f4f8f4;font-family:Cairo,Arial,sans-serif;height:100dvh;display:flex;flex-direction:column}
@@ -12,9 +12,9 @@ header{padding:12px 16px;background:#111915;border-bottom:1px solid #26352b;disp
 .chat{flex:1;overflow:auto;padding:18px;max-width:780px;margin:auto;width:100%}.m{padding:12px 16px;border-radius:17px;margin:0 0 12px;max-width:92%;line-height:1.9;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.u{background:#b7f34a;color:#10170b;margin-right:auto}.b{background:#151f18;border:1px solid #293b2d;margin-left:auto}.input{display:flex;gap:9px;padding:12px;background:#111915;border-top:1px solid #26352b;max-width:780px;margin:auto;width:100%}.input input{min-width:0;flex:1;background:#202b23;border:1px solid #344638;border-radius:25px;padding:12px 17px;color:white;font:14px Cairo;outline:none}.input button{background:#b7f34a;border:0;border-radius:50%;width:47px;height:47px;font-size:18px;font-weight:900;cursor:pointer}.input button:disabled,.connect:disabled{opacity:.5}.hint{text-align:center;color:#829187;font-size:10px;padding:0 12px 9px;background:#111915}
 </style></head>
 <body>
-<header><b>🤖 سلوم AI</b><div class="top-actions"><a href="index.html">العودة إلى سلوم تيفي ←</a></div></header>
-<div class="notice">مساعد رياضي عربي مدعوم بـ Gemini المجاني المحدود، ويستند إلى بيانات المباريات والبطولات في سلوم تيفي. قد تتوقف الإجابات مؤقتاً عند بلوغ حد الاستخدام المجاني.</div>
-<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا سلوم AI 🟢 أستطيع فهم أسئلتك بالعربية وشرح بيانات المباريات والنتائج والترتيب والأخبار المتاحة. سأوضح لك عندما لا تتوفر المعلومة بدلاً من تخمينها.</div></div>
+<header><b>🤖 مساعد SLOOM360</b><div class="top-actions"><a href="index.html">العودة إلى SLOOM360 ←</a></div></header>
+<div class="notice">مساعد رياضي عربي مدعوم بـ Gemini المجاني المحدود، ويستند إلى بيانات المباريات والبطولات في SLOOM360. قد تتوقف الإجابات مؤقتاً عند بلوغ حد الاستخدام المجاني.</div>
+<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا مساعد SLOOM360 🟢 أستطيع فهم أسئلتك بالعربية وشرح بيانات المباريات والنتائج والترتيب والأخبار المتاحة. سأوضح لك عندما لا تتوفر المعلومة بدلاً من تخمينها.</div></div>
 <div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو بطولة…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
 <div class="hint">الذكاء الاصطناعي: Gemini. البيانات الرياضية: ESPN عند توفرها. الحصة المجانية محدودة وقد تتغير.</div>
 <script>
@@ -36,25 +36,25 @@ function reply(q){
  const terms=n.split(/\s+/).filter(w=>w.length>2&&!['الدوري','الممتاز','مباراة','مباريات','نتيجة','نتائج','موعد','اليوم','غدا','اخبار','ترتيب','جدول','فريق','نادي','عن','في','من','على','هل','متى','انجليزي','انجلترا','اسباني','اسبانيا','ايطالي','ايطاليا','الماني','المانيا','فرنسي','فرنسا','سعودي','البرتغالي','الهولندي','البرازيلي','الارجنتيني','روشن','ابطال','اوروبا','العالمي','كاس','العالم','الاوربي','الاوروبي'].includes(w));
  if(isTable){
   const rows=ls.flatMap(x=>(x.l.standings||[]).map((r,i)=>({league:x.name,...r,rank:r.rank||i+1})));
-  if(!rows.length)return 'لا تتوفر بيانات ترتيب مؤكدة لهذه البطولة حالياً في ملف سلوم تيفي.';
+  if(!rows.length)return 'لا تتوفر بيانات ترتيب مؤكدة لهذه البطولة حالياً في ملف SLOOM360.';
   return 'ترتيب '+ls.map(x=>x.name).join('، ')+' حسب آخر بيانات متاحة:\n'+rows.slice(0,20).map(r=>r.rank+'. '+r.name+' — '+(r.points||'—')+' نقطة | لعب '+(r.played||'—')+' | فوز '+(r.wins||'—')+' | تعادل '+(r.draws||'—')+' | خسارة '+(r.losses||'—')).join('\n')+'\n\nالمصدر: ESPN. راجع وقت التحديث في صفحة البطولة؛ قد لا تكون البيانات مباشرة.';
  }
  if(isNews){
   const news=ls.flatMap(x=>(x.l.news||[]).map(a=>({...a,league:x.name}))).filter(a=>!terms.length||terms.some(t=>norm(a.headline+' '+a.description).includes(t))).slice(0,8);
-  if(!news.length)return 'لا توجد أخبار مطابقة متاحة حالياً في بيانات سلوم تيفي.';
+  if(!news.length)return 'لا توجد أخبار مطابقة متاحة حالياً في بيانات SLOOM360.';
   return 'آخر الأخبار المتاحة من المصادر المجمعة:\n'+news.map(a=>'• '+clean(a.headline)+' ('+a.league+')'+(a.published?' — '+fmtDate(a.published):'')+(a.link?'\n'+a.link:'')).join('\n\n');
  }
  if(isTeam){
   const teams=ls.flatMap(x=>(x.l.teams||[]).map(t=>({...t,league:x.name}))).filter(t=>!terms.length||terms.some(w=>norm(t.name).includes(w)));
   if(!teams.length)return 'لم أجد هذا النادي في دليل الأندية المتاح حالياً. جرّب كتابة اسمه كما يظهر في الدوري.';
-  return 'الأندية المطابقة في دليل سلوم تيفي:\n'+teams.slice(0,25).map(t=>'• '+t.name+' — '+t.league).join('\n');
+  return 'الأندية المطابقة في دليل SLOOM360:\n'+teams.slice(0,25).map(t=>'• '+t.name+' — '+t.league).join('\n');
  }
  if(isMatch||terms.length){
   const found=matches.filter(m=>!terms.length||terms.some(t=>norm((m.home?.name||'')+' '+(m.away?.name||'')).includes(t))).slice(0,15);
   if(!found.length)return 'لم أجد مباريات مطابقة في البيانات الحالية. قد لا تكون هناك مباريات ضمن نافذة ESPN الحالية، أو أن اسم الفريق/البطولة غير موجود. جرّب اسم النادي أو البطولة.';
-  return 'المباريات المتاحة في بيانات سلوم تيفي:\n'+found.map(m=>{const state=norm(m.status)==='in'?'مباشرة':norm(m.status)==='post'?'انتهت':'قادمة';return '• '+m.league+': '+(m.home?.name||'غير معروف')+' '+(m.home?.score??'—')+' - '+(m.away?.score??'—')+' '+(m.away?.name||'غير معروف')+'\n  '+state+' | '+clean(m.detail||'')+' | '+fmtDate(m.date)+(m.stale?' | بيانات قديمة':'')}).join('\n');
+  return 'المباريات المتاحة في بيانات SLOOM360:\n'+found.map(m=>{const state=norm(m.status)==='in'?'مباشرة':norm(m.status)==='post'?'انتهت':'قادمة';return '• '+m.league+': '+(m.home?.name||'غير معروف')+' '+(m.home?.score??'—')+' - '+(m.away?.score??'—')+' '+(m.away?.name||'غير معروف')+'\n  '+state+' | '+clean(m.detail||'')+' | '+fmtDate(m.date)+(m.stale?' | بيانات قديمة':'')}).join('\n');
  }
- return 'أنا سلوم AI المجاني. أستطيع البحث داخل بيانات المباريات والنتائج والترتيب والأندية والأخبار التي يجمعها الموقع.\n\nجرّب مثلاً:\n• ترتيب الدوري الإنجليزي\n• مباريات ريال مدريد\n• نتائج دوري روشن السعودي\n• أخبار دوري أبطال أوروبا\n• الأندية في الدوري الإيطالي\n\nهذا الإصدار لا يعتمد على خدمة ذكاء اصطناعي مدفوعة؛ لذلك يعرض المعلومات الموجودة في مصدر البيانات فقط ولا يقدّم محادثة توليدية عامة.';
+ return 'أنا مساعد SLOOM360 المجاني. أستطيع البحث داخل بيانات المباريات والنتائج والترتيب والأندية والأخبار التي يجمعها الموقع.\n\nجرّب مثلاً:\n• ترتيب الدوري الإنجليزي\n• مباريات ريال مدريد\n• نتائج دوري روشن السعودي\n• أخبار دوري أبطال أوروبا\n• الأندية في الدوري الإيطالي\n\nهذا الإصدار لا يعتمد على خدمة ذكاء اصطناعي مدفوعة؛ لذلك يعرض المعلومات الموجودة في مصدر البيانات فقط ولا يقدّم محادثة توليدية عامة.';
 }
 function makeContext(data){
  const leagues=Object.entries(data?.leagues||{}).map(([id,l])=>({id,name:l.name,stale:!!l.stale,updated_at:l.updated_at||null,matches:(l.matches||[]).slice(0,18).map(m=>({date:m.date,status:m.status,detail:m.detail,home:{name:m.home?.name,score:m.home?.score},away:{name:m.away?.name,score:m.away?.score}})),standings:(l.standings||[]).slice(0,18),teams:(l.teams||[]).map(t=>t.name),news:(l.news||[]).slice(0,6).map(n=>({headline:n.headline,description:n.description,published:n.published,link:n.link}))}));
