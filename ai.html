@@ -12,82 +12,58 @@ header{padding:12px 16px;background:#111915;border-bottom:1px solid #26352b;disp
 .chat{flex:1;overflow:auto;padding:18px;max-width:780px;margin:auto;width:100%}.m{padding:12px 16px;border-radius:17px;margin:0 0 12px;max-width:92%;line-height:1.9;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.u{background:#b7f34a;color:#10170b;margin-right:auto}.b{background:#151f18;border:1px solid #293b2d;margin-left:auto}.input{display:flex;gap:9px;padding:12px;background:#111915;border-top:1px solid #26352b;max-width:780px;margin:auto;width:100%}.input input{min-width:0;flex:1;background:#202b23;border:1px solid #344638;border-radius:25px;padding:12px 17px;color:white;font:14px Cairo;outline:none}.input button{background:#b7f34a;border:0;border-radius:50%;width:47px;height:47px;font-size:18px;font-weight:900;cursor:pointer}.input button:disabled,.connect:disabled{opacity:.5}.hint{text-align:center;color:#829187;font-size:10px;padding:0 12px 9px;background:#111915}
 </style></head>
 <body>
-<header><b>🤖 سلوم AI</b><div class="top-actions"><button id="connect" class="connect">ربط الذكاء الاصطناعي</button><a href="index.html">العودة إلى سلوم تيفي ←</a></div></header>
-<div class="notice" id="notice">للتشغيل، اربط حسابك بمزود الذكاء الاصطناعي مرة واحدة. <strong>سيتم استخدام رصيدك الشخصي وفق الحد الذي توافق عليه في صفحة التفويض</strong>، ويمكنك رفضه أو إلغاء المفتاح لاحقاً.</div>
-<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا سلوم AI 🟢 أستطيع تحليل بيانات المباريات والأندية والترتيب والأخبار التي وصلت إلى سلوم تيفي. لن أخترع نتيجة أو تشكيلة أو إصابة غير موجودة في مصدر البيانات.</div></div>
+<header><b>🤖 سلوم AI</b><div class="top-actions"><a href="index.html">العودة إلى سلوم تيفي ←</a></div></header>
+<div class="notice">نسخة مجانية لا تحتاج اشتراكاً أو ربط حساب. تعرض المعلومات الموجودة في بيانات سلوم تيفي المحدثة من ESPN، ولا تخترع نتائج أو أخباراً.</div>
+<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا سلوم AI المجاني 🟢 اسألني عن المباريات والنتائج والترتيب والأندية والأخبار الموجودة في بيانات الموقع. لا أطلب اشتراكاً أو مفتاحاً.</div></div>
 <div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو بطولة…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
 <div class="hint">بيانات المباريات من ESPN عند توفرها. قد تتأخر بعض المسابقات أو لا تتوفر لها تغطية.</div>
 <script>
-const chat=document.getElementById('chat'),field=document.getElementById('question'),send=document.getElementById('send'),connectBtn=document.getElementById('connect'),notice=document.getElementById('notice');
-const KEY='sloom_polli_key',STATE='sloom_polli_state';
-let apiKey=sessionStorage.getItem(KEY)||'';
-const clean=v=>String(v??'').replace(/<[^>]*>/g,'').slice(0,220);
+const chat=document.getElementById('chat'),field=document.getElementById('question'),send=document.getElementById('send');
+let sportsData=null;
+const clean=v=>String(v??'').replace(/<[^>]*>/g,'').trim();
 function bubble(text,kind){const el=document.createElement('div');el.className='m '+kind;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;return el}
-function status(){const ok=!!apiKey;connectBtn.textContent=ok?'✓ الذكاء الاصطناعي متصل':'ربط الذكاء الاصطناعي';connectBtn.classList.toggle('connected',ok);field.placeholder=ok?'اسأل عن مباراة أو فريق أو بطولة…':'اربط الذكاء الاصطناعي أولاً';}
-function handleCallback(){
- const hash=new URLSearchParams(location.hash.slice(1)),token=hash.get('api_key'),returned=hash.get('state'),expected=sessionStorage.getItem(STATE);
- if(token){
-  if(!expected||returned!==expected){notice.textContent='تعذر التحقق من عملية الربط. أعد المحاولة من زر الربط.';history.replaceState(null,'',location.pathname);return}
-  apiKey=token;sessionStorage.setItem(KEY,token);sessionStorage.removeItem(STATE);history.replaceState(null,'',location.pathname);
-  notice.textContent='تم ربط سلوم AI في علامة التبويب الحالية. مفتاح التفويض محفوظ مؤقتاً في الجلسة فقط.';bubble('تم الاتصال بمزود الذكاء الاصطناعي بنجاح. اسألني الآن عن بيانات سلوم تيفي.','b');
- }else if(hash.get('error')){notice.textContent='لم يتم منح الإذن. يمكنك إعادة المحاولة عندما ترغب.';history.replaceState(null,'',location.pathname);sessionStorage.removeItem(STATE)}
- status();
-}
-function connect(){
- const state=Array.from(crypto.getRandomValues(new Uint8Array(24))).map(x=>x.toString(16).padStart(2,'0')).join('');
- sessionStorage.setItem(STATE,state);
- const redirect=location.origin+location.pathname;
- const params=new URLSearchParams({response_type:'code',redirect_uri:redirect,scope:'usage',state,budget:'5',expiry:'7'});
- // Legacy fragment authorization keeps the temporary user key out of server request logs.
- const legacy=new URLSearchParams({redirect_uri:redirect,state,budget:'5',expiry:'7'});
- location.href='https://enter.pollinations.ai/authorize?'+legacy.toString();
-}
-function buildContext(raw){
- const leagues=raw?.leagues||raw||{},lines=[];
- lines.push('مصدر البيانات: '+clean(raw?.provider||'ESPN public API')+' | وقت إنشاء الملف: '+clean(raw?.generated_at||'غير متوفر')+' | المنطقة الزمنية للعرض: Asia/Muscat');
- for(const [key,l] of Object.entries(leagues)){
-  if(!l||typeof l!=='object')continue;
-  const name=clean(l.name||key),updated=clean(l.updated_at||'غير متوفر');
-  lines.push('\nالبطولة: '+name+' | آخر تحديث للنتائج: '+updated+(l.stale?' | تحذير: البيانات قديمة وليست مباشرة':''));
-  const games=l.matches||l.events||[];
-  for(const g of games.slice(0,14)){
-   let home=g.home,away=g.away,status=g.status||{};
-   if(!home&&!away){const c=(g.competitions||[])[0]||{},teams=c.competitors||[];home=teams.find(x=>x.homeAway==='home')||{};away=teams.find(x=>x.homeAway==='away')||{};status=c.status?.type||{};}
-   const hn=home?.name||home?.team?.displayName||home?.team?.shortDisplayName||'غير معروف';
-   const an=away?.name||away?.team?.displayName||away?.team?.shortDisplayName||'غير معروف';
-   lines.push('- '+clean(hn)+' '+(home?.score??'—')+' - '+(away?.score??'—')+' '+clean(an)+' | الحالة: '+clean(status.state||'غير محدد')+' '+clean(status.detail||status.shortDetail||g.detail||'')+' | الموعد: '+clean(g.date||g.time||'غير متوفر')+' (يعرض بتوقيت عُمان)');
-  }
-  if(l.standings?.length){lines.push('الترتيب: '+l.standings.slice(0,12).map((x,i)=>(x.rank||i+1)+'. '+clean(x.name)+' ('+clean(x.points)+' نقطة)').join('؛ '))}
-  if(l.teams?.length){lines.push('الأندية المتاحة في هذه البطولة: '+l.teams.slice(0,40).map(x=>clean(x.name)).join('، '))}
-  for(const n of (l.news||[]).slice(0,5))lines.push('خبر: '+clean(n.headline||n.title)+' | المصدر: '+clean(n.source||'غير محدد')+' | النشر: '+clean(n.published||'غير متوفر')+' | الرابط: '+clean(n.link||'غير متوفر'));
-  if(l.errors?.length)lines.push('ملاحظة تغطية: '+l.errors.map(clean).join(' | '));
+function norm(s){return clean(s).toLowerCase().replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي')}
+function leagueEntries(){return Object.entries(sportsData?.leagues||{}).map(([id,l])=>({id,l,name:l.name||id}))}
+function chooseLeagues(q){const n=norm(q);const matches=leagueEntries().filter(x=>n.includes(norm(x.name))||((n.includes('انجليزي')||n.includes('انجلترا'))&&x.id==='soccer/eng.1')||((n.includes('اسباني')||n.includes('اسبانيا'))&&x.id==='soccer/esp.1')||((n.includes('ايطالي')||n.includes('ايطاليا'))&&x.id==='soccer/ita.1')||((n.includes('الماني')||n.includes('المانيا'))&&x.id==='soccer/ger.1')||((n.includes('فرنسي')||n.includes('فرنسا'))&&x.id==='soccer/fra.1')||(n.includes('سعودي')&&x.id==='soccer/ksa.1')||(n.includes('ابطال اوروبا')&&x.id==='soccer/uefa.champions')||(n.includes('الدوري الاوروبي')&&x.id==='soccer/uefa.europa')||(n.includes('كاس العالم')&&x.id==='soccer/fifa.world'));return matches.length?matches:leagueEntries()}
+function fmtDate(v){if(!v)return 'موعد غير متوفر';const d=new Date(v);if(Number.isNaN(d.getTime()))return clean(v);return new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',dateStyle:'medium',timeStyle:'short'}).format(d)+' بتوقيت عُمان'}
+function allMatches(ls){return ls.flatMap(x=>(x.l.matches||[]).map(m=>({...m,league:x.name,stale:x.l.stale})))}
+function reply(q){
+ const n=norm(q),ls=chooseLeagues(q),matches=allMatches(ls);
+ const isTable=/ترتيب|الترتيب|جدول|متصدر|المركز|النقاط/.test(n);
+ const isNews=/اخبار|خبر|اخر الاخبار|الجديد/.test(n);
+ const isTeam=/نادي|فريق|شعار|الاندية|الفرق/.test(n);
+ const isMatch=/مباراه|مباريات|نتيجه|نتائج|موعد|متى|يلعب|لعب|مواجه/.test(n);
+ const terms=n.split(/\s+/).filter(w=>w.length>2&&!['الدوري','الممتاز','مباراة','مباريات','نتيجة','نتائج','موعد','اليوم','غدا','اخبار','ترتيب','جدول','فريق','نادي','عن','في','من','على','هل','متى'].includes(w));
+ if(isTable){
+  const rows=ls.flatMap(x=>(x.l.standings||[]).map((r,i)=>({league:x.name,...r,rank:r.rank||i+1})));
+  if(!rows.length)return 'لا تتوفر بيانات ترتيب مؤكدة لهذه البطولة حالياً في ملف سلوم تيفي.';
+  return 'ترتيب '+ls.map(x=>x.name).join('، ')+' حسب آخر بيانات متاحة:\n'+rows.slice(0,20).map(r=>r.rank+'. '+r.name+' — '+(r.points||'—')+' نقطة | لعب '+(r.played||'—')+' | فوز '+(r.wins||'—')+' | تعادل '+(r.draws||'—')+' | خسارة '+(r.losses||'—')).join('\n')+'\n\nالمصدر: ESPN. راجع وقت التحديث في صفحة البطولة؛ قد لا تكون البيانات مباشرة.';
  }
- return lines.join('\n').slice(0,18000);
-}
-async function loadContext(){
- const r=await fetch('data.json?ai='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('تعذر تحميل بيانات الرياضة');return buildContext(await r.json());
+ if(isNews){
+  const news=ls.flatMap(x=>(x.l.news||[]).map(a=>({...a,league:x.name}))).filter(a=>!terms.length||terms.some(t=>norm(a.headline+' '+a.description).includes(t))).slice(0,8);
+  if(!news.length)return 'لا توجد أخبار مطابقة متاحة حالياً في بيانات سلوم تيفي.';
+  return 'آخر الأخبار المتاحة من المصادر المجمعة:\n'+news.map(a=>'• '+clean(a.headline)+' ('+a.league+')'+(a.published?' — '+fmtDate(a.published):'')+(a.link?'\n'+a.link:'')).join('\n\n');
+ }
+ if(isTeam){
+  const teams=ls.flatMap(x=>(x.l.teams||[]).map(t=>({...t,league:x.name}))).filter(t=>!terms.length||terms.some(w=>norm(t.name).includes(w)));
+  if(!teams.length)return 'لم أجد هذا النادي في دليل الأندية المتاح حالياً. جرّب كتابة اسمه كما يظهر في الدوري.';
+  return 'الأندية المطابقة في دليل سلوم تيفي:\n'+teams.slice(0,25).map(t=>'• '+t.name+' — '+t.league).join('\n');
+ }
+ if(isMatch||terms.length){
+  const found=matches.filter(m=>!terms.length||terms.some(t=>norm((m.home?.name||'')+' '+(m.away?.name||'')).includes(t))).slice(0,15);
+  if(!found.length)return 'لم أجد مباريات مطابقة في البيانات الحالية. قد لا تكون هناك مباريات ضمن نافذة ESPN الحالية، أو أن اسم الفريق/البطولة غير موجود. جرّب اسم النادي أو البطولة.';
+  return 'المباريات المتاحة في بيانات سلوم تيفي:\n'+found.map(m=>{const state=norm(m.status)==='in'?'مباشرة':norm(m.status)==='post'?'انتهت':'قادمة';return '• '+m.league+': '+(m.home?.name||'غير معروف')+' '+(m.home?.score??'—')+' - '+(m.away?.score??'—')+' '+(m.away?.name||'غير معروف')+'\n  '+state+' | '+clean(m.detail||'')+' | '+fmtDate(m.date)+(m.stale?' | بيانات قديمة':'')}).join('\n');
+ }
+ return 'أنا سلوم AI المجاني. أستطيع البحث داخل بيانات المباريات والنتائج والترتيب والأندية والأخبار التي يجمعها الموقع.\n\nجرّب مثلاً:\n• ترتيب الدوري الإنجليزي\n• مباريات ريال مدريد\n• نتائج دوري روشن السعودي\n• أخبار دوري أبطال أوروبا\n• الأندية في الدوري الإيطالي\n\nهذا الإصدار لا يعتمد على خدمة ذكاء اصطناعي مدفوعة؛ لذلك يعرض المعلومات الموجودة في مصدر البيانات فقط ولا يقدّم محادثة توليدية عامة.';
 }
 async function go(){
  const q=field.value.trim();if(!q||send.disabled)return;
- if(!apiKey){bubble('اربط الذكاء الاصطناعي أولاً من الزر أعلى الصفحة.','b');return}
- field.value='';bubble(q,'u');const answer=bubble('أتحقق من آخر البيانات ثم أجهز الإجابة…','b');send.disabled=true;
+ field.value='';bubble(q,'u');const answer=bubble('أبحث في بيانات المباريات والبطولات…','b');send.disabled=true;
  try{
-  const context=await loadContext();
-  const system='أنت سلوم AI، مساعد رياضي عربي. قواعد صارمة: استخدم بيانات سلوم تيفي المرفقة عند الإجابة عن النتائج والمواعيد والترتيب والأخبار والأندية. لا تخترع نتائج أو تواريخ أو تشكيلات أو إصابات أو إحصائيات. إذا لم توجد المعلومة، قل لا أملك بيانات مؤكدة عنها الآن. إذا كانت البيانات موسومة قديمة فلا تصفها بأنها مباشرة. فرّق بين الموعد والنتيجة، واذكر البطولة ووقت آخر تحديث عندما يكون متاحاً. قدّم التحليل كرأي مبني على البيانات ولا تعرضه كحقيقة. إذا سئلت عن معلومة غير موجودة في البيانات فاطلب التحقق من المصدر الرسمي. أجب بالعربية الواضحة.
-
-بيانات سلوم تيفي:
-'+context;
-  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),35000);
-  try{
-   const r=await fetch('https://gen.pollinations.ai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+apiKey},signal:controller.signal,body:JSON.stringify({model:'openai/gpt-5.4-nano',temperature:0.15,max_tokens:800,stream:false,messages:[{role:'system',content:system},{role:'user',content:q}]})});
-   if(r.status===401||r.status===403){sessionStorage.removeItem(KEY);apiKey='';status();throw Error('انتهى التفويض أو لا يملك صلاحية الاستخدام. أعد الربط.')}
-   if(!r.ok)throw Error('خدمة الذكاء الاصطناعي أعادت HTTP '+r.status);
-   const data=await r.json(),reply=data.choices?.[0]?.message?.content;
-   if(!reply)throw Error('لم تصل إجابة من الخدمة');answer.textContent=reply;
-  }finally{clearTimeout(timer)}
- }catch(e){answer.textContent=e.name==='AbortError'?'تأخر الرد. حاول مرة أخرى.':'تعذر الرد: '+e.message}
+  if(!sportsData){const r=await fetch('data.json?ai='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('تعذر تحميل بيانات الرياضة');sportsData=await r.json()}
+  answer.textContent=reply(q);
+ }catch(e){answer.textContent='تعذر تحميل بيانات سلوم تيفي حالياً. حاول بعد قليل.'}
  finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight}
 }
-connectBtn.addEventListener('click',connect);send.addEventListener('click',go);field.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
-handleCallback();status();
+send.addEventListener('click',go);field.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
 </script></body></html>
