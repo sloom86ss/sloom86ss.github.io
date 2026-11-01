@@ -204,6 +204,53 @@ def fetch_feed(item):
     result["errors"] = errors
     return key, result
 
+def send_ntfy(title, message, priority="default"):
+    topic = os.getenv("NTFY_TOPIC", "").strip()
+    if not topic:
+        return False
+    server = os.getenv("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
+    req = urllib.request.Request(
+        server + "/" + topic,
+        data=message.encode("utf-8"),
+        headers={"Title": title, "Priority": priority, "Tags": "soccer"},
+        method="POST"
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
+            return 200 <= response.status < 300
+    except Exception as exc:
+        print("ntfy notification failed:", str(exc)[:120])
+        return False
+
+def notify_match_changes(previous, current):
+    old_matches = {}
+    for league in (previous.get("leagues") or {}).values():
+        for match in league.get("matches", []):
+            if match.get("id"):
+                old_matches[str(match["id"])] = match
+    notices = []
+    for league_id, league in (current.get("leagues") or {}).items():
+        for match in league.get("matches", []):
+            event_id = str(match.get("id", ""))
+            old = old_matches.get(event_id)
+            if not old:
+                continue
+            home, away = match.get("home") or {}, match.get("away") or {}
+            old_home, old_away = old.get("home") or {}, old.get("away") or {}
+            teams = (home.get("name", "Home") + " - " + away.get("name", "Away"))
+            if str(home.get("score")) != str(old_home.get("score")) or str(away.get("score")) != str(old_away.get("score")):
+                notices.append(("⚽ هدف / تحديث النتيجة", f"{teams}\n{home.get('score', '0')} - {away.get('score', '0')}\n{league.get('name', league_id)}"))
+            elif old.get("status") != "in" and match.get("status") == "in":
+                notices.append(("🔴 بدأت المباراة", f"{teams}\n{league.get('name', league_id)}"))
+            elif not re.search(r"postpon|delay|suspend|abandon", str(old.get("status_detail", "")), re.I) and re.search(r"postpon|delay|suspend|abandon", str(match.get("status_detail", "")) + " " + str(match.get("detail", "")), re.I):
+                notices.append(("⚠️ مباراة مؤجلة أو متوقفة", f"{teams}\n{match.get('status_detail') or match.get('detail') or 'لم يعلن السبب'}"))
+            elif old.get("status") == "in" and match.get("status") == "post":
+                notices.append(("🏁 انتهت المباراة", f"{teams}\n{home.get('score', '0')} - {away.get('score', '0')}"))
+    for title, message in notices[:12]:
+        send_ntfy(title, message, "high")
+    if notices:
+        print(f"Sent {min(len(notices), 12)} match notifications (if NTFY_TOPIC is configured).")
+
 def main():
     path = os.path.join(os.path.dirname(__file__), "data.json")
     try:
@@ -235,7 +282,9 @@ def main():
             except Exception as exc:
                 print("Feed task failed:", str(exc)[:200])
     if success == 0:
+        send_ntfy("⚠️ تحديث بيانات SLOOM360 فشل", "لم ينجح تحديث أي مصدر لنتائج كرة القدم. يرجى فحص الموقع ومصادر البيانات.", "urgent")
         raise SystemExit("No scoreboard feed succeeded; keeping existing data.json unchanged.")
+    notify_match_changes(previous, output)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     print(f"Published {success}/{len(FEEDS)} current scoreboards; total matches={sum(len(x['matches']) for x in output['leagues'].values())}")
