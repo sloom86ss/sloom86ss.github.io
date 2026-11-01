@@ -208,7 +208,7 @@ def send_ntfy(title, message, priority="default"):
     topic = os.getenv("NTFY_TOPIC", "").strip()
     if not topic:
         return False
-    server = os.getenv("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
+    server = (os.getenv("NTFY_SERVER") or "https://ntfy.sh").rstrip("/")
     req = urllib.request.Request(
         server + "/" + topic,
         data=message.encode("utf-8"),
