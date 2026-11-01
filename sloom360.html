@@ -37,14 +37,14 @@ header{display:flex;justify-content:space-between;align-items:center;gap:12px;pa
 <div class="note" style="text-align:center">تُنسب الأخبار إلى ناشرها الأصلي وتفتح على موقع المصدر. آخر تحديث للبيانات: <span id="updated">جارٍ التحقق…</span></div>
 </main>
 <script>
-let data=null,active='all',activeDay='today',translatedNews=[];
+let data=null,active='all',activeDay='today',translatedNews=[],translatedTeams={},translationSignature='';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const cat=id=>id.startsWith('soccer/')?'football':id.startsWith('basketball/')?'basketball':'other';
 const clubNames={
 "Manchester City":"مانشستر سيتي","Manchester United":"مانشستر يونايتد","Liverpool":"ليفربول","Arsenal":"أرسنال","Chelsea":"تشيلسي","Tottenham Hotspur":"توتنهام","Newcastle United":"نيوكاسل يونايتد","Aston Villa":"أستون فيلا","Everton":"إيفرتون","West Ham United":"وست هام","Real Madrid":"ريال مدريد","Barcelona":"برشلونة","Atlético Madrid":"أتلتيكو مدريد","Atletico Madrid":"أتلتيكو مدريد","Real Betis":"ريال بيتيس","Real Sociedad":"ريال سوسيداد","Sevilla":"إشبيلية","Valencia":"فالنسيا","Villarreal":"فياريال","Athletic Club":"أتلتيك بلباو","Girona":"جيرونا","Bayern Munich":"بايرن ميونخ","Borussia Dortmund":"بوروسيا دورتموند","Bayer Leverkusen":"باير ليفركوزن","RB Leipzig":"لايبزيغ","Eintracht Frankfurt":"آينتراخت فرانكفورت","Inter Milan":"إنتر ميلان","Inter":"إنتر ميلان","AC Milan":"ميلان","Juventus":"يوفنتوس","Napoli":"نابولي","Roma":"روما","Lazio":"لاتسيو","Atalanta":"أتالانتا","Paris Saint-Germain":"باريس سان جيرمان","PSG":"باريس سان جيرمان","Marseille":"مارسيليا","Monaco":"موناكو","Al Hilal":"الهلال","Al Nassr":"النصر","Al-Ittihad":"الاتحاد","Al Ahli":"الأهلي","Al Ettifaq":"الاتفاق","Al Shabab":"الشباب","Al Qadsiah":"القادسية","Al Fateh":"الفتح","Porto":"بورتو","Benfica":"بنفيكا","Sporting CP":"سبورتينغ لشبونة","Ajax":"أياكس","PSV Eindhoven":"آيندهوفن","Feyenoord":"فينورد","Flamengo":"فلامنغو","Palmeiras":"بالميراس","Boca Juniors":"بوكا جونيورز","River Plate":"ريفر بليت","LA Lakers":"لوس أنجلوس ليكرز","Boston Celtics":"بوسطن سيلتكس","Golden State Warriors":"غولدن ستايت ووريورز","Chicago Bulls":"شيكاغو بولز","Miami Heat":"ميامي هيت"
 };
-const arTeam=n=>clubNames[n]||n||"الفريق";
+const arTeam=n=>clubNames[n]||translatedTeams[n]||n||"الفريق";
 const dateKey=(v)=>{if(!v)return "";const d=new Date(v);if(isNaN(d))return "";return new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Muscat',year:'numeric',month:'2-digit',day:'2-digit'}).format(d)};
 const omanToday=()=>dateKey(new Date().toISOString());
 const shiftKey=(key,delta)=>{const [y,m,d]=key.split('-').map(Number);return new Date(Date.UTC(y,m-1,d+delta)).toISOString().slice(0,10)};
@@ -63,7 +63,18 @@ function render(){
  $('updated').textContent=data.generated_at||'غير متوفر';
 }
 function context(){return {provider:data.provider,generated_at:data.generated_at,timezone:'Asia/Muscat',news_sources:(data.news_sources||[]).slice(0,18),leagues:Object.entries(data.leagues||{}).map(([id,l])=>({id,name:l.name,category:l.category,stale:!!l.stale,updated_at:l.updated_at,matches:(l.matches||[]).slice(0,20),standings:(l.standings||[]).slice(0,10),teams:(l.teams||[]).slice(0,30).map(t=>({name:arTeam(t.name),original_name:t.name,logo:t.logo})),news:(l.news||[]).slice(0,5)}))};}
-async function translateNews(){const items=newsItems().slice(0,18);if(!items.length)return;try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'translate',items:items.map(n=>({headline:n.headline,description:n.description||''}))})});const p=await r.json();if(r.ok&&Array.isArray(p.translations)){translatedNews=p.translations;render();}else{$('newsstamp').textContent='الترجمة تحتاج تفعيل مفتاح Gemini';}}catch(e){$('newsstamp').textContent='تعذرت ترجمة الأخبار حالياً';}}
+async function translateNews(){
+ const news=newsItems().slice(0,18);
+ const teams=[...new Set(Object.values(data.leagues||{}).flatMap(l=>[...(l.teams||[]).map(t=>t.name),...(l.matches||[]).flatMap(m=>[m.home?.name,m.away?.name]),...(l.standings||[]).map(t=>t.name)]).filter(Boolean).filter(n=>!clubNames[n]))];
+ const sig=JSON.stringify([news.map(n=>n.headline),teams]);if(sig===translationSignature)return;translationSignature=sig;
+ try{
+  const req=items=>fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:'translate',items})}).then(r=>r.json().then(p=>({ok:r.ok,p})));
+  const nr=await req(news.map(n=>({headline:n.headline,description:n.description||''})));
+  if(nr.ok&&Array.isArray(nr.p.translations))translatedNews=nr.p.translations;else throw Error(nr.p.error||'translation');
+  for(let i=0;i<teams.length;i+=100){const batch=teams.slice(i,i+100);const tr=await req(batch.map(name=>({headline:name,description:''})));if(tr.ok&&Array.isArray(tr.p.translations))batch.forEach((name,j)=>{translatedTeams[name]=tr.p.translations[j]?.headline||name;});}
+  $('newsstamp').textContent='الأخبار وأسماء الفرق بالعربية';render();
+ }catch(e){$('newsstamp').textContent='الترجمة الآلية تحتاج مفتاح Gemini';}
+}
 function updateClocks(){const now=new Date();[['time-ksa','time-ksa-copy','Asia/Riyadh'],['time-oman','time-oman-copy','Asia/Muscat'],['time-utc','time-utc-copy','UTC']].forEach(([id,copy,tz])=>{const value=new Intl.DateTimeFormat('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(now);if($(id))$(id).textContent=value;if($(copy))$(copy).textContent=value;});}
 updateClocks();setInterval(updateClocks,1000);
 $('daytabs').addEventListener('click',e=>{const b=e.target.closest('[data-day]');if(!b)return;activeDay=b.dataset.day;document.querySelectorAll('.daytab').forEach(x=>x.classList.toggle('active',x===b));if(data)render();});
