@@ -3,6 +3,8 @@
 import json, os, time, re, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone, timedelta
+from email.utils import parsedate_to_datetime
+from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 BASE = "https://site.api.espn.com/apis/site/v2/sports"
@@ -31,7 +33,20 @@ RSS_FEEDS = [
     ("The Guardian", "https://www.theguardian.com/football/rss"),
 ]
 
-def fetch_rss_news(previous=None):
+def parse_published(value):
+    if not value:
+        return None
+    try:
+        dt = datetime.fromisoformat(str(value).replace('Z', '+00:00'))
+    except Exception:
+        try:
+            dt = parsedate_to_datetime(str(value))
+        except Exception:
+            return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+def fetch_rss_news():
     """Collect attributed headlines from independent publisher RSS feeds."""
     items, errors = [], []
     for source, url in RSS_FEEDS:
@@ -60,23 +75,30 @@ def fetch_rss_news(previous=None):
                 description = val("description") or val("summary")
                 description = re.sub(r"<[^>]+>", " ", description)
                 description = re.sub(r"\s+", " ", description).strip()
-                if title and link:
+                published = val("pubDate") or val("published") or val("updated")
+                published_dt = parse_published(published)
+                age = (datetime.now(timezone.utc) - published_dt).total_seconds() if published_dt else None
+                allowed_hosts = {
+                    "BBC Sport": ("bbc.co.uk", "bbc.com"),
+                    "Sky Sports": ("skysports.com",),
+                    "ESPN FC": ("espn.com",),
+                    "The Guardian": ("theguardian.com",)
+                }
+                host = (urlparse(link).hostname or '').lower()
+                valid_link = any(host == domain or host.endswith('.' + domain) for domain in allowed_hosts[source])
+                if title and link.startswith('https://') and valid_link and published_dt and 0 <= age <= 7 * 86400:
                     items.append({
                         "headline": title,
                         "description": description[:500],
                         "link": link,
-                        "published": val("pubDate") or val("published") or val("updated"),
+                        "published": published_dt.isoformat(timespec="seconds").replace("+00:00", "Z"),
+                        "fetched_at": NOW(),
                         "source": source,
                         "category": "transfers" if re.search(r"transfer|signs|signing|deal|loan|gossip|انتقال|صفقة|ضم|تعاقد", title, re.I) else "news"
                     })
         except Exception as exc:
             errors.append(source + ": " + str(exc)[:120])
-    # Preserve the last known headlines from a source if its RSS endpoint is temporarily unavailable.
-    if previous:
-        fresh_sources = {x["source"] for x in items}
-        for old in previous:
-            if old.get("source") not in fresh_sources:
-                items.extend([x for x in previous if x.get("source") == old.get("source")][:18])
+    # Never reuse old RSS headlines when a publisher feed fails.
     unique = {}
     for item in items:
         unique[item["link"]] = item
@@ -188,6 +210,7 @@ def fetch_feed(item):
                 "image": images[0].get("url", "") if images else "",
                 "source": name,
                 "published": article.get("published", ""),
+                "fetched_at": NOW(),
                 "category": "transfers" if re.search(r"transfer|signs|signing|deal|loan|gossip|انتقال|صفقة|ضم|تعاقد", (article.get("headline") or "") + " " + (article.get("description") or ""), re.I) else "news"
             })
     except Exception as exc:
@@ -260,7 +283,8 @@ def main():
         previous = {}
     old_leagues = previous.get("leagues", previous if isinstance(previous, dict) else {})
     output = {"generated_at": NOW(), "timezone": "Asia/Muscat", "provider": "ESPN public API", "leagues": {}}
-    output["news_sources"], output["news_errors"] = fetch_rss_news(previous.get("news_sources", []))
+    output["news_sources"], output["news_errors"] = fetch_rss_news()
+    output["news_sources_updated_at"] = NOW()
     success = 0
     with ThreadPoolExecutor(max_workers=8) as pool:
         futures = [pool.submit(fetch_feed, item) for item in FEEDS.items()]
