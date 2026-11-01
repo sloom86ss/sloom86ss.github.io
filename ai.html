@@ -13,10 +13,10 @@ header{padding:12px 16px;background:#111915;border-bottom:1px solid #26352b;disp
 </style></head>
 <body>
 <header><b>🤖 سلوم AI</b><div class="top-actions"><a href="index.html">العودة إلى سلوم تيفي ←</a></div></header>
-<div class="notice">نسخة مجانية لا تحتاج اشتراكاً أو ربط حساب. تعرض المعلومات الموجودة في بيانات سلوم تيفي المحدثة من ESPN، ولا تخترع نتائج أو أخباراً.</div>
-<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا سلوم AI المجاني 🟢 اسألني عن المباريات والنتائج والترتيب والأندية والأخبار الموجودة في بيانات الموقع. لا أطلب اشتراكاً أو مفتاحاً.</div></div>
+<div class="notice">مساعد رياضي عربي مدعوم بـ Gemini المجاني المحدود، ويستند إلى بيانات المباريات والبطولات في سلوم تيفي. قد تتوقف الإجابات مؤقتاً عند بلوغ حد الاستخدام المجاني.</div>
+<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا سلوم AI 🟢 أستطيع فهم أسئلتك بالعربية وشرح بيانات المباريات والنتائج والترتيب والأخبار المتاحة. سأوضح لك عندما لا تتوفر المعلومة بدلاً من تخمينها.</div></div>
 <div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو بطولة…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
-<div class="hint">بيانات المباريات من ESPN عند توفرها. قد تتأخر بعض المسابقات أو لا تتوفر لها تغطية.</div>
+<div class="hint">الذكاء الاصطناعي: Gemini. البيانات الرياضية: ESPN عند توفرها. الحصة المجانية محدودة وقد تتغير.</div>
 <script>
 const chat=document.getElementById('chat'),field=document.getElementById('question'),send=document.getElementById('send');
 let sportsData=null;
@@ -56,14 +56,20 @@ function reply(q){
  }
  return 'أنا سلوم AI المجاني. أستطيع البحث داخل بيانات المباريات والنتائج والترتيب والأندية والأخبار التي يجمعها الموقع.\n\nجرّب مثلاً:\n• ترتيب الدوري الإنجليزي\n• مباريات ريال مدريد\n• نتائج دوري روشن السعودي\n• أخبار دوري أبطال أوروبا\n• الأندية في الدوري الإيطالي\n\nهذا الإصدار لا يعتمد على خدمة ذكاء اصطناعي مدفوعة؛ لذلك يعرض المعلومات الموجودة في مصدر البيانات فقط ولا يقدّم محادثة توليدية عامة.';
 }
+function makeContext(data){
+ const leagues=Object.entries(data?.leagues||{}).map(([id,l])=>({id,name:l.name,stale:!!l.stale,updated_at:l.updated_at||null,matches:(l.matches||[]).slice(0,18).map(m=>({date:m.date,status:m.status,detail:m.detail,home:{name:m.home?.name,score:m.home?.score},away:{name:m.away?.name,score:m.away?.score}})),standings:(l.standings||[]).slice(0,18),teams:(l.teams||[]).map(t=>t.name),news:(l.news||[]).slice(0,6).map(n=>({headline:n.headline,description:n.description,published:n.published,link:n.link}))}));
+ return {provider:data?.provider||"ESPN public API",generated_at:data?.generated_at||null,timezone:data?.timezone||"Asia/Muscat",leagues};
+}
 async function go(){
- const q=field.value.trim();if(!q||send.disabled)return;
- field.value='';bubble(q,'u');const answer=bubble('أبحث في بيانات المباريات والبطولات…','b');send.disabled=true;
+ const q=field.value.trim();if(!q||send.disabled)return;field.value='';bubble(q,'u');
+ const answer=bubble('أراجع بيانات الرياضة وأجهز الإجابة…','b');send.disabled=true;
  try{
-  if(!sportsData){const r=await fetch('data.json?ai='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('تعذر تحميل بيانات الرياضة');sportsData=await r.json()}
-  answer.textContent=reply(q);
- }catch(e){answer.textContent='تعذر تحميل بيانات سلوم تيفي حالياً. حاول بعد قليل.'}
- finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight}
+  if(!sportsData){const r=await fetch('data.json?ai='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('تعذر تحميل بيانات الرياضة');sportsData=await r.json();}
+  const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,context:makeContext(sportsData)})});
+  const p=await r.json().catch(()=>({}));if(!r.ok)throw Error(p.error||'تعذر الحصول على رد.');
+  answer.textContent=p.answer||'لم يصل رد واضح.';
+ }catch(e){answer.textContent=e.message||'تعذر الاتصال حالياً.';}
+ finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight;}
 }
 send.addEventListener('click',go);field.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
 </script></body></html>
