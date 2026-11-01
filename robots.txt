@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sloom86ss.github.io/sitemap.xml
