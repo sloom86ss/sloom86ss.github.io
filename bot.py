@@ -58,7 +58,7 @@ def team_rows(payload):
                         "id": str(team.get("id", "")),
                         "name": team.get("displayName", ""),
                         "short_name": team.get("shortDisplayName", ""),
-                        "logo": team.get("logo", ""),
+                        "logo": team.get("logo") or ((team.get("logos") or [{}])[0].get("href", "")),
                         "abbreviation": team.get("abbreviation", "")
                     })
     return rows
