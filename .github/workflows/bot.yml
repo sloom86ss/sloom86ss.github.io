@@ -31,7 +31,18 @@ jobs:
         with:
           python-version: '3.11'
       - name: Validate collector
-        run: python -m py_compile bot.py
+        run: python -m py_compile bot.py monitor.py
+      - name: Validate SLOOM360 JavaScript
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          source = Path("sloom360.html").read_text(encoding="utf-8")
+          script = source.split("<script>", 1)[1].split("</script>", 1)[0]
+          Path("/tmp/sloom360.js").write_text(script, encoding="utf-8")
+          PY
+          node --check /tmp/sloom360.js
+          node --check --input-type=module < api/chat.js
+          node --check --input-type=module < api/match.js
       - name: Run sports data collector
         run: python -u bot.py
       - name: Commit and push updated data
