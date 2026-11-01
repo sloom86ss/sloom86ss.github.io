@@ -62,7 +62,7 @@ def fetch_rss_news(previous=None):
                         link = link_node.attrib.get("href", "")
                 description = val("description") or val("summary")
                 description = re.sub(r"<[^>]+>", " ", description)
-                description = re.sub(r"\\s+", " ", description).strip()
+                description = re.sub(r"\s+", " ", description).strip()
                 if title and link:
                     items.append({
                         "headline": title,
