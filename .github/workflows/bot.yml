@@ -44,6 +44,9 @@ jobs:
           node --check --input-type=module < api/chat.js
           node --check --input-type=module < api/match.js
       - name: Run sports data collector
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ vars.NTFY_SERVER }}
         run: python -u bot.py
       - name: Commit and push updated data
         run: |
