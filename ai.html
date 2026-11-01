@@ -13,7 +13,7 @@ header{padding:12px 16px;background:#111915;border-bottom:1px solid #26352b;disp
 </style></head>
 <body>
 <header><b>🤖 مساعد SLOOM360</b><div class="top-actions"><a href="index.html">العودة إلى SLOOM360 ←</a></div></header>
-<div class="notice">مساعد رياضي عربي مدعوم بـ Gemini المجاني المحدود، ويستند إلى بيانات المباريات والبطولات في SLOOM360. قد تتوقف الإجابات مؤقتاً عند بلوغ حد الاستخدام المجاني.</div>
+<div class="notice">مساعد كرة قدم عربي يجيب من بيانات SLOOM360 المنشورة فقط. لا يخمّن النتائج أو التشكيلات، ويخبرك عندما تكون البيانات قديمة أو غير متاحة.</div>
 <div class="chat" id="chat"><div class="m b">أهلاً بك! أنا مساعد SLOOM360 🟢 أستطيع فهم أسئلتك بالعربية وشرح بيانات المباريات والنتائج والترتيب والأخبار المتاحة. سأوضح لك عندما لا تتوفر المعلومة بدلاً من تخمينها.</div></div>
 <div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو بطولة…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
 <div class="hint">الذكاء الاصطناعي: Gemini. البيانات الرياضية: ESPN عند توفرها. الحصة المجانية محدودة وقد تتغير.</div>
@@ -23,11 +23,14 @@ let sportsData=null;
 const clean=v=>String(v??'').replace(/<[^>]*>/g,'').trim();
 function bubble(text,kind){const el=document.createElement('div');el.className='m '+kind;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;return el}
 function norm(s){return clean(s).toLowerCase().replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي')}
-function leagueEntries(){return Object.entries(sportsData?.leagues||{}).map(([id,l])=>({id,l,name:l.name||id}))}
+function fresh(value, hours=1.5){const t=Date.parse(value||'');return Number.isFinite(t)&&Date.now()-t>=0&&Date.now()-t<=hours*3600000}
+function dataIsFresh(){return fresh(sportsData?.generated_at)}
+function leagueEntries(){return Object.entries(sportsData?.leagues||{}).filter(([id,l])=>!l.stale&&fresh(l.updated_at)).map(([id,l])=>({id,l,name:l.name||id}))}
 function chooseLeagues(q){const n=norm(q);const matches=leagueEntries().filter(x=>n.includes(norm(x.name))||((n.includes('انجليزي')||n.includes('انجلترا'))&&x.id==='soccer/eng.1')||((n.includes('اسباني')||n.includes('اسبانيا'))&&x.id==='soccer/esp.1')||((n.includes('ايطالي')||n.includes('ايطاليا'))&&x.id==='soccer/ita.1')||((n.includes('الماني')||n.includes('المانيا'))&&x.id==='soccer/ger.1')||((n.includes('فرنسي')||n.includes('فرنسا'))&&x.id==='soccer/fra.1')||(n.includes('سعودي')&&x.id==='soccer/ksa.1')||(n.includes('ابطال اوروبا')&&x.id==='soccer/uefa.champions')||(n.includes('الدوري الاوروبي')&&x.id==='soccer/uefa.europa')||(n.includes('كاس العالم')&&x.id==='soccer/fifa.world'));return matches.length?matches:leagueEntries()}
 function fmtDate(v){if(!v)return 'موعد غير متوفر';const d=new Date(v);if(Number.isNaN(d.getTime()))return clean(v);return new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',dateStyle:'medium',timeStyle:'short'}).format(d)+' بتوقيت عُمان'}
-function allMatches(ls){return ls.flatMap(x=>(x.l.matches||[]).map(m=>({...m,league:x.name,stale:x.l.stale})))}
+function allMatches(ls){return ls.flatMap(x=>(x.l.matches||[]).map(m=>({...m,league:x.name,stale:x.l.stale})).filter(m=>!m.stale&&m.date&&fresh(sportsData.generated_at,1.5)))}
 function reply(q){
+ if(!dataIsFresh())return 'لا أستطيع تأكيد المعلومات الآن؛ آخر تحديث للبيانات تجاوز 90 دقيقة. لن أعرض نتائج أو أخباراً قديمة على أنها حديثة. حاول لاحقاً بعد تحديث المصدر.';
  const n=norm(q),ls=chooseLeagues(q),matches=allMatches(ls);
  const isTable=/ترتيب|الترتيب|جدول|متصدر|المركز|النقاط/.test(n);
  const isNews=/اخبار|خبر|اخر الاخبار|الجديد/.test(n);
@@ -40,7 +43,7 @@ function reply(q){
   return 'ترتيب '+ls.map(x=>x.name).join('، ')+' حسب آخر بيانات متاحة:\n'+rows.slice(0,20).map(r=>r.rank+'. '+r.name+' — '+(r.points||'—')+' نقطة | لعب '+(r.played||'—')+' | فوز '+(r.wins||'—')+' | تعادل '+(r.draws||'—')+' | خسارة '+(r.losses||'—')).join('\n')+'\n\nالمصدر: ESPN. راجع وقت التحديث في صفحة البطولة؛ قد لا تكون البيانات مباشرة.';
  }
  if(isNews){
-  const news=ls.flatMap(x=>(x.l.news||[]).map(a=>({...a,league:x.name}))).filter(a=>!terms.length||terms.some(t=>norm(a.headline+' '+a.description).includes(t))).slice(0,8);
+  const all=[...(sportsData.news_sources||[]),...ls.flatMap(x=>(x.l.news||[]).map(a=>({...a,league:x.name})))];const seen=new Map();all.filter(a=>a.link&&a.link.startsWith('https://')&&fresh(a.published,168)).forEach(a=>seen.set(a.link,a));const news=[...seen.values()].filter(a=>!terms.length||terms.some(t=>norm(a.headline+' '+a.description).includes(t))).sort((a,b)=>Date.parse(b.published)-Date.parse(a.published)).slice(0,8);
   if(!news.length)return 'لا توجد أخبار مطابقة متاحة حالياً في بيانات SLOOM360.';
   return 'آخر الأخبار المتاحة من المصادر المجمعة:\n'+news.map(a=>'• '+clean(a.headline)+' ('+a.league+')'+(a.published?' — '+fmtDate(a.published):'')+(a.link?'\n'+a.link:'')).join('\n\n');
  }
@@ -65,9 +68,7 @@ async function go(){
  const answer=bubble('أراجع بيانات الرياضة وأجهز الإجابة…','b');send.disabled=true;
  try{
   if(!sportsData){const r=await fetch('data.json?ai='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('تعذر تحميل بيانات الرياضة');sportsData=await r.json();}
-  const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,context:makeContext(sportsData)})});
-  const p=await r.json().catch(()=>({}));if(!r.ok)throw Error(p.error||'تعذر الحصول على رد.');
-  answer.textContent=p.answer||'لم يصل رد واضح.';
+  answer.textContent=reply(q);
  }catch(e){answer.textContent=e.message||'تعذر الاتصال حالياً.';}
  finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight;}
 }
