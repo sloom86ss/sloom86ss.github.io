@@ -21,18 +21,13 @@ FEEDS = {
     "soccer/uefa.champions": ("دوري أبطال أوروبا", "football"),
     "soccer/uefa.europa": ("الدوري الأوروبي", "football"),
     "soccer/fifa.world": ("كأس العالم", "football"),
-    "basketball/nba": ("دوري NBA لكرة السلة", "basketball"),
-    "basketball/wnba": ("دوري WNBA", "basketball"),
-    "football/nfl": ("دوري NFL", "americanfootball"),
-    "hockey/nhl": ("دوري NHL للهوكي", "hockey"),
-    "baseball/mlb": ("دوري MLB للبيسبول", "baseball"),
-    "mma/ufc": ("UFC والفنون القتالية", "other"),
 }
 NOW = lambda: datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
 RSS_FEEDS = [
-    ("BBC Sport", "https://feeds.bbci.co.uk/sport/rss.xml"),
+    ("BBC Sport", "https://feeds.bbci.co.uk/sport/football/rss.xml"),
     ("Sky Sports", "https://www.skysports.com/rss/0,20514,11095,00.xml"),
+    ("The Guardian", "https://www.theguardian.com/football/rss"),
 ]
 
 def fetch_rss_news(previous=None):
@@ -70,7 +65,8 @@ def fetch_rss_news(previous=None):
                         "description": description[:500],
                         "link": link,
                         "published": val("pubDate") or val("published") or val("updated"),
-                        "source": source
+                        "source": source,
+                        "category": "transfers" if re.search(r"transfer|signs|signing|deal|loan|gossip|انتقال|صفقة|ضم|تعاقد", title, re.I) else "news"
                     })
         except Exception as exc:
             errors.append(source + ": " + str(exc)[:120])
@@ -171,7 +167,7 @@ def fetch_feed(item):
                 "status": status.get("state", "pre"),
                 "detail": status.get("shortDetail") or status.get("detail", ""),
                 "venue": (comp.get("venue") or {}).get("fullName", ""),
-                "broadcast": ", ".join(x.get("names", [""])[0] for x in comp.get("broadcasts", []) if x.get("names"))
+                "broadcast": ", ".join(x.get("names", [""])[0] for x in comp.get("broadcasts", []) if x.get("names")),\n                "status_detail": status.get("detail", ""),\n                "status_short": status.get("shortDetail", ""),\n                "period": (comp.get("status") or {}).get("period"),\n                "clock": (comp.get("status") or {}).get("displayClock", "")
             })
         result["updated_at"] = NOW()
     except Exception as exc:
