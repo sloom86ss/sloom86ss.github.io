@@ -1,21 +1,66 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080c0a"><title>سلوم AI | SLOOM TV</title>
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080c0a">
+<title>سلوم AI | SLOOM TV</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#080c0a;color:#f4f8f4;font-family:Cairo,Arial,sans-serif;height:100dvh;display:flex;flex-direction:column}
 header{padding:14px 18px;background:#111915;border-bottom:1px solid #26352b;display:flex;justify-content:space-between;align-items:center}header b{color:#b7f34a}header a{color:#aab8ad;text-decoration:none;font-size:12px}
-.chat{flex:1;overflow:auto;padding:18px;max-width:760px;margin:auto;width:100%}.m{padding:12px 16px;border-radius:17px;margin:0 0 12px;max-width:88%;line-height:1.8;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.u{background:#b7f34a;color:#10170b;margin-right:auto}.b{background:#151f18;border:1px solid #293b2d;margin-left:auto}
-.input{display:flex;gap:9px;padding:12px;background:#111915;border-top:1px solid #26352b;max-width:760px;margin:auto;width:100%}.input input{min-width:0;flex:1;background:#202b23;border:1px solid #344638;border-radius:25px;padding:12px 17px;color:white;font:14px Cairo;outline:none}.input button{background:#b7f34a;border:0;border-radius:50%;width:47px;height:47px;font-size:18px;font-weight:900;cursor:pointer}.input button:disabled{opacity:.5}.hint{text-align:center;color:#829187;font-size:10px;padding:0 10px 8px;background:#111915}
+.chat{flex:1;overflow:auto;padding:18px;max-width:780px;margin:auto;width:100%}.m{padding:12px 16px;border-radius:17px;margin:0 0 12px;max-width:92%;line-height:1.9;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.u{background:#b7f34a;color:#10170b;margin-right:auto}.b{background:#151f18;border:1px solid #293b2d;margin-left:auto}.b small{color:#a8bbab}
+.input{display:flex;gap:9px;padding:12px;background:#111915;border-top:1px solid #26352b;max-width:780px;margin:auto;width:100%}.input input{min-width:0;flex:1;background:#202b23;border:1px solid #344638;border-radius:25px;padding:12px 17px;color:white;font:14px Cairo;outline:none}.input button{background:#b7f34a;border:0;border-radius:50%;width:47px;height:47px;font-size:18px;font-weight:900;cursor:pointer}.input button:disabled{opacity:.5}.hint{text-align:center;color:#829187;font-size:10px;padding:0 12px 9px;background:#111915}
 </style></head>
-<body><header><b>🤖 سلوم AI</b><a href="index.html">العودة إلى سلوم تيفي ←</a></header>
-<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا سلوم AI 🟢 اسألني عن كرة القدم أو السلة أو أي رياضة، أو عن نتائج ومواعيد البطولات.</div></div>
-<div class="input"><input id="question" maxlength="1000" placeholder="اكتب سؤالك الرياضي هنا…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div><div class="hint">قد تحتاج الإجابات عن النتائج الحية إلى التحقق من مصدر رسمي.</div>
+<body>
+<header><b>🤖 سلوم AI</b><a href="index.html">العودة إلى سلوم تيفي ←</a></header>
+<div class="chat" id="chat"><div class="m b">أهلاً بك! أنا سلوم AI 🟢 أستطيع مساعدتك في فهم الرياضة وقراءة بيانات المباريات والأخبار المتاحة في الموقع. إذا لم تكن النتيجة موجودة في بياناتنا فسأخبرك بذلك ولن أخمّنها.</div></div>
+<div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو قاعدة رياضية…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
+<div class="hint">النتائج والأخبار تعتمد على آخر تحديث وصل إلى الموقع. تحقّق من المصدر الرسمي للمعلومات العاجلة.</div>
 <script>
 const chat=document.getElementById('chat'),field=document.getElementById('question'),send=document.getElementById('send');
 function bubble(text,kind){const el=document.createElement('div');el.className='m '+kind;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;return el}
-async function go(){const q=field.value.trim();if(!q||send.disabled)return;field.value='';bubble(q,'u');const answer=bubble('لحظة، أجهز الإجابة…','b');send.disabled=true;
-try{const r=await fetch('https://text.pollinations.ai/openai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'openai',stream:false,messages:[{role:'system',content:'أنت سلوم AI، مساعد رياضي عربي لمنصة سلوم تيفي. أجب بالعربية الواضحة عن جميع الرياضات: كرة القدم والسلة والتنس والسباحة والفورمولا 1 وغيرها. لا تختلق نتائج أو مواعيد أو إصابات أو أخباراً. إذا لم تكن متأكداً من معلومة حديثة أو نتيجة مباشرة فصرّح بذلك واطلب التحقق من مصدر رسمي. اشرح بإيجاز وبأسلوب ودود.'},{role:'user',content:q}]})});if(!r.ok)throw Error('الخدمة غير متاحة الآن');const data=await r.json();answer.textContent=data.choices?.[0]?.message?.content||'لم تصل إجابة. حاول مرة أخرى.'}
-catch(e){answer.textContent='تعذر الاتصال بخدمة الذكاء الاصطناعي الآن. حاول مرة أخرى لاحقاً.'}finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight}}
+const clean=v=>String(v??'').replace(/<[^>]*>/g,'').slice(0,220);
+function buildContext(raw){
+ const leagues=raw?.leagues||raw||{}, lines=[];
+ const generated=raw?.generated_at||raw?.updated_at||'غير متوفر';
+ lines.push('وقت إنشاء ملف البيانات: '+generated);
+ for(const [key,l] of Object.entries(leagues)){
+  if(!l||typeof l!=='object')continue;
+  const name=clean(l.name||key), updated=clean(l.updated_at||generated);
+  lines.push('\nالبطولة: '+name+' | آخر تحديث: '+updated);
+  const games=l.matches||l.events||[];
+  for(const g of games.slice(0,12)){
+   let home=g.home,away=g.away,status=g.status||{};
+   if(!home&&!away){const c=(g.competitions||[])[0]||{};const teams=c.competitors||[];home=teams.find(x=>x.homeAway==='home')||{};away=teams.find(x=>x.homeAway==='away')||{};status=c.status?.type||{};}
+   const hn=home?.name||home?.team?.displayName||home?.team?.shortDisplayName||'غير معروف';
+   const an=away?.name||away?.team?.displayName||away?.team?.shortDisplayName||'غير معروف';
+   const hs=home?.score??'—',as=away?.score??'—';
+   const state=status.state||'غير محدد',detail=status.detail||status.shortDetail||g.detail||'';
+   lines.push('- '+clean(hn)+' '+hs+' - '+as+' '+clean(an)+' | الحالة: '+clean(state)+' '+clean(detail)+' | الموعد: '+clean(g.time||g.date||'غير متوفر'));
+  }
+  for(const n of (l.news||[]).slice(0,5))lines.push('خبر: '+clean(n.headline||n.title)+' | المصدر: '+clean(n.source||'غير محدد')+' | الرابط: '+clean(n.link||'غير متوفر'));
+ }
+ return lines.join('\n').slice(0,14000);
+}
+async function loadContext(){
+ try{const r=await fetch('data.json?ai='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);return buildContext(await r.json())}
+ catch(e){return 'تعذر تحميل بيانات الموقع حالياً. لا توجد بيانات مؤكدة للمباريات أو الأخبار في هذه المحادثة.'}
+}
+async function go(){
+ const q=field.value.trim();if(!q||send.disabled)return;
+ field.value='';bubble(q,'u');const answer=bubble('أتحقق من بيانات الموقع ثم أجهز الإجابة…','b');send.disabled=true;
+ try{
+  const context=await loadContext();
+  const system='أنت سلوم AI، مساعد رياضي عربي. قواعد إلزامية: 1) استخدم بيانات الموقع المرفقة فقط عند الإجابة عن النتائج المباشرة والمواعيد الحالية والأخبار والإصابات والتشكيلات والترتيب. 2) لا تخترع نتيجة أو موعداً أو اسماً أو إحصائية. إذا لم توجد المعلومة في البيانات أو كان وقت تحديثها غير واضح، قل بوضوح: لا أملك بيانات مؤكدة عنها الآن، ووجّه المستخدم للتحقق من المصدر الرسمي. 3) لا تعتبر مباراة منتهية أو مباشرة إلا إذا كانت حالة البيانات تؤكد ذلك. 4) يمكنك شرح قوانين الرياضات والمفاهيم العامة، لكن لا تدّع أن معلومة عامة هي تحديث حي. 5) أجب بالعربية الواضحة، واذكر اسم البطولة ووقت التحديث عند الاستناد إلى بيانات الموقع. 6) إذا كانت البيانات قديمة فلا تصفها بأنها مباشرة الآن.\n\nبيانات سلوم تيفي الحالية:\n'+context;
+  const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),30000);
+  try{
+   const r=await fetch('https://text.pollinations.ai/openai',{method:'POST',headers:{'Content-Type':'application/json'},signal:controller.signal,body:JSON.stringify({model:'openai',temperature:0.15,max_tokens:650,stream:false,messages:[{role:'system',content:system},{role:'user',content:q}]})});
+   if(!r.ok)throw Error('الخدمة أعادت حالة '+r.status);
+   const data=await r.json();const text=data.choices?.[0]?.message?.content;
+   if(!text)throw Error('لم تصل إجابة مفهومة من الخدمة');
+   answer.textContent=text;
+  }finally{clearTimeout(timer)}
+ }catch(e){answer.textContent=e.name==='AbortError'?'تأخر الرد أكثر من اللازم. حاول مرة أخرى.':'تعذر الحصول على إجابة موثوقة الآن. قد تكون خدمة الذكاء الاصطناعي غير متاحة؛ حاول لاحقاً.'}
+ finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight}
+}
 send.addEventListener('click',go);field.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
 </script></body></html>
