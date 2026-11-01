@@ -35,6 +35,9 @@ TRUSTED_RSS = [
     ("BBC Sport", "https://feeds.bbci.co.uk/sport/football/rss.xml"),
     ("The Guardian", "https://www.theguardian.com/football/rss"),
     ("Sky Sports", "https://www.skysports.com/rss/12040"),
+    ("Google News", "https://news.google.com/rss/search?q=%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=OM&ceid=OM:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84%D8%A7%D8%AA%20%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=SA&ceid=SA:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%20%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=SA&ceid=SA:ar"),
 ]
 HEADERS = {"User-Agent": "SLOOM360-Football-Data/1.0 (+https://sloom86ss.github.io/)"}
 
