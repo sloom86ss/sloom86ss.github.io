@@ -1,332 +1,56 @@
-
-<!-- SLOOM TV SPORTS BOT -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سلوم تيفي</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
 <style>
-#stbot-btn{
- position:fixed;bottom:20px;left:18px;z-index:99999;
- background:#00e58a;color:#07130e;border:0;
- border-radius:40px;padding:14px 20px;
- font-weight:900;font-size:15px;cursor:pointer;
- box-shadow:0 5px 25px #00e58a55
-}
-#stbot{
- display:none;position:fixed;bottom:82px;left:12px;
- width:min(390px,calc(100vw - 24px));
- height:min(570px,78vh);z-index:99999;
- background:#101613;color:#fff;border:1px solid #00e58a;
- border-radius:20px;overflow:hidden;
- box-shadow:0 12px 40px #000b;
- direction:rtl
-}
-#sthead{
- background:#17231c;padding:14px;
- display:flex;align-items:center;justify-content:space-between;
- border-bottom:1px solid #294333
-}
-#stbrand{display:flex;align-items:center;gap:10px}
-#stlogo{
- width:42px;height:42px;border-radius:13px;
- background:#00e58a;color:#07130e;
- display:grid;place-items:center;font-size:22px
-}
-#sttitle{font-weight:900;font-size:16px}
-#stsub{font-size:10px;color:#00e58a;margin-top:3px}
-#stlang,#stclose{
- background:#27352d;color:white;border:0;
- padding:7px 9px;border-radius:8px
-}
-#stmessages{
- height:calc(100% - 145px);overflow-y:auto;
- padding:12px;background:#101613
-}
-.stmsg{
- background:#202d25;padding:11px 13px;
- border-radius:13px;margin:9px 0;
- font-size:13px;line-height:1.8;
- overflow-wrap:anywhere
-}
-.stuser{background:#075e42}
-.stcard{border:1px solid #365542;background:#19241d}
-.stcard b{color:#00e58a}
-.stmuted{color:#a5b5aa;font-size:11px}
-.stlive{color:#ff4c66;font-weight:900}
-#stquick{
- display:flex;gap:6px;overflow-x:auto;
- padding:7px 10px;background:#17231c
-}
-#stquick button{
- white-space:nowrap;background:#26382c;
- color:#00e58a;border:1px solid #385542;
- padding:7px 10px;border-radius:20px;font-size:11px
-}
-#stform{
- display:flex;gap:7px;padding:10px;
- background:#17231c;border-top:1px solid #294333
-}
-#stinput{
- flex:1;min-width:0;background:#26352c;
- color:white;border:1px solid #385542;
- border-radius:10px;padding:12px;outline:none
-}
-#stsend{
- background:#00e58a;color:#07130e;border:0;
- border-radius:10px;padding:0 17px;font-weight:900
-}
-#stfoot{text-align:center;color:#8a9a90;font-size:9px;padding:4px}
-#stfoot a{color:#00e58a}
+*{box-sizing:border-box;font-family:'Tajawal',sans-serif;margin:0}body{background:#0a0a0a;color:#fff;overflow-x:hidden}
+.headerApp{background:#0a0a0a;padding:14px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:30;border-bottom:1px solid #1a1a1a}
+.logoApp{background:#c6ff00;color:#000;padding:8px 20px;border-radius:20px;font-weight:900;font-size:18px}
+.liveTop{background:#c6ff00;color:#000;padding:6px 12px;border-radius:20px;font-weight:900;font-size:11px}
+.appWrap{max-width:420px;margin:0 auto;padding:10px}
+.cardDark{background:#1a1a1a;border-radius:24px;padding:14px;margin-bottom:12px;border:1px solid #2a2a2a}
+.cardLime{background:#c6ff00;border-radius:20px;padding:14px;margin-bottom:12px;color:#000}
+.dateBar{display:flex;gap:6px;overflow-x:auto;padding:6px 0;margin-bottom:10px}.dateItem{padding:8px 12px;background:#242424;border-radius:16px;text-align:center;min-width:42px;font-size:11px;color:#aaa;border:1px solid #333}.dateItem.active{background:#c6ff00;color:#000}
+.liveCard{background:#1a1a1a;border-radius:20px;padding:12px;margin-bottom:10px;border:1px solid #2a2a2a}
+.liveScore{font-size:20px;font-weight:900}
+.probBar{height:5px;background:#333;border-radius:5px;display:flex;margin-top:8px;overflow:hidden}.probBar div{height:100%}
+.sloomBar{text-align:center;padding:8px;background:#111;color:#c6ff00;font-size:10px;font-weight:700;border-radius:12px;margin-top:8px}
 </style>
-
-<button id="stbot-btn" onclick="ST.toggle()">🤖 سلوم تيفي</button>
-
-<div id="stbot">
- <div id="sthead">
-  <div id="stbrand">
-   <div id="stlogo">⚽</div>
-   <div>
-    <div id="sttitle">سلوم تيفي</div>
-    <div id="stsub">مساعدك الرياضي</div>
-   </div>
-  </div>
-  <div style="display:flex;gap:6px">
-   <select id="stlang" onchange="ST.language()">
-    <option value="ar">العربية</option>
-    <option value="en">English</option>
-   </select>
-   <button id="stclose" onclick="ST.toggle()">✕</button>
-  </div>
- </div>
-
- <div id="stquick">
-  <button onclick="ST.quick('مباريات اليوم')">مباريات اليوم</button>
-  <button onclick="ST.quick('المباريات المباشرة')">مباشر 🔴</button>
-  <button onclick="ST.quick('الدوري الإنجليزي')">الدوري الإنجليزي</button>
-  <button onclick="ST.quick('الدوري السعودي')">الدوري السعودي</button>
- </div>
-
- <div id="stmessages" aria-live="polite">
-  <div class="stmsg">
-   أهلاً بك في سلوم تيفي! ⚽<br>
-   اسألني عن مباريات اليوم أو ابحث عن فريق.
-  </div>
- </div>
-
- <form id="stform" onsubmit="ST.ask(event)">
-  <input id="stinput" placeholder="اكتب سؤالك هنا..." autocomplete="off">
-  <button id="stsend">إرسال</button>
- </form>
- <div id="stfoot">
-  Football data by ESPN ·
-  <a href="https://www.espn.com/soccer/" target="_blank" rel="noopener">المصدر</a>
- </div>
+</head>
+<body>
+<div class="headerApp"><div class="logoApp">سلوم تيفي</div><div class="liveTop">● LIVE</div></div>
+<div class="appWrap">
+<div class="cardDark">
+<div style="display:flex;justify-content:space-between;margin-bottom:12px"><b>مباريات اليوم</b><span style="color:#aaa;font-size:12px" id="count">جاري...</span></div>
+<div class="dateBar" id="dateBar"></div>
+<div id="list">جاري تحميل المباريات...</div>
+<div class="sloomBar">ملخصات باسم سلوم تي في - sloomtv</div>
+</div>
 </div>
 
 <script>
-const ST=(()=>{
- const $=id=>document.getElementById(id);
- const box=$("stbot"),messages=$("stmessages");
- const input=$("stinput"),lang=$("stlang");
+let dates=['12 Sun','13 Mon','14 Tue','15 Wed','16 Thu','17 Fri','18 Sat'];document.getElementById('dateBar').innerHTML=dates.map((d,i)=>`<div class="dateItem ${i===3?'active':''}"><div>${d.split(' ')[1]}</div><div style="font-weight:900">${d.split(' ')[0]}</div></div>`).join('');
 
- const leagues=[
-  ["eng.1","الدوري الإنجليزي","English Premier League"],
-  ["sau.1","الدوري السعودي","Saudi Pro League"],
-  ["esp.1","الدوري الإسباني","Spanish La Liga"],
-  ["ita.1","الدوري الإيطالي","Italian Serie A"],
-  ["ger.1","الدوري الألماني","German Bundesliga"],
-  ["fra.1","الدوري الفرنسي","French Ligue 1"],
-  ["uefa.champions","دوري أبطال أوروبا","UEFA Champions League"]
- ];
-
- let cache=[],busy=false;
-
- const text={
-  ar:{
-   welcome:"أهلاً بك في سلوم تيفي! ⚽ اسأل عن مباريات اليوم أو ابحث عن فريق.",
-   placeholder:"اكتب سؤالك هنا...",
-   send:"إرسال",loading:"جاري البحث عن المباريات...",
-   no:"لم أجد مباريات مطابقة في البيانات المتاحة.",
-   error:"تعذر جلب البيانات حالياً. حاول مرة أخرى.",
-   today:"مباريات اليوم",
-   live:"المباريات المباشرة",
-   upcoming:"لم تبدأ",finished:"انتهت",playing:"مباشرة",
-   found:"نتائج البحث",help:"يمكنك سؤالي عن مباريات اليوم أو المباريات المباشرة أو البحث باسم فريق.",
-   empty:"لا توجد مباريات مسجلة في المصدر حالياً.",
-   source:"المصدر: ESPN"
-  },
-  en:{
-   welcome:"Welcome to SLOOM TV! ⚽ Ask about today's matches or search for a team.",
-   placeholder:"Type your question...",
-   send:"Send",loading:"Searching matches...",
-   no:"No matching matches found in the available data.",
-   error:"Could not load data. Please try again.",
-   today:"Today's matches",
-   live:"Live matches",
-   upcoming:"Upcoming",finished:"Finished",playing:"LIVE",
-   found:"Search results",help:"Ask about today's matches, live matches, or search for a team.",
-   empty:"No matches are currently listed by the source.",
-   source:"Source: ESPN"
-  }
- };
-
- const t=k=>text[lang.value][k];
-
- function message(value,cls=""){
-  const div=document.createElement("div");
-  div.className="stmsg "+cls;
-  div.textContent=value;
-  messages.appendChild(div);
-  messages.scrollTop=messages.scrollHeight;
-  return div;
- }
-
- function card(m){
-  const div=document.createElement("div");
-  div.className="stmsg stcard";
-
-  const title=document.createElement("b");
-  title.textContent=m.home+"  "+m.hs+" - "+m.as+"  "+m.away;
-
-  const detail=document.createElement("div");
-  detail.className="stmuted";
-  detail.textContent=m.league+" · "+m.status;
-
-  div.append(title,detail);
-  messages.appendChild(div);
- }
-
- function dateToday(){
-  const parts=new Intl.DateTimeFormat("en-CA",{
-   timeZone:"Asia/Muscat",year:"numeric",
-   month:"2-digit",day:"2-digit"
-  }).formatToParts(new Date());
-  const p={};
-  parts.forEach(x=>p[x.type]=x.value);
-  return p.year+p.month+p.day;
- }
-
- async function load(){
-  const date=dateToday();
-  const responses=await Promise.allSettled(
-   leagues.map(async l=>{
-    const url="https://site.api.espn.com/apis/site/v2/sports/soccer/"
-      +l[0]+"/scoreboard?dates="+date;
-    const r=await fetch(url);
-    if(!r.ok)throw Error("Network");
-    const data=await r.json();
-
-    return (data.events||[]).map(e=>{
-     const c=e.competitions?.[0];
-     const home=c?.competitors?.find(x=>x.homeAway==="home");
-     const away=c?.competitors?.find(x=>x.homeAway==="away");
-     if(!home||!away)return null;
-
-     const state=c.status?.type?.state||"pre";
-     const name=lang.value==="ar"?l[1]:l[2];
-
-     return {
-      home:home.team?.displayName||"Home",
-      away:away.team?.displayName||"Away",
-      hs:home.score??"-",as:away.score??"-",
-      state,
-      status:state==="in"
-       ?(lang.value==="ar"?"مباشرة":"LIVE")
-       :state==="post"?t("finished"):t("upcoming"),
-      league:name
-     };
-    }).filter(Boolean);
-   })
-  );
-
-  cache=responses
-   .filter(x=>x.status==="fulfilled")
-   .flatMap(x=>x.value);
-
-  if(!responses.some(x=>x.status==="fulfilled"))
-   throw Error("All sources unavailable");
-
-  return cache;
- }
-
- function show(list){
-  if(!list.length){message(t("empty"));return;}
-  list.forEach(card);
- }
-
- function normalize(s){
-  return s.toLowerCase().trim();
- }
-
- async function ask(event,q){
-  if(event)event.preventDefault();
-  q=(q||input.value).trim();
-  if(!q||busy)return;
-
-  message(q,"stuser");
-  input.value="";
-  busy=true;
-
-  const wait=message(t("loading"));
-
-  try{
-   const matches=await load();
-   wait.remove();
-
-   const query=normalize(q);
-   const isLive=/مباشر|مباشرة|live/i.test(q);
-   const isToday=/اليوم|today/i.test(q);
-   const isHelp=/ماذا|كيف|help|what can|مرحبا|السلام|hello/i.test(q);
-
-   if(isHelp){
-    message(t("help"));
-   }else if(isLive){
-    const live=matches.filter(x=>x.state==="in");
-    message(t("live"));
-    show(live);
-   }else{
-    const found=matches.filter(x=>
-     normalize(x.home).includes(query)||
-     normalize(x.away).includes(query)||
-     normalize(x.league).includes(query)||
-     (query.includes("الدوري السعودي")&&x.league.includes("السعودي"))||
-     (query.includes("الدوري الإنجليزي")&&x.league.includes("الإنجليزي"))
-    );
-
-    if(isToday||query==="مباريات اليوم"||query==="today's matches"){
-     message(t("today"));
-     show(matches);
-    }else if(found.length){
-     message(t("found"));
-     show(found);
-    }else{
-     message(t("no"));
-     if(matches.length)message(t("help"));
-    }
-   }
-  }catch(e){
-   wait.remove();
-   message(t("error"));
-   console.error(e);
-  }finally{
-   busy=false;
-  }
- }
-
- function toggle(){
-  box.style.display=box.style.display==="block"?"none":"block";
-  if(box.style.display==="block")input.focus();
- }
-
- function language(){
-  const en=lang.value==="en";
-  box.style.direction=en?"ltr":"rtl";
-  $("stquick").style.direction=en?"ltr":"rtl";
-  input.placeholder=t("placeholder");
-  $("stsend").textContent=t("send");
-  messages.innerHTML="";
-  message(t("welcome"));
-  cache=[];
- }
-
- function quick(q){ask(null,q)}
-
- return {toggle,language,ask,quick};
-})();
+async function load(){
+ let r=await fetch('/api/live');let j=await r.json();
+ document.getElementById('count').textContent=j.live.length+' مباشر';
+ let html='';
+ j.all.slice(0,8).forEach(m=>{
+  html+=`<div class="${m.state==='in'?'cardLime':'liveCard'}">
+  <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:8px"><span>${m.league.toUpperCase()}</span><span>${m.minute}</span></div>
+  <div style="display:flex;justify-content:space-between;align-items:center">
+  <div style="text-align:center;width:30%"><div style="width:44px;height:44px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-size:10px;font-weight:900;margin:0 auto">${m.homeAbbr}</div><div style="font-size:11px;font-weight:900;margin-top:4px">${m.hAR}</div></div>
+  <div style="text-align:center;width:40%"><div style="font-size:24px;font-weight:900">${m.hs} : ${m.as}</div></div>
+  <div style="text-align:center;width:30%"><div style="width:44px;height:44px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#000;font-size:10px;font-weight:900;margin:0 auto">${m.awayAbbr}</div><div style="font-size:11px;font-weight:900;margin-top:4px">${m.aAR}</div></div>
+  </div>
+  <div class="probBar"><div style="width:${m.prob}%;background:${m.state==='in'?'#000':'#c6ff00'}"></div><div style="width:${100-m.prob}%;background:#6a2db8"></div></div>
+  </div>`;
+ });
+ document.getElementById('list').innerHTML=html;
+}
+load();setInterval(load,10000);
 </script>
+</body>
+</html>
