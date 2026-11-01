@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T22:15:35Z",
+  "generated_at": "2026-11-01T22:16:00Z",
   "timezone": "Asia/Muscat",
   "provider": "ESPN public API",
   "leagues": {
@@ -537,56 +537,125 @@
           "goal_difference": "-13"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:01Z",
       "stale": false,
       "errors": []
     },
-    "soccer/eng.1": {
-      "name": "الدوري الإنجليزي الممتاز",
+    "soccer/fra.1": {
+      "name": "الدوري الفرنسي",
       "category": "football",
       "matches": [
         {
-          "id": "401879246",
-          "date": "2026-11-01T16:30Z",
-          "time": "2026-11-01T16:30Z",
+          "id": "401876414",
+          "date": "2026-11-01T14:00Z",
+          "time": "2026-11-01T14:00Z",
           "home": {
-            "name": "Liverpool",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
-            "score": "0"
+            "name": "Strasbourg",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/180.png",
+            "score": "5"
           },
           "away": {
-            "name": "Arsenal",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+            "name": "AJ Auxerre",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
             "score": "1"
           },
           "status": "post",
           "detail": "FT",
-          "venue": "Anfield",
-          "broadcast": "NBCSN",
+          "venue": "Stade de la Meinau",
+          "broadcast": "beIn Sports",
+          "status_detail": "FT",
+          "status_short": "FT",
+          "period": 2,
+          "clock": "90'+8'"
+        },
+        {
+          "id": "401876418",
+          "date": "2026-11-01T16:15Z",
+          "time": "2026-11-01T16:15Z",
+          "home": {
+            "name": "Lyon",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
+            "score": "2"
+          },
+          "away": {
+            "name": "Angers",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
+            "score": "0"
+          },
+          "status": "post",
+          "detail": "FT",
+          "venue": "Groupama Stadium",
+          "broadcast": "beIn Sports",
+          "status_detail": "FT",
+          "status_short": "FT",
+          "period": 2,
+          "clock": "90'+3'"
+        },
+        {
+          "id": "401876415",
+          "date": "2026-11-01T16:15Z",
+          "time": "2026-11-01T16:15Z",
+          "home": {
+            "name": "Paris FC",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
+            "score": "3"
+          },
+          "away": {
+            "name": "AS Monaco",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
+            "score": "1"
+          },
+          "status": "post",
+          "detail": "FT",
+          "venue": "Stade Jean Bouin",
+          "broadcast": "beIn Sports",
           "status_detail": "FT",
           "status_short": "FT",
           "period": 2,
           "clock": "90'+7'"
         },
         {
-          "id": "401878762",
-          "date": "2026-11-02T20:00Z",
-          "time": "2026-11-02T20:00Z",
+          "id": "401876417",
+          "date": "2026-11-01T19:45Z",
+          "time": "2026-11-01T19:45Z",
           "home": {
-            "name": "Newcastle United",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
+            "name": "Marseille",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
+            "score": "2"
+          },
+          "away": {
+            "name": "Toulouse",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/179.png",
+            "score": "0"
+          },
+          "status": "post",
+          "detail": "FT",
+          "venue": "Stade Vélodrome",
+          "broadcast": "beIn Sports",
+          "status_detail": "FT",
+          "status_short": "FT",
+          "period": 2,
+          "clock": "90'+7'"
+        },
+        {
+          "id": "401876419",
+          "date": "2026-11-02T19:45Z",
+          "time": "2026-11-02T19:45Z",
+          "home": {
+            "name": "Lorient",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
             "score": "0"
           },
           "away": {
-            "name": "Everton",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+            "name": "Brest",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png",
             "score": "0"
           },
           "status": "pre",
           "detail": "Scheduled",
-          "venue": "St. James' Park",
-          "broadcast": "USA Net",
-          "status_detail": "Mon, November 2nd at 3:00 PM EST",
+          "venue": "Stade du Moustoir - Yves Allainmat",
+          "broadcast": "beIn Sports",
+          "status_detail": "Mon, November 2nd at 2:45 PM EST",
           "status_short": "Scheduled",
           "period": null,
           "clock": "0'"
@@ -594,245 +663,253 @@
       ],
       "news": [
         {
-          "headline": "Ex-Liverpool, Man City star Milner runs NYC Marathon in just over three hours",
-          "description": "It's clear James Milner is enjoying his retirement from soccer, as he ran the 2026 NYC Marathon on Sunday with an impressive time. Did we mention he's 40 years old?",
-          "link": "https://www.espn.com/soccer/story/_/id/50350050/james-milner-liverpool-man-city-england-runs-nyc-new-york-marathon-three-hours",
-          "image": "https://a.espncdn.com/photo/2026/1101/r1739636_1296x729_16-9.png",
-          "source": "الدوري الإنجليزي الممتاز",
-          "published": "2026-11-01T19:59:54Z"
+          "headline": "Achraf Hakimi scores 1st career hat trick as Luis Enrique makes PSG history",
+          "description": "Right back Achraf Hakimi claimed a first career hat trick and provided two assists as Luis Enrique became the winningest coach in Paris Saint-Germain history on Friday.",
+          "link": "https://www.espn.com/soccer/story/_/id/50330654/psg-achraf-hakimi-hat-trick-luis-enrique-wins-record-le-havre",
+          "image": "https://a.espncdn.com/photo/2026/1030/r1738690_1296x729_16-9.jpg",
+          "source": "الدوري الفرنسي",
+          "published": "2026-10-30T22:30:15Z"
         },
         {
-          "headline": "Arteta says Arsenal 'loved the mission' in first Anfield win since 2012",
-          "description": "Mikel Arteta said his players \"loved the mission\" of winning at Liverpool for the first time in 14 years as he hailed Sunday's \"historic\" 1-0 victory at Anfield.",
-          "link": "https://www.espn.com/soccer/story/_/id/50349973/arteta-arsenal-loved-mission-anfield-win",
-          "image": "https://a.espncdn.com/photo/2026/1101/r1739642_1296x729_16-9.jpg",
-          "source": "الدوري الإنجليزي الممتاز",
-          "published": "2026-11-01T21:05:51Z"
+          "headline": "Global power ranking: The top 20 soccer teams in the world, ranked!",
+          "description": "If we look beyond the Premier League and beyond those who qualified for the Champions League, which are the best teams in the world?",
+          "link": "https://www.espn.com/soccer/story/_/id/50312487/top-20-soccer-teams-world-ranked",
+          "image": "https://a.espncdn.com/photo/2026/1030/r1738425_1296x729_16-9.jpg",
+          "source": "الدوري الفرنسي",
+          "published": "2026-10-30T12:06:05Z"
         },
         {
-          "headline": "Did VAR get Liverpool's penalty calls wrong against Arsenal?",
-          "description": "Did VAR get Liverpool's penalty calls wrong against Arsenal?",
-          "link": "https://www.espn.com/video/clip/_/id/50349966/did-var-get-liverpool-penalty-calls-wrong-arsenal",
-          "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/dm_261101_COM_SOC_ANALYSIS_Did_VAR_get_Liverpoos_penalty_calls_wrong_against_Arsenal_2026_11_1/dm_261101_COM_SOC_ANALYSIS_Did_VAR_get_Liverpoos_penalty_calls_wrong_against_Arsenal_2026_11_1.jpg",
-          "source": "الدوري الإنجليزي الممتاز",
-          "published": "2026-11-01T19:40:59Z"
+          "headline": "Transfer rumors, news: Liverpool in contact over Monaco's Camara",
+          "description": "Liverpool have reached out to representatives of Lamine Camara and will explore a transfer next summer. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50315695/transfer-rumors-news-everton-eye-loan-man-uniteds-rashford",
+          "image": "https://a.espncdn.com/photo/2026/1029/r1738253_1296x729_16-9.jpg",
+          "source": "الدوري الفرنسي",
+          "published": "2026-10-29T20:20:34Z"
         },
         {
-          "headline": "Nicol: Arsenal showed what it takes to be champions",
-          "description": "Nicol: Arsenal showed what it takes to be champions",
-          "link": "https://www.espn.com/video/clip/_/id/50349936/arsenal-showed-takes-champions",
-          "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/dm_261101_COM_SOC_ANALYSIS_Nicol_Arsenal_showed_what_it_takes_to_be_champions_2026_11_1/dm_261101_COM_SOC_ANALYSIS_Nicol_Arsenal_showed_what_it_takes_to_be_champions_2026_11_1.jpg",
-          "source": "الدوري الإنجليزي الممتاز",
-          "published": "2026-11-01T19:38:11Z"
+          "headline": "PSG's Luis Enrique: Vitinha deserved higher Ballon d'Or ranking",
+          "description": "Paris Saint-Germain boss Luis Enrique does not believe star midfielder Vitinha got the recognition he deserved in the Ballon d'Or rankings.",
+          "link": "https://www.espn.com/soccer/story/_/id/50320065/psg-luis-enrique-vitinha-ballon-dor",
+          "image": "https://a.espncdn.com/photo/2026/1029/r1738175_1296x729_16-9.jpg",
+          "source": "الدوري الفرنسي",
+          "published": "2026-10-29T18:19:07Z"
         },
         {
-          "headline": "What went wrong for Liverpool in attack against Arsenal?",
-          "description": "What went wrong for Liverpool in attack against Arsenal?",
-          "link": "https://www.espn.com/video/clip/_/id/50349875/what-went-wrong-liverpool-attack-arsenal",
-          "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/dm_261101_COM_SOC_ANALYSIS_What_went_wrong_for_Liverpool_in_attack_against_Arsenal_2026_11_1/dm_261101_COM_SOC_ANALYSIS_What_went_wrong_for_Liverpool_in_attack_against_Arsenal_2026_11_1.jpg",
-          "source": "الدوري الإنجليزي الممتاز",
-          "published": "2026-11-01T19:30:45Z"
+          "headline": "Man City, Bayern among the good, bad and lucky in Europe's top leagues",
+          "description": "We're a quarter of the way through the 2026-27 European season -- long enough to separate fact from fiction when it comes to from. Who's been lucky? Who's been good? Who's been both, or neither?",
+          "link": "https://www.espn.com/soccer/story/_/id/50309811/man-city-bayern-munich-como-sunderland-good-bad-lucky-european-soccer",
+          "image": "https://a.espncdn.com/photo/2026/1029/r1738028_1296x729_16-9.jpg",
+          "source": "الدوري الفرنسي",
+          "published": "2026-10-29T16:26:42Z"
         },
         {
-          "headline": "Arsenal hold on for a big win at Liverpool, one Iraola & Co. can learn from",
-          "description": "Arsenal's defense held firm against the Reds' expensive attack to notch a famous win at Anfield for the first time since 2012. However, there were positive signs for Liverpool when it came to their intensity and effort.",
-          "link": "https://www.espn.com/soccer/story/_/id/50348895/liverpool-arsenal-live-analysis-reaction-statistics-premier-league",
-          "image": "https://a.espncdn.com/photo/2026/1101/r1739556_3_1296x729_16-9.jpg",
-          "source": "الدوري الإنجليزي الممتاز",
-          "published": "2026-11-01T21:00:14Z"
+          "headline": "Transfer rumors, news: Juventus eye move for USMNT's Balogun",
+          "description": "AS Monaco and USMNT striker Folarin Balogun is reportedly linked with a move to Juventus. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50305774/transfer-rumors-news-arsenal-chelsea-manchester-city-tracking-psg-star-desire-doue",
+          "image": "https://a.espncdn.com/photo/2026/1028/r1737670_2_1296x729_16-9.jpg",
+          "source": "الدوري الفرنسي",
+          "published": "2026-10-28T20:05:27Z"
         }
       ],
       "teams": [
         {
-          "id": "349",
-          "name": "AFC Bournemouth",
-          "short_name": "Bournemouth",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
-          "abbreviation": "BOU"
+          "id": "172",
+          "name": "AJ Auxerre",
+          "short_name": "Auxerre",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
+          "abbreviation": "AUX"
         },
         {
-          "id": "359",
-          "name": "Arsenal",
-          "short_name": "Arsenal",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
-          "abbreviation": "ARS"
+          "id": "174",
+          "name": "AS Monaco",
+          "short_name": "Monaco",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
+          "abbreviation": "MON"
         },
         {
-          "id": "362",
-          "name": "Aston Villa",
-          "short_name": "Aston Villa",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
-          "abbreviation": "AVL"
+          "id": "7868",
+          "name": "Angers",
+          "short_name": "Angers",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
+          "abbreviation": "ANG"
         },
         {
-          "id": "337",
-          "name": "Brentford",
-          "short_name": "Brentford",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+          "id": "6997",
+          "name": "Brest",
+          "short_name": "Brest",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png",
           "abbreviation": "BRE"
         },
         {
-          "id": "331",
-          "name": "Brighton & Hove Albion",
-          "short_name": "Brighton",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
-          "abbreviation": "BHA"
+          "id": "3236",
+          "name": "Le Havre AC",
+          "short_name": "Le Havre AC",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png",
+          "abbreviation": "HAC"
         },
         {
-          "id": "363",
-          "name": "Chelsea",
-          "short_name": "Chelsea",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
-          "abbreviation": "CHE"
+          "id": "2697",
+          "name": "Le Mans",
+          "short_name": "Le Mans",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
+          "abbreviation": "MNS"
         },
         {
-          "id": "388",
-          "name": "Coventry City",
-          "short_name": "Coventry",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
-          "abbreviation": "COV"
+          "id": "175",
+          "name": "Lens",
+          "short_name": "Lens",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
+          "abbreviation": "RCL"
         },
         {
-          "id": "384",
-          "name": "Crystal Palace",
-          "short_name": "C Palace",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
-          "abbreviation": "CRY"
+          "id": "166",
+          "name": "Lille",
+          "short_name": "Lille",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png",
+          "abbreviation": "LILL"
         },
         {
-          "id": "368",
-          "name": "Everton",
-          "short_name": "Everton",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
-          "abbreviation": "EVE"
+          "id": "273",
+          "name": "Lorient",
+          "short_name": "Lorient",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
+          "abbreviation": "LOR"
         },
         {
-          "id": "370",
-          "name": "Fulham",
-          "short_name": "Fulham",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
-          "abbreviation": "FUL"
+          "id": "167",
+          "name": "Lyon",
+          "short_name": "Lyon",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
+          "abbreviation": "LYON"
         },
         {
-          "id": "306",
-          "name": "Hull City",
-          "short_name": "Hull",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png",
-          "abbreviation": "HUL"
+          "id": "176",
+          "name": "Marseille",
+          "short_name": "Marseille",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
+          "abbreviation": "OLM"
         },
         {
-          "id": "373",
-          "name": "Ipswich Town",
-          "short_name": "Ipswich",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
-          "abbreviation": "IPS"
+          "id": "2502",
+          "name": "Nice",
+          "short_name": "Nice",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png",
+          "abbreviation": "NICE"
         },
         {
-          "id": "357",
-          "name": "Leeds United",
-          "short_name": "Leeds",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
-          "abbreviation": "LEE"
+          "id": "6851",
+          "name": "Paris FC",
+          "short_name": "Paris FC",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
+          "abbreviation": "PAR"
         },
         {
-          "id": "364",
-          "name": "Liverpool",
-          "short_name": "Liverpool",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
-          "abbreviation": "LIV"
+          "id": "160",
+          "name": "Paris Saint-Germain",
+          "short_name": "PSG",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+          "abbreviation": "PSG"
         },
         {
-          "id": "382",
-          "name": "Manchester City",
-          "short_name": "Man City",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
-          "abbreviation": "MNC"
+          "id": "169",
+          "name": "Stade Rennais",
+          "short_name": "Rennes",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
+          "abbreviation": "REN"
         },
         {
-          "id": "360",
-          "name": "Manchester United",
-          "short_name": "Man Utd",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
-          "abbreviation": "MAN"
+          "id": "180",
+          "name": "Strasbourg",
+          "short_name": "Strasbourg",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/180.png",
+          "abbreviation": "STR"
         },
         {
-          "id": "361",
-          "name": "Newcastle United",
-          "short_name": "Newcastle",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
-          "abbreviation": "NEW"
+          "id": "179",
+          "name": "Toulouse",
+          "short_name": "Toulouse",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/179.png",
+          "abbreviation": "TOU"
         },
         {
-          "id": "393",
-          "name": "Nottingham Forest",
-          "short_name": "Nottm Forest",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
-          "abbreviation": "NFO"
-        },
-        {
-          "id": "366",
-          "name": "Sunderland",
-          "short_name": "Sunderland",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
-          "abbreviation": "SUN"
-        },
-        {
-          "id": "367",
-          "name": "Tottenham Hotspur",
-          "short_name": "Spurs",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
-          "abbreviation": "TOT"
+          "id": "170",
+          "name": "Troyes",
+          "short_name": "Troyes",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/170.png",
+          "abbreviation": "TRY"
         }
       ],
       "standings": [
         {
-          "name": "Arsenal",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+          "name": "Paris Saint-Germain",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
           "rank": "1",
-          "points": "24",
-          "played": "9",
-          "wins": "8",
-          "draws": "0",
-          "losses": "1",
-          "goal_difference": "+9"
-        },
-        {
-          "name": "Manchester City",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
-          "rank": "2",
-          "points": "21",
-          "played": "9",
-          "wins": "7",
-          "draws": "0",
-          "losses": "2",
-          "goal_difference": "+10"
-        },
-        {
-          "name": "Brighton & Hove Albion",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
-          "rank": "3",
-          "points": "19",
+          "points": "20",
           "played": "9",
           "wins": "6",
-          "draws": "1",
-          "losses": "2",
-          "goal_difference": "+17"
+          "draws": "2",
+          "losses": "1",
+          "goal_difference": "+11"
         },
         {
-          "name": "Chelsea",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
+          "name": "Lille",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png",
+          "rank": "2",
+          "points": "18",
+          "played": "9",
+          "wins": "5",
+          "draws": "3",
+          "losses": "1",
+          "goal_difference": "+6"
+        },
+        {
+          "name": "Lyon",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
+          "rank": "3",
+          "points": "17",
+          "played": "9",
+          "wins": "5",
+          "draws": "2",
+          "losses": "2",
+          "goal_difference": "+8"
+        },
+        {
+          "name": "Paris FC",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
           "rank": "4",
+          "points": "17",
+          "played": "9",
+          "wins": "5",
+          "draws": "2",
+          "losses": "2",
+          "goal_difference": "+6"
+        },
+        {
+          "name": "Stade Rennais",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
+          "rank": "5",
           "points": "16",
           "played": "9",
           "wins": "5",
           "draws": "1",
           "losses": "3",
-          "goal_difference": "+4"
+          "goal_difference": "+1"
         },
         {
-          "name": "Liverpool",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
-          "rank": "5",
+          "name": "Marseille",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
+          "rank": "6",
+          "points": "15",
+          "played": "9",
+          "wins": "5",
+          "draws": "0",
+          "losses": "4",
+          "goal_difference": "+7"
+        },
+        {
+          "name": "AS Monaco",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
+          "rank": "7",
           "points": "15",
           "played": "9",
           "wins": "4",
@@ -841,172 +918,128 @@
           "goal_difference": "+2"
         },
         {
-          "name": "Brentford",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
-          "rank": "6",
+          "name": "Nice",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png",
+          "rank": "8",
           "points": "14",
           "played": "9",
-          "wins": "3",
-          "draws": "5",
-          "losses": "1",
-          "goal_difference": "+7"
-        },
-        {
-          "name": "AFC Bournemouth",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
-          "rank": "7",
-          "points": "12",
-          "played": "9",
-          "wins": "3",
-          "draws": "3",
+          "wins": "4",
+          "draws": "2",
           "losses": "3",
           "goal_difference": "+1"
         },
         {
-          "name": "Tottenham Hotspur",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
-          "rank": "8",
-          "points": "12",
-          "played": "9",
-          "wins": "3",
-          "draws": "3",
-          "losses": "3",
-          "goal_difference": "0"
-        },
-        {
-          "name": "Aston Villa",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+          "name": "Lens",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
           "rank": "9",
-          "points": "12",
+          "points": "13",
           "played": "9",
+          "wins": "4",
+          "draws": "1",
+          "losses": "4",
+          "goal_difference": "+3"
+        },
+        {
+          "name": "Lorient",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
+          "rank": "10",
+          "points": "12",
+          "played": "8",
           "wins": "3",
           "draws": "3",
-          "losses": "3",
-          "goal_difference": "-3"
-        },
-        {
-          "name": "Hull City",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png",
-          "rank": "10",
-          "points": "11",
-          "played": "9",
-          "wins": "2",
-          "draws": "5",
           "losses": "2",
           "goal_difference": "+1"
         },
         {
-          "name": "Leeds United",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+          "name": "Toulouse",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/179.png",
           "rank": "11",
-          "points": "11",
-          "played": "9",
-          "wins": "2",
-          "draws": "5",
-          "losses": "2",
-          "goal_difference": "+1"
-        },
-        {
-          "name": "Newcastle United",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
-          "rank": "12",
-          "points": "11",
-          "played": "8",
-          "wins": "3",
-          "draws": "2",
-          "losses": "3",
-          "goal_difference": "-2"
-        },
-        {
-          "name": "Ipswich Town",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
-          "rank": "13",
-          "points": "11",
-          "played": "9",
-          "wins": "3",
-          "draws": "2",
-          "losses": "4",
-          "goal_difference": "-4"
-        },
-        {
-          "name": "Everton",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
-          "rank": "14",
           "points": "10",
-          "played": "8",
+          "played": "9",
           "wins": "2",
           "draws": "4",
-          "losses": "2",
+          "losses": "3",
           "goal_difference": "-1"
         },
         {
-          "name": "Fulham",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
-          "rank": "15",
-          "points": "9",
+          "name": "Strasbourg",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/180.png",
+          "rank": "12",
+          "points": "10",
           "played": "9",
-          "wins": "2",
-          "draws": "3",
-          "losses": "4",
+          "wins": "3",
+          "draws": "1",
+          "losses": "5",
           "goal_difference": "-2"
         },
         {
-          "name": "Coventry City",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
-          "rank": "16",
-          "points": "9",
+          "name": "AJ Auxerre",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
+          "rank": "13",
+          "points": "10",
           "played": "9",
           "wins": "3",
-          "draws": "0",
-          "losses": "6",
-          "goal_difference": "-7"
+          "draws": "1",
+          "losses": "5",
+          "goal_difference": "-10"
         },
         {
-          "name": "Manchester United",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "name": "Brest",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png",
+          "rank": "14",
+          "points": "9",
+          "played": "8",
+          "wins": "2",
+          "draws": "3",
+          "losses": "3",
+          "goal_difference": "+2"
+        },
+        {
+          "name": "Angers",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
+          "rank": "15",
+          "points": "8",
+          "played": "9",
+          "wins": "2",
+          "draws": "2",
+          "losses": "5",
+          "goal_difference": "-8"
+        },
+        {
+          "name": "Troyes",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/170.png",
+          "rank": "16",
+          "points": "8",
+          "played": "9",
+          "wins": "2",
+          "draws": "2",
+          "losses": "5",
+          "goal_difference": "-9"
+        },
+        {
+          "name": "Le Mans",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
           "rank": "17",
           "points": "7",
           "played": "9",
           "wins": "1",
           "draws": "4",
           "losses": "4",
-          "goal_difference": "-5"
+          "goal_difference": "-7"
         },
         {
-          "name": "Crystal Palace",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+          "name": "Le Havre AC",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png",
           "rank": "18",
-          "points": "7",
+          "points": "2",
           "played": "9",
-          "wins": "2",
-          "draws": "1",
-          "losses": "6",
-          "goal_difference": "-12"
-        },
-        {
-          "name": "Nottingham Forest",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
-          "rank": "19",
-          "points": "6",
-          "played": "9",
-          "wins": "1",
-          "draws": "3",
-          "losses": "5",
-          "goal_difference": "-6"
-        },
-        {
-          "name": "Sunderland",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
-          "rank": "20",
-          "points": "5",
-          "played": "9",
-          "wins": "1",
+          "wins": "0",
           "draws": "2",
-          "losses": "6",
-          "goal_difference": "-10"
+          "losses": "7",
+          "goal_difference": "-11"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:01Z",
       "stale": false,
       "errors": []
     },
@@ -1531,7 +1564,7 @@
           "goal_difference": "-14"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:01Z",
       "stale": false,
       "errors": []
     },
@@ -1917,942 +1950,486 @@
           "goal_difference": "-12"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:01Z",
       "stale": false,
       "errors": []
     },
-    "soccer/fra.1": {
-      "name": "الدوري الفرنسي",
+    "soccer/ned.1": {
+      "name": "الدوري الهولندي",
       "category": "football",
       "matches": [
         {
-          "id": "401876414",
-          "date": "2026-11-01T14:00Z",
-          "time": "2026-11-01T14:00Z",
+          "id": "401875560",
+          "date": "2026-11-01T11:15Z",
+          "time": "2026-11-01T11:15Z",
           "home": {
-            "name": "Strasbourg",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/180.png",
-            "score": "5"
-          },
-          "away": {
-            "name": "AJ Auxerre",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
+            "name": "PEC Zwolle",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png",
             "score": "1"
           },
-          "status": "post",
-          "detail": "FT",
-          "venue": "Stade de la Meinau",
-          "broadcast": "beIn Sports",
-          "status_detail": "FT",
-          "status_short": "FT",
-          "period": 2,
-          "clock": "90'+8'"
-        },
-        {
-          "id": "401876418",
-          "date": "2026-11-01T16:15Z",
-          "time": "2026-11-01T16:15Z",
-          "home": {
-            "name": "Lyon",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
-            "score": "2"
-          },
           "away": {
-            "name": "Angers",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
+            "name": "ADO Den Haag",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png",
             "score": "0"
           },
           "status": "post",
           "detail": "FT",
-          "venue": "Groupama Stadium",
-          "broadcast": "beIn Sports",
+          "venue": "MAC³PARK Stadion",
+          "broadcast": "",
+          "status_detail": "FT",
+          "status_short": "FT",
+          "period": 2,
+          "clock": "90'+4'"
+        },
+        {
+          "id": "401875559",
+          "date": "2026-11-01T13:30Z",
+          "time": "2026-11-01T13:30Z",
+          "home": {
+            "name": "Excelsior",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png",
+            "score": "0"
+          },
+          "away": {
+            "name": "FC Twente",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+            "score": "9"
+          },
+          "status": "post",
+          "detail": "FT",
+          "venue": "Stadion Woudestein",
+          "broadcast": "",
           "status_detail": "FT",
           "status_short": "FT",
           "period": 2,
           "clock": "90'+3'"
         },
         {
-          "id": "401876415",
-          "date": "2026-11-01T16:15Z",
-          "time": "2026-11-01T16:15Z",
+          "id": "401875558",
+          "date": "2026-11-01T13:30Z",
+          "time": "2026-11-01T13:30Z",
           "home": {
-            "name": "Paris FC",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
-            "score": "3"
+            "name": "Telstar",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png",
+            "score": "4"
           },
           "away": {
-            "name": "AS Monaco",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
-            "score": "1"
+            "name": "FC Utrecht",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png",
+            "score": "2"
           },
           "status": "post",
           "detail": "FT",
-          "venue": "Stade Jean Bouin",
-          "broadcast": "beIn Sports",
+          "venue": "711 Stadion",
+          "broadcast": "",
           "status_detail": "FT",
           "status_short": "FT",
           "period": 2,
-          "clock": "90'+7'"
+          "clock": "90'+4'"
         },
         {
-          "id": "401876417",
-          "date": "2026-11-01T19:45Z",
-          "time": "2026-11-01T19:45Z",
+          "id": "401875557",
+          "date": "2026-11-01T15:45Z",
+          "time": "2026-11-01T15:45Z",
           "home": {
-            "name": "Marseille",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
+            "name": "FC Groningen",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png",
             "score": "2"
           },
           "away": {
-            "name": "Toulouse",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/179.png",
-            "score": "0"
+            "name": "Sparta Rotterdam",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png",
+            "score": "3"
           },
           "status": "post",
           "detail": "FT",
-          "venue": "Stade Vélodrome",
-          "broadcast": "beIn Sports",
+          "venue": "Euroborg",
+          "broadcast": "",
           "status_detail": "FT",
           "status_short": "FT",
           "period": 2,
-          "clock": "90'+7'"
-        },
-        {
-          "id": "401876419",
-          "date": "2026-11-02T19:45Z",
-          "time": "2026-11-02T19:45Z",
-          "home": {
-            "name": "Lorient",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
-            "score": "0"
-          },
-          "away": {
-            "name": "Brest",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png",
-            "score": "0"
-          },
-          "status": "pre",
-          "detail": "Scheduled",
-          "venue": "Stade du Moustoir - Yves Allainmat",
-          "broadcast": "beIn Sports",
-          "status_detail": "Mon, November 2nd at 2:45 PM EST",
-          "status_short": "Scheduled",
-          "period": null,
-          "clock": "0'"
+          "clock": "90'+4'"
         }
       ],
       "news": [
         {
-          "headline": "Achraf Hakimi scores 1st career hat trick as Luis Enrique makes PSG history",
-          "description": "Right back Achraf Hakimi claimed a first career hat trick and provided two assists as Luis Enrique became the winningest coach in Paris Saint-Germain history on Friday.",
-          "link": "https://www.espn.com/soccer/story/_/id/50330654/psg-achraf-hakimi-hat-trick-luis-enrique-wins-record-le-havre",
-          "image": "https://a.espncdn.com/photo/2026/1030/r1738690_1296x729_16-9.jpg",
-          "source": "الدوري الفرنسي",
-          "published": "2026-10-30T22:30:15Z"
+          "headline": "Soccer's best 2025-26 kits: The most stylish jerseys you probably missed",
+          "description": "While the world's top clubs release their new kits on a wave of hype, there are many more who release absolutely banging jerseys that deserve to be seen.",
+          "link": "https://www.espn.com/soccer/story/_/id/49812807/soccer-best-kits-2025-26-stylish-jerseys-probably-missed",
+          "image": "https://a.espncdn.com/photo/2026/0904/r1711227_1296x729_16-9.jpg",
+          "source": "الدوري الهولندي",
+          "published": "2026-09-29T07:38:13Z"
         },
         {
-          "headline": "Global power ranking: The top 20 soccer teams in the world, ranked!",
-          "description": "If we look beyond the Premier League and beyond those who qualified for the Champions League, which are the best teams in the world?",
-          "link": "https://www.espn.com/soccer/story/_/id/50312487/top-20-soccer-teams-world-ranked",
-          "image": "https://a.espncdn.com/photo/2026/1030/r1738425_1296x729_16-9.jpg",
-          "source": "الدوري الفرنسي",
-          "published": "2026-10-30T12:06:05Z"
+          "headline": "Ricardo Pepi's injury in PSV match a concern for USMNT",
+          "description": "PSV Eindhoven striker Ricardo Pepi had to be substituted because of injury in the club's match on Sunday, giving the U.S. men's national team a possible selection headache.",
+          "link": "https://www.espn.com/soccer/story/_/id/49988715/ricardo-pepi-injury-psv-match-concern-usmnt",
+          "image": "https://a.espncdn.com/photo/2026/0920/r1719409_1296x729_16-9.jpg",
+          "source": "الدوري الهولندي",
+          "published": "2026-09-20T13:45:33Z"
         },
         {
-          "headline": "Transfer rumors, news: Liverpool in contact over Monaco's Camara",
-          "description": "Liverpool have reached out to representatives of Lamine Camara and will explore a transfer next summer. Transfer Talk has the latest.",
-          "link": "https://www.espn.com/soccer/story/_/id/50315695/transfer-rumors-news-everton-eye-loan-man-uniteds-rashford",
-          "image": "https://a.espncdn.com/photo/2026/1029/r1738253_1296x729_16-9.jpg",
-          "source": "الدوري الفرنسي",
-          "published": "2026-10-29T20:20:34Z"
+          "headline": "Ajax's Thilo Kehrer using his success to help Burundi's children",
+          "description": "Thilo Kehrer may have joined Ajax Amsterdam on loan from AS Monaco, but his mission away from football remains unchanged -- he is aiming to leverage his success in football to help children in Burundi.",
+          "link": "https://www.espn.com/espn/story/_/id/49901824/ajax-thilo-kehrer-using-success-help-burundi-children",
+          "image": "https://a.espncdn.com/photo/2026/0911/r1714790_1296x729_16-9.jpg",
+          "source": "الدوري الهولندي",
+          "published": "2026-09-11T10:18:43Z"
         },
         {
-          "headline": "PSG's Luis Enrique: Vitinha deserved higher Ballon d'Or ranking",
-          "description": "Paris Saint-Germain boss Luis Enrique does not believe star midfielder Vitinha got the recognition he deserved in the Ballon d'Or rankings.",
-          "link": "https://www.espn.com/soccer/story/_/id/50320065/psg-luis-enrique-vitinha-ballon-dor",
-          "image": "https://a.espncdn.com/photo/2026/1029/r1738175_1296x729_16-9.jpg",
-          "source": "الدوري الفرنسي",
-          "published": "2026-10-29T18:19:07Z"
+          "headline": "Goalkeeper Ronald Koeman Jr. scores twice to secure dramatic comeback point in Eredivisie",
+          "description": "Goalkeeper Ronald Koeman Jr, was on the scoresheet not once, but twice for Telstar in the Dutch Eredivisie on Sunday.",
+          "link": "https://www.espn.com/soccer/story/_/id/49851757/goalkeeper-ronald-koeman-jr-scores-twice-secure-dramatic-comeback-point-eredivisie",
+          "image": "https://a.espncdn.com/photo/2026/0906/r1712443_1296x729_16-9.jpg",
+          "source": "الدوري الهولندي",
+          "published": "2026-09-06T20:38:30Z"
         },
         {
-          "headline": "Man City, Bayern among the good, bad and lucky in Europe's top leagues",
-          "description": "We're a quarter of the way through the 2026-27 European season -- long enough to separate fact from fiction when it comes to from. Who's been lucky? Who's been good? Who's been both, or neither?",
-          "link": "https://www.espn.com/soccer/story/_/id/50309811/man-city-bayern-munich-como-sunderland-good-bad-lucky-european-soccer",
-          "image": "https://a.espncdn.com/photo/2026/1029/r1738028_1296x729_16-9.jpg",
-          "source": "الدوري الفرنسي",
-          "published": "2026-10-29T16:26:42Z"
+          "headline": "Man United loan teen striker Chido Obi to Dutch side Willem II",
+          "description": "Manchester United striker Chido Obi has joined Dutch side Willem II on a season-long loan deal",
+          "link": "https://www.espn.com/soccer/story/_/id/49807577/man-united-chido-obi-loan-willem-ii",
+          "image": "https://a.espncdn.com/photo/2026/0902/r1710630_1296x729_16-9.jpg",
+          "source": "الدوري الهولندي",
+          "published": "2026-09-02T22:45:44Z"
         },
         {
-          "headline": "Transfer rumors, news: Juventus eye move for USMNT's Balogun",
-          "description": "AS Monaco and USMNT striker Folarin Balogun is reportedly linked with a move to Juventus. Transfer Talk has the latest.",
-          "link": "https://www.espn.com/soccer/story/_/id/50305774/transfer-rumors-news-arsenal-chelsea-manchester-city-tracking-psg-star-desire-doue",
-          "image": "https://a.espncdn.com/photo/2026/1028/r1737670_2_1296x729_16-9.jpg",
-          "source": "الدوري الفرنسي",
-          "published": "2026-10-28T20:05:27Z"
+          "headline": "Weekend predictions: Pressure on Man United, Carrick already? Wrexham to beat Birmingham?",
+          "description": "Late August is no time to hit the panic button, but another loss against a promotion side may well send Manchester United into crisis. PLUS: We head to Germany for the start of the Bundesliga, and Wrexham vs. Birmingham face-off.",
+          "link": "https://www.espn.com/soccer/story/_/id/49733346/weekend-predictions-preview-analysis-pressure-manchester-united-carrick-already-wrexham-vs-birmingham-city",
+          "image": "https://a.espncdn.com/photo/2026/0827/r1707508_1296x729_16-9.jpg",
+          "source": "الدوري الهولندي",
+          "published": "2026-08-28T09:50:24Z"
         }
       ],
       "teams": [
         {
-          "id": "172",
-          "name": "AJ Auxerre",
-          "short_name": "Auxerre",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
-          "abbreviation": "AUX"
+          "id": "2726",
+          "name": "ADO Den Haag",
+          "short_name": "ADO Den Haag",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png",
+          "abbreviation": "ADO"
         },
         {
-          "id": "174",
-          "name": "AS Monaco",
-          "short_name": "Monaco",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
-          "abbreviation": "MON"
+          "id": "140",
+          "name": "AZ Alkmaar",
+          "short_name": "AZ Alkmaar",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
+          "abbreviation": "AZ"
         },
         {
-          "id": "7868",
-          "name": "Angers",
-          "short_name": "Angers",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
-          "abbreviation": "ANG"
+          "id": "139",
+          "name": "Ajax Amsterdam",
+          "short_name": "Ajax",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+          "abbreviation": "AJA"
         },
         {
-          "id": "6997",
-          "name": "Brest",
-          "short_name": "Brest",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png",
-          "abbreviation": "BRE"
+          "id": "2566",
+          "name": "Excelsior",
+          "short_name": "Excelsior",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png",
+          "abbreviation": "EXC"
         },
         {
-          "id": "3236",
-          "name": "Le Havre AC",
-          "short_name": "Le Havre AC",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png",
-          "abbreviation": "HAC"
+          "id": "145",
+          "name": "FC Groningen",
+          "short_name": "FC Groningen",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png",
+          "abbreviation": "GRO"
         },
         {
-          "id": "2697",
-          "name": "Le Mans",
-          "short_name": "Le Mans",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
-          "abbreviation": "MNS"
+          "id": "152",
+          "name": "FC Twente",
+          "short_name": "FC Twente",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+          "abbreviation": "TWE"
         },
         {
-          "id": "175",
-          "name": "Lens",
-          "short_name": "Lens",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
-          "abbreviation": "RCL"
+          "id": "153",
+          "name": "FC Utrecht",
+          "short_name": "FC Utrecht",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png",
+          "abbreviation": "UTR"
         },
         {
-          "id": "166",
-          "name": "Lille",
-          "short_name": "Lille",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png",
-          "abbreviation": "LILL"
+          "id": "142",
+          "name": "Feyenoord Rotterdam",
+          "short_name": "Feyenoord",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+          "abbreviation": "FEY"
         },
         {
-          "id": "273",
-          "name": "Lorient",
-          "short_name": "Lorient",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
-          "abbreviation": "LOR"
+          "id": "143",
+          "name": "Fortuna Sittard",
+          "short_name": "Fortuna",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/143.png",
+          "abbreviation": "FOR"
         },
         {
-          "id": "167",
-          "name": "Lyon",
-          "short_name": "Lyon",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
-          "abbreviation": "LYON"
+          "id": "3706",
+          "name": "Go Ahead Eagles",
+          "short_name": "Go Ahead Eagles",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png",
+          "abbreviation": "GAE"
         },
         {
-          "id": "176",
-          "name": "Marseille",
-          "short_name": "Marseille",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
-          "abbreviation": "OLM"
+          "id": "146",
+          "name": "Heerenveen",
+          "short_name": "Heerenveen",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png",
+          "abbreviation": "HEE"
         },
         {
-          "id": "2502",
-          "name": "Nice",
-          "short_name": "Nice",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png",
-          "abbreviation": "NICE"
+          "id": "147",
+          "name": "NEC Nijmegen",
+          "short_name": "NEC",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
+          "abbreviation": "NEC"
         },
         {
-          "id": "6851",
-          "name": "Paris FC",
-          "short_name": "Paris FC",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
-          "abbreviation": "PAR"
+          "id": "2565",
+          "name": "PEC Zwolle",
+          "short_name": "PEC Zwolle",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png",
+          "abbreviation": "PEC"
         },
         {
-          "id": "160",
-          "name": "Paris Saint-Germain",
-          "short_name": "PSG",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
-          "abbreviation": "PSG"
+          "id": "148",
+          "name": "PSV Eindhoven",
+          "short_name": "PSV",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+          "abbreviation": "PSV"
         },
         {
-          "id": "169",
-          "name": "Stade Rennais",
-          "short_name": "Rennes",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
-          "abbreviation": "REN"
+          "id": "3736",
+          "name": "SC Cambuur",
+          "short_name": "Cambuur",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3736.png",
+          "abbreviation": "CAM"
         },
         {
-          "id": "180",
-          "name": "Strasbourg",
-          "short_name": "Strasbourg",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/180.png",
-          "abbreviation": "STR"
+          "id": "151",
+          "name": "Sparta Rotterdam",
+          "short_name": "Sparta",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png",
+          "abbreviation": "SPA"
         },
         {
-          "id": "179",
-          "name": "Toulouse",
-          "short_name": "Toulouse",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/179.png",
-          "abbreviation": "TOU"
+          "id": "3735",
+          "name": "Telstar",
+          "short_name": "Telstar",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png",
+          "abbreviation": "TEL"
         },
         {
-          "id": "170",
-          "name": "Troyes",
-          "short_name": "Troyes",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/170.png",
-          "abbreviation": "TRY"
+          "id": "156",
+          "name": "Willem II",
+          "short_name": "Willem II",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/156.png",
+          "abbreviation": "WIL"
         }
       ],
       "standings": [
         {
-          "name": "Paris Saint-Germain",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/160.png",
+          "name": "Feyenoord Rotterdam",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
           "rank": "1",
-          "points": "20",
-          "played": "9",
-          "wins": "6",
-          "draws": "2",
-          "losses": "1",
-          "goal_difference": "+11"
+          "points": "25",
+          "played": "11",
+          "wins": "7",
+          "draws": "4",
+          "losses": "0",
+          "goal_difference": "+21"
         },
         {
-          "name": "Lille",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/166.png",
+          "name": "Ajax Amsterdam",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
           "rank": "2",
-          "points": "18",
-          "played": "9",
-          "wins": "5",
+          "points": "24",
+          "played": "11",
+          "wins": "7",
           "draws": "3",
           "losses": "1",
-          "goal_difference": "+6"
+          "goal_difference": "+17"
         },
         {
-          "name": "Lyon",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/167.png",
+          "name": "PSV Eindhoven",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
           "rank": "3",
-          "points": "17",
-          "played": "9",
-          "wins": "5",
+          "points": "23",
+          "played": "11",
+          "wins": "7",
           "draws": "2",
           "losses": "2",
-          "goal_difference": "+8"
+          "goal_difference": "+22"
         },
         {
-          "name": "Paris FC",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6851.png",
+          "name": "FC Twente",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
           "rank": "4",
-          "points": "17",
-          "played": "9",
-          "wins": "5",
+          "points": "23",
+          "played": "11",
+          "wins": "7",
           "draws": "2",
           "losses": "2",
-          "goal_difference": "+6"
+          "goal_difference": "+18"
         },
         {
-          "name": "Stade Rennais",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/169.png",
+          "name": "AZ Alkmaar",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
           "rank": "5",
-          "points": "16",
-          "played": "9",
-          "wins": "5",
-          "draws": "1",
+          "points": "20",
+          "played": "11",
+          "wins": "6",
+          "draws": "2",
           "losses": "3",
-          "goal_difference": "+1"
-        },
-        {
-          "name": "Marseille",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/176.png",
-          "rank": "6",
-          "points": "15",
-          "played": "9",
-          "wins": "5",
-          "draws": "0",
-          "losses": "4",
           "goal_difference": "+7"
         },
         {
-          "name": "AS Monaco",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/174.png",
+          "name": "Fortuna Sittard",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/143.png",
+          "rank": "6",
+          "points": "19",
+          "played": "11",
+          "wins": "5",
+          "draws": "4",
+          "losses": "2",
+          "goal_difference": "0"
+        },
+        {
+          "name": "Heerenveen",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png",
           "rank": "7",
+          "points": "18",
+          "played": "11",
+          "wins": "5",
+          "draws": "3",
+          "losses": "3",
+          "goal_difference": "+6"
+        },
+        {
+          "name": "FC Groningen",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png",
+          "rank": "8",
           "points": "15",
-          "played": "9",
+          "played": "11",
           "wins": "4",
           "draws": "3",
-          "losses": "2",
+          "losses": "4",
           "goal_difference": "+2"
         },
         {
-          "name": "Nice",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2502.png",
-          "rank": "8",
-          "points": "14",
-          "played": "9",
+          "name": "SC Cambuur",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3736.png",
+          "rank": "9",
+          "points": "15",
+          "played": "11",
           "wins": "4",
-          "draws": "2",
-          "losses": "3",
+          "draws": "3",
+          "losses": "4",
           "goal_difference": "+1"
         },
         {
-          "name": "Lens",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/175.png",
-          "rank": "9",
-          "points": "13",
-          "played": "9",
-          "wins": "4",
-          "draws": "1",
-          "losses": "4",
-          "goal_difference": "+3"
+          "name": "Go Ahead Eagles",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png",
+          "rank": "10",
+          "points": "14",
+          "played": "11",
+          "wins": "3",
+          "draws": "5",
+          "losses": "3",
+          "goal_difference": "-4"
         },
         {
-          "name": "Lorient",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/273.png",
-          "rank": "10",
+          "name": "Sparta Rotterdam",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png",
+          "rank": "11",
           "points": "12",
-          "played": "8",
+          "played": "11",
           "wins": "3",
           "draws": "3",
-          "losses": "2",
-          "goal_difference": "+1"
-        },
-        {
-          "name": "Toulouse",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/179.png",
-          "rank": "11",
-          "points": "10",
-          "played": "9",
-          "wins": "2",
-          "draws": "4",
-          "losses": "3",
-          "goal_difference": "-1"
-        },
-        {
-          "name": "Strasbourg",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/180.png",
-          "rank": "12",
-          "points": "10",
-          "played": "9",
-          "wins": "3",
-          "draws": "1",
           "losses": "5",
+          "goal_difference": "-6"
+        },
+        {
+          "name": "FC Utrecht",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png",
+          "rank": "12",
+          "points": "12",
+          "played": "11",
+          "wins": "3",
+          "draws": "3",
+          "losses": "5",
+          "goal_difference": "-12"
+        },
+        {
+          "name": "NEC Nijmegen",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
+          "rank": "13",
+          "points": "11",
+          "played": "11",
+          "wins": "2",
+          "draws": "5",
+          "losses": "4",
           "goal_difference": "-2"
         },
         {
-          "name": "AJ Auxerre",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/172.png",
-          "rank": "13",
-          "points": "10",
-          "played": "9",
+          "name": "PEC Zwolle",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png",
+          "rank": "14",
+          "points": "11",
+          "played": "11",
           "wins": "3",
-          "draws": "1",
-          "losses": "5",
-          "goal_difference": "-10"
+          "draws": "2",
+          "losses": "6",
+          "goal_difference": "-11"
         },
         {
-          "name": "Brest",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/6997.png",
-          "rank": "14",
+          "name": "Excelsior",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png",
+          "rank": "15",
+          "points": "11",
+          "played": "11",
+          "wins": "3",
+          "draws": "2",
+          "losses": "6",
+          "goal_difference": "-12"
+        },
+        {
+          "name": "Telstar",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png",
+          "rank": "16",
           "points": "9",
-          "played": "8",
+          "played": "11",
           "wins": "2",
           "draws": "3",
-          "losses": "3",
-          "goal_difference": "+2"
-        },
-        {
-          "name": "Angers",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7868.png",
-          "rank": "15",
-          "points": "8",
-          "played": "9",
-          "wins": "2",
-          "draws": "2",
-          "losses": "5",
-          "goal_difference": "-8"
-        },
-        {
-          "name": "Troyes",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/170.png",
-          "rank": "16",
-          "points": "8",
-          "played": "9",
-          "wins": "2",
-          "draws": "2",
-          "losses": "5",
-          "goal_difference": "-9"
-        },
-        {
-          "name": "Le Mans",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2697.png",
-          "rank": "17",
-          "points": "7",
-          "played": "9",
-          "wins": "1",
-          "draws": "4",
-          "losses": "4",
+          "losses": "6",
           "goal_difference": "-7"
         },
         {
-          "name": "Le Havre AC",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3236.png",
-          "rank": "18",
-          "points": "2",
-          "played": "9",
-          "wins": "0",
-          "draws": "2",
-          "losses": "7",
-          "goal_difference": "-11"
-        }
-      ],
-      "updated_at": "2026-11-01T22:15:37Z",
-      "stale": false,
-      "errors": []
-    },
-    "soccer/ger.1": {
-      "name": "الدوري الألماني",
-      "category": "football",
-      "matches": [
-        {
-          "id": "401884750",
-          "date": "2026-11-01T14:30Z",
-          "time": "2026-11-01T14:30Z",
-          "home": {
-            "name": "1. FC Union Berlin",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
-            "score": "1"
-          },
-          "away": {
-            "name": "FC Cologne",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
-            "score": "1"
-          },
-          "status": "post",
-          "detail": "FT",
-          "venue": "Stadion An der Alten Försterei",
-          "broadcast": "Fandango",
-          "status_detail": "FT",
-          "status_short": "FT",
-          "period": 2,
-          "clock": "90'+2'"
-        },
-        {
-          "id": "401884752",
-          "date": "2026-11-01T16:30Z",
-          "time": "2026-11-01T16:30Z",
-          "home": {
-            "name": "Eintracht Frankfurt",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
-            "score": "3"
-          },
-          "away": {
-            "name": "Hamburg SV",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
-            "score": "1"
-          },
-          "status": "post",
-          "detail": "FT",
-          "venue": "Deutsche Bank Park",
-          "broadcast": "USA Net",
-          "status_detail": "FT",
-          "status_short": "FT",
-          "period": 2,
-          "clock": "90'+9'"
-        }
-      ],
-      "news": [
-        {
-          "headline": "Harry Kane misses penalty as Bayern Munich draw with Borussia Dortmund ",
-          "description": "Ballon d'Or winner Harry Kane missed a penalty as Bayern Munich were held by Der Klassiker rivals Borussia Dortmund in a 2-2 draw at the Allianz Arena.",
-          "link": "http://www.espn.com/soccer/report/_/gameId/401884754",
-          "image": "https://a.espncdn.com/photo/2026/1031/r1739072_1296x729_16-9.jpg",
-          "source": "الدوري الألماني",
-          "published": "2026-10-31T19:54:52Z"
-        },
-        {
-          "headline": "Harry Kane parades Ballon d'Or in front of Bayern Munich fans before Borussia Dortmund clash",
-          "description": "Harry Kane paraded the Ballon d'Or in front of fans at the Allianz Arena before Bayern Munich's game against Borussia Dortmund on Saturday, his first appearance since winning the award.",
-          "link": "https://www.espn.com/soccer/story/_/id/50337824/harry-kane-parades-ballon-dor-bayern-munich-borussia-dortmund",
-          "image": "https://a.espncdn.com/photo/2026/1031/r1739038_1296x729_16-9.jpg",
-          "source": "الدوري الألماني",
-          "published": "2026-10-31T21:11:10Z"
-        },
-        {
-          "headline": "Bayern Munich not allowing Kompany to be involved in Dortmund clash",
-          "description": "Vincent Kompany won't be on the sidelines for Bayern's match against Borussia Dortmund following his hospitalization last week.",
-          "link": "https://www.espn.com/soccer/story/_/id/50328630/vincent-kompany-sit-bayern-dortmund-leaving-hospital",
-          "image": "https://a.espncdn.com/photo/2026/0909/r1713698_1296x729_16-9.jpg",
-          "source": "الدوري الألماني",
-          "published": "2026-10-30T18:47:23Z"
-        },
-        {
-          "headline": "Global power ranking: The top 20 soccer teams in the world, ranked!",
-          "description": "If we look beyond the Premier League and beyond those who qualified for the Champions League, which are the best teams in the world?",
-          "link": "https://www.espn.com/soccer/story/_/id/50312487/top-20-soccer-teams-world-ranked",
-          "image": "https://a.espncdn.com/photo/2026/1030/r1738425_1296x729_16-9.jpg",
-          "source": "الدوري الألماني",
-          "published": "2026-10-30T12:06:05Z"
-        },
-        {
-          "headline": "Man City, Bayern among the good, bad and lucky in Europe's top leagues",
-          "description": "We're a quarter of the way through the 2026-27 European season -- long enough to separate fact from fiction when it comes to from. Who's been lucky? Who's been good? Who's been both, or neither?",
-          "link": "https://www.espn.com/soccer/story/_/id/50309811/man-city-bayern-munich-como-sunderland-good-bad-lucky-european-soccer",
-          "image": "https://a.espncdn.com/photo/2026/1029/r1738028_1296x729_16-9.jpg",
-          "source": "الدوري الألماني",
-          "published": "2026-10-29T16:26:42Z"
-        },
-        {
-          "headline": "Borussia Dortmund must stop Bayern's 'sensational' Harry Kane - Kovac",
-          "description": "Borussia Dortmund coach Niko Kovac has called on his players to work together to stop \"sensational\" Ballon d'Or winner Harry Kane against Bayern Munich.",
-          "link": "https://www.espn.com/soccer/story/_/id/50317977/borussia-dortmund-stop-bayern-munich-harry-kane-kovac",
-          "image": "https://a.espncdn.com/photo/2026/1029/r1738028_1296x729_16-9.jpg",
-          "source": "الدوري الألماني",
-          "published": "2026-10-29T14:33:40Z"
-        }
-      ],
-      "teams": [
-        {
-          "id": "598",
-          "name": "1. FC Union Berlin",
-          "short_name": "Union Berlin",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
-          "abbreviation": "FCU"
-        },
-        {
-          "id": "131",
-          "name": "Bayer Leverkusen",
-          "short_name": "Leverkusen",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
-          "abbreviation": "B04"
-        },
-        {
-          "id": "132",
-          "name": "Bayern Munich",
-          "short_name": "Bayern",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
-          "abbreviation": "MUN"
-        },
-        {
-          "id": "124",
-          "name": "Borussia Dortmund",
-          "short_name": "Dortmund",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
-          "abbreviation": "DOR"
-        },
-        {
-          "id": "268",
-          "name": "Borussia Mönchengladbach",
-          "short_name": "Gladbach",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
-          "abbreviation": "BMG"
-        },
-        {
-          "id": "125",
-          "name": "Eintracht Frankfurt",
-          "short_name": "Frankfurt",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
-          "abbreviation": "SGE"
-        },
-        {
-          "id": "3841",
-          "name": "FC Augsburg",
-          "short_name": "Augsburg",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
-          "abbreviation": "FCA"
-        },
-        {
-          "id": "122",
-          "name": "FC Cologne",
-          "short_name": "Cologne",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
-          "abbreviation": "KOE"
-        },
-        {
-          "id": "127",
-          "name": "Hamburg SV",
-          "short_name": "Hamburg",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
-          "abbreviation": "HSV"
-        },
-        {
-          "id": "2950",
-          "name": "Mainz",
-          "short_name": "Mainz",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
-          "abbreviation": "M05"
-        },
-        {
-          "id": "11420",
-          "name": "RB Leipzig",
-          "short_name": "RB Leipzig",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
-          "abbreviation": "RBL"
-        },
-        {
-          "id": "126",
-          "name": "SC Freiburg",
-          "short_name": "Freiburg",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
-          "abbreviation": "SCF"
-        },
-        {
-          "id": "3307",
-          "name": "SC Paderborn 07",
-          "short_name": "Paderborn",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
-          "abbreviation": "SCP"
-        },
-        {
-          "id": "10388",
-          "name": "SV Elversberg",
-          "short_name": "Elversberg",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10388.png",
-          "abbreviation": "ELV"
-        },
-        {
-          "id": "133",
-          "name": "Schalke 04",
-          "short_name": "Schalke",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
-          "abbreviation": "S04"
-        },
-        {
-          "id": "7911",
-          "name": "TSG Hoffenheim",
-          "short_name": "Hoffenheim",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
-          "abbreviation": "TSG"
-        },
-        {
-          "id": "134",
-          "name": "VfB Stuttgart",
-          "short_name": "Stuttgart",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
-          "abbreviation": "VFB"
-        },
-        {
-          "id": "137",
-          "name": "Werder Bremen",
-          "short_name": "Bremen",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
-          "abbreviation": "SVW"
-        }
-      ],
-      "standings": [
-        {
-          "name": "Bayern Munich",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
-          "rank": "1",
-          "points": "18",
-          "played": "8",
-          "wins": "5",
-          "draws": "3",
-          "losses": "0",
-          "goal_difference": "+19"
-        },
-        {
-          "name": "Borussia Dortmund",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
-          "rank": "2",
-          "points": "18",
-          "played": "8",
-          "wins": "5",
-          "draws": "3",
-          "losses": "0",
-          "goal_difference": "+8"
-        },
-        {
-          "name": "SC Freiburg",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
-          "rank": "3",
-          "points": "16",
-          "played": "8",
-          "wins": "5",
-          "draws": "1",
-          "losses": "2",
-          "goal_difference": "+8"
-        },
-        {
-          "name": "RB Leipzig",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
-          "rank": "4",
-          "points": "15",
-          "played": "8",
-          "wins": "5",
-          "draws": "0",
-          "losses": "3",
-          "goal_difference": "+11"
-        },
-        {
-          "name": "Werder Bremen",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
-          "rank": "5",
-          "points": "15",
-          "played": "8",
-          "wins": "4",
-          "draws": "3",
-          "losses": "1",
-          "goal_difference": "+3"
-        },
-        {
-          "name": "Bayer Leverkusen",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
-          "rank": "6",
-          "points": "13",
-          "played": "8",
-          "wins": "4",
-          "draws": "1",
-          "losses": "3",
-          "goal_difference": "+2"
-        },
-        {
-          "name": "SV Elversberg",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10388.png",
-          "rank": "7",
-          "points": "13",
-          "played": "8",
-          "wins": "4",
-          "draws": "1",
-          "losses": "3",
-          "goal_difference": "0"
-        },
-        {
-          "name": "Eintracht Frankfurt",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
-          "rank": "8",
-          "points": "11",
-          "played": "8",
-          "wins": "3",
-          "draws": "2",
-          "losses": "3",
-          "goal_difference": "-5"
-        },
-        {
-          "name": "Mainz",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
-          "rank": "9",
-          "points": "10",
-          "played": "8",
-          "wins": "3",
-          "draws": "1",
-          "losses": "4",
-          "goal_difference": "0"
-        },
-        {
-          "name": "FC Augsburg",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
-          "rank": "10",
-          "points": "9",
-          "played": "8",
-          "wins": "2",
-          "draws": "3",
-          "losses": "3",
-          "goal_difference": "+3"
-        },
-        {
-          "name": "VfB Stuttgart",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
-          "rank": "11",
-          "points": "9",
-          "played": "8",
-          "wins": "3",
-          "draws": "0",
-          "losses": "5",
-          "goal_difference": "-1"
-        },
-        {
-          "name": "TSG Hoffenheim",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
-          "rank": "12",
-          "points": "9",
-          "played": "8",
-          "wins": "3",
-          "draws": "0",
-          "losses": "5",
-          "goal_difference": "-2"
-        },
-        {
-          "name": "FC Cologne",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
-          "rank": "13",
-          "points": "9",
-          "played": "8",
-          "wins": "2",
-          "draws": "3",
-          "losses": "3",
-          "goal_difference": "-3"
-        },
-        {
-          "name": "SC Paderborn 07",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
-          "rank": "14",
-          "points": "9",
-          "played": "8",
-          "wins": "2",
-          "draws": "3",
-          "losses": "3",
-          "goal_difference": "-3"
-        },
-        {
-          "name": "Hamburg SV",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
-          "rank": "15",
-          "points": "9",
-          "played": "8",
-          "wins": "3",
-          "draws": "0",
-          "losses": "5",
-          "goal_difference": "-12"
-        },
-        {
-          "name": "1. FC Union Berlin",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
-          "rank": "16",
-          "points": "7",
-          "played": "8",
-          "wins": "1",
-          "draws": "4",
-          "losses": "3",
-          "goal_difference": "-12"
-        },
-        {
-          "name": "Schalke 04",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
+          "name": "ADO Den Haag",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png",
           "rank": "17",
           "points": "6",
-          "played": "8",
+          "played": "11",
           "wins": "1",
           "draws": "3",
-          "losses": "4",
-          "goal_difference": "-5"
+          "losses": "7",
+          "goal_difference": "-11"
         },
         {
-          "name": "Borussia Mönchengladbach",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
+          "name": "Willem II",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/156.png",
           "rank": "18",
-          "points": "4",
-          "played": "8",
-          "wins": "1",
-          "draws": "1",
-          "losses": "6",
-          "goal_difference": "-11"
+          "points": "2",
+          "played": "11",
+          "wins": "0",
+          "draws": "2",
+          "losses": "9",
+          "goal_difference": "-29"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:01Z",
       "stale": false,
       "errors": []
     },
@@ -3436,486 +3013,909 @@
           "goal_difference": "-14"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:01Z",
       "stale": false,
       "errors": []
     },
-    "soccer/ned.1": {
-      "name": "الدوري الهولندي",
+    "soccer/eng.1": {
+      "name": "الدوري الإنجليزي الممتاز",
       "category": "football",
       "matches": [
         {
-          "id": "401875560",
-          "date": "2026-11-01T11:15Z",
-          "time": "2026-11-01T11:15Z",
+          "id": "401879246",
+          "date": "2026-11-01T16:30Z",
+          "time": "2026-11-01T16:30Z",
           "home": {
-            "name": "PEC Zwolle",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png",
+            "name": "Liverpool",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+            "score": "0"
+          },
+          "away": {
+            "name": "Arsenal",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
             "score": "1"
           },
-          "away": {
-            "name": "ADO Den Haag",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png",
-            "score": "0"
-          },
           "status": "post",
           "detail": "FT",
-          "venue": "MAC³PARK Stadion",
-          "broadcast": "",
+          "venue": "Anfield",
+          "broadcast": "NBCSN",
           "status_detail": "FT",
           "status_short": "FT",
           "period": 2,
-          "clock": "90'+4'"
+          "clock": "90'+7'"
         },
         {
-          "id": "401875559",
-          "date": "2026-11-01T13:30Z",
-          "time": "2026-11-01T13:30Z",
+          "id": "401878762",
+          "date": "2026-11-02T20:00Z",
+          "time": "2026-11-02T20:00Z",
           "home": {
-            "name": "Excelsior",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png",
+            "name": "Newcastle United",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
             "score": "0"
           },
           "away": {
-            "name": "FC Twente",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
-            "score": "9"
+            "name": "Everton",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+            "score": "0"
           },
-          "status": "post",
-          "detail": "FT",
-          "venue": "Stadion Woudestein",
-          "broadcast": "",
-          "status_detail": "FT",
-          "status_short": "FT",
-          "period": 2,
-          "clock": "90'+3'"
-        },
-        {
-          "id": "401875558",
-          "date": "2026-11-01T13:30Z",
-          "time": "2026-11-01T13:30Z",
-          "home": {
-            "name": "Telstar",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png",
-            "score": "4"
-          },
-          "away": {
-            "name": "FC Utrecht",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png",
-            "score": "2"
-          },
-          "status": "post",
-          "detail": "FT",
-          "venue": "711 Stadion",
-          "broadcast": "",
-          "status_detail": "FT",
-          "status_short": "FT",
-          "period": 2,
-          "clock": "90'+4'"
-        },
-        {
-          "id": "401875557",
-          "date": "2026-11-01T15:45Z",
-          "time": "2026-11-01T15:45Z",
-          "home": {
-            "name": "FC Groningen",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png",
-            "score": "2"
-          },
-          "away": {
-            "name": "Sparta Rotterdam",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png",
-            "score": "3"
-          },
-          "status": "post",
-          "detail": "FT",
-          "venue": "Euroborg",
-          "broadcast": "",
-          "status_detail": "FT",
-          "status_short": "FT",
-          "period": 2,
-          "clock": "90'+4'"
+          "status": "pre",
+          "detail": "Scheduled",
+          "venue": "St. James' Park",
+          "broadcast": "USA Net",
+          "status_detail": "Mon, November 2nd at 3:00 PM EST",
+          "status_short": "Scheduled",
+          "period": null,
+          "clock": "0'"
         }
       ],
       "news": [
         {
-          "headline": "Soccer's best 2025-26 kits: The most stylish jerseys you probably missed",
-          "description": "While the world's top clubs release their new kits on a wave of hype, there are many more who release absolutely banging jerseys that deserve to be seen.",
-          "link": "https://www.espn.com/soccer/story/_/id/49812807/soccer-best-kits-2025-26-stylish-jerseys-probably-missed",
-          "image": "https://a.espncdn.com/photo/2026/0904/r1711227_1296x729_16-9.jpg",
-          "source": "الدوري الهولندي",
-          "published": "2026-09-29T07:38:13Z"
+          "headline": "Ex-Liverpool, Man City star Milner runs NYC Marathon in just over three hours",
+          "description": "It's clear James Milner is enjoying his retirement from soccer, as he ran the 2026 NYC Marathon on Sunday with an impressive time. Did we mention he's 40 years old?",
+          "link": "https://www.espn.com/soccer/story/_/id/50350050/james-milner-liverpool-man-city-england-runs-nyc-new-york-marathon-three-hours",
+          "image": "https://a.espncdn.com/photo/2026/1101/r1739636_1296x729_16-9.png",
+          "source": "الدوري الإنجليزي الممتاز",
+          "published": "2026-11-01T19:59:54Z"
         },
         {
-          "headline": "Ricardo Pepi's injury in PSV match a concern for USMNT",
-          "description": "PSV Eindhoven striker Ricardo Pepi had to be substituted because of injury in the club's match on Sunday, giving the U.S. men's national team a possible selection headache.",
-          "link": "https://www.espn.com/soccer/story/_/id/49988715/ricardo-pepi-injury-psv-match-concern-usmnt",
-          "image": "https://a.espncdn.com/photo/2026/0920/r1719409_1296x729_16-9.jpg",
-          "source": "الدوري الهولندي",
-          "published": "2026-09-20T13:45:33Z"
+          "headline": "Arteta says Arsenal 'loved the mission' in first Anfield win since 2012",
+          "description": "Mikel Arteta said his players \"loved the mission\" of winning at Liverpool for the first time in 14 years as he hailed Sunday's \"historic\" 1-0 victory at Anfield.",
+          "link": "https://www.espn.com/soccer/story/_/id/50349973/arteta-arsenal-loved-mission-anfield-win",
+          "image": "https://a.espncdn.com/photo/2026/1101/r1739642_1296x729_16-9.jpg",
+          "source": "الدوري الإنجليزي الممتاز",
+          "published": "2026-11-01T21:05:51Z"
         },
         {
-          "headline": "Ajax's Thilo Kehrer using his success to help Burundi's children",
-          "description": "Thilo Kehrer may have joined Ajax Amsterdam on loan from AS Monaco, but his mission away from football remains unchanged -- he is aiming to leverage his success in football to help children in Burundi.",
-          "link": "https://www.espn.com/espn/story/_/id/49901824/ajax-thilo-kehrer-using-success-help-burundi-children",
-          "image": "https://a.espncdn.com/photo/2026/0911/r1714790_1296x729_16-9.jpg",
-          "source": "الدوري الهولندي",
-          "published": "2026-09-11T10:18:43Z"
+          "headline": "Did VAR get Liverpool's penalty calls wrong against Arsenal?",
+          "description": "Did VAR get Liverpool's penalty calls wrong against Arsenal?",
+          "link": "https://www.espn.com/video/clip/_/id/50349966/did-var-get-liverpool-penalty-calls-wrong-arsenal",
+          "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/dm_261101_COM_SOC_ANALYSIS_Did_VAR_get_Liverpoos_penalty_calls_wrong_against_Arsenal_2026_11_1/dm_261101_COM_SOC_ANALYSIS_Did_VAR_get_Liverpoos_penalty_calls_wrong_against_Arsenal_2026_11_1.jpg",
+          "source": "الدوري الإنجليزي الممتاز",
+          "published": "2026-11-01T19:40:59Z"
         },
         {
-          "headline": "Goalkeeper Ronald Koeman Jr. scores twice to secure dramatic comeback point in Eredivisie",
-          "description": "Goalkeeper Ronald Koeman Jr, was on the scoresheet not once, but twice for Telstar in the Dutch Eredivisie on Sunday.",
-          "link": "https://www.espn.com/soccer/story/_/id/49851757/goalkeeper-ronald-koeman-jr-scores-twice-secure-dramatic-comeback-point-eredivisie",
-          "image": "https://a.espncdn.com/photo/2026/0906/r1712443_1296x729_16-9.jpg",
-          "source": "الدوري الهولندي",
-          "published": "2026-09-06T20:38:30Z"
+          "headline": "Nicol: Arsenal showed what it takes to be champions",
+          "description": "Nicol: Arsenal showed what it takes to be champions",
+          "link": "https://www.espn.com/video/clip/_/id/50349936/arsenal-showed-takes-champions",
+          "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/dm_261101_COM_SOC_ANALYSIS_Nicol_Arsenal_showed_what_it_takes_to_be_champions_2026_11_1/dm_261101_COM_SOC_ANALYSIS_Nicol_Arsenal_showed_what_it_takes_to_be_champions_2026_11_1.jpg",
+          "source": "الدوري الإنجليزي الممتاز",
+          "published": "2026-11-01T19:38:11Z"
         },
         {
-          "headline": "Man United loan teen striker Chido Obi to Dutch side Willem II",
-          "description": "Manchester United striker Chido Obi has joined Dutch side Willem II on a season-long loan deal",
-          "link": "https://www.espn.com/soccer/story/_/id/49807577/man-united-chido-obi-loan-willem-ii",
-          "image": "https://a.espncdn.com/photo/2026/0902/r1710630_1296x729_16-9.jpg",
-          "source": "الدوري الهولندي",
-          "published": "2026-09-02T22:45:44Z"
+          "headline": "What went wrong for Liverpool in attack against Arsenal?",
+          "description": "What went wrong for Liverpool in attack against Arsenal?",
+          "link": "https://www.espn.com/video/clip/_/id/50349875/what-went-wrong-liverpool-attack-arsenal",
+          "image": "https://espnmedia-cdn.akamaized.net/espn/media/common/2026/1101/dm_261101_COM_SOC_ANALYSIS_What_went_wrong_for_Liverpool_in_attack_against_Arsenal_2026_11_1/dm_261101_COM_SOC_ANALYSIS_What_went_wrong_for_Liverpool_in_attack_against_Arsenal_2026_11_1.jpg",
+          "source": "الدوري الإنجليزي الممتاز",
+          "published": "2026-11-01T19:30:45Z"
         },
         {
-          "headline": "Weekend predictions: Pressure on Man United, Carrick already? Wrexham to beat Birmingham?",
-          "description": "Late August is no time to hit the panic button, but another loss against a promotion side may well send Manchester United into crisis. PLUS: We head to Germany for the start of the Bundesliga, and Wrexham vs. Birmingham face-off.",
-          "link": "https://www.espn.com/soccer/story/_/id/49733346/weekend-predictions-preview-analysis-pressure-manchester-united-carrick-already-wrexham-vs-birmingham-city",
-          "image": "https://a.espncdn.com/photo/2026/0827/r1707508_1296x729_16-9.jpg",
-          "source": "الدوري الهولندي",
-          "published": "2026-08-28T09:50:24Z"
+          "headline": "Arsenal hold on for a big win at Liverpool, one Iraola & Co. can learn from",
+          "description": "Arsenal's defense held firm against the Reds' expensive attack to notch a famous win at Anfield for the first time since 2012. However, there were positive signs for Liverpool when it came to their intensity and effort.",
+          "link": "https://www.espn.com/soccer/story/_/id/50348895/liverpool-arsenal-live-analysis-reaction-statistics-premier-league",
+          "image": "https://a.espncdn.com/photo/2026/1101/r1739556_3_1296x729_16-9.jpg",
+          "source": "الدوري الإنجليزي الممتاز",
+          "published": "2026-11-01T21:00:14Z"
         }
       ],
       "teams": [
         {
-          "id": "2726",
-          "name": "ADO Den Haag",
-          "short_name": "ADO Den Haag",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png",
-          "abbreviation": "ADO"
+          "id": "349",
+          "name": "AFC Bournemouth",
+          "short_name": "Bournemouth",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+          "abbreviation": "BOU"
         },
         {
-          "id": "140",
-          "name": "AZ Alkmaar",
-          "short_name": "AZ Alkmaar",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
-          "abbreviation": "AZ"
+          "id": "359",
+          "name": "Arsenal",
+          "short_name": "Arsenal",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+          "abbreviation": "ARS"
         },
         {
-          "id": "139",
-          "name": "Ajax Amsterdam",
-          "short_name": "Ajax",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
-          "abbreviation": "AJA"
+          "id": "362",
+          "name": "Aston Villa",
+          "short_name": "Aston Villa",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+          "abbreviation": "AVL"
         },
         {
-          "id": "2566",
-          "name": "Excelsior",
-          "short_name": "Excelsior",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png",
-          "abbreviation": "EXC"
+          "id": "337",
+          "name": "Brentford",
+          "short_name": "Brentford",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+          "abbreviation": "BRE"
         },
         {
-          "id": "145",
-          "name": "FC Groningen",
-          "short_name": "FC Groningen",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png",
-          "abbreviation": "GRO"
+          "id": "331",
+          "name": "Brighton & Hove Albion",
+          "short_name": "Brighton",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+          "abbreviation": "BHA"
         },
         {
-          "id": "152",
-          "name": "FC Twente",
-          "short_name": "FC Twente",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
-          "abbreviation": "TWE"
+          "id": "363",
+          "name": "Chelsea",
+          "short_name": "Chelsea",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
+          "abbreviation": "CHE"
         },
         {
-          "id": "153",
-          "name": "FC Utrecht",
-          "short_name": "FC Utrecht",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png",
-          "abbreviation": "UTR"
+          "id": "388",
+          "name": "Coventry City",
+          "short_name": "Coventry",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
+          "abbreviation": "COV"
         },
         {
-          "id": "142",
-          "name": "Feyenoord Rotterdam",
-          "short_name": "Feyenoord",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
-          "abbreviation": "FEY"
+          "id": "384",
+          "name": "Crystal Palace",
+          "short_name": "C Palace",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+          "abbreviation": "CRY"
         },
         {
-          "id": "143",
-          "name": "Fortuna Sittard",
-          "short_name": "Fortuna",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/143.png",
-          "abbreviation": "FOR"
+          "id": "368",
+          "name": "Everton",
+          "short_name": "Everton",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+          "abbreviation": "EVE"
         },
         {
-          "id": "3706",
-          "name": "Go Ahead Eagles",
-          "short_name": "Go Ahead Eagles",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png",
-          "abbreviation": "GAE"
+          "id": "370",
+          "name": "Fulham",
+          "short_name": "Fulham",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+          "abbreviation": "FUL"
         },
         {
-          "id": "146",
-          "name": "Heerenveen",
-          "short_name": "Heerenveen",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png",
-          "abbreviation": "HEE"
+          "id": "306",
+          "name": "Hull City",
+          "short_name": "Hull",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png",
+          "abbreviation": "HUL"
         },
         {
-          "id": "147",
-          "name": "NEC Nijmegen",
-          "short_name": "NEC",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
-          "abbreviation": "NEC"
+          "id": "373",
+          "name": "Ipswich Town",
+          "short_name": "Ipswich",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
+          "abbreviation": "IPS"
         },
         {
-          "id": "2565",
-          "name": "PEC Zwolle",
-          "short_name": "PEC Zwolle",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png",
-          "abbreviation": "PEC"
+          "id": "357",
+          "name": "Leeds United",
+          "short_name": "Leeds",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+          "abbreviation": "LEE"
         },
         {
-          "id": "148",
-          "name": "PSV Eindhoven",
-          "short_name": "PSV",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
-          "abbreviation": "PSV"
+          "id": "364",
+          "name": "Liverpool",
+          "short_name": "Liverpool",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+          "abbreviation": "LIV"
         },
         {
-          "id": "3736",
-          "name": "SC Cambuur",
-          "short_name": "Cambuur",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3736.png",
-          "abbreviation": "CAM"
+          "id": "382",
+          "name": "Manchester City",
+          "short_name": "Man City",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+          "abbreviation": "MNC"
         },
         {
-          "id": "151",
-          "name": "Sparta Rotterdam",
-          "short_name": "Sparta",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png",
-          "abbreviation": "SPA"
+          "id": "360",
+          "name": "Manchester United",
+          "short_name": "Man Utd",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "abbreviation": "MAN"
         },
         {
-          "id": "3735",
-          "name": "Telstar",
-          "short_name": "Telstar",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png",
-          "abbreviation": "TEL"
+          "id": "361",
+          "name": "Newcastle United",
+          "short_name": "Newcastle",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
+          "abbreviation": "NEW"
         },
         {
-          "id": "156",
-          "name": "Willem II",
-          "short_name": "Willem II",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/156.png",
-          "abbreviation": "WIL"
+          "id": "393",
+          "name": "Nottingham Forest",
+          "short_name": "Nottm Forest",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
+          "abbreviation": "NFO"
+        },
+        {
+          "id": "366",
+          "name": "Sunderland",
+          "short_name": "Sunderland",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+          "abbreviation": "SUN"
+        },
+        {
+          "id": "367",
+          "name": "Tottenham Hotspur",
+          "short_name": "Spurs",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
+          "abbreviation": "TOT"
         }
       ],
       "standings": [
         {
-          "name": "Feyenoord Rotterdam",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+          "name": "Arsenal",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
           "rank": "1",
-          "points": "25",
-          "played": "11",
-          "wins": "7",
-          "draws": "4",
-          "losses": "0",
-          "goal_difference": "+21"
+          "points": "24",
+          "played": "9",
+          "wins": "8",
+          "draws": "0",
+          "losses": "1",
+          "goal_difference": "+9"
         },
         {
-          "name": "Ajax Amsterdam",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+          "name": "Manchester City",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
           "rank": "2",
-          "points": "24",
-          "played": "11",
+          "points": "21",
+          "played": "9",
           "wins": "7",
-          "draws": "3",
-          "losses": "1",
+          "draws": "0",
+          "losses": "2",
+          "goal_difference": "+10"
+        },
+        {
+          "name": "Brighton & Hove Albion",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+          "rank": "3",
+          "points": "19",
+          "played": "9",
+          "wins": "6",
+          "draws": "1",
+          "losses": "2",
           "goal_difference": "+17"
         },
         {
-          "name": "PSV Eindhoven",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
-          "rank": "3",
-          "points": "23",
-          "played": "11",
-          "wins": "7",
-          "draws": "2",
-          "losses": "2",
-          "goal_difference": "+22"
-        },
-        {
-          "name": "FC Twente",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+          "name": "Chelsea",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
           "rank": "4",
-          "points": "23",
-          "played": "11",
-          "wins": "7",
-          "draws": "2",
-          "losses": "2",
-          "goal_difference": "+18"
+          "points": "16",
+          "played": "9",
+          "wins": "5",
+          "draws": "1",
+          "losses": "3",
+          "goal_difference": "+4"
         },
         {
-          "name": "AZ Alkmaar",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
+          "name": "Liverpool",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
           "rank": "5",
-          "points": "20",
-          "played": "11",
-          "wins": "6",
-          "draws": "2",
-          "losses": "3",
-          "goal_difference": "+7"
-        },
-        {
-          "name": "Fortuna Sittard",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/143.png",
-          "rank": "6",
-          "points": "19",
-          "played": "11",
-          "wins": "5",
-          "draws": "4",
-          "losses": "2",
-          "goal_difference": "0"
-        },
-        {
-          "name": "Heerenveen",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png",
-          "rank": "7",
-          "points": "18",
-          "played": "11",
-          "wins": "5",
-          "draws": "3",
-          "losses": "3",
-          "goal_difference": "+6"
-        },
-        {
-          "name": "FC Groningen",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png",
-          "rank": "8",
           "points": "15",
-          "played": "11",
+          "played": "9",
           "wins": "4",
           "draws": "3",
-          "losses": "4",
+          "losses": "2",
           "goal_difference": "+2"
         },
         {
-          "name": "SC Cambuur",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3736.png",
-          "rank": "9",
-          "points": "15",
-          "played": "11",
-          "wins": "4",
+          "name": "Brentford",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+          "rank": "6",
+          "points": "14",
+          "played": "9",
+          "wins": "3",
+          "draws": "5",
+          "losses": "1",
+          "goal_difference": "+7"
+        },
+        {
+          "name": "AFC Bournemouth",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+          "rank": "7",
+          "points": "12",
+          "played": "9",
+          "wins": "3",
           "draws": "3",
-          "losses": "4",
+          "losses": "3",
           "goal_difference": "+1"
         },
         {
-          "name": "Go Ahead Eagles",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png",
-          "rank": "10",
-          "points": "14",
-          "played": "11",
+          "name": "Tottenham Hotspur",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
+          "rank": "8",
+          "points": "12",
+          "played": "9",
           "wins": "3",
-          "draws": "5",
+          "draws": "3",
           "losses": "3",
+          "goal_difference": "0"
+        },
+        {
+          "name": "Aston Villa",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+          "rank": "9",
+          "points": "12",
+          "played": "9",
+          "wins": "3",
+          "draws": "3",
+          "losses": "3",
+          "goal_difference": "-3"
+        },
+        {
+          "name": "Hull City",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png",
+          "rank": "10",
+          "points": "11",
+          "played": "9",
+          "wins": "2",
+          "draws": "5",
+          "losses": "2",
+          "goal_difference": "+1"
+        },
+        {
+          "name": "Leeds United",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+          "rank": "11",
+          "points": "11",
+          "played": "9",
+          "wins": "2",
+          "draws": "5",
+          "losses": "2",
+          "goal_difference": "+1"
+        },
+        {
+          "name": "Newcastle United",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
+          "rank": "12",
+          "points": "11",
+          "played": "8",
+          "wins": "3",
+          "draws": "2",
+          "losses": "3",
+          "goal_difference": "-2"
+        },
+        {
+          "name": "Ipswich Town",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
+          "rank": "13",
+          "points": "11",
+          "played": "9",
+          "wins": "3",
+          "draws": "2",
+          "losses": "4",
           "goal_difference": "-4"
         },
         {
-          "name": "Sparta Rotterdam",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png",
-          "rank": "11",
-          "points": "12",
-          "played": "11",
+          "name": "Everton",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+          "rank": "14",
+          "points": "10",
+          "played": "8",
+          "wins": "2",
+          "draws": "4",
+          "losses": "2",
+          "goal_difference": "-1"
+        },
+        {
+          "name": "Fulham",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+          "rank": "15",
+          "points": "9",
+          "played": "9",
+          "wins": "2",
+          "draws": "3",
+          "losses": "4",
+          "goal_difference": "-2"
+        },
+        {
+          "name": "Coventry City",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
+          "rank": "16",
+          "points": "9",
+          "played": "9",
           "wins": "3",
+          "draws": "0",
+          "losses": "6",
+          "goal_difference": "-7"
+        },
+        {
+          "name": "Manchester United",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+          "rank": "17",
+          "points": "7",
+          "played": "9",
+          "wins": "1",
+          "draws": "4",
+          "losses": "4",
+          "goal_difference": "-5"
+        },
+        {
+          "name": "Crystal Palace",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+          "rank": "18",
+          "points": "7",
+          "played": "9",
+          "wins": "2",
+          "draws": "1",
+          "losses": "6",
+          "goal_difference": "-12"
+        },
+        {
+          "name": "Nottingham Forest",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
+          "rank": "19",
+          "points": "6",
+          "played": "9",
+          "wins": "1",
           "draws": "3",
           "losses": "5",
           "goal_difference": "-6"
         },
         {
-          "name": "FC Utrecht",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png",
-          "rank": "12",
-          "points": "12",
-          "played": "11",
-          "wins": "3",
+          "name": "Sunderland",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+          "rank": "20",
+          "points": "5",
+          "played": "9",
+          "wins": "1",
+          "draws": "2",
+          "losses": "6",
+          "goal_difference": "-10"
+        }
+      ],
+      "updated_at": "2026-11-01T22:16:01Z",
+      "stale": false,
+      "errors": []
+    },
+    "soccer/ger.1": {
+      "name": "الدوري الألماني",
+      "category": "football",
+      "matches": [
+        {
+          "id": "401884750",
+          "date": "2026-11-01T14:30Z",
+          "time": "2026-11-01T14:30Z",
+          "home": {
+            "name": "1. FC Union Berlin",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
+            "score": "1"
+          },
+          "away": {
+            "name": "FC Cologne",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
+            "score": "1"
+          },
+          "status": "post",
+          "detail": "FT",
+          "venue": "Stadion An der Alten Försterei",
+          "broadcast": "Fandango",
+          "status_detail": "FT",
+          "status_short": "FT",
+          "period": 2,
+          "clock": "90'+2'"
+        },
+        {
+          "id": "401884752",
+          "date": "2026-11-01T16:30Z",
+          "time": "2026-11-01T16:30Z",
+          "home": {
+            "name": "Eintracht Frankfurt",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+            "score": "3"
+          },
+          "away": {
+            "name": "Hamburg SV",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+            "score": "1"
+          },
+          "status": "post",
+          "detail": "FT",
+          "venue": "Deutsche Bank Park",
+          "broadcast": "USA Net",
+          "status_detail": "FT",
+          "status_short": "FT",
+          "period": 2,
+          "clock": "90'+9'"
+        }
+      ],
+      "news": [
+        {
+          "headline": "Harry Kane misses penalty as Bayern Munich draw with Borussia Dortmund ",
+          "description": "Ballon d'Or winner Harry Kane missed a penalty as Bayern Munich were held by Der Klassiker rivals Borussia Dortmund in a 2-2 draw at the Allianz Arena.",
+          "link": "http://www.espn.com/soccer/report/_/gameId/401884754",
+          "image": "https://a.espncdn.com/photo/2026/1031/r1739072_1296x729_16-9.jpg",
+          "source": "الدوري الألماني",
+          "published": "2026-10-31T19:54:52Z"
+        },
+        {
+          "headline": "Harry Kane parades Ballon d'Or in front of Bayern Munich fans before Borussia Dortmund clash",
+          "description": "Harry Kane paraded the Ballon d'Or in front of fans at the Allianz Arena before Bayern Munich's game against Borussia Dortmund on Saturday, his first appearance since winning the award.",
+          "link": "https://www.espn.com/soccer/story/_/id/50337824/harry-kane-parades-ballon-dor-bayern-munich-borussia-dortmund",
+          "image": "https://a.espncdn.com/photo/2026/1031/r1739038_1296x729_16-9.jpg",
+          "source": "الدوري الألماني",
+          "published": "2026-10-31T21:11:10Z"
+        },
+        {
+          "headline": "Bayern Munich not allowing Kompany to be involved in Dortmund clash",
+          "description": "Vincent Kompany won't be on the sidelines for Bayern's match against Borussia Dortmund following his hospitalization last week.",
+          "link": "https://www.espn.com/soccer/story/_/id/50328630/vincent-kompany-sit-bayern-dortmund-leaving-hospital",
+          "image": "https://a.espncdn.com/photo/2026/0909/r1713698_1296x729_16-9.jpg",
+          "source": "الدوري الألماني",
+          "published": "2026-10-30T18:47:23Z"
+        },
+        {
+          "headline": "Global power ranking: The top 20 soccer teams in the world, ranked!",
+          "description": "If we look beyond the Premier League and beyond those who qualified for the Champions League, which are the best teams in the world?",
+          "link": "https://www.espn.com/soccer/story/_/id/50312487/top-20-soccer-teams-world-ranked",
+          "image": "https://a.espncdn.com/photo/2026/1030/r1738425_1296x729_16-9.jpg",
+          "source": "الدوري الألماني",
+          "published": "2026-10-30T12:06:05Z"
+        },
+        {
+          "headline": "Man City, Bayern among the good, bad and lucky in Europe's top leagues",
+          "description": "We're a quarter of the way through the 2026-27 European season -- long enough to separate fact from fiction when it comes to from. Who's been lucky? Who's been good? Who's been both, or neither?",
+          "link": "https://www.espn.com/soccer/story/_/id/50309811/man-city-bayern-munich-como-sunderland-good-bad-lucky-european-soccer",
+          "image": "https://a.espncdn.com/photo/2026/1029/r1738028_1296x729_16-9.jpg",
+          "source": "الدوري الألماني",
+          "published": "2026-10-29T16:26:42Z"
+        },
+        {
+          "headline": "Borussia Dortmund must stop Bayern's 'sensational' Harry Kane - Kovac",
+          "description": "Borussia Dortmund coach Niko Kovac has called on his players to work together to stop \"sensational\" Ballon d'Or winner Harry Kane against Bayern Munich.",
+          "link": "https://www.espn.com/soccer/story/_/id/50317977/borussia-dortmund-stop-bayern-munich-harry-kane-kovac",
+          "image": "https://a.espncdn.com/photo/2026/1029/r1738028_1296x729_16-9.jpg",
+          "source": "الدوري الألماني",
+          "published": "2026-10-29T14:33:40Z"
+        }
+      ],
+      "teams": [
+        {
+          "id": "598",
+          "name": "1. FC Union Berlin",
+          "short_name": "Union Berlin",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
+          "abbreviation": "FCU"
+        },
+        {
+          "id": "131",
+          "name": "Bayer Leverkusen",
+          "short_name": "Leverkusen",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+          "abbreviation": "B04"
+        },
+        {
+          "id": "132",
+          "name": "Bayern Munich",
+          "short_name": "Bayern",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+          "abbreviation": "MUN"
+        },
+        {
+          "id": "124",
+          "name": "Borussia Dortmund",
+          "short_name": "Dortmund",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+          "abbreviation": "DOR"
+        },
+        {
+          "id": "268",
+          "name": "Borussia Mönchengladbach",
+          "short_name": "Gladbach",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
+          "abbreviation": "BMG"
+        },
+        {
+          "id": "125",
+          "name": "Eintracht Frankfurt",
+          "short_name": "Frankfurt",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+          "abbreviation": "SGE"
+        },
+        {
+          "id": "3841",
+          "name": "FC Augsburg",
+          "short_name": "Augsburg",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
+          "abbreviation": "FCA"
+        },
+        {
+          "id": "122",
+          "name": "FC Cologne",
+          "short_name": "Cologne",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
+          "abbreviation": "KOE"
+        },
+        {
+          "id": "127",
+          "name": "Hamburg SV",
+          "short_name": "Hamburg",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+          "abbreviation": "HSV"
+        },
+        {
+          "id": "2950",
+          "name": "Mainz",
+          "short_name": "Mainz",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
+          "abbreviation": "M05"
+        },
+        {
+          "id": "11420",
+          "name": "RB Leipzig",
+          "short_name": "RB Leipzig",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+          "abbreviation": "RBL"
+        },
+        {
+          "id": "126",
+          "name": "SC Freiburg",
+          "short_name": "Freiburg",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
+          "abbreviation": "SCF"
+        },
+        {
+          "id": "3307",
+          "name": "SC Paderborn 07",
+          "short_name": "Paderborn",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
+          "abbreviation": "SCP"
+        },
+        {
+          "id": "10388",
+          "name": "SV Elversberg",
+          "short_name": "Elversberg",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10388.png",
+          "abbreviation": "ELV"
+        },
+        {
+          "id": "133",
+          "name": "Schalke 04",
+          "short_name": "Schalke",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
+          "abbreviation": "S04"
+        },
+        {
+          "id": "7911",
+          "name": "TSG Hoffenheim",
+          "short_name": "Hoffenheim",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+          "abbreviation": "TSG"
+        },
+        {
+          "id": "134",
+          "name": "VfB Stuttgart",
+          "short_name": "Stuttgart",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+          "abbreviation": "VFB"
+        },
+        {
+          "id": "137",
+          "name": "Werder Bremen",
+          "short_name": "Bremen",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
+          "abbreviation": "SVW"
+        }
+      ],
+      "standings": [
+        {
+          "name": "Bayern Munich",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/132.png",
+          "rank": "1",
+          "points": "18",
+          "played": "8",
+          "wins": "5",
           "draws": "3",
+          "losses": "0",
+          "goal_difference": "+19"
+        },
+        {
+          "name": "Borussia Dortmund",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/124.png",
+          "rank": "2",
+          "points": "18",
+          "played": "8",
+          "wins": "5",
+          "draws": "3",
+          "losses": "0",
+          "goal_difference": "+8"
+        },
+        {
+          "name": "SC Freiburg",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/126.png",
+          "rank": "3",
+          "points": "16",
+          "played": "8",
+          "wins": "5",
+          "draws": "1",
+          "losses": "2",
+          "goal_difference": "+8"
+        },
+        {
+          "name": "RB Leipzig",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11420.png",
+          "rank": "4",
+          "points": "15",
+          "played": "8",
+          "wins": "5",
+          "draws": "0",
+          "losses": "3",
+          "goal_difference": "+11"
+        },
+        {
+          "name": "Werder Bremen",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/137.png",
+          "rank": "5",
+          "points": "15",
+          "played": "8",
+          "wins": "4",
+          "draws": "3",
+          "losses": "1",
+          "goal_difference": "+3"
+        },
+        {
+          "name": "Bayer Leverkusen",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/131.png",
+          "rank": "6",
+          "points": "13",
+          "played": "8",
+          "wins": "4",
+          "draws": "1",
+          "losses": "3",
+          "goal_difference": "+2"
+        },
+        {
+          "name": "SV Elversberg",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10388.png",
+          "rank": "7",
+          "points": "13",
+          "played": "8",
+          "wins": "4",
+          "draws": "1",
+          "losses": "3",
+          "goal_difference": "0"
+        },
+        {
+          "name": "Eintracht Frankfurt",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/125.png",
+          "rank": "8",
+          "points": "11",
+          "played": "8",
+          "wins": "3",
+          "draws": "2",
+          "losses": "3",
+          "goal_difference": "-5"
+        },
+        {
+          "name": "Mainz",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2950.png",
+          "rank": "9",
+          "points": "10",
+          "played": "8",
+          "wins": "3",
+          "draws": "1",
+          "losses": "4",
+          "goal_difference": "0"
+        },
+        {
+          "name": "FC Augsburg",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3841.png",
+          "rank": "10",
+          "points": "9",
+          "played": "8",
+          "wins": "2",
+          "draws": "3",
+          "losses": "3",
+          "goal_difference": "+3"
+        },
+        {
+          "name": "VfB Stuttgart",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/134.png",
+          "rank": "11",
+          "points": "9",
+          "played": "8",
+          "wins": "3",
+          "draws": "0",
+          "losses": "5",
+          "goal_difference": "-1"
+        },
+        {
+          "name": "TSG Hoffenheim",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7911.png",
+          "rank": "12",
+          "points": "9",
+          "played": "8",
+          "wins": "3",
+          "draws": "0",
+          "losses": "5",
+          "goal_difference": "-2"
+        },
+        {
+          "name": "FC Cologne",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/122.png",
+          "rank": "13",
+          "points": "9",
+          "played": "8",
+          "wins": "2",
+          "draws": "3",
+          "losses": "3",
+          "goal_difference": "-3"
+        },
+        {
+          "name": "SC Paderborn 07",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3307.png",
+          "rank": "14",
+          "points": "9",
+          "played": "8",
+          "wins": "2",
+          "draws": "3",
+          "losses": "3",
+          "goal_difference": "-3"
+        },
+        {
+          "name": "Hamburg SV",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/127.png",
+          "rank": "15",
+          "points": "9",
+          "played": "8",
+          "wins": "3",
+          "draws": "0",
           "losses": "5",
           "goal_difference": "-12"
         },
         {
-          "name": "NEC Nijmegen",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
-          "rank": "13",
-          "points": "11",
-          "played": "11",
-          "wins": "2",
-          "draws": "5",
-          "losses": "4",
-          "goal_difference": "-2"
-        },
-        {
-          "name": "PEC Zwolle",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png",
-          "rank": "14",
-          "points": "11",
-          "played": "11",
-          "wins": "3",
-          "draws": "2",
-          "losses": "6",
-          "goal_difference": "-11"
-        },
-        {
-          "name": "Excelsior",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png",
-          "rank": "15",
-          "points": "11",
-          "played": "11",
-          "wins": "3",
-          "draws": "2",
-          "losses": "6",
+          "name": "1. FC Union Berlin",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/598.png",
+          "rank": "16",
+          "points": "7",
+          "played": "8",
+          "wins": "1",
+          "draws": "4",
+          "losses": "3",
           "goal_difference": "-12"
         },
         {
-          "name": "Telstar",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png",
-          "rank": "16",
-          "points": "9",
-          "played": "11",
-          "wins": "2",
-          "draws": "3",
-          "losses": "6",
-          "goal_difference": "-7"
-        },
-        {
-          "name": "ADO Den Haag",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png",
+          "name": "Schalke 04",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/133.png",
           "rank": "17",
           "points": "6",
-          "played": "11",
+          "played": "8",
           "wins": "1",
           "draws": "3",
-          "losses": "7",
-          "goal_difference": "-11"
+          "losses": "4",
+          "goal_difference": "-5"
         },
         {
-          "name": "Willem II",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/156.png",
+          "name": "Borussia Mönchengladbach",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/268.png",
           "rank": "18",
-          "points": "2",
-          "played": "11",
-          "wins": "0",
-          "draws": "2",
-          "losses": "9",
-          "goal_difference": "-29"
+          "points": "4",
+          "played": "8",
+          "wins": "1",
+          "draws": "1",
+          "losses": "6",
+          "goal_difference": "-11"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:01Z",
       "stale": false,
       "errors": []
     },
@@ -4833,7 +4833,7 @@
           "goal_difference": "-12"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:02Z",
       "stale": false,
       "errors": []
     },
@@ -5325,7 +5325,7 @@
           "goal_difference": "-34"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:02Z",
       "stale": false,
       "errors": []
     },
@@ -6035,794 +6035,7 @@
           "goal_difference": "-9"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
-      "stale": false,
-      "errors": []
-    },
-    "soccer/arg.1": {
-      "name": "الدوري الأرجنتيني",
-      "category": "football",
-      "matches": [
-        {
-          "id": "401841658",
-          "date": "2026-11-01T18:00Z",
-          "time": "2026-11-01T18:00Z",
-          "home": {
-            "name": "Boca Juniors",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-            "score": "1"
-          },
-          "away": {
-            "name": "River Plate",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
-            "score": "0"
-          },
-          "status": "post",
-          "detail": "FT",
-          "venue": "Alberto José Armando (La Bombonera)",
-          "broadcast": "",
-          "status_detail": "FT",
-          "status_short": "FT",
-          "period": 2,
-          "clock": "90'+9'"
-        },
-        {
-          "id": "401841645",
-          "date": "2026-11-01T21:30Z",
-          "time": "2026-11-01T21:30Z",
-          "home": {
-            "name": "Belgrano (Córdoba)",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4.png",
-            "score": "1"
-          },
-          "away": {
-            "name": "Barracas Central",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10060.png",
-            "score": "0"
-          },
-          "status": "in",
-          "detail": "44'",
-          "venue": "El Gigante de Alberdi",
-          "broadcast": "",
-          "status_detail": "44'",
-          "status_short": "44'",
-          "period": 1,
-          "clock": "44'"
-        },
-        {
-          "id": "401841650",
-          "date": "2026-11-01T21:30Z",
-          "time": "2026-11-01T21:30Z",
-          "home": {
-            "name": "Newell's Old Boys",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
-            "score": "0"
-          },
-          "away": {
-            "name": "Unión (Santa Fe)",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
-            "score": "0"
-          },
-          "status": "in",
-          "detail": "45'",
-          "venue": "Marcelo Bielsa",
-          "broadcast": "",
-          "status_detail": "45'",
-          "status_short": "45'",
-          "period": 1,
-          "clock": "45'"
-        },
-        {
-          "id": "401841651",
-          "date": "2026-11-01T23:45Z",
-          "time": "2026-11-01T23:45Z",
-          "home": {
-            "name": "Lanús",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-            "score": "0"
-          },
-          "away": {
-            "name": "Gimnasia (Mendoza)",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
-            "score": "0"
-          },
-          "status": "pre",
-          "detail": "Scheduled",
-          "venue": "Ciudad de Lanús",
-          "broadcast": "",
-          "status_detail": "Sun, November 1st at 6:45 PM EST",
-          "status_short": "Scheduled",
-          "period": null,
-          "clock": "0'"
-        },
-        {
-          "id": "401841657",
-          "date": "2026-11-02T22:00Z",
-          "time": "2026-11-02T22:00Z",
-          "home": {
-            "name": "Defensa y Justicia",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
-            "score": "0"
-          },
-          "away": {
-            "name": "Independiente",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
-            "score": "0"
-          },
-          "status": "pre",
-          "detail": "Scheduled",
-          "venue": "Norberto Tomaghello",
-          "broadcast": "",
-          "status_detail": "Mon, November 2nd at 5:00 PM EST",
-          "status_short": "Scheduled",
-          "period": null,
-          "clock": "0'"
-        },
-        {
-          "id": "401841649",
-          "date": "2026-11-02T22:00Z",
-          "time": "2026-11-02T22:00Z",
-          "home": {
-            "name": "Platense",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
-            "score": "0"
-          },
-          "away": {
-            "name": "Central Córdoba (Santiago del Estero)",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-            "score": "0"
-          },
-          "status": "pre",
-          "detail": "Scheduled",
-          "venue": "Ciudad de Vicente López",
-          "broadcast": "",
-          "status_detail": "Mon, November 2nd at 5:00 PM EST",
-          "status_short": "Scheduled",
-          "period": null,
-          "clock": "0'"
-        },
-        {
-          "id": "401841644",
-          "date": "2026-11-03T00:15Z",
-          "time": "2026-11-03T00:15Z",
-          "home": {
-            "name": "Atlético Tucumán",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9785.png",
-            "score": "0"
-          },
-          "away": {
-            "name": "Argentinos Juniors",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png",
-            "score": "0"
-          },
-          "status": "pre",
-          "detail": "Scheduled",
-          "venue": "Monumental Presidente José Fierro",
-          "broadcast": "",
-          "status_detail": "Mon, November 2nd at 7:15 PM EST",
-          "status_short": "Scheduled",
-          "period": null,
-          "clock": "0'"
-        },
-        {
-          "id": "401841652",
-          "date": "2026-11-03T00:15Z",
-          "time": "2026-11-03T00:15Z",
-          "home": {
-            "name": "Independiente Rivadavia",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png",
-            "score": "0"
-          },
-          "away": {
-            "name": "Banfield",
-            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
-            "score": "0"
-          },
-          "status": "pre",
-          "detail": "Scheduled",
-          "venue": "Bautista Gargantini",
-          "broadcast": "",
-          "status_detail": "Mon, November 2nd at 7:15 PM EST",
-          "status_short": "Scheduled",
-          "period": null,
-          "clock": "0'"
-        }
-      ],
-      "news": [
-        {
-          "headline": "Can Argentina's Estudiantes stop Brazil's Libertadores juggernaut?",
-          "description": "Brazilian clubs have won the last seven Copa Libertadores titles, but Argentina's Estudiantes de La Plata are determined to keep that streak from reaching eight.",
-          "link": "https://www.espn.com/soccer/story/_/id/50168602/can-argentinas-estudiantes-de-la-plata-stop-brazils-copa-libertadores-juggernaut",
-          "image": "https://a.espncdn.com/photo/2026/1012/r1729809_1296x729_16-9.jpg",
-          "source": "الدوري الأرجنتيني",
-          "published": "2026-10-14T06:49:51Z"
-        },
-        {
-          "headline": "Veteran defender Nicolás Otamendi signs with boyhood club River Plate",
-          "description": "Veteran defender Nicolás Otamendi has signed a contract with River Plate to return to the Argentine league as a free agent from Benfica.",
-          "link": "https://www.espn.com/soccer/story/_/id/48915325/world-cup-winner-nicolas-otamendi-signs-boyhood-club-river-plate",
-          "image": "https://a.espncdn.com/photo/2026/0530/r1665593_1296x729_16-9.jpg",
-          "source": "الدوري الأرجنتيني",
-          "published": "2026-05-30T01:50:14Z"
-        },
-        {
-          "headline": "Boca Juniors plans Bombonera expansion to 80,000 seats",
-          "description": "After River Plate presented a project to roof its Monumental Stadium, arch-rival Boca Juniors announced it will expand the capacity of La Bombonera in the stadium's biggest ever makeover.",
-          "link": "https://www.espn.com/soccer/story/_/id/48176804/boca-juniors-plans-bombonera-expansion-80000-seats",
-          "image": "",
-          "source": "الدوري الأرجنتيني",
-          "published": "2026-03-11T20:48:01Z"
-        },
-        {
-          "headline": "Argentine clubs to strike in response to Tapia travel ban",
-          "description": "Professional clubs in Argentina have agreed to strike from March 5-8 in protest against what they consider judicial persecution of Argentine Football Association president Claudio Tapia.",
-          "link": "https://www.espn.com/soccer/story/_/id/48017429/argentine-clubs-strike-response-tapia-travel-ban",
-          "image": "https://a.espncdn.com/photo/2024/0530/r1339308_1296x729_16-9.jpg",
-          "source": "الدوري الأرجنتيني",
-          "published": "2026-02-23T23:11:29Z"
-        },
-        {
-          "headline": "River Plate expanding iconic Monumental to hold 101,000 fans",
-          "description": "River Plate has announced a massive expansion of the Monumental Stadium, increasing its capacity to 101,000 spectators in a move that will make it one of the largest soccer venues in the world.",
-          "link": "https://www.espn.com/soccer/story/_/id/47748338/river-plate-expanding-iconic-monumental-101000-fans",
-          "image": "https://a.espncdn.com/photo/2026/0128/r1606571_1296x729_16-9.jpg",
-          "source": "الدوري الأرجنتيني",
-          "published": "2026-01-28T01:10:33Z"
-        },
-        {
-          "headline": "World's weirdest soccer leagues: 8 champions? Points for losing?",
-          "description": "What happens when leagues shun the traditional round-robin format? Here's some of the weird and wonderful ways titles are won around the world.",
-          "link": "https://www.espn.com/soccer/story/_/id/47264818/worlds-weirdest-soccer-leagues-8-champions-points-losing",
-          "image": "https://a.espncdn.com/photo/2025/1211/r1588024_1296x729_16-9.jpg",
-          "source": "الدوري الأرجنتيني",
-          "published": "2025-12-15T10:25:55Z"
-        }
-      ],
-      "teams": [
-        {
-          "id": "9739",
-          "name": "Aldosivi",
-          "short_name": "Aldosivi",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9739.png",
-          "abbreviation": "ALDO"
-        },
-        {
-          "id": "3",
-          "name": "Argentinos Juniors",
-          "short_name": "Argentinos ",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png",
-          "abbreviation": "ARGJ"
-        },
-        {
-          "id": "9785",
-          "name": "Atlético Tucumán",
-          "short_name": "Atl Tucumán",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9785.png",
-          "abbreviation": "CAT"
-        },
-        {
-          "id": "235",
-          "name": "Banfield",
-          "short_name": "Banfield",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
-          "abbreviation": "BAN"
-        },
-        {
-          "id": "10060",
-          "name": "Barracas Central",
-          "short_name": "Barracas",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10060.png",
-          "abbreviation": "BAR"
-        },
-        {
-          "id": "4",
-          "name": "Belgrano (Córdoba)",
-          "short_name": "Belgrano ",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4.png",
-          "abbreviation": "BEL"
-        },
-        {
-          "id": "5",
-          "name": "Boca Juniors",
-          "short_name": "Boca ",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-          "abbreviation": "CABJ"
-        },
-        {
-          "id": "11989",
-          "name": "Central Córdoba (Santiago del Estero)",
-          "short_name": "C. Córdoba (SE)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-          "abbreviation": "CTR"
-        },
-        {
-          "id": "8950",
-          "name": "Defensa y Justicia",
-          "short_name": "Def. y Jus.",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
-          "abbreviation": "DYJ"
-        },
-        {
-          "id": "17702",
-          "name": "Deportivo Riestra",
-          "short_name": "Riestra",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17702.png",
-          "abbreviation": "RIE"
-        },
-        {
-          "id": "8",
-          "name": "Estudiantes de La Plata",
-          "short_name": "Estudiantes",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
-          "abbreviation": "EST"
-        },
-        {
-          "id": "19685",
-          "name": "Estudiantes de Río Cuarto",
-          "short_name": "Estudiantes RC",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19685.png",
-          "abbreviation": "AAE"
-        },
-        {
-          "id": "11972",
-          "name": "Gimnasia (Mendoza)",
-          "short_name": "Gimnasia (M)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
-          "abbreviation": "GMZ"
-        },
-        {
-          "id": "9",
-          "name": "Gimnasia La Plata",
-          "short_name": "Gimnasia LP",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png",
-          "abbreviation": "GLP"
-        },
-        {
-          "id": "10",
-          "name": "Huracán",
-          "short_name": "Huracán ",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10.png",
-          "abbreviation": "HUR"
-        },
-        {
-          "id": "11",
-          "name": "Independiente",
-          "short_name": "Independiente",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
-          "abbreviation": "IND"
-        },
-        {
-          "id": "9744",
-          "name": "Independiente Rivadavia",
-          "short_name": "Ind. Rivadavia",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png",
-          "abbreviation": "RIV"
-        },
-        {
-          "id": "2975",
-          "name": "Instituto (Córdoba)",
-          "short_name": "Instituto",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
-          "abbreviation": "IACC"
-        },
-        {
-          "id": "12",
-          "name": "Lanús",
-          "short_name": "Lanús ",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-          "abbreviation": "LAN"
-        },
-        {
-          "id": "14",
-          "name": "Newell's Old Boys",
-          "short_name": "Newell's",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
-          "abbreviation": "NOB"
-        },
-        {
-          "id": "7764",
-          "name": "Platense",
-          "short_name": "Platense",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
-          "abbreviation": "PLA"
-        },
-        {
-          "id": "15",
-          "name": "Racing Club",
-          "short_name": "Racing ",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
-          "abbreviation": "RAC"
-        },
-        {
-          "id": "16",
-          "name": "River Plate",
-          "short_name": "River Plate",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
-          "abbreviation": "RIV"
-        },
-        {
-          "id": "17",
-          "name": "Rosario Central",
-          "short_name": "Rosario Central",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
-          "abbreviation": "ROS"
-        },
-        {
-          "id": "18",
-          "name": "San Lorenzo",
-          "short_name": "San Lorenzo ",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
-          "abbreviation": "SLO"
-        },
-        {
-          "id": "10158",
-          "name": "Sarmiento (Junín)",
-          "short_name": "Sarmiento (J)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10158.png",
-          "abbreviation": "SARM"
-        },
-        {
-          "id": "19",
-          "name": "Talleres (Córdoba)",
-          "short_name": "Talleres ",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
-          "abbreviation": "TALL"
-        },
-        {
-          "id": "7767",
-          "name": "Tigre",
-          "short_name": "Tigre",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7767.png",
-          "abbreviation": "TIG"
-        },
-        {
-          "id": "20",
-          "name": "Unión (Santa Fe)",
-          "short_name": "Unión (SF)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
-          "abbreviation": "USF"
-        },
-        {
-          "id": "21",
-          "name": "Vélez Sarsfield",
-          "short_name": "Vélez ",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
-          "abbreviation": "VEL"
-        }
-      ],
-      "standings": [
-        {
-          "name": "Boca Juniors",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
-          "rank": "2",
-          "points": "30",
-          "played": "15",
-          "wins": "8",
-          "draws": "6",
-          "losses": "1",
-          "goal_difference": "+9"
-        },
-        {
-          "name": "Estudiantes de La Plata",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
-          "rank": "11",
-          "points": "15",
-          "played": "15",
-          "wins": "4",
-          "draws": "3",
-          "losses": "8",
-          "goal_difference": "-1"
-        },
-        {
-          "name": "Independiente",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
-          "rank": "8",
-          "points": "19",
-          "played": "14",
-          "wins": "5",
-          "draws": "4",
-          "losses": "5",
-          "goal_difference": "-2"
-        },
-        {
-          "name": "Lanús",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
-          "rank": "5",
-          "points": "24",
-          "played": "14",
-          "wins": "7",
-          "draws": "3",
-          "losses": "4",
-          "goal_difference": "+7"
-        },
-        {
-          "name": "Newell's Old Boys",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
-          "rank": "6",
-          "points": "21",
-          "played": "14",
-          "wins": "5",
-          "draws": "6",
-          "losses": "3",
-          "goal_difference": "+3"
-        },
-        {
-          "name": "San Lorenzo",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
-          "rank": "9",
-          "points": "19",
-          "played": "15",
-          "wins": "5",
-          "draws": "4",
-          "losses": "6",
-          "goal_difference": "-5"
-        },
-        {
-          "name": "Talleres (Córdoba)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
-          "rank": "13",
-          "points": "12",
-          "played": "15",
-          "wins": "3",
-          "draws": "3",
-          "losses": "9",
-          "goal_difference": "-6"
-        },
-        {
-          "name": "Unión (Santa Fe)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
-          "rank": "10",
-          "points": "17",
-          "played": "14",
-          "wins": "5",
-          "draws": "2",
-          "losses": "7",
-          "goal_difference": "-2"
-        },
-        {
-          "name": "Vélez Sarsfield",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
-          "rank": "3",
-          "points": "28",
-          "played": "15",
-          "wins": "7",
-          "draws": "7",
-          "losses": "1",
-          "goal_difference": "+10"
-        },
-        {
-          "name": "Instituto (Córdoba)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
-          "rank": "1",
-          "points": "33",
-          "played": "15",
-          "wins": "10",
-          "draws": "3",
-          "losses": "2",
-          "goal_difference": "+11"
-        },
-        {
-          "name": "Platense",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
-          "rank": "12",
-          "points": "14",
-          "played": "14",
-          "wins": "3",
-          "draws": "5",
-          "losses": "6",
-          "goal_difference": "-6"
-        },
-        {
-          "name": "Defensa y Justicia",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
-          "rank": "4",
-          "points": "27",
-          "played": "14",
-          "wins": "8",
-          "draws": "3",
-          "losses": "3",
-          "goal_difference": "+7"
-        },
-        {
-          "name": "Gimnasia (Mendoza)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
-          "rank": "7",
-          "points": "20",
-          "played": "14",
-          "wins": "6",
-          "draws": "2",
-          "losses": "6",
-          "goal_difference": "+1"
-        },
-        {
-          "name": "Central Córdoba (Santiago del Estero)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
-          "rank": "15",
-          "points": "10",
-          "played": "14",
-          "wins": "2",
-          "draws": "4",
-          "losses": "8",
-          "goal_difference": "-12"
-        },
-        {
-          "name": "Deportivo Riestra",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17702.png",
-          "rank": "14",
-          "points": "12",
-          "played": "15",
-          "wins": "2",
-          "draws": "6",
-          "losses": "7",
-          "goal_difference": "-7"
-        },
-        {
-          "name": "Argentinos Juniors",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png",
-          "rank": "2",
-          "points": "28",
-          "played": "14",
-          "wins": "8",
-          "draws": "4",
-          "losses": "2",
-          "goal_difference": "+7"
-        },
-        {
-          "name": "Belgrano (Córdoba)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4.png",
-          "rank": "5",
-          "points": "22",
-          "played": "14",
-          "wins": "6",
-          "draws": "4",
-          "losses": "4",
-          "goal_difference": "+3"
-        },
-        {
-          "name": "Gimnasia La Plata",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png",
-          "rank": "3",
-          "points": "28",
-          "played": "15",
-          "wins": "8",
-          "draws": "4",
-          "losses": "3",
-          "goal_difference": "+4"
-        },
-        {
-          "name": "Huracán",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10.png",
-          "rank": "8",
-          "points": "19",
-          "played": "15",
-          "wins": "5",
-          "draws": "4",
-          "losses": "6",
-          "goal_difference": "-4"
-        },
-        {
-          "name": "Racing Club",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
-          "rank": "12",
-          "points": "15",
-          "played": "15",
-          "wins": "4",
-          "draws": "3",
-          "losses": "8",
-          "goal_difference": "-6"
-        },
-        {
-          "name": "River Plate",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
-          "rank": "4",
-          "points": "23",
-          "played": "15",
-          "wins": "7",
-          "draws": "2",
-          "losses": "6",
-          "goal_difference": "+5"
-        },
-        {
-          "name": "Rosario Central",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
-          "rank": "1",
-          "points": "31",
-          "played": "15",
-          "wins": "9",
-          "draws": "4",
-          "losses": "2",
-          "goal_difference": "+12"
-        },
-        {
-          "name": "Banfield",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
-          "rank": "13",
-          "points": "14",
-          "played": "14",
-          "wins": "3",
-          "draws": "5",
-          "losses": "6",
-          "goal_difference": "-5"
-        },
-        {
-          "name": "Tigre",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7767.png",
-          "rank": "11",
-          "points": "16",
-          "played": "15",
-          "wins": "4",
-          "draws": "4",
-          "losses": "7",
-          "goal_difference": "-1"
-        },
-        {
-          "name": "Aldosivi",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9739.png",
-          "rank": "14",
-          "points": "11",
-          "played": "15",
-          "wins": "3",
-          "draws": "2",
-          "losses": "10",
-          "goal_difference": "-8"
-        },
-        {
-          "name": "Independiente Rivadavia",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png",
-          "rank": "9",
-          "points": "19",
-          "played": "14",
-          "wins": "5",
-          "draws": "4",
-          "losses": "5",
-          "goal_difference": "-5"
-        },
-        {
-          "name": "Atlético Tucumán",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9785.png",
-          "rank": "10",
-          "points": "17",
-          "played": "14",
-          "wins": "4",
-          "draws": "5",
-          "losses": "5",
-          "goal_difference": "0"
-        },
-        {
-          "name": "Barracas Central",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10060.png",
-          "rank": "6",
-          "points": "22",
-          "played": "14",
-          "wins": "6",
-          "draws": "4",
-          "losses": "4",
-          "goal_difference": "+2"
-        },
-        {
-          "name": "Sarmiento (Junín)",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10158.png",
-          "rank": "7",
-          "points": "21",
-          "played": "15",
-          "wins": "6",
-          "draws": "3",
-          "losses": "6",
-          "goal_difference": "0"
-        },
-        {
-          "name": "Estudiantes de Río Cuarto",
-          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19685.png",
-          "rank": "15",
-          "points": "9",
-          "played": "15",
-          "wins": "2",
-          "draws": "3",
-          "losses": "10",
-          "goal_difference": "-11"
-        }
-      ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:02Z",
       "stale": false,
       "errors": []
     },
@@ -7748,7 +6961,794 @@
           "goal_difference": "0"
         }
       ],
-      "updated_at": "2026-11-01T22:15:37Z",
+      "updated_at": "2026-11-01T22:16:02Z",
+      "stale": false,
+      "errors": []
+    },
+    "soccer/arg.1": {
+      "name": "الدوري الأرجنتيني",
+      "category": "football",
+      "matches": [
+        {
+          "id": "401841658",
+          "date": "2026-11-01T18:00Z",
+          "time": "2026-11-01T18:00Z",
+          "home": {
+            "name": "Boca Juniors",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+            "score": "1"
+          },
+          "away": {
+            "name": "River Plate",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+            "score": "0"
+          },
+          "status": "post",
+          "detail": "FT",
+          "venue": "Alberto José Armando (La Bombonera)",
+          "broadcast": "",
+          "status_detail": "FT",
+          "status_short": "FT",
+          "period": 2,
+          "clock": "90'+9'"
+        },
+        {
+          "id": "401841645",
+          "date": "2026-11-01T21:30Z",
+          "time": "2026-11-01T21:30Z",
+          "home": {
+            "name": "Belgrano (Córdoba)",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4.png",
+            "score": "1"
+          },
+          "away": {
+            "name": "Barracas Central",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10060.png",
+            "score": "0"
+          },
+          "status": "in",
+          "detail": "44'",
+          "venue": "El Gigante de Alberdi",
+          "broadcast": "",
+          "status_detail": "44'",
+          "status_short": "44'",
+          "period": 1,
+          "clock": "44'"
+        },
+        {
+          "id": "401841650",
+          "date": "2026-11-01T21:30Z",
+          "time": "2026-11-01T21:30Z",
+          "home": {
+            "name": "Newell's Old Boys",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
+            "score": "0"
+          },
+          "away": {
+            "name": "Unión (Santa Fe)",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
+            "score": "0"
+          },
+          "status": "in",
+          "detail": "45'+1'",
+          "venue": "Marcelo Bielsa",
+          "broadcast": "",
+          "status_detail": "45'+1'",
+          "status_short": "45'+1'",
+          "period": 1,
+          "clock": "45'+1'"
+        },
+        {
+          "id": "401841651",
+          "date": "2026-11-01T23:45Z",
+          "time": "2026-11-01T23:45Z",
+          "home": {
+            "name": "Lanús",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+            "score": "0"
+          },
+          "away": {
+            "name": "Gimnasia (Mendoza)",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
+            "score": "0"
+          },
+          "status": "pre",
+          "detail": "Scheduled",
+          "venue": "Ciudad de Lanús",
+          "broadcast": "",
+          "status_detail": "Sun, November 1st at 6:45 PM EST",
+          "status_short": "Scheduled",
+          "period": null,
+          "clock": "0'"
+        },
+        {
+          "id": "401841657",
+          "date": "2026-11-02T22:00Z",
+          "time": "2026-11-02T22:00Z",
+          "home": {
+            "name": "Defensa y Justicia",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
+            "score": "0"
+          },
+          "away": {
+            "name": "Independiente",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
+            "score": "0"
+          },
+          "status": "pre",
+          "detail": "Scheduled",
+          "venue": "Norberto Tomaghello",
+          "broadcast": "",
+          "status_detail": "Mon, November 2nd at 5:00 PM EST",
+          "status_short": "Scheduled",
+          "period": null,
+          "clock": "0'"
+        },
+        {
+          "id": "401841649",
+          "date": "2026-11-02T22:00Z",
+          "time": "2026-11-02T22:00Z",
+          "home": {
+            "name": "Platense",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
+            "score": "0"
+          },
+          "away": {
+            "name": "Central Córdoba (Santiago del Estero)",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
+            "score": "0"
+          },
+          "status": "pre",
+          "detail": "Scheduled",
+          "venue": "Ciudad de Vicente López",
+          "broadcast": "",
+          "status_detail": "Mon, November 2nd at 5:00 PM EST",
+          "status_short": "Scheduled",
+          "period": null,
+          "clock": "0'"
+        },
+        {
+          "id": "401841644",
+          "date": "2026-11-03T00:15Z",
+          "time": "2026-11-03T00:15Z",
+          "home": {
+            "name": "Atlético Tucumán",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9785.png",
+            "score": "0"
+          },
+          "away": {
+            "name": "Argentinos Juniors",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png",
+            "score": "0"
+          },
+          "status": "pre",
+          "detail": "Scheduled",
+          "venue": "Monumental Presidente José Fierro",
+          "broadcast": "",
+          "status_detail": "Mon, November 2nd at 7:15 PM EST",
+          "status_short": "Scheduled",
+          "period": null,
+          "clock": "0'"
+        },
+        {
+          "id": "401841652",
+          "date": "2026-11-03T00:15Z",
+          "time": "2026-11-03T00:15Z",
+          "home": {
+            "name": "Independiente Rivadavia",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png",
+            "score": "0"
+          },
+          "away": {
+            "name": "Banfield",
+            "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
+            "score": "0"
+          },
+          "status": "pre",
+          "detail": "Scheduled",
+          "venue": "Bautista Gargantini",
+          "broadcast": "",
+          "status_detail": "Mon, November 2nd at 7:15 PM EST",
+          "status_short": "Scheduled",
+          "period": null,
+          "clock": "0'"
+        }
+      ],
+      "news": [
+        {
+          "headline": "Can Argentina's Estudiantes stop Brazil's Libertadores juggernaut?",
+          "description": "Brazilian clubs have won the last seven Copa Libertadores titles, but Argentina's Estudiantes de La Plata are determined to keep that streak from reaching eight.",
+          "link": "https://www.espn.com/soccer/story/_/id/50168602/can-argentinas-estudiantes-de-la-plata-stop-brazils-copa-libertadores-juggernaut",
+          "image": "https://a.espncdn.com/photo/2026/1012/r1729809_1296x729_16-9.jpg",
+          "source": "الدوري الأرجنتيني",
+          "published": "2026-10-14T06:49:51Z"
+        },
+        {
+          "headline": "Veteran defender Nicolás Otamendi signs with boyhood club River Plate",
+          "description": "Veteran defender Nicolás Otamendi has signed a contract with River Plate to return to the Argentine league as a free agent from Benfica.",
+          "link": "https://www.espn.com/soccer/story/_/id/48915325/world-cup-winner-nicolas-otamendi-signs-boyhood-club-river-plate",
+          "image": "https://a.espncdn.com/photo/2026/0530/r1665593_1296x729_16-9.jpg",
+          "source": "الدوري الأرجنتيني",
+          "published": "2026-05-30T01:50:14Z"
+        },
+        {
+          "headline": "Boca Juniors plans Bombonera expansion to 80,000 seats",
+          "description": "After River Plate presented a project to roof its Monumental Stadium, arch-rival Boca Juniors announced it will expand the capacity of La Bombonera in the stadium's biggest ever makeover.",
+          "link": "https://www.espn.com/soccer/story/_/id/48176804/boca-juniors-plans-bombonera-expansion-80000-seats",
+          "image": "",
+          "source": "الدوري الأرجنتيني",
+          "published": "2026-03-11T20:48:01Z"
+        },
+        {
+          "headline": "Argentine clubs to strike in response to Tapia travel ban",
+          "description": "Professional clubs in Argentina have agreed to strike from March 5-8 in protest against what they consider judicial persecution of Argentine Football Association president Claudio Tapia.",
+          "link": "https://www.espn.com/soccer/story/_/id/48017429/argentine-clubs-strike-response-tapia-travel-ban",
+          "image": "https://a.espncdn.com/photo/2024/0530/r1339308_1296x729_16-9.jpg",
+          "source": "الدوري الأرجنتيني",
+          "published": "2026-02-23T23:11:29Z"
+        },
+        {
+          "headline": "River Plate expanding iconic Monumental to hold 101,000 fans",
+          "description": "River Plate has announced a massive expansion of the Monumental Stadium, increasing its capacity to 101,000 spectators in a move that will make it one of the largest soccer venues in the world.",
+          "link": "https://www.espn.com/soccer/story/_/id/47748338/river-plate-expanding-iconic-monumental-101000-fans",
+          "image": "https://a.espncdn.com/photo/2026/0128/r1606571_1296x729_16-9.jpg",
+          "source": "الدوري الأرجنتيني",
+          "published": "2026-01-28T01:10:33Z"
+        },
+        {
+          "headline": "World's weirdest soccer leagues: 8 champions? Points for losing?",
+          "description": "What happens when leagues shun the traditional round-robin format? Here's some of the weird and wonderful ways titles are won around the world.",
+          "link": "https://www.espn.com/soccer/story/_/id/47264818/worlds-weirdest-soccer-leagues-8-champions-points-losing",
+          "image": "https://a.espncdn.com/photo/2025/1211/r1588024_1296x729_16-9.jpg",
+          "source": "الدوري الأرجنتيني",
+          "published": "2025-12-15T10:25:55Z"
+        }
+      ],
+      "teams": [
+        {
+          "id": "9739",
+          "name": "Aldosivi",
+          "short_name": "Aldosivi",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9739.png",
+          "abbreviation": "ALDO"
+        },
+        {
+          "id": "3",
+          "name": "Argentinos Juniors",
+          "short_name": "Argentinos ",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png",
+          "abbreviation": "ARGJ"
+        },
+        {
+          "id": "9785",
+          "name": "Atlético Tucumán",
+          "short_name": "Atl Tucumán",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9785.png",
+          "abbreviation": "CAT"
+        },
+        {
+          "id": "235",
+          "name": "Banfield",
+          "short_name": "Banfield",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
+          "abbreviation": "BAN"
+        },
+        {
+          "id": "10060",
+          "name": "Barracas Central",
+          "short_name": "Barracas",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10060.png",
+          "abbreviation": "BAR"
+        },
+        {
+          "id": "4",
+          "name": "Belgrano (Córdoba)",
+          "short_name": "Belgrano ",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4.png",
+          "abbreviation": "BEL"
+        },
+        {
+          "id": "5",
+          "name": "Boca Juniors",
+          "short_name": "Boca ",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+          "abbreviation": "CABJ"
+        },
+        {
+          "id": "11989",
+          "name": "Central Córdoba (Santiago del Estero)",
+          "short_name": "C. Córdoba (SE)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
+          "abbreviation": "CTR"
+        },
+        {
+          "id": "8950",
+          "name": "Defensa y Justicia",
+          "short_name": "Def. y Jus.",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
+          "abbreviation": "DYJ"
+        },
+        {
+          "id": "17702",
+          "name": "Deportivo Riestra",
+          "short_name": "Riestra",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17702.png",
+          "abbreviation": "RIE"
+        },
+        {
+          "id": "8",
+          "name": "Estudiantes de La Plata",
+          "short_name": "Estudiantes",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
+          "abbreviation": "EST"
+        },
+        {
+          "id": "19685",
+          "name": "Estudiantes de Río Cuarto",
+          "short_name": "Estudiantes RC",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19685.png",
+          "abbreviation": "AAE"
+        },
+        {
+          "id": "11972",
+          "name": "Gimnasia (Mendoza)",
+          "short_name": "Gimnasia (M)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
+          "abbreviation": "GMZ"
+        },
+        {
+          "id": "9",
+          "name": "Gimnasia La Plata",
+          "short_name": "Gimnasia LP",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png",
+          "abbreviation": "GLP"
+        },
+        {
+          "id": "10",
+          "name": "Huracán",
+          "short_name": "Huracán ",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10.png",
+          "abbreviation": "HUR"
+        },
+        {
+          "id": "11",
+          "name": "Independiente",
+          "short_name": "Independiente",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
+          "abbreviation": "IND"
+        },
+        {
+          "id": "9744",
+          "name": "Independiente Rivadavia",
+          "short_name": "Ind. Rivadavia",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png",
+          "abbreviation": "RIV"
+        },
+        {
+          "id": "2975",
+          "name": "Instituto (Córdoba)",
+          "short_name": "Instituto",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
+          "abbreviation": "IACC"
+        },
+        {
+          "id": "12",
+          "name": "Lanús",
+          "short_name": "Lanús ",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+          "abbreviation": "LAN"
+        },
+        {
+          "id": "14",
+          "name": "Newell's Old Boys",
+          "short_name": "Newell's",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
+          "abbreviation": "NOB"
+        },
+        {
+          "id": "7764",
+          "name": "Platense",
+          "short_name": "Platense",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
+          "abbreviation": "PLA"
+        },
+        {
+          "id": "15",
+          "name": "Racing Club",
+          "short_name": "Racing ",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
+          "abbreviation": "RAC"
+        },
+        {
+          "id": "16",
+          "name": "River Plate",
+          "short_name": "River Plate",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+          "abbreviation": "RIV"
+        },
+        {
+          "id": "17",
+          "name": "Rosario Central",
+          "short_name": "Rosario Central",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+          "abbreviation": "ROS"
+        },
+        {
+          "id": "18",
+          "name": "San Lorenzo",
+          "short_name": "San Lorenzo ",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
+          "abbreviation": "SLO"
+        },
+        {
+          "id": "10158",
+          "name": "Sarmiento (Junín)",
+          "short_name": "Sarmiento (J)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10158.png",
+          "abbreviation": "SARM"
+        },
+        {
+          "id": "19",
+          "name": "Talleres (Córdoba)",
+          "short_name": "Talleres ",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
+          "abbreviation": "TALL"
+        },
+        {
+          "id": "7767",
+          "name": "Tigre",
+          "short_name": "Tigre",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7767.png",
+          "abbreviation": "TIG"
+        },
+        {
+          "id": "20",
+          "name": "Unión (Santa Fe)",
+          "short_name": "Unión (SF)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
+          "abbreviation": "USF"
+        },
+        {
+          "id": "21",
+          "name": "Vélez Sarsfield",
+          "short_name": "Vélez ",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
+          "abbreviation": "VEL"
+        }
+      ],
+      "standings": [
+        {
+          "name": "Boca Juniors",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/5.png",
+          "rank": "2",
+          "points": "30",
+          "played": "15",
+          "wins": "8",
+          "draws": "6",
+          "losses": "1",
+          "goal_difference": "+9"
+        },
+        {
+          "name": "Estudiantes de La Plata",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8.png",
+          "rank": "11",
+          "points": "15",
+          "played": "15",
+          "wins": "4",
+          "draws": "3",
+          "losses": "8",
+          "goal_difference": "-1"
+        },
+        {
+          "name": "Independiente",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11.png",
+          "rank": "8",
+          "points": "19",
+          "played": "14",
+          "wins": "5",
+          "draws": "4",
+          "losses": "5",
+          "goal_difference": "-2"
+        },
+        {
+          "name": "Lanús",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/12.png",
+          "rank": "5",
+          "points": "24",
+          "played": "14",
+          "wins": "7",
+          "draws": "3",
+          "losses": "4",
+          "goal_difference": "+7"
+        },
+        {
+          "name": "Newell's Old Boys",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/14.png",
+          "rank": "6",
+          "points": "21",
+          "played": "14",
+          "wins": "5",
+          "draws": "6",
+          "losses": "3",
+          "goal_difference": "+3"
+        },
+        {
+          "name": "San Lorenzo",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18.png",
+          "rank": "9",
+          "points": "19",
+          "played": "15",
+          "wins": "5",
+          "draws": "4",
+          "losses": "6",
+          "goal_difference": "-5"
+        },
+        {
+          "name": "Talleres (Córdoba)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19.png",
+          "rank": "13",
+          "points": "12",
+          "played": "15",
+          "wins": "3",
+          "draws": "3",
+          "losses": "9",
+          "goal_difference": "-6"
+        },
+        {
+          "name": "Unión (Santa Fe)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/20.png",
+          "rank": "10",
+          "points": "17",
+          "played": "14",
+          "wins": "5",
+          "draws": "2",
+          "losses": "7",
+          "goal_difference": "-2"
+        },
+        {
+          "name": "Vélez Sarsfield",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/21.png",
+          "rank": "3",
+          "points": "28",
+          "played": "15",
+          "wins": "7",
+          "draws": "7",
+          "losses": "1",
+          "goal_difference": "+10"
+        },
+        {
+          "name": "Instituto (Córdoba)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/2975.png",
+          "rank": "1",
+          "points": "33",
+          "played": "15",
+          "wins": "10",
+          "draws": "3",
+          "losses": "2",
+          "goal_difference": "+11"
+        },
+        {
+          "name": "Platense",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7764.png",
+          "rank": "12",
+          "points": "14",
+          "played": "14",
+          "wins": "3",
+          "draws": "5",
+          "losses": "6",
+          "goal_difference": "-6"
+        },
+        {
+          "name": "Defensa y Justicia",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/8950.png",
+          "rank": "4",
+          "points": "27",
+          "played": "14",
+          "wins": "8",
+          "draws": "3",
+          "losses": "3",
+          "goal_difference": "+7"
+        },
+        {
+          "name": "Gimnasia (Mendoza)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11972.png",
+          "rank": "7",
+          "points": "20",
+          "played": "14",
+          "wins": "6",
+          "draws": "2",
+          "losses": "6",
+          "goal_difference": "+1"
+        },
+        {
+          "name": "Central Córdoba (Santiago del Estero)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11989.png",
+          "rank": "15",
+          "points": "10",
+          "played": "14",
+          "wins": "2",
+          "draws": "4",
+          "losses": "8",
+          "goal_difference": "-12"
+        },
+        {
+          "name": "Deportivo Riestra",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17702.png",
+          "rank": "14",
+          "points": "12",
+          "played": "15",
+          "wins": "2",
+          "draws": "6",
+          "losses": "7",
+          "goal_difference": "-7"
+        },
+        {
+          "name": "Argentinos Juniors",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3.png",
+          "rank": "2",
+          "points": "28",
+          "played": "14",
+          "wins": "8",
+          "draws": "4",
+          "losses": "2",
+          "goal_difference": "+7"
+        },
+        {
+          "name": "Belgrano (Córdoba)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/4.png",
+          "rank": "5",
+          "points": "22",
+          "played": "14",
+          "wins": "6",
+          "draws": "4",
+          "losses": "4",
+          "goal_difference": "+3"
+        },
+        {
+          "name": "Gimnasia La Plata",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9.png",
+          "rank": "3",
+          "points": "28",
+          "played": "15",
+          "wins": "8",
+          "draws": "4",
+          "losses": "3",
+          "goal_difference": "+4"
+        },
+        {
+          "name": "Huracán",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10.png",
+          "rank": "8",
+          "points": "19",
+          "played": "15",
+          "wins": "5",
+          "draws": "4",
+          "losses": "6",
+          "goal_difference": "-4"
+        },
+        {
+          "name": "Racing Club",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/15.png",
+          "rank": "12",
+          "points": "15",
+          "played": "15",
+          "wins": "4",
+          "draws": "3",
+          "losses": "8",
+          "goal_difference": "-6"
+        },
+        {
+          "name": "River Plate",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/16.png",
+          "rank": "4",
+          "points": "23",
+          "played": "15",
+          "wins": "7",
+          "draws": "2",
+          "losses": "6",
+          "goal_difference": "+5"
+        },
+        {
+          "name": "Rosario Central",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/17.png",
+          "rank": "1",
+          "points": "31",
+          "played": "15",
+          "wins": "9",
+          "draws": "4",
+          "losses": "2",
+          "goal_difference": "+12"
+        },
+        {
+          "name": "Banfield",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/235.png",
+          "rank": "13",
+          "points": "14",
+          "played": "14",
+          "wins": "3",
+          "draws": "5",
+          "losses": "6",
+          "goal_difference": "-5"
+        },
+        {
+          "name": "Tigre",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/7767.png",
+          "rank": "11",
+          "points": "16",
+          "played": "15",
+          "wins": "4",
+          "draws": "4",
+          "losses": "7",
+          "goal_difference": "-1"
+        },
+        {
+          "name": "Aldosivi",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9739.png",
+          "rank": "14",
+          "points": "11",
+          "played": "15",
+          "wins": "3",
+          "draws": "2",
+          "losses": "10",
+          "goal_difference": "-8"
+        },
+        {
+          "name": "Independiente Rivadavia",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9744.png",
+          "rank": "9",
+          "points": "19",
+          "played": "14",
+          "wins": "5",
+          "draws": "4",
+          "losses": "5",
+          "goal_difference": "-5"
+        },
+        {
+          "name": "Atlético Tucumán",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/9785.png",
+          "rank": "10",
+          "points": "17",
+          "played": "14",
+          "wins": "4",
+          "draws": "5",
+          "losses": "5",
+          "goal_difference": "0"
+        },
+        {
+          "name": "Barracas Central",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10060.png",
+          "rank": "6",
+          "points": "22",
+          "played": "14",
+          "wins": "6",
+          "draws": "4",
+          "losses": "4",
+          "goal_difference": "+2"
+        },
+        {
+          "name": "Sarmiento (Junín)",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/10158.png",
+          "rank": "7",
+          "points": "21",
+          "played": "15",
+          "wins": "6",
+          "draws": "3",
+          "losses": "6",
+          "goal_difference": "0"
+        },
+        {
+          "name": "Estudiantes de Río Cuarto",
+          "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/19685.png",
+          "rank": "15",
+          "points": "9",
+          "played": "15",
+          "wins": "2",
+          "draws": "3",
+          "losses": "10",
+          "goal_difference": "-11"
+        }
+      ],
+      "updated_at": "2026-11-01T22:16:02Z",
       "stale": false,
       "errors": []
     }
