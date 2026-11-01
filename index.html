@@ -3,33 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SloomTV - Live</title>
+<title>SloomTV مباشر</title>
 <style>
-body{background:#0a0e1a;color:#fff;font-family:system-ui;padding:15px}
-h1{text-align:center;color:#00ff88}
-.card{background:#151b2e;border-radius:12px;padding:15px;margin:12px 0;display:flex;justify-content:space-between;align-items:center}
-.team{font-weight:bold;width:40%;text-align:center}
-.score{font-size:24px;color:#00ff88;font-weight:bold;background:#000;padding:5px 12px;border-radius:8px}
-.live{color:#ff0040;font-size:12px}
+body{background:#0a0e1a;color:#fff;font-family:system-ui;margin:0;padding:15px}
+h1{text-align:center;color:#00ff88;margin:30px 0}
+.card{background:#151b2e;border-radius:12px;padding:15px;margin:10px 0;display:flex;justify-content:space-between;align-items:center;border:1px solid #222}
+.score{background:#000;color:#00ff88;padding:6px 14px;border-radius:8px;font-size:22px;font-weight:bold}
+.team{width:38%;text-align:center;font-weight:bold}
+.live{color:#ff3355;font-size:11px}
 </style>
 </head>
 <body>
 <h1>⚽ SloomTV مباشر</h1>
-<div id="loading" style="text-align:center">جاري التحميل...</div>
-<div id="matches"></div>
+<div id="status" style="text-align:center">جاري التحميل...</div>
+<div id="box"></div>
+
 <script>
-async function load(){
- const res = await fetch('https://www.thesportsdb.com/api/v1/json/3/livescore.php');
- const data = await res.json();
- const c = document.getElementById('matches');
- document.getElementById('loading').style.display='none';
- c.innerHTML='';
- if(!data.events){c.innerHTML='<p style="text-align:center">لا يوجد لايف الان</p>';return}
- data.events.forEach(m=>{
-  c.innerHTML+=`<div class="card"><div class="team">${m.strHomeTeam}<br><span class="live">● ${m.strStatus}</span></div><div class="score">${m.intHomeScore||0} - ${m.intAwayScore||0}</div><div class="team">${m.strAwayTeam}<br><span style="font-size:11px;color:#888">${m.strLeague}</span></div></div>`;
- });
+async function getMatches(){
+  const box=document.getElementById('box');
+  const status=document.getElementById('status');
+  try{
+    // جرب اللايف اول
+    let r = await fetch('https://www.thesportsdb.com/api/v1/json/3/livescore.php');
+    let j = await r.json();
+    let games = j.events;
+
+    // اذا ما فيه لايف، جيب مباريات الدوري السعودي القادمة
+    if(!games || games.length==0){
+      status.innerText="لا يوجد لايف الان - مباريات الدوري السعودي القادمة:";
+      r = await fetch('https://www.thesportsdb.com/api/v1/json/3/eventsnextleague.php?id=4331');
+      j = await r.json();
+      games = j.events ? j.events.slice(0,10) : [];
+    } else {
+      status.innerText="🔴 مباشر الان:";
+    }
+
+    box.innerHTML="";
+    if(games.length==0){box.innerHTML="<p style='text-align:center'>لا توجد مباريات اليوم</p>";return}
+
+    games.forEach(m=>{
+      const home = m.strHomeTeam || m.strEvent?.split(' vs ')[0];
+      const away = m.strAwayTeam || m.strEvent?.split(' vs ')[1];
+      const hs = m.intHomeScore ?? '-';
+      const as = m.intAwayScore ?? '-';
+      const time = m.strStatus || m.strTime || 'قادمة';
+      box.innerHTML+=`<div class="card"><div class="team">${home}<br><span class="live">${time}</span></div><div class="score">${hs} - ${as}</div><div class="team">${away}</div></div>`;
+    });
+  }catch(e){
+    status.innerText="خطأ: "+e.message+" - تأكد انك فاتح النت";
+  }
 }
-load(); setInterval(load,30000);
+getMatches();
+setInterval(getMatches, 60000);
 </script>
 </body>
 </html>
