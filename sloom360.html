@@ -143,11 +143,11 @@ function localAssistantAnswer(q){
   return items.length?'آخر الأخبار المنشورة من المصادر المتاحة (العناوين بلغتها الأصلية):\n'+items.map(x=>'• '+x.headline+' — '+(x.source||'مصدر رياضي')+' '+(x.published||'')+'\n'+x.link).join('\n\n'):'لا توجد أخبار حديثة مطابقة في المصادر الموثوقة حالياً.';
  }
  const matches=scope.flatMap(([id,l])=>(l.matches||[]).filter(m=>m.date&&recent(data.generated_at,1.5)).map(m=>({...m,league:l.name||id})));
- const found=matches.filter(m=>!terms.length||terms.some(t=>norm((m.home?.name||'')+' '+(m.away?.name||'')+' '+showTeam(m.home?.name)+' '+showTeam(m.away?.name)+' '+m.league).includes(t))).slice(0,12);
+ const found=matches.filter(m=>!terms.length||terms.some(t=>norm((m.home?.name||'')+' '+(m.away?.name||'')+' '+m.league).includes(t))).slice(0,12);
  if(/مباراه|مباريات|نتيجه|نتائج|موعد|متى|يلعب|مواجه/.test(n)||terms.length){
   return found.length?'المباريات المتاحة في بيانات SLOOM360:\n'+found.map(m=>'• '+showLeague(m.league)+': '+showTeam(m.home?.name)+' '+(m.home?.score??'—')+' - '+(m.away?.score??'—')+' '+showTeam(m.away?.name)+'\n'+(m.status==='in'?'مباشرة':m.status==='post'?'انتهت':'قادمة')+' · '+fmtKickoff(m.date||m.time)+' · '+(m.broadcast||'القنوات غير متوفرة من المصدر')).join('\n\n'):'لم أجد مباريات مطابقة في البيانات الحديثة. جرّب اسم البطولة أو النادي.';
  }
- const teams=scope.flatMap(([id,l])=>(l.teams||[]).map(t=>({name:t.name,league:l.name||id}))).filter(t=>!terms.length||terms.some(x=>norm(t.name+' '+showTeam(t.name)).includes(x)));
+ const teams=scope.flatMap(([id,l])=>(l.teams||[]).map(t=>({name:t.name,league:l.name||id}))).filter(t=>!terms.length||terms.some(x=>norm(t.name).includes(x)));
  if(teams.length)return 'الأندية الموجودة في البيانات:\n'+teams.slice(0,20).map(t=>'• '+showTeam(t.name)+' — '+showLeague(t.league)).join('\n');
  return 'أنا مساعد SLOOM360. أبحث في بيانات المباريات والترتيب والأخبار والأندية الحديثة فقط. اسألني عن مباراة أو نادٍ أو بطولة محددة.';
 }
