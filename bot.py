@@ -26,7 +26,8 @@ NOW = lambda: datetime.now(timezone.utc).isoformat(timespec="seconds").replace("
 
 RSS_FEEDS = [
     ("BBC Sport", "https://feeds.bbci.co.uk/sport/football/rss.xml"),
-    ("Sky Sports", "https://www.skysports.com/rss/0,20514,11095,00.xml"),
+    ("Sky Sports", "https://www.skysports.com/rss/11095"),
+    ("ESPN FC", "https://www.espn.com/espn/rss/soccer/news"),
     ("The Guardian", "https://www.theguardian.com/football/rss"),
 ]
 
@@ -186,7 +187,8 @@ def fetch_feed(item):
                 "link": (article.get("links", {}).get("web") or {}).get("href", ""),
                 "image": images[0].get("url", "") if images else "",
                 "source": name,
-                "published": article.get("published", "")
+                "published": article.get("published", ""),
+                "category": "transfers" if re.search(r"transfer|signs|signing|deal|loan|gossip|انتقال|صفقة|ضم|تعاقد", (article.get("headline") or "") + " " + (article.get("description") or ""), re.I) else "news"
             })
     except Exception as exc:
         errors.append("news: " + str(exc)[:100])
