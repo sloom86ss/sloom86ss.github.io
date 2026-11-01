@@ -167,7 +167,11 @@ def fetch_feed(item):
                 "status": status.get("state", "pre"),
                 "detail": status.get("shortDetail") or status.get("detail", ""),
                 "venue": (comp.get("venue") or {}).get("fullName", ""),
-                "broadcast": ", ".join(x.get("names", [""])[0] for x in comp.get("broadcasts", []) if x.get("names")),\n                "status_detail": status.get("detail", ""),\n                "status_short": status.get("shortDetail", ""),\n                "period": (comp.get("status") or {}).get("period"),\n                "clock": (comp.get("status") or {}).get("displayClock", "")
+                "broadcast": ", ".join(x.get("names", [""])[0] for x in comp.get("broadcasts", []) if x.get("names")),
+                "status_detail": status.get("detail", ""),
+                "status_short": status.get("shortDetail", ""),
+                "period": (comp.get("status") or {}).get("period"),
+                "clock": (comp.get("status") or {}).get("displayClock", "")
             })
         result["updated_at"] = NOW()
     except Exception as exc:
