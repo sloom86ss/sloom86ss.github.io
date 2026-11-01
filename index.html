@@ -12,12 +12,13 @@
 .logoTxt{font-weight:900;font-size:18px}.logoTxt span{color:#d4ff00}
 .tools{display:flex;gap:8px;align-items:center}
 .iconBtn{width:36px;height:36px;background:#1c1c1c;border:1px solid #222;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px}
+.aiBtn{background:#d4ff00;color:#000;border:none;border-radius:20px;padding:8px 14px;font-weight:900;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:4px}
 .timeBox{text-align:left;font-size:11px;line-height:1.3}.timeBox b{color:#d4ff00}
 .ticker{background:#d4ff00;color:#000;overflow:hidden;white-space:nowrap;padding:7px 0;font-weight:900;font-size:13px}
 .ticker-track{display:inline-block;animation:scroll 30s linear infinite}
 @keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
-.tabs{display:flex;gap:8px;padding:10px;max-width:500px;margin:0 auto}
-.tab{flex:1;padding:10px;border-radius:22px;text-align:center;background:#1c1c1c;border:1px solid #222;font-weight:700;font-size:13px;cursor:pointer;transition:.2s}
+.tabs{display:flex;gap:6px;padding:10px;max-width:500px;margin:0 auto}
+.tab{flex:1;padding:10px 4px;border-radius:22px;text-align:center;background:#1c1c1c;border:1px solid #222;font-weight:700;font-size:12px;cursor:pointer;transition:.2s}
 .tab.active{background:#d4ff00;color:#000;border-color:#d4ff00;font-weight:900;transform:scale(1.05)}
 .box{max-width:500px;margin:0 auto;padding:10px}
 .leagueTitle{background:linear-gradient(90deg,#1c1c1c,#222);color:#d4ff00;padding:8px 12px;border-radius:12px;font-size:11px;font-weight:900;margin-top:14px;border:1px solid #222;display:flex;justify-content:space-between;align-items:center}
@@ -36,12 +37,17 @@
 .newsTitle{font-size:13px;font-weight:700;line-height:1.4}
 .fav{position:absolute;top:8px;left:8px;font-size:16px}
 .langEn{font-family:'Inter',sans-serif}
+.aiBox{background:linear-gradient(135deg,#111,#1a1a1a);border:1px solid #222;border-radius:20px;padding:18px;text-align:center}
+.aiIcon{width:70px;height:70px;background:#d4ff00;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 12px}
+.floatAI{position:fixed;bottom:20px;left:20px;background:#d4ff00;color:#000;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;box-shadow:0 4px 20px #d4ff0088;cursor:pointer;z-index:99;animation:floatPulse 2s infinite}
+@keyframes floatPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
 </style>
 </head>
 <body>
 <div class="head">
 <div class="logoBox"><div class="logoImg">س</div><div class="logoTxt">سلوم <span>تيفي</span></div></div>
 <div class="tools">
+<button class="aiBtn" onclick="openAI()">🤖 AI</button>
 <div class="iconBtn" onclick="toggleLang()" id="langBtn">EN</div>
 <div class="iconBtn" onclick="toggleFavView()" id="favBtn">⭐</div>
 <div class="timeBox"><div id="ksaTime">--</div><div id="mctTime">--</div></div>
@@ -54,24 +60,42 @@
 <div class="tab active" id="tab1" onclick="showTab('matches',this)">⚽ المباريات</div>
 <div class="tab" id="tab2" onclick="showTab('stats',this)">📊 الإحصائيات</div>
 <div class="tab" id="tab3" onclick="showTab('news',this)">📰 الأخبار</div>
+<div class="tab" id="tab4" onclick="showTab('ai',this)">🤖 سلوم AI</div>
 </div>
 
 <div class="box">
 <div id="matchesTab"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><b id="todayTxt">مباريات اليوم</b><span id="cnt" style="color:#777;font-size:11px"></span></div><div id="list">...</div></div>
 <div id="statsTab" style="display:none"><div id="statsList"></div></div>
 <div id="newsTab" style="display:none"><div id="newsList"></div></div>
+<div id="aiTab" style="display:none">
+<div class="aiBox">
+<div class="aiIcon">🤖</div>
+<h2 style="font-weight:900;margin-bottom:6px">سلوم AI</h2>
+<p style="color:#888;font-size:13px;line-height:1.6;margin-bottom:16px">ذكاء اصطناعي رياضي مجاني - يحلل المباريات، يتوقع النتائج، ويعطيك تشكيلة الفرق فوراً</p>
+<a href="https://poe.com/SloomAI" target="_blank" style="display:block;background:#d4ff00;color:#000;padding:16px;border-radius:14px;font-weight:900;text-decoration:none;margin-bottom:10px">🚀 فتح شات سلوم AI</a>
+<a href="ai.html" style="display:block;background:#222;border:1px solid #333;color:#fff;padding:14px;border-radius:14px;text-decoration:none;font-weight:700">📱 صفحة AI الكاملة</a>
+<div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+<div style="background:#000;border:1px solid #222;border-radius:12px;padding:10px;font-size:11px"><b style="color:#d4ff00;display:block">⚡ سريع</b>رد لحظي</div>
+<div style="background:#000;border:1px solid #222;border-radius:12px;padding:10px;font-size:11px"><b style="color:#d4ff00;display:block">🆓 مجاني</b>بدون حدود</div>
+<div style="background:#000;border:1px solid #222;border-radius:12px;padding:10px;font-size:11px"><b style="color:#d4ff00;display:block">⚽ ذكي</b>GPT-5.4</div>
 </div>
+</div>
+</div>
+</div>
+
+<div class="floatAI" onclick="openAI()">🤖</div>
 
 <script>
 let LANG='ar';
 const T={
- ar:{matches:'⚽ المباريات',stats:'📊 الإحصائيات',news:'📰 الأخبار',today:'مباريات اليوم',welcome:'مرحبا بكم في موقع سلوم تي في • مباريات اليوم من كل دوريات العالم • تحديث لحظي • أفضل تجربة مشاهدة •',live:'مباشر',finished:'انتهت',time:'⏰ توقيت المباراة',noMatch:'لا توجد مباريات اليوم',fav:'المفضلة'},
- en:{matches:'⚽ Matches',stats:'📊 Stats',news:'📰 News',today:"Today's Matches",welcome:'Welcome to Sloum TV • Live matches from all leagues • Instant updates • Best viewing experience •',live:'LIVE',finished:'FT',time:'⏰ Match Time',noMatch:'No matches today',fav:'Favorites'}
+ ar:{matches:'⚽ المباريات',stats:'📊 الإحصائيات',news:'📰 الأخبار',ai:'🤖 سلوم AI',today:'مباريات اليوم',welcome:'مرحبا بكم في موقع سلوم تي في • مباريات اليوم من كل دوريات العالم • سلوم AI الآن متوفر مجانا •',live:'مباشر',finished:'انتهت',time:'⏰ توقيت المباراة',noMatch:'لا توجد مباريات اليوم',fav:'المفضلة'},
+ en:{matches:'⚽ Matches',stats:'📊 Stats',news:'📰 News',ai:'🤖 Sloum AI',today:"Today's Matches",welcome:'Welcome to Sloum TV • Live matches • Sloum AI now free • Best experience •',live:'LIVE',finished:'FT',time:'⏰ Match Time',noMatch:'No matches today',fav:'Favorites'}
 };
 const AR={"Al Hilal":"الهلال","Al Ittihad":"الاتحاد","Manchester City":"السيتي","Manchester United":"مان يونايتد","Chelsea":"تشيلسي","Arsenal":"أرسنال","Liverpool":"ليفربول","Barcelona":"برشلونة","Real Madrid":"ريال مدريد"};
 const LEAGUES=[{id:'eng.1',nameAr:'الإنجليزي 🏴󠁧󠁢󠁥󠁮󠁧󠁿',nameEn:'Premier League'},{id:'esp.1',nameAr:'الإسباني 🇪🇸',nameEn:'La Liga'},{id:'ita.1',nameAr:'الإيطالي 🇮🇹',nameEn:'Serie A'},{id:'ger.1',nameAr:'الألماني 🇩🇪',nameEn:'Bundesliga'},{id:'fra.1',nameAr:'الفرنسي 🇫🇷',nameEn:'Ligue 1'},{id:'sau.1',nameAr:'روشن 🇸🇦',nameEn:'Saudi League'},{id:'uefa.champions',nameAr:'الأبطال 🏆',nameEn:'Champions League'}];
 let allMatches=[],favOnly=false;
 
+function openAI(){window.open('https://poe.com/SloomAI','_blank')}
 function toggleLang(){
  LANG=LANG==='ar'?'en':'ar';
  document.documentElement.lang=LANG;
@@ -79,7 +103,8 @@ function toggleLang(){
  document.getElementById('langBtn').textContent=LANG==='ar'?'EN':'ع';
  document.getElementById('tab1').textContent=T[LANG].matches;
  document.getElementById('tab2').textContent=T[LANG].stats;
- document.getElementById('tab3').textContent=T[LANG].today?T[LANG].stats:T[LANG].stats;
+ document.getElementById('tab3').textContent=T[LANG].news;
+ document.getElementById('tab4').textContent=T[LANG].ai;
  document.getElementById('todayTxt').textContent=T[LANG].today;
  document.getElementById('tickerTxt').textContent=T[LANG].welcome;
  document.body.classList.toggle('langEn',LANG==='en');
@@ -88,7 +113,6 @@ function toggleLang(){
 function toggleFavView(){favOnly=!favOnly;document.getElementById('favBtn').style.background=favOnly?'#d4ff00':'#1c1c1c';renderMatches();}
 function getFav(){try{return JSON.parse(localStorage.getItem('sloom_fav')||'[]');}catch{return []}}
 function toggleFav(id){let f=getFav();if(f.includes(id)) f=f.filter(x=>x!==id);else f.push(id);localStorage.setItem('sloom_fav',JSON.stringify(f));renderMatches();}
-
 function updateTimes(){
  let now=new Date();
  let ksa=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Riyadh'}));
@@ -102,15 +126,14 @@ function updateTimes(){
  }
 }
 setInterval(updateTimes,1000);updateTimes();
-
 function showTab(t,el){
  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));el.classList.add('active');
  document.getElementById('matchesTab').style.display=t==='matches'?'block':'none';
  document.getElementById('statsTab').style.display=t==='stats'?'block':'none';
  document.getElementById('newsTab').style.display=t==='news'?'block':'none';
+ document.getElementById('aiTab').style.display=t==='ai'?'block':'none';
  if(t==='news') loadNews(); if(t==='stats') loadStats();
 }
-
 async function loadMatches(){
  let date=new Date().toISOString().slice(0,10).replace(/-/g,'');
  allMatches=[];
@@ -124,7 +147,6 @@ async function loadMatches(){
    });
   }catch{}
  }
- // احتياط ثاني صامت بدون ذكر
  if(allMatches.length===0){
   try{
    let r=await fetch('https://www.thesportsdb.com/api/v1/json/3/latestsoccer.php');let j=await r.json();
@@ -133,7 +155,6 @@ async function loadMatches(){
  }
  renderMatches();
 }
-
 function renderMatches(){
  let listEl=document.getElementById('list');
  if(allMatches.length===0){listEl.innerHTML=`<div style="text-align:center;color:#777;padding:30px">${T[LANG].noMatch}</div>`;return;}
