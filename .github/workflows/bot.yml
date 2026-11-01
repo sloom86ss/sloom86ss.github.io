@@ -40,4 +40,5 @@ jobs:
           git add data.json
           git diff --cached --quiet && echo "No data changes" && exit 0
           git commit -m "Update sports scores, clubs and standings"
+          git pull --rebase origin main
           git push
