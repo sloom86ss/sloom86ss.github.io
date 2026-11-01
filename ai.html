@@ -21,6 +21,13 @@ header{padding:12px 16px;background:#111915;border-bottom:1px solid #26352b;disp
 const chat=document.getElementById('chat'),field=document.getElementById('question'),send=document.getElementById('send');
 let sportsData=null;
 const clean=v=>String(v??'').replace(/<[^>]*>/g,'').trim();
+
+const clubAr={
+"Real Madrid":"ريال مدريد","Barcelona":"برشلونة","Atlético Madrid":"أتلتيكو مدريد","Atletico Madrid":"أتلتيكو مدريد","Sevilla":"إشبيلية","Getafe":"خيتافي","Arsenal":"أرسنال","Liverpool":"ليفربول","Manchester City":"مانشستر سيتي","Manchester United":"مانشستر يونايتد","Chelsea":"تشيلسي","Tottenham Hotspur":"توتنهام","Newcastle United":"نيوكاسل","Bayern Munich":"بايرن ميونخ","Borussia Dortmund":"بوروسيا دورتموند","Inter":"إنتر ميلان","Internazionale":"إنتر ميلان","Juventus":"يوفنتوس","AC Milan":"ميلان","Napoli":"نابولي","Paris Saint-Germain":"باريس سان جيرمان","PSG":"باريس سان جيرمان","Al Hilal":"الهلال","Al Nassr":"النصر","Al Ittihad":"الاتحاد","Al-Ittihad":"الاتحاد","Al Ahli":"الأهلي","Al Ettifaq":"الاتفاق","Al Shabab":"الشباب","Porto":"بورتو","Benfica":"بنفيكا","Ajax":"أياكس","PSV Eindhoven":"آيندهوفن"
+};
+const teamName=name=>clubAr[name]||name||'الفريق';
+const teamQueryMatch=(name,terms)=>terms.some(t=>norm(name).includes(t)||norm(teamName(name)).includes(t));
+
 function bubble(text,kind){const el=document.createElement('div');el.className='m '+kind;el.textContent=text;chat.appendChild(el);chat.scrollTop=chat.scrollHeight;return el}
 function norm(s){return clean(s).toLowerCase().replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي')}
 function fresh(value, hours=1.5){const t=Date.parse(value||'');return Number.isFinite(t)&&Date.now()-t>=0&&Date.now()-t<=hours*3600000}
@@ -48,14 +55,14 @@ function reply(q){
   return 'آخر الأخبار المتاحة من المصادر المجمعة:\n'+news.map(a=>'• '+clean(a.headline)+' ('+a.league+')'+(a.published?' — '+fmtDate(a.published):'')+(a.link?'\n'+a.link:'')).join('\n\n');
  }
  if(isTeam){
-  const teams=ls.flatMap(x=>(x.l.teams||[]).map(t=>({...t,league:x.name}))).filter(t=>!terms.length||terms.some(w=>norm(t.name).includes(w)));
+  const teams=ls.flatMap(x=>(x.l.teams||[]).map(t=>({...t,league:x.name}))).filter(t=>!terms.length||teamQueryMatch(t.name,terms));
   if(!teams.length)return 'لم أجد هذا النادي في دليل الأندية المتاح حالياً. جرّب كتابة اسمه كما يظهر في الدوري.';
-  return 'الأندية المطابقة في دليل SLOOM360:\n'+teams.slice(0,25).map(t=>'• '+t.name+' — '+t.league).join('\n');
+  return 'الأندية المطابقة في دليل SLOOM360:\n'+teams.slice(0,25).map(t=>'• '+teamName(t.name)+' — '+t.league).join('\n');
  }
  if(isMatch||terms.length){
-  const found=matches.filter(m=>!terms.length||terms.some(t=>norm((m.home?.name||'')+' '+(m.away?.name||'')).includes(t))).slice(0,15);
+  const found=matches.filter(m=>!terms.length||teamQueryMatch(m.home?.name||'',terms)||teamQueryMatch(m.away?.name||'',terms)).slice(0,15);
   if(!found.length)return 'لم أجد مباريات مطابقة في البيانات الحالية. قد لا تكون هناك مباريات ضمن نافذة ESPN الحالية، أو أن اسم الفريق/البطولة غير موجود. جرّب اسم النادي أو البطولة.';
-  return 'المباريات المتاحة في بيانات SLOOM360:\n'+found.map(m=>{const state=norm(m.status)==='in'?'مباشرة':norm(m.status)==='post'?'انتهت':'قادمة';return '• '+m.league+': '+(m.home?.name||'غير معروف')+' '+(m.home?.score??'—')+' - '+(m.away?.score??'—')+' '+(m.away?.name||'غير معروف')+'\n  '+state+' | '+clean(m.detail||'')+' | '+fmtDate(m.date)+(m.stale?' | بيانات قديمة':'')}).join('\n');
+  return 'المباريات المتاحة في بيانات SLOOM360:\n'+found.map(m=>{const state=norm(m.status)==='in'?'مباشرة':norm(m.status)==='post'?'انتهت':'قادمة';return '• '+m.league+': '+teamName(m.home?.name||'غير معروف')+' '+(m.home?.score??'—')+' - '+(m.away?.score??'—')+' '+teamName(m.away?.name||'غير معروف')+'\n  '+state+' | '+clean(m.detail||'')+' | '+fmtDate(m.date)+(m.stale?' | بيانات قديمة':'')}).join('\n');
  }
  return 'أنا مساعد SLOOM360 المجاني. أستطيع البحث داخل بيانات المباريات والنتائج والترتيب والأندية والأخبار التي يجمعها الموقع.\n\nجرّب مثلاً:\n• ترتيب الدوري الإنجليزي\n• مباريات ريال مدريد\n• نتائج دوري روشن السعودي\n• أخبار دوري أبطال أوروبا\n• الأندية في الدوري الإيطالي\n\nهذا الإصدار لا يعتمد على خدمة ذكاء اصطناعي مدفوعة؛ لذلك يعرض المعلومات الموجودة في مصدر البيانات فقط ولا يقدّم محادثة توليدية عامة.';
 }
