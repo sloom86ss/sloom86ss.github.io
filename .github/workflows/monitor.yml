@@ -1,0 +1,37 @@
+name: SLOOM360 Health Monitor
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sloom360-health-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Check website and notify on status changes
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ vars.NTFY_SERVER }}
+          SLOOM_SITE_URL: https://sloom86ssgithubio.vercel.app
+        run: python monitor.py
+      - name: Save monitor state
+        if: always()
+        run: |
+          git config user.name 'SLOOM TV Monitor'
+          git config user.email 'sloom-tv-bot@users.noreply.github.com'
+          git add monitor_state.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Update SLOOM360 health monitor state"
+          git pull --rebase origin main
+          git push
