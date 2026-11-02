@@ -1,6 +1,10 @@
 name: Refresh SLOOM360 football data
 
 on:
+  push:
+    paths:
+      - ".github/workflows/refresh-football-data.yml"
+      - "scripts/refresh_data.py"
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
