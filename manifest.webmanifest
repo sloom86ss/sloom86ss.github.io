@@ -1,16 +1,16 @@
 {
-  "id": "/sloom360.html",
-  "name": "SLOOM 365 - كرة القدم بالعربية",
-  "short_name": "SLOOM 365",
-  "description": "مباريات وأخبار ونتائج كرة القدم من مصادر موثوقة",
+  "id": "/",
+  "name": "سلوم 365 | SLOOM 365",
+  "short_name": "سلوم 365",
+  "description": "سلوم 365 — مباريات وأخبار ونتائج كرة القدم بالعربية من مصادر موثوقة",
   "lang": "ar",
   "dir": "rtl",
-  "start_url": "/sloom360.html",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#080c0a",
-  "theme_color": "#b7f34a",
+  "theme_color": "#090d0b",
   "categories": ["sports", "news"],
   "icons": [
     {
