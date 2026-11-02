@@ -954,12 +954,47 @@ html,body,body>.wrap,main.wrap{background:#000!important;background-color:#000!i
  .sloom-bottom-nav a{min-height:53px!important;font-size:9px!important}
  .news-section-head .news-head-actions{margin-inline-start:0!important;width:100%!important}
 }
+
+/* SLOOM365: navigation moved beside the brand; ticker removed */
+body{padding-bottom:28px!important}
+.sloom-header-top{
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ gap:12px!important;min-height:82px!important;overflow:visible!important;flex-wrap:nowrap!important;
+ padding:10px 12px!important;
+}
+.sloom-header-top .brand{flex:0 0 auto!important;min-width:max-content!important}
+.sloom-header-nav{
+ position:static!important;inset:auto!important;left:auto!important;right:auto!important;bottom:auto!important;
+ transform:none!important;margin:0!important;width:auto!important;max-width:none!important;
+ flex:1 1 auto!important;min-width:0!important;display:grid!important;
+ grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:5px!important;
+ padding:5px!important;border-radius:14px!important;
+}
+.sloom-header-nav a{min-width:0!important;min-height:46px!important;padding:4px 2px!important;font-size:10px!important}
+.sloom-header-nav a span{font-size:17px!important}
+.ticker,#newsTicker{display:none!important}
+@media(max-width:650px){
+ .sloom-header-top{align-items:center!important;flex-wrap:wrap!important;gap:8px!important}
+ .sloom-header-top .brand{width:100%!important;justify-content:center!important}
+ .sloom-header-nav{width:100%!important;flex:1 1 100%!important;gap:3px!important}
+ .sloom-header-nav a{min-height:42px!important;font-size:9px!important}
+ .sloom-header-nav a span{font-size:16px!important}
+}
 </style>
 
 </head>
 <body><main class="wrap">
 
-<header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>سلوم 365</h1><small>مباريات وأخبار كرة القدم</small></div></div></header>
+<header class="sloom-header-top">
+ <div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>SLOOM365</h1><small>مباريات وأخبار كرة القدم</small></div></div>
+ <nav class="sloom-bottom-nav sloom-header-nav" aria-label="التنقل الرئيسي">
+  <a href="#arabicLeagueNav"><span>🏆</span>البطولات</a>
+  <a href="#upcomingBoard"><span>📅</span>القادمة</a>
+  <a href="#liveBoard" class="active"><span>🔴</span>المباشرة</a>
+  <a href="#news"><span>📰</span>آخر الأخبار</a>
+  <a href="#teamsDirectory"><span>🏟️</span>الأندية</a>
+ </nav>
+</header>
 <section class="sloom-hero-banner" aria-label="SLOOM365 رياضة وأخبار">
  <div class="sloom-hero-title">SLOOM<span>365</span></div>
  <div class="sloom-hero-sub">كل المباريات • النتائج المباشرة • آخر الأخبار</div>
@@ -971,15 +1006,6 @@ html,body,body>.wrap,main.wrap{background:#000!important;background-color:#000!i
  <button id="weatherLocationButton" type="button" aria-label="استخدام موقع الهاتف للطقس" style="border:1px solid #c6a6ff;background:#251342;color:#fff;border-radius:10px;padding:8px 10px;font:800 10px Cairo;cursor:pointer">📍 تحديد موقعي</button><div class="weather-clock"><b id="weatherLocalTime">--:--</b><span id="weatherLocalDate">توقيت عُمان</span></div>
 </section>
 
-<section class="ticker" id="newsTicker" aria-label="الأخبار والتوقيت العالمي">
- <span class="ticker-label">آخر الأخبار</span>
- <div class="ticker-world-times" aria-label="التوقيت العالمي">
-  <span><b>عُمان</b><time id="timeOman">--:--</time></span>
-  <span><b>السعودية</b><time id="timeSaudi">--:--</time></span>
-  <span><b>غرينتش</b><time id="timeUTC">--:--</time></span>
- </div>
- <div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل الأخبار الرياضية…</span></div>
-</section>
 <section class="live-board" id="liveBoard" aria-live="polite" aria-label="المباريات المباشرة">
  <div class="live-board-head"><h2>🔴 المباريات المباشرة الآن</h2><span id="liveBoardCount">جارٍ التحقق من المصدر…</span></div>
  <div class="live-board-list" id="liveBoardList"><div class="empty">جارٍ تحميل حالة المباريات…</div></div>
@@ -1018,13 +1044,6 @@ html,body,body>.wrap,main.wrap{background:#000!important;background-color:#000!i
  <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
  </div><small class="news-source-note">أخبار من مصادر موثوقة</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 
-<nav class="sloom-bottom-nav" aria-label="التنقل الرئيسي">
-<a href="#arabicLeagueNav"><span>🏆</span>البطولات</a>
-<a href="#upcomingBoard"><span>📅</span>القادمة</a>
-<a href="#liveBoard" class="active"><span>🔴</span>المباشرة</a>
-<a href="#news"><span>📰</span>آخر الأخبار</a>
-<a href="#teamsDirectory"><span>🏟️</span>الأندية</a>
-</nav>
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.<div class="broadcast-disclaimer">سياسة حقوق البث: لا يستضيف SLOOM365 أي بث مباشر ولا يعيد رفع أو تضمين أو إعادة توزيع مباريات أو مقاطع محمية. قد نعرض أسماء القنوات الناقلة بوصفها معلومات رياضية تعريفية وفق البيانات المتاحة من مصادر المباريات، ولا يعني ذكر اسم القناة أننا نملك حقوق بثها أو نمثلها. لا يستضيف SLOOM365 بثاً مباشراً ولا يعيد رفع أو تضمين أو إعادة توزيع المباريات أو المقاطع المحمية. روابط المشاهدة — إن توفرت — تقتصر على المواقع الرسمية للناقلين أو أصحاب الحقوق بعد التحقق منها؛ ولا ننشر روابط بث غير رسمية. قد تختلف القنوات حسب الدولة وحقوق النقل، لذا يُرجى الرجوع إلى الناقل للتأكد من جدول البث.</div></footer>
 </main>
 <script>
@@ -1245,9 +1264,10 @@ function setClock(prefix,angles){
 }
 function tickSloomClocks(){
  const now=new Date(),oman=clockAngles(now,'Asia/Muscat'),saudi=clockAngles(now,'Asia/Riyadh'),utc=clockAngles(now,'UTC');
- document.getElementById('timeOman').textContent=oman.display;
- document.getElementById('timeSaudi').textContent=saudi.display;
- document.getElementById('timeUTC').textContent=utc.display;
+ const omanEl=document.getElementById('timeOman'),saudiEl=document.getElementById('timeSaudi'),utcEl=document.getElementById('timeUTC');
+ if(omanEl)omanEl.textContent=oman.display;
+ if(saudiEl)saudiEl.textContent=saudi.display;
+ if(utcEl)utcEl.textContent=utc.display;
  setClock('live',oman);
 }
 setInterval(tickSloomClocks,1000);tickSloomClocks();
