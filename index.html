@@ -591,6 +591,21 @@ body{background:radial-gradient(ellipse at 50% -15%,#174b2b 0,transparent 48%),#
 footer{border-color:#28543a!important}
 @media(max-width:520px){.news-section-head>.install-app-slot{width:100%!important}.install-app-slot #installApp,.install-app-slot #enableNotifications{flex:1 1 calc(50% - 5px)!important;font-size:10px!important}.ticker{gap:8px!important}.ticker-world-times{display:none!important}#tickerTrack.ticker-track{gap:22px!important}}
 
+
+/* SLOOM365 final repair: slow ticker, visible actions, resilient weather */
+#newsTicker .ticker-track{animation:newsTicker 75s linear infinite!important;animation-play-state:running!important;}
+@media(max-width:520px){#newsTicker .ticker-track{animation-duration:75s!important}}
+.news-section-head{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:9px!important}
+.news-section-head .news-source-note{display:inline-flex!important}
+.news-section-head .install-app-slot{display:flex!important;visibility:visible!important;opacity:1!important;position:static!important;order:3!important;flex:1 1 100%!important;flex-direction:row!important;flex-wrap:wrap!important;justify-content:flex-start!important;align-items:center!important;gap:8px!important;width:100%!important;margin:6px 0 12px!important;padding:0!important;border:0!important;background:transparent!important}
+.news-section-head #installApp,.news-section-head #enableNotifications{display:inline-flex!important;visibility:visible!important;opacity:1!important;position:static!important;flex:0 0 auto!important;min-height:40px!important;padding:8px 12px!important;border-radius:10px!important;font:900 11px Cairo,Arial,sans-serif!important;white-space:nowrap!important;cursor:pointer!important}
+.news-section-head #installApp{background:#b7f34a!important;color:#10170b!important;border:1px solid #e2ffad!important}
+.news-section-head #enableNotifications{background:#203a2a!important;color:#eaffd6!important;border:1px solid #8ab56a!important}
+.news-section-head .install-app-help{display:block!important;flex:1 1 100%!important;margin:0!important;font-size:10px!important;color:#c7d8c8!important}
+.news-section-head .install-app-help:empty{display:none!important}
+.weather-strip{display:flex!important;visibility:visible!important;opacity:1!important;align-items:center!important;gap:10px!important;flex-wrap:wrap!important}
+#weatherLocationButton{display:inline-flex!important;visibility:visible!important;opacity:1!important;align-items:center!important;justify-content:center!important;min-height:38px!important}
+@media(max-width:520px){.news-section-head .install-app-slot{gap:6px!important}.news-section-head #installApp,.news-section-head #enableNotifications{font-size:10px!important;padding:7px 9px!important}.weather-strip{gap:7px!important}}
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -978,11 +993,35 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 (()=> {
  const $=id=>document.getElementById(id);
  const labels={0:['سماء صافية','☀️'],1:['غائم جزئياً','🌤️'],2:['غائم جزئياً','⛅'],3:['غائم','☁️'],45:['ضباب','🌫️'],48:['ضباب كثيف','🌫️'],51:['رذاذ خفيف','🌦️'],53:['رذاذ','🌦️'],55:['رذاذ كثيف','🌧️'],61:['أمطار خفيفة','🌦️'],63:['أمطار','🌧️'],65:['أمطار غزيرة','🌧️'],71:['ثلوج خفيفة','🌨️'],73:['ثلوج','🌨️'],75:['ثلوج كثيفة','❄️'],80:['زخات مطر','🌦️'],81:['زخات مطر','🌧️'],82:['زخات غزيرة','⛈️'],95:['عواصف رعدية','⛈️'],96:['عواصف رعدية وبَرَد','⛈️'],99:['عواصف قوية','⛈️']};
+ const seeb={latitude:23.6803,longitude:58.1825};
  function clock(){const d=new Date();if($('weatherLocalTime'))$('weatherLocalTime').textContent=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'}).format(d);if($('weatherLocalDate'))$('weatherLocalDate').textContent=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long'}).format(d)+' · عُمان'}
- let weatherCoords=null,weatherPlace='السيب، عُمان';
- async function loadWeatherAt(lat,lon,place){try{const u='https://api.open-meteo.com/v1/forecast?latitude='+encodeURIComponent(lat)+'&longitude='+encodeURIComponent(lon)+'&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&timezone=auto';const r=await fetch(u);if(!r.ok)throw Error('weather');const j=await r.json(),c=j.current||{},w=labels[c.weather_code]||['حالة الطقس الحالية','🌤️'];$('weatherTemp').textContent=Math.round(c.temperature_2m)+'°C';$('weatherIcon').textContent=w[1];$('weatherPlaceName').textContent=place;$('weatherDesc').textContent=w[0]+' · المحسوس '+Math.round(c.apparent_temperature)+'° · الرطوبة '+Math.round(c.relative_humidity_2m)+'%';if($('weatherLocationButton'))$('weatherLocationButton').textContent='📍 تحديث موقعي';}catch(e){$('weatherDesc').textContent='تعذر تحديث الطقس حالياً؛ ستتم إعادة المحاولة.';}}
- async function weather(){if(weatherCoords){await loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace);return;}try{const g=await fetch('https://geocoding-api.open-meteo.com/v1/search?name=Seeb&count=5&language=ar&format=json');if(!g.ok)throw Error('geocode');const gj=await g.json(),p=(gj.results||[]).find(x=>x.country_code==='OM')||(gj.results||[])[0];if(!p)throw Error('location');await loadWeatherAt(p.latitude,p.longitude,'السيب، عُمان');}catch(e){$('weatherDesc').textContent='فعّل موقعك من زر تحديد موقعي لعرض الطقس المحلي.';}}
- function requestWeatherLocation(){if(!navigator.geolocation){$('weatherDesc').textContent='متصفحك لا يدعم تحديد الموقع؛ نعرض طقس السيب كبديل.';return;}$('weatherDesc').textContent='بانتظار السماح بالوصول إلى موقعك…';navigator.geolocation.getCurrentPosition(async pos=>{weatherCoords={latitude:pos.coords.latitude,longitude:pos.coords.longitude};try{const r=await fetch('https://geocoding-api.open-meteo.com/v1/reverse?latitude='+weatherCoords.latitude+'&longitude='+weatherCoords.longitude+'&language=ar&format=json'),j=await r.json(),p=j?.results?.[0];weatherPlace=p?(p.name||p.admin2||p.admin1||'موقعي')+', '+(p.country||''):'موقعي الحالي';}catch(_){weatherPlace='موقعي الحالي';}await loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace);},err=>{$('weatherDesc').textContent=err.code===1?'لم تسمح بإذن الموقع؛ الطقس الافتراضي للسيب.':'تعذر تحديد الموقع؛ الطقس الافتراضي للسيب.';weatherCoords=null;weather();},{enableHighAccuracy:true,timeout:12000,maximumAge:300000});}
+ let weatherCoords={...seeb},weatherPlace='السيب، عُمان',weatherBusy=false;
+ async function loadWeatherAt(lat,lon,place){
+  if(weatherBusy)return;weatherBusy=true;
+  try{
+   const u='https://api.open-meteo.com/v1/forecast?latitude='+encodeURIComponent(lat)+'&longitude='+encodeURIComponent(lon)+'&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&timezone=Asia%2FMuscat';
+   const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
+   const j=await r.json(),c=j.current;if(!c||c.temperature_2m==null)throw Error('بيانات الطقس غير مكتملة');
+   const w=labels[c.weather_code]||['حالة الطقس الحالية','🌤️'];
+   $('weatherTemp').textContent=Math.round(c.temperature_2m)+'°C';$('weatherIcon').textContent=w[1];$('weatherPlaceName').textContent=place;
+   $('weatherDesc').textContent=w[0]+' · المحسوس '+Math.round(c.apparent_temperature)+'° · الرطوبة '+Math.round(c.relative_humidity_2m)+'% · الرياح '+Math.round(c.wind_speed_10m)+' كم/س';
+   if($('weatherLocationButton'))$('weatherLocationButton').textContent='📍 تحديث موقعي';
+  }catch(e){$('weatherDesc').textContent='تعذر جلب الطقس الآن؛ سنعيد المحاولة تلقائياً. ('+(e.message||'اتصال')+')';}
+  finally{weatherBusy=false;}
+ }
+ function weather(){loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace)}
+ function requestWeatherLocation(){
+  if(!navigator.geolocation){$('weatherDesc').textContent='تحديد الموقع غير مدعوم؛ نعرض طقس السيب.';return;}
+  $('weatherDesc').textContent='بانتظار السماح بموقع الهاتف…';
+  navigator.geolocation.getCurrentPosition(async pos=>{
+   weatherCoords={latitude:pos.coords.latitude,longitude:pos.coords.longitude};weatherPlace='موقعك الحالي';
+   await loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace);
+  },err=>{
+   weatherCoords={...seeb};weatherPlace='السيب، عُمان';
+   $('weatherDesc').textContent=err.code===1?'لم تسمح بالموقع؛ نعرض طقس السيب بدلاً منه.':'تعذر تحديد الموقع؛ نعرض طقس السيب بدلاً منه.';
+   weather();
+  },{enableHighAccuracy:false,timeout:15000,maximumAge:600000});
+ }
  clock();weather();$('weatherLocationButton')?.addEventListener('click',requestWeatherLocation);setInterval(clock,15000);setInterval(weather,15*60*1000);
 })();
 </script>
