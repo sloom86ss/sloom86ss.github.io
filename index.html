@@ -467,6 +467,69 @@ footer{border-color:#4d2c70!important;color:#b9a6ce!important}
 @media(max-width:520px){.sloom-hero-banner{min-height:128px;padding:17px 15px}.sloom-hero-ball{font-size:86px;left:3%}.weather-strip{padding:9px 10px}.weather-temp{font-size:20px}.weather-icon{font-size:24px}.weather-clock b{font-size:15px}.sloom-bottom-nav{border-radius:16px!important}}
 @media(prefers-reduced-motion:reduce){.sloom-hero-ball{animation:none!important}}
 
+
+/* SLOOM365 beIN-inspired redesign: remove mascot and use cinematic weather artwork */
+.sloom-mascot,.sloom-hero-ball{display:none!important;animation:none!important}
+header{position:relative;min-height:76px!important;padding:8px 0 14px!important;justify-content:flex-start!important}
+.brand{gap:12px!important}
+.brand img{width:50px!important;height:50px!important;max-width:none!important}
+.brand h1{font-size:clamp(22px,4vw,30px)!important;letter-spacing:.2px}
+.brand small{font-size:10px!important;color:#c9c6e7!important}
+.sloom-hero-banner{
+ position:relative!important;isolation:isolate!important;overflow:hidden!important;
+ min-height:190px!important;padding:28px 22px!important;border:1px solid #49347a!important;
+ border-radius:20px!important;margin:0 0 13px!important;
+ background:linear-gradient(90deg,rgba(5,8,24,.94),rgba(15,9,39,.68),rgba(5,8,24,.78)),url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=1600&q=85') center 48%/cover no-repeat!important;
+ box-shadow:0 12px 32px #0007!important
+}
+.sloom-hero-title{font-size:clamp(34px,7vw,54px)!important;font-weight:900!important;letter-spacing:1px!important;text-shadow:0 4px 18px #000!important}
+.sloom-hero-title span{color:#c7a5ff!important}
+.sloom-hero-sub{font-size:13px!important;color:#f3efff!important}
+.sloom-hero-tag{display:inline-flex!important;margin-top:12px!important;padding:6px 12px!important;border:1px solid #b89bff88!important;border-radius:30px!important;background:#120b2dbb!important;color:#e8dfff!important}
+.weather-strip{
+ position:relative!important;isolation:isolate!important;overflow:hidden!important;
+ min-height:96px!important;padding:15px 17px!important;border:1px solid #9d8cc7!important;
+ border-radius:17px!important;
+ background:linear-gradient(100deg,rgba(5,10,27,.92),rgba(18,13,43,.76)),url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=1200&q=85') center 42%/cover no-repeat!important;
+ box-shadow:0 8px 24px #0007!important
+}
+.weather-strip>*{position:relative!important;z-index:1!important}
+.weather-icon{font-size:32px!important}
+.weather-temp{font-size:27px!important;color:#fff!important}
+.weather-place,.weather-desc,.weather-clock span{color:#e0d8f5!important}
+.weather-clock b{font-size:20px!important;color:#fff!important}
+.sloom-bottom-nav{
+ background:linear-gradient(180deg,#17112cfa,#080b19fa)!important;
+ border:1px solid #7152a5!important;border-radius:17px!important;
+ box-shadow:0 8px 30px #000b!important;padding:6px!important;gap:5px!important
+}
+.sloom-bottom-nav a{
+ background:transparent!important;border:1px solid transparent!important;
+ color:#d8d2e9!important;border-radius:11px!important;
+ font-size:10px!important;min-height:55px!important
+}
+.sloom-bottom-nav a span{font-size:19px!important}
+.sloom-bottom-nav a.active{
+ background:linear-gradient(145deg,#7540bd,#49227e)!important;
+ border-color:#b89aff!important;color:#fff!important;
+ box-shadow:0 0 16px #9a65e855!important
+}
+.news-section-head #installApp,.news-section-head #enableNotifications{
+ border-radius:9px!important;min-height:40px!important;font-size:11px!important
+}
+.news-section-head #installApp{background:linear-gradient(135deg,#b89aff,#8352c8)!important;color:#fff!important;border-color:#d5c1ff!important}
+.news-section-head #enableNotifications{background:#17112c!important;color:#eee5ff!important;border-color:#8c6bc0!important}
+@media(max-width:520px){
+ header{min-height:70px!important;padding:6px 0 12px!important}
+ .brand img{width:44px!important;height:44px!important}
+ .sloom-hero-banner{min-height:160px!important;padding:23px 16px!important}
+ .sloom-hero-sub{font-size:11px!important}
+ .weather-strip{min-height:90px!important;padding:11px 12px!important}
+ .weather-desc{font-size:9px!important}
+ .sloom-bottom-nav{left:5px!important;right:5px!important;bottom:calc(env(safe-area-inset-bottom,0px) + 5px)!important}
+ .sloom-bottom-nav a{font-size:9px!important}
+}
+
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -492,7 +555,7 @@ footer{border-color:#4d2c70!important;color:#b9a6ce!important}
 </head>
 <body><main class="wrap">
 
-<header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>سلوم 365</h1><small>مباريات وأخبار كرة القدم</small></div></div><div class="sloom-mascot" role="img" aria-label="لاعب كرتوني ينطط كرة قدم"><svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g class="player"><path d="M54 73 L35 95 L20 115 L31 123 L54 107 L72 91" fill="#f4f7ff" stroke="#c6d9ff" stroke-width="4" stroke-linejoin="round"/><path d="M78 78 L92 102 L111 117 L122 108 L107 83 L98 65" fill="#f4f7ff" stroke="#c6d9ff" stroke-width="4" stroke-linejoin="round"/><path d="M47 65 Q74 53 99 69 L91 105 Q72 116 49 99Z" fill="#0758cf" stroke="#8fc4ff" stroke-width="3"/><path d="M50 98 L90 101 L84 126 L53 124Z" fill="#fff"/><path d="M59 107 L79 108" stroke="#0758cf" stroke-width="4"/><path d="M49 70 L30 84 L18 76 L35 57 L54 55" fill="#0758cf" stroke="#8fc4ff" stroke-width="4" stroke-linejoin="round"/><path d="M94 70 L116 82 L126 70 L108 54 L91 55" fill="#0758cf" stroke="#8fc4ff" stroke-width="4" stroke-linejoin="round"/><circle cx="73" cy="39" r="25" fill="#ffc99d" stroke="#9d573d" stroke-width="2"/><path d="M49 35 Q47 8 73 10 Q99 10 99 34 Q88 24 76 27 Q62 20 49 35Z" fill="#4b2b20"/><path d="M52 27 Q58 9 75 14 Q93 10 98 28" fill="none" stroke="#6b3b28" stroke-width="7" stroke-linecap="round"/><ellipse cx="64" cy="40" rx="4" ry="6" fill="#17233c"/><ellipse cx="83" cy="40" rx="4" ry="6" fill="#17233c"/><path d="M65 52 Q74 61 84 51" fill="none" stroke="#a33b37" stroke-width="3" stroke-linecap="round"/><path d="M58 72 L88 72" stroke="#ffd447" stroke-width="3"/><text x="73" y="88" text-anchor="middle" font-size="9" font-weight="900" fill="#ffe16b">SLOOM</text></g><g class="ball"><circle cx="125" cy="30" r="15" fill="#fff" stroke="#d5e5ff" stroke-width="2"/><path d="M125 20 l7 5 -3 8 -8 0 -4 -7z M125 20l0-5 M129 33l7 5 M121 33l-5 7" fill="#18263d" stroke="#18263d" stroke-width="2" stroke-linejoin="round"/></g></svg></div></header>
+<header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>سلوم 365</h1><small>مباريات وأخبار كرة القدم</small></div></div></header>
 <section class="sloom-hero-banner" aria-label="SLOOM365 رياضة وأخبار">
  <div class="sloom-hero-title">SLOOM<span>365</span></div>
  <div class="sloom-hero-sub">كل المباريات • النتائج المباشرة • آخر الأخبار</div>
