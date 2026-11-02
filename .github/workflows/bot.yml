@@ -31,20 +31,29 @@ jobs:
         with:
           python-version: '3.11'
       - name: Validate collector
-        run: python -m py_compile bot.py monitor.py
+        run: python -m py_compile bot.py monitor.py repair.py scripts/refresh_data.py
       - name: Validate SLOOM360 JavaScript
         run: |
           python - <<'PY'
           from pathlib import Path
-          for page in ("index.html", "sloom360.html"):
+          for page in ("index.html", "sloom360.html", "ai.html"):
               source = Path(page).read_text(encoding="utf-8")
               script = source.split("<script>", 1)[1].split("</script>", 1)[0]
               Path("/tmp/" + page + ".js").write_text(script, encoding="utf-8")
           PY
           node --check /tmp/index.html.js
           node --check /tmp/sloom360.html.js
+          node --check /tmp/ai.html.js
           node --check --input-type=module < api/chat.js
           node --check --input-type=module < api/match.js
+          python - <<'PY'
+          import json, xml.etree.ElementTree as ET
+          from pathlib import Path
+          json.loads(Path("data.json").read_text(encoding="utf-8"))
+          ET.parse("sitemap.xml")
+          assert "Sitemap: https://sloom86ss.github.io/sitemap.xml" in Path("robots.txt").read_text(encoding="utf-8")
+          print("JSON, sitemap and robots checks passed")
+          PY
       - name: Run sports data collector
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
