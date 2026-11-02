@@ -1051,7 +1051,59 @@ body{padding-bottom:28px!important}
  #newsTicker .ticker-track,#tickerTrack.ticker-track{animation-duration:14s!important;gap:22px!important}
  #newsTicker .ticker-track span{font-size:12px!important}
 }
-</style></head>
+</style>
+<style id="sloom365-bottom-nav-floating-logo">
+/* Navigation: five equal tiles, centered and fixed to the bottom */
+body{padding-bottom:125px!important}
+.sloom-header-top .sloom-header-nav{
+  position:fixed!important;left:50%!important;right:auto!important;
+  top:auto!important;bottom:calc(env(safe-area-inset-bottom,0px) + 10px)!important;
+  transform:translateX(-50%)!important;
+  display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  direction:rtl!important;align-items:stretch!important;justify-items:stretch!important;
+  width:min(620px,calc(100vw - 20px))!important;max-width:620px!important;
+  margin:0!important;padding:6px!important;gap:5px!important;
+  z-index:2147483646!important;box-sizing:border-box!important;
+  border:1px solid #287b49!important;border-radius:18px!important;
+  background:#101713f5!important;box-shadow:0 8px 28px #000b!important;
+  backdrop-filter:blur(14px)!important;
+}
+.sloom-header-top .sloom-header-nav>a{
+  min-width:0!important;width:100%!important;min-height:56px!important;
+  margin:0!important;padding:5px 2px!important;
+  display:flex!important;flex-direction:column!important;
+  align-items:center!important;justify-content:center!important;gap:3px!important;
+  border:1px solid #28543a!important;border-radius:12px!important;
+  background:#17231b!important;color:#f4fff6!important;
+  text-align:center!important;white-space:normal!important;
+  font-size:10px!important;font-weight:900!important;line-height:1.3!important;
+}
+.sloom-header-top .sloom-header-nav>a span{display:block!important;font-size:19px!important;line-height:1.1!important}
+.sloom-header-top .sloom-header-nav>a.active{
+  background:#168447!important;border-color:#57b879!important;color:#fff!important;
+  box-shadow:0 0 0 1px #57b87955!important;
+}
+.sloom-header-top .brand img.sloom-logo-animated{
+  animation:sloom365LogoDrift 3.4s ease-in-out infinite!important;
+  transform-origin:50% 55%!important;
+  filter:drop-shadow(0 0 9px #b7f34a88)!important;
+}
+@keyframes sloom365LogoDrift{
+  0%,100%{transform:translateY(0) rotate(-2deg)}
+  50%{transform:translateY(-7px) rotate(2deg)}
+}
+@media(max-width:520px){
+ body{padding-bottom:118px!important}
+ .sloom-header-top .sloom-header-nav{width:calc(100vw - 16px)!important;gap:3px!important;padding:5px!important}
+ .sloom-header-top .sloom-header-nav>a{min-height:52px!important;font-size:9px!important}
+ .sloom-header-top .sloom-header-nav>a span{font-size:18px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .sloom-header-top .brand img.sloom-logo-animated{animation:none!important}
+}
+</style>
+
+</head>
 <body><main class="wrap">
 
 <header class="sloom-header-top">
