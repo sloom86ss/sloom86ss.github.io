@@ -125,6 +125,9 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 .match-detail-body>div b{text-align:left;overflow-wrap:anywhere}
 .ticker-track{animation-duration:22s!important}
 @media(prefers-reduced-motion:reduce){.ticker-track{animation:none!important}}
+
+.live-board{margin:0 0 20px;padding:14px;border:1px solid #71333a;border-radius:18px;background:linear-gradient(145deg,#211417,#111915 72%);box-shadow:0 8px 25px #0004}.live-board-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.live-board-head h2{font-size:16px;margin:0;color:#fff}.live-board-head>span{font-size:10px;color:#ff8b96}.live-board-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.live-board-card{padding:11px;border:1px solid #59333a;border-radius:13px;background:#171d19;min-width:0}.live-board-league{font-size:10px;color:#aab8ad;margin-bottom:9px}.live-board-teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:7px}.live-board-team{font-size:11px;font-weight:800;min-width:0;display:flex;align-items:center;gap:5px}.live-board-team:last-child{justify-content:flex-end;text-align:left}.live-board-team img{width:22px;height:22px;object-fit:contain}.live-board-team span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.live-board-score{font-size:18px;font-weight:900;color:#fff;background:#2a2020;border-radius:9px;padding:4px 9px;white-space:nowrap}.live-board-meta{display:flex;justify-content:center;gap:7px;align-items:center;margin-top:8px;font-size:11px;color:#ff8792;font-weight:900}.live-board-foot{font-size:9px;color:#98a59a;margin-top:10px}.live-board-empty{font-size:11px;color:#aab8ad;text-align:center;padding:13px}@media(max-width:520px){.live-board-list{grid-template-columns:1fr}}
+
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -153,6 +156,11 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
   <span><b>غرينتش</b><time id="timeUTC">--:--</time></span>
  </div>
  <div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل الأخبار الرياضية…</span></div>
+</section>
+<section class="live-board" id="liveBoard" aria-live="polite" aria-label="المباريات المباشرة">
+ <div class="live-board-head"><h2>🔴 المباريات المباشرة الآن</h2><span id="liveBoardCount">جارٍ التحقق من المصدر…</span></div>
+ <div class="live-board-list" id="liveBoardList"><div class="empty">جارٍ تحميل حالة المباريات…</div></div>
+ <div class="live-board-foot">تُحدّث النتائج من مصدر ESPN تلقائياً كل 5 دقائق عند توفر بيانات المصدر.</div>
 </section>
 
 <section class="install-app-slot" aria-label="تثبيت تطبيق سلوم 365">
@@ -205,6 +213,7 @@ if(league.standings&&league.standings.length){const st=document.createElement('d
  document.getElementById('matchCount').textContent=total;document.getElementById('liveCount').textContent=live;
  const stamps=Object.values(sportsData).map(x=>x.updated_at).filter(Boolean).sort();const stamp=stamps[stamps.length-1];document.getElementById('updated').textContent=stamp?new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'}).format(new Date(stamp)):'—';
  const clubMap=new Map();Object.values(sportsData).filter(leagueIsFresh).forEach(l=>(l.teams||[]).forEach(t=>{if(t.name&&!clubMap.has(t.name))clubMap.set(t.name,t)}));const clubs=[...clubMap.values()].sort((a,b)=>a.name.localeCompare(b.name));const q=(document.getElementById('teamSearch')?.value||'').trim().toLowerCase();const visible=clubs.filter(t=>(t.name+' '+arTeam(t.name)).toLowerCase().includes(q)).slice(0,160);document.getElementById('teamCount').textContent=clubs.length+' نادٍ';const td=document.getElementById('teamsDirectory');td.innerHTML=visible.length?'':'<div class="empty">لا توجد أندية مطابقة أو لم تصل قائمة الأندية بعد.</div>';visible.forEach(t=>{const el=document.createElement('button');el.type='button';el.className='team-chip';el.dataset.club=t.name;el.innerHTML=(t.logo?'<img loading="lazy" src="'+esc(t.logo)+'" onerror="this.style.display=\'none\'">':'')+'<span>'+esc(arTeam(t.name))+'</span>';td.appendChild(el)});const nb=document.getElementById('news');const unique=new Map();news.forEach(n=>{if(n.headline)unique.set(n.headline,n)});(sportsData.news_sources||[]).forEach(n=>{if(n.headline)unique.set(n.headline,n)});const now=Date.now();const soccerNewsPattern=/(كرة القدم|الدوري|دوري|كأس|كاس|نادي|الهلال|النصر|الاتحاد|الأهلي|الاهلي|ريال مدريد|برشلونة|ليفربول|مانشستر|رونالدو|ميسي|صلاح|انتقال|صفقة|مدرب|لاعب|football|soccer|champions league|premier league|transfer)/i;const items=[...unique.values()].filter(n=>/[\u0600-\u06FF]/.test(n.headline||'')).filter(n=>soccerNewsPattern.test((n.headline||'')+' '+(n.description||''))).filter(n=>typeof n.link==='string'&&n.link.startsWith('https://')&&n.source).filter(n=>{const t=Date.parse(n.published||'');return Number.isFinite(t)&&now-t>=0&&now-t<=7*86400000}).sort((a,b)=>Date.parse(b.published||b.fetched_at)-Date.parse(a.published||a.fetched_at)).slice(0,12);nb.innerHTML=items.length?'':'<div class="empty">لا توجد أخبار حديثة منشورة خلال آخر 7 أيام.</div>';items.forEach(n=>{const el=document.createElement('a');el.className='news-card';el.href=n.link||'#';el.target=n.link?'_blank':'_self';el.rel='noopener';el.innerHTML='<img loading="lazy" src="'+esc(n.image||'https://placehold.co/600x300/17211b/b7f34a?text=SLOOM+365')+'" alt=""><div><b>'+esc(n.headline)+'</b><small>'+esc(n.source||'أخبار رياضية')+'</small></div>';nb.appendChild(el)});const ticker=document.getElementById('tickerTrack');if(ticker){const tickerItems=[...(sportsData.news_sources||[]),...news].filter(n=>n.headline&&typeof n.link==='string'&&n.link.startsWith('https://')&&n.source).filter(n=>soccerNewsPattern.test((n.headline||'')+' '+(n.description||''))).filter(n=>{const t=Date.parse(n.published||'');return Number.isFinite(t)&&Date.now()-t>=0&&Date.now()-t<=3*86400000}).sort((a,b)=>Date.parse(b.published||b.fetched_at||0)-Date.parse(a.published||a.fetched_at||0)).filter((n,i,a)=>a.findIndex(x=>x.headline===n.headline)===i).slice(0,14);ticker.innerHTML='';const welcome=document.createElement('span');welcome.className='ticker-welcome';welcome.textContent='✦ أهلاً بكم في SLOOM365';ticker.appendChild(welcome);if(tickerItems.length){tickerItems.forEach(n=>{const item=document.createElement('span');item.innerHTML='<b>●</b> '+esc(n.headline)+' <small>— '+esc(n.source||'مصدر رياضي')+'</small>';ticker.appendChild(item)})}else{const item=document.createElement('span');item.textContent='لا توجد عناوين أخبار حديثة مؤكدة حالياً';ticker.appendChild(item)}}
+ renderLive();
 }
 
 const clubModal=document.getElementById('clubModal'),clubModalBody=document.getElementById('clubModalBody');
@@ -242,7 +251,7 @@ function checkDataErrors(d){const errors=[];if(Array.isArray(d.news_errors))erro
 window.addEventListener('error',e=>showSiteError('حدث خطأ JavaScript في الصفحة: '+(e.message||'خطأ غير معروف')));
 window.addEventListener('unhandledrejection',e=>showSiteError('تعذر إكمال إحدى العمليات: '+String(e.reason?.message||e.reason||'خطأ غير معروف')));
 async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();checkDataErrors(d);dataGeneratedAt=d.generated_at||d.news_sources_updated_at||null;sportsData=d.leagues||d;sportsData.news_sources=d.news_sources||[];render();tickSloomClocks()}catch(e){showSiteError('تعذر تحميل بيانات المباريات والأخبار. '+(e.message||'تحقق من اتصال الموقع بمصدر البيانات')+' — سنعيد المحاولة تلقائياً.');document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
-document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,120000);
+document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,30000);
 
 function clockAngles(date,zone){
  const parts=new Intl.DateTimeFormat('en-GB',{timeZone:zone,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(date);
@@ -293,3 +302,20 @@ window.addEventListener('appinstalled',()=>{
 });
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(error=>console.error('SLOOM 365 offline support:',error)));}
 </script><script src="/chat.js" defer></script></body></html>
+
+function renderLive(){
+ const list=document.getElementById('liveBoardList'),count=document.getElementById('liveBoardCount');if(!list||!count)return;
+ const active=[];
+ Object.values(sportsData).filter(leagueIsFresh).forEach(league=>(league.matches||[]).forEach(match=>{if(match.status==='in')active.push({league,match})}));
+ active.sort((a,b)=>String(a.league.name||'').localeCompare(String(b.league.name||''),'ar'));
+ count.textContent=active.length+' مباراة مباشرة';
+ if(!active.length){list.innerHTML='<div class="live-board-empty">لا توجد مباريات مباشرة مؤكدة الآن. ستظهر هنا تلقائياً عند انطلاقها.</div>';return}
+ list.innerHTML='';
+ active.forEach(({league,match})=>{
+  const h=match.home||{},a=match.away||{},score=String(h.score??'—')+' : '+String(a.score??'—');
+  const minute=match.status_short||match.detail||'مباشر';
+  const card=document.createElement('article');card.className='live-board-card';
+  card.innerHTML='<div class="live-board-league">'+esc(league.name||'بطولة')+'</div><div class="live-board-teams"><div class="live-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name))+'</span></div><div class="live-board-score">'+esc(score)+'</div><div class="live-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name))+'</span></div></div><div class="live-board-meta"><span>● مباشر</span><span>'+esc(minute)+'</span></div>';
+  list.appendChild(card);
+ });
+}
