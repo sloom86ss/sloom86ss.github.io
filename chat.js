@@ -44,10 +44,10 @@ const found=matches.filter(m=>{const names=normalize([m.home?.name,teamAr(m.home
 if(found.length)return found.map(m=>teamAr(m.home?.name)+' '+(m.status==='pre'?'—':m.home?.score??'0')+' - '+(m.status==='pre'?'—':m.away?.score??'0')+' '+teamAr(m.away?.name)+'\n'+m.league+' · '+formatDate(m.date||m.time)+' · '+(m.status==='post'?'انتهت':m.status==='in'?'مباشر':'لم تبدأ')).join('\n\n');
 if(/ترتيب|الصداره|النقاط|جدول الدوري/.test(nq)){
 const entries=Object.entries(d.leagues).filter(([,l])=>Array.isArray(l.standings)&&l.standings.length);
-const words=nq.split(/\\s+/).filter(w=>w.length>2);
+const words=nq.split(/\s+/).filter(w=>w.length>2);
 const selected=entries.find(([key,l])=>{const name=normalize((l.name||'')+' '+key);return words.some(w=>name.includes(w))});
 const chosen=selected?[selected]:entries.slice(0,5);
-if(chosen.length)return 'جدول الترتيب حسب آخر بيانات الموقع:\\n'+chosen.map(([key,l])=>(l.name||key)+'\\n'+l.standings.slice(0,10).map((s,i)=>(s.rank||s.position||i+1)+'. '+teamAr(s.name||s.team?.name)+' — '+(s.points??'؟')+' نقطة').join('\\n')).join('\\n\\n');
+if(chosen.length)return 'جدول الترتيب حسب آخر بيانات الموقع:\n'+chosen.map(([key,l])=>(l.name||key)+'\n'+l.standings.slice(0,10).map((s,i)=>(s.rank||s.position||i+1)+'. '+teamAr(s.name||s.team?.name)+' — '+(s.points??'؟')+' نقطة').join('\n')).join('\n\n');
 return 'جدول الترتيب غير متاح في البيانات الحالية.';
 }
 const leagues=[...new Set(Object.values(d.leagues).filter(l=>l.category==='football').map(l=>l.name).filter(Boolean))];
