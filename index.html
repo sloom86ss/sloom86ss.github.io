@@ -1769,9 +1769,9 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 (()=> {
  const $=id=>document.getElementById(id);
  const labels={0:['سماء صافية','☀️'],1:['غائم جزئياً','🌤️'],2:['غائم جزئياً','⛅'],3:['غائم','☁️'],45:['ضباب','🌫️'],48:['ضباب كثيف','🌫️'],51:['رذاذ خفيف','🌦️'],53:['رذاذ','🌦️'],55:['رذاذ كثيف','🌧️'],61:['أمطار خفيفة','🌦️'],63:['أمطار','🌧️'],65:['أمطار غزيرة','🌧️'],71:['ثلوج خفيفة','🌨️'],73:['ثلوج','🌨️'],75:['ثلوج كثيفة','❄️'],80:['زخات مطر','🌦️'],81:['زخات مطر','🌧️'],82:['زخات غزيرة','⛈️'],95:['عواصف رعدية','⛈️'],96:['عواصف رعدية وبَرَد','⛈️'],99:['عواصف قوية','⛈️']};
- const omanFallback={latitude:23.5880,longitude:58.3829};
+ const omanFallback={latitude:24.2509,longitude:55.7931};
  function clock(){const d=new Date();if($('weatherLocalTime'))$('weatherLocalTime').textContent=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'}).format(d);if($('weatherLocalDate'))$('weatherLocalDate').textContent=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long'}).format(d)+' · عُمان'}
- let weatherCoords={...omanFallback},weatherPlace='سلطنة عُمان',weatherBusy=false;
+ let weatherCoords={...omanFallback},weatherPlace='البريمي، عُمان',weatherBusy=false;
  async function fetchWeather(lat,lon){
   const u='https://api.open-meteo.com/v1/forecast?latitude='+encodeURIComponent(lat)+'&longitude='+encodeURIComponent(lon)+'&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&timezone=Asia%2FMuscat';
   const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
@@ -1789,7 +1789,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
   try{const c=await fetchWeather(lat,lon);if(requestId!==weatherRequestId)return;showWeather(c,place);}
   catch(primaryError){
    if(requestId!==weatherRequestId)return;
-   try{const c=await fetchWeather(omanFallback.latitude,omanFallback.longitude);if(requestId!==weatherRequestId)return;weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';showWeather(c,'سلطنة عُمان');$('weatherDesc').textContent+=' · بيانات احتياطية من مسقط';}
+   try{const c=await fetchWeather(omanFallback.latitude,omanFallback.longitude);if(requestId!==weatherRequestId)return;weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';showWeather(c,'البريمي، عُمان');$('weatherDesc').textContent+=' · بيانات احتياطية من البريمي';}
    catch(backupError){if(requestId==weatherRequestId)$('weatherDesc').textContent='تعذر الاتصال بمصدر الطقس. تحقق من الإنترنت ثم أعد المحاولة.';}
   }
  }
