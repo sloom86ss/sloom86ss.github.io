@@ -330,6 +330,45 @@ button,.btn,.filter-btn,.day-btn{border-radius:12px}
 #enableNotifications{background:linear-gradient(135deg,#1766ed,#073da8)!important;color:#fff!important;border-color:#6da6ff!important}
 @media(max-width:520px){header{min-height:88px;padding:8px 10px 8px}.brand img{width:44px!important;height:44px!important}.sloom-mascot{width:88px;height:88px;left:2px;bottom:-7px}.ticker{padding:10px;font-size:12px}.ticker-track{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.sloom-mascot,.sloom-mascot *,.ticker-track{animation:none!important}}
+
+/* SLOOM365 blue stadium redesign */
+:root{--bg:#030b24;--panel:#071b4b;--panel2:#102d70;--line:#1765c8;--green:#ffd43b;--muted:#a9c9f7;--white:#f7fbff;--red:#ff334f}
+body{background:radial-gradient(ellipse at 50% -12%,#1264d8 0,transparent 48%),linear-gradient(180deg,#020923,#061b4b 55%,#020923)!important;color:#f7fbff}
+.wrap{padding-top:10px;padding-bottom:112px}
+header{position:relative;min-height:118px;padding:12px 145px 12px 12px;border:1px solid #1874ee;border-radius:22px;background:linear-gradient(115deg,#061744dd,#073a8add),radial-gradient(circle at 80% 30%,#238bff66,transparent 45%);box-shadow:0 0 24px #087aff55;overflow:hidden}
+header:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 34px,#58aaff0a 35px 37px);pointer-events:none}
+.brand{position:relative;z-index:2}.brand h1{font-size:clamp(22px,5vw,31px);color:#fff;text-shadow:0 2px 12px #168bff}.brand small{color:#c9e1ff}
+.sloom-mascot{position:absolute!important;right:8px!important;left:auto!important;top:2px!important;width:132px!important;height:116px!important;z-index:1;filter:drop-shadow(0 0 12px #24a0ff)}
+.ticker{display:grid!important;grid-template-columns:auto auto minmax(0,1fr)!important;align-items:center;gap:9px!important;min-height:68px!important;margin:10px 0 14px!important;padding:11px 12px!important;border:1px solid #2495ff!important;border-radius:17px!important;background:linear-gradient(90deg,#071846,#0b347b)!important;color:#fff!important;box-shadow:0 0 20px #087aff55}
+.ticker-label{background:#ed263e!important;color:#fff!important;border-radius:10px!important;font-size:12px!important}
+.ticker-world-times span{border-color:#3976bd!important}.ticker-world-times b{color:#fff!important}.ticker-world-times time{color:#ffdf58!important}
+.ticker-track{animation-duration:25s!important}.ticker-track span{color:#fff!important;font-size:13px!important}.ticker-track b{color:#ffdf58!important}
+.live-board,.upcoming-board{border:1px solid #238aff!important;border-radius:22px!important;background:linear-gradient(145deg,#09245d,#06163c)!important;box-shadow:0 0 20px #087aff55,inset 0 0 22px #0a55b633!important;margin:0 0 14px!important;overflow:hidden}
+.live-board-head,.upcoming-board-head{background:linear-gradient(90deg,#0d4eaf,#071a4a)!important;border-bottom:1px solid #268bff!important;color:#fff!important;padding:12px 15px!important}
+.live-board-head h2,.upcoming-board-head h2{color:#fff!important;font-size:18px!important}
+.live-board-list,.upcoming-board-list{padding:10px!important}
+.live-board .match,.upcoming-board .match{border-color:#2865ad!important}
+.live-board-foot{color:#b6d4ff!important}
+.stat,.league,.news-card,.team-chip{background:linear-gradient(145deg,#0c2c69,#06183f)!important;border-color:#1a65b8!important;box-shadow:0 5px 16px #0005}
+.stat b{color:#ffdc45!important}.section-head h3{color:#fff}
+.filter,.arabic-league-nav button{background:linear-gradient(145deg,#0b2a68,#06173c)!important;border-color:#1a75dc!important;color:#eaf4ff!important}
+.filter.active,.arabic-league-nav button.active{background:#ffd43b!important;color:#071535!important;border-color:#ffe77a!important}
+.league{border-radius:18px!important}.league-title b{color:#fff}.score{background:#06143a!important;border:1px solid #2879d5;color:#ffdf58}
+.match{border-color:#1a4b8a!important}.match-meta{color:#c0d8ff!important}.live{color:#ff5267!important}
+.install-app-slot{display:flex!important;align-items:center;gap:6px;flex-wrap:wrap}
+.install-app-button{background:linear-gradient(135deg,#ffd83d,#ffad18)!important;color:#071535!important;border:1px solid #fff0a6!important;box-shadow:0 0 12px #ffcb3c66!important}
+.notification-app-button{background:linear-gradient(135deg,#174ea6,#0a2b67)!important;color:#fff!important;border-color:#54a8ff!important}
+.news-card b{color:#fff}.news-card small{color:#b7d4ff}
+footer{color:#b7d4ff;border-color:#1b5598}
+.install-app-help{color:#d4e7ff!important}
+.sloom-mascot .player{transform-origin:75px 80px;animation:sloomMascotBounce 1.8s ease-in-out infinite}
+@keyframes sloomMascotBounce{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(3deg)}}
+.sloom-bottom-nav{position:fixed;z-index:2147482000;left:8px;right:8px;bottom:calc(env(safe-area-inset-bottom,0px) + 7px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;padding:7px;border:1px solid #2994ff;border-radius:20px;background:linear-gradient(145deg,#082d72f5,#020d2cf7);box-shadow:0 0 25px #087aff88,0 8px 24px #0009;backdrop-filter:blur(12px)}
+.sloom-bottom-nav a{min-width:0;min-height:57px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:1px solid #1b70ce;border-radius:13px;background:linear-gradient(145deg,#0b3b8c,#06183f);color:#fff;text-decoration:none;font-size:10px;font-weight:900;text-align:center;line-height:1.35}
+.sloom-bottom-nav a span{font-size:20px;line-height:1.1}.sloom-bottom-nav a.active{background:linear-gradient(145deg,#ff334f,#c9002a);border-color:#ff9aa8;box-shadow:0 0 14px #ff244c77}
+@media(min-width:760px){.sloom-bottom-nav{left:50%;right:auto;transform:translateX(-50%);width:min(680px,calc(100% - 32px))}}
+@media(max-width:520px){header{min-height:105px;padding-right:118px}.sloom-mascot{width:110px!important;height:105px!important}.ticker{grid-template-columns:auto minmax(0,1fr)!important}.ticker-world-times{display:none!important}.ticker-track span{font-size:11px!important}.live-board-head h2,.upcoming-board-head h2{font-size:15px!important}.sloom-bottom-nav{gap:3px;padding:5px}.sloom-bottom-nav a{min-height:53px;font-size:9px;padding:4px 1px}.sloom-bottom-nav a span{font-size:18px}}
+
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -392,6 +431,13 @@ button,.btn,.filter-btn,.day-btn{border-radius:12px}
 <div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
 <div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><small class="news-source-note">أخبار من مصادر موثوقة</small><section class="install-app-slot" aria-label="تثبيت وإشعارات سلوم 365"><button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button><button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار">🔔 تفعيل الإشعارات</button><p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p><p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p></section></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 
+<nav class="sloom-bottom-nav" aria-label="التنقل الرئيسي">
+<a href="#arabicLeagueNav"><span>🏆</span>البطولات</a>
+<a href="#upcomingBoard"><span>📅</span>القادمة</a>
+<a href="#liveBoard" class="active"><span>🔴</span>المباشرة</a>
+<a href="#news"><span>📰</span>آخر الأخبار</a>
+<a href="#teamsDirectory"><span>⭐</span>المفضلة</a>
+</nav>
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.<div class="broadcast-disclaimer">سياسة حقوق البث: لا يستضيف SLOOM365 أي بث مباشر ولا يعيد رفع أو تضمين أو إعادة توزيع مباريات أو مقاطع محمية. قد نعرض أسماء القنوات الناقلة بوصفها معلومات رياضية تعريفية وفق البيانات المتاحة من مصادر المباريات، ولا يعني ذكر اسم القناة أننا نملك حقوق بثها أو نمثلها. لا يستضيف SLOOM365 بثاً مباشراً ولا يعيد رفع أو تضمين أو إعادة توزيع المباريات أو المقاطع المحمية. روابط المشاهدة — إن توفرت — تقتصر على المواقع الرسمية للناقلين أو أصحاب الحقوق بعد التحقق منها؛ ولا ننشر روابط بث غير رسمية. قد تختلف القنوات حسب الدولة وحقوق النقل، لذا يُرجى الرجوع إلى الناقل للتأكد من جدول البث.</div></footer>
 </main>
 <script>
