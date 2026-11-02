@@ -66,7 +66,7 @@ function reply(q){
   return 'ترتيب '+ls.map(x=>x.name).join('، ')+' حسب آخر بيانات متاحة:\n'+rows.slice(0,20).map(r=>r.rank+'. '+r.name+' — '+(r.points||'—')+' نقطة | لعب '+(r.played||'—')+' | فوز '+(r.wins||'—')+' | تعادل '+(r.draws||'—')+' | خسارة '+(r.losses||'—')).join('\n')+'\n\nالمصدر: ESPN. راجع وقت التحديث في صفحة البطولة؛ قد لا تكون البيانات مباشرة.';
  }
  if(isNews){
-  const all=[...(sportsData.news_sources||[]),...ls.flatMap(x=>(x.l.news||[]).map(a=>({...a,league:x.name})))];const seen=new Map();all.filter(a=>a.link&&a.link.startsWith('https://')&&fresh(a.published,168)).forEach(a=>seen.set(a.link,a));const news=[...seen.values()].filter(a=>!terms.length||terms.some(t=>norm(a.headline+' '+a.description).includes(t))).sort((a,b)=>Date.parse(b.published)-Date.parse(a.published)).slice(0,8);
+  const soccerNewsPattern=/(كرة القدم|الدوري|دوري|كأس|كاس|نادي|الهلال|النصر|الاتحاد|الأهلي|الاهلي|ريال مدريد|برشلونة|ليفربول|مانشستر|رونالدو|ميسي|صلاح|انتقال|صفقة|مدرب|لاعب|football|soccer|champions league|premier league|transfer)/i;const all=[...(sportsData.news_sources||[]),...ls.flatMap(x=>(x.l.news||[]).map(a=>({...a,league:x.name})))];const seen=new Map();all.filter(a=>a.link&&a.link.startsWith('https://')&&a.source&&soccerNewsPattern.test((a.headline||'')+' '+(a.description||''))&&fresh(a.published,168)).forEach(a=>seen.set(a.link,a));const news=[...seen.values()].filter(a=>!terms.length||terms.some(t=>norm(a.headline+' '+a.description).includes(t))).sort((a,b)=>Date.parse(b.published)-Date.parse(a.published)).slice(0,8);
   if(!news.length)return 'لا توجد أخبار مطابقة متاحة حالياً في بيانات SLOOM 365.';
   return 'آخر الأخبار المتاحة من المصادر المجمعة:\n'+news.map(a=>'• '+clean(a.headline)+' ('+a.league+')'+(a.published?' — '+fmtDate(a.published):'')+(a.link?'\n'+a.link:'')).join('\n\n');
  }
@@ -84,7 +84,9 @@ function reply(q){
 }
 function makeContext(data){
  const leagues=Object.entries(data?.leagues||{}).map(([id,l])=>({id,name:l.name,stale:!!l.stale,updated_at:l.updated_at||null,matches:(l.matches||[]).slice(0,18).map(m=>({date:m.date,status:m.status,detail:m.detail,home:{name:m.home?.name,score:m.home?.score},away:{name:m.away?.name,score:m.away?.score}})),standings:(l.standings||[]).slice(0,18),teams:(l.teams||[]).map(t=>t.name),news:(l.news||[]).slice(0,6).map(n=>({headline:n.headline,description:n.description,published:n.published,link:n.link}))}));
- return {provider:data?.provider||"ESPN public API",generated_at:data?.generated_at||null,timezone:data?.timezone||"Asia/Muscat",leagues};
+ const soccerNewsPattern=/(كرة القدم|الدوري|دوري|كأس|كاس|نادي|الهلال|النصر|الاتحاد|الأهلي|الاهلي|ريال مدريد|برشلونة|ليفربول|مانشستر|رونالدو|ميسي|صلاح|انتقال|صفقة|مدرب|لاعب|football|soccer|champions league|premier league|transfer)/i;
+ const news_sources=(data?.news_sources||[]).filter(n=>n&&typeof n.headline==="string"&&typeof n.link==="string"&&n.link.startsWith("https://")&&n.source&&soccerNewsPattern.test(n.headline+" "+(n.description||""))&&fresh(n.published,168)).slice(0,60).map(n=>({headline:n.headline,description:n.description||"",published:n.published,source:n.source,link:n.link}));
+ return {provider:data?.provider||"ESPN public API",generated_at:data?.generated_at||null,timezone:data?.timezone||"Asia/Muscat",news_sources,leagues};
 }
 async function go(){
  const q=field.value.trim();if(!q||send.disabled)return;field.value='';bubble(q,'u');
