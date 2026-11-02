@@ -1,6 +1,6 @@
 (()=>{'use strict';
 const css=`
-#sloom-chat-launch{position:fixed;z-index:2147483000;right:16px;left:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);border:0;border-radius:50px;padding:13px 18px;background:#b7f34a;color:#10170b;font:800 14px Cairo,Arial,sans-serif;box-shadow:0 8px 28px #0008;cursor:pointer}
+#sloom-chat-launch{position:fixed;z-index:2147483000;right:14px;left:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);width:52px;height:52px;display:grid;place-items:center;border:1px solid #d8ff8b;border-radius:50%;padding:0;background:#b7f34a;color:#10170b;font:900 23px Cairo,Arial,sans-serif;box-shadow:0 7px 22px #0009;cursor:pointer;animation:sloomChatFloat 3.2s ease-in-out infinite;touch-action:manipulation} @keyframes sloomChatFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}} #sloom-chat-launch:active{transform:scale(.94)} @media(prefers-reduced-motion:reduce){#sloom-chat-launch{animation:none}}
 #sloom-chat{position:fixed;z-index:2147483001;right:14px;left:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 78px);width:min(370px,calc(100vw - 28px));height:min(540px,calc(100dvh - 125px - env(safe-area-inset-bottom,0px)));display:none;flex-direction:column;overflow:hidden;border:1px solid #526b3a;border-radius:20px;background:#101914;color:#f4f8f4;box-shadow:0 18px 65px #000b;font-family:Cairo,Arial,sans-serif;direction:rtl}
 #sloom-chat.open{display:flex}#sloom-chat-head{display:flex;align-items:center;justify-content:space-between;padding:13px 15px;background:#1b3020;border-bottom:1px solid #344b32}
 #sloom-chat-head strong{font-size:14px}#sloom-chat-head small{display:block;color:#c2d2c4;font-size:10px}
@@ -14,7 +14,7 @@ const css=`
 #sloom-chat-note{padding:0 12px 8px;color:#91a095;font-size:9px;background:#111915}
 `;
 const style=document.createElement('style');style.textContent=css;document.head.appendChild(style);
-const launch=document.createElement('button');launch.id='sloom-chat-launch';launch.type='button';launch.textContent='💬 اسأل SLOOM الذكي';
+const launch=document.createElement('button');launch.id='sloom-chat-launch';launch.type='button';launch.textContent='💬';launch.setAttribute('aria-label','افتح مساعد SLOOM الذكي');launch.title='مساعد SLOOM365';
 const panel=document.createElement('section');panel.id='sloom-chat';panel.setAttribute('aria-label','مساعد SLOOM365');panel.setAttribute('aria-live','polite');
 const head=document.createElement('div');head.id='sloom-chat-head';
 const heading=document.createElement('div');const strong=document.createElement('strong');strong.textContent='مساعد SLOOM365';const small=document.createElement('small');small.textContent='مساعد مجاني لكرة القدم من بيانات الموقع';heading.append(strong,small);
