@@ -25,6 +25,20 @@ def check_page(url):
     except Exception as exc:
         return False, str(exc)[:160]
 
+def check_chat_asset():
+    try:
+        status, raw = get_url(BASE + "/chat.js")
+        if status != 200:
+            return False, "HTTP " + str(status)
+        source = raw.decode("utf-8", errors="replace")
+        required = ("async function getData()", "form.addEventListener", "/data.json")
+        missing = [item for item in required if item not in source]
+        if missing:
+            return False, "ملف الشات ناقص مكونات التشغيل: " + ", ".join(missing)
+        return True, "ملف الشات متاح ويقرأ بيانات الموقع"
+    except Exception as exc:
+        return False, "تعذر فحص ملف الشات: " + str(exc)[:140]
+
 def check_seo_files():
     try:
         _, sitemap = get_url(BASE + "/sitemap.xml")
@@ -57,9 +71,16 @@ def check_data():
             return False, "وقت إنشاء البيانات في المستقبل"
         if age > MAX_DATA_AGE_MINUTES:
             return False, "البيانات قديمة منذ %.0f دقيقة" % age
-        if not isinstance(data.get("leagues"), dict) or not data["leagues"]:
+        leagues = data.get("leagues")
+        if not isinstance(leagues, dict) or not leagues:
             return False, "لا توجد بيانات دوريات"
-        return True, "JSON سليم؛ عمر البيانات %.0f دقيقة" % max(0, age)
+        match_count = sum(len(league.get("matches", [])) for league in leagues.values()
+                          if isinstance(league, dict) and isinstance(league.get("matches", []), list))
+        news = data.get("news_sources", [])
+        if not isinstance(news, list):
+            return False, "قائمة الأخبار غير صالحة"
+        return True, "JSON سليم؛ %d بطولة؛ %d مباراة؛ %d خبر؛ عمر البيانات %.0f دقيقة" % (
+            len(leagues), match_count, len(news), max(0, age))
     except Exception as exc:
         return False, "تعذر قراءة data.json: " + str(exc)[:140]
 
@@ -86,6 +107,7 @@ def main():
         "homepage": check_page(BASE + "/"),
         "football_page": check_page(BASE + "/sloom360.html"),
         "ai_page": check_page(BASE + "/ai.html"),
+        "chat_asset": check_chat_asset(),
         "seo_files": check_seo_files(),
         "sports_data": check_data(),
     }
