@@ -277,7 +277,7 @@ function renderUpcoming(){
  list.innerHTML='';
  shown.forEach(({league,match,ts})=>{
   const h=match.home||{},a=match.away||{},mins=Math.max(1,Math.ceil((ts-now)/60000));
-  const label=mins<=120?'بعد قليل':'قريباً';
+  const label=mins<=20?'بعد قليل':'قريباً';
   const when=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(new Date(ts));
   const card=document.createElement('article');card.className='upcoming-board-card';
   card.innerHTML='<div class="upcoming-board-league">'+esc(league.name||'بطولة')+'</div><div class="upcoming-board-teams"><div class="upcoming-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name||'الفريق الأول'))+'</span></div><div class="live-board-score">VS</div><div class="upcoming-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name||'الفريق الثاني'))+'</span></div></div><div class="upcoming-board-time"><strong>'+label+'</strong><span>'+esc(when)+' · بتوقيت عُمان</span></div>';
