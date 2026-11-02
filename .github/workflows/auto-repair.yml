@@ -1,0 +1,36 @@
+name: SLOOM365 Auto Repair
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sloom365-auto-repair
+  cancel-in-progress: false
+
+jobs:
+  safe-repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Run safe automatic repairs
+        run: python repair.py
+      - name: Commit repaired SEO files if needed
+        run: |
+          git config user.name 'SLOOM365 Auto Repair'
+          git config user.email 'sloom365-bot@users.noreply.github.com'
+          git add sitemap.xml robots.txt
+          git diff --cached --quiet && exit 0
+          git commit -m "Auto-repair SLOOM365 SEO files"
+          git pull --rebase origin main
+          git push
