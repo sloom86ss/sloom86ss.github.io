@@ -24,7 +24,7 @@ const captchaBox=document.createElement('div');captchaBox.id='sloom-chat-captcha
 const form=document.createElement('form');form.id='sloom-chat-form';
 const input=document.createElement('input');input.id='sloom-chat-input';input.maxLength=300;input.autocomplete='off';input.placeholder='اسأل عن مباراة أو نتيجة أو خبر…';input.setAttribute('aria-label','اكتب سؤالك');
 const send=document.createElement('button');send.id='sloom-chat-send';send.type='submit';send.textContent='إرسال';form.append(input,send);
-const note=document.createElement('div');note.id='sloom-chat-note';note.textContent='مجاني دون مفتاح أو اشتراك. لا يعرض المعلومة إذا كانت البيانات قديمة.';
+const note=document.createElement('div');note.id='sloom-chat-note';note.textContent='مساعد كرة قدم مجاني من بيانات الموقع؛ الذكاء الاصطناعي المتقدم يحتاج تفعيل الخدمة على الخادم.';
 panel.append(head,log,captchaBox,form,note);document.body.append(launch,panel);
 let cache=null,cacheAt=0,requests=[];
 function add(text,who){const b=document.createElement('div');b.className='sloom-msg '+who;b.textContent=text;log.appendChild(b);log.scrollTop=log.scrollHeight}
@@ -67,7 +67,18 @@ add(q,'user');
 send.disabled=true;send.textContent='…';
 try{
 const d=await getData();
-add(answer(q,d),'bot');
+let replied=false;
+try{
+const response=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,context:d})});
+const payload=await response.json().catch(()=>({}));
+if(response.ok&&typeof payload.answer==='string'&&payload.answer.trim()){
+add(payload.answer.trim(),'bot');replied=true;
+}
+}catch(_){}
+if(!replied){
+const local=answer(q,d);
+add(local+(local.startsWith('لا أستطيع تأكيد')?'':'\n\nملاحظة: هذه إجابة فورية من بيانات الموقع؛ خدمة الذكاء الاصطناعي المتقدمة لم تُفعّل بعد.'),'bot');
+}
 }catch(err){add('تعذر الوصول إلى بيانات الموقع الآن. حاول مرة أخرى بعد قليل.','bot')}
 finally{send.disabled=false;send.textContent='إرسال';input.focus()}
 });
