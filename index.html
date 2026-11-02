@@ -1414,66 +1414,78 @@ if(league.standings&&league.standings.length){const st=document.createElement('d
 
 async function loadMatchEvents(details,leagueKey,eventId){
  const body=details.querySelector('.match-detail-body');if(!body)return;
- const panel=document.createElement('section');panel.className='match-events';panel.innerHTML='<h4>أحداث المباراة</h4><div class="event-muted">جارٍ جلب الأهداف والبطاقات والتبديلات والتشكيلة من ESPN…</div>';body.appendChild(panel);
- if(!eventId){panel.innerHTML='<h4>أحداث المباراة</h4><div class="event-muted">لا يتوفر معرّف المباراة لدى المصدر.</div>';return}
+ const panel=document.createElement('section');panel.className='match-events';panel.innerHTML='<h4>تفاصيل المباراة</h4><div class="event-muted">جارٍ جلب التشكيلتين والأهداف والبطاقات والتبديلات من المصدر…</div>';body.appendChild(panel);
+ if(!eventId){panel.innerHTML='<h4>تفاصيل المباراة</h4><div class="event-muted">لا يتوفر معرّف المباراة لدى المصدر.</div>';return}
  const leaguePath=String(leagueKey||'').replace(/^soccer\//,'');
- const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(eventId);
+ const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(eventId)+'&lang=ar';
  try{
   const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);
   const data=await response.json();
-  const comp=data.header?.competitions?.[0]||data.boxscore?.teams||{};
   const eventList=Array.isArray(data.keyEvents)?data.keyEvents:Array.isArray(data.plays)?data.plays:Array.isArray(data.commentary)?data.commentary:[];
+  const arabicNames={
+   'Cristiano Ronaldo':'كريستيانو رونالدو','Lionel Messi':'ليونيل ميسي','Kylian Mbappe':'كيليان مبابي','Kylian Mbappé':'كيليان مبابي',
+   'Erling Haaland':'إيرلينغ هالاند','Mohamed Salah':'محمد صلاح','Sadio Mane':'ساديو ماني','Sadio Mané':'ساديو ماني',
+   'Kevin De Bruyne':'كيفن دي بروين','Vinicius Junior':'فينيسيوس جونيور','Vinícius Júnior':'فينيسيوس جونيور',
+   'Jude Bellingham':'جود بيلينغهام','Harry Kane':'هاري كين','Robert Lewandowski':'روبرت ليفاندوفسكي',
+   'Neymar':'نيمار','Karim Benzema':'كريم بنزيما','Son Heung-Min':'سون هيونغ مين','Bukayo Saka':'بوكايو ساكا',
+   'Cole Palmer':'كول بالمر','Bruno Fernandes':'برونو فيرنانديز','Omar Marmoush':'عمر مرموش',
+   'Riyad Mahrez':'رياض محرز','Salem Al-Dawsari':'سالم الدوسري','Salem Al Dawsari':'سالم الدوسري',
+   'Yassine Bounou':'ياسين بونو','Achraf Hakimi':'أشرف حكيمي','Hossam Hassan':'حسام حسن'
+  };
+  const person=p=>p?.athlete||p?.player||p||{};
+  const rawName=p=>{const a=person(p);return a.displayNameArabic||a.fullNameArabic||a.localizedName||a.displayName||a.fullName||a.name||p?.displayName||p?.name||''};
+  const arName=p=>{const n=String(rawName(p)||'').trim();return arabicNames[n]||n};
+  const teamName=t=>t?.displayName||t?.name||t?.abbreviation||'الفريق';
+  const roleOf=p=>String(p.role||p.type?.text||p.type?.name||p.type||p.description||'').toLowerCase();
   const rows=[];
-  const getName=p=>p?.athlete?.displayName||p?.athlete?.fullName||p?.athlete?.name||p?.displayName||p?.name||'';
-  const getTeam=e=>e?.team?.displayName||e?.team?.name||e?.team?.abbreviation||'';
   eventList.forEach(e=>{
    const type=String(e.type?.text||e.type?.name||e.type||e.shortText||'');
-   const text=String(e.text||e.shortText||e.description||'');
-   const joined=(type+' '+text).toLowerCase();
-   const isGoal=/\bgoal\b|هدف|penalty scored|own goal/.test(joined);
-   const isRed=/red card|بطاقه حمراء|طرد/.test(joined);
-   const isYellow=/yellow card|بطاقه صفراء/.test(joined);
-   const isSub=/substitution|تبديل/.test(joined);
-   if(!isGoal&&!isRed&&!isYellow&&!isSub)return;
+   const description=String(e.text||e.shortText||e.description||'');
+   const joined=(type+' '+description).toLowerCase();
+   const goal=/\bgoal\b|هدف|penalty scored|own goal/.test(joined);
+   const red=/red card|بطاقه حمراء|طرد/.test(joined),yellow=/yellow card|بطاقه صفراء/.test(joined),sub=/substitution|تبديل/.test(joined);
+   if(!goal&&!red&&!yellow&&!sub)return;
    const participants=e.participants||e.athletesInvolved||e.players||[];
-   const people=participants.map(getName).filter(Boolean);
-   const minute=e.clock?.displayValue||e.time?.displayValue||e.minute||e.clock||'';
-   const team=getTeam(e);
-   const roleOf=p=>String(p.role||p.type?.text||p.type?.name||p.type||p.description||'').toLowerCase();
+   const names=participants.map(arName).filter(Boolean);
    const scorer=participants.find(p=>/scor|goal|مسجل|هداف/.test(roleOf(p)));
-   const assists=participants.filter(p=>/assist|صانع|تمريرة حاسمة/.test(roleOf(p)));
-   const directAssist=e.assist?.athlete?.displayName||e.assist?.displayName||e.assists?.[0]?.athlete?.displayName||e.assists?.[0]?.displayName||'';
-   let label=isGoal?'⚽ هدف':isRed?'🟥 بطاقة حمراء':isYellow?'🟨 بطاقة صفراء':'🔄 تبديل';
-   let detail=text||people.join(' · ')||'تفصيل الحدث غير متاح';
-   if(isGoal){
-    const scorerName=getName(scorer)||people[0]||'مسجل الهدف غير محدد';
-    const assistNames=assists.map(getName).filter(Boolean).filter(n=>n!==scorerName);
-    if(directAssist)assistNames.push(directAssist);
-    detail='الهدف: '+scorerName+(assistNames.length?' · صناعة الهدف: '+[...new Set(assistNames)].join('، '):' · صانع الهدف غير مذكور في المصدر');
-   }else if(people.length)detail=people.join(' · ')+(text?' · '+text:'');
-   rows.push({label,detail,minute,team});
+   const assist=participants.filter(p=>/assist|صانع|تمريرة حاسمة/.test(roleOf(p))).map(arName).filter(Boolean);
+   const direct=e.assist?.athlete||e.assist||e.assists?.[0]?.athlete||e.assists?.[0];
+   const assistName=arName(direct);
+   let detail=description||names.join('، ')||'تفصيل الحدث غير متاح';
+   if(goal){const scorerName=arName(scorer)||names[0]||'غير محدد في المصدر';const helpers=[...new Set([...assist,assistName].filter(n=>n&&n!==scorerName))];detail='مسجل الهدف: '+scorerName+(helpers.length?' · صناعة الهدف: '+helpers.join('، '):' · لم يحدد المصدر صانع الهدف');}
+   else if(names.length)detail=names.join('، ')+(description?' · '+description:'');
+   rows.push({label:goal?'⚽ هدف':red?'🟥 بطاقة حمراء':yellow?'🟨 بطاقة صفراء':'🔄 تبديل',detail,minute:e.clock?.displayValue||e.time?.displayValue||e.minute||e.clock||'—',team:teamName(e.team)});
   });
   const sections=[];
-  if(rows.length)sections.push('<h4>⚽ الأهداف والبطاقات والتبديلات</h4>'+rows.map(x=>'<div class="event-row"><b>'+esc(x.label+' · '+x.detail)+(x.team?' · '+x.team:'')+'</b><small>'+esc(String(x.minute||'—'))+'</small></div>').join(''));
+  if(rows.length)sections.push('<h4>⚽ مسجلو الأهداف وصُنّاعها والأحداث</h4>'+rows.map(x=>'<div class="event-row"><b>'+esc(x.label+' · '+x.detail)+(x.team?' · '+esc(x.team):'')+'</b><small>'+esc(String(x.minute))+'</small></div>').join(''));
   const rosterGroups=Array.isArray(data.rosters)?data.rosters:[];
-  const boxPlayers=data.boxscore?.players||[];
   const rosterHtml=[];
   rosterGroups.forEach(group=>{
-   const team=group.team?.displayName||group.team?.name||'الفريق';
-   const athletes=group.roster||group.athletes||[];
-   const names=athletes.map(x=>x.athlete?.displayName||x.displayName||x.athlete?.fullName||'').filter(Boolean);
-   if(names.length)rosterHtml.push('<div class="event-row"><b>'+esc(team+': '+names.slice(0,18).join('، '))+'</b></div>');
+   const team=teamName(group.team),athletes=group.roster||group.athletes||[];
+   const starters=athletes.filter(x=>x.starter===true||x.isStarter===true||String(x.status||'').toLowerCase()==='starter');
+   const substitutes=athletes.filter(x=>!starters.includes(x));
+   const formation=group.formation||group.team?.formation||'';
+   const formatPlayer=x=>{const name=arName(x);const pos=x.position?.abbreviation||x.position?.displayName||x.position?.name||x.position||'';return name+(pos?' ('+pos+')':'')};
+   if(athletes.length){
+    rosterHtml.push('<div class="event-row"><b>'+esc(team+(formation?' · الخطة '+formation:''))+'</b></div>');
+    if(starters.length)rosterHtml.push('<div class="event-row"><b>التشكيلة الأساسية: '+esc(starters.map(formatPlayer).join('، '))+'</b></div>');
+    if(substitutes.length)rosterHtml.push('<div class="event-row"><b>البدلاء: '+esc(substitutes.map(formatPlayer).join('، '))+'</b></div>');
+    if(!starters.length)rosterHtml.push('<div class="event-row"><b>اللاعبون المتاحون: '+esc(athletes.map(formatPlayer).join('، '))+'</b></div>');
+   }
   });
-  boxPlayers.forEach(group=>{
-   const team=group.team?.displayName||group.team?.name||'الفريق';
-   const names=(group.statistics||[]).flatMap(s=>s.athletes||[]).map(x=>x.athlete?.displayName||'').filter(Boolean);
-   if(names.length)rosterHtml.push('<div class="event-row"><b>'+esc(team+': '+names.slice(0,18).join('، '))+'</b></div>');
-  });
-  if(rosterHtml.length)sections.push('<h4>👥 اللاعبون والتشكيلة المتاحة</h4>'+rosterHtml.join(''));
-  if(!sections.length)sections.push('<div class="event-muted">لم ينشر ESPN أحداثاً تفصيلية لهذه المباراة حتى الآن. قد تتوفر التفاصيل بعد بدء المباراة أو اكتمال تحديث المصدر.</div>');
-  panel.innerHTML='<h4>تفاصيل الأحداث من ESPN</h4>'+sections.join('');
+  if(!rosterHtml.length){
+   (data.boxscore?.players||[]).forEach(group=>{
+    const team=teamName(group.team);
+    const athletes=(group.statistics||[]).flatMap(x=>x.athletes||[]);
+    const names=athletes.map(arName).filter(Boolean);
+    if(names.length)rosterHtml.push('<div class="event-row"><b>'+esc(team+' · اللاعبون المسجلون: '+names.join('، '))+'</b></div>');
+   });
+  }
+  if(rosterHtml.length)sections.push('<h4>👥 تشكيلات الفريقين واللاعبون</h4>'+rosterHtml.join(''));
+  if(!sections.length)sections.push('<div class="event-muted">لم ينشر مصدر المباراة تفاصيل التشكيلة أو الأحداث حتى الآن. ستظهر البيانات عند توفرها من المصدر الرسمي.</div>');
+  panel.innerHTML='<h4>تفاصيل المباراة من المصدر الرياضي</h4>'+sections.join('');
  }catch(error){
-  panel.innerHTML='<h4>أحداث المباراة</h4><div class="event-muted">تعذر تحميل أحداث المباراة من ESPN حالياً. أعد فتح التفاصيل بعد قليل.</div>';
+  panel.innerHTML='<h4>تفاصيل المباراة</h4><div class="event-muted">تعذر تحميل التفاصيل حالياً. أعد فتح التفاصيل بعد قليل.</div>';
   console.warn('[SLOOM365 match events]',eventId,error);
  }
 }
