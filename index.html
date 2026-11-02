@@ -551,6 +551,13 @@ header{position:relative;min-height:76px!important;padding:8px 0 14px!important;
 .news-head-actions .notification-app-button{background:#26351c!important;color:#e8ffbf!important;border:1px solid #8ebd48!important}
 .install-app-slot [hidden]{display:none!important}
 @media(max-width:520px){.install-app-slot{width:auto!important;display:flex!important;flex-wrap:wrap;justify-content:flex-start}.news-head-actions .install-app-button{font-size:9px!important;padding:6px 8px!important}}
+
+/* Final layout correction: keep install and notification actions beside Latest News, not floating over bottom navigation */
+.news-section-head{display:flex!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;gap:9px!important;width:100%!important}
+.news-section-head>.install-app-slot{position:static!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;z-index:auto!important;display:flex!important;flex:0 1 auto!important;flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;justify-content:flex-start!important;gap:7px!important;width:auto!important;max-width:100%!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+.news-section-head #installApp,.news-section-head #enableNotifications{position:static!important;display:inline-flex!important;visibility:visible!important;opacity:1!important;flex:0 0 auto!important;min-height:38px!important;padding:7px 10px!important;border-radius:10px!important;white-space:nowrap!important}
+@media(max-width:520px){.news-section-head{gap:7px!important}.news-section-head>.install-app-slot{flex:1 1 100%!important;margin:2px 0 0!important}.news-section-head #installApp,.news-section-head #enableNotifications{font-size:10px!important;min-height:36px!important}}
+
 </style>
 </head>
 <body><main class="wrap">
