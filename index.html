@@ -51,6 +51,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 
 .site-error-alert{display:none;margin:0 0 15px;padding:12px 14px;border:1px solid #9b4a42;border-radius:14px;background:#2a1715;color:#ffe1dc;font-size:12px;line-height:1.8}
 .site-error-alert.visible{display:block}.site-error-alert strong{display:block;color:#ff9b8f;font-size:13px;margin-bottom:3px}.site-error-alert small{display:block;color:#d7aaa3;margin-top:5px}
+.day-switcher{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:10px;overflow:visible;padding:4px 0 14px;direction:ltr}.day-switcher .filter{white-space:normal;text-align:center;padding:12px 8px;font-size:13px;border-radius:14px}.day-switcher .filter[data-day="today"]{font-size:15px;font-weight:900;box-shadow:0 0 0 2px #b7f34a33}.clock-deck{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:12px}.clock-deck .analog-clock{width:112px;height:112px}.clock-card{min-height:155px}.digital-zones{grid-template-columns:repeat(3,minmax(0,1fr))}.digital-update{justify-content:space-between}.ticker,.whatsapp-channel{display:none!important}@media(max-width:520px){.clock-deck{grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:7px}.clock-deck .analog-clock{width:76px;height:76px}.clock-card{min-height:140px}.day-switcher{gap:6px}.day-switcher .filter{padding:10px 4px;font-size:12px}}
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -96,12 +97,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
  </div>
 </section>
 
-<div class="ticker" aria-label="شريط الأخبار العاجلة"><div class="ticker-track" id="tickerTrack"><span>● SLOOM 365 | نتحقق من آخر الأخبار الكروية…</span></div></div>
 <section class="hero hero-logo-only" aria-label="شعار سلوم 365"><div class="hero-logo-orbit"></div><img class="hero-logo" src="assets/sloom360-logo.svg" alt="شعار SLOOM 365 سلوم 365"><span class="hero-logo-caption">SLOOM 365 · سلوم 365</span></section>
-<section class="whatsapp-channel" aria-label="قناة SLOOM 365 على واتساب">
- <div class="whatsapp-channel-copy"><b>📢 تابع قناة SLOOM 365 على واتساب</b><span>أخبار كرة القدم والمباريات والانتقالات — تابعنا لتصلك التحديثات</span></div>
- <a id="whatsappChannel" class="whatsapp-channel-link" href="https://whatsapp.com/channel/0029Vb9Ntrp7tkj6l8FGgU3U" target="_blank" rel="noopener noreferrer" aria-label="فتح قناة SLOOM 365 على واتساب">واتساب ←</a>
-</section>
 <section class="stats"><div class="stat"><b id="matchCount">—</b><span>مباراة معروضة</span></div><div class="stat"><b id="liveCount">—</b><span>مباشر الآن</span></div><div class="stat"><b id="updated">—</b><span>آخر تحديث</span></div></section>
 <div class="section-head"><h3>🏆 الدوريات والبطولات العربية</h3><small>مباريات من مصادر البيانات</small></div>
 <div class="arabic-league-nav" id="arabicLeagueNav">
@@ -110,7 +106,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
  <button data-region="asia">آسيا</button>
  <button data-region="africa">أفريقيا</button>
 </div>
-<div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters" id="dayFilters"><button class="filter active" data-day="today">مباريات اليوم</button><button class="filter" data-day="yesterday">مباريات الأمس</button><button class="filter" data-day="tomorrow">مباريات الغد</button></div>
+<div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters day-switcher" id="dayFilters"><button class="filter" data-day="yesterday">الأمس</button><button class="filter active" data-day="today">اليوم</button><button class="filter" data-day="tomorrow">غداً</button></div>
 
 <div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
 <div class="section-head"><h3>📰 آخر الأخبار</h3><small>من مصادر رياضية</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
