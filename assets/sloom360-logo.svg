@@ -15,6 +15,6 @@
 <path d="M118 294c82 82 316 100 404-4" fill="none" stroke="url(#lime)" stroke-width="17" stroke-linecap="round"/>
 <path d="M116 319c92 62 310 72 409-13" fill="none" stroke="#efffc9" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>
 <path d="M115 408 320 458 525 408 493 520 320 584 147 520Z" fill="#080d09" stroke="url(#lime)" stroke-width="11" stroke-linejoin="round"/>
-<text x="320" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="65" font-weight="900" letter-spacing="-2" fill="url(#silver)">SLOOM<tspan fill="url(#lime)">360</tspan></text>
+<text x="320" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="65" font-weight="900" letter-spacing="-2" fill="url(#silver)">SLOOM<tspan fill="url(#lime)">365</tspan></text>
 <path d="M225 530h190" stroke="#577c2d" stroke-width="5" stroke-linecap="round"/>
 </svg>
