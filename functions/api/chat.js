@@ -138,10 +138,8 @@ export async function onRequestPost({ request, env }) {
 }
 
 export async function onRequest({ request }) {
-  if (request.method !== "POST") {
-    return new Response(JSON.stringify({ error: "استخدم POST." }), {
-      status: 405,
-      headers: { "Content-Type": "application/json; charset=utf-8", "Allow": "POST", "Cache-Control": "no-store" }
-    });
-  }
+  return new Response(JSON.stringify({ error: "استخدم POST." }), {
+    status: 405,
+    headers: { "Content-Type": "application/json; charset=utf-8", "Allow": "POST", "Cache-Control": "no-store" }
+  });
 }
