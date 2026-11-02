@@ -88,13 +88,11 @@ def main():
                          f"{(result.stderr or result.stdout).strip()}")
                 script_count += 1
 
-    for path in sorted(ROOT.glob("*.js")):
-        result = subprocess.run([node, "--check", str(path)], capture_output=True,
-                                text=True, check=False)
-        if result.returncode:
-            fail(f"JavaScript syntax: {path.name}: {(result.stderr or result.stdout).strip()}")
-        script_count += 1
-    for path in sorted((ROOT / "api").glob("*.js")) if (ROOT / "api").exists() else []:
+    js_files = sorted(
+        path for path in ROOT.rglob("*.js")
+        if not any(part in {".git", "node_modules", ".venv"} for part in path.parts)
+    )
+    for path in js_files:
         result = subprocess.run([node, "--check", "--input-type=module"],
                                 input=path.read_text(encoding="utf-8"),
                                 capture_output=True, text=True, check=False)
