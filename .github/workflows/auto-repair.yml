@@ -23,8 +23,26 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+      - name: Validate repair script
+        run: python -m py_compile repair.py
       - name: Run safe automatic repairs
         run: python repair.py
+      - name: Verify repository files after repair
+        run: |
+          python - <<'PY'
+          import json, xml.etree.ElementTree as ET
+          from pathlib import Path
+          for page in ("index.html", "sloom360.html", "ai.html"):
+              assert Path(page).is_file() and Path(page).stat().st_size > 500, f"Missing or empty page: {page}"
+          data = json.loads(Path("data.json").read_text(encoding="utf-8"))
+          assert isinstance(data.get("leagues"), dict) and data["leagues"], "No league data"
+          root = ET.parse("sitemap.xml").getroot()
+          urls = [node.text or "" for node in root.iter() if node.tag.endswith("loc")]
+          for url in ("https://sloom86ss.github.io/", "https://sloom86ss.github.io/sloom360.html", "https://sloom86ss.github.io/ai.html"):
+              assert url in urls, f"Missing sitemap URL: {url}"
+          assert "Sitemap: https://sloom86ss.github.io/sitemap.xml" in Path("robots.txt").read_text(encoding="utf-8")
+          print("SLOOM365 repository validation passed")
+          PY
       - name: Commit repaired SEO files if needed
         run: |
           git config user.name 'SLOOM365 Auto Repair'
@@ -34,3 +52,15 @@ jobs:
           git commit -m "Auto-repair SLOOM365 SEO files"
           git pull --rebase origin main
           git push
+
+      - name: Notify phone if auto-repair workflow fails
+        if: failure()
+        env:
+          NTFY_TOPIC: sloom360-alerts-oman-7k9p4x2m8q6v
+        run: |
+          curl --fail --show-error --silent \
+            -H "Title: ⚠️ SLOOM365 Auto Repair failed" \
+            -H "Priority: urgent" \
+            -H "Tags: warning" \
+            -d "تعذر إكمال فحص أو إصلاح مستودع SLOOM365. افتح سجل GitHub Actions لمعرفة الخطأ." \
+            "https://ntfy.sh/$NTFY_TOPIC"
