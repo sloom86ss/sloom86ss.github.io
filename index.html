@@ -1333,7 +1333,7 @@ body{padding-bottom:125px!important}
 </div>
 <section class="weather-strip" aria-label="الطقس والوقت في عُمان">
  <div class="weather-main"><span class="weather-icon" id="weatherIcon">🌤️</span><div><div><span class="weather-temp" id="weatherTemp">--°</span> <span class="weather-place" id="weatherPlaceName">سلطنة عُمان</span></div><div class="weather-desc" id="weatherDesc">جارٍ تحميل حالة الطقس…</div></div></div>
- <button id="weatherLocationButton" type="button" aria-label="استخدام موقع الهاتف للطقس" style="border:1px solid #c6a6ff;background:#251342;color:#fff;border-radius:10px;padding:8px 10px;font:800 10px Cairo;cursor:pointer">📍 تحديد موقعي</button><div class="weather-clock"><b id="weatherLocalTime">--:--</b><span id="weatherLocalDate">توقيت عُمان</span></div>
+ <button id="weatherLocationButton" type="button" aria-label="استخدام موقع الهاتف للطقس" style="border:1px solid #c6a6ff;background:#251342;color:#fff;border-radius:10px;padding:8px 10px;font:800 10px Cairo;cursor:pointer">📍 فحص وإصلاح GPS</button><div class="weather-clock"><b id="weatherLocalTime">--:--</b><span id="weatherLocalDate">توقيت عُمان</span></div>
 </section>
 
 <section class="live-board" id="liveBoard" aria-live="polite" aria-label="المباريات المباشرة">
@@ -1800,25 +1800,46 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
   if(err.code===3)return 'استغرق تحديد الموقع وقتاً طويلاً. تأكد من تشغيل GPS ثم اضغط تحديث موقعي مجدداً.';
   return 'تعذر تحديد الموقع. تأكد من تشغيل GPS وإذن الموقع للموقع.';
  }
- function requestWeatherLocation(){
-  const button=$('weatherLocationButton');
-  if(!window.isSecureContext){$('weatherDesc').textContent='يلزم فتح الموقع عبر HTTPS حتى يعمل تحديد الموقع.';return;}
-  if(!navigator.geolocation){$('weatherDesc').textContent='هذا المتصفح لا يدعم تحديد الموقع. افتح الموقع في Chrome أو Safari.';return;}
-  if(button){button.disabled=true;button.textContent='📍 جارٍ تحديد موقعك…';}
-  $('weatherDesc').textContent='يرجى السماح للمتصفح بالوصول إلى موقع الهاتف، وقد يستغرق التحديد بضع ثوانٍ…';
-  const finish=()=>{if(button){button.disabled=false;button.textContent='📍 تحديث موقعي';}};
+ async function requestWeatherLocation(){
+  const button=$('weatherLocationButton'),desc=$('weatherDesc');
+  const finish=()=>{if(button){button.disabled=false;button.textContent='📍 فحص وإصلاح GPS';}};
+  if(!window.isSecureContext){desc.textContent='فشل الفحص: افتح الموقع من رابطه الآمن https://sloom86ss.github.io/';return;}
+  if(!navigator.geolocation){desc.textContent='فشل الفحص: المتصفح لا يوفّر خدمة تحديد الموقع. جرّب Chrome أو Safari محدّثاً.';return;}
+  if(button){button.disabled=true;button.textContent='⏳ جارٍ فحص GPS…';}
+  desc.textContent='الفحص 1/3: التحقق من إذن الموقع في المتصفح…';
+  try{
+   if(navigator.permissions?.query){
+    const permission=await navigator.permissions.query({name:'geolocation'});
+    if(permission.state==='denied'){
+     desc.textContent='الفحص اكتمل: إذن الموقع محظور من إعدادات المتصفح. افتح إعدادات الموقع لهذا العنوان، واجعل «الموقع: سماح»، ثم أعد المحاولة. إذا كان محظوراً من إعدادات الهاتف فعّله أيضاً.';
+     finish();return;
+    }
+   }
+  }catch(permissionCheckError){console.info('Geolocation permission query unavailable; continuing with browser prompt.');}
+  desc.textContent='الفحص 2/3: طلب موقع الهاتف. اختر «سماح» عند ظهور رسالة الإذن…';
+  let completed=false;
   const locate=(options,retry)=>{
-   navigator.geolocation.getCurrentPosition(async pos=>{
-    weatherCoords={latitude:pos.coords.latitude,longitude:pos.coords.longitude};weatherPlace='موقعك الحالي';
-    $('weatherDesc').textContent='تم تحديد موقعك. جارٍ تحميل الطقس المحلي…';
-    await loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace);finish();
-   },err=>{
-    if(retry&&err.code!==1){locate({enableHighAccuracy:false,timeout:25000,maximumAge:120000},false);return;}
-    $('weatherDesc').textContent=geoErrorMessage(err)+' سنعرض طقس عُمان مؤقتاً.';
-    weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';weather();finish();
-   },options);
+   try{
+    navigator.geolocation.getCurrentPosition(async pos=>{
+     if(completed)return;completed=true;
+     weatherCoords={latitude:pos.coords.latitude,longitude:pos.coords.longitude};weatherPlace='موقعك الحالي';
+     desc.textContent='نجح فحص GPS ✓ دقة الموقع التقريبية '+Math.round(pos.coords.accuracy)+' متر. جارٍ تحميل الطقس…';
+     await loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace);
+     finish();
+    },err=>{
+     if(completed)return;
+     if(retry&&err.code!==1){desc.textContent='الفحص 3/3: نجرب تحديد الموقع بطريقة متوافقة أسرع…';locate({enableHighAccuracy:false,timeout:20000,maximumAge:60000},false);return;}
+     completed=true;
+     desc.textContent=geoErrorMessage(err)+' لم يتغير إعداد الهاتف تلقائياً؛ اتبع التعليمات أعلاه ثم أعد الفحص.';
+     finish();
+    },options);
+   }catch(callError){
+    if(completed)return;completed=true;
+    desc.textContent='تعذر تشغيل خدمة GPS: '+(callError.message||'راجع إذن الموقع وإعدادات المتصفح.');
+    finish();
+   }
   };
-  locate({enableHighAccuracy:true,timeout:20000,maximumAge:0},true);
+  locate({enableHighAccuracy:true,timeout:15000,maximumAge:0},true);
  }
  clock();weather();$('weatherLocationButton')?.addEventListener('click',requestWeatherLocation);setInterval(clock,15000);setInterval(()=>loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace),15*60*1000);
 })();
