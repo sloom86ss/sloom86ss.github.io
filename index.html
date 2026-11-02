@@ -297,6 +297,39 @@ header .brand h1{font-size:18px!important}
  #newsTicker .ticker-track small{font-size:11px!important}
 }
 
+
+/* SLOOM365 BLUE-GOLD VISUAL REFRESH */
+:root{--bg:#06112d;--panel:#0b1e48;--panel2:#102b60;--line:#28549b;--green:#ffd447;--muted:#a9bddf;--white:#f4f8ff;--red:#ff4058}
+body{background:radial-gradient(ellipse at 50% -12%,#164b9c 0,transparent 48%),linear-gradient(180deg,#06112d,#03091c 80%);color:#f4f8ff}
+.wrap{width:min(1180px,100%);padding:12px 14px 100px}
+header{position:relative;isolation:isolate;min-height:112px;padding:10px 14px 12px;border:1px solid #3566b3;border-radius:22px;margin:0 0 12px;overflow:hidden;background:linear-gradient(105deg,#061638 0%,#0b2a66 55%,#07142f 100%);box-shadow:0 10px 30px #0007,inset 0 1px #ffffff20}
+header:after{content:"";position:absolute;inset:auto 0 0;height:3px;background:linear-gradient(90deg,#ffd447,#fff2a8,#ffd447);z-index:-1}
+.brand{position:relative;z-index:2;gap:12px}
+.brand img{width:54px!important;height:54px!important;max-width:15vw;filter:drop-shadow(0 0 10px #ffd44766)}
+.brand h1{font-size:clamp(21px,4vw,29px);color:#fff;text-shadow:0 2px 10px #0008}
+.brand small{font-size:11px;color:#d4e4ff;letter-spacing:.4px}
+.sloom-mascot{position:absolute;left:8px;bottom:-5px;width:112px;height:112px;z-index:1;pointer-events:none;filter:drop-shadow(0 7px 9px #0008);animation:mascot-hop 2.6s ease-in-out infinite}
+.sloom-mascot svg{width:100%;height:100%;overflow:visible}
+.sloom-mascot .player{transform-origin:50% 75%;animation:player-kick 2.6s ease-in-out infinite}
+.sloom-mascot .ball{transform-origin:80% 28%;animation:ball-bounce 1.3s ease-in-out infinite}
+@keyframes mascot-hop{0%,100%{transform:translateY(2px)}50%{transform:translateY(-8px)}}
+@keyframes player-kick{0%,100%{transform:rotate(0)}35%{transform:rotate(-4deg)}65%{transform:rotate(3deg)}}
+@keyframes ball-bounce{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(5px,-12px) rotate(24deg)}}
+.ticker{border:1px solid #3974cf;background:linear-gradient(90deg,#071a42,#0c2e72,#071a42);border-radius:14px;padding:12px 14px;margin-bottom:15px;color:#ffe16b;box-shadow:0 7px 20px #0005}
+.ticker-label{color:#fff;font-size:13px;font-weight:900}
+.ticker-track{font-size:14px;animation-duration:18s!important}
+.ticker-world-times{color:#d9e8ff}
+.live-board,.upcoming-board,.stats,.section-head,.league-tabs,.match,.match-card,.news-section{border-color:#28549b!important}
+.live-board,.upcoming-board{background:linear-gradient(135deg,#0a1d45,#0b2b65)!important;box-shadow:0 8px 24px #0005}
+.live-board-head h2,.upcoming-board-head h2{color:#ffe16b}
+.live-pill{background:#123b83;border-color:#4b85df;color:#fff}
+button,.btn,.filter-btn,.day-btn{border-radius:12px}
+.section-head h3{color:#ffe16b}
+.news-section-head{background:linear-gradient(90deg,#0a1e49,#102e6a);border:1px solid #3266b3;border-radius:15px;padding:10px 12px}
+#installApp{background:linear-gradient(135deg,#ffd447,#f5a900)!important;color:#17213a!important;border-color:#fff0a6!important}
+#enableNotifications{background:linear-gradient(135deg,#1766ed,#073da8)!important;color:#fff!important;border-color:#6da6ff!important}
+@media(max-width:520px){header{min-height:88px;padding:8px 10px 8px}.brand img{width:44px!important;height:44px!important}.sloom-mascot{width:88px;height:88px;left:2px;bottom:-7px}.ticker{padding:10px;font-size:12px}.ticker-track{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.sloom-mascot,.sloom-mascot *,.ticker-track{animation:none!important}}
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -322,7 +355,7 @@ header .brand h1{font-size:18px!important}
 </head>
 <body><main class="wrap">
 
-<header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>سلوم 365</h1><small>مباريات وأخبار كرة القدم</small></div></div></header>
+<header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>سلوم 365</h1><small>مباريات وأخبار كرة القدم</small></div></div><div class="sloom-mascot" role="img" aria-label="لاعب كرتوني ينطط كرة قدم"><svg viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g class="player"><path d="M54 73 L35 95 L20 115 L31 123 L54 107 L72 91" fill="#f4f7ff" stroke="#c6d9ff" stroke-width="4" stroke-linejoin="round"/><path d="M78 78 L92 102 L111 117 L122 108 L107 83 L98 65" fill="#f4f7ff" stroke="#c6d9ff" stroke-width="4" stroke-linejoin="round"/><path d="M47 65 Q74 53 99 69 L91 105 Q72 116 49 99Z" fill="#0758cf" stroke="#8fc4ff" stroke-width="3"/><path d="M50 98 L90 101 L84 126 L53 124Z" fill="#fff"/><path d="M59 107 L79 108" stroke="#0758cf" stroke-width="4"/><path d="M49 70 L30 84 L18 76 L35 57 L54 55" fill="#0758cf" stroke="#8fc4ff" stroke-width="4" stroke-linejoin="round"/><path d="M94 70 L116 82 L126 70 L108 54 L91 55" fill="#0758cf" stroke="#8fc4ff" stroke-width="4" stroke-linejoin="round"/><circle cx="73" cy="39" r="25" fill="#ffc99d" stroke="#9d573d" stroke-width="2"/><path d="M49 35 Q47 8 73 10 Q99 10 99 34 Q88 24 76 27 Q62 20 49 35Z" fill="#4b2b20"/><path d="M52 27 Q58 9 75 14 Q93 10 98 28" fill="none" stroke="#6b3b28" stroke-width="7" stroke-linecap="round"/><ellipse cx="64" cy="40" rx="4" ry="6" fill="#17233c"/><ellipse cx="83" cy="40" rx="4" ry="6" fill="#17233c"/><path d="M65 52 Q74 61 84 51" fill="none" stroke="#a33b37" stroke-width="3" stroke-linecap="round"/><path d="M58 72 L88 72" stroke="#ffd447" stroke-width="3"/><text x="73" y="88" text-anchor="middle" font-size="9" font-weight="900" fill="#ffe16b">SLOOM</text></g><g class="ball"><circle cx="125" cy="30" r="15" fill="#fff" stroke="#d5e5ff" stroke-width="2"/><path d="M125 20 l7 5 -3 8 -8 0 -4 -7z M125 20l0-5 M129 33l7 5 M121 33l-5 7" fill="#18263d" stroke="#18263d" stroke-width="2" stroke-linejoin="round"/></g></svg></div></header>
 <section class="ticker" id="newsTicker" aria-label="الأخبار والتوقيت العالمي">
  <span class="ticker-label">آخر الأخبار</span>
  <div class="ticker-world-times" aria-label="التوقيت العالمي">
