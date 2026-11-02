@@ -27,6 +27,9 @@ BASE = "https://site.api.espn.com/apis/site/v2/sports/soccer"
 LEAGUES = {
     "soccer/eng.1": "eng.1", "soccer/esp.1": "esp.1", "soccer/ita.1": "ita.1",
     "soccer/ger.1": "ger.1", "soccer/fra.1": "fra.1", "soccer/ksa.1": "ksa.1",
+    "soccer/ksa.kings.cup": "ksa.kings.cup", "soccer/afc.champions": "afc.champions",
+    "soccer/afc.cup": "afc.cup", "soccer/caf.champions": "caf.champions",
+    "soccer/caf.confed": "caf.confed", "soccer/caf.nations": "caf.nations",
     "soccer/por.1": "por.1", "soccer/ned.1": "ned.1", "soccer/uefa.champions": "uefa.champions",
     "soccer/uefa.europa": "uefa.europa", "soccer/arg.1": "arg.1", "soccer/bra.1": "bra.1",
     "soccer/fifa.world": "fifa.world", "soccer/usa.1": "usa.1",
