@@ -21,7 +21,6 @@ const heading=document.createElement('div');const strong=document.createElement(
 const close=document.createElement('button');close.id='sloom-chat-close';close.type='button';close.setAttribute('aria-label','إغلاق المحادثة');close.textContent='×';head.append(heading,close);
 const log=document.createElement('div');log.id='sloom-chat-log';
 const captchaBox=document.createElement('div');captchaBox.id='sloom-chat-captcha';
-const captchaBox=document.createElement('div');captchaBox.id='sloom-chat-captcha';
 const form=document.createElement('form');form.id='sloom-chat-form';
 const input=document.createElement('input');input.id='sloom-chat-input';input.maxLength=300;input.autocomplete='off';input.placeholder='اسأل عن مباراة أو نتيجة أو خبر…';input.setAttribute('aria-label','اكتب سؤالك');
 const send=document.createElement('button');send.id='sloom-chat-send';send.type='submit';send.textContent='إرسال';form.append(input,send);
