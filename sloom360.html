@@ -139,7 +139,8 @@ async function openMatch(id,league){
  const venue=m.venue|| (isEnglish?'Not provided by source':'غير متوفر من المصدر');
  const broadcast=m.broadcast|| (isEnglish?'Not provided by source':'غير متوفر من المصدر');
  const score=(m.home?.score??'—')+' - '+(m.away?.score??'—');
-  const matchSourceUrl='https://www.espn.com/soccer/match/_/gameId/'+encodeURIComponent(m.id);\n  const events=Array.isArray(m.events)?m.events:[];
+  const matchSourceUrl='https://www.espn.com/soccer/match/_/gameId/'+encodeURIComponent(m.id);
+  const events=Array.isArray(m.events)?m.events:[];
   const eventText=events.length?events.map(ev=>'<div class="detail-line">⏱ '+esc(ev.minute||'—')+' · '+esc(ev.team||'')+' · '+esc(ev.player||'')+' · '+esc(ev.type||'حدث')+(ev.assist?' · صناعة: '+esc(ev.assist):'')+'</div>').join(''):'<div class="detail-line">لم تصل أحداث موثقة لهذه المباراة من مزود البيانات حتى الآن.</div>';
   $('matchDetails').innerHTML='<div class="detail-score"><div class="detail-team"><img src="'+esc(m.home?.logo||'')+'" alt=""><span>'+esc(showTeam(m.home?.name))+'</span><b>'+esc(m.home?.score??'—')+'</b></div><strong>—</strong><div class="detail-team"><img src="'+esc(m.away?.logo||'')+'" alt=""><span>'+esc(showTeam(m.away?.name))+'</span><b>'+esc(m.away?.score??'—')+'</b></div></div><div class="detail-section"><h3>معلومات المباراة</h3><div class="detail-line">'+esc(showLeague(l.name||league))+' · '+esc(status)+' · '+esc(fmtKickoff(m.date||m.time))+'</div><div class="detail-line">الوقت: '+esc(m.clock||m.status_detail||m.detail||'غير متوفر')+'</div><div class="detail-line">الملعب: '+esc(venue)+'</div><div class="detail-line">القنوات الناقلة: '+esc(broadcast)+'</div></div><div class="detail-section"><h3>⚽ الأهداف والمسجلون وصناع الأهداف والبطاقات</h3>'+eventText+'</div><div class="detail-section"><h3>التشكيلات والإحصائيات</h3><div class="detail-line">لا تتوفر تشكيلة أو إحصائيات مؤكدة في بيانات المصدر الحالية. لن نخمنها.</div></div>';
 }
