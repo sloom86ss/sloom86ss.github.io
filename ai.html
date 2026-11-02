@@ -32,7 +32,7 @@ header{padding:12px 16px;background:#111915;border-bottom:1px solid #26352b;disp
 <div class="notice">مساعد كرة قدم عربي يجيب من بيانات SLOOM 365 المنشورة فقط. لا يخمّن النتائج أو التشكيلات، ويخبرك عندما تكون البيانات قديمة أو غير متاحة.</div>
 <div class="chat" id="chat"><div class="m b">أهلاً بك! أنا مساعد SLOOM 365 🟢 أستطيع فهم أسئلتك بالعربية وشرح بيانات المباريات والنتائج والترتيب والأخبار المتاحة. سأوضح لك عندما لا تتوفر المعلومة بدلاً من تخمينها.</div></div>
 <div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو بطولة…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
-<div class="hint">الذكاء الاصطناعي: Gemini. البيانات الرياضية: ESPN عند توفرها. الحصة المجانية محدودة وقد تتغير.</div>
+<div class="hint">المساعد يحاول استخدام Gemini عبر خادم آمن عند توفره؛ وإذا لم تتوفر الخدمة يعمل بالبيانات المحلية. البيانات الرياضية: ESPN عند توفرها. الحصة المجانية محدودة وقد تتغير.</div>
 <script>
 const chat=document.getElementById('chat'),field=document.getElementById('question'),send=document.getElementById('send');
 let sportsData=null;
@@ -91,7 +91,18 @@ async function go(){
  const answer=bubble('أراجع بيانات الرياضة وأجهز الإجابة…','b');send.disabled=true;
  try{
   if(!sportsData){const r=await fetch('data.json?ai='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('تعذر تحميل بيانات الرياضة');sportsData=await r.json();}
-  answer.textContent=reply(q);
+  // Try the protected server-side Gemini endpoint when this deployment provides it.
+  // GitHub Pages has no serverless /api route, so the local data assistant remains the fallback.
+  let remoteAnswer='';
+  try{
+   const response=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,context:makeContext(sportsData)})});
+   const payload=await response.json().catch(()=>({}));
+   if(response.ok&&typeof payload.answer==='string'&&payload.answer.trim()){
+    remoteAnswer=payload.answer.trim();
+    if(payload.mode==='local'&&payload.notice)remoteAnswer+='\\n\\n'+payload.notice;
+   }
+  }catch(_){/* Local fallback below. */}
+  answer.textContent=remoteAnswer||reply(q);
  }catch(e){answer.textContent=e.message||'تعذر الاتصال حالياً.';}
  finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight;}
 }
