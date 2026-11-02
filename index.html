@@ -1420,7 +1420,7 @@ function render(){
  m.appendChild(details);
  details.addEventListener('toggle',()=>{if(details.open&&!details.dataset.eventsLoaded){details.dataset.eventsLoaded='1';loadMatchEvents(details,key,g.id)}});
  m.style.cursor='pointer';
- m.addEventListener('click',e=>{if(e.target.closest('a,button,summary'))return;details.open=true;});
+ m.addEventListener('click',e=>{if(e.target.closest('a,button,summary'))return;openMatchModal({league:league.name||key,leagueKey:key,match:g});});
  card.appendChild(m)});
 if(league.standings&&league.standings.length){const st=document.createElement('div');st.className='standings';st.innerHTML='<b>ترتيب مختصر</b>'+league.standings.slice(0,5).map((x,i)=>'<div><span>'+(esc(x.rank||i+1))+'</span><span>'+esc(arTeam(x.name))+'</span><span>'+esc(x.points||'—')+' ن</span></div>').join('');card.appendChild(st)}root.appendChild(card)});
  if(!shown)root.innerHTML='<div class="empty">لا توجد مباريات متاحة في هذا التصنيف حالياً.</div>';
@@ -1535,6 +1535,8 @@ function renderLive(){
   details.innerHTML='<summary>📋 تفاصيل المباراة والأهداف والبطاقات</summary><div class="match-detail-body"><div><span>الفريقان</span><b>'+esc(arTeam(h.name||''))+' × '+esc(arTeam(a.name||''))+'</b></div><div><span>النتيجة</span><b>'+esc(score)+'</b></div><div><span>الوقت</span><b>'+esc(minute)+'</b></div></div>';
   details.addEventListener('toggle',()=>{if(details.open&&!details.dataset.eventsLoaded){details.dataset.eventsLoaded='1';const leagueKey=Object.keys(sportsData).find(k=>sportsData[k]===league)||'';loadMatchEvents(details,leagueKey,match.id)}});
   card.appendChild(details);
+  card.style.cursor='pointer';
+  card.addEventListener('click',e=>{if(e.target.closest('a,button,summary'))return;openMatchModal({league:league.name||'بطولة',leagueKey:Object.keys(sportsData).find(k=>sportsData[k]===league)||'',match});});
   list.appendChild(card);
  });
 }
@@ -1568,6 +1570,20 @@ function renderUpcoming(){
 
 const clubModal=document.getElementById('clubModal'),clubModalBody=document.getElementById('clubModalBody');
 function closeClubModal(){clubModal.classList.remove('open');document.body.style.overflow=''}
+function openMatchModal(info){
+ const league=info.league||'مباراة',key=info.leagueKey||'',g=info.match||{},h=g.home||{},a=g.away||{};
+ const home=arTeam(h.name||'الفريق الأول'),away=arTeam(a.name||'الفريق الثاني');
+ const score=g.status==='pre'?'لم تبدأ':String(h.score??'—')+' - '+String(a.score??'—');
+ const when=g.date||g.time?new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(new Date(g.date||g.time))+' · بتوقيت عُمان':'الوقت غير متاح';
+ clubModalBody.innerHTML='<div class="club-modal-head">'+(h.logo?'<img src="'+esc(h.logo)+'" alt="">':'')+'<div><h3 id="clubModalTitle">'+esc(home)+' × '+esc(away)+'</h3><small>'+esc(league)+'</small></div><button class="club-close" data-club-close>إغلاق ✕</button></div><div class="club-facts"><div class="club-fact"><span>النتيجة</span><b>'+esc(score)+'</b></div><div class="club-fact"><span>حالة المباراة</span><b>'+esc(g.status==='in'?'مباشرة':g.status==='post'?'انتهت':'لم تبدأ')+'</b></div><div class="club-fact"><span>الموعد</span><b>'+esc(when)+'</b></div><div class="club-fact"><span>الملعب</span><b>'+esc(g.venue||'غير متوفر')+'</b></div></div><div id="matchModalEvents" class="match-detail-body"><div class="event-muted">جارٍ تحميل التشكيلتين والأحداث…</div></div>';
+ clubModal.classList.add('open');document.body.style.overflow='hidden';
+ const details=document.createElement('details');details.className='match-details';details.open=true;
+ details.innerHTML='<summary>تفاصيل المباراة</summary><div class="match-detail-body"></div>';
+ const target=document.getElementById('matchModalEvents');target.innerHTML='';
+ details.querySelector('.match-detail-body').innerHTML='<div class="event-muted">جارٍ جلب التشكيلات والأهداف والبطاقات والتبديلات من المصدر…</div>';
+ target.appendChild(details);
+ loadMatchEvents(details,key,g.id);
+}
 clubModal.addEventListener('click',e=>{if(e.target===clubModal||e.target.closest('[data-club-close]'))closeClubModal()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeClubModal()});
 async function openClubDetails(team){
