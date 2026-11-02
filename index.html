@@ -1783,27 +1783,44 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
   $('weatherDesc').textContent=w[0]+' · المحسوس '+Math.round(c.apparent_temperature)+'° · الرطوبة '+Math.round(c.relative_humidity_2m)+'% · الرياح '+Math.round(c.wind_speed_10m)+' كم/س';
   if($('weatherLocationButton'))$('weatherLocationButton').textContent='📍 تحديث موقعي';
  }
+ let weatherRequestId=0;
  async function loadWeatherAt(lat,lon,place){
-  if(weatherBusy)return;weatherBusy=true;
-  try{const c=await fetchWeather(lat,lon);showWeather(c,place);}
+  const requestId=++weatherRequestId;
+  try{const c=await fetchWeather(lat,lon);if(requestId!==weatherRequestId)return;showWeather(c,place);}
   catch(primaryError){
-   // عند فشل الطقس المحلي، نستخدم مسقط كموقع مرجعي عام لسلطنة عُمان.
-   try{const c=await fetchWeather(omanFallback.latitude,omanFallback.longitude);weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';showWeather(c,'سلطنة عُمان');$('weatherDesc').textContent+=' · بيانات احتياطية من مسقط';}
-   catch(backupError){$('weatherDesc').textContent='تعذر الاتصال بمصادر الطقس حالياً؛ ستتم إعادة المحاولة تلقائياً.';}
-  }finally{weatherBusy=false;}
+   if(requestId!==weatherRequestId)return;
+   try{const c=await fetchWeather(omanFallback.latitude,omanFallback.longitude);if(requestId!==weatherRequestId)return;weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';showWeather(c,'سلطنة عُمان');$('weatherDesc').textContent+=' · بيانات احتياطية من مسقط';}
+   catch(backupError){if(requestId==weatherRequestId)$('weatherDesc').textContent='تعذر الاتصال بمصدر الطقس. تحقق من الإنترنت ثم أعد المحاولة.';}
+  }
  }
  function weather(){loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace)}
- function requestWeatherLocation(){
-  if(!navigator.geolocation){weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';$('weatherDesc').textContent='تحديد الموقع غير مدعوم؛ نعرض الطقس العام لسلطنة عُمان.';weather();return;}
-  $('weatherDesc').textContent='بانتظار السماح بموقع الهاتف…';
-  navigator.geolocation.getCurrentPosition(async pos=>{
-   weatherCoords={latitude:pos.coords.latitude,longitude:pos.coords.longitude};weatherPlace='موقعك الحالي';await loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace);
-  },err=>{
-   weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';
-   $('weatherDesc').textContent=err.code===1?'لم تسمح بالموقع؛ نعرض الطقس العام لسلطنة عُمان.':'تعذر تحديد الموقع؛ نعرض الطقس العام لسلطنة عُمان.';weather();
-  },{enableHighAccuracy:false,timeout:15000,maximumAge:600000});
+ function geoErrorMessage(err){
+  if(err.code===1)return 'إذن الموقع مرفوض. فعّل إذن الموقع لهذا الموقع من إعدادات المتصفح، ثم أعد المحاولة.';
+  if(err.code===2)return 'الهاتف لم يستطع تحديد موقعك. فعّل GPS وخدمات الموقع، وجرّب قرب نافذة أو في مكان مفتوح.';
+  if(err.code===3)return 'استغرق تحديد الموقع وقتاً طويلاً. تأكد من تشغيل GPS ثم اضغط تحديث موقعي مجدداً.';
+  return 'تعذر تحديد الموقع. تأكد من تشغيل GPS وإذن الموقع للموقع.';
  }
- clock();requestWeatherLocation();$('weatherLocationButton')?.addEventListener('click',requestWeatherLocation);setInterval(clock,15000);setInterval(()=>loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace),15*60*1000);
+ function requestWeatherLocation(){
+  const button=$('weatherLocationButton');
+  if(!window.isSecureContext){$('weatherDesc').textContent='يلزم فتح الموقع عبر HTTPS حتى يعمل تحديد الموقع.';return;}
+  if(!navigator.geolocation){$('weatherDesc').textContent='هذا المتصفح لا يدعم تحديد الموقع. افتح الموقع في Chrome أو Safari.';return;}
+  if(button){button.disabled=true;button.textContent='📍 جارٍ تحديد موقعك…';}
+  $('weatherDesc').textContent='يرجى السماح للمتصفح بالوصول إلى موقع الهاتف، وقد يستغرق التحديد بضع ثوانٍ…';
+  const finish=()=>{if(button){button.disabled=false;button.textContent='📍 تحديث موقعي';}};
+  const locate=(options,retry)=>{
+   navigator.geolocation.getCurrentPosition(async pos=>{
+    weatherCoords={latitude:pos.coords.latitude,longitude:pos.coords.longitude};weatherPlace='موقعك الحالي';
+    $('weatherDesc').textContent='تم تحديد موقعك. جارٍ تحميل الطقس المحلي…';
+    await loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace);finish();
+   },err=>{
+    if(retry&&err.code!==1){locate({enableHighAccuracy:false,timeout:25000,maximumAge:120000},false);return;}
+    $('weatherDesc').textContent=geoErrorMessage(err)+' سنعرض طقس عُمان مؤقتاً.';
+    weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';weather();finish();
+   },options);
+  };
+  locate({enableHighAccuracy:true,timeout:20000,maximumAge:0},true);
+ }
+ clock();weather();$('weatherLocationButton')?.addEventListener('click',requestWeatherLocation);setInterval(clock,15000);setInterval(()=>loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace),15*60*1000);
 })();
 </script>
 
