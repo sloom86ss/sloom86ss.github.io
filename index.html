@@ -17,17 +17,17 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;pa
 .filters{display:flex;gap:8px;overflow:auto;padding:2px 0 12px;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.filter{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:#c3cec5;padding:8px 14px;border-radius:30px;font:700 11px Cairo;cursor:pointer}.filter.active{background:var(--green);border-color:var(--green);color:#10170b}
 .leagues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.league{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:13px;min-width:0}.league-title{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:11px}.league-title b{font-size:12px}.league-title span{font-size:10px;color:var(--muted)}
 .match{border-top:1px solid #243129;padding:11px 0 2px}.match:first-of-type{border-top:0}.teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:7px}.team{display:flex;align-items:center;gap:7px;min-width:0;font-size:11px;font-weight:700}.team.away{justify-content:flex-end;text-align:left}.team img{width:25px;height:25px;object-fit:contain;flex:none}.team span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.score{font-weight:900;font-size:14px;background:var(--panel2);padding:5px 9px;border-radius:9px;white-space:nowrap}.match-meta{display:flex;justify-content:center;gap:8px;color:var(--muted);font-size:10px;margin-top:7px}.live{color:var(--red);font-weight:900}.empty{grid-column:1/-1;background:var(--panel);border:1px dashed var(--line);border-radius:16px;padding:25px;text-align:center;color:var(--muted);font-size:12px}
-.teams-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.team-chip{display:flex;align-items:center;gap:8px;padding:9px;background:var(--panel);border:1px solid var(--line);border-radius:12px;font-size:11px}.team-chip img{width:25px;height:25px;object-fit:contain}.team-search{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px;color:var(--white);font:12px Cairo;margin-bottom:10px}.standings{border-top:1px solid #243129;margin-top:10px;padding-top:8px;font-size:10px}.standings div{display:grid;grid-template-columns:22px 1fr 34px;gap:6px;padding:4px 0;color:#c8d3ca}.standings b{color:var(--green)}.news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.news-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.news-card img{width:100%;height:115px;object-fit:cover;background:var(--panel2)}.news-card div{padding:11px}.news-card b{font-size:11px;line-height:1.7;display:block}.news-card small{color:var(--muted);font-size:10px}
+.teams-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.team-chip{display:flex;align-items:center;gap:8px;padding:9px;background:var(--panel);border:1px solid var(--line);border-radius:12px;font:700 11px Cairo;color:var(--white);text-align:right;width:100%;cursor:pointer;transition:border-color .2s,transform .2s}.team-chip:hover{border-color:var(--green);transform:translateY(-2px)}.team-chip img{width:25px;height:25px;object-fit:contain}.team-search{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px;color:var(--white);font:12px Cairo;margin-bottom:10px}.standings{border-top:1px solid #243129;margin-top:10px;padding-top:8px;font-size:10px}.standings div{display:grid;grid-template-columns:22px 1fr 34px;gap:6px;padding:4px 0;color:#c8d3ca}.standings b{color:var(--green)}.news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.news-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.news-card img{width:100%;height:115px;object-fit:cover;background:var(--panel2)}.news-card div{padding:11px}.news-card b{font-size:11px;line-height:1.7;display:block}.news-card small{color:var(--muted);font-size:10px}
 footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;padding:20px;border-top:1px solid var(--line)}
 @media(min-width:760px){.leagues{grid-template-columns:repeat(3,minmax(0,1fr))}.teams-directory{grid-template-columns:repeat(4,minmax(0,1fr))}.news{grid-template-columns:repeat(4,minmax(0,1fr))}.wrap{padding-top:25px}.hero{padding:32px}.stats{max-width:520px}}
 @media(max-width:380px){.leagues,.news{grid-template-columns:1fr}.wrap{padding-inline:12px}}
 
-.clock-deck{display:grid;grid-template-columns:1.1fr 1fr;gap:12px;margin:0 0 16px}
+.clock-deck{display:grid;grid-template-columns:105px minmax(0,1fr);gap:9px;margin:0 0 16px;align-items:stretch}
 .clock-card{position:relative;overflow:hidden;border:1px solid #8c7540;border-radius:18px;padding:13px;background:linear-gradient(145deg,#1b241c,#0d130f 70%);box-shadow:inset 0 0 0 3px #c4a45a12,0 8px 24px #0005}
 .clock-card:before{content:"";position:absolute;inset:5px;border:1px solid #b7a06b33;border-radius:13px;pointer-events:none}
 .clock-heading{display:flex;justify-content:space-between;align-items:center;color:#e6d2a0;font-size:11px;font-weight:900;margin-bottom:10px}
 .clock-heading small{color:#a9a17e;font-size:9px;font-weight:600}
-.clock-layout{display:flex;align-items:center;justify-content:center;gap:12px}
+.clock-layout{display:flex;align-items:center;justify-content:center;gap:8px}.classic-caption{display:grid;gap:4px;text-align:center}.classic-caption b{color:#f2e5c8;font-size:13px}.classic-caption span{color:#a9a17e;font-size:9px}
 .analog-clock{width:108px;height:108px;position:relative;flex:none;border-radius:50%;border:5px solid #b99a56;background:radial-gradient(circle,#f2e6c8 0,#d9c89f 72%,#a98c51 73%,#6e5731 100%);box-shadow:0 0 0 3px #302817,0 0 0 5px #b99a5640,inset 0 2px 9px #51401c}
 .analog-clock:before{content:"";position:absolute;inset:7px;border:1px solid #8d7445;border-radius:50%}
 .clock-number{position:absolute;color:#302719;font:bold 9px Georgia,serif;transform:translate(-50%,-50%)}
@@ -37,16 +37,16 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 .clock-pin{position:absolute;width:8px;height:8px;border-radius:50%;background:#a23e2b;border:1px solid #f1dfb5;left:50%;top:50%;transform:translate(-50%,-50%)}
 .zone-list{display:grid;gap:7px;flex:1;min-width:0}.zone-time{border-bottom:1px solid #9b865033;padding-bottom:5px}.zone-time:last-child{border:0;padding:0}
 .zone-time span{display:block;color:#a9a17e;font-size:9px}.zone-time b{display:block;color:#f2e5c8;font:700 16px Georgia,serif;direction:ltr;text-align:right;white-space:nowrap}
-.update-clock .analog-clock{width:88px;height:88px}.update-clock .clock-hand.hour{height:22px}.update-clock .clock-hand.minute{height:29px}.update-clock .clock-hand.second{height:32px}
+.digital-clock{padding:12px}.digital-zones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.digital-zones .zone-time{border:1px solid #9b865033;border-radius:10px;padding:7px 6px;text-align:center}.digital-zones .zone-time b{font-size:clamp(11px,2.8vw,16px);text-align:center}.digital-zones .zone-time span{font-size:8px}.digital-update{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-top:1px solid #9b865033;margin-top:9px;padding-top:7px;color:#a9a17e;font-size:9px}.digital-update b{color:#f2e5c8;font:700 13px Georgia,serif;direction:ltr}.digital-update small{color:#b7f34a;font-size:9px}
 .update-info{min-width:0;text-align:center;flex:1}.update-info b{display:block;color:#f2e5c8;font:700 16px Georgia,serif;direction:ltr}
 .update-info span{display:block;color:#a9a17e;font-size:9px;margin-top:4px}.update-info small{display:block;color:#b7f34a;font-size:10px;margin-top:8px}
-@media(max-width:520px){.clock-deck{grid-template-columns:1fr}.clock-card{padding:12px}.clock-layout{justify-content:space-evenly}.analog-clock{width:96px;height:96px}.zone-time b{font-size:15px}}
+@media(max-width:520px){.clock-deck{grid-template-columns:92px minmax(0,1fr);gap:7px}.clock-card{padding:9px}.clock-heading{font-size:9px;margin-bottom:7px}.clock-heading small{display:none}.clock-layout{justify-content:center}.analog-clock{width:76px;height:76px;border-width:4px}.clock-hand.hour{height:20px}.clock-hand.minute{height:27px}.clock-hand.second{height:30px}.digital-zones{gap:4px}.digital-zones .zone-time{padding:6px 2px}.digital-zones .zone-time span{font-size:7px}.digital-zones .zone-time b{font-size:11px}.digital-update{gap:5px;font-size:8px}.digital-update small{font-size:8px}}
 
 
 .arabic-league-nav{display:flex;gap:7px;overflow:auto;padding:2px 0 12px;scrollbar-width:none}
 .arabic-league-nav button{white-space:nowrap;border:1px solid #806b3c;background:linear-gradient(145deg,#1b241c,#111710);color:#e5d4a7;padding:8px 13px;border-radius:30px;font:700 11px Cairo;cursor:pointer}
 .arabic-league-nav button.active{background:#b7f34a;color:#10170b;border-color:#b7f34a}
-.match-link{display:inline-flex;align-items:center;gap:5px;margin-top:7px;padding:5px 10px;border:1px solid #526b3a;border-radius:20px;color:#c8ef8c;font-size:10px}
+.club-modal{position:fixed;inset:0;z-index:1000;background:#000b;display:none;align-items:center;justify-content:center;padding:16px}.club-modal.open{display:flex}.club-dialog{width:min(620px,100%);max-height:85vh;overflow:auto;background:#101914;border:1px solid #647b42;border-radius:20px;padding:18px;box-shadow:0 20px 70px #000b}.club-modal-head{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px}.club-modal-head img{width:58px;height:58px;object-fit:contain}.club-modal-head h3{margin:0;font-size:18px}.club-modal-head small{color:var(--muted)}.club-close{margin-right:auto;border:1px solid var(--line);background:#1b2a1d;color:#fff;border-radius:10px;padding:7px 11px;font:700 12px Cairo}.club-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:13px 0}.club-fact{background:#17211b;border:1px solid var(--line);border-radius:12px;padding:10px}.club-fact span{display:block;color:var(--muted);font-size:10px}.club-fact b{font-size:13px}.club-story{color:#d5dfd6;font-size:12px;line-height:2;white-space:pre-line}.club-source{display:inline-block;color:#b7f34a;font-size:11px;margin-top:12px}.club-loading{color:var(--muted);font-size:12px;padding:18px;text-align:center}@media(max-width:380px){.club-facts{grid-template-columns:1fr}}.match-link{display:inline-flex;align-items:center;gap:5px;margin-top:7px;padding:5px 10px;border:1px solid #526b3a;border-radius:20px;color:#c8ef8c;font-size:10px}
 
 </style>
 <meta name="keywords" content="سلوم 365, SLOOM 365, سلوم365, Sloom 365, SLOOM 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوري الإنجليزي, دوري روشن">
@@ -82,22 +82,17 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
     <span class="clock-number n12">12</span><span class="clock-number n3">3</span><span class="clock-number n6">6</span><span class="clock-number n9">9</span>
     <i class="clock-hand hour" id="liveHour"></i><i class="clock-hand minute" id="liveMinute"></i><i class="clock-hand second" id="liveSecond"></i><i class="clock-pin"></i>
    </div>
-   <div class="zone-list">
-    <div class="zone-time"><span>عُمان · MUSCAT</span><b id="timeOman">--:--:--</b></div>
-    <div class="zone-time"><span>السعودية · RIYADH</span><b id="timeSaudi">--:--:--</b></div>
-    <div class="zone-time"><span>غرينتش · UTC</span><b id="timeUTC">--:--:--</b></div>
-   </div>
+   <div class="classic-caption"><b>عُمان</b><span>الوقت المحلي</span></div>
   </div>
  </div>
- <div class="clock-card update-clock">
-  <div class="clock-heading"><span>🕰️ ساعة آخر تحديث</span><small>LAST DATA UPDATE</small></div>
-  <div class="clock-layout">
-   <div class="analog-clock" id="updateClock" aria-label="ساعة آخر تحديث">
-    <span class="clock-number n12">12</span><span class="clock-number n3">3</span><span class="clock-number n6">6</span><span class="clock-number n9">9</span>
-    <i class="clock-hand hour" id="updateHour"></i><i class="clock-hand minute" id="updateMinute"></i><i class="clock-hand second" id="updateSecond"></i><i class="clock-pin"></i>
-   </div>
-   <div class="update-info"><b id="lastUpdateTime">--:--:--</b><span id="lastUpdateDate">بانتظار أول تحديث</span><small id="lastUpdateAge">لم تصل بيانات بعد</small></div>
+ <div class="clock-card digital-clock">
+  <div class="clock-heading"><span>🕒 الساعة الرقمية</span><small>DIGITAL WORLD TIME</small></div>
+  <div class="digital-zones">
+   <div class="zone-time"><span>عُمان · MUSCAT</span><b id="timeOman">--:--:--</b></div>
+   <div class="zone-time"><span>السعودية · RIYADH</span><b id="timeSaudi">--:--:--</b></div>
+   <div class="zone-time"><span>غرينتش · UTC</span><b id="timeUTC">--:--:--</b></div>
   </div>
+  <div class="digital-update"><span>آخر تحديث للبيانات</span><b id="lastUpdateTime">--:--:--</b><small id="lastUpdateDate">بانتظار أول تحديث</small><small id="lastUpdateAge">لم تصل بيانات بعد</small></div>
  </div>
 </section>
 
@@ -113,7 +108,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 </div>
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters" id="dayFilters"><button class="filter active" data-day="today">مباريات اليوم</button><button class="filter" data-day="yesterday">مباريات الأمس</button><button class="filter" data-day="tomorrow">مباريات الغد</button></div>
 
-<div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div>
+<div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
 <div class="section-head"><h3>📰 آخر الأخبار</h3><small>من مصادر رياضية</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.</footer>
 </main>
@@ -132,8 +127,35 @@ function render(){
  if(!shown)root.innerHTML='<div class="empty">لا توجد مباريات متاحة في هذا التصنيف حالياً.</div>';
  document.getElementById('matchCount').textContent=total;document.getElementById('liveCount').textContent=live;
  const stamps=Object.values(sportsData).map(x=>x.updated_at).filter(Boolean).sort();const stamp=stamps[stamps.length-1];document.getElementById('updated').textContent=stamp?new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'}).format(new Date(stamp)):'—';
- const clubMap=new Map();Object.values(sportsData).forEach(l=>(l.teams||[]).forEach(t=>{if(t.name&&!clubMap.has(t.name))clubMap.set(t.name,t)}));const clubs=[...clubMap.values()].sort((a,b)=>a.name.localeCompare(b.name));const q=(document.getElementById('teamSearch')?.value||'').trim().toLowerCase();const visible=clubs.filter(t=>(t.name+' '+arTeam(t.name)).toLowerCase().includes(q)).slice(0,160);document.getElementById('teamCount').textContent=clubs.length+' نادٍ';const td=document.getElementById('teamsDirectory');td.innerHTML=visible.length?'':'<div class="empty">لا توجد أندية مطابقة أو لم تصل قائمة الأندية بعد.</div>';visible.forEach(t=>{const el=document.createElement('div');el.className='team-chip';el.innerHTML=(t.logo?'<img loading="lazy" src="'+esc(t.logo)+'" onerror="this.style.display=\'none\'">':'')+'<span>'+esc(arTeam(t.name))+'</span>';td.appendChild(el)});const nb=document.getElementById('news');const unique=new Map();news.forEach(n=>{if(n.headline)unique.set(n.headline,n)});(sportsData.news_sources||[]).forEach(n=>{if(n.headline)unique.set(n.headline,n)});const now=Date.now();const items=[...unique.values()].filter(n=>/[\u0600-\u06FF]/.test(n.headline||'')).filter(n=>{const t=Date.parse(n.published||n.fetched_at||'');return Number.isFinite(t)&&now-t>=-3600000&&now-t<=7*86400000}).sort((a,b)=>Date.parse(b.published||b.fetched_at)-Date.parse(a.published||a.fetched_at)).slice(0,12);const tickerItems=items.filter(n=>now-Date.parse(n.published||n.fetched_at)<=48*3600000).slice(0,8);document.getElementById('tickerTrack').innerHTML=tickerItems.length?tickerItems.map(n=>'<span>● <b>'+esc(n.source||'مصدر رياضي')+'</b> '+esc(n.headline)+'</span>').join(''):'<span>● لا توجد أخبار عاجلة حديثة مؤكدة حالياً — نحدّث المصادر باستمرار</span>';nb.innerHTML=items.length?'':'<div class="empty">لا توجد أخبار حديثة منشورة خلال آخر 7 أيام.</div>';items.forEach(n=>{const el=document.createElement('a');el.className='news-card';el.href=n.link||'#';el.target=n.link?'_blank':'_self';el.rel='noopener';el.innerHTML='<img loading="lazy" src="'+esc(n.image||'https://placehold.co/600x300/17211b/b7f34a?text=SLOOM+365')+'" alt=""><div><b>'+esc(n.headline)+'</b><small>'+esc(n.source||'أخبار رياضية')+'</small></div>';nb.appendChild(el)});
+ const clubMap=new Map();Object.values(sportsData).forEach(l=>(l.teams||[]).forEach(t=>{if(t.name&&!clubMap.has(t.name))clubMap.set(t.name,t)}));const clubs=[...clubMap.values()].sort((a,b)=>a.name.localeCompare(b.name));const q=(document.getElementById('teamSearch')?.value||'').trim().toLowerCase();const visible=clubs.filter(t=>(t.name+' '+arTeam(t.name)).toLowerCase().includes(q)).slice(0,160);document.getElementById('teamCount').textContent=clubs.length+' نادٍ';const td=document.getElementById('teamsDirectory');td.innerHTML=visible.length?'':'<div class="empty">لا توجد أندية مطابقة أو لم تصل قائمة الأندية بعد.</div>';visible.forEach(t=>{const el=document.createElement('button');el.type='button';el.className='team-chip';el.dataset.club=t.name;el.innerHTML=(t.logo?'<img loading="lazy" src="'+esc(t.logo)+'" onerror="this.style.display=\'none\'">':'')+'<span>'+esc(arTeam(t.name))+'</span>';td.appendChild(el)});const nb=document.getElementById('news');const unique=new Map();news.forEach(n=>{if(n.headline)unique.set(n.headline,n)});(sportsData.news_sources||[]).forEach(n=>{if(n.headline)unique.set(n.headline,n)});const now=Date.now();const items=[...unique.values()].filter(n=>/[\u0600-\u06FF]/.test(n.headline||'')).filter(n=>{const t=Date.parse(n.published||n.fetched_at||'');return Number.isFinite(t)&&now-t>=-3600000&&now-t<=7*86400000}).sort((a,b)=>Date.parse(b.published||b.fetched_at)-Date.parse(a.published||a.fetched_at)).slice(0,12);const tickerItems=items.filter(n=>now-Date.parse(n.published||n.fetched_at)<=48*3600000).slice(0,8);document.getElementById('tickerTrack').innerHTML=tickerItems.length?tickerItems.map(n=>'<span>● <b>'+esc(n.source||'مصدر رياضي')+'</b> '+esc(n.headline)+'</span>').join(''):'<span>● لا توجد أخبار عاجلة حديثة مؤكدة حالياً — نحدّث المصادر باستمرار</span>';nb.innerHTML=items.length?'':'<div class="empty">لا توجد أخبار حديثة منشورة خلال آخر 7 أيام.</div>';items.forEach(n=>{const el=document.createElement('a');el.className='news-card';el.href=n.link||'#';el.target=n.link?'_blank':'_self';el.rel='noopener';el.innerHTML='<img loading="lazy" src="'+esc(n.image||'https://placehold.co/600x300/17211b/b7f34a?text=SLOOM+365')+'" alt=""><div><b>'+esc(n.headline)+'</b><small>'+esc(n.source||'أخبار رياضية')+'</small></div>';nb.appendChild(el)});
 }
+
+const clubModal=document.getElementById('clubModal'),clubModalBody=document.getElementById('clubModalBody');
+function closeClubModal(){clubModal.classList.remove('open');document.body.style.overflow=''}
+clubModal.addEventListener('click',e=>{if(e.target===clubModal||e.target.closest('[data-club-close]'))closeClubModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeClubModal()});
+async function openClubDetails(team){
+ clubModal.classList.add('open');document.body.style.overflow='hidden';
+ const name=arTeam(team.name),logo=team.logo||'';
+ clubModalBody.innerHTML='<div class="club-loading">جارٍ البحث عن تاريخ '+esc(name)+' وإنجازاته من ويكيبيديا وويكي بيانات…</div>';
+ let page=null,lang='ar';
+ const search=async(wiki,q)=>{const u='https://'+wiki+'.wikipedia.org/w/api.php?action=query&list=search&srsearch='+encodeURIComponent(q)+'&srnamespace=0&srlimit=1&format=json&origin=*';const r=await fetch(u);if(!r.ok)throw Error('wiki search');const j=await r.json();return j.query?.search?.[0]||null};
+ try{page=await search('ar',name);if(!page){lang='en';page=await search('en',team.name)}}
+ catch(e){clubModalBody.innerHTML='<div class="club-loading">تعذر الاتصال بمصدر المعلومات حالياً. حاول مرة أخرى لاحقاً.</div>';return}
+ if(!page){clubModalBody.innerHTML='<div class="club-loading">لم نعثر على صفحة موثوقة لهذا النادي. لن نعرض تاريخاً أو إنجازات غير مؤكدة.</div>';return}
+ try{
+  const api='https://'+lang+'.wikipedia.org/w/api.php?action=query&prop=extracts|pageprops&explaintext=1&exchars=10000&ppprop=wikibase_item&pageids='+page.pageid+'&format=json&origin=*';
+  const rr=await fetch(api);if(!rr.ok)throw Error('article');const jj=await rr.json();const article=jj.query?.pages?.[page.pageid]||{};const extract=(article.extract||'').replace(/\n{3,}/g,'\n\n');
+  let founded='غير موثق في المصدر';const qid=article.pageprops?.wikibase_item;
+  if(qid){try{const wr=await fetch('https://www.wikidata.org/w/api.php?action=wbgetentities&ids='+qid+'&props=claims&format=json&origin=*');const wj=await wr.json();const claims=wj.entities?.[qid]?.claims?.P571||[];const v=claims[0]?.mainsnak?.datavalue?.value?.time;if(v){const m=v.match(/[+-](\d{4})-(\d{2})-(\d{2})/);if(m)founded=m[3]+'/'+m[2]+'/'+m[1]+' (ميلادي)'}}catch(e){}}
+  const lines=extract.split(/(?<=[.!؟])\s+|\n+/).map(x=>x.trim()).filter(Boolean);
+  const honours=lines.filter(x=>/(بطولة|بطولات|دوري|كأس|لقب|ألقاب|بطل|champion|title|trophy|league|cup|honou?r)/i.test(x)).slice(0,5);
+  const intro=lines.slice(0,4).join(' ');
+  clubModalBody.innerHTML='<div class="club-modal-head">'+(logo?'<img src="'+esc(logo)+'" alt="">':'')+'<div><h3 id="clubModalTitle">'+esc(name)+'</h3><small>'+esc(team.name)+'</small></div><button class="club-close" data-club-close>إغلاق ✕</button></div><div class="club-facts"><div class="club-fact"><span>تاريخ التأسيس</span><b>'+esc(founded)+'</b></div><div class="club-fact"><span>المصدر</span><b>'+(lang==='ar'?'ويكيبيديا العربية':'ويكيبيديا الإنجليزية')+'</b></div></div><h4>نبذة وتاريخ النادي</h4><div class="club-story">'+esc(intro||'لا تتوفر نبذة كافية في المصدر.')+'</div><h4>إنجازات ونتائج بارزة مذكورة بالمصدر</h4><div class="club-story">'+esc(honours.join('\n\n')||'لم يذكر ملخص المقال إنجازات محددة. نفضّل عدم تخمين عدد البطولات أو الألقاب.')+'</div><a class="club-source" href="https://'+lang+'.wikipedia.org/?curid='+page.pageid+'" target="_blank" rel="noopener">فتح المصدر والتحقق من التفاصيل ↗</a>';
+ }catch(e){clubModalBody.innerHTML='<div class="club-loading">تعذر تحميل التفاصيل الآن. حاول مرة أخرى لاحقاً.</div>'}
+}
+document.getElementById('teamsDirectory').addEventListener('click',e=>{const btn=e.target.closest('[data-club]');if(!btn)return;const name=btn.dataset.club;const team=Object.values(sportsData).flatMap(l=>l.teams||[]).find(t=>t.name===name);if(team)openClubDetails(team)});
+
 document.getElementById('teamSearch').addEventListener('input',render);
 document.getElementById('arabicLeagueNav').addEventListener('click',e=>{const b=e.target.closest('[data-region]');if(!b)return;activeRegion=b.dataset.region;document.querySelectorAll('#arabicLeagueNav button').forEach(x=>x.classList.toggle('active',x===b));render();});
 document.getElementById('dayFilters').addEventListener('click',e=>{const b=e.target.closest('[data-day]');if(!b)return;activeDay=b.dataset.day;document.querySelectorAll('#dayFilters .filter').forEach(x=>x.classList.toggle('active',x===b));render();});
@@ -159,7 +181,7 @@ function tickSloomClocks(){
  setClock('live',oman);
  const stamp=dataGeneratedAt?new Date(dataGeneratedAt):null;
  if(stamp&&!Number.isNaN(stamp.getTime())){
-  const a=clockAngles(stamp,'Asia/Muscat');setClock('update',a);
+  const a=clockAngles(stamp,'Asia/Muscat');
   document.getElementById('lastUpdateTime').textContent=a.display;
   document.getElementById('lastUpdateDate').textContent=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',dateStyle:'medium'}).format(stamp)+' · عُمان';
   const mins=Math.max(0,Math.floor((now-stamp)/60000));
