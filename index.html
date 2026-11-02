@@ -2,9 +2,9 @@
 <html lang="ar" dir="rtl">
 <head>
 <!-- Google ad injection paused to keep the top of SLOOM365 clean. -->
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="icon" type="image/svg+xml" href="assets/sloom360-logo.svg"><meta name="theme-color" content="#167a3e">
-<link rel="manifest" href="/manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="سلوم كورة 365"><meta name="mobile-web-app-capable" content="yes"><title>سلوم كورة 365 | SLOOM KORA 365 – أخبار ومباريات ونتائج كرة القدم</title>
+<link rel="manifest" href="/manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="سلوم كورة 365"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="/assets/sloom-icon-192.svg"><title>سلوم كورة 365 | SLOOM KORA 365 – أخبار ومباريات ونتائج كرة القدم</title>
 <meta name="description" content="سلوم كورة 365 - تابع أخبار كرة القدم والمباريات والنتائج المباشرة والدوريات العربية والعالمية. SLOOM KORA 365: football news, live scores, fixtures and leagues.">
 <meta name="keywords" content="سلوم كورة 365, سلوم 365, كرة القدم, مباريات اليوم, نتائج المباريات, أخبار كرة القدم, SLOOM365, SLOOM KORA 365, football news, live scores, soccer, Oman football">
 <meta name="author" content="سلوم كورة 365 | SLOOM KORA 365">
@@ -1656,7 +1656,13 @@ sloomInstallButton?.addEventListener('click',async()=>{
   return;
  }
  if(sloomIsInstalled){if(sloomInstallHelp)sloomInstallHelp.textContent='التطبيق مثبت بالفعل على جهازك.';return;}
- if(sloomInstallHelp)sloomInstallHelp.textContent='إذا لم تظهر نافذة التثبيت، افتح قائمة المتصفح ⋮ ثم اختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».';
+ if(sloomInstallHelp){
+  const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isSafari=/safari/i.test(navigator.userAgent)&&!/crios|fxios|edgios|opr\//i.test(navigator.userAgent);
+  if(isIOS&&isSafari)sloomInstallHelp.textContent='للتثبيت على iPhone: اضغط زر المشاركة في Safari ثم اختر «إضافة إلى الشاشة الرئيسية»، وبعدها اضغط «إضافة».';
+  else if(isIOS)sloomInstallHelp.textContent='لأفضل تثبيت على iPhone، افتح هذا الموقع في Safari ثم اضغط مشاركة ← إضافة إلى الشاشة الرئيسية.';
+  else sloomInstallHelp.textContent='افتح قائمة المتصفح واختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية» إذا كان الخيار متاحاً.';
+ }
 });
 window.addEventListener('appinstalled',()=>{
  if(sloomInstallButton){sloomInstallButton.hidden=false;sloomInstallButton.textContent='✓ التطبيق مثبت';}
