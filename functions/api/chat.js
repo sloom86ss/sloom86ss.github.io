@@ -97,7 +97,7 @@ export async function onRequestPost({ request, env }) {
   const key = env.GEMINI_API_KEY;
   if (!key) return json({ error: "خدمة الذكاء الاصطناعي لم تُفعّل بعد. أضف المفتاح السري في إعدادات Cloudflare Pages." }, 503);
 
-  const model = env.GEMINI_MODEL || "gemini-2.5-flash-lite";
+  const model = env.GEMINI_MODEL || "gemini-3.5-flash-lite";
   const system = "أنت مساعد SLOOM365 لكرة القدم فقط. أجب بالعربية الفصحى الواضحة. اعتمد حصراً على JSON المرفق. لا تخترع نتائج أو مواعيد أو إحصائيات أو تشكيلات أو إصابات أو قنوات. لا تعرض أي معلومة غير موجودة في البيانات. ميّز التحليل عن الحقائق، وميّز الشائعة عن الخبر المؤكد. إذا لم تتوفر المعلومة فقل إنها غير متاحة. لا تصف أي خبر بأنه حصري دون دليل صريح في المصدر.";
   const prompt = "بيانات كرة القدم المؤكدة زمنياً بصيغة JSON:\n" +
     JSON.stringify(context) + "\n\nسؤال المستخدم: " + question;
