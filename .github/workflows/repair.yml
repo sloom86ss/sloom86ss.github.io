@@ -1,0 +1,62 @@
+name: SLOOM365 Safe Repair Bot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - '**.js'
+      - '**.py'
+      - '**.json'
+      - '**.xml'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sloom365-safe-repair
+  cancel-in-progress: false
+
+jobs:
+  inspect-and-repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Apply safe known repairs
+        run: python repair.py
+      - name: Validate all project code and data
+        run: python scripts/validate_project.py
+      - name: Save safe repairs
+        run: |
+          git config user.name 'SLOOM365 Repair Bot'
+          git config user.email 'sloom-tv-bot@users.noreply.github.com'
+          git add sitemap.xml robots.txt
+          git diff --cached --quiet && exit 0
+          git commit -m "SLOOM365 bot: apply safe SEO repairs"
+          git push
+      - name: Send repair failure alert
+        if: failure() && secrets.NTFY_TOPIC != ''
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ vars.NTFY_SERVER }}
+        run: |
+          SERVER="${NTFY_SERVER:-https://ntfy.sh}"
+          curl --fail --silent --show-error --max-time 10 \
+            -H "Title: SLOOM365 code check failed" \
+            -H "Priority: urgent" \
+            -d "The repair bot detected a code or data validation error. Open GitHub Actions to inspect the failed step." \
+            "$SERVER/$NTFY_TOPIC"
