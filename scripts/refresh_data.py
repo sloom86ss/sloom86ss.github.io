@@ -288,6 +288,21 @@ def main():
 
     if successful == 0:
         raise SystemExit("All scoreboard sources failed; keeping the previous data.json unchanged.")
+    # Prune legacy league-level ESPN headlines so old articles are never retained as current news.
+    for league in leagues.values():
+        recent = []
+        for article in league.get("news") or []:
+            published = iso(article.get("published"))
+            link = clean(article.get("link"))
+            host = urllib.parse.urlparse(link).hostname or ""
+            if not published or not link.startswith("https://"):
+                continue
+            when = dt.datetime.fromisoformat(published.replace("Z", "+00:00"))
+            if cutoff <= when <= NOW + dt.timedelta(hours=1) and (host == "espn.com" or host.endswith(".espn.com") or host == "espn.co.uk" or host.endswith(".espn.co.uk")):
+                article["published"] = published
+                recent.append(article)
+        league["news"] = sorted(recent, key=lambda x: x.get("published", ""), reverse=True)[:10]
+
     updated["provider"] = "ESPN public API + BBC Sport + Sky Sports + The Guardian + Google News RSS"
     updated["timezone"] = "Asia/Muscat"
     updated["generated_at"] = NOW_ISO
