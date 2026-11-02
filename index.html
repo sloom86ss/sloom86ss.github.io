@@ -183,6 +183,15 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 .news-head-actions .install-app-button[hidden]{display:inline-flex!important}
 @media(max-width:520px){.ticker{top:0!important}.ticker-track{animation-duration:18s!important}.news-section-head{align-items:center}.news-head-actions{margin-right:auto}.news-head-actions .install-app-button{font-size:10px!important;padding:6px 9px!important}}
 
+
+/* ضمان ظهور زر تثبيت التطبيق دائماً بجوار عنوان الأخبار */
+.news-section-head .news-head-actions,
+.news-section-head .install-app-slot{display:flex!important;visibility:visible!important;opacity:1!important}
+.news-section-head .install-app-button,
+.news-section-head .install-app-button[hidden]{display:inline-flex!important;visibility:visible!important;opacity:1!important;position:static!important;min-height:38px!important;padding:7px 12px!important;background:#b7f34a!important;color:#10170b!important;border:1px solid #d8ff8b!important;border-radius:10px!important;font:900 11px Cairo,Arial,sans-serif!important;white-space:nowrap!important}
+.news-section-head .install-app-slot [hidden]{display:block!important}
+@media(max-width:520px){.news-section-head{display:flex!important;justify-content:space-between!important;align-items:center!important}.news-section-head .news-head-actions{display:flex!important;margin-right:auto!important}.news-section-head .install-app-button{font-size:10px!important;padding:7px 9px!important}}
+
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -475,7 +484,7 @@ sloomInstallButton?.addEventListener('click',async()=>{
  if(sloomInstallHelp)sloomInstallHelp.textContent='إذا لم تظهر نافذة التثبيت، افتح قائمة المتصفح ⋮ ثم اختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».';
 });
 window.addEventListener('appinstalled',()=>{
- if(sloomInstallButton)sloomInstallButton.hidden=true;
+ if(sloomInstallButton){sloomInstallButton.hidden=false;sloomInstallButton.textContent='✓ التطبيق مثبت';}
  if(sloomInstallHelp)sloomInstallHelp.textContent='تم تثبيت SLOOM365 بنجاح.';
 });
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(error=>console.error('SLOOM 365 offline support:',error)));}
