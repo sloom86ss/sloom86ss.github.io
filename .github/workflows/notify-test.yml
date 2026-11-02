@@ -1,0 +1,17 @@
+name: SLOOM TV Notification Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  send-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send test notification to ntfy
+        run: |
+          curl --fail --show-error --silent \
+            -H "Title: اختبار تنبيهات SLOOM TV" \
+            -H "Priority: urgent" \
+            -H "Tags: warning" \
+            -d "هذا إشعار تجريبي. إذا وصل إلى هاتفك، فتنبيهات SLOOM TV تعمل." \
+            https://ntfy.sh/sloom360-alerts-oman-7k9p4x2m8q6v
