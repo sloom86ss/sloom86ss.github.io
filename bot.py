@@ -230,15 +230,24 @@ def fetch_feed(item):
         errors.append("scoreboard: " + str(exc)[:140])
     try:
         payload = get_json(f"{BASE}/{key}/news")
-        for article in payload.get("articles", [])[:10]:
+        for article in payload.get("articles", [])[:20]:
+            published = article.get("published", "")
+            published_dt = parse_published(published)
+            age = (datetime.now(timezone.utc) - published_dt).total_seconds() if published_dt else None
+            link = (article.get("links", {}).get("web") or {}).get("href", "")
+            host = (urlparse(link).hostname or "").lower()
+            # Never publish stale or non-HTTPS ESPN articles as current news.
+            if not (published_dt and 0 <= age <= 7 * 86400 and link.startswith("https://")
+                    and (host == "espn.com" or host.endswith(".espn.com") or host == "espn.co.uk" or host.endswith(".espn.co.uk"))):
+                continue
             images = article.get("images") or []
             result["news"].append({
                 "headline": article.get("headline") or article.get("description") or "خبر رياضي",
                 "description": article.get("description", ""),
-                "link": (article.get("links", {}).get("web") or {}).get("href", ""),
+                "link": link,
                 "image": images[0].get("url", "") if images else "",
                 "source": name,
-                "published": article.get("published", ""),
+                "published": published_dt.isoformat(timespec="seconds").replace("+00:00", "Z"),
                 "fetched_at": NOW(),
                 "category": "transfers" if re.search(r"transfer|signs|signing|deal|loan|gossip|انتقال|صفقة|ضم|تعاقد", (article.get("headline") or "") + " " + (article.get("description") or ""), re.I) else "news"
             })
