@@ -786,6 +786,55 @@ header{background:#101512!important;border:1px solid #26352b!important;border-ra
 .sloom-bottom-nav{background:#101512!important;border-color:#167a3e!important}
 .sloom-bottom-nav a{color:#fff!important}.sloom-bottom-nav a.active{background:#b7f34a!important;color:#101512!important}
 footer{color:#53675a!important}
+
+/* SLOOM365 final alignment + unified black/green/white palette */
+:root{
+ --bg:#f4f8f5!important;--panel:#ffffff!important;--panel2:#edf5ef!important;
+ --line:#d5e4d9!important;--green:#168447!important;--muted:#627568!important;
+ --white:#15251b!important;
+}
+html,body{background:#f4f8f5!important;color:#15251b!important}
+body{background:linear-gradient(180deg,#edf5ef 0,#ffffff 420px,#f4f8f5 100%)!important}
+header{background:#101713!important;border:0!important;border-radius:16px!important;padding:10px 14px!important}
+.brand h1{color:#ffffff!important}
+.brand small{color:#b9d8c3!important}
+.logo{background:linear-gradient(145deg,#25a65b,#126b38)!important;color:#fff!important}
+.sloom-hero-banner{background:linear-gradient(115deg,#101713 0%,#123d27 58%,#168447 100%)!important;border:1px solid #267d4a!important}
+.sloom-hero-title,.sloom-hero-sub,.sloom-hero-tag{color:#fff!important}
+.sloom-hero-title span{color:#baf27b!important}
+.ticker,#newsTicker{background:#101713!important;border:1px solid #247a46!important;color:#eaffef!important}
+.ticker-track span,.ticker-track b{color:#eaffef!important}
+.live-board,.upcoming-board,.stat,.league,.news-card,.sloom-quick-tile{background:#fff!important;color:#15251b!important;border-color:#d5e4d9!important}
+.live-board-head h2,.upcoming-board-head h2,.section-head h3{color:#155b31!important}
+.sloom-quick-tile>b{color:#155b31!important}
+.sloom-bottom-nav{
+ display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
+ position:fixed!important;left:50%!important;right:auto!important;
+ transform:translateX(-50%)!important;
+ width:min(620px,calc(100vw - 24px))!important;
+ box-sizing:border-box!important;direction:rtl!important;
+ bottom:calc(env(safe-area-inset-bottom,0px) + 9px)!important;
+ padding:7px!important;gap:6px!important;min-height:68px!important;
+ background:#101713!important;border:1px solid #287b49!important;
+ border-radius:18px!important;box-shadow:0 8px 26px #10271935!important;
+}
+.sloom-bottom-nav a{
+ min-width:0!important;width:100%!important;min-height:54px!important;
+ display:flex!important;flex-direction:column!important;
+ align-items:center!important;justify-content:center!important;
+ text-align:center!important;border:1px solid #294c36!important;
+ border-radius:12px!important;background:#1a2920!important;
+ color:#f5fff7!important;font-size:10px!important;font-weight:800!important;
+ padding:5px 2px!important;line-height:1.35!important;
+}
+.sloom-bottom-nav a span{display:block!important;font-size:19px!important;line-height:1.1!important}
+.sloom-bottom-nav a.active{background:#168447!important;color:#fff!important;border-color:#55b879!important;box-shadow:0 0 0 1px #55b87955!important}
+@media(max-width:520px){
+ .sloom-bottom-nav{width:calc(100vw - 20px)!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;gap:4px!important;padding:6px!important}
+ .sloom-bottom-nav a{font-size:9px!important;min-height:52px!important}
+ .sloom-bottom-nav a span{font-size:18px!important}
+}
+
 </style>
 </head>
 <body><main class="wrap">
