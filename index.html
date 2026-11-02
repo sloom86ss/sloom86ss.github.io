@@ -223,6 +223,46 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 .live-match-details summary{display:block!important;padding:10px!important;background:#1a2a1c!important;border-radius:9px}
 @media(max-width:520px){.news-section-head{justify-content:space-between!important}.news-section-head .news-head-actions{flex:1 1 100%!important;margin:5px 0 0!important}.news-section-head .install-app-slot{width:100%!important;justify-content:flex-start!important}.news-section-head #installApp,.news-section-head #enableNotifications{font-size:10px!important;padding:7px 9px!important}}
 
+
+/* SLOOM365 FIX 2026-11-02: visible actions + compact top brand */
+header{min-height:52px;padding:4px 0 8px!important}
+header .brand{gap:8px!important}
+header .brand img{width:38px!important;height:38px!important;max-width:12vw!important}
+header .brand h1{font-size:18px!important}
+.hero-logo-only{display:none!important}
+.news-section-head{display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:wrap!important;gap:8px!important;width:100%!important}
+.news-section-head>h3{display:block!important;flex:0 0 auto!important;margin:0!important}
+.news-section-head .install-app-slot,
+.news-section-head .news-head-actions,
+.news-section-head .news-head-actions .install-app-slot{
+ display:flex!important;visibility:visible!important;opacity:1!important;
+ position:static!important;flex-direction:row!important;align-items:center!important;
+ justify-content:flex-start!important;flex-wrap:wrap!important;gap:7px!important;
+ width:auto!important;max-width:100%!important;margin:0!important;padding:0!important;
+ border:0!important;background:transparent!important;overflow:visible!important;
+}
+.news-section-head #installApp,
+.news-section-head #enableNotifications,
+.news-section-head #installApp[hidden],
+.news-section-head #enableNotifications[hidden]{
+ display:inline-flex!important;visibility:visible!important;opacity:1!important;
+ position:static!important;float:none!important;flex:0 0 auto!important;
+ align-items:center!important;justify-content:center!important;
+ min-height:38px!important;padding:7px 10px!important;margin:0!important;
+ border:1px solid #d8ff8b!important;border-radius:10px!important;
+ background:#b7f34a!important;color:#10170b!important;
+ font:900 11px Cairo,Arial,sans-serif!important;white-space:nowrap!important;
+ clip:auto!important;clip-path:none!important;transform:none!important;
+}
+.news-section-head #enableNotifications{background:#203a2a!important;color:#eaffd6!important;border-color:#8ab56a!important}
+.news-section-head #installAppHelp,.news-section-head #notificationHelp{display:none!important}
+@media(max-width:420px){
+ .wrap{padding:10px 10px 90px!important}
+ header{padding:2px 0 7px!important}
+ .news-section-head{justify-content:flex-start!important}
+ .news-section-head .install-app-slot{gap:5px!important}
+ .news-section-head #installApp,.news-section-head #enableNotifications{font-size:10px!important;min-height:35px!important;padding:6px 8px!important}
+}
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -248,7 +288,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 </head>
 <body><main class="wrap">
 
-<header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:52px;height:52px;object-fit:contain"><div><h1>سلوم 365</h1><small>مباريات وأخبار كرة القدم</small></div></div></header>
+<header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>سلوم 365</h1><small>مباريات وأخبار كرة القدم</small></div></div></header>
 <section class="ticker" id="newsTicker" aria-label="الأخبار والتوقيت العالمي">
  <span class="ticker-label">آخر الأخبار</span>
  <div class="ticker-world-times" aria-label="التوقيت العالمي">
@@ -270,7 +310,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 </section>
 
 
-<section class="hero hero-logo-only" aria-label="شعار سلوم 365"><div class="hero-logo-orbit"></div><img class="hero-logo" src="assets/sloom360-logo.svg" alt="شعار SLOOM 365 سلوم 365"><span class="hero-logo-caption">SLOOM 365 · سلوم 365</span></section>
+
 <section class="stats"><div class="stat"><b id="matchCount">—</b><span>مباراة معروضة</span></div><div class="stat"><b id="liveCount">—</b><span>مباشر الآن</span></div><div class="stat"><b id="updated">—</b><span>آخر تحديث</span></div></section>
 <div class="section-head"><h3>🏆 الدوريات والبطولات العالمية</h3><small>مباريات من مصادر البيانات</small></div>
 <div class="arabic-league-nav" id="arabicLeagueNav">
