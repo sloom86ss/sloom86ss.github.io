@@ -150,6 +150,20 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 /* Faster, readable news ticker */
 #tickerTrack{animation-duration:16s!important;animation-timing-function:linear!important}
 
+
+/* وضع تثبيت التطبيق بجوار عنوان الأخبار */
+.news-section-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.news-head-actions{display:flex;align-items:center;gap:9px;margin-right:auto}
+.news-head-actions>small{color:var(--muted);font-size:10px}
+.install-app-slot{display:flex;align-items:center;gap:6px;margin:0;padding:0;border:0;background:none}
+.news-head-actions .install-app-button{position:static!important;display:inline-flex!important;min-height:34px!important;padding:6px 10px!important;border-radius:10px!important;font-size:10px!important;white-space:nowrap}
+.news-head-actions .install-app-help{display:none}
+.match-broadcast{display:flex;justify-content:center;gap:6px;align-items:center;margin-top:6px;color:#d6e6d2;font-size:10px;line-height:1.7}
+.match-broadcast b{color:#b7f34a}
+.live-board-broadcast,.upcoming-board-broadcast{margin-top:7px;text-align:center;font-size:10px;color:#d6e6d2}
+.live-board-broadcast b,.upcoming-board-broadcast b{color:#b7f34a}
+@media(max-width:520px){.news-head-actions{gap:6px}.news-head-actions>small{display:none}.news-head-actions .install-app-button{font-size:9px!important;padding:6px 8px!important}.news-section-head h3{font-size:15px}}
+
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -190,10 +204,6 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
  <div class="upcoming-board-list" id="upcomingBoardList"><div class="empty">جارٍ تحميل المباريات القادمة…</div></div>
 </section>
 
-<section class="install-app-slot" aria-label="تثبيت تطبيق سلوم 365">
- <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button>
- <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
-</section>
 
 <section class="hero hero-logo-only" aria-label="شعار سلوم 365"><div class="hero-logo-orbit"></div><img class="hero-logo" src="assets/sloom360-logo.svg" alt="شعار SLOOM 365 سلوم 365"><span class="hero-logo-caption">SLOOM 365 · سلوم 365</span></section>
 <section class="stats"><div class="stat"><b id="matchCount">—</b><span>مباراة معروضة</span></div><div class="stat"><b id="liveCount">—</b><span>مباشر الآن</span></div><div class="stat"><b id="updated">—</b><span>آخر تحديث</span></div></section>
@@ -208,7 +218,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters day-switcher" id="dayFilters"><button class="filter" data-day="yesterday">الأمس</button><button class="filter active" data-day="today">اليوم</button><button class="filter" data-day="tomorrow">غداً</button></div>
 
 <div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
-<div class="section-head"><h3>📰 آخر الأخبار</h3><small>من مصادر رياضية</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
+<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><div class="news-head-actions"><small>من مصادر رياضية</small><section class="install-app-slot" aria-label="تثبيت تطبيق سلوم 365"><button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button><p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p></section></div></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.</footer>
 </main>
@@ -231,6 +241,7 @@ function render(){
  visibleGames.forEach(g=>{const home=g.home||{},away=g.away||{};const state=g.status==='in'?'<span class="live">● مباشر '+esc(g.detail||'')+'</span>':g.status==='post'?'انتهت':'لم تبدأ';const score=g.status==='pre'?'— : —':esc(home.score??'—')+' : '+esc(away.score??'—');const dt=g.date||g.time;let when='';if(dt){const d=new Date(dt);if(!Number.isNaN(d.getTime()))when=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(d)+' · بتوقيت عُمان'}
  const m=document.createElement('div');m.className='match';
  m.innerHTML='<div class="teams"><div class="team"><img loading="lazy" src="'+esc(home.logo||'')+'" onerror="this.hidden=true"><span>'+esc(arTeam(home.name||'الفريق الأول'))+'</span></div><div class="score">'+score+'</div><div class="team away"><img loading="lazy" src="'+esc(away.logo||'')+'" onerror="this.hidden=true"><span>'+esc(arTeam(away.name||'الفريق الثاني'))+'</span></div></div><div class="match-meta">'+state+'</div>'+(when?'<div class="match-meta match-time">'+esc(when)+'</div>':'');
+ if(g.broadcast){const broadcast=document.createElement('div');broadcast.className='match-broadcast';broadcast.innerHTML='<b>📺 القناة الناقلة:</b> <span>'+esc(g.broadcast)+'</span>';m.appendChild(broadcast)}
  const details=document.createElement('details');details.className='match-details';
  const detailRows=[['البطولة',league.name||key],['الملعب',g.venue||'غير متوفر من المصدر'],['القناة الناقلة',g.broadcast||'لم يعلن المصدر عن قناة ناقلة'],['حالة المباراة',g.status_detail||g.detail||state.replace(/<[^>]*>/g,'')],['معرّف المباراة',g.id||'غير متوفر']];
  details.innerHTML='<summary>عرض تفاصيل المباراة</summary><div class="match-detail-body">'+detailRows.map(x=>'<div><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b></div>').join('')+(g.id?'<a class="match-link" href="https://www.espn.com/soccer/match/_/gameId/'+encodeURIComponent(g.id)+'" target="_blank" rel="noopener">المصدر والتفاصيل الإضافية ↗</a>':'')+'</div>';
@@ -314,6 +325,7 @@ function renderLive(){
   const minute=match.status_short||match.detail||'مباشر';
   const card=document.createElement('article');card.className='live-board-card';
   card.innerHTML='<div class="live-board-league">'+esc(league.name||'بطولة')+'</div><div class="live-board-teams"><div class="live-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name))+'</span></div><div class="live-board-score">'+esc(score)+'</div><div class="live-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name))+'</span></div></div><div class="live-board-meta"><span>● مباشر</span><span>'+esc(minute)+'</span></div>';
+  if(match.broadcast){const channel=document.createElement('div');channel.className='live-board-broadcast';channel.innerHTML='<b>📺 القناة:</b> '+esc(match.broadcast);card.appendChild(channel)}
   list.appendChild(card);
  });
 }
@@ -339,6 +351,7 @@ function renderUpcoming(){
   const when=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(new Date(ts));
   const card=document.createElement('article');card.className='upcoming-board-card';
   card.innerHTML='<div class="upcoming-board-league">'+esc(league.name||'بطولة')+'</div><div class="upcoming-board-teams"><div class="upcoming-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name||'الفريق الأول'))+'</span></div><div class="live-board-score">VS</div><div class="upcoming-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name||'الفريق الثاني'))+'</span></div></div><div class="upcoming-board-time"><strong>'+label+'</strong><span>'+esc(when)+' · بتوقيت عُمان</span></div>';
+  if(match.broadcast){const channel=document.createElement('div');channel.className='upcoming-board-broadcast';channel.innerHTML='<b>📺 القناة:</b> '+esc(match.broadcast);card.appendChild(channel)}
   list.appendChild(card);
  });
 }
