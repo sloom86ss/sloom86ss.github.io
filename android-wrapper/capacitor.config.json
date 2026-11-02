@@ -1,0 +1,12 @@
+{
+  "appId": "com.sloom365.app",
+  "appName": "SLOOM 365",
+  "webDir": "www",
+  "server": {
+    "url": "https://sloom86ss.github.io/sloom360.html",
+    "cleartext": false,
+    "allowNavigation": [
+      "sloom86ss.github.io"
+    ]
+  }
+}
