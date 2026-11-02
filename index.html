@@ -193,23 +193,22 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 @media(max-width:520px){.news-section-head{display:flex!important;justify-content:space-between!important;align-items:center!important}.news-section-head .news-head-actions{display:flex!important;margin-right:auto!important}.news-section-head .install-app-button{font-size:10px!important;padding:7px 9px!important}}
 
 
-/* زر تثبيت ثابت وواضح على كل الشاشات */
-#installApp,#installApp[hidden]{
- position:fixed!important;display:flex!important;visibility:visible!important;opacity:1!important;
- z-index:2147483647!important;left:14px!important;right:auto!important;
- bottom:calc(env(safe-area-inset-bottom,0px) + 16px)!important;
- min-height:48px!important;padding:0 16px!important;
+/* زر التثبيت يبقى بجوار عنوان «آخر الأخبار» داخل تدفق الصفحة */
+.news-section-head .install-app-slot{display:flex!important;visibility:visible!important;opacity:1!important}
+.news-section-head #installApp{
+ position:static!important;display:inline-flex!important;visibility:visible!important;opacity:1!important;
+ z-index:auto!important;min-height:38px!important;padding:7px 12px!important;
  align-items:center!important;justify-content:center!important;gap:7px!important;
  background:#b7f34a!important;color:#10170b!important;
- border:2px solid #e2ffad!important;border-radius:14px!important;
- box-shadow:0 8px 26px #000b!important;font:900 12px Cairo,Arial,sans-serif!important;
+ border:1px solid #e2ffad!important;border-radius:10px!important;
+ box-shadow:0 3px 12px #0005!important;font:900 11px Cairo,Arial,sans-serif!important;
  white-space:nowrap!important;cursor:pointer!important
 }
-#installAppHelp{position:fixed!important;left:14px!important;right:auto!important;
- bottom:calc(env(safe-area-inset-bottom,0px) + 70px)!important;z-index:2147483647!important;
- width:min(280px,calc(100vw - 28px))!important;background:#101914!important;
- color:#e7f1e8!important;padding:7px 10px!important;border-radius:10px!important}
-#installAppHelp:empty{display:none!important}
+.news-section-head #installAppHelp{position:static!important;display:none;width:auto!important;
+ z-index:auto!important;background:transparent!important;color:#e7f1e8!important;
+ padding:0!important;border-radius:0!important;font-size:10px!important}
+.news-section-head #installAppHelp:not(:empty){display:block!important}
+#installApp:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
