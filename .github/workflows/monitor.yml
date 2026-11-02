@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Check website and notify on status changes
         env:
-          NTFY_TOPIC: sloom360-alerts-oman-7k9p4x2m8q6v
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ vars.NTFY_SERVER }}
           SLOOM_SITE_URL: https://sloom86ss.github.io
         run: python monitor.py
