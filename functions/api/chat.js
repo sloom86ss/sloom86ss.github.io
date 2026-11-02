@@ -94,6 +94,23 @@ export async function onRequestPost({ request, env }) {
     return json({ error: "توقفت الإجابة الذكية لأن آخر تحديث للبيانات تجاوز 90 دقيقة. لا نعرض معلومات قديمة على أنها مباشرة." }, 409);
   }
 
+  if (env.TURNSTILE_SECRET_KEY) {
+    const token = cleanText(body?.turnstileToken, 2048);
+    if (!token) return json({ error: "أكمل اختبار الحماية قبل الإرسال." }, 403);
+    const verification = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        secret: env.TURNSTILE_SECRET_KEY,
+        response: token,
+        remoteip: request.headers.get("CF-Connecting-IP") || ""
+      })
+    }).catch(() => null);
+    if (!verification) return json({ error: "تعذر التحقق من اختبار الحماية." }, 502);
+    const result = await verification.json().catch(() => ({}));
+    if (!result.success) return json({ error: "فشل اختبار الحماية. أعد المحاولة." }, 403);
+  }
+
   const key = env.GEMINI_API_KEY;
   if (!key) return json({ error: "خدمة الذكاء الاصطناعي لم تُفعّل بعد. أضف المفتاح السري في إعدادات Cloudflare Pages." }, 503);
 
