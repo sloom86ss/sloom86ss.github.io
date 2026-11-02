@@ -13,7 +13,7 @@
 1. أنشئ مفتاح Gemini API من Google AI Studio، وتحقق من الحصة المجانية المتاحة لحسابك ومن شروط استخدامها.
 2. من Cloudflare Pages افتح المشروع ثم Settings ثم Variables and Secrets.
 3. أضف `GEMINI_API_KEY` كـ Secret، وليس كمتغير عام ولا داخل ملفات GitHub.
-4. أضف `GEMINI_MODEL` كمتغير اختياري وقيمته الافتراضية `gemini-2.5-flash-lite`.
+4. أضف `GEMINI_MODEL` كمتغير اختياري وقيمته الافتراضية `gemini-3.5-flash-lite`.
 5. أعد نشر المشروع بعد إضافة السر.
 
 ## الحماية
