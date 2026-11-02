@@ -54,8 +54,11 @@ jobs:
         run: |
           git config user.name 'SLOOM TV Bot'
           git config user.email 'sloom-tv-bot@users.noreply.github.com'
+          cp data.json /tmp/sloom365-data.json
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/sloom365-data.json data.json
           git add data.json
-          git diff --cached --quiet && echo "No data changes" && exit 0
+          git diff --cached --quiet && echo "No football data changes" && exit 0
           git commit -m "Update football scores, clubs and standings"
-          git pull --rebase origin main
           git push origin main
