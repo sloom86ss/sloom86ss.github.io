@@ -113,6 +113,18 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 /* سرعة متوسطة ومريحة لقراءة شريط الأخبار على الجوال والكمبيوتر */
 #newsTicker .ticker-track{animation-duration:38s!important;animation-timing-function:linear!important;animation-iteration-count:infinite!important}
 @media(prefers-reduced-motion:reduce){#newsTicker .ticker-track{animation-duration:60s!important}}
+
+/* SLOOM365: clearer tournament filters, match details, and faster ticker */
+.arabic-league-nav{flex-wrap:nowrap;overscroll-behavior-x:contain}
+.match-details{margin-top:8px;border:1px solid #344638;border-radius:11px;background:#101a13;overflow:hidden}
+.match-details summary{cursor:pointer;list-style:none;padding:9px 11px;color:#c8ef8c;font-size:11px;font-weight:800;text-align:center}
+.match-details summary::-webkit-details-marker{display:none}
+.match-detail-body{padding:8px 10px;border-top:1px solid #293a2d;display:grid;gap:7px}
+.match-detail-body>div{display:flex;justify-content:space-between;gap:12px;font-size:10px;line-height:1.7}
+.match-detail-body>div span{color:#9eae9f;flex:none}
+.match-detail-body>div b{text-align:left;overflow-wrap:anywhere}
+.ticker-track{animation-duration:22s!important}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none!important}}
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -150,11 +162,12 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 
 <section class="hero hero-logo-only" aria-label="شعار سلوم 365"><div class="hero-logo-orbit"></div><img class="hero-logo" src="assets/sloom360-logo.svg" alt="شعار SLOOM 365 سلوم 365"><span class="hero-logo-caption">SLOOM 365 · سلوم 365</span></section>
 <section class="stats"><div class="stat"><b id="matchCount">—</b><span>مباراة معروضة</span></div><div class="stat"><b id="liveCount">—</b><span>مباشر الآن</span></div><div class="stat"><b id="updated">—</b><span>آخر تحديث</span></div></section>
-<div class="section-head"><h3>🏆 الدوريات والبطولات العربية</h3><small>مباريات من مصادر البيانات</small></div>
+<div class="section-head"><h3>🏆 الدوريات والبطولات العالمية</h3><small>مباريات من مصادر البيانات</small></div>
 <div class="arabic-league-nav" id="arabicLeagueNav">
  <button class="active" data-region="all">كل البطولات</button>
  <button data-region="arab">البطولات العربية</button>
  <button data-region="asia">آسيا</button>
+ <button data-region="europe">أوروبا</button>
  <button data-region="africa">أفريقيا</button>
 </div>
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters day-switcher" id="dayFilters"><button class="filter" data-day="yesterday">الأمس</button><button class="filter active" data-day="today">اليوم</button><button class="filter" data-day="tomorrow">غداً</button></div>
@@ -174,9 +187,20 @@ function leagueIsFresh(league){const t=Date.parse(league.updated_at||'');return 
 function render(){
  const dayNames={today:'مباريات اليوم بتوقيت عُمان',yesterday:'مباريات الأمس بتوقيت عُمان',tomorrow:'مباريات الغد بتوقيت عُمان'};document.getElementById('dayLabel').textContent=dayNames[activeDay];
  const root=document.getElementById('leagues');root.innerHTML='';let total=0,live=0,shown=0;const news=[];
- Object.entries(sportsData).forEach(([key,league])=>{if(!leagueIsFresh(league))return;const cat=league.category||getCategory(key);if(cat!=='football')return;const regionKeys={arab:['soccer/ksa.1','soccer/ksa.kings.cup'],asia:['soccer/afc.champions','soccer/afc.cup'],africa:['soccer/caf.champions','soccer/caf.confed','soccer/caf.nations']};if(activeRegion!=='all'&&!regionKeys[activeRegion]?.includes(key))return;(league.news||[]).forEach(n=>news.push(n));const games=league.matches||[];total+=games.length;live+=games.filter(g=>g.status==='in').length;if(activeFilter!=='all'&&activeFilter!==cat)return;const dayGames=games.filter(g=>{const d=new Date(g.date||g.time||'');if(Number.isNaN(d.getTime()))return false;const key=x=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Muscat',year:'numeric',month:'2-digit',day:'2-digit'}).format(x);const today=key(new Date());const [yy,mm,dd]=today.split('-').map(Number);const offset=activeDay==='yesterday'?-1:activeDay==='tomorrow'?1:0;const target=new Date(Date.UTC(yy,mm-1,dd+offset)).toISOString().slice(0,10);return key(d)===target});if(!dayGames.length)return;shown++;
- const card=document.createElement('section');card.className='league';card.innerHTML='<div class="league-title"><b>'+esc(league.name||key)+'</b><span>'+dayGames.length+' مباراة'+(league.stale?' · بيانات قديمة':'')+'</span></div>';
- dayGames.forEach(g=>{const home=g.home||{},away=g.away||{};const state=g.status==='in'?'<span class="live">● مباشر '+esc(g.detail||'')+'</span>':g.status==='post'?'انتهت':'لم تبدأ';const score=g.status==='pre'?'— : —':esc(home.score??'0')+' : '+esc(away.score??'0');const dt=g.date||g.time;let when='';if(dt){const d=new Date(dt);if(!Number.isNaN(d.getTime()))when=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(d)+' · بتوقيت عُمان'}const m=document.createElement('div');m.className='match';m.innerHTML='<div class="teams"><div class="team"><img loading="lazy" src="'+esc(home.logo||'')+'" onerror="this.style.visibility=\'hidden\'"><span>'+esc(arTeam(home.name||'الفريق الأول'))+'</span></div><div class="score">'+score+'</div><div class="team away"><img loading="lazy" src="'+esc(away.logo||'')+'" onerror="this.style.visibility=\'hidden\'"><span>'+esc(arTeam(away.name||'الفريق الثاني'))+'</span></div></div><div class="match-meta">'+state+'</div>'+(when?'<div class="match-meta match-time">'+esc(when)+'</div>':'')+'<div class="match-meta"><a class="match-link" href="https://www.espn.com/soccer/match/_/gameId/'+encodeURIComponent(g.id||'')+'" target="_blank" rel="noopener">رابط المباراة والتفاصيل ↗</a></div>';card.appendChild(m)});if(league.standings&&league.standings.length){const st=document.createElement('div');st.className='standings';st.innerHTML='<b>ترتيب مختصر</b>'+league.standings.slice(0,5).map((x,i)=>'<div><span>'+(esc(x.rank||i+1))+'</span><span>'+esc(arTeam(x.name))+'</span><span>'+esc(x.points||'—')+' ن</span></div>').join('');card.appendChild(st)}root.appendChild(card)});
+ Object.entries(sportsData).forEach(([key,league])=>{if(!leagueIsFresh(league))return;const cat=league.category||getCategory(key);if(cat!=='football')return;const regionKeys={arab:['soccer/ksa.1','soccer/ksa.kings.cup'],asia:['soccer/afc.champions','soccer/afc.cup'],europe:['soccer/uefa.champions','soccer/uefa.europa','soccer/uefa.europa.conf'],africa:['soccer/caf.champions','soccer/caf.confed','soccer/caf.nations']};if(activeRegion!=='all'&&!regionKeys[activeRegion]?.includes(key))return;(league.news||[]).forEach(n=>news.push(n));const games=league.matches||[];total+=games.length;live+=games.filter(g=>g.status==='in').length;if(activeFilter!=='all'&&activeFilter!==cat)return;const dayGames=games.filter(g=>{const d=new Date(g.date||g.time||'');if(Number.isNaN(d.getTime()))return false;const key=x=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Muscat',year:'numeric',month:'2-digit',day:'2-digit'}).format(x);const today=key(new Date());const [yy,mm,dd]=today.split('-').map(Number);const offset=activeDay==='yesterday'?-1:activeDay==='tomorrow'?1:0;const target=new Date(Date.UTC(yy,mm-1,dd+offset)).toISOString().slice(0,10);return key(d)===target});
+ const upcoming=activeDay==='today'&&!dayGames.length?games.filter(g=>g.date&&Date.parse(g.date)>Date.now()).sort((a,b)=>Date.parse(a.date)-Date.parse(b.date)).slice(0,2):[];
+ const visibleGames=dayGames.length?dayGames:upcoming;shown++;
+ const card=document.createElement('section');card.className='league';
+ const heading=dayGames.length?dayGames.length+' مباراة':upcoming.length?'أقرب المباريات القادمة':'لا توجد مباراة في هذا اليوم';
+ card.innerHTML='<div class="league-title"><b>'+esc(league.name||key)+'</b><span>'+heading+'</span></div>';
+ visibleGames.forEach(g=>{const home=g.home||{},away=g.away||{};const state=g.status==='in'?'<span class="live">● مباشر '+esc(g.detail||'')+'</span>':g.status==='post'?'انتهت':'لم تبدأ';const score=g.status==='pre'?'— : —':esc(home.score??'—')+' : '+esc(away.score??'—');const dt=g.date||g.time;let when='';if(dt){const d=new Date(dt);if(!Number.isNaN(d.getTime()))when=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(d)+' · بتوقيت عُمان'}
+ const m=document.createElement('div');m.className='match';
+ m.innerHTML='<div class="teams"><div class="team"><img loading="lazy" src="'+esc(home.logo||'')+'" onerror="this.hidden=true"><span>'+esc(arTeam(home.name||'الفريق الأول'))+'</span></div><div class="score">'+score+'</div><div class="team away"><img loading="lazy" src="'+esc(away.logo||'')+'" onerror="this.hidden=true"><span>'+esc(arTeam(away.name||'الفريق الثاني'))+'</span></div></div><div class="match-meta">'+state+'</div>'+(when?'<div class="match-meta match-time">'+esc(when)+'</div>':'');
+ const details=document.createElement('details');details.className='match-details';
+ const detailRows=[['البطولة',league.name||key],['الملعب',g.venue||'غير متوفر من المصدر'],['القناة الناقلة',g.broadcast||'لم يعلن المصدر عن قناة ناقلة'],['حالة المباراة',g.status_detail||g.detail||state.replace(/<[^>]*>/g,'')],['معرّف المباراة',g.id||'غير متوفر']];
+ details.innerHTML='<summary>عرض تفاصيل المباراة</summary><div class="match-detail-body">'+detailRows.map(x=>'<div><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b></div>').join('')+(g.id?'<a class="match-link" href="https://www.espn.com/soccer/match/_/gameId/'+encodeURIComponent(g.id)+'" target="_blank" rel="noopener">المصدر والتفاصيل الإضافية ↗</a>':'')+'</div>';
+ m.appendChild(details);card.appendChild(m)});
+if(league.standings&&league.standings.length){const st=document.createElement('div');st.className='standings';st.innerHTML='<b>ترتيب مختصر</b>'+league.standings.slice(0,5).map((x,i)=>'<div><span>'+(esc(x.rank||i+1))+'</span><span>'+esc(arTeam(x.name))+'</span><span>'+esc(x.points||'—')+' ن</span></div>').join('');card.appendChild(st)}root.appendChild(card)});
  if(!shown)root.innerHTML='<div class="empty">لا توجد مباريات متاحة في هذا التصنيف حالياً.</div>';
  document.getElementById('matchCount').textContent=total;document.getElementById('liveCount').textContent=live;
  const stamps=Object.values(sportsData).map(x=>x.updated_at).filter(Boolean).sort();const stamp=stamps[stamps.length-1];document.getElementById('updated').textContent=stamp?new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'}).format(new Date(stamp)):'—';
