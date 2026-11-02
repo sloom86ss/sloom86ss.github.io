@@ -210,4 +210,4 @@ window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();slo
 document.getElementById('installApp')?.addEventListener('click',async()=>{if(!sloomInstallPrompt)return;await sloomInstallPrompt.prompt();await sloomInstallPrompt.userChoice;sloomInstallPrompt=null;const button=document.getElementById('installApp');if(button)button.hidden=true;});
 window.addEventListener('appinstalled',()=>{const button=document.getElementById('installApp');if(button)button.hidden=true;});
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(error=>console.error('SLOOM 365 offline support:',error)));}
-</script></body></html>
+</script><script src="/chat.js" defer></script></body></html>
