@@ -210,6 +210,19 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 .news-section-head #installAppHelp:not(:empty){display:block!important}
 #installApp:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
+
+/* SLOOM365 hotfix: keep install/notification actions visibly beside news heading */
+.news-section-head{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:8px!important}
+.news-section-head>h3{display:inline-flex!important;flex:0 0 auto!important;margin:0!important}
+.news-section-head .news-head-actions{display:flex!important;flex:1 1 auto!important;visibility:visible!important;opacity:1!important;margin-inline-start:auto!important}
+.news-section-head .install-app-slot{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;gap:7px!important;visibility:visible!important;opacity:1!important;width:auto!important;max-width:100%!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important}
+.news-section-head #installApp,.news-section-head #enableNotifications{display:inline-flex!important;visibility:visible!important;opacity:1!important;position:static!important;flex:0 0 auto!important;min-height:38px!important;padding:7px 11px!important;background:#b7f34a!important;color:#10170b!important;border:1px solid #e2ffad!important;border-radius:10px!important;font:900 11px Cairo,Arial,sans-serif!important;white-space:nowrap!important;cursor:pointer!important}
+.news-section-head #enableNotifications{background:#203a2a!important;color:#eaffd6!important;border-color:#8ab56a!important}
+.news-section-head #installApp[hidden],.news-section-head #enableNotifications[hidden]{display:inline-flex!important}
+.live-match-details{margin-top:10px}
+.live-match-details summary{display:block!important;padding:10px!important;background:#1a2a1c!important;border-radius:9px}
+@media(max-width:520px){.news-section-head{justify-content:space-between!important}.news-section-head .news-head-actions{flex:1 1 100%!important;margin:5px 0 0!important}.news-section-head .install-app-slot{width:100%!important;justify-content:flex-start!important}.news-section-head #installApp,.news-section-head #enableNotifications{font-size:10px!important;padding:7px 9px!important}}
+
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -348,12 +361,22 @@ async function loadMatchEvents(details,leagueKey,eventId){
    const isYellow=/yellow card|بطاقه صفراء/.test(joined);
    const isSub=/substitution|تبديل/.test(joined);
    if(!isGoal&&!isRed&&!isYellow&&!isSub)return;
-   const people=(e.participants||e.athletesInvolved||e.players||[]).map(getName).filter(Boolean);
+   const participants=e.participants||e.athletesInvolved||e.players||[];
+   const people=participants.map(getName).filter(Boolean);
    const minute=e.clock?.displayValue||e.time?.displayValue||e.minute||e.clock||'';
    const team=getTeam(e);
-   let label=isGoal?'هدف':isRed?'بطاقة حمراء':isYellow?'بطاقة صفراء':'تبديل';
-   let detail=people.join(' · ')||text||'تفصيل الحدث غير متاح';
-   if(isGoal&&people.length>1)detail=people[0]+' — صناعة: '+people.slice(1).join('، ');
+   const roleOf=p=>String(p.role||p.type?.text||p.type?.name||p.type||p.description||'').toLowerCase();
+   const scorer=participants.find(p=>/scor|goal|مسجل|هداف/.test(roleOf(p)));
+   const assists=participants.filter(p=>/assist|صانع|تمريرة حاسمة/.test(roleOf(p)));
+   const directAssist=e.assist?.athlete?.displayName||e.assist?.displayName||e.assists?.[0]?.athlete?.displayName||e.assists?.[0]?.displayName||'';
+   let label=isGoal?'⚽ هدف':isRed?'🟥 بطاقة حمراء':isYellow?'🟨 بطاقة صفراء':'🔄 تبديل';
+   let detail=text||people.join(' · ')||'تفصيل الحدث غير متاح';
+   if(isGoal){
+    const scorerName=getName(scorer)||people[0]||'مسجل الهدف غير محدد';
+    const assistNames=assists.map(getName).filter(Boolean).filter(n=>n!==scorerName);
+    if(directAssist)assistNames.push(directAssist);
+    detail='الهدف: '+scorerName+(assistNames.length?' · صناعة الهدف: '+[...new Set(assistNames)].join('، '):' · صانع الهدف غير مذكور في المصدر');
+   }else if(people.length)detail=people.join(' · ')+(text?' · '+text:'');
    rows.push({label,detail,minute,team});
   });
   const sections=[];
@@ -395,6 +418,10 @@ function renderLive(){
   card.innerHTML='<div class="live-board-league">'+esc(league.name||'بطولة')+'</div><div class="live-board-teams"><div class="live-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name))+'</span></div><div class="live-board-score">'+esc(score)+'</div><div class="live-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name))+'</span></div></div><div class="live-board-meta"><span>● مباشر</span><span>'+esc(minute)+'</span></div>';
   if(verifiedBroadcastName(match)){const channel=document.createElement('div');channel.className='live-board-broadcast';channel.innerHTML='<b>📺 القناة:</b> '+esc(verifiedBroadcastName(match));card.appendChild(channel)}
   const officialLink=broadcastLinkMarkup(match);if(officialLink){const wrap=document.createElement('div');wrap.innerHTML=officialLink;card.appendChild(wrap)}
+  const details=document.createElement('details');details.className='match-details live-match-details';
+  details.innerHTML='<summary>📋 تفاصيل المباراة والأهداف والبطاقات</summary><div class="match-detail-body"><div><span>الفريقان</span><b>'+esc(arTeam(h.name||''))+' × '+esc(arTeam(a.name||''))+'</b></div><div><span>النتيجة</span><b>'+esc(score)+'</b></div><div><span>الوقت</span><b>'+esc(minute)+'</b></div></div>';
+  details.addEventListener('toggle',()=>{if(details.open&&!details.dataset.eventsLoaded){details.dataset.eventsLoaded='1';const leagueKey=Object.keys(sportsData).find(k=>sportsData[k]===league)||'';loadMatchEvents(details,leagueKey,match.id)}});
+  card.appendChild(details);
   list.appendChild(card);
  });
 }
@@ -547,4 +574,8 @@ window.addEventListener('appinstalled',()=>{
  if(sloomInstallHelp)sloomInstallHelp.textContent='تم تثبيت SLOOM365 بنجاح.';
 });
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(error=>console.error('SLOOM 365 offline support:',error)));}
-</script><script src="/chat.js" defer></script></body></html>
+</script><script src="/chat.js" defer></script>
+<script>
+(()=>{const placeActions=()=>{const head=document.querySelector('.news-section-head'),title=head?.querySelector('h3'),slot=head?.querySelector('.install-app-slot');if(!head||!title||!slot)return;if(slot.parentElement!==head||slot.previousElementSibling!==title)title.insertAdjacentElement('afterend',slot);slot.style.setProperty('display','flex','important');slot.style.setProperty('visibility','visible','important');slot.style.setProperty('opacity','1','important');['installApp','enableNotifications'].forEach(id=>{const b=document.getElementById(id);if(b){b.hidden=false;b.style.setProperty('display','inline-flex','important');b.style.setProperty('visibility','visible','important');b.style.setProperty('opacity','1','important');}});};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',placeActions,{once:true});else placeActions();setTimeout(placeActions,700);})();
+</script>
+</body></html>
