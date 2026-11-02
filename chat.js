@@ -17,14 +17,14 @@ const style=document.createElement('style');style.textContent=css;document.head.
 const launch=document.createElement('button');launch.id='sloom-chat-launch';launch.type='button';launch.textContent='💬 اسأل SLOOM الذكي';
 const panel=document.createElement('section');panel.id='sloom-chat';panel.setAttribute('aria-label','مساعد SLOOM365');panel.setAttribute('aria-live','polite');
 const head=document.createElement('div');head.id='sloom-chat-head';
-const heading=document.createElement('div');const strong=document.createElement('strong');strong.textContent='مساعد SLOOM365';const small=document.createElement('small');small.textContent='إجابات من بيانات الموقع المتاحة';heading.append(strong,small);
+const heading=document.createElement('div');const strong=document.createElement('strong');strong.textContent='مساعد SLOOM365';const small=document.createElement('small');small.textContent='مساعد مجاني لكرة القدم من بيانات الموقع';heading.append(strong,small);
 const close=document.createElement('button');close.id='sloom-chat-close';close.type='button';close.setAttribute('aria-label','إغلاق المحادثة');close.textContent='×';head.append(heading,close);
 const log=document.createElement('div');log.id='sloom-chat-log';
 const captchaBox=document.createElement('div');captchaBox.id='sloom-chat-captcha';
 const form=document.createElement('form');form.id='sloom-chat-form';
 const input=document.createElement('input');input.id='sloom-chat-input';input.maxLength=300;input.autocomplete='off';input.placeholder='اسأل عن مباراة أو نتيجة أو خبر…';input.setAttribute('aria-label','اكتب سؤالك');
 const send=document.createElement('button');send.id='sloom-chat-send';send.type='submit';send.textContent='إرسال';form.append(input,send);
-const note=document.createElement('div');note.id='sloom-chat-note';note.textContent='مساعد مجاني يعتمد على بيانات الموقع، وليس بديلاً عن المصدر الرسمي.';
+const note=document.createElement('div');note.id='sloom-chat-note';note.textContent='مجاني دون مفتاح أو اشتراك. لا يعرض المعلومة إذا كانت البيانات قديمة.';
 panel.append(head,log,captchaBox,form,note);document.body.append(launch,panel);
 let cache=null,cacheAt=0,requests=[],captchaSiteKey='',captchaWidget=null,captchaToken='';
 async function setupCaptcha(){try{const r=await fetch('/api/chat',{credentials:'same-origin'});const cfg=await r.json();if(!cfg.turnstileSiteKey||captchaWidget!==null)return;captchaSiteKey=cfg.turnstileSiteKey;const render=()=>{if(window.turnstile&&captchaWidget===null)captchaWidget=window.turnstile.render(captchaBox,{sitekey:captchaSiteKey,callback:t=>{captchaToken=t},'expired-callback':()=>{captchaToken=''},'error-callback':()=>{captchaToken=''}})};if(window.turnstile)render();else if(!document.querySelector('script[data-sloom-turnstile]')){const script=document.createElement('script');script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';script.async=true;script.defer=true;script.dataset.sloomTurnstile='1';script.onload=render;document.head.appendChild(script)}}catch(_){}}
@@ -44,10 +44,34 @@ if(/مباريات|جدول|اليوم|غدا|بكره|امس|مواعيد/.test
 if(asksNews){const recent=news.filter(n=>n.headline).sort((a,b)=>Date.parse(b.published||b.fetched_at||0)-Date.parse(a.published||a.fetched_at||0)).slice(0,6);return recent.length?'أحدث الأخبار المتاحة في الموقع:\n'+recent.map(n=>'• '+n.headline+' ('+(n.source||'مصدر رياضي')+')').join('\n'):'لا توجد أخبار مؤكدة متاحة حالياً.'}
 const found=matches.filter(m=>{const names=normalize([m.home?.name,teamAr(m.home?.name),m.away?.name,teamAr(m.away?.name),m.league].join(' '));return names.split(/\s+/).some(w=>w.length>2&&nq.includes(w))||nq.includes(names)}).slice(0,5);
 if(found.length)return found.map(m=>teamAr(m.home?.name)+' '+(m.status==='pre'?'—':m.home?.score??'0')+' - '+(m.status==='pre'?'—':m.away?.score??'0')+' '+teamAr(m.away?.name)+'\n'+m.league+' · '+formatDate(m.date||m.time)+' · '+(m.status==='post'?'انتهت':m.status==='in'?'مباشر':'لم تبدأ')).join('\n\n');
+if(/ترتيب|الصداره|النقاط|جدول الدوري/.test(nq)){
+const entries=Object.entries(d.leagues).filter(([,l])=>Array.isArray(l.standings)&&l.standings.length);
+const words=nq.split(/\\s+/).filter(w=>w.length>2);
+const selected=entries.find(([key,l])=>{const name=normalize((l.name||'')+' '+key);return words.some(w=>name.includes(w))});
+const chosen=selected?[selected]:entries.slice(0,5);
+if(chosen.length)return 'جدول الترتيب حسب آخر بيانات الموقع:\\n'+chosen.map(([key,l])=>(l.name||key)+'\\n'+l.standings.slice(0,10).map((s,i)=>(s.rank||s.position||i+1)+'. '+teamAr(s.name||s.team?.name)+' — '+(s.points??'؟')+' نقطة').join('\\n')).join('\\n\\n');
+return 'جدول الترتيب غير متاح في البيانات الحالية.';
+}
 const leagues=[...new Set(Object.values(d.leagues).filter(l=>l.category==='football').map(l=>l.name).filter(Boolean))];
 if(/دوري|بطوله|دوريات/.test(nq))return 'البطولات المتاحة في بيانات الموقع:\n'+leagues.slice(0,18).join('، ')+'\n\nاسألني عن اسم فريق أو مباراة محددة.';
 return 'أستطيع مساعدتك في المباريات والنتائج المباشرة ومواعيد اليوم وغداً والأخبار والبطولات الموجودة في SLOOM365. اكتب اسم الفريق أو سؤالك بشكل أوضح، وسأجيب فقط بما تؤكده البيانات المتاحة.'}
-launch.addEventListener('click',()=>{panel.classList.toggle('open');if(panel.classList.contains('open')){input.focus();setupCaptcha()}});close.addEventListener('click',()=>panel.classList.remove('open'));
-form.addEventListener('submit',async e=>{e.preventDefault();const q=input.value.trim();if(!q)return;if(q.length>300)return;if(captchaSiteKey&&!captchaToken){add('أكمل اختبار الحماية أولاً ثم أرسل سؤالك.','bot');return}const now=Date.now();requests=requests.filter(t=>now-t<30000);if(requests.length>=8){add('تم إيقاف الإرسال مؤقتاً لحماية الخدمة. انتظر نصف دقيقة ثم حاول مجدداً.','bot');return}requests.push(now);input.value='';add(q,'user');send.disabled=true;send.textContent='…';try{const d=await getData();if(!fresh(d)){add(answer(q,d),'bot')}else{let remote=null;try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify({question:q,context:aiContext(d),turnstileToken:captchaToken})});const payload=await r.json().catch(()=>({}));if(captchaToken){captchaToken='';if(window.turnstile&&captchaWidget!==null)window.turnstile.reset(captchaWidget)}if(r.ok&&typeof payload.answer==='string'&&payload.answer.trim())remote=payload.answer;else if(r.status===429){add(payload.error||'تم تجاوز الحد المؤقت للرسائل. حاول لاحقاً.','bot');return}}catch(_){}if(remote)add(remote,'bot');else add(answer(q,d)+'\n\n(الإجابة الأساسية متاحة؛ خدمة الذكاء الاصطناعي غير مفعّلة حالياً أو بلغت حصتها المجانية.)','bot')}}catch(err){add('تعذر الوصول إلى البيانات الآن. حاول مرة أخرى بعد قليل.','bot')}finally{send.disabled=false;send.textContent='إرسال';input.focus()}});
-add('مرحباً بك! أنا مساعد SLOOM365. اسألني عن مباريات اليوم أو النتائج أو فريقك المفضل.','bot');
+launch.addEventListener('click',()=>{panel.classList.toggle('open');if(panel.classList.contains('open'))input.focus()});close.addEventListener('click',()=>panel.classList.remove('open'));
+form.addEventListener('submit',async e=>{
+e.preventDefault();
+const q=input.value.trim();
+if(!q||q.length>300)return;
+const now=Date.now();
+requests=requests.filter(t=>now-t<30000);
+if(requests.length>=8){add('لحماية الخدمة المجانية، انتظر 30 ثانية قبل إرسال سؤال آخر.','bot');return}
+requests.push(now);
+input.value='';
+add(q,'user');
+send.disabled=true;send.textContent='…';
+try{
+const d=await getData();
+add(answer(q,d),'bot');
+}catch(err){add('تعذر الوصول إلى بيانات الموقع الآن. حاول مرة أخرى بعد قليل.','bot')}
+finally{send.disabled=false;send.textContent='إرسال';input.focus()}
+});
+add('مرحباً بك! أنا مساعد SLOOM365 المجاني. اسألني عن مباريات اليوم وغداً، النتائج، المباريات المباشرة، الأخبار أو ترتيب الدوريات. أعتمد على بيانات الموقع ولا أخمّن عند غياب المعلومة.','bot');
 })();
