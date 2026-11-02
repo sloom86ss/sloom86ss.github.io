@@ -8,7 +8,7 @@ const css=`
 #sloom-chat-log{flex:1;overflow:auto;padding:13px;display:flex;flex-direction:column;gap:10px}
 .sloom-msg{max-width:90%;padding:9px 12px;border-radius:14px;font-size:12px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}
 .sloom-msg.bot{align-self:flex-start;background:#1b2a1d;border:1px solid #344b32}.sloom-msg.user{align-self:flex-end;background:#b7f34a;color:#10170b}
-#sloom-chat-captcha{padding:6px 10px;background:#111915;min-height:0}#sloom-chat-form{display:flex;gap:7px;padding:10px;border-top:1px solid #26352b;background:#111915}
+#sloom-chat-captcha{padding:6px 10px;background:#111915;min-height:0}#sloom-chat-captcha{padding:6px 10px;background:#111915;min-height:0}#sloom-chat-form{display:flex;gap:7px;padding:10px;border-top:1px solid #26352b;background:#111915}
 #sloom-chat-input{min-width:0;flex:1;background:#080c0a;color:#fff;border:1px solid #40523f;border-radius:11px;padding:10px;font:12px Cairo;outline-offset:2px}
 #sloom-chat-send{background:#b7f34a;color:#10170b;border:0;border-radius:11px;padding:0 14px;font:800 12px Cairo}
 #sloom-chat-note{padding:0 12px 8px;color:#91a095;font-size:9px;background:#111915}
@@ -20,6 +20,7 @@ const head=document.createElement('div');head.id='sloom-chat-head';
 const heading=document.createElement('div');const strong=document.createElement('strong');strong.textContent='مساعد SLOOM365';const small=document.createElement('small');small.textContent='إجابات من بيانات الموقع المتاحة';heading.append(strong,small);
 const close=document.createElement('button');close.id='sloom-chat-close';close.type='button';close.setAttribute('aria-label','إغلاق المحادثة');close.textContent='×';head.append(heading,close);
 const log=document.createElement('div');log.id='sloom-chat-log';
+const captchaBox=document.createElement('div');captchaBox.id='sloom-chat-captcha';
 const captchaBox=document.createElement('div');captchaBox.id='sloom-chat-captcha';
 const form=document.createElement('form');form.id='sloom-chat-form';
 const input=document.createElement('input');input.id='sloom-chat-input';input.maxLength=300;input.autocomplete='off';input.placeholder='اسأل عن مباراة أو نتيجة أو خبر…';input.setAttribute('aria-label','اكتب سؤالك');
