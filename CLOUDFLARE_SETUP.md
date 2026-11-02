@@ -7,7 +7,7 @@
 2. افتح Workers & Pages ثم Create application ثم Pages ثم Connect to Git.
 3. اختر المستودع `sloom86ss/sloom86ss.github.io` والفرع `main`.
 4. اترك Build command فارغاً، واجعل Build output directory هو `.`، ثم احفظ وانشر.
-5. بعد نجاح النشر افتح رابط `pages.dev) الذي يمنحك إياه Cloudflare واختبر الصفحة و `/api/chat`.
+5. بعد نجاح النشر افتح رابط `pages.dev` الذي يمنحك إياه Cloudflare واختبر الصفحة و `/api/chat`.
 
 ## تفعيل الشات الذكي
 1. أنشئ مفتاح Gemini API من Google AI Studio، وتحقق من الحصة المجانية المتاحة لحسابك ومن شروط استخدامها.
