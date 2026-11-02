@@ -30,7 +30,7 @@ FEEDS = {
     "soccer/uefa.europa": ("الدوري الأوروبي", "football"),
     "soccer/fifa.world": ("كأس العالم", "football"),
     "soccer/usa.1": ("الدوري الأمريكي", "football"),
-    "soccer/uefa.conference": ("دوري المؤتمر الأوروبي", "football"),
+    "soccer/uefa.europa.conf": ("دوري المؤتمر الأوروبي", "football"),
     "soccer/tur.1": ("الدوري التركي", "football"),
     "soccer/sco.1": ("الدوري الاسكتلندي", "football"),
     "soccer/jpn.1": ("الدوري الياباني", "football"),
@@ -41,7 +41,6 @@ NOW = lambda: datetime.now(timezone.utc).isoformat(timespec="seconds").replace("
 RSS_FEEDS = [
     ("BBC Sport", "https://feeds.bbci.co.uk/sport/football/rss.xml"),
     ("Sky Sports", "https://www.skysports.com/rss/11095"),
-    ("ESPN FC", "https://www.espn.com/espn/rss/soccer/news"),
     ("The Guardian", "https://www.theguardian.com/football/rss"),
     ("Google News", "https://news.google.com/rss/search?q=football%20soccer&hl=en-US&gl=US&ceid=US:en"),
     ("Google News", "https://news.google.com/rss/search?q=%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=OM&ceid=OM:ar"),
@@ -106,7 +105,6 @@ def fetch_rss_news():
                 allowed_hosts = {
                     "BBC Sport": ("bbc.co.uk", "bbc.com"),
                     "Sky Sports": ("skysports.com",),
-                    "ESPN FC": ("espn.com",),
                     "The Guardian": ("theguardian.com",),
                     "Google News": ("news.google.com",)
                 }
