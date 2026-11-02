@@ -2,6 +2,7 @@
 """SLOOM360 health monitor with ntfy push alerts and transition-only state."""
 import json
 import os
+import xml.etree.ElementTree as ET
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
@@ -23,6 +24,23 @@ def check_page(url):
         return False, "HTTP " + str(exc.code)
     except Exception as exc:
         return False, str(exc)[:160]
+
+def check_seo_files():
+    try:
+        _, sitemap = get_url(BASE + "/sitemap.xml")
+        root = ET.fromstring(sitemap)
+        urls = [node.text or "" for node in root.iter() if node.tag.endswith("loc")]
+        required = [BASE + "/", BASE + "/sloom360.html", BASE + "/ai.html"]
+        missing = [url for url in required if url not in urls]
+        if missing:
+            return False, "روابط ناقصة في sitemap.xml: " + ", ".join(missing)
+        _, robots = get_url(BASE + "/robots.txt")
+        text = robots.decode("utf-8", errors="replace")
+        if "Sitemap: " + BASE + "/sitemap.xml" not in text:
+            return False, "رابط sitemap غير موجود في robots.txt"
+        return True, "sitemap.xml وrobots.txt سليمان"
+    except Exception as exc:
+        return False, "خطأ في ملفات SEO: " + str(exc)[:140]
 
 def check_data():
     try:
@@ -67,6 +85,8 @@ def main():
     checks = {
         "homepage": check_page(BASE + "/"),
         "football_page": check_page(BASE + "/sloom360.html"),
+        "ai_page": check_page(BASE + "/ai.html"),
+        "seo_files": check_seo_files(),
         "sports_data": check_data(),
     }
     failed = [name + " (" + detail + ")" for name, (ok, detail) in checks.items() if not ok]
