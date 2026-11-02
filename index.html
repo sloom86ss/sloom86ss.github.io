@@ -123,6 +123,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 .match-detail-body>div{display:flex;justify-content:space-between;gap:12px;font-size:10px;line-height:1.7}
 .match-detail-body>div span{color:#9eae9f;flex:none}
 .match-detail-body>div b{text-align:left;overflow-wrap:anywhere}
+.match-events{border-top:1px solid #293a2d;padding-top:9px;margin-top:3px;display:grid;gap:8px}.match-events h4{margin:2px 0;color:#c8ef8c;font-size:11px}.match-events .event-row{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;font-size:10px;line-height:1.8;padding:5px 7px;border-radius:8px;background:#17231a}.match-events .event-row b{color:#f4f8f4;text-align:right}.match-events .event-row small{color:#b7f34a;white-space:nowrap}.match-events .event-muted{color:#9eae9f;font-size:10px;line-height:1.8}.match-events .event-team{color:#b7f34a;font-size:9px}
 .ticker-track{animation-duration:22s!important}
 @media(prefers-reduced-motion:reduce){.ticker-track{animation:none!important}}
 
@@ -233,7 +234,9 @@ function render(){
  const details=document.createElement('details');details.className='match-details';
  const detailRows=[['البطولة',league.name||key],['الملعب',g.venue||'غير متوفر من المصدر'],['القناة الناقلة',g.broadcast||'لم يعلن المصدر عن قناة ناقلة'],['حالة المباراة',g.status_detail||g.detail||state.replace(/<[^>]*>/g,'')],['معرّف المباراة',g.id||'غير متوفر']];
  details.innerHTML='<summary>عرض تفاصيل المباراة</summary><div class="match-detail-body">'+detailRows.map(x=>'<div><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b></div>').join('')+(g.id?'<a class="match-link" href="https://www.espn.com/soccer/match/_/gameId/'+encodeURIComponent(g.id)+'" target="_blank" rel="noopener">المصدر والتفاصيل الإضافية ↗</a>':'')+'</div>';
- m.appendChild(details);card.appendChild(m)});
+ m.appendChild(details);
+ details.addEventListener('toggle',()=>{if(details.open&&!details.dataset.eventsLoaded){details.dataset.eventsLoaded='1';loadMatchEvents(details,key,g.id)}});
+ card.appendChild(m)});
 if(league.standings&&league.standings.length){const st=document.createElement('div');st.className='standings';st.innerHTML='<b>ترتيب مختصر</b>'+league.standings.slice(0,5).map((x,i)=>'<div><span>'+(esc(x.rank||i+1))+'</span><span>'+esc(arTeam(x.name))+'</span><span>'+esc(x.points||'—')+' ن</span></div>').join('');card.appendChild(st)}root.appendChild(card)});
  if(!shown)root.innerHTML='<div class="empty">لا توجد مباريات متاحة في هذا التصنيف حالياً.</div>';
  document.getElementById('matchCount').textContent=total;document.getElementById('liveCount').textContent=live;
@@ -243,6 +246,61 @@ if(league.standings&&league.standings.length){const st=document.createElement('d
  renderUpcoming();
 }
 
+async function loadMatchEvents(details,leagueKey,eventId){
+ const body=details.querySelector('.match-detail-body');if(!body)return;
+ const panel=document.createElement('section');panel.className='match-events';panel.innerHTML='<h4>أحداث المباراة</h4><div class="event-muted">جارٍ جلب الأهداف والبطاقات والتبديلات والتشكيلة من ESPN…</div>';body.appendChild(panel);
+ if(!eventId){panel.innerHTML='<h4>أحداث المباراة</h4><div class="event-muted">لا يتوفر معرّف المباراة لدى المصدر.</div>';return}
+ const leaguePath=String(leagueKey||'').replace(/^soccer\//,'');
+ const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(eventId);
+ try{
+  const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);
+  const data=await response.json();
+  const comp=data.header?.competitions?.[0]||data.boxscore?.teams||{};
+  const eventList=Array.isArray(data.keyEvents)?data.keyEvents:Array.isArray(data.plays)?data.plays:Array.isArray(data.commentary)?data.commentary:[];
+  const rows=[];
+  const getName=p=>p?.athlete?.displayName||p?.athlete?.fullName||p?.athlete?.name||p?.displayName||p?.name||'';
+  const getTeam=e=>e?.team?.displayName||e?.team?.name||e?.team?.abbreviation||'';
+  eventList.forEach(e=>{
+   const type=String(e.type?.text||e.type?.name||e.type||e.shortText||'');
+   const text=String(e.text||e.shortText||e.description||'');
+   const joined=(type+' '+text).toLowerCase();
+   const isGoal=/\bgoal\b|هدف|penalty scored|own goal/.test(joined);
+   const isRed=/red card|بطاقه حمراء|طرد/.test(joined);
+   const isYellow=/yellow card|بطاقه صفراء/.test(joined);
+   const isSub=/substitution|تبديل/.test(joined);
+   if(!isGoal&&!isRed&&!isYellow&&!isSub)return;
+   const people=(e.participants||e.athletesInvolved||e.players||[]).map(getName).filter(Boolean);
+   const minute=e.clock?.displayValue||e.time?.displayValue||e.minute||e.clock||'';
+   const team=getTeam(e);
+   let label=isGoal?'هدف':isRed?'بطاقة حمراء':isYellow?'بطاقة صفراء':'تبديل';
+   let detail=people.join(' · ')||text||'تفصيل الحدث غير متاح';
+   if(isGoal&&people.length>1)detail=people[0]+' — صناعة: '+people.slice(1).join('، ');
+   rows.push({label,detail,minute,team});
+  });
+  const sections=[];
+  if(rows.length)sections.push('<h4>⚽ الأهداف والبطاقات والتبديلات</h4>'+rows.map(x=>'<div class="event-row"><b>'+esc(x.label+' · '+x.detail)+(x.team?' · '+x.team:'')+'</b><small>'+esc(String(x.minute||'—'))+'</small></div>').join(''));
+  const rosterGroups=Array.isArray(data.rosters)?data.rosters:[];
+  const boxPlayers=data.boxscore?.players||[];
+  const rosterHtml=[];
+  rosterGroups.forEach(group=>{
+   const team=group.team?.displayName||group.team?.name||'الفريق';
+   const athletes=group.roster||group.athletes||[];
+   const names=athletes.map(x=>x.athlete?.displayName||x.displayName||x.athlete?.fullName||'').filter(Boolean);
+   if(names.length)rosterHtml.push('<div class="event-row"><b>'+esc(team+': '+names.slice(0,18).join('، '))+'</b></div>');
+  });
+  boxPlayers.forEach(group=>{
+   const team=group.team?.displayName||group.team?.name||'الفريق';
+   const names=(group.statistics||[]).flatMap(s=>s.athletes||[]).map(x=>x.athlete?.displayName||'').filter(Boolean);
+   if(names.length)rosterHtml.push('<div class="event-row"><b>'+esc(team+': '+names.slice(0,18).join('، '))+'</b></div>');
+  });
+  if(rosterHtml.length)sections.push('<h4>👥 اللاعبون والتشكيلة المتاحة</h4>'+rosterHtml.join(''));
+  if(!sections.length)sections.push('<div class="event-muted">لم ينشر ESPN أحداثاً تفصيلية لهذه المباراة حتى الآن. قد تتوفر التفاصيل بعد بدء المباراة أو اكتمال تحديث المصدر.</div>');
+  panel.innerHTML='<h4>تفاصيل الأحداث من ESPN</h4>'+sections.join('');
+ }catch(error){
+  panel.innerHTML='<h4>أحداث المباراة</h4><div class="event-muted">تعذر تحميل أحداث المباراة من ESPN حالياً. أعد فتح التفاصيل بعد قليل.</div>';
+  console.warn('[SLOOM365 match events]',eventId,error);
+ }
+}
 function renderLive(){
  const list=document.getElementById('liveBoardList'),count=document.getElementById('liveBoardCount');if(!list||!count)return;
  const active=[];
