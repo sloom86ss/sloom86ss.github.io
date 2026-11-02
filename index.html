@@ -689,6 +689,17 @@ footer{color:#91a6b0!important;border-color:#263c49!important}
 .empty,.live-board-empty,.upcoming-board-empty{color:#a7bac1!important}
 .club-dialog{background:#101f2b!important;color:#edf4f5!important}
 @media(max-width:650px){.sloom-hero-banner{min-height:145px!important}.weather-strip{background:#101f2b!important}.ticker-world-times{border-color:#31483d!important}}
+
+/* SLOOM365 approved card layout */
+.sloom-quick-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin:16px 0 22px!important}
+.sloom-quick-tile{min-height:100px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:9px!important;padding:12px 8px!important;text-decoration:none!important;text-align:center!important;border:1px solid #385548!important;border-radius:18px!important;background:linear-gradient(145deg,#142a35,#1b352e)!important;color:#f3f8f3!important;box-shadow:0 8px 20px #0004!important}
+.sloom-quick-tile>span{font-size:27px!important;line-height:1.1!important}.sloom-quick-tile>b{font-size:12px!important;font-weight:900!important;color:#f4f8f4!important}
+.sloom-quick-action .install-app-slot{display:flex!important;flex-direction:column!important;align-items:stretch!important;justify-content:center!important;gap:7px!important;width:100%!important}
+.sloom-quick-action #installApp,.sloom-quick-action #enableNotifications{display:flex!important;visibility:visible!important;opacity:1!important;position:static!important;width:100%!important;min-height:34px!important;justify-content:center!important;white-space:normal!important;font-size:10px!important;padding:7px 5px!important;background:#b7f34a!important;color:#152319!important;border:0!important;border-radius:10px!important;font-weight:900!important}
+.sloom-quick-action #enableNotifications{background:#e5f2e8!important;color:#174b2c!important}
+.sloom-quick-action .install-app-help{display:none!important}
+#newsTicker .ticker-track{animation-duration:120s!important;animation-timing-function:linear!important;animation-iteration-count:infinite!important}
+@media(max-width:650px){.sloom-quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}.sloom-quick-tile{min-height:88px!important}.sloom-quick-tile>span{font-size:24px!important}.sloom-quick-tile>b{font-size:11px!important}}
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -755,6 +766,12 @@ footer{color:#91a6b0!important;border-color:#263c49!important}
 
 
 
+<section class="sloom-quick-grid" aria-label="اختصارات الموقع">
+ <a class="sloom-quick-tile" href="#news"><span>📰</span><b>آخر الأخبار</b></a>
+ <a class="sloom-quick-tile" href="#weatherTemp"><span>🌤️</span><b>الطقس</b></a>
+ <a class="sloom-quick-tile" href="#sloom-chat-launch"><span>💬</span><b>الدردشة الذكية</b></a>
+ <div class="sloom-quick-tile sloom-quick-action"><section class="install-app-slot" aria-label="تثبيت وإشعارات سلوم 365"><button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button><button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار">🔔 تفعيل الإشعارات</button><p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p><p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p></section></div>
+</section>
 <section class="stats"><div class="stat"><b id="matchCount">—</b><span>مباراة معروضة</span></div><div class="stat"><b id="liveCount">—</b><span>مباشر الآن</span></div><div class="stat"><b id="updated">—</b><span>آخر تحديث</span></div></section>
 <div class="section-head"><h3>🏆 الدوريات والبطولات العالمية</h3><small>مباريات من مصادر البيانات</small></div>
 <div class="arabic-league-nav" id="arabicLeagueNav">
@@ -767,7 +784,7 @@ footer{color:#91a6b0!important;border-color:#263c49!important}
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters day-switcher" id="dayFilters"><button class="filter" data-day="yesterday">الأمس</button><button class="filter active" data-day="today">اليوم</button><button class="filter" data-day="tomorrow">غداً</button></div>
 
 <div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
-<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><small class="news-source-note">أخبار من مصادر موثوقة</small><section class="install-app-slot" aria-label="تثبيت وإشعارات سلوم 365"><button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button><button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار">🔔 تفعيل الإشعارات</button><p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p><p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p></section></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
+<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><small class="news-source-note">أخبار من مصادر موثوقة</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 
 <nav class="sloom-bottom-nav" aria-label="التنقل الرئيسي">
 <a href="#arabicLeagueNav"><span>🏆</span>البطولات</a>
