@@ -226,7 +226,12 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 <meta name="twitter:title" content="سلوم 365 | SLOOM 365 - مباريات وأخبار كرة القدم">
 <meta name="twitter:description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"سلوم 365","alternateName":["SLOOM365","SLOOM 365","سلوم365","سلوم 365"],"url":"https://sloom86ss.github.io/","description":"سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.","inLanguage":"ar-OM"}</script>
-<style id="sloom-ticker-speed">.ticker-track{animation-duration:12s!important;animation-play-state:running!important}.ticker:hover .ticker-track{animation-play-state:running!important}</style>
+<style id="sloom-ticker-speed">.ticker-track{animation-duration:12s!important;animation-play-state:running!important}.ticker:hover .ticker-track{animation-play-state:running!important}/* SLOOM365 fixes: requested ticker pace, visible install/notification controls */
+#newsTicker .ticker-track,.ticker-track{animation-duration:10s!important;animation-timing-function:linear!important;animation-iteration-count:infinite!important;animation-play-state:running!important}
+.news-head-actions .notification-app-button{background:#26351c!important;color:#e8ffbf!important;border:1px solid #8ebd48!important}
+.install-app-slot [hidden]{display:none!important}
+@media(max-width:520px){.install-app-slot{width:auto!important;display:flex!important;flex-wrap:wrap;justify-content:flex-start}.news-head-actions .install-app-button{font-size:9px!important;padding:6px 8px!important}}
+</style>
 </head>
 <body><main class="wrap">
 
@@ -265,7 +270,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters day-switcher" id="dayFilters"><button class="filter" data-day="yesterday">الأمس</button><button class="filter active" data-day="today">اليوم</button><button class="filter" data-day="tomorrow">غداً</button></div>
 
 <div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
-<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><div class="news-head-actions"><small>من مصادر رياضية</small><section class="install-app-slot" aria-label="تثبيت تطبيق سلوم 365"><button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button><p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p></section></div></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
+<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><div class="news-head-actions"><small>من مصادر رياضية</small><section class="install-app-slot" aria-label="تثبيت وإشعارات سلوم 365"><button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button><button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار">🔔 تفعيل الإشعارات</button><p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p><p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p></section></div></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.<div class="broadcast-disclaimer">سياسة حقوق البث: لا يستضيف SLOOM365 أي بث مباشر ولا يعيد رفع أو تضمين أو إعادة توزيع مباريات أو مقاطع محمية. قد نعرض أسماء القنوات الناقلة بوصفها معلومات رياضية تعريفية وفق البيانات المتاحة من مصادر المباريات، ولا يعني ذكر اسم القناة أننا نملك حقوق بثها أو نمثلها. لا يستضيف SLOOM365 بثاً مباشراً ولا يعيد رفع أو تضمين أو إعادة توزيع المباريات أو المقاطع المحمية. روابط المشاهدة — إن توفرت — تقتصر على المواقع الرسمية للناقلين أو أصحاب الحقوق بعد التحقق منها؛ ولا ننشر روابط بث غير رسمية. قد تختلف القنوات حسب الدولة وحقوق النقل، لذا يُرجى الرجوع إلى الناقل للتأكد من جدول البث.</div></footer>
 </main>
@@ -385,7 +390,7 @@ function renderLive(){
  list.innerHTML='';
  active.forEach(({league,match})=>{
   const h=match.home||{},a=match.away||{},score=String(h.score??'—')+' : '+String(a.score??'—');
-  const minute=match.status_short||match.detail||'مباشر';
+  const minute=match.clock||match.status_short||match.detail||'الوقت غير متاح من المصدر';
   const card=document.createElement('article');card.className='live-board-card';
   card.innerHTML='<div class="live-board-league">'+esc(league.name||'بطولة')+'</div><div class="live-board-teams"><div class="live-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name))+'</span></div><div class="live-board-score">'+esc(score)+'</div><div class="live-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name))+'</span></div></div><div class="live-board-meta"><span>● مباشر</span><span>'+esc(minute)+'</span></div>';
   if(verifiedBroadcastName(match)){const channel=document.createElement('div');channel.className='live-board-broadcast';channel.innerHTML='<b>📺 القناة:</b> '+esc(verifiedBroadcastName(match));card.appendChild(channel)}
@@ -455,7 +460,7 @@ function clearSiteError(){}
 function checkDataErrors(d){const errors=[];if(Array.isArray(d.news_errors))errors.push(...d.news_errors);Object.values(d.leagues||{}).forEach(l=>{if(l?.stale)errors.push('بيانات قديمة: '+(l.name||'إحدى البطولات'));if(Array.isArray(l?.errors))errors.push(...l.errors.map(x=>(l.name||'مصدر رياضي')+': '+x))});if(errors.length){const unique=[...new Set(errors)].slice(0,3);showSiteError('تم رصد '+errors.length+' مشكلة في جلب البيانات. '+unique.join(' · '));}else clearSiteError()}
 window.addEventListener('error',e=>showSiteError('حدث خطأ JavaScript في الصفحة: '+(e.message||'خطأ غير معروف')));
 window.addEventListener('unhandledrejection',e=>showSiteError('تعذر إكمال إحدى العمليات: '+String(e.reason?.message||e.reason||'خطأ غير معروف')));
-async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();checkDataErrors(d);dataGeneratedAt=d.generated_at||d.news_sources_updated_at||null;sportsData=d.leagues||d;sportsData.news_sources=d.news_sources||[];render();tickSloomClocks()}catch(e){showSiteError('تعذر تحميل بيانات المباريات والأخبار. '+(e.message||'تحقق من اتصال الموقع بمصدر البيانات')+' — سنعيد المحاولة تلقائياً.');document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
+async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();checkDataErrors(d);const nextSportsData=d.leagues||d;notifySloomScoreChanges(sportsData,nextSportsData);dataGeneratedAt=d.generated_at||d.news_sources_updated_at||null;sportsData=nextSportsData;sportsData.news_sources=d.news_sources||[];render();tickSloomClocks()}catch(e){showSiteError('تعذر تحميل بيانات المباريات والأخبار. '+(e.message||'تحقق من اتصال الموقع بمصدر البيانات')+' — سنعيد المحاولة تلقائياً.');document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
 document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,30000);
 
 function clockAngles(date,zone){
@@ -480,6 +485,42 @@ setInterval(tickSloomClocks,1000);tickSloomClocks();
 
 </script>
 <script>
+let sloomNotificationEnabled=false;
+const sloomNotificationButton=document.getElementById('enableNotifications');
+const sloomNotificationHelp=document.getElementById('notificationHelp');
+function updateSloomNotificationButton(){
+ if(!sloomNotificationButton)return;
+ if(!('Notification' in window)){sloomNotificationButton.textContent='🔔 الإشعارات غير مدعومة';sloomNotificationButton.disabled=true;return;}
+ if(Notification.permission==='granted'){sloomNotificationButton.textContent='🔔 الإشعارات مفعّلة';sloomNotificationEnabled=true;}
+ else if(Notification.permission==='denied'){sloomNotificationButton.textContent='🔔 الإشعارات محظورة';sloomNotificationEnabled=false;}
+ else{sloomNotificationButton.textContent='🔔 تفعيل الإشعارات';}
+}
+sloomNotificationButton?.addEventListener('click',async()=>{
+ if(!('Notification' in window)){if(sloomNotificationHelp)sloomNotificationHelp.textContent='متصفحك لا يدعم إشعارات الويب.';return;}
+ if(!('serviceWorker' in navigator)){if(sloomNotificationHelp)sloomNotificationHelp.textContent='يلزم متصفح يدعم Service Worker لتفعيل التنبيهات.';return;}
+ try{
+  const permission=await Notification.requestPermission();
+  sloomNotificationEnabled=permission==='granted';
+  updateSloomNotificationButton();
+  if(sloomNotificationHelp)sloomNotificationHelp.textContent=permission==='granted'?'تم تفعيل الإشعارات. ستصلك تنبيهات الأهداف الجديدة أثناء فتح الموقع.':'لم يتم السماح بالإشعارات. يمكنك تفعيلها من إعدادات المتصفح.';
+ }catch(error){if(sloomNotificationHelp)sloomNotificationHelp.textContent='تعذر تفعيل الإشعارات؛ تحقق من إذن المتصفح.';}
+});
+function notifySloomScoreChanges(previous,next){
+ if(!sloomNotificationEnabled||!('Notification' in window)||Notification.permission!=='granted')return;
+ const oldMatches=new Map();
+ Object.values(previous||{}).forEach(league=>(league.matches||[]).forEach(m=>oldMatches.set(String(m.id),m)));
+ Object.values(next||{}).forEach(league=>(league.matches||[]).forEach(m=>{
+  const old=oldMatches.get(String(m.id));if(!old||m.status!=='in')return;
+  const oldScore=Number(old.home?.score||0)+':'+Number(old.away?.score||0);
+  const newScore=Number(m.home?.score||0)+':'+Number(m.away?.score||0);
+  if(oldScore===newScore)return;
+  const title='⚽ هدف جديد — SLOOM365';
+  const body=(m.home?.name||'الفريق الأول')+' '+(m.home?.score??0)+' - '+(m.away?.score??0)+' '+(m.away?.name||'الفريق الثاني');
+  if('serviceWorker' in navigator)navigator.serviceWorker.ready.then(reg=>reg.showNotification(title,{body,icon:'/assets/sloom-icon-192.svg',tag:'sloom-goal-'+m.id,renotify:true})).catch(()=>{});
+  else new Notification(title,{body});
+ }));
+}
+updateSloomNotificationButton();
 let sloomInstallPrompt=null;
 const sloomInstallButton=document.getElementById('installApp');
 const sloomInstallHelp=document.getElementById('installAppHelp');
