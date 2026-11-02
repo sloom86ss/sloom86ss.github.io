@@ -1,3 +1,7 @@
+function isFootballNews(n){
+ if(!n||typeof n.headline!=="string"||typeof n.link!=="string"||!n.link.startsWith("https://")||!n.source)return false;
+ return /(كرة القدم|الدوري|دوري|كأس|كاس|نادي|الهلال|النصر|الاتحاد|الأهلي|الاهلي|ريال مدريد|برشلونة|ليفربول|مانشستر|رونالدو|ميسي|صلاح|انتقال|صفقة|مدرب|لاعب|football|soccer|champions league|premier league|transfer)/i.test(n.headline+" "+(n.description||""));
+}
 export default async function handler(req,res){
  res.setHeader("Cache-Control","no-store");
  if(req.method!=="POST"){res.setHeader("Allow","POST");return res.status(405).json({error:"استخدم POST."});}
@@ -21,8 +25,8 @@ export default async function handler(req,res){
  const isRecent=(value,hours)=>{const t=Date.parse(value||'');return Number.isFinite(t)&&now-t>=0&&now-t<=hours*60*60*1000;};
  const allLeagues=Array.isArray(context.leagues)?context.leagues:Object.values(context.leagues||{});
  const safeContext={provider:context.provider,generated_at:context.generated_at,timezone:'Asia/Muscat',dataset_fresh:datasetFresh,
-  news_sources:datasetFresh?(context.news_sources||[]).filter(n=>isRecent(n.published,7)):[],
-  leagues:datasetFresh?allLeagues.filter(l=>!l.stale&&isRecent(l.updated_at,1.5)).map(l=>({...l,news:(l.news||[]).filter(n=>isRecent(n.published,7))})):[]};
+  news_sources:datasetFresh?(context.news_sources||[]).filter(n=>isRecent(n.published,7)&&isFootballNews(n)):[],
+  leagues:datasetFresh?allLeagues.filter(l=>!l.stale&&isRecent(l.updated_at,1.5)).map(l=>({...l,news:(l.news||[]).filter(n=>isRecent(n.published,7)&&isFootballNews(n))})):[]};
  if(!key)return res.status(200).json({answer:localAnswer(question,safeContext),mode:"local",notice:datasetFresh?"المعلومات حديثة وفق آخر تحديث مؤكد. التحليل التوليدي يحتاج إعداد مفتاح Gemini.":"توقف البوت لأن آخر تحديث تجاوز 90 دقيقة؛ لا نعرض بيانات قديمة على أنها مباشرة."});
  const system="أنت SLOOM360، مساعد متخصص بكرة القدم العالمية فقط. أجب بالعربية الفصحى. اعتمد حصراً على JSON المرفق. إذا كانت dataset_fresh=false فلا تعرض نتائج أو أخباراً أو حالة مباشرة. لا تعرض خبراً يتجاوز سبعة أيام أو بلا تاريخ نشر ومصدر ورابط. لا تستخدم دورياً موسوماً stale=true. لا تخترع أحداثاً أو إحصائيات أو تشكيلات أو إصابات أو مواعيد أو قنوات. افصل الحقائق عن التحليل، وميّز الشائعة عن التأكيد الرسمي. لا تصف خبراً بأنه حصري إلا إذا قال المصدر ذلك صراحة. إذا غابت المعلومة فقل إنها غير متاحة من المصدر."; 
  const prompt="بيانات كرة القدم المفلترة زمنياً بصيغة JSON:\n"+JSON.stringify(safeContext)+"\n\nسؤال المستخدم: "+question;
