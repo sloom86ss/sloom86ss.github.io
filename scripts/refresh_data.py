@@ -29,9 +29,7 @@ LEAGUES = {
     "soccer/ger.1": "ger.1", "soccer/fra.1": "fra.1", "soccer/ksa.1": "ksa.1",
     "soccer/por.1": "por.1", "soccer/ned.1": "ned.1", "soccer/uefa.champions": "uefa.champions",
     "soccer/uefa.europa": "uefa.europa", "soccer/arg.1": "arg.1", "soccer/bra.1": "bra.1",
-    "soccer/fifa.world": "fifa.world", "soccer/usa.1": "usa.1",
-    "soccer/uefa.conference": "uefa.conference", "soccer/tur.1": "tur.1",
-    "soccer/sco.1": "sco.1", "soccer/jpn.1": "jpn.1", "soccer/mex.1": "mex.1",
+    "soccer/fifa.world": "fifa.world",
 }
 TRUSTED_RSS = [
     ("BBC Sport", "https://feeds.bbci.co.uk/sport/football/rss.xml"),
@@ -40,15 +38,6 @@ TRUSTED_RSS = [
     ("Google News", "https://news.google.com/rss/search?q=%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=OM&ceid=OM:ar"),
     ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84%D8%A7%D8%AA%20%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=SA&ceid=SA:ar"),
     ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%20%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=SA&ceid=SA:ar"),
-    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA%D9%8A&hl=ar&gl=AE&ceid=AE:ar"),
-    ("Google News", "https://news.google.com/rss/search?q=%D8%AF%D9%88%D8%B1%D9%8A%20%D9%86%D8%AC%D9%88%D9%85%20%D9%82%D8%B7%D8%B1&hl=ar&gl=QA&ceid=QA:ar"),
-    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A&hl=ar&gl=EG&ceid=EG:ar"),
-    ("Google News", "https://news.google.com/rss/search?q=%D8%AF%D9%88%D8%B1%D9%8A%20%D9%86%D8%AC%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82&hl=ar&gl=IQ&ceid=IQ:ar"),
-    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D9%86%D9%8A&hl=ar&gl=OM&ceid=OM:ar"),
-    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA%D9%8A&hl=ar&gl=KW&ceid=KW:ar"),
-    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A&hl=ar&gl=MA&ceid=MA:ar"),
-    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%AA%D9%88%D9%86%D8%B3%D9%8A&hl=ar&gl=TN&ceid=TN:ar"),
-    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A&hl=ar&gl=DZ&ceid=DZ:ar"),
 ]
 HEADERS = {"User-Agent": "SLOOM360-Football-Data/1.0 (+https://sloom86ss.github.io/)"}
 
