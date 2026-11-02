@@ -369,6 +369,50 @@ footer{color:#b7d4ff;border-color:#1b5598}
 @media(min-width:760px){.sloom-bottom-nav{left:50%;right:auto;transform:translateX(-50%);width:min(680px,calc(100% - 32px))}}
 @media(max-width:520px){header{min-height:105px;padding-right:118px}.sloom-mascot{width:110px!important;height:105px!important}.ticker{grid-template-columns:auto minmax(0,1fr)!important}.ticker-world-times{display:none!important}.ticker-track span{font-size:11px!important}.live-board-head h2,.upcoming-board-head h2{font-size:15px!important}.sloom-bottom-nav{gap:3px;padding:5px}.sloom-bottom-nav a{min-height:53px;font-size:9px;padding:4px 1px}.sloom-bottom-nav a span{font-size:18px}}
 
+
+/* SLOOM365 visibility repair: persistent mobile navigation and action buttons */
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{padding-bottom:175px!important}
+.sloom-bottom-nav{
+  display:grid!important;visibility:visible!important;opacity:1!important;
+  position:fixed!important;left:8px!important;right:8px!important;
+  bottom:calc(env(safe-area-inset-bottom,0px) + 8px)!important;
+  z-index:2147483646!important;min-height:68px!important;
+  transform:none!important;pointer-events:auto!important
+}
+.sloom-bottom-nav a{display:flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+.install-app-slot{
+  display:flex!important;visibility:visible!important;opacity:1!important;
+  position:fixed!important;left:8px!important;right:8px!important;
+  bottom:calc(env(safe-area-inset-bottom,0px) + 88px)!important;
+  z-index:2147483645!important;width:auto!important;max-width:520px!important;
+  margin:0 auto!important;padding:8px!important;gap:8px!important;
+  justify-content:center!important;align-items:center!important;
+  flex-wrap:nowrap!important;border:1px solid #4ea4ff!important;
+  border-radius:15px!important;background:linear-gradient(120deg,#082b68f5,#061a43f5)!important;
+  box-shadow:0 5px 22px #000b!important;backdrop-filter:blur(12px)
+}
+.install-app-slot #installApp,.install-app-slot #enableNotifications,
+.install-app-slot #installApp[hidden],.install-app-slot #enableNotifications[hidden]{
+  display:inline-flex!important;visibility:visible!important;opacity:1!important;
+  position:static!important;flex:1 1 0!important;width:auto!important;min-width:0!important;
+  min-height:42px!important;align-items:center!important;justify-content:center!important;
+  padding:8px 7px!important;border-radius:11px!important;font:900 11px Cairo,Arial,sans-serif!important;
+  white-space:nowrap!important;pointer-events:auto!important
+}
+.install-app-slot #installApp{background:linear-gradient(135deg,#ffdf49,#ffad18)!important;color:#071535!important;border:1px solid #fff0a6!important}
+.install-app-slot #enableNotifications{background:linear-gradient(135deg,#1760bd,#092b68)!important;color:#fff!important;border:1px solid #70baff!important}
+.install-app-slot #installAppHelp,.install-app-slot #notificationHelp{display:none!important}
+@media(min-width:760px){
+ .sloom-bottom-nav{left:50%!important;right:auto!important;transform:translateX(-50%)!important;width:min(680px,calc(100% - 32px))!important}
+ .install-app-slot{left:50%!important;right:auto!important;transform:translateX(-50%)!important;width:min(520px,calc(100% - 32px))!important}
+}
+@media(max-width:380px){
+ .install-app-slot{gap:5px!important;padding:6px!important}
+ .install-app-slot #installApp,.install-app-slot #enableNotifications{font-size:10px!important;padding:7px 4px!important}
+ .sloom-bottom-nav a{font-size:9px!important}
+}
+
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -436,7 +480,7 @@ footer{color:#b7d4ff;border-color:#1b5598}
 <a href="#upcomingBoard"><span>📅</span>القادمة</a>
 <a href="#liveBoard" class="active"><span>🔴</span>المباشرة</a>
 <a href="#news"><span>📰</span>آخر الأخبار</a>
-<a href="#teamsDirectory"><span>⭐</span>المفضلة</a>
+<a href="#teamsDirectory"><span>🏟️</span>الأندية</a>
 </nav>
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.<div class="broadcast-disclaimer">سياسة حقوق البث: لا يستضيف SLOOM365 أي بث مباشر ولا يعيد رفع أو تضمين أو إعادة توزيع مباريات أو مقاطع محمية. قد نعرض أسماء القنوات الناقلة بوصفها معلومات رياضية تعريفية وفق البيانات المتاحة من مصادر المباريات، ولا يعني ذكر اسم القناة أننا نملك حقوق بثها أو نمثلها. لا يستضيف SLOOM365 بثاً مباشراً ولا يعيد رفع أو تضمين أو إعادة توزيع المباريات أو المقاطع المحمية. روابط المشاهدة — إن توفرت — تقتصر على المواقع الرسمية للناقلين أو أصحاب الحقوق بعد التحقق منها؛ ولا ننشر روابط بث غير رسمية. قد تختلف القنوات حسب الدولة وحقوق النقل، لذا يُرجى الرجوع إلى الناقل للتأكد من جدول البث.</div></footer>
 </main>
