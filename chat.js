@@ -1,7 +1,7 @@
 (()=>{'use strict';
 const css=`
-#sloom-chat-launch{position:fixed;z-index:9998;left:18px;bottom:18px;border:0;border-radius:50px;padding:13px 18px;background:#b7f34a;color:#10170b;font:800 14px Cairo,Arial,sans-serif;box-shadow:0 8px 28px #0008;cursor:pointer}
-#sloom-chat{position:fixed;z-index:9999;left:14px;bottom:78px;width:min(370px,calc(100vw - 28px));height:min(540px,calc(100dvh - 105px));display:none;flex-direction:column;overflow:hidden;border:1px solid #526b3a;border-radius:20px;background:#101914;color:#f4f8f4;box-shadow:0 18px 65px #000b;font-family:Cairo,Arial,sans-serif;direction:rtl}
+#sloom-chat-launch{position:fixed;z-index:2147483000;right:16px;left:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);border:0;border-radius:50px;padding:13px 18px;background:#b7f34a;color:#10170b;font:800 14px Cairo,Arial,sans-serif;box-shadow:0 8px 28px #0008;cursor:pointer}
+#sloom-chat{position:fixed;z-index:2147483001;right:14px;left:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 78px);width:min(370px,calc(100vw - 28px));height:min(540px,calc(100dvh - 125px - env(safe-area-inset-bottom,0px)));display:none;flex-direction:column;overflow:hidden;border:1px solid #526b3a;border-radius:20px;background:#101914;color:#f4f8f4;box-shadow:0 18px 65px #000b;font-family:Cairo,Arial,sans-serif;direction:rtl}
 #sloom-chat.open{display:flex}#sloom-chat-head{display:flex;align-items:center;justify-content:space-between;padding:13px 15px;background:#1b3020;border-bottom:1px solid #344b32}
 #sloom-chat-head strong{font-size:14px}#sloom-chat-head small{display:block;color:#c2d2c4;font-size:10px}
 #sloom-chat-close{border:1px solid #53684b;background:#142018;color:white;border-radius:9px;padding:5px 10px;font-size:18px}
