@@ -49,11 +49,12 @@ jobs:
           git commit -m "SLOOM365 bot: apply safe SEO repairs"
           git push
       - name: Send repair failure alert
-        if: failure() && secrets.NTFY_TOPIC != ''
+        if: failure()
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ vars.NTFY_SERVER }}
         run: |
+          if [ -z "$NTFY_TOPIC" ]; then echo "NTFY_TOPIC secret is not configured; alert skipped."; exit 0; fi
           SERVER="${NTFY_SERVER:-https://ntfy.sh}"
           curl --fail --silent --show-error --max-time 10 \
             -H "Title: SLOOM365 code check failed" \
