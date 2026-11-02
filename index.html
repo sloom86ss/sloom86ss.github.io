@@ -1009,11 +1009,37 @@ body{padding-bottom:28px!important}
 @media(prefers-reduced-motion:reduce){.sloom-header-top .brand img.sloom-logo-animated{animation:none!important}}
 </style>
 
+<style id="sloom365-top-actions-fix">
+/* Keep install and notification controls in the top SLOOM365 header */
+.sloom-header-top{display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:space-between!important;gap:7px!important;overflow:visible!important}
+.sloom-header-top>.brand{flex:0 1 auto!important;width:auto!important;min-width:0!important}
+.sloom-top-actions{display:flex!important;flex:0 1 auto!important;flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;justify-content:flex-end!important;gap:6px!important;width:auto!important;max-width:100%!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;visibility:visible!important;opacity:1!important}
+.sloom-top-actions .install-app-button,.sloom-top-actions .install-app-button[hidden]{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-height:34px!important;padding:6px 9px!important;border:1px solid #d8ff8b!important;border-radius:9px!important;background:#b7f34a!important;color:#10170b!important;font:900 10px Cairo,Arial,sans-serif!important;white-space:nowrap!important;cursor:pointer!important}
+.sloom-top-actions #enableNotifications{background:#203a2a!important;color:#eaffd6!important;border-color:#8ab56a!important}
+.sloom-top-actions .install-app-help{flex:1 0 100%!important;width:100%!important;margin:0!important;padding:0!important;color:#b9c9bb!important;font-size:8px!important;line-height:1.3!important;text-align:right}
+.sloom-header-nav{flex:1 1 100%!important;order:3!important;width:100%!important;min-width:0!important}
+@media(max-width:520px){
+ .sloom-header-top{flex-wrap:wrap!important;gap:7px!important;padding:7px 6px!important}
+ .sloom-header-top>.brand{flex:0 1 auto!important;width:auto!important}
+ .sloom-top-actions{flex:1 1 auto!important;justify-content:flex-end!important;gap:4px!important}
+ .sloom-top-actions .install-app-button,.sloom-top-actions .install-app-button[hidden]{min-height:32px!important;padding:5px 7px!important;font-size:9px!important}
+ .sloom-header-nav{flex:1 1 100%!important;order:3!important}
+}
+@media(max-width:360px){
+ .sloom-top-actions .install-app-button,.sloom-top-actions .install-app-button[hidden]{padding:5px 5px!important;font-size:8px!important}
+}
+</style>
 </head>
 <body><main class="wrap">
 
 <header class="sloom-header-top">
  <div class="brand"><img class="sloom-logo-animated" src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>SLOOM365</h1><small>مباريات وأخبار كرة القدم</small></div></div>
+ <div class="sloom-top-actions install-app-slot" aria-label="إعدادات التطبيق">
+  <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button>
+  <button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار">🔔 الإشعارات</button>
+  <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
+  <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
+ </div>
  <nav class="sloom-bottom-nav sloom-header-nav" aria-label="التنقل الرئيسي">
   <a href="#arabicLeagueNav"><span>🏆</span>البطولات</a>
   <a href="#upcomingBoard"><span>📅</span>القادمة</a>
@@ -1028,8 +1054,6 @@ body{padding-bottom:28px!important}
  <span class="sloom-hero-tag">نبض كرة القدم لحظة بلحظة</span>
  <div class="sloom-hero-ball" aria-hidden="true">⚽</div>
 </section>
-<section class="warfare-launch" aria-label="لعبة SLOOM365 WARFARE"><div><span>🎮 تجربة جديدة</span><h2>SLOOM365 WARFARE</h2><p>ساحة قتال ثلاثية الأبعاد • منظور الشخص الثالث • تحكم باللمس</p></div><a href="/warfare/" aria-label="افتح لعبة SLOOM365 WARFARE">العب الآن <b>←</b></a></section>
-<style>.warfare-launch{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 16px;padding:16px;border:1px solid #607d35;border-radius:18px;background:radial-gradient(circle at 10% 20%,#344b20,#101811 68%);box-shadow:0 10px 28px #0005}.warfare-launch span{font-size:10px;color:#b7f34a;font-weight:900}.warfare-launch h2{font-size:17px;color:#f3f8ef;margin:3px 0}.warfare-launch p{font-size:10px;color:#aebdaf;margin:0;line-height:1.7}.warfare-launch a{flex:none;background:#b7f34a;color:#10170b;border-radius:11px;padding:11px 14px;font-size:12px;font-weight:900}.warfare-launch a b{font-size:16px;margin-right:5px}@media(max-width:390px){.warfare-launch{align-items:flex-start;flex-direction:column}.warfare-launch a{width:100%;text-align:center}}</style>
 <section class="weather-strip" aria-label="الطقس والوقت في عُمان">
  <div class="weather-main"><span class="weather-icon" id="weatherIcon">🌤️</span><div><div><span class="weather-temp" id="weatherTemp">--°</span> <span class="weather-place" id="weatherPlaceName">سلطنة عُمان</span></div><div class="weather-desc" id="weatherDesc">جارٍ تحميل حالة الطقس…</div></div></div>
  <button id="weatherLocationButton" type="button" aria-label="استخدام موقع الهاتف للطقس" style="border:1px solid #c6a6ff;background:#251342;color:#fff;border-radius:10px;padding:8px 10px;font:800 10px Cairo;cursor:pointer">📍 تحديد موقعي</button><div class="weather-clock"><b id="weatherLocalTime">--:--</b><span id="weatherLocalDate">توقيت عُمان</span></div>
@@ -1066,12 +1090,7 @@ body{padding-bottom:28px!important}
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters day-switcher" id="dayFilters"><button class="filter" data-day="yesterday">الأمس</button><button class="filter active" data-day="today">اليوم</button><button class="filter" data-day="tomorrow">غداً</button></div>
 
 <div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
-<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><div class="news-head-actions install-app-slot">
- <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button>
- <button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار">🔔 تفعيل الإشعارات</button>
- <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
- <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
- </div><small class="news-source-note">أخبار من مصادر موثوقة</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
+<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><small class="news-source-note">أخبار من مصادر موثوقة</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.<div class="broadcast-disclaimer">سياسة حقوق البث: لا يستضيف SLOOM365 أي بث مباشر ولا يعيد رفع أو تضمين أو إعادة توزيع مباريات أو مقاطع محمية. قد نعرض أسماء القنوات الناقلة بوصفها معلومات رياضية تعريفية وفق البيانات المتاحة من مصادر المباريات، ولا يعني ذكر اسم القناة أننا نملك حقوق بثها أو نمثلها. لا يستضيف SLOOM365 بثاً مباشراً ولا يعيد رفع أو تضمين أو إعادة توزيع المباريات أو المقاطع المحمية. روابط المشاهدة — إن توفرت — تقتصر على المواقع الرسمية للناقلين أو أصحاب الحقوق بعد التحقق منها؛ ولا ننشر روابط بث غير رسمية. قد تختلف القنوات حسب الدولة وحقوق النقل، لذا يُرجى الرجوع إلى الناقل للتأكد من جدول البث.</div></footer>
 </main>
@@ -1366,9 +1385,7 @@ window.addEventListener('appinstalled',()=>{
 });
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(error=>console.error('SLOOM 365 offline support:',error)));}
 </script><script src="/chat.js" defer></script>
-<script>
-(()=>{const placeActions=()=>{const head=document.querySelector('.news-section-head'),title=head?.querySelector('h3'),slot=head?.querySelector('.install-app-slot');if(!head||!title||!slot)return;if(slot.parentElement!==head||slot.previousElementSibling!==title)title.insertAdjacentElement('afterend',slot);slot.style.setProperty('display','flex','important');slot.style.setProperty('visibility','visible','important');slot.style.setProperty('opacity','1','important');['installApp','enableNotifications'].forEach(id=>{const b=document.getElementById(id);if(b){b.hidden=false;b.style.setProperty('display','inline-flex','important');b.style.setProperty('visibility','visible','important');b.style.setProperty('opacity','1','important');}});};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',placeActions,{once:true});else placeActions();setTimeout(placeActions,700);})();
-</script>
+
 
 <script>
 (()=> {
