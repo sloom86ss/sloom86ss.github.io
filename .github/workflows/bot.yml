@@ -57,9 +57,5 @@ jobs:
           git add data.json
           git diff --cached --quiet && echo "No data changes" && exit 0
           git commit -m "Update football scores, clubs and standings"
-          git fetch origin main
-          git reset --soft origin/main
-          git add data.json
-          git diff --cached --quiet && echo "No data changes after sync" && exit 0
-          git commit -m "Publish latest football data"
+          git pull --rebase origin main
           git push origin main
