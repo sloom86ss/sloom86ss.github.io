@@ -128,6 +128,26 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 #newsTicker .ticker-track{animation-duration:38s!important;animation-timing-function:linear!important;animation-iteration-count:infinite!important}
 @media(prefers-reduced-motion:reduce){#newsTicker .ticker-track{animation-duration:60s!important}}
 
+
+/* SLOOM KORA 365 — professional Arabic match lineups */
+.lineup-section{display:grid;gap:12px;margin-top:10px}
+.lineup-team{overflow:hidden;border:1px solid #426b46;border-radius:15px;background:#0c1b12}
+.lineup-team-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(100deg,#173d27,#102318);font-size:12px;font-weight:900}
+.lineup-team-head small{color:#c7e8c9;font-size:10px}
+.lineup-pitch{position:relative;display:flex;flex-direction:column;justify-content:space-around;gap:13px;min-height:340px;padding:18px 7px;background:repeating-linear-gradient(0deg,#078d35 0px,#078d35 48px,#079b39 48px,#079b39 96px);isolation:isolate}
+.lineup-pitch:before{content:"";position:absolute;inset:9px;border:2px solid #d8f4dcaa;border-radius:3px;pointer-events:none}
+.lineup-pitch:after{content:"";position:absolute;left:9px;right:9px;top:50%;height:1px;background:#e2f8e4aa;box-shadow:0 0 0 1px #e2f8e422;pointer-events:none}
+.lineup-pitch-mark{position:absolute;width:92px;height:92px;border:1px solid #e2f8e477;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none}
+.lineup-row{position:relative;z-index:1;display:flex;justify-content:space-evenly;align-items:flex-start;gap:3px}
+.lineup-player{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0;flex:1;text-align:center}
+.lineup-shirt{width:32px;height:36px;display:grid;place-items:center;clip-path:polygon(25% 0,40% 8%,60% 8%,75% 0,100% 22%,85% 40%,76% 33%,76% 100%,24% 100%,24% 33%,15% 40%,0 22%);background:linear-gradient(135deg,#f8f8f8,#b9c3c0);color:#101710;font-size:12px;font-weight:900;filter:drop-shadow(0 2px 2px #001b08)}
+.lineup-team:nth-child(2) .lineup-shirt{background:linear-gradient(135deg,#72c9ff,#1767bd);color:#06172c}
+.lineup-player-name{max-width:100%;padding:2px 5px;border:1px solid #b4e8bd66;border-radius:8px;background:#07170de8;color:#fff;font-size:9px;line-height:1.5;font-weight:800;overflow-wrap:anywhere}
+.lineup-player-pos{color:#e1f7e4;font-size:8px;text-shadow:0 1px 2px #00310e}
+.lineup-substitutes{padding:9px 11px;border-top:1px solid #34573a;background:#102117;color:#d8e8d9;font-size:10px;line-height:1.9}
+.lineup-substitutes b{color:#b7f34a}
+@media(max-width:380px){.lineup-pitch{min-height:310px;padding-inline:3px}.lineup-shirt{width:27px;height:31px}.lineup-player-name{font-size:8px;padding:2px 3px}}
+
 /* SLOOM365: clearer tournament filters, match details, and faster ticker */
 .arabic-league-nav{flex-wrap:nowrap;overscroll-behavior-x:contain}
 .match-details{margin-top:8px;border:1px solid #344638;border-radius:11px;background:#101a13;overflow:hidden}
@@ -1459,18 +1479,25 @@ async function loadMatchEvents(details,leagueKey,eventId){
   const sections=[];
   if(rows.length)sections.push('<h4>⚽ مسجلو الأهداف وصُنّاعها والأحداث</h4>'+rows.map(x=>'<div class="event-row"><b>'+esc(x.label+' · '+x.detail)+(x.team?' · '+esc(x.team):'')+'</b><small>'+esc(String(x.minute))+'</small></div>').join(''));
   const rosterGroups=Array.isArray(data.rosters)?data.rosters:[];
+  const arabicLetters={'a':'ا','b':'ب','c':'ك','d':'د','e':'ي','f':'ف','g':'ج','h':'ه','i':'ي','j':'ج','k':'ك','l':'ل','m':'م','n':'ن','o':'و','p':'ب','q':'ك','r':'ر','s':'س','t':'ت','u':'و','v':'ف','w':'و','x':'كس','y':'ي','z':'ز'};
+  const arabizePlayer=n=>String(n||'').replace(/[A-Za-z]+/g,w=>{const lower=w.toLowerCase();const special={'mohamed':'محمد','mohammed':'محمد','mohamed salah':'محمد صلاح','alexander':'ألكسندر','alex':'أليكس','bruno':'برونو','kevin':'كيفن','james':'جيمس','jack':'جاك','john':'جون','joe':'جو','joao':'جواو','joão':'جواو','pedro':'بيدرو','robert':'روبرت','erling':'إيرلينغ','harry':'هاري','phil':'فيل','cole':'كول','bukayo':'بوكايو','declan':'ديكلان','martin':'مارتن','bernardo':'برناردو','ruben':'روبن','virgil':'فيرجيل','alisson':'أليسون','david':'دافيد','marcus':'ماركوس','anthony':'أنتوني','amad':'أماد','son':'سون','heung':'هيونغ','min':'مين','yuki':'يوكي','takefusa':'تاكيفوسا','kaoru':'كاورو','mitoma':'ميتома'};return special[lower]||[...lower].map(ch=>arabicLetters[ch]||ch).join('')}).replace(/ميتома/g,'ميتома');
+  const roleGroup=p=>{const pos=String(p.position?.abbreviation||p.position?.displayName||p.position?.name||p.position||'').toLowerCase();if(/gk|goal|keeper|حارس/.test(pos))return 0;if(/cb|lb|rb|df|back|defend|ظهير|دفاع/.test(pos))return 1;if(/dm|cm|am|mf|mid|وسط/.test(pos))return 2;if(/fw|st|cf|lw|rw|forward|wing|attack|مهاجم/.test(pos))return 3;return 2};
   const rosterHtml=[];
-  rosterGroups.forEach(group=>{
+  rosterGroups.forEach((group,index)=>{
    const team=teamName(group.team),athletes=group.roster||group.athletes||[];
    const starters=athletes.filter(x=>x.starter===true||x.isStarter===true||String(x.status||'').toLowerCase()==='starter');
    const substitutes=athletes.filter(x=>!starters.includes(x));
    const formation=group.formation||group.team?.formation||'';
-   const formatPlayer=x=>{const name=arName(x);const pos=x.position?.abbreviation||x.position?.displayName||x.position?.name||x.position||'';return name+(pos?' ('+pos+')':'')};
+   const formatPlayer=x=>{const name=arName(x);const pos=x.position?.abbreviation||x.position?.displayName||x.position?.name||x.position||'';return (name||'لاعب')+(pos?' ('+pos+')':'')};
    if(athletes.length){
-    rosterHtml.push('<div class="event-row"><b>'+esc(team+(formation?' · الخطة '+formation:''))+'</b></div>');
-    if(starters.length)rosterHtml.push('<div class="event-row"><b>التشكيلة الأساسية: '+esc(starters.map(formatPlayer).join('، '))+'</b></div>');
-    if(substitutes.length)rosterHtml.push('<div class="event-row"><b>البدلاء: '+esc(substitutes.map(formatPlayer).join('، '))+'</b></div>');
-    if(!starters.length)rosterHtml.push('<div class="event-row"><b>اللاعبون المتاحون: '+esc(athletes.map(formatPlayer).join('، '))+'</b></div>');
+    if(starters.length){
+     const rows=[[],[],[],[]];starters.forEach(p=>rows[roleGroup(p)].push(p));
+     const shirt=p=>p.jersey||p.jerseyNumber||p.number||'';
+     const pitchRows=rows.filter(row=>row.length).map(row=>'<div class="lineup-row">'+row.map(p=>'<div class="lineup-player"><span class="lineup-shirt">'+esc(String(shirt(p)))+'</span><span class="lineup-player-name">'+esc(arName(p)||arabizePlayer(p.displayName||p.fullName||p.name||'لاعب'))+'</span><small class="lineup-player-pos">'+esc(p.position?.displayName||p.position?.name||p.position?.abbreviation||'')+'</small></div>').join('')+'</div>').join('');
+     rosterHtml.push('<section class="lineup-team"><div class="lineup-team-head"><span>'+esc(team)+'</span><small>التشكيلة الأساسية · '+starters.length+' لاعباً'+(formation?' · '+esc(formation):'')+'</small></div><div class="lineup-pitch"><span class="lineup-pitch-mark"></span>'+pitchRows+'</div>'+(substitutes.length?'<div class="lineup-substitutes"><b>البدلاء:</b> '+esc(substitutes.map(p=>arabizePlayer(formatPlayer(p))).join('، '))+'</div>':'')+'</section>');
+    }else{
+     rosterHtml.push('<div class="event-row"><b>'+esc(team+(formation?' · الخطة '+formation:''))+' — اللاعبون: '+esc(athletes.map(p=>arabizePlayer(formatPlayer(p))).join('، '))+'</b></div>');
+    }
    }
   });
   if(!rosterHtml.length){
@@ -1478,10 +1505,10 @@ async function loadMatchEvents(details,leagueKey,eventId){
     const team=teamName(group.team);
     const athletes=(group.statistics||[]).flatMap(x=>x.athletes||[]);
     const names=athletes.map(arName).filter(Boolean);
-    if(names.length)rosterHtml.push('<div class="event-row"><b>'+esc(team+' · اللاعبون المسجلون: '+names.join('، '))+'</b></div>');
+    if(names.length)rosterHtml.push('<div class="event-row"><b>'+esc(team+' · اللاعبون: '+names.map(arabizePlayer).join('، '))+'</b></div>');
    });
   }
-  if(rosterHtml.length)sections.push('<h4>👥 تشكيلات الفريقين واللاعبون</h4>'+rosterHtml.join(''));
+  if(rosterHtml.length)sections.push('<h4>👕 تشكيلات الفريقين على أرضية الملعب</h4><div class="lineup-section">'+rosterHtml.join('')+'</div>');
   if(!sections.length)sections.push('<div class="event-muted">لم ينشر مصدر المباراة تفاصيل التشكيلة أو الأحداث حتى الآن. ستظهر البيانات عند توفرها من المصدر الرسمي.</div>');
   panel.innerHTML='<h4>تفاصيل المباراة من المصدر الرياضي</h4>'+sections.join('');
  }catch(error){
