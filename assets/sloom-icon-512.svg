@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+<title id="title">SLOOM 365</title><desc id="desc">الشعار الرسمي: كرة قدم بتاج داخل درع رياضي بالأسود والأخضر الليموني</desc>
+<defs>
+ <linearGradient id="lime" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e5ff9a"/><stop offset=".45" stop-color="#b7f34a"/><stop offset="1" stop-color="#70ad18"/></linearGradient>
+ <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#aeb8b1"/></linearGradient>
+ <radialGradient id="dark"><stop stop-color="#1c2b20"/><stop offset="1" stop-color="#050806"/></radialGradient>
+</defs>
+<path d="M320 35 382 70 452 57 490 119 554 151 542 226 579 286 548 351 553 425 489 462 453 528 382 518 320 560 258 518 187 528 151 462 87 425 92 351 61 286 98 226 86 151 150 119 188 57 258 70Z" fill="url(#dark)" stroke="url(#lime)" stroke-width="13"/>
+<path d="M202 122 225 64 278 99 320 36 362 99 415 64 438 122" fill="none" stroke="url(#silver)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M225 64 202 122 438 122 415 64 362 99 320 36 278 99Z" fill="url(#lime)" stroke="#10170c" stroke-width="7"/>
+<circle cx="202" cy="62" r="12" fill="url(#silver)"/><circle cx="278" cy="96" r="11" fill="url(#silver)"/><circle cx="320" cy="32" r="13" fill="url(#silver)"/><circle cx="362" cy="96" r="11" fill="url(#silver)"/><circle cx="438" cy="62" r="12" fill="url(#silver)"/>
+<circle cx="320" cy="254" r="133" fill="#070b08" stroke="url(#lime)" stroke-width="15"/>
+<path d="M320 172 367 207 349 262 291 262 273 207Z" fill="url(#silver)" stroke="#111" stroke-width="8"/>
+<path d="m320 172-47 35-57-9m151 9 57-9m-75 64 35 54m-93-54-35 54m75-64 58 10 25 54m-151-64-58 10-25 54m93 0v60m-93-60 35 54 58 6 58-6 35-54" fill="none" stroke="url(#silver)" stroke-width="10" stroke-linejoin="round"/>
+<path d="M118 294c82 82 316 100 404-4" fill="none" stroke="url(#lime)" stroke-width="17" stroke-linecap="round"/>
+<path d="M116 319c92 62 310 72 409-13" fill="none" stroke="#efffc9" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>
+<path d="M115 408 320 458 525 408 493 520 320 584 147 520Z" fill="#080d09" stroke="url(#lime)" stroke-width="11" stroke-linejoin="round"/>
+<text x="320" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="65" font-weight="900" letter-spacing="-2" fill="url(#silver)">SLOOM<tspan fill="url(#lime)">365</tspan></text>
+<path d="M225 530h190" stroke="#577c2d" stroke-width="5" stroke-linecap="round"/>
+</svg>
