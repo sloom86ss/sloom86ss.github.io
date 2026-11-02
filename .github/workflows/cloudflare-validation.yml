@@ -1,0 +1,25 @@
+name: Validate Cloudflare chat
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check browser chat JavaScript
+        run: node --check chat.js
+      - name: Check Cloudflare Pages function
+        run: node --check --input-type=module < functions/api/chat.js
+      - name: Validate sports data JSON
+        run: python -c "import json; json.load(open('data.json', encoding='utf-8'))"
