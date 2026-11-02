@@ -21,6 +21,27 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;pa
 footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;padding:20px;border-top:1px solid var(--line)}
 @media(min-width:760px){.leagues{grid-template-columns:repeat(3,minmax(0,1fr))}.teams-directory{grid-template-columns:repeat(4,minmax(0,1fr))}.news{grid-template-columns:repeat(4,minmax(0,1fr))}.wrap{padding-top:25px}.hero{padding:32px}.stats{max-width:520px}}
 @media(max-width:380px){.leagues,.news{grid-template-columns:1fr}.wrap{padding-inline:12px}}
+
+.clock-deck{display:grid;grid-template-columns:1.1fr 1fr;gap:12px;margin:0 0 16px}
+.clock-card{position:relative;overflow:hidden;border:1px solid #8c7540;border-radius:18px;padding:13px;background:linear-gradient(145deg,#1b241c,#0d130f 70%);box-shadow:inset 0 0 0 3px #c4a45a12,0 8px 24px #0005}
+.clock-card:before{content:"";position:absolute;inset:5px;border:1px solid #b7a06b33;border-radius:13px;pointer-events:none}
+.clock-heading{display:flex;justify-content:space-between;align-items:center;color:#e6d2a0;font-size:11px;font-weight:900;margin-bottom:10px}
+.clock-heading small{color:#a9a17e;font-size:9px;font-weight:600}
+.clock-layout{display:flex;align-items:center;justify-content:center;gap:12px}
+.analog-clock{width:108px;height:108px;position:relative;flex:none;border-radius:50%;border:5px solid #b99a56;background:radial-gradient(circle,#f2e6c8 0,#d9c89f 72%,#a98c51 73%,#6e5731 100%);box-shadow:0 0 0 3px #302817,0 0 0 5px #b99a5640,inset 0 2px 9px #51401c}
+.analog-clock:before{content:"";position:absolute;inset:7px;border:1px solid #8d7445;border-radius:50%}
+.clock-number{position:absolute;color:#302719;font:bold 9px Georgia,serif;transform:translate(-50%,-50%)}
+.clock-number.n12{left:50%;top:12%}.clock-number.n3{left:87%;top:50%}.clock-number.n6{left:50%;top:88%}.clock-number.n9{left:13%;top:50%}
+.clock-hand{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%;border-radius:5px;transform:translateX(-50%) rotate(0deg)}
+.clock-hand.hour{width:4px;height:27px;background:#2c281e}.clock-hand.minute{width:3px;height:36px;background:#4b3a21}.clock-hand.second{width:1px;height:40px;background:#9b3027}
+.clock-pin{position:absolute;width:8px;height:8px;border-radius:50%;background:#a23e2b;border:1px solid #f1dfb5;left:50%;top:50%;transform:translate(-50%,-50%)}
+.zone-list{display:grid;gap:7px;flex:1;min-width:0}.zone-time{border-bottom:1px solid #9b865033;padding-bottom:5px}.zone-time:last-child{border:0;padding:0}
+.zone-time span{display:block;color:#a9a17e;font-size:9px}.zone-time b{display:block;color:#f2e5c8;font:700 16px Georgia,serif;direction:ltr;text-align:right;white-space:nowrap}
+.update-clock .analog-clock{width:88px;height:88px}.update-clock .clock-hand.hour{height:22px}.update-clock .clock-hand.minute{height:29px}.update-clock .clock-hand.second{height:32px}
+.update-info{min-width:0;text-align:center;flex:1}.update-info b{display:block;color:#f2e5c8;font:700 16px Georgia,serif;direction:ltr}
+.update-info span{display:block;color:#a9a17e;font-size:9px;margin-top:4px}.update-info small{display:block;color:#b7f34a;font-size:10px;margin-top:8px}
+@media(max-width:520px){.clock-deck{grid-template-columns:1fr}.clock-card{padding:12px}.clock-layout{justify-content:space-evenly}.analog-clock{width:96px;height:96px}.zone-time b{font-size:15px}}
+
 </style>
 <meta name="keywords" content="سلوم 365, SLOOM 365, سلوم365, Sloom 365, SLOOM 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوري الإنجليزي, دوري روشن">
 <link rel="canonical" href="https://sloom86ss.github.io/">
@@ -46,6 +67,34 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 </head>
 <body><main class="wrap">
 <header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:52px;height:52px;object-fit:contain"><div><h1>سلوم 365</h1><small>SLOOM 365 · SLOOM 365</small></div></div><div class="live-pill">● أخبار ونتائج كرة القدم</div></header>
+
+<section class="clock-deck" aria-label="الساعات العالمية ووقت تحديث البيانات">
+ <div class="clock-card">
+  <div class="clock-heading"><span>⌚ الساعة العالمية</span><small>CLASSIC WORLD CLOCK</small></div>
+  <div class="clock-layout">
+   <div class="analog-clock" id="liveClock" aria-label="ساعة عُمان الكلاسيكية">
+    <span class="clock-number n12">12</span><span class="clock-number n3">3</span><span class="clock-number n6">6</span><span class="clock-number n9">9</span>
+    <i class="clock-hand hour" id="liveHour"></i><i class="clock-hand minute" id="liveMinute"></i><i class="clock-hand second" id="liveSecond"></i><i class="clock-pin"></i>
+   </div>
+   <div class="zone-list">
+    <div class="zone-time"><span>عُمان · MUSCAT</span><b id="timeOman">--:--:--</b></div>
+    <div class="zone-time"><span>السعودية · RIYADH</span><b id="timeSaudi">--:--:--</b></div>
+    <div class="zone-time"><span>غرينتش · UTC</span><b id="timeUTC">--:--:--</b></div>
+   </div>
+  </div>
+ </div>
+ <div class="clock-card update-clock">
+  <div class="clock-heading"><span>🕰️ ساعة آخر تحديث</span><small>LAST DATA UPDATE</small></div>
+  <div class="clock-layout">
+   <div class="analog-clock" id="updateClock" aria-label="ساعة آخر تحديث">
+    <span class="clock-number n12">12</span><span class="clock-number n3">3</span><span class="clock-number n6">6</span><span class="clock-number n9">9</span>
+    <i class="clock-hand hour" id="updateHour"></i><i class="clock-hand minute" id="updateMinute"></i><i class="clock-hand second" id="updateSecond"></i><i class="clock-pin"></i>
+   </div>
+   <div class="update-info"><b id="lastUpdateTime">--:--:--</b><span id="lastUpdateDate">بانتظار أول تحديث</span><small id="lastUpdateAge">لم تصل بيانات بعد</small></div>
+  </div>
+ </div>
+</section>
+
 <div class="ticker" aria-label="شريط الأخبار العاجلة"><div class="ticker-track" id="tickerTrack"><span>● SLOOM 365 | نتحقق من آخر الأخبار الكروية…</span></div></div>
 <section class="hero hero-logo-only" aria-label="شعار سلوم 365"><div class="hero-logo-orbit"></div><img class="hero-logo" src="assets/sloom360-logo.svg" alt="شعار SLOOM 365 سلوم 365"><span class="hero-logo-caption">SLOOM 365 · سلوم 365</span></section>
 <section class="stats"><div class="stat"><b id="matchCount">—</b><span>مباراة معروضة</span></div><div class="stat"><b id="liveCount">—</b><span>مباشر الآن</span></div><div class="stat"><b id="updated">—</b><span>آخر تحديث</span></div></section>
