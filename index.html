@@ -740,6 +740,15 @@ footer{color:#67816e!important;border-color:#d4e6d8!important}
 @media(max-width:760px){.sloom-quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}.sloom-quick-tile{min-height:90px!important}}
 @media(max-width:480px){.wrap{padding:9px 10px 108px!important}.sloom-quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.sloom-quick-tile{min-height:86px!important}.sloom-hero-banner{min-height:126px!important}.weather-strip{background:#fff!important}}
 
+/* إصلاح نهائي: إظهار زري التطبيق والإشعارات بجانب عنوان آخر الأخبار */
+.news-section-head{display:flex!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;gap:10px!important}
+.news-section-head .news-head-actions,.news-section-head .install-app-slot{display:flex!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;gap:7px!important;visibility:visible!important;opacity:1!important;position:static!important;width:auto!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important}
+.news-section-head #installApp,.news-section-head #enableNotifications,.news-section-head #installApp[hidden],.news-section-head #enableNotifications[hidden]{display:inline-flex!important;align-items:center!important;justify-content:center!important;visibility:visible!important;opacity:1!important;position:static!important;min-height:38px!important;padding:7px 11px!important;border-radius:10px!important;font:900 11px Cairo,Arial,sans-serif!important;white-space:nowrap!important;clip:auto!important;clip-path:none!important}
+.news-section-head #installApp{background:#b7f34a!important;color:#10170b!important;border:1px solid #d8ff8b!important}
+.news-section-head #enableNotifications{background:#203a2a!important;color:#eaffd6!important;border:1px solid #8ab56a!important}
+.news-section-head #installAppHelp,.news-section-head #notificationHelp{display:none!important}
+@media(max-width:520px){.news-section-head{align-items:flex-start!important}.news-section-head .news-head-actions{width:100%!important;flex:1 1 100%!important}.news-section-head #installApp,.news-section-head #enableNotifications{font-size:10px!important;min-height:36px!important;padding:6px 9px!important}}
+
 /* طلب المستخدم: خلفية سوداء بالكامل مع الحفاظ على ألوان المكونات الحالية */
 html,body{background:#000!important;background-image:none!important}
 /* شريط الأخبار: دورة الحركة 12 ثانية */
@@ -905,8 +914,7 @@ header{background:#101713!important;border:0!important;border-radius:16px!import
  <a class="sloom-quick-tile" href="#news"><span>📰</span><b>آخر الأخبار</b></a>
  <a class="sloom-quick-tile" href="#weatherTemp"><span>🌤️</span><b>الطقس</b></a>
  <a class="sloom-quick-tile" href="#sloom-chat-launch"><span>💬</span><b>الدردشة الذكية</b></a>
- <div class="sloom-quick-tile sloom-quick-action"><button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲<b>تثبيت التطبيق</b></button><p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p></div>
- <div class="sloom-quick-tile sloom-quick-action"><button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار">🔔<b>الإشعارات</b></button><p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p></div>
+
 </section>
 <section class="stats"><div class="stat"><b id="matchCount">—</b><span>مباراة معروضة</span></div><div class="stat"><b id="liveCount">—</b><span>مباشر الآن</span></div><div class="stat"><b id="updated">—</b><span>آخر تحديث</span></div></section>
 <div class="section-head"><h3>🏆 الدوريات والبطولات العالمية</h3><small>مباريات من مصادر البيانات</small></div>
@@ -920,7 +928,12 @@ header{background:#101713!important;border:0!important;border-radius:16px!import
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters day-switcher" id="dayFilters"><button class="filter" data-day="yesterday">الأمس</button><button class="filter active" data-day="today">اليوم</button><button class="filter" data-day="tomorrow">غداً</button></div>
 
 <div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
-<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><small class="news-source-note">أخبار من مصادر موثوقة</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
+<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><div class="news-head-actions install-app-slot">
+ <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button>
+ <button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار">🔔 تفعيل الإشعارات</button>
+ <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
+ <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
+ </div><small class="news-source-note">أخبار من مصادر موثوقة</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 
 <nav class="sloom-bottom-nav" aria-label="التنقل الرئيسي">
 <a href="#arabicLeagueNav"><span>🏆</span>البطولات</a>
