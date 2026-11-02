@@ -787,6 +787,29 @@ header{background:#101512!important;border:1px solid #26352b!important;border-ra
 .sloom-bottom-nav a{color:#fff!important}.sloom-bottom-nav a.active{background:#b7f34a!important;color:#101512!important}
 footer{color:#53675a!important}
 
+
+/* Final correction: mathematically centered mobile nav + requested ticker pace */
+.sloom-bottom-nav{
+  left:0!important;right:0!important;margin-left:auto!important;margin-right:auto!important;
+  transform:none!important;width:calc(100% - 20px)!important;max-width:620px!important;
+  display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  justify-items:stretch!important;align-items:stretch!important;direction:rtl!important;
+  box-sizing:border-box!important;
+}
+.sloom-bottom-nav>a{
+  width:100%!important;min-width:0!important;margin:0!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  text-align:center!important;justify-self:stretch!important;
+}
+#newsTicker .ticker-track{
+  animation:newsTicker 12s linear infinite!important;
+  animation-duration:12s!important;
+  animation-timing-function:linear!important;
+}
+@media(max-width:520px){
+ .sloom-bottom-nav{left:0!important;right:0!important;margin-inline:auto!important;width:calc(100% - 16px)!important;max-width:none!important;transform:none!important}
+}
+
 /* SLOOM365 final alignment + unified black/green/white palette */
 :root{
  --bg:#f4f8f5!important;--panel:#ffffff!important;--panel2:#edf5ef!important;
