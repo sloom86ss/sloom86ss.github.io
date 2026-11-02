@@ -3,7 +3,7 @@
 <head>
 <!-- Google ad injection paused to keep the top of SLOOM365 clean. -->
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" type="image/svg+xml" href="assets/sloom360-logo.svg"><meta name="theme-color" content="#090d0b">
+<link rel="icon" type="image/svg+xml" href="assets/sloom360-logo.svg"><meta name="theme-color" content="#167a3e">
 <link rel="manifest" href="/manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="سلوم 365"><meta name="mobile-web-app-capable" content="yes"><title>سلوم 365 | SLOOM 365 - مباريات وأخبار كرة القدم</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -606,6 +606,25 @@ footer{border-color:#28543a!important}
 .weather-strip{display:flex!important;visibility:visible!important;opacity:1!important;align-items:center!important;gap:10px!important;flex-wrap:wrap!important}
 #weatherLocationButton{display:inline-flex!important;visibility:visible!important;opacity:1!important;align-items:center!important;justify-content:center!important;min-height:38px!important}
 @media(max-width:520px){.news-section-head .install-app-slot{gap:6px!important}.news-section-head #installApp,.news-section-head #enableNotifications{font-size:10px!important;padding:7px 9px!important}.weather-strip{gap:7px!important}}
+
+/* SLOOM365 visual identity: clean white canvas with green accents */
+:root{--bg:#f3faf5;--panel:#fff;--panel2:#eaf5ed;--line:#cfe3d4;--green:#167a3e;--muted:#607b68;--white:#173b27;--red:#d9364b;color-scheme:light}
+html,body{background:#f3faf5!important;color:#173b27!important}
+body{background:linear-gradient(180deg,#eaf7ed 0,#f7fbf8 240px,#f3faf5 100%)!important}
+header,.section-head,.stats,.leagues,.teams-directory,.news{color:#173b27!important}
+.hero,.hero-logo-only{background:linear-gradient(125deg,#e1f4e6,#fff 78%)!important;border:1px solid #b9dcc3!important;color:#173b27!important}
+.hero p,.hero-logo-caption{color:#356b48!important}
+.whatsapp-channel{background:#e8f7ec!important;border-color:#b9ddc3!important}.whatsapp-channel-copy b{color:#17452a!important}.whatsapp-channel-copy span{color:#547660!important}
+.ticker{background:#176b39!important;border-color:#176b39!important;color:#fff!important}.ticker-track b,.ticker-world-times b{color:#fff!important}.ticker-world-times span{color:#e8f7ec!important}
+.live-board,.upcoming-board,.stat,.league,.news-card,.team-chip,.empty,.team-search,.clock-card,.weather-strip{background:#fff!important;border-color:#cfe3d4!important;color:#173b27!important;box-shadow:0 5px 18px #174b2610}
+.clock-card{background:linear-gradient(145deg,#fff,#edf7ef)!important;border-color:#a9cfb3!important}.clock-heading,.clock-heading small,.classic-caption b,.classic-caption span,.zone-time span,.zone-time b,.update-info b,.update-info span{color:#285c3a!important}
+.live-board-head h2,.upcoming-board-head h2,.section-head h3,.league-title b,.news-card b,.team-chip,.match,.teams,.match-meta{color:#173b27!important}
+.match,.standings{border-color:#d9e9dd!important}.score{background:#e8f4eb!important;color:#145b31!important}.filter{background:#fff!important;color:#245437!important;border-color:#cfe3d4!important}.filter.active,.btn.primary{background:#167a3e!important;color:#fff!important;border-color:#167a3e!important}
+.btn,.live-pill{background:#e8f5eb!important;color:#176b39!important;border-color:#b9d9c1!important}
+.install-app-button{background:#167a3e!important;color:#fff!important}.news-section-head #installApp{background:#167a3e!important;color:#fff!important;border-color:#167a3e!important}.news-section-head #enableNotifications{background:#e7f5ea!important;color:#176b39!important;border-color:#9fcbaa!important}
+.weather-strip{background:#fff!important;border:1px solid #cfe3d4!important}.weather-temp{color:#167a3e!important}.weather-desc,.weather-place{color:#496c53!important}#weatherLocationButton{background:#167a3e!important;color:#fff!important;border-color:#167a3e!important}
+.sloom-bottom-nav{background:#fff!important;border-color:#cfe3d4!important;box-shadow:0 -5px 22px #174b2612!important}.sloom-bottom-nav a{color:#42684d!important}.sloom-bottom-nav a.active{color:#167a3e!important}
+footer{color:#607b68!important;border-color:#d5e7d9!important}
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -993,33 +1012,38 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 (()=> {
  const $=id=>document.getElementById(id);
  const labels={0:['سماء صافية','☀️'],1:['غائم جزئياً','🌤️'],2:['غائم جزئياً','⛅'],3:['غائم','☁️'],45:['ضباب','🌫️'],48:['ضباب كثيف','🌫️'],51:['رذاذ خفيف','🌦️'],53:['رذاذ','🌦️'],55:['رذاذ كثيف','🌧️'],61:['أمطار خفيفة','🌦️'],63:['أمطار','🌧️'],65:['أمطار غزيرة','🌧️'],71:['ثلوج خفيفة','🌨️'],73:['ثلوج','🌨️'],75:['ثلوج كثيفة','❄️'],80:['زخات مطر','🌦️'],81:['زخات مطر','🌧️'],82:['زخات غزيرة','⛈️'],95:['عواصف رعدية','⛈️'],96:['عواصف رعدية وبَرَد','⛈️'],99:['عواصف قوية','⛈️']};
- const seeb={latitude:23.6803,longitude:58.1825};
+ const omanFallback={latitude:23.5880,longitude:58.3829};
  function clock(){const d=new Date();if($('weatherLocalTime'))$('weatherLocalTime').textContent=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'}).format(d);if($('weatherLocalDate'))$('weatherLocalDate').textContent=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long'}).format(d)+' · عُمان'}
- let weatherCoords={...seeb},weatherPlace='السيب، عُمان',weatherBusy=false;
+ let weatherCoords={...omanFallback},weatherPlace='سلطنة عُمان',weatherBusy=false;
+ async function fetchWeather(lat,lon){
+  const u='https://api.open-meteo.com/v1/forecast?latitude='+encodeURIComponent(lat)+'&longitude='+encodeURIComponent(lon)+'&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&timezone=Asia%2FMuscat';
+  const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
+  const j=await r.json(),c=j.current;if(!c||c.temperature_2m==null)throw Error('بيانات الطقس غير مكتملة');return c;
+ }
+ function showWeather(c,place){
+  const w=labels[c.weather_code]||['حالة الطقس الحالية','🌤️'];
+  $('weatherTemp').textContent=Math.round(c.temperature_2m)+'°C';$('weatherIcon').textContent=w[1];$('weatherPlaceName').textContent=place;
+  $('weatherDesc').textContent=w[0]+' · المحسوس '+Math.round(c.apparent_temperature)+'° · الرطوبة '+Math.round(c.relative_humidity_2m)+'% · الرياح '+Math.round(c.wind_speed_10m)+' كم/س';
+  if($('weatherLocationButton'))$('weatherLocationButton').textContent='📍 تحديث موقعي';
+ }
  async function loadWeatherAt(lat,lon,place){
   if(weatherBusy)return;weatherBusy=true;
-  try{
-   const u='https://api.open-meteo.com/v1/forecast?latitude='+encodeURIComponent(lat)+'&longitude='+encodeURIComponent(lon)+'&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&timezone=Asia%2FMuscat';
-   const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
-   const j=await r.json(),c=j.current;if(!c||c.temperature_2m==null)throw Error('بيانات الطقس غير مكتملة');
-   const w=labels[c.weather_code]||['حالة الطقس الحالية','🌤️'];
-   $('weatherTemp').textContent=Math.round(c.temperature_2m)+'°C';$('weatherIcon').textContent=w[1];$('weatherPlaceName').textContent=place;
-   $('weatherDesc').textContent=w[0]+' · المحسوس '+Math.round(c.apparent_temperature)+'° · الرطوبة '+Math.round(c.relative_humidity_2m)+'% · الرياح '+Math.round(c.wind_speed_10m)+' كم/س';
-   if($('weatherLocationButton'))$('weatherLocationButton').textContent='📍 تحديث موقعي';
-  }catch(e){$('weatherDesc').textContent='تعذر جلب الطقس الآن؛ سنعيد المحاولة تلقائياً. ('+(e.message||'اتصال')+')';}
-  finally{weatherBusy=false;}
+  try{const c=await fetchWeather(lat,lon);showWeather(c,place);}
+  catch(primaryError){
+   // عند فشل الطقس المحلي، نستخدم مسقط كموقع مرجعي عام لسلطنة عُمان.
+   try{const c=await fetchWeather(omanFallback.latitude,omanFallback.longitude);weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';showWeather(c,'سلطنة عُمان');$('weatherDesc').textContent+=' · بيانات احتياطية من مسقط';}
+   catch(backupError){$('weatherDesc').textContent='تعذر الاتصال بمصادر الطقس حالياً؛ ستتم إعادة المحاولة تلقائياً.';}
+  }finally{weatherBusy=false;}
  }
  function weather(){loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace)}
  function requestWeatherLocation(){
-  if(!navigator.geolocation){$('weatherDesc').textContent='تحديد الموقع غير مدعوم؛ نعرض طقس السيب.';return;}
+  if(!navigator.geolocation){weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';$('weatherDesc').textContent='تحديد الموقع غير مدعوم؛ نعرض الطقس العام لسلطنة عُمان.';weather();return;}
   $('weatherDesc').textContent='بانتظار السماح بموقع الهاتف…';
   navigator.geolocation.getCurrentPosition(async pos=>{
-   weatherCoords={latitude:pos.coords.latitude,longitude:pos.coords.longitude};weatherPlace='موقعك الحالي';
-   await loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace);
+   weatherCoords={latitude:pos.coords.latitude,longitude:pos.coords.longitude};weatherPlace='موقعك الحالي';await loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace);
   },err=>{
-   weatherCoords={...seeb};weatherPlace='السيب، عُمان';
-   $('weatherDesc').textContent=err.code===1?'لم تسمح بالموقع؛ نعرض طقس السيب بدلاً منه.':'تعذر تحديد الموقع؛ نعرض طقس السيب بدلاً منه.';
-   weather();
+   weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';
+   $('weatherDesc').textContent=err.code===1?'لم تسمح بالموقع؛ نعرض الطقس العام لسلطنة عُمان.':'تعذر تحديد الموقع؛ نعرض الطقس العام لسلطنة عُمان.';weather();
   },{enableHighAccuracy:false,timeout:15000,maximumAge:600000});
  }
  clock();weather();$('weatherLocationButton')?.addEventListener('click',requestWeatherLocation);setInterval(clock,15000);setInterval(weather,15*60*1000);
