@@ -99,6 +99,15 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
  .install-app-button{left:10px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);min-height:45px;padding:0 11px!important;font-size:11px!important}
 }
 
+
+/* تنظيف نهائي لأعلى الصفحة ونقل زر التطبيق إلى موضع الساعة السابقة */
+.install-app-slot{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin:0 auto 16px;padding:8px 10px;width:min(100%,360px);border:1px solid #48652d;border-radius:13px;background:linear-gradient(110deg,#1b2b19,#101811)}
+.install-app-slot .install-app-button{position:static!important;left:auto!important;right:auto!important;bottom:auto!important;z-index:1!important;display:inline-flex!important;align-items:center;justify-content:center;min-height:36px;padding:0 13px!important;border:1px solid #d8ff8b!important;border-radius:10px!important;font-size:11px!important;box-shadow:none!important}
+.install-app-slot .install-app-help{position:static!important;display:block;width:auto;max-width:100%;padding:0!important;margin:0!important;background:transparent!important;text-align:center;font-size:9px!important}
+.install-app-slot .install-app-help:empty{display:none}
+.install-app-slot [hidden]{display:none!important}
+.clock-deck{display:none!important}
+@media(max-width:520px){.install-app-slot{width:100%;margin:0 0 12px;padding:7px}.install-app-slot .install-app-button{min-height:34px}}
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -118,7 +127,7 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 
 {"@context":"https://schema.org","@type":"WebSite","name":"سلوم 365","alternateName":["SLOOM 365","سلوم 365"],"url":"https://sloom86ss.github.io/","description":"SLOOM 365 منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.","inLanguage":"ar-OM"}</script>
 </head>
-<body><main class="wrap"><section id="siteErrorAlert" class="site-error-alert" role="status" aria-live="polite" hidden><strong>⚠️ تنبيه حالة الموقع</strong><span id="siteErrorMessage">يجري فحص خدمات الموقع…</span><small id="siteErrorTime"></small></section>
+<body><main class="wrap">
 
 <header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:52px;height:52px;object-fit:contain"><div><h1>سلوم 365</h1><small>مباريات وأخبار كرة القدم</small></div></div></header>
 <section class="ticker" id="newsTicker" aria-label="الأخبار والتوقيت العالمي">
@@ -131,17 +140,9 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
  <div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل الأخبار الرياضية…</span></div>
 </section>
 
-<section class="clock-deck" aria-label="الساعة الكلاسيكية">
- <div class="clock-card compact-clock">
-  <div class="clock-heading"><span>⌚ الساعة الكلاسيكية</span><small>توقيت عُمان</small></div>
-  <div class="clock-layout">
-   <div class="analog-clock" id="liveClock" aria-label="ساعة عُمان الكلاسيكية">
-    <span class="clock-number n12">12</span><span class="clock-number n3">3</span><span class="clock-number n6">6</span><span class="clock-number n9">9</span>
-    <i class="clock-hand hour" id="liveHour"></i><i class="clock-hand minute" id="liveMinute"></i><i class="clock-hand second" id="liveSecond"></i><i class="clock-pin"></i>
-   </div>
-   <div class="classic-caption"><b>مسقط</b><span>سلطنة عُمان</span></div>
-  </div>
- </div>
+<section class="install-app-slot" aria-label="تثبيت تطبيق سلوم 365">
+ <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button>
+ <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
 </section>
 
 <section class="hero hero-logo-only" aria-label="شعار سلوم 365"><div class="hero-logo-orbit"></div><img class="hero-logo" src="assets/sloom360-logo.svg" alt="شعار SLOOM 365 سلوم 365"><span class="hero-logo-caption">SLOOM 365 · سلوم 365</span></section>
@@ -160,8 +161,6 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.</footer>
 </main>
-<button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button>
-<p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
 <script>
 let sportsData={},activeFilter='all',activeDay='today',activeRegion='all',dataGeneratedAt=null;
 const labels={football:'كرة القدم',basketball:'كرة السلة',americanfootball:'كرة القدم الأمريكية',hockey:'هوكي',baseball:'بيسبول',other:'رياضات أخرى'};
@@ -209,8 +208,8 @@ document.getElementById('teamsDirectory').addEventListener('click',e=>{const btn
 document.getElementById('teamSearch').addEventListener('input',render);
 document.getElementById('arabicLeagueNav').addEventListener('click',e=>{const b=e.target.closest('[data-region]');if(!b)return;activeRegion=b.dataset.region;document.querySelectorAll('#arabicLeagueNav button').forEach(x=>x.classList.toggle('active',x===b));render();});
 document.getElementById('dayFilters').addEventListener('click',e=>{const b=e.target.closest('[data-day]');if(!b)return;activeDay=b.dataset.day;document.querySelectorAll('#dayFilters .filter').forEach(x=>x.classList.toggle('active',x===b));render();});
-function showSiteError(message){const box=document.getElementById('siteErrorAlert'),msg=document.getElementById('siteErrorMessage'),time=document.getElementById('siteErrorTime');if(!box||!msg)return;msg.textContent=message;time.textContent='وقت الرصد: '+new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',dateStyle:'medium',timeStyle:'medium'}).format(new Date())+' · بتوقيت عُمان';box.hidden=false;box.classList.add('visible')}
-function clearSiteError(){const box=document.getElementById('siteErrorAlert');if(box){box.hidden=true;box.classList.remove('visible')}}
+function showSiteError(message){console.warn('[SLOOM365]',message)}
+function clearSiteError(){}
 function checkDataErrors(d){const errors=[];if(Array.isArray(d.news_errors))errors.push(...d.news_errors);Object.values(d.leagues||{}).forEach(l=>{if(l?.stale)errors.push('بيانات قديمة: '+(l.name||'إحدى البطولات'));if(Array.isArray(l?.errors))errors.push(...l.errors.map(x=>(l.name||'مصدر رياضي')+': '+x))});if(errors.length){const unique=[...new Set(errors)].slice(0,3);showSiteError('تم رصد '+errors.length+' مشكلة في جلب البيانات. '+unique.join(' · '));}else clearSiteError()}
 window.addEventListener('error',e=>showSiteError('حدث خطأ JavaScript في الصفحة: '+(e.message||'خطأ غير معروف')));
 window.addEventListener('unhandledrejection',e=>showSiteError('تعذر إكمال إحدى العمليات: '+String(e.reason?.message||e.reason||'خطأ غير معروف')));
