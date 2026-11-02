@@ -1564,6 +1564,8 @@ function renderUpcoming(){
   card.innerHTML='<div class="upcoming-board-league">'+esc(league.name||'بطولة')+'</div><div class="upcoming-board-teams"><div class="upcoming-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name||'الفريق الأول'))+'</span></div><div class="live-board-score">VS</div><div class="upcoming-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name||'الفريق الثاني'))+'</span></div></div><div class="upcoming-board-time"><strong>'+label+'</strong><span>'+esc(when)+' · بتوقيت عُمان</span></div>';
   if(verifiedBroadcastName(match)){const channel=document.createElement('div');channel.className='upcoming-board-broadcast';channel.innerHTML='<b>📺 القناة:</b> '+esc(verifiedBroadcastName(match));card.appendChild(channel)}
   const officialLink=broadcastLinkMarkup(match);if(officialLink){const wrap=document.createElement('div');wrap.innerHTML=officialLink;card.appendChild(wrap)}
+  card.style.cursor='pointer';
+  card.addEventListener('click',e=>{if(e.target.closest('a,button'))return;openMatchModal({league:league.name||'بطولة',leagueKey:Object.keys(sportsData).find(k=>sportsData[k]===league)||'',match});});
   list.appendChild(card);
  });
 }
