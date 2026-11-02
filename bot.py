@@ -23,6 +23,12 @@ FEEDS = {
     "soccer/uefa.champions": ("دوري أبطال أوروبا", "football"),
     "soccer/uefa.europa": ("الدوري الأوروبي", "football"),
     "soccer/fifa.world": ("كأس العالم", "football"),
+    "soccer/usa.1": ("الدوري الأمريكي", "football"),
+    "soccer/uefa.conference": ("دوري المؤتمر الأوروبي", "football"),
+    "soccer/tur.1": ("الدوري التركي", "football"),
+    "soccer/sco.1": ("الدوري الاسكتلندي", "football"),
+    "soccer/jpn.1": ("الدوري الياباني", "football"),
+    "soccer/mex.1": ("الدوري المكسيكي", "football"),
 }
 NOW = lambda: datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
@@ -35,6 +41,15 @@ RSS_FEEDS = [
     ("Google News", "https://news.google.com/rss/search?q=%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=OM&ceid=OM:ar"),
     ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84%D8%A7%D8%AA%20%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=SA&ceid=SA:ar"),
     ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%20%D9%83%D8%B1%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D9%85&hl=ar&gl=SA&ceid=SA:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA%D9%8A&hl=ar&gl=AE&ceid=AE:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%AF%D9%88%D8%B1%D9%8A%20%D9%86%D8%AC%D9%88%D9%85%20%D9%82%D8%B7%D8%B1&hl=ar&gl=QA&ceid=QA:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A&hl=ar&gl=EG&ceid=EG:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%AF%D9%88%D8%B1%D9%8A%20%D9%86%D8%AC%D9%88%D9%85%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82&hl=ar&gl=IQ&ceid=IQ:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D9%86%D9%8A&hl=ar&gl=OM&ceid=OM:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA%D9%8A&hl=ar&gl=KW&ceid=KW:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%D9%8A&hl=ar&gl=MA&ceid=MA:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%AA%D9%88%D9%86%D8%B3%D9%8A&hl=ar&gl=TN&ceid=TN:ar"),
+    ("Google News", "https://news.google.com/rss/search?q=%D8%A7%D9%84%D8%AF%D9%88%D8%B1%D9%8A%20%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A&hl=ar&gl=DZ&ceid=DZ:ar"),
 ]
 
 def parse_published(value):
