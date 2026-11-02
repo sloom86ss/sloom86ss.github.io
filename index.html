@@ -64,6 +64,41 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 .match-meta{font-size:12px!important;line-height:1.8!important;margin-top:5px!important;text-align:center}
 .match-status{font-weight:800;color:#dce9dd}.match-time{font-size:13px!important;font-weight:800;color:#b7f34a!important;letter-spacing:.1px}
 @media(max-width:520px){.clock-deck{grid-template-columns:minmax(0,.75fr) minmax(0,1.4fr)!important}.clock-card{min-height:unset!important}.digital-zones{grid-template-columns:repeat(2,minmax(0,1fr))!important}.digital-zones .zone-time span{font-size:9px!important}.digital-zones .zone-time b{font-size:14px!important}.ticker-track span{font-size:11px}.match-time{font-size:12px!important}.brand h1{font-size:19px}}
+
+/* واجهة خفيفة: شريط أخبار وتوقيت مختصر وأزرار عائمة */
+.ticker{display:grid!important;grid-template-columns:auto auto minmax(0,1fr);align-items:center;gap:10px;margin:0 0 10px;padding:11px 12px;min-height:58px}
+.ticker-label{font-size:12px!important;padding:7px 10px!important}
+.ticker-world-times{display:flex;align-items:center;gap:8px;direction:rtl;white-space:nowrap}
+.ticker-world-times span{display:grid;gap:1px;text-align:center;padding:0 7px;border-left:1px solid #40523f}
+.ticker-world-times span:last-child{border-left:0}
+.ticker-world-times b{font-size:10px;color:#d6e6d2}
+.ticker-world-times time{font:700 13px Georgia,serif;color:#d7ff9a;direction:ltr}
+.ticker-track{gap:28px!important;min-width:0}
+.ticker-track span{font-size:13px!important}
+.clock-deck{display:flex!important;justify-content:center;margin:0 0 12px!important}
+.clock-card.compact-clock{min-height:0!important;width:min(100%,310px);padding:8px 14px!important;border-radius:14px}
+.compact-clock .clock-heading{margin-bottom:4px;font-size:10px}
+.compact-clock .clock-layout{gap:12px}
+.compact-clock .analog-clock,.clock-deck .analog-clock{width:82px!important;height:82px!important;border-width:4px}
+.compact-clock .clock-hand.hour{height:21px}.compact-clock .clock-hand.minute{height:28px}.compact-clock .clock-hand.second{height:31px}
+.compact-clock .classic-caption b{font-size:12px}.compact-clock .classic-caption span{font-size:9px}
+.install-app-button{position:fixed!important;z-index:2147482999;left:14px;right:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);display:flex;align-items:center;justify-content:center;gap:6px;min-height:48px;padding:0 14px!important;border:1px solid #d8ff8b!important;border-radius:14px!important;background:#b7f34a!important;color:#10170b!important;font:900 12px Cairo,Arial,sans-serif!important;box-shadow:0 7px 22px #0009;cursor:pointer}
+.install-app-help{position:fixed!important;left:14px;bottom:calc(env(safe-area-inset-bottom,0px) + 70px);z-index:2147482999;width:min(280px,calc(100vw - 28px));padding:0!important;margin:0!important;background:#101914;color:#d6e6d2!important;border-radius:10px;font-size:10px!important}
+.install-app-help:empty{display:none}
+@media(max-width:520px){
+ .ticker{grid-template-columns:auto minmax(0,1fr);gap:7px;padding:9px 8px;min-height:0}
+ .ticker-label{font-size:11px!important;padding:6px 7px!important}
+ .ticker-world-times{grid-column:1/-1;grid-row:2;justify-content:center;gap:0;padding-top:5px;border-top:1px solid #304431}
+ .ticker-world-times span{flex:1;padding:0 4px}
+ .ticker-world-times b{font-size:9px}
+ .ticker-world-times time{font-size:12px}
+ .ticker-track{grid-column:1/-1;grid-row:3;width:100%;padding-top:3px}
+ .ticker-track span{font-size:13px!important}
+ .clock-card.compact-clock{width:min(100%,270px)}
+ .compact-clock .analog-clock,.clock-deck .analog-clock{width:76px!important;height:76px!important}
+ .install-app-button{left:10px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);min-height:45px;padding:0 11px!important;font-size:11px!important}
+}
+
 </style>
 <meta name="keywords" content="SLOOM365, SLOOM 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم 365 (SLOOM 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -86,35 +121,26 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 <body><main class="wrap"><section id="siteErrorAlert" class="site-error-alert" role="status" aria-live="polite" hidden><strong>⚠️ تنبيه حالة الموقع</strong><span id="siteErrorMessage">يجري فحص خدمات الموقع…</span><small id="siteErrorTime"></small></section>
 
 <header><div class="brand"><img src="assets/sloom360-logo.svg" alt="SLOOM 365" style="width:52px;height:52px;object-fit:contain"><div><h1>سلوم 365</h1><small>مباريات وأخبار كرة القدم</small></div></div></header>
-<section class="install-app-panel" aria-label="تثبيت تطبيق سلوم 365">
- <div class="install-app-copy"><strong>📲 ثبّت تطبيق SLOOM365</strong><small>أضف التطبيق إلى شاشة هاتفك للوصول السريع</small></div>
- <button id="installApp" type="button" class="install-app-button">تثبيت التطبيق</button>
- <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite">اضغط لتثبيت التطبيق على هاتفك.</p>
+<section class="ticker" id="newsTicker" aria-label="الأخبار والتوقيت العالمي">
+ <span class="ticker-label">آخر الأخبار</span>
+ <div class="ticker-world-times" aria-label="التوقيت العالمي">
+  <span><b>عُمان</b><time id="timeOman">--:--</time></span>
+  <span><b>السعودية</b><time id="timeSaudi">--:--</time></span>
+  <span><b>غرينتش</b><time id="timeUTC">--:--</time></span>
+ </div>
+ <div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل الأخبار الرياضية…</span></div>
 </section>
-<section class="ticker" id="newsTicker" aria-label="شريط الأخبار"><span class="ticker-label">آخر الأخبار</span><div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل الأخبار الرياضية…</span></div></section>
 
-<section class="clock-deck" aria-label="الساعات العالمية ووقت تحديث البيانات">
- <div class="clock-card">
-  <div class="clock-heading"><span>⌚ الساعة العالمية</span><small>CLASSIC WORLD CLOCK</small></div>
+<section class="clock-deck" aria-label="الساعة الكلاسيكية">
+ <div class="clock-card compact-clock">
+  <div class="clock-heading"><span>⌚ الساعة الكلاسيكية</span><small>توقيت عُمان</small></div>
   <div class="clock-layout">
    <div class="analog-clock" id="liveClock" aria-label="ساعة عُمان الكلاسيكية">
     <span class="clock-number n12">12</span><span class="clock-number n3">3</span><span class="clock-number n6">6</span><span class="clock-number n9">9</span>
     <i class="clock-hand hour" id="liveHour"></i><i class="clock-hand minute" id="liveMinute"></i><i class="clock-hand second" id="liveSecond"></i><i class="clock-pin"></i>
    </div>
-   <div class="classic-caption"><b>عُمان</b><span>الوقت المحلي</span></div>
+   <div class="classic-caption"><b>مسقط</b><span>سلطنة عُمان</span></div>
   </div>
- </div>
- <div class="clock-card digital-clock">
-  <div class="clock-heading"><span>🕒 الساعة الرقمية</span><small>DIGITAL WORLD TIME</small></div>
-  <div class="digital-zones">
-   <div class="zone-time"><span>عُمان · مسقط</span><b id="timeOman">--:--:--</b></div>
-   <div class="zone-time"><span>السعودية · الرياض</span><b id="timeSaudi">--:--:--</b></div>
-   <div class="zone-time"><span>مصر · القاهرة</span><b id="timeCairo">--:--:--</b></div>
-   <div class="zone-time"><span>بريطانيا · لندن</span><b id="timeLondon">--:--:--</b></div>
-   <div class="zone-time"><span>أمريكا · نيويورك</span><b id="timeNewYork">--:--:--</b></div>
-   <div class="zone-time"><span>غرينتش · UTC</span><b id="timeUTC">--:--:--</b></div>
-  </div>
-  <div class="digital-update"><span>آخر تحديث للبيانات</span><b id="lastUpdateTime">--:--:--</b><small id="lastUpdateDate">بانتظار أول تحديث</small><small id="lastUpdateAge">لم تصل بيانات بعد</small></div>
  </div>
 </section>
 
@@ -131,9 +157,11 @@ footer{text-align:center;color:var(--muted);font-size:10px;margin-top:30px;paddi
 
 <div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
 <div class="section-head"><h3>📰 آخر الأخبار</h3><small>من مصادر رياضية</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
-<section aria-label="مصدر رياضي إضافي" style="margin-top:16px;padding:14px;border:1px solid #26352b;border-radius:15px;background:#111915;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><div><b style="display:block;font-size:13px;color:#b7f34a">مصدر رياضي إضافي</b><small style="color:#91a095">للاطلاع والتحقق من الأخبار والمباريات عبر المصدر الأصلي</small></div><a href="https://kora360.app/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;padding:9px 13px;border-radius:10px;background:#b7f34a;color:#10170b;font-size:11px;font-weight:900">زيارة كورة 360 ↗</a></section>
+
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.</footer>
 </main>
+<button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button>
+<p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
 <script>
 let sportsData={},activeFilter='all',activeDay='today',activeRegion='all',dataGeneratedAt=null;
 const labels={football:'كرة القدم',basketball:'كرة السلة',americanfootball:'كرة القدم الأمريكية',hockey:'هوكي',baseball:'بيسبول',other:'رياضات أخرى'};
@@ -201,26 +229,11 @@ function setClock(prefix,angles){
  if(second)second.style.transform='translateX(-50%) rotate('+angles.s+'deg)';
 }
 function tickSloomClocks(){
- const now=new Date(),oman=clockAngles(now,'Asia/Muscat'),saudi=clockAngles(now,'Asia/Riyadh'),cairo=clockAngles(now,'Africa/Cairo'),london=clockAngles(now,'Europe/London'),newYork=clockAngles(now,'America/New_York'),utc=clockAngles(now,'UTC');
+ const now=new Date(),oman=clockAngles(now,'Asia/Muscat'),saudi=clockAngles(now,'Asia/Riyadh'),utc=clockAngles(now,'UTC');
  document.getElementById('timeOman').textContent=oman.display;
  document.getElementById('timeSaudi').textContent=saudi.display;
- document.getElementById('timeCairo').textContent=cairo.display;
- document.getElementById('timeLondon').textContent=london.display;
- document.getElementById('timeNewYork').textContent=newYork.display;
  document.getElementById('timeUTC').textContent=utc.display;
  setClock('live',oman);
- const stamp=dataGeneratedAt?new Date(dataGeneratedAt):null;
- if(stamp&&!Number.isNaN(stamp.getTime())){
-  const a=clockAngles(stamp,'Asia/Muscat');
-  document.getElementById('lastUpdateTime').textContent=a.display;
-  document.getElementById('lastUpdateDate').textContent=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',dateStyle:'medium'}).format(stamp)+' · عُمان';
-  const mins=Math.max(0,Math.floor((now-stamp)/60000));
-  document.getElementById('lastUpdateAge').textContent=mins<1?'تم التحديث للتو':mins<60?'منذ '+mins+' دقيقة':'منذ '+Math.floor(mins/60)+' ساعة';
- }else{
-  document.getElementById('lastUpdateTime').textContent='--:--:--';
-  document.getElementById('lastUpdateDate').textContent='بانتظار أول تحديث';
-  document.getElementById('lastUpdateAge').textContent='لم تصل بيانات بعد';
- }
 }
 setInterval(tickSloomClocks,1000);tickSloomClocks();
 
