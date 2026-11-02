@@ -1169,6 +1169,37 @@ body{padding-bottom:125px!important}
 }
 </style>
 
+<style>
+/* SLOOM365 repair pass: calmer ticker, larger floating logo, stable header actions */
+#tickerTrack.ticker-track{
+  animation:newsTicker 65s linear infinite!important;
+  animation-duration:65s!important;
+  animation-timing-function:linear!important;
+  animation-iteration-count:infinite!important;
+  animation-play-state:running!important;
+}
+@keyframes newsTicker{from{transform:translateX(0)}to{transform:translateX(50%)}}
+.sloom-header-top .brand img.sloom-logo-animated{
+  width:42px!important;height:42px!important;max-width:none!important;
+  animation:sloomLogoFloat 3.8s ease-in-out infinite,sloomLogoGlow 3.2s ease-in-out infinite!important;
+}
+.sloom-header-top .sloom-top-actions{
+  display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;
+  align-items:center!important;gap:6px!important;visibility:visible!important;opacity:1!important;
+}
+.sloom-header-top .sloom-top-actions #installApp,
+.sloom-header-top .sloom-top-actions #enableNotifications{
+  position:static!important;display:inline-flex!important;visibility:visible!important;
+  align-items:center!important;justify-content:center!important;white-space:nowrap!important;
+}
+#weatherLocationButton{touch-action:manipulation;cursor:pointer!important}
+@media(max-width:520px){
+ .sloom-header-top .brand img.sloom-logo-animated{width:36px!important;height:36px!important}
+ .sloom-header-top .sloom-top-actions{gap:3px!important}
+ .sloom-header-top .sloom-top-actions #installApp,
+ .sloom-header-top .sloom-top-actions #enableNotifications{font-size:9px!important;padding:6px 7px!important}
+}
+</style>
 </head>
 <body><main class="wrap">
 
@@ -1243,7 +1274,7 @@ body{padding-bottom:125px!important}
 <script>
 let sportsData={},activeFilter='all',activeDay='today',activeRegion='all',dataGeneratedAt=null;
 const labels={football:'كرة القدم',basketball:'كرة السلة',americanfootball:'كرة القدم الأمريكية',hockey:'هوكي',baseball:'بيسبول',other:'رياضات أخرى'};
-const clubAr={"Al Ahly":"الأهلي المصري","Al Ahli Saudi":"الأهلي السعودي","Al Shabab":"الشباب","Al Ettifaq":"الاتفاق","Al Fateh":"الفتح","Al Taawoun":"التعاون","Al Raed":"الرائد","Al Fayha":"الفيحاء","Al Riyadh":"الرياض","Al Wehda":"الوحدة","Al Sadd":"السد","Al Duhail":"الدحيل","Al Ain":"العين","Shabab Al Ahli":"شباب الأهلي","Al Wasl":"الوصل","Zamalek":"الزمالك","Pyramids FC":"بيراميدز","Ismaily":"الإسماعيلي","Newcastle United":"نيوكاسل يونايتد","West Ham United":"وست هام يونايتد","Aston Villa":"أستون فيلا","Brighton & Hove Albion":"برايتون","Everton":"إيفرتون","Wolverhampton Wanderers":"وولفرهامبتون","Nottingham Forest":"نوتنغهام فورست","Leicester City":"ليستر سيتي","Crystal Palace":"كريستال بالاس","Fulham":"فولهام","Brentford":"برينتفورد","Burnley":"بيرنلي","Sunderland":"سندرلاند","Girona":"جيرونا","Celta Vigo":"سيلتا فيغو","Real Betis":"ريال بيتيس","Mallorca":"مايوركا","Rayo Vallecano":"رايو فايكانو","Espanyol":"إسبانيول","Levante":"ليفانتي","Alaves":"ألافيس","AS Roma":"روما","Lazio":"لاتسيو","Atalanta":"أتالانتا","Fiorentina":"فيورنتينا","Bologna":"بولونيا","Torino":"تورينو","Como":"كومو","Monza":"مونزا","Lecce":"ليتشي","Genoa":"جنوى","Sassuolo":"ساسولو","Lyon":"ليون","Marseille":"مارسيليا","Monaco":"موناكو","Lille":"ليل","Nice":"نيس","Lens":"لانس","Rennes":"رين","Strasbourg":"ستراسبورغ","Feyenoord":"فينورد","AZ Alkmaar":"ألكمار","Club Brugge":"كلوب بروج","Celtic":"سيلتيك","Rangers":"رينجرز","Galatasaray":"غلطة سراي","Fenerbahce":"فنربخشة","Besiktas":"بشكتاش","Real Madrid":"ريال مدريد","Barcelona":"برشلونة","Manchester City":"مانشستر سيتي","Manchester United":"مانشستر يونايتد","Liverpool":"ليفربول","Arsenal":"أرسنال","Chelsea":"تشيلسي","Tottenham Hotspur":"توتنهام","Bayern Munich":"بايرن ميونخ","Borussia Dortmund":"بوروسيا دورتموند","Inter":"إنتر ميلان","Inter Milan":"إنتر ميلان","AC Milan":"ميلان","Juventus":"يوفنتوس","Napoli":"نابولي","Paris Saint-Germain":"باريس سان جيرمان","Al Hilal":"الهلال","Al Nassr":"النصر","Al Ittihad":"الاتحاد","Al-Ittihad":"الاتحاد","Al Ahli":"الأهلي","Getafe":"خيتافي","Sevilla":"إشبيلية","Valencia":"فالنسيا","Atlético Madrid":"أتلتيكو مدريد","Atletico Madrid":"أتلتيكو مدريد","Athletic Club":"أتلتيك بلباو","Real Sociedad":"ريال سوسيداد","Racing Santander":"راسينغ سانتاندير","Osasuna":"أوساسونا","Elche":"إلتشي","Villarreal":"فياريال","Porto":"بورتو","Benfica":"بنفيكا","Ajax":"أياكس","PSV Eindhoven":"آيندهوفن"};const arTeam=n=>clubAr[n]||n||'الفريق';
+const clubAr={"Al Ahly":"الأهلي المصري","Al Ahli Saudi":"الأهلي السعودي","Al Shabab":"الشباب","Al Ettifaq":"الاتفاق","Al Fateh":"الفتح","Al Taawoun":"التعاون","Al Raed":"الرائد","Al Fayha":"الفيحاء","Al Riyadh":"الرياض","Al Wehda":"الوحدة","Al Sadd":"السد","Al Duhail":"الدحيل","Al Ain":"العين","Shabab Al Ahli":"شباب الأهلي","Al Wasl":"الوصل","Zamalek":"الزمالك","Pyramids FC":"بيراميدز","Ismaily":"الإسماعيلي","Newcastle United":"نيوكاسل يونايتد","West Ham United":"وست هام يونايتد","Aston Villa":"أستون فيلا","Brighton & Hove Albion":"برايتون","Everton":"إيفرتون","Wolverhampton Wanderers":"وولفرهامبتون","Nottingham Forest":"نوتنغهام فورست","Leicester City":"ليستر سيتي","Crystal Palace":"كريستال بالاس","Fulham":"فولهام","Brentford":"برينتفورد","Burnley":"بيرنلي","Sunderland":"سندرلاند","Girona":"جيرونا","Celta Vigo":"سيلتا فيغو","Real Betis":"ريال بيتيس","Mallorca":"مايوركا","Rayo Vallecano":"رايو فايكانو","Espanyol":"إسبانيول","Levante":"ليفانتي","Alaves":"ألافيس","AS Roma":"روما","Lazio":"لاتسيو","Atalanta":"أتالانتا","Fiorentina":"فيورنتينا","Bologna":"بولونيا","Torino":"تورينو","Como":"كومو","Monza":"مونزا","Lecce":"ليتشي","Genoa":"جنوى","Sassuolo":"ساسولو","Lyon":"ليون","Marseille":"مارسيليا","Monaco":"موناكو","Lille":"ليل","Nice":"نيس","Lens":"لانس","Rennes":"رين","Strasbourg":"ستراسبورغ","Feyenoord":"فينورد","AZ Alkmaar":"ألكمار","Club Brugge":"كلوب بروج","Celtic":"سيلتيك","Rangers":"رينجرز","Galatasaray":"غلطة سراي","Fenerbahce":"فنربخشة","Besiktas":"بشكتاش","Real Madrid":"ريال مدريد","Barcelona":"برشلونة","Manchester City":"مانشستر سيتي","Manchester United":"مانشستر يونايتد","Liverpool":"ليفربول","Arsenal":"أرسنال","Chelsea":"تشيلسي","Tottenham Hotspur":"توتنهام","Bayern Munich":"بايرن ميونخ","Borussia Dortmund":"بوروسيا دورتموند","Inter":"إنتر ميلان","Inter Milan":"إنتر ميلان","AC Milan":"ميلان","Juventus":"يوفنتوس","Napoli":"نابولي","Paris Saint-Germain":"باريس سان جيرمان","Al Hilal":"الهلال","Al Nassr":"النصر","Al Ittihad":"الاتحاد","Al-Ittihad":"الاتحاد","Al Ahli":"الأهلي","Getafe":"خيتافي","Sevilla":"إشبيلية","Valencia":"فالنسيا","Atlético Madrid":"أتلتيكو مدريد","Atletico Madrid":"أتلتيكو مدريد","Athletic Club":"أتلتيك بلباو","Real Sociedad":"ريال سوسيداد","Racing Santander":"راسينغ سانتاندير","Osasuna":"أوساسونا","Elche":"إلتشي","Villarreal":"فياريال","Porto":"بورتو","Benfica":"بنفيكا","Ajax":"أياكس","PSV Eindhoven":"آيندهوفن","Deportivo":"ديبورتيفو لاكورونيا","Lorient":"لوريان","Brest":"بريست","Pakhtakor":"باختاكور","Al-Quwa Al-Jawiya":"القوة الجوية","Tractor":"تراكتور","Neftchi Fergana":"نيفتشي فرغانة","Al Ittihad":"الاتحاد","Al-Gharafa":"الغرافة","Al Qadsiah":"القادسية","Newcastle Jets":"نيوكاسل جيتس","Shanghai Port FC":"شنغهاي بورت","Jeonbuk Hyundai Motors":"جيونبوك هيونداي موتورز","Johor Darul Ta'zim":"جوهور دار التعظيم","Kashiwa Reysol":"كاشيوا ريسول","Daejeon Hana Citizen FC":"دايجون هانا سيتيزن","Vissel Kobe":"فيسيل كوبي","Ratchaburi FC":"راتشابوري","Cong An Ha Noi":"كونغ آن هانوي","Kyoto Sanga":"كيوتو سانغا","Port FC":"بورت إف سي","Beijing Guoan":"بكين غوان","Esteghlal FC":"استقلال طهران","Al-Shamal":"الشمال","Pohang Steelers":"بوهانغ ستيلرز","Gamba Osaka":"غامبا أوساكا","Buriram United":"بوريرام يونايتد","Kashima Antlers":"كاشيما أنتلرز","East Bengal FC":"إيست بنغال","Al-Seeb Club":"نادي السيب","Al-Hussein SC":"الحسين إربد","Al-Shorta SC":"الشرطة","Melbourne Victory":"ملبورن فيكتوري","Persib Bandung":"بيرسيب باندونغ","FC Seoul":"إف سي سيول","The Cong-Viettel FC":"فيتيل","Arkadag FK":"أركاداغ","Gol Gohar Sirjan FC":"غول گهر سيرجان","Al Wahda FC":"الوحدة الإماراتي","Al-Khaldiya SC":"الخالدية","Al-Rayyan SC":"الريان","Al-Nahda Club":"النهضة العماني","Kuwait SC":"الكويت","FC Nasaf":"ناساف","Al-Faisaly SC":"الفيصلي","Al-Muharraq SC":"المحرق","Al Jazira Club":"الجزيرة الإماراتي","Red Bull Bragantino":"ريد بول براغانتينو","Santos":"سانتوس","Chapecoense":"شابيكوينسي","Mirassol":"ميراسول","Internacional":"إنترناسيونال","Coritiba":"كوريتيبا","Athletico-PR":"أتلتيكو باراناينسي","Vasco da Gama":"فاسكو دا غاما","Flamengo":"فلامنغو","Grêmio":"غريميو","Botafogo":"بوتافوغو","Atlético-MG":"أتلتيكو مينيرو","São Paulo":"ساو باولو","Corinthians":"كورينثيانز","Alverca":"ألفيركا","Gil Vicente":"جيل فيسنتي","Vitória de Guimaraes":"فيتوريا غيماريش","Defensa y Justicia":"ديفينسا إي خوستيسيا","Independiente":"إنديبندينتي","Platense":"بلاتينسي","Central Córdoba (Santiago del Estero)":"سنترال كوردوبا","Atlético Tucumán":"أتلتيكو توكومان","Argentinos Juniors":"أرجنتينوس جونيورز","Independiente Rivadavia":"إنديبندينتي ريفادافيا","Banfield":"بانفيلد","Stade Rennais":"رين","Olympiacos":"أولمبياكوس","VfB Stuttgart":"شتوتغارت","Shakhtar Donetsk":"شاختار دونيتسك","Sporting CP":"سبورتينغ لشبونة","Bodo/Glimt":"بودو/غليمت","Feyenoord Rotterdam":"فينورد","FC Porto":"بورتو","AEK Athens":"آيك أثينا","RB Leipzig":"لايبزيغ","Slavia Prague":"سلافيا براغ","Viking FK":"فايكينغ","Sabah FK":"ساباه","Genclerbirligi":"غنتشلربيرليغي","Alanyaspor":"ألانيا سبور","Internazionale":"إنتر ميلان","LASK Linz":"لاسـك لينتس","Slovan Bratislava":"سلوفان براتيسلافا"};const arTeam=n=>clubAr[String(n||'').trim()]||n||'الفريق';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function officialBroadcastLink(match){
  if(match?.broadcast_verified!==true)return '';
@@ -1571,7 +1602,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
    $('weatherDesc').textContent=err.code===1?'لم تسمح بالموقع؛ نعرض الطقس العام لسلطنة عُمان.':'تعذر تحديد الموقع؛ نعرض الطقس العام لسلطنة عُمان.';weather();
   },{enableHighAccuracy:false,timeout:15000,maximumAge:600000});
  }
- clock();weather();$('weatherLocationButton')?.addEventListener('click',requestWeatherLocation);setInterval(clock,15000);setInterval(weather,15*60*1000);
+ clock();requestWeatherLocation();$('weatherLocationButton')?.addEventListener('click',requestWeatherLocation);setInterval(clock,15000);setInterval(()=>loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace),15*60*1000);
 })();
 </script>
 
