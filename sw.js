@@ -1,5 +1,5 @@
-const CACHE_NAME="sloom365-shell-v6";
-const SHELL=["/","/index.html","/sloom360.html","/ai.html","/manifest.webmanifest","/assets/sloom360-logo.svg","/assets/sloom-icon-192.svg","/assets/sloom-icon-512.svg"];
+const CACHE_NAME="sloom365-shell-v7";
+const SHELL=["/","/index.html","/sloom360.html","/ai.html","/manifest.webmanifest","/chat.js","/assets/sloom360-logo.svg","/assets/sloom-icon-192.svg","/assets/sloom-icon-512.svg"];
 self.addEventListener("install",e=>e.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener("activate",e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener("fetch",e=>{
