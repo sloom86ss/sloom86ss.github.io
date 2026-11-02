@@ -216,6 +216,23 @@ if(league.standings&&league.standings.length){const st=document.createElement('d
  renderLive();
 }
 
+function renderLive(){
+ const list=document.getElementById('liveBoardList'),count=document.getElementById('liveBoardCount');if(!list||!count)return;
+ const active=[];
+ Object.values(sportsData).filter(leagueIsFresh).forEach(league=>(league.matches||[]).forEach(match=>{if(match.status==='in')active.push({league,match})}));
+ active.sort((a,b)=>String(a.league.name||'').localeCompare(String(b.league.name||''),'ar'));
+ count.textContent=active.length+' مباراة مباشرة';
+ if(!active.length){list.innerHTML='<div class="live-board-empty">لا توجد مباريات مباشرة مؤكدة الآن. ستظهر هنا تلقائياً عند انطلاقها.</div>';return}
+ list.innerHTML='';
+ active.forEach(({league,match})=>{
+  const h=match.home||{},a=match.away||{},score=String(h.score??'—')+' : '+String(a.score??'—');
+  const minute=match.status_short||match.detail||'مباشر';
+  const card=document.createElement('article');card.className='live-board-card';
+  card.innerHTML='<div class="live-board-league">'+esc(league.name||'بطولة')+'</div><div class="live-board-teams"><div class="live-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name))+'</span></div><div class="live-board-score">'+esc(score)+'</div><div class="live-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name))+'</span></div></div><div class="live-board-meta"><span>● مباشر</span><span>'+esc(minute)+'</span></div>';
+  list.appendChild(card);
+ });
+}
+
 const clubModal=document.getElementById('clubModal'),clubModalBody=document.getElementById('clubModalBody');
 function closeClubModal(){clubModal.classList.remove('open');document.body.style.overflow=''}
 clubModal.addEventListener('click',e=>{if(e.target===clubModal||e.target.closest('[data-club-close]'))closeClubModal()});
@@ -302,20 +319,3 @@ window.addEventListener('appinstalled',()=>{
 });
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(error=>console.error('SLOOM 365 offline support:',error)));}
 </script><script src="/chat.js" defer></script></body></html>
-
-function renderLive(){
- const list=document.getElementById('liveBoardList'),count=document.getElementById('liveBoardCount');if(!list||!count)return;
- const active=[];
- Object.values(sportsData).filter(leagueIsFresh).forEach(league=>(league.matches||[]).forEach(match=>{if(match.status==='in')active.push({league,match})}));
- active.sort((a,b)=>String(a.league.name||'').localeCompare(String(b.league.name||''),'ar'));
- count.textContent=active.length+' مباراة مباشرة';
- if(!active.length){list.innerHTML='<div class="live-board-empty">لا توجد مباريات مباشرة مؤكدة الآن. ستظهر هنا تلقائياً عند انطلاقها.</div>';return}
- list.innerHTML='';
- active.forEach(({league,match})=>{
-  const h=match.home||{},a=match.away||{},score=String(h.score??'—')+' : '+String(a.score??'—');
-  const minute=match.status_short||match.detail||'مباشر';
-  const card=document.createElement('article');card.className='live-board-card';
-  card.innerHTML='<div class="live-board-league">'+esc(league.name||'بطولة')+'</div><div class="live-board-teams"><div class="live-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name))+'</span></div><div class="live-board-score">'+esc(score)+'</div><div class="live-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name))+'</span></div></div><div class="live-board-meta"><span>● مباشر</span><span>'+esc(minute)+'</span></div>';
-  list.appendChild(card);
- });
-}
