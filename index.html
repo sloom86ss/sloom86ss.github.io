@@ -886,6 +886,39 @@ header{background:#101713!important;border:0!important;border-radius:16px!import
 .news-section-head .install-app-help:empty{display:none!important}
 @media(max-width:520px){.news-section-head{gap:7px!important}.news-section-head>.install-app-slot{flex:0 1 auto!important;width:auto!important;max-width:100%!important;margin:0!important}.news-section-head #installApp,.news-section-head #enableNotifications{min-height:36px!important;padding:6px 8px!important;font-size:10px!important}}
 </style>
+
+<style id="sloom365-final-black-background-ticker-buttons">
+/* Final visual authority: black canvas, readable dark panels, 12-second ticker */
+:root{--bg:#000!important;--panel:#101713!important;--panel2:#17231b!important;--line:#294333!important;--green:#168447!important;--muted:#b6c9bb!important;--white:#f4fff6!important}
+html,body{background:#000!important;background-color:#000!important;background-image:none!important;color:#f4fff6!important}
+body,.wrap,main.wrap{background:#000!important;background-image:none!important;color:#f4fff6!important}
+header{background:#080d0a!important;border:1px solid #263b2c!important}
+.weather-strip,.live-board,.upcoming-board,.stat,.league,.news-card,.team-chip,.sloom-quick-tile,
+.live-board-card,.upcoming-board-card,.club-dialog,.club-modal,.club-facts,.club-story{
+ background:#101713!important;color:#f4fff6!important;border-color:#294333!important;
+}
+.section-head h3,.live-board-head h2,.upcoming-board-head h2,.sloom-quick-tile>b,
+.news-card h3,.news-card h4,.stat b,.league h3,.team-chip{color:#eaffef!important}
+.news-card p,.news-card small,.muted,.section-note{color:#c2d2c6!important}
+.ticker,#newsTicker{background:#101713!important;border:1px solid #247a46!important;color:#eaffef!important}
+.ticker-label{background:#168447!important;color:#fff!important}
+.ticker-track span,.ticker-track b,.ticker-world-times,.ticker-world-times b,.ticker-world-times time{color:#f4fff6!important}
+#newsTicker .ticker-track,.ticker-track{
+ animation-duration:12s!important;animation-timing-function:linear!important;
+ animation-iteration-count:infinite!important;animation-play-state:running!important;
+}
+.ticker:hover .ticker-track{animation-play-state:running!important}
+.news-section-head,.news-section-head>.install-app-slot{position:relative!important;z-index:20!important;pointer-events:auto!important}
+.news-section-head #installApp,.news-section-head #enableNotifications{
+ display:inline-flex!important;visibility:visible!important;opacity:1!important;
+ position:relative!important;z-index:21!important;pointer-events:auto!important;
+ cursor:pointer!important;touch-action:manipulation!important;
+}
+.sloom-bottom-nav{z-index:9999!important;pointer-events:auto!important}
+.sloom-bottom-nav a{pointer-events:auto!important}
+button:disabled{opacity:.75!important}
+</style>
+
 </head>
 <body><main class="wrap">
 
@@ -1186,7 +1219,7 @@ setInterval(tickSloomClocks,1000);tickSloomClocks();
 <script>
 let sloomNotificationEnabled=false;
 const sloomNotificationButton=document.getElementById('enableNotifications');
-const sloomNotificationHelp=document.getElementById('notificationHelp');
+const sloomNotificationHelp=document.getElementById('notificationHelp')||document.getElementById('installAppHelp');
 function updateSloomNotificationButton(){
  if(!sloomNotificationButton)return;
  if(!('Notification' in window)){sloomNotificationButton.textContent='🔔 الإشعارات غير مدعومة';sloomNotificationButton.disabled=true;return;}
