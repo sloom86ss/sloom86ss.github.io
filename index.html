@@ -76,6 +76,39 @@ document.getElementById('teamSearch').addEventListener('input',render);
 document.getElementById('dayFilters').addEventListener('click',e=>{const b=e.target.closest('[data-day]');if(!b)return;activeDay=b.dataset.day;document.querySelectorAll('#dayFilters .filter').forEach(x=>x.classList.toggle('active',x===b));render();});
 async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();dataGeneratedAt=d.generated_at||d.news_sources_updated_at||null;sportsData=d.leagues||d;sportsData.news_sources=d.news_sources||[];render();tickSloomClocks()}catch(e){document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
 document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,120000);
+
+function clockAngles(date,zone){
+ const parts=new Intl.DateTimeFormat('en-GB',{timeZone:zone,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(date);
+ const p=Object.fromEntries(parts.map(x=>[x.type,x.value]));const h=Number(p.hour)%12,m=Number(p.minute),s=Number(p.second);
+ return {h:(h+m/60)*30,m:(m+s/60)*6,s:s*6,display:[p.hour,p.minute,p.second].join(':')};
+}
+function setClock(prefix,angles){
+ const hour=document.getElementById(prefix+'Hour'),minute=document.getElementById(prefix+'Minute'),second=document.getElementById(prefix+'Second');
+ if(hour)hour.style.transform='translateX(-50%) rotate('+angles.h+'deg)';
+ if(minute)minute.style.transform='translateX(-50%) rotate('+angles.m+'deg)';
+ if(second)second.style.transform='translateX(-50%) rotate('+angles.s+'deg)';
+}
+function tickSloomClocks(){
+ const now=new Date(),oman=clockAngles(now,'Asia/Muscat'),saudi=clockAngles(now,'Asia/Riyadh'),utc=clockAngles(now,'UTC');
+ document.getElementById('timeOman').textContent=oman.display;
+ document.getElementById('timeSaudi').textContent=saudi.display;
+ document.getElementById('timeUTC').textContent=utc.display;
+ setClock('live',oman);
+ const stamp=dataGeneratedAt?new Date(dataGeneratedAt):null;
+ if(stamp&&!Number.isNaN(stamp.getTime())){
+  const a=clockAngles(stamp,'Asia/Muscat');setClock('update',a);
+  document.getElementById('lastUpdateTime').textContent=a.display;
+  document.getElementById('lastUpdateDate').textContent=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',dateStyle:'medium'}).format(stamp)+' · عُمان';
+  const mins=Math.max(0,Math.floor((now-stamp)/60000));
+  document.getElementById('lastUpdateAge').textContent=mins<1?'تم التحديث للتو':mins<60?'منذ '+mins+' دقيقة':'منذ '+Math.floor(mins/60)+' ساعة';
+ }else{
+  document.getElementById('lastUpdateTime').textContent='--:--:--';
+  document.getElementById('lastUpdateDate').textContent='بانتظار أول تحديث';
+  document.getElementById('lastUpdateAge').textContent='لم تصل بيانات بعد';
+ }
+}
+setInterval(tickSloomClocks,1000);tickSloomClocks();
+
 </script>
 <script>
 let sloomInstallPrompt=null;
