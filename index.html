@@ -1820,15 +1820,10 @@ a{accent-color:#b77aff}
  <div class="ticker-window"><div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل آخر الأخبار الرياضية…</span></div></div>
 </section>
 <section class="sloom-match-marquee" aria-label="شريط المباريات المتحرك"><div class="sloom-match-marquee-window"><div class="sloom-match-marquee-track" id="sloomMatchTicker"><span class="sloom-match-ticker-empty">⚽ متابعة مباريات كرة القدم</span></div></div></section>
-<section id="sloom-video-screen" aria-label="شاشة عرض مقاطع وملخصات كرة القدم" style="display:block;width:100%;max-width:900px;margin:12px auto 18px;padding:14px;border:1px solid #563277;border-radius:16px;background:linear-gradient(145deg,#160d24,#09060f);box-shadow:0 10px 28px #0008">
- <div class="sloom-video-heading" style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 10px">
-  <div><b style="display:block;color:#f8edff;font-size:clamp(16px,4vw,21px)">📺 شاشة العرض</b><small style="display:block;color:#cbb2e5;font-size:10px;margin-top:3px">مقاطع وملخصات كرة القدم الرسمية</small></div>
-  <span style="flex:none;padding:5px 9px;border-radius:20px;background:#32184c;color:#e8d2ff;font-size:10px">SLOOM 365</span>
+<section id="sloom-video-screen" aria-label="شاشة الفيديو" style="display:block;width:100%;max-width:900px;margin:12px auto 18px;padding:0;border:0;background:#000;box-shadow:none">
+ <div class="sloom-summary-screen" aria-live="off" style="width:100%;aspect-ratio:16/9;min-height:0;overflow:hidden;border:0;border-radius:0;background:#000;padding:0;margin:0">
+  <div id="sloom-youtube-single-player" style="width:100%;height:100%;background:#000"></div>
  </div>
- <div class="sloom-summary-screen" aria-live="polite" style="width:100%;min-height:190px;aspect-ratio:16/9;overflow:hidden;border:1px solid #4b2a70;border-radius:11px;background:#050309;display:grid;place-items:center;color:#d9c4ed;text-align:center">
-  <div><div style="font-size:34px">⚽</div><b>جارٍ تحميل المقاطع الرسمية…</b></div>
- </div>
- <p class="sloom-video-rights" style="margin:8px 2px 0;color:#b7a5cb;font-size:10px;line-height:1.7">تظهر هنا المقاطع المتاحة من المصادر الرسمية فقط.</p>
 </section>
 <nav class="sloom-category-strip" aria-label="اختصارات الأقسام">
  <a href="#matches"><span>⚽</span><b>المباريات</b></a>
@@ -1993,18 +1988,52 @@ document.getElementById('savePrediction')?.addEventListener('click',()=>{
 
 
 let sloomHighlightsRotationTimer=null;
-function renderSloomAutoHighlights(news=[]){
+let sloomYouTubePlayer=null;
+let sloomYouTubeApiLoading=false;
+let sloomYouTubeChannelIndex=0;
+const sloomOfficialUploadPlaylists=[
+ 'UUG5qGWdu8nIRZqJ_GgDwQ-w',
+ 'UUTv-XvfzLX3i4IGWAm4sbmA',
+ 'UUpryVRk_VDudG8SHXgWcG0w'
+];
+function renderSloomAutoHighlights(){
  const screen=document.querySelector('#sloom-video-screen .sloom-summary-screen');
- if(!screen)return;
- if(typeof sloomHighlightsRotationTimer!=='undefined'&&sloomHighlightsRotationTimer){
-  clearTimeout(sloomHighlightsRotationTimer);
-  sloomHighlightsRotationTimer=null;
+ if(!screen||screen.dataset.sloomPlayerInitialized==='1')return;
+ screen.dataset.sloomPlayerInitialized='1';
+ screen.style.cssText='display:block!important;width:100%!important;aspect-ratio:16/9!important;min-height:0!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:#000!important;overflow:hidden!important;';
+ screen.innerHTML='<div id="sloom-youtube-single-player" style="width:100%;height:100%;background:#000"></div>';
+ const mountPlayer=()=>{
+  if(!window.YT||!window.YT.Player||sloomYouTubePlayer)return;
+  sloomYouTubePlayer=new YT.Player('sloom-youtube-single-player',{
+   width:'100%',height:'100%',
+   playerVars:{autoplay:1,controls:0,disablekb:1,fs:0,iv_load_policy:3,rel:0,playsinline:1,listType:'playlist',list:sloomOfficialUploadPlaylists[0]},
+   events:{
+    onReady:event=>{event.target.mute();event.target.playVideo();},
+    onStateChange:event=>{
+     if(event.data!==YT.PlayerState.ENDED)return;
+     const list=event.target.getPlaylist()||[];
+     const index=event.target.getPlaylistIndex();
+     if(list.length&&index>=list.length-1){
+      sloomYouTubeChannelIndex=(sloomYouTubeChannelIndex+1)%sloomOfficialUploadPlaylists.length;
+      event.target.loadPlaylist({listType:'playlist',list:sloomOfficialUploadPlaylists[sloomYouTubeChannelIndex],index:0});
+     }
+    }
+   }
+  });
+ };
+ if(window.YT&&window.YT.Player){mountPlayer();return;}
+ if(!sloomYouTubeApiLoading){
+  sloomYouTubeApiLoading=true;
+  const previousReady=window.onYouTubeIframeAPIReady;
+  window.onYouTubeIframeAPIReady=function(){
+   if(typeof previousReady==='function')try{previousReady();}catch(error){}
+   mountPlayer();
+  };
+  const api=document.createElement('script');
+  api.src='https://www.youtube.com/iframe_api';
+  api.async=true;
+  document.head.appendChild(api);
  }
- screen._sloomNews=[];
- screen.dataset.activeClip='';
- screen.dataset.renderedClip='blank';
- screen.innerHTML='';
- screen.style.cssText='display:block!important;width:100%;aspect-ratio:16/9;min-height:220px;height:auto;padding:0!important;margin:0!important;border:1px solid #352044!important;border-radius:12px!important;background:#030205!important;overflow:hidden;text-align:initial!important;';
 }
  
 function render(){
@@ -2603,5 +2632,11 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 .sloom-video-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 11px;background:#0f1429;font:12px system-ui}
 .sloom-video-title{color:#fff}
 .sloom-video-open{color:#00e995;text-decoration:none;font-weight:700}
+
+/* SLOOM365 single-screen-only YouTube player */
+#sloom-video-screen{display:block!important;width:100%!important;max-width:900px!important;margin:12px auto 18px!important;padding:0!important;border:0!important;border-radius:0!important;background:#000!important;box-shadow:none!important;overflow:hidden!important}
+#sloom-video-screen .sloom-summary-screen{display:block!important;width:100%!important;min-height:0!important;height:auto!important;aspect-ratio:16/9!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:#000!important;overflow:hidden!important}
+#sloom-video-screen #sloom-youtube-single-player,#sloom-video-screen #sloom-youtube-single-player iframe{display:block!important;width:100%!important;height:100%!important;border:0!important;background:#000!important}
+#sloom-video-screen .sloom-video-heading,#sloom-video-screen .sloom-video-rights,#sloom-video-screen .sloom-auto-caption,#sloom-video-screen .sloom-video-tabs,#sloom-video-screen .sloom-video-foot{display:none!important}
 </style>
 
