@@ -2028,6 +2028,25 @@ function renderSloomAutoHighlights(news=[]){
  }).join('');
  screen.innerHTML=css+'<div id="sloom-video-gallery"><div class="sloom-video-brand"><span>⚽</span><div>سلوم كورة 365<small>SLOOM FOOTBALL365</small></div></div>'+player+'<div class="sloom-video-caption">'+esc(chosen.headline)+'</div><div class="sloom-video-actions"><small>مقاطع كرة القدم الرسمية · ESPN</small><a href="'+esc(chosen.link)+'" target="_blank" rel="noopener noreferrer">فتح الفيديو الأصلي</a></div><div class="sloom-clip-list">'+list+'</div></div>';
 }
+
+function renderSloomAutoHighlights(news=[]){
+ const screen=document.querySelector('#sloom-video-screen .sloom-summary-screen');if(!screen)return;
+ const clips=[...new Map((Array.isArray(news)?news:[]).filter(n=>n&&n.headline&&typeof n.link==='string').filter(n=>{try{const u=new URL(n.link);return u.protocol==='https:'&&u.hostname==='www.espn.com'&&/^\\/video\\/clip\\//.test(u.pathname)}catch(e){return false}}).sort((a,b)=>Date.parse(b.published||b.fetched_at||0)-Date.parse(a.published||a.fetched_at||0)).map(n=>{const m=n.link.match(/\\/id\\/(\\d+)/i);return[m?m[1]:n.link,n]})).values()].slice(0,16);
+ screen._sloomNews=Array.isArray(news)?news:[];
+ if(!screen.dataset.autoBound){screen.addEventListener('click',e=>{const b=e.target.closest('[data-sloom-clip]');if(b){screen.dataset.activeClip=b.dataset.sloomClip;screen.dataset.renderedClip='';renderSloomAutoHighlights(screen._sloomNews||[]);return}const t=e.target.closest('[data-sloom-toggle]');if(t){screen.dataset.rotationPaused=screen.dataset.rotationPaused==='1'?'0':'1';renderSloomAutoHighlights(screen._sloomNews||[])}});screen.dataset.autoBound='1'}
+ if(!clips.length){if(sloomHighlightsRotationTimer)clearTimeout(sloomHighlightsRotationTimer);sloomHighlightsRotationTimer=null;if(screen.dataset.renderedClip!=='empty'){screen.innerHTML='<div style="padding:28px 14px;text-align:center;color:#d9c4ed;background:#100a18;border:1px dashed #68458b;border-radius:12px">لا تتوفر مقاطع رسمية حالياً. ستظهر هنا تلقائياً عند توفرها.</div>';screen.dataset.renderedClip='empty'}return}
+ const i=Math.max(0,clips.findIndex(n=>n.link===screen.dataset.activeClip)),clip=clips[i],id=(clip.link.match(/\\/id\\/(\\d+)/i)||[])[1]||'';
+ if(screen.dataset.renderedClip!==clip.link){
+  if(sloomHighlightsRotationTimer)clearTimeout(sloomHighlightsRotationTimer);sloomHighlightsRotationTimer=null;
+  const buttons=clips.map((n,j)=>'<button type="button" data-sloom-clip="'+esc(n.link)+'" style="flex:1 1 190px;text-align:right;padding:8px;border:1px solid '+(j===i?'#a77acb':'#392847')+';border-radius:9px;background:'+(j===i?'#281738':'#120d19')+';color:#fff;font:700 11px Cairo;cursor:pointer">'+esc(n.headline)+'</button>').join('');
+  screen.innerHTML='<div style="background:#100a18;padding:10px;border-radius:12px;color:#fff"><div style="aspect-ratio:16/9;position:relative;background:#000;border:1px solid #68458b;border-radius:10px;overflow:hidden">'+(id?'<iframe src="https://www.espn.com/core/video/iframe?id='+encodeURIComponent(id)+'&autoplay=1&mute=1" title="'+esc(clip.headline)+'" allow="autoplay;fullscreen;picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>':'<div style="padding:20px">تعذر تحديد معرّف الفيديو</div>')+'</div><div style="padding:9px 2px;color:#f1e7ff;font-weight:800">'+esc(clip.headline)+'</div><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font-size:10px;color:#cbb2e5"><span>مقاطع رسمية · ESPN · '+(i+1)+' / '+clips.length+'</span><button type="button" data-sloom-toggle style="padding:6px 10px;border:1px solid #68458b;border-radius:8px;background:#21132e;color:#fff">'+(screen.dataset.rotationPaused==='1'?'تشغيل التنقل':'إيقاف التنقل')+'</button></div><div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:10px">'+buttons+'</div><a href="'+esc(clip.link)+'" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;color:#d8b7f4;font-size:10px">فتح الفيديو الأصلي</a></div>';
+  screen.dataset.activeClip=clip.link;screen.dataset.renderedClip=clip.link;
+ }
+ const toggle=screen.querySelector('[data-sloom-toggle]');if(toggle)toggle.textContent=screen.dataset.rotationPaused==='1'?'تشغيل التنقل':'إيقاف التنقل';
+ if(screen.dataset.rotationPaused==='1'){if(sloomHighlightsRotationTimer)clearTimeout(sloomHighlightsRotationTimer);sloomHighlightsRotationTimer=null}
+ else if(clips.length>1&&!sloomHighlightsRotationTimer){sloomHighlightsRotationTimer=setTimeout(()=>{sloomHighlightsRotationTimer=null;const current=clips.findIndex(n=>n.link===screen.dataset.activeClip);screen.dataset.activeClip=clips[(current+1)%clips.length].link;screen.dataset.renderedClip='';renderSloomAutoHighlights(screen._sloomNews||[])},90000)}
+}
+
 function render(){
  const leagueNav=document.getElementById('arabicLeagueNav');
  if(leagueNav){
