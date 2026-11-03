@@ -1551,6 +1551,12 @@ footer{border-color:#26352b!important;color:#91a095!important}
 @keyframes sloomWeatherNewsMove{from{transform:translateX(0)}to{transform:translateX(50%)}}
 @media(max-width:520px){.sloom-news-weather-ticker{min-height:44px!important;gap:7px!important;padding:7px 8px!important}.sloom-news-weather-label{font-size:10px!important;padding:6px 7px!important}.sloom-news-weather-track span{font-size:12px!important}.sloom-news-weather-track{animation-duration:36s!important}}
 @media(prefers-reduced-motion:reduce){.sloom-news-weather-track{animation:none!important;width:100%!important;min-width:0!important}}
+
+/* SLOOM365 accessibility: show action feedback only when it contains a message */
+.news-section-head #installAppHelp:empty,
+.news-section-head #notificationHelp:empty{display:none!important}
+.news-section-head #installAppHelp:not(:empty),
+.news-section-head #notificationHelp:not(:empty){display:block!important;flex:1 1 100%!important;width:100%!important;margin:0!important;color:#d8e8d8!important;font-size:10px!important;line-height:1.7!important}
 </style>
 </head>
 <body><main class="wrap">
@@ -1558,12 +1564,7 @@ footer{border-color:#26352b!important;color:#91a095!important}
 <header class="sloom-header-top">
  <div class="brand"><img class="sloom-logo-animated" src="assets/sloom360-logo.svg" alt="سلوم كورة 365 | SLOOM KORA 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>سلوم كورة 365</h1><small>مباريات وأخبار كرة القدم</small></div></div>
  <button id="sloomWeatherGPS" class="sloom-gps-toggle" type="button" aria-label="تفعيل أو تحديث الموقع والطقس" aria-pressed="false"><span class="gps-icon">⌖</span><span class="gps-copy"><b>GPS</b><small id="sloomWeatherStatus" role="status" aria-live="polite">غير مفعّل</small></span></button>
- <div class="sloom-top-actions install-app-slot" aria-label="إعدادات التطبيق">
-  <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365">📲 تثبيت التطبيق</button>
-  <button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار">🔔 الإشعارات</button>
-  <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
-  <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
- </div>
+ 
  <nav class="sloom-bottom-nav sloom-header-nav" aria-label="التنقل الرئيسي">
   <a href="#matches" class="active"><span>⚽</span>المباريات</a>
   <a href="#standingsSection"><span>🏆</span>الترتيب</a>
@@ -1681,7 +1682,14 @@ footer{border-color:#26352b!important;color:#91a095!important}
  <div id="standingsTables"><div class="empty">جارٍ تحميل جداول الترتيب…</div></div>
 </section>
 <div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
-<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><small class="news-source-note">أخبار من مصادر موثوقة</small></div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
+<div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><small class="news-source-note">أخبار من مصادر موثوقة</small>
+ <div class="install-app-slot" aria-label="إعدادات التطبيق">
+  <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365" aria-describedby="installAppHelp">📲 تثبيت التطبيق</button>
+  <button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار" aria-describedby="notificationHelp">🔔 الإشعارات</button>
+  <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
+  <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
+ </div>
+</div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.<div class="broadcast-disclaimer">سياسة حقوق البث: لا يستضيف SLOOM365 أي بث مباشر ولا يعيد رفع أو تضمين أو إعادة توزيع مباريات أو مقاطع محمية. قد نعرض أسماء القنوات الناقلة بوصفها معلومات رياضية تعريفية وفق البيانات المتاحة من مصادر المباريات، ولا يعني ذكر اسم القناة أننا نملك حقوق بثها أو نمثلها. لا يستضيف SLOOM365 بثاً مباشراً ولا يعيد رفع أو تضمين أو إعادة توزيع المباريات أو المقاطع المحمية. روابط المشاهدة — إن توفرت — تقتصر على المواقع الرسمية للناقلين أو أصحاب الحقوق بعد التحقق منها؛ ولا ننشر روابط بث غير رسمية. قد تختلف القنوات حسب الدولة وحقوق النقل، لذا يُرجى الرجوع إلى الناقل للتأكد من جدول البث.</div></footer>
 </main>
@@ -2186,9 +2194,9 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 
 
 <script>
-/* SLOOM365 weather: Al Buraimi fallback + explicit GPS permission */
+/* SLOOM365 weather: Al Seeb fallback + explicit GPS permission */
 (()=>{
- const fallback={lat:24.25,lon:55.79,name:'البريمي، عُمان'};
+ const fallback={lat:23.67,lon:58.18,name:'السيب، عُمان'};
  const $=id=>document.getElementById(id);
  const weatherCode=code=>{
   if(code===0)return ['☀️','سماء صافية'];
@@ -2218,7 +2226,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
   $('sloomWeatherStatus').textContent='آخر تحديث: '+new Intl.DateTimeFormat('ar-OM',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Muscat'}).format(new Date());
  }
  async function fallbackWeather(message){
-  try{await loadWeather(fallback.lat,fallback.lon,fallback.name);$('sloomWeatherStatus').textContent=message||'الطقس الافتراضي: البريمي';}
+  try{await loadWeather(fallback.lat,fallback.lon,fallback.name);$('sloomWeatherStatus').textContent=message||'الطقس الافتراضي: السيب';}
   catch(e){$('sloomWeatherDesc').textContent='تعذر جلب حالة الطقس حالياً';ensureTicker();if($('sloomWeatherTicker'))$('sloomWeatherTicker').textContent='🌤️ تعذر تحديث الطقس حالياً';$('sloomWeatherStatus').textContent='تعذر الطقس';}
  }
  const button=$('sloomWeatherGPS');
@@ -2226,7 +2234,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
   const track=document.getElementById('sloomNewsTickerTrack');
   if(!track)return false;
   if(!$('sloomWeatherTicker')){
-   const item=document.createElement('span');item.id='sloomWeatherTicker';item.className='ticker-weather';item.textContent='🌤️ طقس البريمي: جارٍ جلب درجة الحرارة…';track.appendChild(item);
+   const item=document.createElement('span');item.id='sloomWeatherTicker';item.className='ticker-weather';item.textContent='🌤️ طقس السيب: جارٍ جلب درجة الحرارة…';track.appendChild(item);
   }
   return true;
  };
@@ -2234,28 +2242,28 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
  const tickerObserver=new MutationObserver(()=>{if(ensureTicker()){}});
  tickerObserver.observe(document.body,{childList:true,subtree:true});
  button?.addEventListener('click',()=>{
-  if(!navigator.geolocation){fallbackWeather('GPS غير مدعوم؛ نعرض طقس البريمي');return;}
+  if(!navigator.geolocation){fallbackWeather('GPS غير مدعوم؛ نعرض طقس السيب');return;}
   button.disabled=true;$('sloomWeatherStatus').textContent='بانتظار الإذن…';
   navigator.geolocation.getCurrentPosition(async position=>{
    try{
     const lat=position.coords.latitude,lon=position.coords.longitude;
     await loadWeather(lat,lon,'موقعك الحالي');
     $('sloomWeatherStatus').textContent='مفعّل';button.setAttribute('aria-pressed','true');
-   }catch(e){await fallbackWeather('تعذر تحديث الطقس من موقعك؛ نعرض طقس البريمي');button.setAttribute('aria-pressed','false');}
+   }catch(e){await fallbackWeather('تعذر تحديث الطقس من موقعك؛ نعرض طقس السيب');button.setAttribute('aria-pressed','false');}
    finally{button.disabled=false;}
   },async error=>{
-   const reason=error.code===1?'لم تسمح بإذن الموقع؛ نعرض طقس البريمي':error.code===2?'تعذر تحديد الموقع؛ نعرض طقس البريمي':'انتهت مهلة GPS؛ نعرض طقس البريمي';
+   const reason=error.code===1?'لم تسمح بإذن الموقع؛ نعرض طقس السيب':error.code===2?'تعذر تحديد الموقع؛ نعرض طقس السيب':'انتهت مهلة GPS؛ نعرض طقس السيب';
    await fallbackWeather(reason);button.setAttribute('aria-pressed','false');button.disabled=false;
   },{enableHighAccuracy:false,timeout:12000,maximumAge:600000});
  });
- fallbackWeather('البريمي · GPS غير مفعّل');
+ fallbackWeather('السيب · GPS غير مفعّل');
  setInterval(()=>{
   const place=$('sloomWeatherPlace')?.textContent||fallback.name;
   if(place==='موقعك الحالي'){
    // Keep the last permitted coordinates private in memory only; refresh is intentionally not automatic.
    return;
   }
-  fallbackWeather('تحديث تلقائي لطقس البريمي');
+  fallbackWeather('تحديث تلقائي لطقس السيب');
  },30*60*1000);
 })();
 </script>
