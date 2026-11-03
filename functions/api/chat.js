@@ -1,5 +1,7 @@
 const MAX_BODY_BYTES = 64 * 1024;
 const MAX_AGE_MS = 90 * 60 * 1000;
+const NEWS_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+const FOOTBALL_NEWS_RE = /(كرة القدم|الدوري|دوري|كأس|كاس|نادي|الهلال|النصر|الاتحاد|الأهلي|الاهلي|ريال مدريد|برشلونة|ليفربول|مانشستر|رونالدو|ميسي|صلاح|انتقال|صفقة|مدرب|لاعب|football|soccer|champions league|premier league|transfer)/i;
 
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
@@ -27,6 +29,23 @@ function cleanNews(item) {
   };
 }
 
+function isRecent(value, maxAgeMs) {
+  const stamp = Date.parse(value || "");
+  const age = Date.now() - stamp;
+  return Number.isFinite(stamp) && age >= 0 && age <= maxAgeMs;
+}
+
+function isFootballNews(item) {
+  return Boolean(
+    item &&
+    item.headline &&
+    item.source &&
+    /^https:\/\//i.test(item.link || "") &&
+    isRecent(item.published, NEWS_MAX_AGE_MS) &&
+    FOOTBALL_NEWS_RE.test(item.headline + " " + (item.description || ""))
+  );
+}
+
 function safeContext(input) {
   const generated = Date.parse(input.generated_at || "");
   const age = Date.now() - generated;
@@ -35,7 +54,9 @@ function safeContext(input) {
   const rawLeagues = Array.isArray(input.leagues)
     ? input.leagues
     : Object.values(input.leagues || {});
-  const leagues = fresh ? rawLeagues.slice(0, 30).map((league) => {
+  const leagues = fresh ? rawLeagues
+    .filter((league) => league && !league.stale && isRecent(league.updated_at, MAX_AGE_MS))
+    .slice(0, 30).map((league) => {
     const matches = Array.isArray(league.matches) ? league.matches : [];
     const standings = Array.isArray(league.standings) ? league.standings : [];
     const news = Array.isArray(league.news) ? league.news : [];
@@ -55,15 +76,15 @@ function safeContext(input) {
         points: cleanText(String(s.points ?? ""), 8),
         position: cleanText(String(s.position ?? s.rank ?? ""), 8)
       })),
-      news: news.slice(0, 10).map(cleanNews).filter(Boolean)
+      news: news.map(cleanNews).filter(isFootballNews).slice(0, 10)
     };
-  }).filter((l) => !l.stale) : [];
+  }) : [];
   return {
     provider: cleanText(input.provider, 80),
     generated_at: cleanText(input.generated_at, 50),
     timezone: "Asia/Muscat",
     dataset_fresh: fresh,
-    news_sources: fresh ? sourceNews.slice(0, 20).map(cleanNews).filter(Boolean) : [],
+    news_sources: fresh ? sourceNews.map(cleanNews).filter(isFootballNews).slice(0, 20) : [],
     leagues
   };
 }
