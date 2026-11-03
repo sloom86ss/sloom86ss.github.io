@@ -1747,7 +1747,10 @@ body{
 @media(max-width:520px){#newsTicker{gap:8px!important;padding:8px!important}#newsTicker .ticker-label{font-size:9px!important}.sloom-auto-actions{gap:5px!important}}
 </style>
 
-</head>
+<style>
+.sloom-player-fallback-note{margin:2px 0;color:#d8cba9;font-size:10px;line-height:1.8}
+.sloom-auto-actions .sloom-open-original{background:#b7f34a!important;color:#10170b!important;border-color:#b7f34a!important;font-weight:900!important}
+</style></head>
 <body><main class="wrap">
 
 <header class="sloom-header-top">
@@ -1962,14 +1965,14 @@ function renderSloomAutoHighlights(newsItems){
  const seen=new Set();
  const clips=all.filter(n=>{
   const link=String(n.link||'');
-  const id=(link.match(/espn\.com\/video\/clip\/(?:_\/id\/)?(\d+)/i)||link.match(/espn\.com\/video\/clip\?id=(\d+)/i)||[])[1];
+  const id=(link.match(/espn\\.com\\/video\\/clip\\/(?:_\\/id\\/)?(\\d+)/i)||link.match(/espn\\.com\\/video\\/clip\\?id=(\\d+)/i)||[])[1];
   if(!id||seen.has(id)||!/highlight|ملخص/i.test(String(n.headline||'')+' '+String(n.description||'')))return false;
   const published=Date.parse(n.published||'');
   if(!Number.isFinite(published)||Date.now()-published>7*86400000||published>Date.now()+3600000)return false;
   seen.add(id);n._sloomClipId=id;return true;
  }).sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0)).slice(0,12);
  if(!clips.length){
-  screen.innerHTML='<span class="sloom-summary-empty-icon" aria-hidden="true">▶</span><b>بانتظار أحدث ملخص رسمي</b><p>تعمل الشاشة تلقائياً عند توفر فيديو كرة قدم من مشغل ESPN الرسمي ضمن البيانات. لا نستخدم YouTube ولا نعرض مقاطع قديمة.</p>';
+  screen.innerHTML='<span class="sloom-summary-empty-icon" aria-hidden="true">▶</span><b>بانتظار أحدث ملخص رسمي</b><p>لا تتوفر حالياً مقاطع حديثة قابلة للتضمين من مصدر رسمي.</p>';
   return;
  }
  let index=0;
@@ -1978,7 +1981,8 @@ function renderSloomAutoHighlights(newsItems){
   const title=String(clip.headline||'ملخص مباراة').replace(/[<>]/g,'');
   const id=clip._sloomClipId;
   const link=String(clip.link||'https://www.espn.com/soccer/');
-  screen.innerHTML='<div class="sloom-auto-player"><iframe title="ESPN football highlights" src="https://www.espn.com/core/video/iframe?id='+encodeURIComponent(id)+'&autoplay=1&mute=1&playsinline=1" loading="eager" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="sloom-auto-caption"><b dir="auto">'+esc(title)+'</b><small>المصدر: ESPN · الملخص '+(index+1)+' من '+clips.length+'</small><div class="sloom-auto-actions"><button type="button" data-clip-step="-1">السابق</button><button type="button" data-clip-step="1">التالي</button><a href="'+esc(link)+'" target="_blank" rel="noopener">فتح الفيديو الأصلي</a></div></div>';
+  const safeLink=esc(link);
+  screen.innerHTML='<div class="sloom-auto-player"><iframe title="ESPN football highlights" src="https://www.espn.com/core/video/iframe?id='+encodeURIComponent(id)+'&autoplay=1&mute=1&playsinline=1" loading="eager" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="origin"></iframe></div><div class="sloom-auto-caption"><b dir="auto">'+esc(title)+'</b><small>المصدر الرسمي: ESPN · الملخص '+(index+1)+' من '+clips.length+'</small><p class="sloom-player-fallback-note">إذا لم يظهر الفيديو داخل الشاشة بسبب قيود ESPN أو المنطقة، افتح المقطع من المصدر الرسمي:</p><div class="sloom-auto-actions"><a class="sloom-open-original" href="'+safeLink+'" target="_blank" rel="noopener">▶ تشغيل الفيديو من ESPN</a><button type="button" data-clip-step="-1">السابق</button><button type="button" data-clip-step="1">التالي</button></div></div>';
   screen.querySelectorAll('[data-clip-step]').forEach(button=>button.addEventListener('click',()=>{index=(index+Number(button.dataset.clipStep)+clips.length)%clips.length;show()}));
  };
  show();
