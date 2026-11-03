@@ -1948,23 +1948,15 @@ function renderSloomAutoHighlights(newsItems){
  if(!screen)return;
  if(sloomHighlightsRotationTimer){clearInterval(sloomHighlightsRotationTimer);sloomHighlightsRotationTimer=null;}
  const leagues=[
-  {id:'sau',name:'السعودي 🇸🇦',title:'الدوري السعودي للمحترفين',url:'https://www.spl.sa/ar/videos'},
-  {id:'eng',name:'الإنجليزي 🏴',title:'Premier League',url:'https://www.premierleague.com/en/video'},
-  {id:'esp',name:'الإسباني 🇪🇸',title:'LaLiga',url:'https://www.laliga.com/en-GB/videos'},
-  {id:'ita',name:'الإيطالي 🇮🇹',title:'Serie A',url:'https://www.legaseriea.it/serie-a/video'},
-  {id:'ger',name:'الألماني 🇩🇪',title:'Bundesliga',url:'https://www.bundesliga.com/en/bundesliga/videos'},
-  {id:'fra',name:'الفرنسي 🇫🇷',title:'Ligue 1',url:'https://www.ligue1.fr/en/videos'},
-  {id:'por',name:'البرتغالي 🇵🇹',title:'Liga Portugal',url:'https://www.ligaportal.pt/en/videos'},
-  {id:'ned',name:'الهولندي 🇳🇱',title:'Eredivisie',url:'https://eredivisie.nl/en/videos/'},
-  {id:'bra',name:'البرازيلي 🇧🇷',title:'Brasileirão',url:'https://ge.globo.com/futebol/brasileirao-serie-a/'},
-  {id:'arg',name:'الأرجنتيني 🇦🇷',title:'Liga Profesional',url:'https://www.ligaprofesional.ar/videos/'}
+  {id:'esp',name:'🇪🇸 الدوري الإسباني',title:'LALIGA',playlist:'UU Tv-XvfzLX3i4IGWAm4sbmA'.replace(/ /g,'')},
+  {id:'fra',name:'🇫🇷 الدوري الفرنسي',title:'Ligue 1',playlist:'UU58LMAlfwtGRNR6Xpd4DlSA'}
  ];
- screen.innerHTML='<div class="sloom-league-video"><div class="sloom-video-tabs" role="tablist" aria-label="دوريات الملخصات"></div><div class="sloom-video-frame"><iframe title="ملخصات كرة القدم الرسمية" loading="eager" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="sloom-video-foot"><b class="sloom-video-title"></b><a class="sloom-video-open" target="_blank" rel="noopener noreferrer">إذا لم يظهر الفيديو داخل الشاشة، افتح المصدر الرسمي ↗</a></div></div>';
- const tabs=screen.querySelector('.sloom-video-tabs'),frame=screen.querySelector('iframe'),title=screen.querySelector('.sloom-video-title'),open=screen.querySelector('.sloom-video-open');
+ screen.innerHTML='<div class="sloom-league-video"><div class="sloom-video-tabs" role="tablist" aria-label="الدوري الإسباني والفرنسي"></div><div class="sloom-video-frame"><iframe title="ملخصات رسمية لكرة القدم" loading="eager" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>';
+ const tabs=screen.querySelector('.sloom-video-tabs'),frame=screen.querySelector('iframe');
  function selectLeague(league){
   tabs.querySelectorAll('button').forEach(b=>{const active=b.dataset.id===league.id;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active))});
-  frame.src=league.url;frame.title='ملخصات '+league.title;
-  title.textContent=league.title;open.href=league.url;
+  frame.src='https://www.youtube-nocookie.com/embed/videoseries?list='+league.playlist+'&autoplay=1&mute=1&playsinline=1&rel=0';
+  frame.title='ملخصات '+league.title;
  }
  leagues.forEach((league,index)=>{
   const button=document.createElement('button');button.type='button';button.className='sloom-video-tab';button.textContent=league.name;button.dataset.id=league.id;button.setAttribute('role','tab');button.setAttribute('aria-selected',String(index===0));button.addEventListener('click',()=>selectLeague(league));tabs.appendChild(button);
