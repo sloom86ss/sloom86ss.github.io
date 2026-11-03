@@ -1575,6 +1575,20 @@ footer{border-color:#26352b!important;color:#91a095!important}
  box-shadow:0 0 10px #ffe45c22!important;
 }
 </style>
+<style id="sloom-watch-guide-css">
+.watch-guide{margin:18px 0 22px;padding:16px;border:1px solid #465b36;border-radius:19px;background:linear-gradient(145deg,#17231a,#0d140f);scroll-margin-top:18px}
+.watch-guide-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:7px}
+.watch-guide-head h2{margin:0;color:#eff8e9;font-size:17px}
+.watch-guide-intro{margin:0 0 13px;color:#aebcaf;font-size:11px;line-height:1.9}
+.watch-guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.watch-guide-card{min-width:0;padding:12px;border:1px solid #2d4031;border-radius:14px;background:#111b14}
+.watch-guide-card b{display:block;color:#f3f8f2;font-size:12px;margin-bottom:5px}
+.watch-guide-card p{margin:0 0 8px;color:#aebcaf;font-size:10px;line-height:1.8}
+.watch-guide-card a{display:inline-flex;align-items:center;gap:5px;padding:6px 10px;border-radius:9px;background:#b7f34a;color:#10170b;font-size:10px;font-weight:900}
+.watch-guide-card small{display:block;margin-top:7px;color:#c8b77f;font-size:9px;line-height:1.7}
+.watch-guide-note{margin:12px 0 0;padding-top:10px;border-top:1px solid #304032;color:#aebcaf;font-size:10px;line-height:1.9}
+@media(max-width:420px){.watch-guide-grid{grid-template-columns:1fr}.watch-guide{padding:13px}}
+</style>
 </head>
 <body><main class="wrap">
 
@@ -1645,9 +1659,23 @@ footer{border-color:#26352b!important;color:#91a095!important}
  <a href="#teamsDirectory"><span>🛡️</span><b>الأندية</b></a>
  <a href="#news"><span>📰</span><b>الأخبار</b></a>
  <a href="#fanZone"><span>🎯</span><b>ملعب سلوم</b></a>
+ <a href="#watchGuide"><span>📺</span><b>القنوات</b></a>
 </nav>
 
 
+
+<section id="watchGuide" class="watch-guide" aria-label="دليل القنوات الرسمية الناقلة">
+ <div class="watch-guide-head"><h2>📺 دليل القنوات الناقلة</h2><span class="live-pill">روابط رسمية</span></div>
+ <p class="watch-guide-intro">اختر الدوري لمعرفة منصة أو قناة البث الرسمية المتاحة في سلطنة عُمان. الروابط تفتح خدمة الناقل مباشرة ولا تعرض بثاً مقرصناً داخل الموقع.</p>
+ <div class="watch-guide-grid">
+  <article class="watch-guide-card"><b>🏴 الدوري الإنجليزي الممتاز</b><p>beIN SPORTS — البث المباشر عبر TOD للمشتركين في منطقة الشرق الأوسط وشمال أفريقيا.</p><a href="https://www.tod.tv/" target="_blank" rel="noopener noreferrer">فتح TOD ↗</a><small>حقوق البث الإقليمية حتى موسم 2027/28.</small></article>
+  <article class="watch-guide-card"><b>🇪🇸 الدوري الإسباني</b><p>beIN SPORTS — القناة الناقلة، والمشاهدة الرقمية عبر TOD.</p><a href="https://www.beinsports.com/en-mena" target="_blank" rel="noopener noreferrer">beIN SPORTS ↗</a><small>حقوق beIN في عُمان حتى موسم 2027/28.</small></article>
+  <article class="watch-guide-card"><b>🇮🇹 الدوري الإيطالي</b><p>STARZPLAY — بث مباريات الدوري الإيطالي في منطقة الشرق الأوسط وشمال أفريقيا.</p><a href="https://starzplay.com/" target="_blank" rel="noopener noreferrer">فتح STARZPLAY ↗</a><small>يتطلب الاشتراك؛ تحقق من توفر الباقة في بلدك.</small></article>
+  <article class="watch-guide-card"><b>🇩🇪 الدوري الألماني</b><p>MBC ACTION لبعض المباريات المختارة مجاناً على التلفزيون، وShahid للمشاهدة الرقمية.</p><a href="https://shahid.mbc.net/" target="_blank" rel="noopener noreferrer">فتح Shahid ↗</a><small>ليست كل المباريات مجانية؛ يعتمد ذلك على جدول القناة والباقة.</small></article>
+  <article class="watch-guide-card"><b>🇫🇷 الدوري الفرنسي</b><p>beIN SPORTS — القنوات الرياضية، والمشاهدة الرقمية عبر TOD.</p><a href="https://www.tod.tv/" target="_blank" rel="noopener noreferrer">فتح TOD ↗</a><small>حقوق beIN في منطقة MENA حتى موسم 2028/29.</small></article>
+ </div>
+ <p class="watch-guide-note">تنبيه: سلوم كورة 365 دليل للقنوات الرسمية فقط. بعض الخدمات مدفوعة، وقد تختلف القناة ورقمها حسب المباراة. سنضيف رابط البث المباشر للمباراة نفسها عندما يتوفر رابط رسمي معلن.</p>
+</section>
 
 <section class="live-board" id="liveBoard" aria-live="polite" aria-label="المباريات المباشرة">
  <div class="live-board-head"><h2>🔴 المباريات المباشرة الآن</h2><span id="liveBoardCount">جارٍ التحقق من المصدر…</span></div>
