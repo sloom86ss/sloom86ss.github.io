@@ -1965,7 +1965,7 @@ function renderSloomAutoHighlights(newsItems){
  const seen=new Set();
  const clips=all.filter(n=>{
   const link=String(n.link||'');
-  const id=(link.match(/espn\\.com\\/video\\/clip\\/(?:_\\/id\\/)?(\\d+)/i)||link.match(/espn\\.com\\/video\\/clip\\?id=(\\d+)/i)||[])[1];
+  const id=(link.match(/espn\.com\/video\/clip\/(?:_\/id\/)?(\d+)/i)||link.match(/espn\.com\/video\/clip\?id=(\d+)/i)||[])[1];
   if(!id||seen.has(id)||!/highlight|ملخص/i.test(String(n.headline||'')+' '+String(n.description||'')))return false;
   const published=Date.parse(n.published||'');
   if(!Number.isFinite(published)||Date.now()-published>7*86400000||published>Date.now()+3600000)return false;
