@@ -1625,20 +1625,73 @@ footer{border-color:#26352b!important;color:#91a095!important}
 </header>
 <section id="sloom-video-screen" class="sloom-video-feature" aria-label="شاشة ملخصات المباريات">
  <div class="sloom-video-heading">
-  <div><b>🏆 شاشة ملخصات UEFA.tv</b><small>المصدر الرسمي لملخصات بطولات UEFA</small></div>
-  <span>UEFA.tv</span>
+  <div><b>⚽ شاشة ملخصات المباريات</b><small>ملخصات رسمية حديثة فقط — دون YouTube أو قنوات مدفوعة</small></div>
+  <span>تحقق من التاريخ</span>
  </div>
-
+ <div class="sloom-summary-controls">
+  <label for="sloomSummaryLeague">اختر البطولة</label>
+  <select id="sloomSummaryLeague">
+   <option value="uefa">دوري أبطال أوروبا</option>
+   <option value="premier">الدوري الإنجليزي</option>
+   <option value="laliga">الدوري الإسباني</option>
+   <option value="bundesliga">الدوري الألماني</option>
+   <option value="seriea">الدوري الإيطالي</option>
+   <option value="ligue1">الدوري الفرنسي</option>
+   <option value="spl">الدوري السعودي</option>
+   <option value="egypt">الدوري المصري</option>
+   <option value="uae">الدوري الإماراتي</option>
+   <option value="qatar">الدوري القطري</option>
+   <option value="iraq">الدوري العراقي</option>
+   <option value="fifa">FIFA+ والبطولات العالمية</option>
+  </select>
+ </div>
  <div class="sloom-summary-screen" id="sloomSummaryScreen" aria-live="polite">
   <div class="sloom-summary-empty-icon">▶</div>
   <b id="sloomSummaryStatus">لا يوجد ملخص حديث تم التحقق منه حالياً</b>
-  <p id="sloomSummaryMessage">تابع أحدث ملخصات دوري أبطال أوروبا والبطولات الأوروبية المتاحة مجاناً عبر منصة UEFA.tv الرسمية.</p>
-  <a id="sloomSummarySource" class="sloom-summary-source" href="https://www.uefa.tv/" target="_blank" rel="noopener noreferrer" aria-label="فتح ملخصات UEFA.tv الرسمية">🏆 افتح ملخصات UEFA.tv المجانية ↗</a>
+  <p id="sloomSummaryMessage">لن نعرض فيديو قديماً أو مباراة غير مؤكدة. اختر البطولة وافتح مكتبتها الرسمية للتحقق من أحدث الملخصات وتاريخ نشرها.</p>
+  <div class="sloom-summary-details">
+   <span>الفريقان: <b>بانتظار مصدر موثوق</b></span>
+   <span>النتيجة: <b>غير متاحة حالياً</b></span>
+   <span>تاريخ المباراة: <b>—</b></span>
+   <span>تاريخ نشر الملخص: <b>—</b></span>
+  </div>
+  <a id="sloomSummarySource" class="sloom-summary-source" href="https://www.uefa.tv/" target="_blank" rel="noopener noreferrer">فتح المصدر الرسمي للبطولة ↗</a>
+  <a class="sloom-uefa-direct-link" href="https://www.uefa.tv/" target="_blank" rel="noopener noreferrer" aria-label="فتح ملخصات UEFA.tv الرسمية">🏆 افتح ملخصات UEFA.tv المجانية ↗</a>
  </div>
  <p class="sloom-video-rights">تنبيه: بعض الجهات لا تسمح بتضمين مشغل الفيديو داخل مواقع أخرى. لن نشغّل أي فيديو داخل هذه الشاشة إلا إذا توفر رابط رسمي قابل للتضمين؛ حالياً هذه الشاشة لا تتصل بعد بمصدر API يزوّدها تلقائياً ببيانات الملخصات وتواريخ نشرها.</p>
 </section>
-
-
+<script>
+(()=> {
+ const select=document.getElementById('sloomSummaryLeague');
+ const source=document.getElementById('sloomSummarySource');
+ const status=document.getElementById('sloomSummaryStatus');
+ const message=document.getElementById('sloomSummaryMessage');
+ if(!select||!source)return;
+ const sources={
+  uefa:{url:'https://www.uefa.tv/',name:'UEFA.tv'},
+  premier:{url:'https://www.premierleague.com/en/video',name:'Premier League'},
+  laliga:{url:'https://www.laliga.com/en-GB/videos',name:'LaLiga'},
+  bundesliga:{url:'https://www.bundesliga.com/en/bundesliga/video',name:'Bundesliga'},
+  seriea:{url:'https://en.legaseriea.it/serie-a/videos',name:'Serie A'},
+  ligue1:{url:'https://ligue1.com/',name:'Ligue 1'},
+  spl:{url:'https://www.spl.com.sa/en/index',name:'الدوري السعودي'},
+  egypt:{url:'https://www.egyptianproleague.com/league',name:'الدوري المصري'},
+  uae:{url:'https://www.uaeproleague.ae/en/news-and-gallery',name:'الدوري الإماراتي'},
+  qatar:{url:'https://www.qsl.qa/en',name:'الدوري القطري'},
+  iraq:{url:'https://iraqstarsleague.com/media?tab=videos',name:'دوري نجوم العراق'},
+  fifa:{url:'https://www.plus.fifa.com/',name:'FIFA+'}
+ };
+ function update(){
+  const item=sources[select.value]||sources.uefa;
+  source.href=item.url;
+  source.textContent='فتح مكتبة '+item.name+' الرسمية ↗';
+  status.textContent='لا يوجد ملخص حديث تم التحقق منه حالياً';
+  message.textContent='لم نربط بعد مصدراً آلياً يؤكد مباراة حديثة ونتيجتها وتاريخ نشر ملخصها. افتح مكتبة '+item.name+' الرسمية للتحقق من أحدث المقاطع؛ لن نعرض محتوى قديماً على أنه جديد.';
+ }
+ select.addEventListener('change',update);
+ update();
+})();
+</script>
 
 <div id="sloomWeatherData" hidden aria-hidden="true"><span id="sloomWeatherIcon">🌤️</span><span id="sloomWeatherTemp">--°</span><span id="sloomWeatherPlace">البريمي، عُمان</span><span id="sloomWeatherDesc">جارٍ تحميل حالة الطقس…</span></div>
 
