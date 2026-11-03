@@ -1956,11 +1956,11 @@ function renderSloomAutoHighlights(news=[]){
  const clips=[...new Map((Array.isArray(news)?news:[])
   .filter(n=>{
    if(!n||!n.headline||typeof n.link!=='string')return false;
-   try{const u=new URL(n.link);return u.protocol==='https:'&&u.hostname==='www.espn.com'&&/^\\/video\\/clip\\/[^/]+/.test(u.pathname);}
+   try{const u=new URL(n.link);return u.protocol==='https:'&&u.hostname==='www.espn.com'&&/^\/video\/clip\/[^/]+/.test(u.pathname);}
    catch(e){return false;}
   })
   .sort((a,b)=>Date.parse(b.published||b.fetched_at||0)-Date.parse(a.published||a.fetched_at||0))
-  .map(n=>{const m=n.link.match(/\\/video\\/clip\\/_?\\/?id?\\/?(\\d+)/i)||n.link.match(/\\/video\\/clip\\/_\\/id\\/(\\d+)/i)||n.link.match(/\\/id\\/(\\d+)/i);return [m?m[1]:n.link,n];})
+  .map(n=>{const m=n.link.match(/\/video\/clip\/_?\/?id?\/?(\d+)/i)||n.link.match(/\/video\/clip\/_\/id\/(\d+)/i)||n.link.match(/\/id\/(\d+)/i);return [m?m[1]:n.link,n];})
  ).values()].slice(0,16);
  const selected=clips.findIndex(n=>n.link===screen.dataset.activeClip);
  const active=clips[selected>=0?selected:0];
@@ -1978,10 +1978,10 @@ function renderSloomAutoHighlights(news=[]){
   screen.innerHTML=css+'<div id="sloom-video-gallery"><div class="sloom-video-brand">سلوم كورة 365 <span>⚽</span></div><div class="sloom-video-empty"><b>SLOOM365FOOTBALL</b>لا تتوفر مقاطع فيديو رسمية حالياً. ستظهر المقاطع هنا تلقائياً عند وصول روابط فيديو مرخصة من المصدر.</div></div>';
   return;
  }
- const chosen=active||clips[0],id=(chosen.link.match(/\\/id\\/(\\d+)/i)||[])[1]||'';
+ const chosen=active||clips[0],id=(chosen.link.match(/\/id\/(\d+)/i)||[])[1]||'';
  const player=id?'<div class="sloom-player"><iframe src="https://www.espn.com/core/video/iframe?id='+encodeURIComponent(id)+'" title="'+esc(chosen.headline)+'" loading="eager" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>':'<div class="sloom-video-empty">تعذر تحديد معرّف الفيديو الرسمي.</div>';
  const list=clips.map(n=>{
-  const nid=(n.link.match(/\\/id\\/(\\d+)/i)||[])[1]||'';
+  const nid=(n.link.match(/\/id\/(\d+)/i)||[])[1]||'';
   return '<button type="button" class="sloom-clip-button '+(n.link===chosen.link?'active':'')+'" data-sloom-clip="'+esc(n.link)+'">'+(n.image?'<img loading="lazy" src="'+esc(n.image)+'" alt="">':'')+'<span>'+esc(n.headline)+'</span></button>';
  }).join('');
  screen.innerHTML=css+'<div id="sloom-video-gallery"><div class="sloom-video-brand"><span>⚽</span><div>سلوم كورة 365<small>SLOOM365FOOTBALL</small></div></div>'+player+'<div class="sloom-video-caption">'+esc(chosen.headline)+'</div><div class="sloom-video-actions"><small>مقاطع كرة القدم الرسمية · ESPN</small><a href="'+esc(chosen.link)+'" target="_blank" rel="noopener noreferrer">فتح الفيديو الأصلي</a></div><div class="sloom-clip-list">'+list+'</div></div>';
