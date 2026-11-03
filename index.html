@@ -1444,14 +1444,11 @@ footer{color:#9eafb7!important}
 <section class="sloom-video-feature" aria-label="مقاطع وأهداف من قناة FIFA الرسمية">
  <div class="sloom-video-heading"><div><b>🎬 فيديوهات وملخصات كرة القدم</b><small>قناة FIFA الرسمية — أحدث المقاطع والملخصات</small></div><span>تشغيل تلقائي</span></div>
  <div class="sloom-fifa-player">
-  <iframe src="https://www.youtube-nocookie.com/embed?listType=playlist&amp;list=UUpcTrCXblq78GZrTUTLWeBw&amp;autoplay=1&amp;mute=1&amp;playsinline=1&amp;loop=1&amp;rel=0" title="أحدث فيديوهات وملخصات قناة FIFA الرسمية" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/videoseries?list=UUpcTrCXblq78GZrTUTLWeBw&amp;autoplay=1&amp;mute=1&amp;playsinline=1&amp;rel=0" title="أحدث فيديوهات وملخصات قناة FIFA الرسمية" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
  </div>
- <p class="sloom-video-rights">المصدر: قناة FIFA الرسمية على YouTube. جميع حقوق الفيديوهات محفوظة لـ FIFA والناشرين أصحاب الحقوق. التشغيل التلقائي يبدأ صامتاً وفق قيود المتصفحات، ويمكن تشغيل الصوت من مشغل الفيديو.</p>
+ <p class="sloom-video-rights">المصدر: قناة FIFA الرسمية. جميع الحقوق محفوظة لأصحابها. يبدأ التشغيل التلقائي صامتاً وفق قيود المتصفح. <a href="https://www.plus.fifa.com/" target="_blank" rel="noopener">FIFA+ الرسمي</a> · <a href="https://www.premierleague.com/en/video?collection=highlights" target="_blank" rel="noopener">ملخصات الدوري الإنجليزي الرسمية</a></p>
 </section>
-<section class="weather-strip" aria-label="الطقس والوقت في عُمان">
- <div class="weather-main"><span class="weather-icon" id="weatherIcon">🌤️</span><div><div><span class="weather-temp" id="weatherTemp">--°</span> <span class="weather-place" id="weatherPlaceName">سلطنة عُمان</span></div><div class="weather-desc" id="weatherDesc">جارٍ تحميل حالة الطقس…</div></div></div>
- <button id="weatherLocationButton" type="button" aria-label="استخدام موقع الهاتف للطقس" style="border:1px solid #c6a6ff;background:#251342;color:#fff;border-radius:10px;padding:8px 10px;font:800 10px Cairo;cursor:pointer">📍 فحص وإصلاح GPS</button><div class="weather-clock"><b id="weatherLocalTime">--:--</b><span id="weatherLocalDate">توقيت عُمان</span></div>
-</section>
+
 
 <section class="live-board" id="liveBoard" aria-live="polite" aria-label="المباريات المباشرة">
  <div class="live-board-head"><h2>🔴 المباريات المباشرة الآن</h2><span id="liveBoardCount">جارٍ التحقق من المصدر…</span></div>
@@ -1468,7 +1465,6 @@ footer{color:#9eafb7!important}
 
 <section class="sloom-quick-grid" aria-label="اختصارات الموقع">
  <a class="sloom-quick-tile" href="#news"><span>📰</span><b>آخر الأخبار</b></a>
- <a class="sloom-quick-tile" href="#weatherTemp"><span>🌤️</span><b>الطقس</b></a>
  <a class="sloom-quick-tile" href="#sloom-chat-launch"><span>💬</span><b>الدردشة الذكية</b></a>
  <a class="sloom-quick-tile" href="#fanZone"><span>🎯</span><b>ملعب سلوم</b></a>
 
@@ -1940,84 +1936,6 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 </script><script src="/chat.js" defer></script>
 
 
-<script>
-(()=> {
- const $=id=>document.getElementById(id);
- const labels={0:['سماء صافية','☀️'],1:['غائم جزئياً','🌤️'],2:['غائم جزئياً','⛅'],3:['غائم','☁️'],45:['ضباب','🌫️'],48:['ضباب كثيف','🌫️'],51:['رذاذ خفيف','🌦️'],53:['رذاذ','🌦️'],55:['رذاذ كثيف','🌧️'],61:['أمطار خفيفة','🌦️'],63:['أمطار','🌧️'],65:['أمطار غزيرة','🌧️'],71:['ثلوج خفيفة','🌨️'],73:['ثلوج','🌨️'],75:['ثلوج كثيفة','❄️'],80:['زخات مطر','🌦️'],81:['زخات مطر','🌧️'],82:['زخات غزيرة','⛈️'],95:['عواصف رعدية','⛈️'],96:['عواصف رعدية وبَرَد','⛈️'],99:['عواصف قوية','⛈️']};
- const omanFallback={latitude:24.2509,longitude:55.7931};
- function clock(){const d=new Date();if($('weatherLocalTime'))$('weatherLocalTime').textContent=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'}).format(d);if($('weatherLocalDate'))$('weatherLocalDate').textContent=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long'}).format(d)+' · عُمان'}
- let weatherCoords={...omanFallback},weatherPlace='البريمي، عُمان',weatherBusy=false;
- async function fetchWeather(lat,lon){
-  const u='https://api.open-meteo.com/v1/forecast?latitude='+encodeURIComponent(lat)+'&longitude='+encodeURIComponent(lon)+'&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m&timezone=Asia%2FMuscat';
-  const r=await fetch(u,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
-  const j=await r.json(),c=j.current;if(!c||c.temperature_2m==null)throw Error('بيانات الطقس غير مكتملة');return c;
- }
- function showWeather(c,place){
-  const w=labels[c.weather_code]||['حالة الطقس الحالية','🌤️'];
-  $('weatherTemp').textContent=Math.round(c.temperature_2m)+'°C';$('weatherIcon').textContent=w[1];$('weatherPlaceName').textContent=place;
-  $('weatherDesc').textContent=w[0]+' · المحسوس '+Math.round(c.apparent_temperature)+'° · الرطوبة '+Math.round(c.relative_humidity_2m)+'% · الرياح '+Math.round(c.wind_speed_10m)+' كم/س';
-  if($('weatherLocationButton'))$('weatherLocationButton').textContent='📍 تحديث موقعي';
- }
- let weatherRequestId=0;
- async function loadWeatherAt(lat,lon,place){
-  const requestId=++weatherRequestId;
-  try{const c=await fetchWeather(lat,lon);if(requestId!==weatherRequestId)return;showWeather(c,place);}
-  catch(primaryError){
-   if(requestId!==weatherRequestId)return;
-   try{const c=await fetchWeather(omanFallback.latitude,omanFallback.longitude);if(requestId!==weatherRequestId)return;weatherCoords={...omanFallback};weatherPlace='سلطنة عُمان';showWeather(c,'البريمي، عُمان');$('weatherDesc').textContent+=' · بيانات احتياطية من البريمي';}
-   catch(backupError){if(requestId==weatherRequestId)$('weatherDesc').textContent='تعذر الاتصال بمصدر الطقس. تحقق من الإنترنت ثم أعد المحاولة.';}
-  }
- }
- function weather(){loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace)}
- function geoErrorMessage(err){
-  if(err.code===1)return 'إذن الموقع مرفوض. فعّل إذن الموقع لهذا الموقع من إعدادات المتصفح، ثم أعد المحاولة.';
-  if(err.code===2)return 'الهاتف لم يستطع تحديد موقعك. فعّل GPS وخدمات الموقع، وجرّب قرب نافذة أو في مكان مفتوح.';
-  if(err.code===3)return 'استغرق تحديد الموقع وقتاً طويلاً. تأكد من تشغيل GPS ثم اضغط تحديث موقعي مجدداً.';
-  return 'تعذر تحديد الموقع. تأكد من تشغيل GPS وإذن الموقع للموقع.';
- }
- async function requestWeatherLocation(){
-  const button=$('weatherLocationButton'),desc=$('weatherDesc');
-  const finish=()=>{if(button){button.disabled=false;button.textContent='📍 فحص وإصلاح GPS';}};
-  if(!window.isSecureContext){desc.textContent='فشل الفحص: افتح الموقع من رابطه الآمن https://sloom86ss.github.io/';return;}
-  if(!navigator.geolocation){desc.textContent='فشل الفحص: المتصفح لا يوفّر خدمة تحديد الموقع. جرّب Chrome أو Safari محدّثاً.';return;}
-  if(button){button.disabled=true;button.textContent='⏳ جارٍ فحص GPS…';}
-  desc.textContent='الفحص 1/3: التحقق من إذن الموقع في المتصفح…';
-  try{
-   if(navigator.permissions?.query){
-    const permission=await navigator.permissions.query({name:'geolocation'});
-    if(permission.state==='denied'){
-     desc.textContent='الفحص اكتمل: إذن الموقع محظور من إعدادات المتصفح. افتح إعدادات الموقع لهذا العنوان، واجعل «الموقع: سماح»، ثم أعد المحاولة. إذا كان محظوراً من إعدادات الهاتف فعّله أيضاً.';
-     finish();return;
-    }
-   }
-  }catch(permissionCheckError){console.info('Geolocation permission query unavailable; continuing with browser prompt.');}
-  desc.textContent='الفحص 2/3: طلب موقع الهاتف. اختر «سماح» عند ظهور رسالة الإذن…';
-  let completed=false;
-  const locate=(options,retry)=>{
-   try{
-    navigator.geolocation.getCurrentPosition(async pos=>{
-     if(completed)return;completed=true;
-     weatherCoords={latitude:pos.coords.latitude,longitude:pos.coords.longitude};weatherPlace='موقعك الحالي';
-     desc.textContent='نجح فحص GPS ✓ دقة الموقع التقريبية '+Math.round(pos.coords.accuracy)+' متر. جارٍ تحميل الطقس…';
-     await loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace);
-     finish();
-    },err=>{
-     if(completed)return;
-     if(retry&&err.code!==1){desc.textContent='الفحص 3/3: نجرب تحديد الموقع بطريقة متوافقة أسرع…';locate({enableHighAccuracy:false,timeout:20000,maximumAge:60000},false);return;}
-     completed=true;
-     desc.textContent=geoErrorMessage(err)+' لم يتغير إعداد الهاتف تلقائياً؛ اتبع التعليمات أعلاه ثم أعد الفحص.';
-     finish();
-    },options);
-   }catch(callError){
-    if(completed)return;completed=true;
-    desc.textContent='تعذر تشغيل خدمة GPS: '+(callError.message||'راجع إذن الموقع وإعدادات المتصفح.');
-    finish();
-   }
-  };
-  locate({enableHighAccuracy:true,timeout:15000,maximumAge:0},true);
- }
- clock();weather();$('weatherLocationButton')?.addEventListener('click',requestWeatherLocation);setInterval(clock,15000);setInterval(()=>loadWeatherAt(weatherCoords.latitude,weatherCoords.longitude,weatherPlace),15*60*1000);
-})();
-</script>
+
 
 </body></html>
