@@ -1772,8 +1772,7 @@ body{
   <p>لا يتوفر حالياً مصدر مجاني موثوق يمنح إذناً واضحاً لتضمين ملخصات المباريات داخل الموقع. ستظهر الملخصات هنا عند توفر مصدر مرخّص، ولن نعرض فيديوهات قديمة أو محتوى محمياً دون إذن.</p>
  </div>
 </section>
- </div>
- <button id="sloomWeatherGPS" class="sloom-gps-toggle" type="button" aria-label="تفعيل أو تحديث الموقع والطقس" aria-pressed="false"><span class="gps-icon">⌖</span><span class="gps-copy"><b>GPS</b><small id="sloomWeatherStatus" role="status" aria-live="polite">غير مفعّل</small></span></button>
+  <span id="sloomWeatherStatus" hidden>غير مفعّل</span>
  
  <nav class="sloom-bottom-nav sloom-header-nav" aria-label="التنقل الرئيسي">
   <a href="#matches" class="active"><span>⚽</span>المباريات</a>
@@ -1785,12 +1784,7 @@ body{
 </header>
 
 
-<div id="sloomWeatherData" hidden aria-hidden="true"><span id="sloomWeatherIcon">🌤️</span><span id="sloomWeatherTemp">--°</span><span id="sloomWeatherPlace">البريمي، عُمان</span><span id="sloomWeatherDesc">جارٍ تحميل حالة الطقس…</span></div>
-
-<section id="sloomNewsWeatherTicker" class="sloom-news-weather-ticker" aria-label="شريط الطقس">
- <span class="sloom-news-weather-label">🌤️ الطقس</span>
- <div class="sloom-news-weather-window"><div class="sloom-news-weather-track" id="sloomNewsTickerTrack"><span id="sloomWeatherTicker">🌤️ جارٍ تحميل الطقس…</span></div></div>
-</section>
+<div id="sloomWeatherData" hidden aria-hidden="true"><span id="sloomWeatherIcon">🌤️</span><span id="sloomWeatherTemp">--°</span><span id="sloomWeatherPlace">السيب، عُمان</span><span id="sloomWeatherDesc">جارٍ تحميل حالة الطقس…</span></div>
 <section id="newsTicker" class="ticker" aria-label="شريط أخبار كرة القدم">
  <span class="ticker-label">⚽ أخبار كرة القدم</span>
  <div class="ticker-window"><div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل آخر الأخبار الرياضية…</span></div></div>
@@ -1963,18 +1957,18 @@ function renderSloomAutoHighlights(newsItems){
  const screen=document.querySelector('.sloom-summary-screen');
  if(!screen)return;
  if(sloomHighlightsRotationTimer){clearInterval(sloomHighlightsRotationTimer);sloomHighlightsRotationTimer=null;}
- const all=[...(newsItems||[]),...Object.values(sportsData).flatMap(l=>l.news||[])];
+ const all=[...(newsItems||[]),...(sportsData.news_sources||[]),...Object.values(sportsData).flatMap(l=>Array.isArray(l?.news)?l.news:[])];
  const seen=new Set();
  const clips=all.filter(n=>{
   const link=String(n.link||'');
   const id=(link.match(/espn\.com\/video\/clip\/(?:_\/id\/)?(\d+)/i)||link.match(/espn\.com\/video\/clip\?id=(\d+)/i)||[])[1];
-  if(!id||seen.has(id)||!/highlight|ملخص/i.test(String(n.headline||'')+' '+String(n.description||'')))return false;
+  if(!id||seen.has(id)||!/(highlight|ملخص|أهداف|goals|hat trick)/i.test(String(n.headline||'')+' '+String(n.description||'')))return false;
   const published=Date.parse(n.published||'');
   if(!Number.isFinite(published)||Date.now()-published>7*86400000||published>Date.now()+3600000)return false;
   seen.add(id);n._sloomClipId=id;return true;
  }).sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0)).slice(0,12);
  if(!clips.length){
-  screen.innerHTML='<span class="sloom-summary-empty-icon" aria-hidden="true">▶</span><b>بانتظار أحدث ملخص رسمي</b><p>لا تتوفر حالياً مقاطع حديثة قابلة للتضمين من مصدر رسمي.</p>';
+  screen.innerHTML='<span class="sloom-summary-empty-icon" aria-hidden="true">▶</span><b>لا يوجد ملخص حديث متاح الآن</b>';
   return;
  }
  let index=0;
@@ -2469,7 +2463,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
   $('sloomWeatherTemp').textContent=(temp>0?'+':'')+temp+'°';
   $('sloomWeatherPlace').textContent=name;
   $('sloomWeatherDesc').textContent=description+' · المحسوسة '+Math.round(current.apparent_temperature??temp)+'° · الرطوبة '+Math.round(current.relative_humidity_2m??0)+'٪';
-  ensureTicker(); if($('sloomWeatherTicker'))$('sloomWeatherTicker').textContent='🌤️ طقس '+name+': '+temp+'° · '+description+' · الرطوبة '+Math.round(current.relative_humidity_2m??0)+'٪';
+  ensureTicker(); if($('sloomWeatherTicker'))$('sloomWeatherTicker').textContent='🌡️ '+temp+'°';
   $('sloomWeatherStatus').textContent='آخر تحديث: '+new Intl.DateTimeFormat('ar-OM',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Muscat'}).format(new Date());
  }
  async function fallbackWeather(message){
@@ -2478,10 +2472,10 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
  }
  const button=$('sloomWeatherGPS');
  const ensureTicker=()=>{
-  const track=document.getElementById('sloomNewsTickerTrack');
+  const track=document.getElementById('tickerTrack');
   if(!track)return false;
   if(!$('sloomWeatherTicker')){
-   const item=document.createElement('span');item.id='sloomWeatherTicker';item.className='ticker-weather';item.textContent='🌤️ طقس السيب: جارٍ جلب درجة الحرارة…';track.appendChild(item);
+   const item=document.createElement('span');item.id='sloomWeatherTicker';item.className='ticker-weather';item.textContent='🌡️ --°';track.insertBefore(item,track.firstChild);
   }
   return true;
  };
@@ -2489,21 +2483,21 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
  const tickerObserver=new MutationObserver(()=>{if(ensureTicker()){}});
  tickerObserver.observe(document.body,{childList:true,subtree:true});
  button?.addEventListener('click',()=>{
-  if(!navigator.geolocation){fallbackWeather('GPS غير مدعوم؛ نعرض طقس السيب');return;}
-  button.disabled=true;$('sloomWeatherStatus').textContent='بانتظار الإذن…';
+  if(!navigator.geolocation){fallbackWeather('');return;}
+  if(button)button.disabled=true;$('sloomWeatherStatus').textContent='جارٍ التحديث…';
   navigator.geolocation.getCurrentPosition(async position=>{
    try{
     const lat=position.coords.latitude,lon=position.coords.longitude;
     await loadWeather(lat,lon,'موقعك الحالي');
-    $('sloomWeatherStatus').textContent='مفعّل';button.setAttribute('aria-pressed','true');
-   }catch(e){await fallbackWeather('تعذر تحديث الطقس من موقعك؛ نعرض طقس السيب');button.setAttribute('aria-pressed','false');}
-   finally{button.disabled=false;}
+    $('sloomWeatherStatus').textContent='محدّث';if(button)button.setAttribute('aria-pressed','true');
+   }catch(e){await fallbackWeather('تعذر تحديث موقعك؛ نعرض طقس السيب');if(button)button.setAttribute('aria-pressed','false');}
+   finally{if(button)button.disabled=false;}
   },async error=>{
    const reason=error.code===1?'لم تسمح بإذن الموقع؛ نعرض طقس السيب':error.code===2?'تعذر تحديد الموقع؛ نعرض طقس السيب':'انتهت مهلة GPS؛ نعرض طقس السيب';
-   await fallbackWeather(reason);button.setAttribute('aria-pressed','false');button.disabled=false;
+   await fallbackWeather(reason);if(button){button.setAttribute('aria-pressed','false');button.disabled=false;}
   },{enableHighAccuracy:false,timeout:12000,maximumAge:600000});
  });
- fallbackWeather('السيب · GPS غير مفعّل');
+ fallbackWeather('');
  setInterval(()=>{
   const place=$('sloomWeatherPlace')?.textContent||fallback.name;
   if(place==='موقعك الحالي'){
