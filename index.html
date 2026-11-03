@@ -1501,7 +1501,10 @@ footer{border-color:#26352b!important;color:#91a095!important}
 #sloom-video-screen .sloom-video-heading small{display:block!important;color:#bdd4c2!important;font-size:10px!important;margin-top:3px!important}
 #sloom-video-screen .sloom-video-heading>span{flex:none!important;padding:5px 8px!important;border-radius:18px!important;background:#17472b!important;color:#d9ffe4!important;font-size:9px!important}
 #sloom-video-screen .sloom-fifa-player{position:relative!important;width:100%!important;aspect-ratio:16/9!important;overflow:hidden!important;border-radius:10px!important;background:#000!important}
-#sloom-video-screen .sloom-fifa-player iframe{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;border:0!important}
+#sloom-video-screen .sloom-fifa-player video{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;border:0!important;background:#000!important}
+#sloom-video-screen .sloom-video-credit{position:absolute!important;z-index:3!important;bottom:8px!important;right:8px!important;padding:3px 6px!important;border-radius:5px!important;background:#0009!important;color:#fff!important;font-size:8px!important;text-decoration:none!important}
+#sloom-video-screen .sloom-video-fallback{position:absolute!important;z-index:4!important;inset:0!important;display:grid!important;place-items:center!important;padding:20px!important;background:#07110b!important;color:#fff!important;font-size:12px!important;text-align:center!important}
+#sloom-video-screen .sloom-video-fallback[hidden]{display:none!important}
 #sloom-video-screen .sloom-video-rights{margin:7px 2px 0!important;color:#a9bdae!important;font-size:9px!important;line-height:1.6!important}
 @media(max-width:520px){#sloom-video-screen{margin:7px auto 11px!important;padding:9px!important;border-radius:13px!important}#sloom-video-screen .sloom-video-heading b{font-size:14px!important}}
 </style>
@@ -1525,8 +1528,45 @@ footer{border-color:#26352b!important;color:#91a095!important}
  </nav>
 </header>
 <section id="sloom-video-screen" class="sloom-video-feature" aria-label="فيديوهات كرة القدم">
- <div class="sloom-fifa-player"><iframe id="sloomFootballPlayer" src="https://www.youtube-nocookie.com/embed/DLOUfAVwuXA?autoplay=1&mute=1&controls=1&rel=0&playsinline=1" title="فيديو كرة القدم" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+ <div class="sloom-fifa-player" id="sloomFootballPlayerWrap">
+  <video id="sloomFootballPlayer" controls autoplay muted playsinline preload="metadata" title="فيديو كرة القدم">
+   <source src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Ajax_v_Real_Madrid_2019.webm" type="video/webm">
+   متصفحك لا يدعم تشغيل الفيديو.
+  </video>
+  <a class="sloom-video-credit" id="sloomVideoCredit" href="https://commons.wikimedia.org/wiki/File:Ajax_v_Real_Madrid_2019.webm" target="_blank" rel="noopener">Real Madrid · CC BY 3.0</a>
+  <div class="sloom-video-fallback" id="sloomVideoFallback" hidden>تعذر تشغيل هذا المقطع. جارٍ تجربة المقطع التالي…</div>
+ </div>
 </section>
+<script>
+(()=> {
+ const player=document.getElementById('sloomFootballPlayer');
+ const credit=document.getElementById('sloomVideoCredit');
+ const fallback=document.getElementById('sloomVideoFallback');
+ if(!player)return;
+ const clips=[
+  {src:'https://upload.wikimedia.org/wikipedia/commons/c/ce/Ajax_v_Real_Madrid_2019.webm',page:'https://commons.wikimedia.org/wiki/File:Ajax_v_Real_Madrid_2019.webm',credit:'Real Madrid · CC BY 3.0'},
+  {src:'https://upload.wikimedia.org/wikipedia/commons/8/8d/INTERNATIONAAL_VOETBAL-PGM4011542.webm',page:'https://commons.wikimedia.org/wiki/File:INTERNATIONAAL_VOETBAL-PGM4011542.webm',credit:'Polygoon / Beeld en Geluid · Public Domain'}
+ ];
+ let current=0,failed=0;
+ function playClip(index){
+  current=index%clips.length;
+  const clip=clips[current];
+  fallback.hidden=true;
+  credit.href=clip.page;credit.textContent=clip.credit;
+  player.onerror=()=>{
+   failed++;
+   if(failed<clips.length){fallback.hidden=false;playClip(current+1);}
+   else{fallback.hidden=false;fallback.textContent='تعذر تحميل المقاطع حالياً. حاول تحديث الصفحة.';}
+  };
+  player.src=clip.src;
+  player.load();
+  const attempt=player.play();
+  if(attempt&&typeof attempt.catch==='function')attempt.catch(()=>{});
+ }
+ player.addEventListener('ended',()=>{failed=0;playClip(current+1);});
+ playClip(0);
+})();
+</script>
 <section class="sloom-match-marquee" aria-label="شريط المباريات المتحرك"><div class="sloom-match-marquee-window"><div class="sloom-match-marquee-track" id="sloomMatchTicker"><span class="sloom-match-ticker-empty">⚽ متابعة مباريات كرة القدم</span></div></div></section>
 <nav class="sloom-category-strip" aria-label="اختصارات الأقسام">
  <a href="#matches"><span>⚽</span><b>المباريات</b></a>
