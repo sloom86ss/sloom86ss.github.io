@@ -1922,15 +1922,47 @@ if(league.standings&&league.standings.length){const st=document.createElement('d
  renderFanZone();
 }
 
+// SLOOM365 ESPN assistant: cache, deduplicate requests, timeout and retry transient failures.
+const sloomEspnCache=new Map();
+const sloomEspnPending=new Map();
+async function fetchEspnJson(url,options={}){
+ const ttl=Number(options.ttl??12000),timeout=Number(options.timeout??9000),retries=Number(options.retries??1);
+ const now=Date.now(),cached=sloomEspnCache.get(url);
+ if(cached&&cached.expiresAt>now)return cached.data;
+ if(sloomEspnPending.has(url))return sloomEspnPending.get(url);
+ const task=(async()=>{
+  let lastError;
+  for(let attempt=0;attempt<=retries;attempt++){
+   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeout);
+   try{
+    const response=await fetch(url,{cache:'no-store',signal:controller.signal,headers:{'Accept':'application/json'}});
+    if(!response.ok){
+     const error=new Error('ESPN HTTP '+response.status);
+     if(response.status<500&&response.status!==429)throw error;
+     lastError=error;
+    }else{
+     const data=await response.json();
+     sloomEspnCache.set(url,{data,expiresAt:Date.now()+ttl});
+     return data;
+    }
+   }catch(error){lastError=error;}
+   finally{clearTimeout(timer);}
+   if(attempt<retries)await new Promise(resolve=>setTimeout(resolve,350*(attempt+1)));
+  }
+  throw lastError||new Error('تعذر الاتصال بمصدر ESPN');
+ })();
+ sloomEspnPending.set(url,task);
+ try{return await task;}finally{sloomEspnPending.delete(url);}
+}
+
 async function loadMatchEvents(details,leagueKey,eventId){
  const body=details.querySelector('.match-detail-body');if(!body)return;
- const panel=document.createElement('section');panel.className='match-events';panel.innerHTML='<h4>تفاصيل المباراة</h4><div class="event-muted">جارٍ جلب التشكيلتين والأهداف والبطاقات والتبديلات من المصدر…</div>';body.appendChild(panel);
+ const panel=document.createElement('section');panel.className='match-events';panel.innerHTML='<h4>تفاصيل المباراة</h4><div class="event-muted">مساعد ESPN: جارٍ جلب التشكيلتين والأهداف والبطاقات والإحصائيات…</div>';body.appendChild(panel);
  if(!eventId){panel.innerHTML='<h4>تفاصيل المباراة</h4><div class="event-muted">لا يتوفر معرّف المباراة لدى المصدر.</div>';return}
  const leaguePath=String(leagueKey||'').replace(/^soccer\//,'');
  const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(eventId)+'&lang=ar';
  try{
-  const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);
-  const data=await response.json();
+  const data=await fetchEspnJson(url,{ttl:20000,timeout:10000,retries:1});
   const eventList=Array.isArray(data.keyEvents)?data.keyEvents:Array.isArray(data.plays)?data.plays:Array.isArray(data.commentary)?data.commentary:[];
   const arabicNames={
    'Cristiano Ronaldo':'كريستيانو رونالدو','Lionel Messi':'ليونيل ميسي','Kylian Mbappe':'كيليان مبابي','Kylian Mbappé':'كيليان مبابي',
@@ -2171,9 +2203,7 @@ async function refreshLiveScores(){
  const previous=JSON.parse(JSON.stringify(sportsData));
  await Promise.allSettled(targets.map(async([key,league])=>{
   const liveUrl='https://site.api.espn.com/apis/site/v2/sports/'+key+'/scoreboard?dates='+localDay+'&limit=500&_='+Date.now();
-  const response=await fetch(liveUrl,{cache:'no-store',headers:{'Cache-Control':'no-cache','Pragma':'no-cache'}});
-  if(!response.ok)throw new Error('ESPN '+response.status);
-  const payload=await response.json(),events=payload.events||[],byId=new Map((league.matches||[]).map(game=>[String(game.id),game]));
+  const payload=await fetchEspnJson(liveUrl,{ttl:10000,timeout:8000,retries:1}),events=payload.events||[],byId=new Map((league.matches||[]).map(game=>[String(game.id),game]));
   for(const event of events){
    const comp=(event.competitions||[])[0]||{},competitors=comp.competitors||[];
    const home=competitors.find(team=>team.homeAway==='home')||{},away=competitors.find(team=>team.homeAway==='away')||{};
