@@ -1479,6 +1479,21 @@ footer{border-color:#26352b!important;color:#91a095!important}
  .sloom-video-heading>span{font-size:9px!important;padding:4px 7px!important}
 }
 </style>
+<style id="sloom-match-marquee-style">
+.sloom-match-marquee{height:58px;display:flex;align-items:center;overflow:hidden;margin:0 -16px 12px;padding:0 18px;background:#050708;border-top:1px solid #182126;border-bottom:1px solid #182126;direction:rtl}
+.sloom-match-marquee-window{width:100%;overflow:hidden}
+.sloom-match-marquee-track{display:flex;align-items:center;gap:28px;width:max-content;white-space:nowrap;animation:sloomMatchTickerMove 34s linear infinite}
+.sloom-match-marquee:hover .sloom-match-marquee-track{animation-play-state:paused}
+.sloom-match-ticker-item{display:inline-flex;align-items:center;gap:9px;color:#e6e9eb;font-size:14px;font-weight:700}
+.sloom-match-ticker-item img{width:27px;height:27px;object-fit:contain;flex:none}
+.sloom-match-ticker-vs{color:#8b969c;font-size:12px}
+.sloom-match-ticker-score{color:#b7f34a;font-weight:900;font-size:14px}
+.sloom-match-ticker-live{color:#ff626d;font-size:10px;font-weight:900}
+.sloom-match-ticker-empty{color:#b8c4c9;font-size:13px;font-weight:700}
+@keyframes sloomMatchTickerMove{from{transform:translateX(0)}to{transform:translateX(50%)}}
+@media(max-width:520px){.sloom-match-marquee{height:54px;margin-inline:-12px;padding-inline:14px}.sloom-match-ticker-item{font-size:12px}.sloom-match-ticker-item img{width:24px;height:24px}}
+@media(prefers-reduced-motion:reduce){.sloom-match-marquee-track{animation:none}}
+</style>
 </head>
 <body><main class="wrap">
 
@@ -1498,6 +1513,7 @@ footer{border-color:#26352b!important;color:#91a095!important}
   <a href="#teamsDirectory"><span>🏟️</span>الأندية</a>
  </nav>
 </header>
+<section class="sloom-match-marquee" aria-label="شريط المباريات المتحرك"><div class="sloom-match-marquee-window"><div class="sloom-match-marquee-track" id="sloomMatchTicker"><span class="sloom-match-ticker-empty">⚽ متابعة مباريات كرة القدم</span></div></div></section>
 <nav class="sloom-category-strip" aria-label="اختصارات الأقسام">
  <a href="#matches"><span>⚽</span><b>المباريات</b></a>
  <a href="#liveBoard"><span>📡</span><b>مباشر</b></a>
@@ -1681,6 +1697,7 @@ if(league.standings&&league.standings.length){const st=document.createElement('d
  renderStandings();
  renderLive();
  renderUpcoming();
+ renderSloomMatchTicker();
  renderFanZone();
 }
 
@@ -1799,6 +1816,26 @@ async function loadMatchEvents(details,leagueKey,eventId){
   console.warn('[SLOOM365 match events]',eventId,error);
  }
 }
+function renderSloomMatchTicker(){
+ const track=document.getElementById('sloomMatchTicker');if(!track)return;
+ const now=Date.now(),items=[];
+ Object.values(sportsData).filter(leagueIsFresh).forEach(league=>(league.matches||[]).forEach(match=>{
+  if(match.status!=='in'&&match.status!=='pre')return;
+  const ts=Date.parse(match.date||match.time||'');
+  if(match.status==='pre'&&(!Number.isFinite(ts)||ts<now||ts>now+24*60*60*1000))return;
+  items.push({league,match,ts:Number.isFinite(ts)?ts:0});
+ }));
+ items.sort((a,b)=>(a.match.status==='in'?-1:1)-(b.match.status==='in'?-1:1)||a.ts-b.ts);
+ const shown=items.slice(0,18);
+ if(!shown.length){track.innerHTML='<span class="sloom-match-ticker-empty">⚽ لا توجد مباريات مباشرة أو قادمة قريباً</span>';return}
+ const makeItem=({league,match})=>{
+  const h=match.home||{},a=match.away||{},live=match.status==='in';
+  const score=live?'<b class="sloom-match-ticker-score">'+esc(String(h.score??'—')+' - '+String(a.score??'—'))+'</b>':'<b class="sloom-match-ticker-vs">VS</b>';
+  return '<span class="sloom-match-ticker-item">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name||'الفريق الأول'))+'</span>'+score+'<span>'+esc(arTeam(a.name||'الفريق الثاني'))+'</span>'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+(live?'<small class="sloom-match-ticker-live">● مباشر</small>':'')+'<span class="sloom-match-ticker-vs">✦</span></span>';
+ };
+ const html=shown.map(makeItem).join('');
+ track.innerHTML=html+html;
+};
 function renderLive(){
  const list=document.getElementById('liveBoardList'),count=document.getElementById('liveBoardCount');if(!list||!count)return;
  const active=[];
