@@ -291,6 +291,47 @@ def send_ntfy(title, message, priority="default"):
         print("ntfy notification failed:", str(exc)[:120])
         return False
 
+def preserve_verified_match_fields(previous, current):
+    """Do not erase a previously observed score when ESPN temporarily omits it."""
+    old_matches = {}
+    for league in (previous.get("leagues") or {}).values():
+        for match in league.get("matches", []):
+            if match.get("id"):
+                old_matches[str(match["id"])] = match
+
+    preserved = 0
+    now = datetime.now(timezone.utc)
+    for league in (current.get("leagues") or {}).values():
+        for match in league.get("matches", []):
+            old = old_matches.get(str(match.get("id", "")))
+            if not old:
+                continue
+            for side in ("home", "away"):
+                current_team = match.setdefault(side, {})
+                old_team = old.get(side) or {}
+                if current_team.get("score") is None and old_team.get("score") is not None:
+                    current_team["score"] = old_team["score"]
+                    preserved += 1
+                if not current_team.get("name") and old_team.get("name"):
+                    current_team["name"] = old_team["name"]
+                if not current_team.get("logo") and old_team.get("logo"):
+                    current_team["logo"] = old_team["logo"]
+
+            # Protect a live match from a brief stale "pre" response. Explicit
+            # postponements, suspensions and cancellations remain authoritative.
+            detail = str(match.get("detail", "")) + " " + str(match.get("status_detail", ""))
+            kickoff = parse_published(match.get("date") or old.get("date"))
+            if (old.get("status") == "in" and match.get("status") == "pre"
+                    and kickoff and kickoff <= now
+                    and not re.search(r"postpon|suspend|cancel|delay|abandon", detail, re.I)):
+                match["status"] = "in"
+                for field in ("detail", "status_detail", "status_short", "period", "clock"):
+                    if old.get(field) not in (None, ""):
+                        match[field] = old[field]
+                preserved += 1
+    return preserved
+
+
 def notify_match_changes(previous, current):
     old_matches = {}
     for league in (previous.get("leagues") or {}).values():
@@ -369,6 +410,7 @@ def main():
     output["collection_duration_seconds"] = round(time.monotonic() - started_monotonic, 1)
     output["scoreboard_success_count"] = success
     output["scoreboard_total_count"] = len(FEEDS)
+    output["preserved_verified_fields"] = preserve_verified_match_fields(previous, output)
     notify_match_changes(previous, output)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
