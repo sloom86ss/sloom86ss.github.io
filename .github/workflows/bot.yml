@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Validate collector
-        run: python -m py_compile bot.py monitor.py repair.py scripts/refresh_data.py
+        run: python -m py_compile bot.py monitor.py repair.py smart_responder.py scripts/refresh_data.py
       - name: Validate SLOOM360 JavaScript
         run: |
           python - <<'PY'
@@ -59,6 +59,13 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ vars.NTFY_SERVER }}
         run: python -u bot.py
+      - name: Diagnose stale feeds and retry once when needed
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          NTFY_SERVER: ${{ vars.NTFY_SERVER }}
+          SMART_MAX_DATA_AGE_MINUTES: "20"
+          SMART_MAX_LEAGUE_AGE_MINUTES: "20"
+        run: python -u smart_responder.py
       - name: Commit and push updated data
         run: |
           git config user.name 'SLOOM TV Bot'
