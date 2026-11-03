@@ -1589,6 +1589,25 @@ footer{border-color:#26352b!important;color:#91a095!important}
 .watch-guide-note{margin:12px 0 0;padding-top:10px;border-top:1px solid #304032;color:#aebcaf;font-size:10px;line-height:1.9}
 @media(max-width:420px){.watch-guide-grid{grid-template-columns:1fr}.watch-guide{padding:13px}}
 </style>
+<style id="sloom-summary-screen">
+#sloom-video-screen{display:block!important;width:100%!important;max-width:780px!important;margin:8px auto 14px!important;padding:14px!important;border:1px solid #286b43!important;border-radius:17px!important;background:linear-gradient(145deg,#101d14,#0a120d)!important;box-shadow:0 8px 24px #0007!important}
+#sloom-video-screen .sloom-video-heading{display:flex;align-items:center;justify-content:space-between;gap:9px;margin:0 0 13px}
+#sloom-video-screen .sloom-video-heading b{display:block;color:#fff;font-size:clamp(15px,4vw,20px)}
+#sloom-video-screen .sloom-video-heading small{display:block;color:#bdd4c2;font-size:10px;margin-top:4px}
+#sloom-video-screen .sloom-video-heading>span{flex:none;padding:5px 8px;border-radius:18px;background:#17472b;color:#d9ffe4;font-size:9px}
+.sloom-summary-controls{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:10px;margin-bottom:11px;color:#d8e5d9;font-size:11px;font-weight:800}
+.sloom-summary-controls select{width:100%;min-width:0;background:#17251b;color:#fff;border:1px solid #526b3a;border-radius:10px;padding:10px;font:700 12px Cairo}
+.sloom-summary-screen{min-height:220px;padding:20px 13px;border:1px solid #334a38;border-radius:13px;background:radial-gradient(circle at 50% 0,#1b3523,#080e0a 75%);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}
+.sloom-summary-empty-icon{width:44px;height:44px;border:1px solid #b7f34a;border-radius:50%;display:grid;place-items:center;color:#b7f34a;font-size:17px;padding-right:2px}
+.sloom-summary-screen>b{color:#f5f8f4;font-size:14px}
+.sloom-summary-screen>p{max-width:520px;margin:0;color:#b2c1b5;font-size:11px;line-height:1.9}
+.sloom-summary-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;width:100%;margin:5px 0}
+.sloom-summary-details span{padding:8px 6px;border:1px solid #29392d;border-radius:9px;background:#111a14;color:#9eafa1;font-size:10px}
+.sloom-summary-details b{color:#e5eee6}
+.sloom-summary-source{display:inline-flex;align-items:center;justify-content:center;padding:9px 14px;border-radius:10px;background:#b7f34a;color:#10170b;font-size:11px;font-weight:900}
+#sloom-video-screen .sloom-video-rights{margin:10px 2px 0;color:#a9bdae;font-size:9px;line-height:1.8}
+@media(max-width:520px){#sloom-video-screen{padding:10px!important}.sloom-summary-controls{grid-template-columns:1fr;gap:5px}.sloom-summary-screen{min-height:230px;padding:15px 9px}.sloom-summary-details{gap:5px}.sloom-summary-details span{font-size:9px}}
+</style>
 </head>
 <body><main class="wrap">
 
@@ -1604,44 +1623,72 @@ footer{border-color:#26352b!important;color:#91a095!important}
   <a href="#teamsDirectory"><span>🏟️</span>الأندية</a>
  </nav>
 </header>
-<section id="sloom-video-screen" class="sloom-video-feature" aria-label="فيديوهات كرة القدم">
- <div class="sloom-fifa-player" id="sloomFootballPlayerWrap">
-  <video id="sloomFootballPlayer" controls autoplay muted playsinline preload="metadata" title="فيديو كرة القدم">
-   <source src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Ajax_v_Real_Madrid_2019.webm" type="video/webm">
-   متصفحك لا يدعم تشغيل الفيديو.
-  </video>
-  <a class="sloom-video-credit" id="sloomVideoCredit" href="https://commons.wikimedia.org/wiki/File:Ajax_v_Real_Madrid_2019.webm" target="_blank" rel="noopener">Real Madrid · CC BY 3.0</a>
-  <div class="sloom-video-fallback" id="sloomVideoFallback" hidden>تعذر تشغيل هذا المقطع. جارٍ تجربة المقطع التالي…</div>
+<section id="sloom-video-screen" class="sloom-video-feature" aria-label="شاشة ملخصات المباريات">
+ <div class="sloom-video-heading">
+  <div><b>⚽ شاشة ملخصات المباريات</b><small>ملخصات رسمية حديثة فقط — دون YouTube أو قنوات مدفوعة</small></div>
+  <span>تحقق من التاريخ</span>
  </div>
+ <div class="sloom-summary-controls">
+  <label for="sloomSummaryLeague">اختر البطولة</label>
+  <select id="sloomSummaryLeague">
+   <option value="uefa">دوري أبطال أوروبا</option>
+   <option value="premier">الدوري الإنجليزي</option>
+   <option value="laliga">الدوري الإسباني</option>
+   <option value="bundesliga">الدوري الألماني</option>
+   <option value="seriea">الدوري الإيطالي</option>
+   <option value="ligue1">الدوري الفرنسي</option>
+   <option value="spl">الدوري السعودي</option>
+   <option value="egypt">الدوري المصري</option>
+   <option value="uae">الدوري الإماراتي</option>
+   <option value="qatar">الدوري القطري</option>
+   <option value="iraq">الدوري العراقي</option>
+   <option value="fifa">FIFA+ والبطولات العالمية</option>
+  </select>
+ </div>
+ <div class="sloom-summary-screen" id="sloomSummaryScreen" aria-live="polite">
+  <div class="sloom-summary-empty-icon">▶</div>
+  <b id="sloomSummaryStatus">لا يوجد ملخص حديث تم التحقق منه حالياً</b>
+  <p id="sloomSummaryMessage">لن نعرض فيديو قديماً أو مباراة غير مؤكدة. اختر البطولة وافتح مكتبتها الرسمية للتحقق من أحدث الملخصات وتاريخ نشرها.</p>
+  <div class="sloom-summary-details">
+   <span>الفريقان: <b>بانتظار مصدر موثوق</b></span>
+   <span>النتيجة: <b>غير متاحة حالياً</b></span>
+   <span>تاريخ المباراة: <b>—</b></span>
+   <span>تاريخ نشر الملخص: <b>—</b></span>
+  </div>
+  <a id="sloomSummarySource" class="sloom-summary-source" href="https://www.uefa.tv/" target="_blank" rel="noopener noreferrer">فتح المصدر الرسمي للبطولة ↗</a>
+ </div>
+ <p class="sloom-video-rights">تنبيه: بعض الجهات لا تسمح بتضمين مشغل الفيديو داخل مواقع أخرى. لن نشغّل أي فيديو داخل هذه الشاشة إلا إذا توفر رابط رسمي قابل للتضمين؛ حالياً هذه الشاشة لا تتصل بعد بمصدر API يزوّدها تلقائياً ببيانات الملخصات وتواريخ نشرها.</p>
 </section>
 <script>
 (()=> {
- const player=document.getElementById('sloomFootballPlayer');
- const credit=document.getElementById('sloomVideoCredit');
- const fallback=document.getElementById('sloomVideoFallback');
- if(!player)return;
- const clips=[
-  {src:'https://upload.wikimedia.org/wikipedia/commons/c/ce/Ajax_v_Real_Madrid_2019.webm',page:'https://commons.wikimedia.org/wiki/File:Ajax_v_Real_Madrid_2019.webm',credit:'Real Madrid · CC BY 3.0'},
-  {src:'https://upload.wikimedia.org/wikipedia/commons/8/8d/INTERNATIONAAL_VOETBAL-PGM4011542.webm',page:'https://commons.wikimedia.org/wiki/File:INTERNATIONAAL_VOETBAL-PGM4011542.webm',credit:'Polygoon / Beeld en Geluid · Public Domain'}
- ];
- let current=0,failed=0;
- function playClip(index){
-  current=index%clips.length;
-  const clip=clips[current];
-  fallback.hidden=true;
-  credit.href=clip.page;credit.textContent=clip.credit;
-  player.onerror=()=>{
-   failed++;
-   if(failed<clips.length){fallback.hidden=false;playClip(current+1);}
-   else{fallback.hidden=false;fallback.textContent='تعذر تحميل المقاطع حالياً. حاول تحديث الصفحة.';}
-  };
-  player.src=clip.src;
-  player.load();
-  const attempt=player.play();
-  if(attempt&&typeof attempt.catch==='function')attempt.catch(()=>{});
+ const select=document.getElementById('sloomSummaryLeague');
+ const source=document.getElementById('sloomSummarySource');
+ const status=document.getElementById('sloomSummaryStatus');
+ const message=document.getElementById('sloomSummaryMessage');
+ if(!select||!source)return;
+ const sources={
+  uefa:{url:'https://www.uefa.tv/',name:'UEFA.tv'},
+  premier:{url:'https://www.premierleague.com/en/video',name:'Premier League'},
+  laliga:{url:'https://www.laliga.com/en-GB/videos',name:'LaLiga'},
+  bundesliga:{url:'https://www.bundesliga.com/en/bundesliga/video',name:'Bundesliga'},
+  seriea:{url:'https://en.legaseriea.it/serie-a/videos',name:'Serie A'},
+  ligue1:{url:'https://ligue1.com/',name:'Ligue 1'},
+  spl:{url:'https://www.spl.com.sa/en/index',name:'الدوري السعودي'},
+  egypt:{url:'https://www.egyptianproleague.com/league',name:'الدوري المصري'},
+  uae:{url:'https://www.uaeproleague.ae/en/news-and-gallery',name:'الدوري الإماراتي'},
+  qatar:{url:'https://www.qsl.qa/en',name:'الدوري القطري'},
+  iraq:{url:'https://iraqstarsleague.com/media?tab=videos',name:'دوري نجوم العراق'},
+  fifa:{url:'https://www.plus.fifa.com/',name:'FIFA+'}
+ };
+ function update(){
+  const item=sources[select.value]||sources.uefa;
+  source.href=item.url;
+  source.textContent='فتح مكتبة '+item.name+' الرسمية ↗';
+  status.textContent='لا يوجد ملخص حديث تم التحقق منه حالياً';
+  message.textContent='لم نربط بعد مصدراً آلياً يؤكد مباراة حديثة ونتيجتها وتاريخ نشر ملخصها. افتح مكتبة '+item.name+' الرسمية للتحقق من أحدث المقاطع؛ لن نعرض محتوى قديماً على أنه جديد.';
  }
- player.addEventListener('ended',()=>{failed=0;playClip(current+1);});
- playClip(0);
+ select.addEventListener('change',update);
+ update();
 })();
 </script>
 
