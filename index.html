@@ -1620,11 +1620,44 @@ footer{border-color:#26352b!important;color:#91a095!important}
 .sloom-video-source-note{margin:9px 2px 0;color:#a9bdae;font-size:9px;line-height:1.8}
 @media(max-width:380px){.sloom-video-source-grid{grid-template-columns:1fr}.sloom-video-source-card{display:grid;grid-template-columns:30px 1fr;column-gap:8px;padding:10px}.sloom-video-source-card>span{grid-row:1/4}.sloom-video-source-card>small,.sloom-video-source-card>em{grid-column:2}}
 </style>
+
+<style id="sloom-header-actions-and-league-filter">
+.sloom-header-top{display:grid!important;grid-template-columns:minmax(180px,auto) auto minmax(0,1fr)!important;align-items:center!important;gap:10px!important;min-height:0!important}
+.sloom-brand-stack{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:7px!important;min-width:0!important}
+.sloom-brand-stack .brand{justify-content:center!important;min-width:0!important}
+.sloom-brand-stack .install-app-slot{display:flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;flex-wrap:wrap!important;width:auto!important;max-width:100%!important;margin:0!important;padding:0!important;border:0!important;background:none!important}
+.sloom-brand-stack .install-app-button{position:static!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:34px!important;padding:6px 10px!important;border:1px solid #d8ff8b!important;border-radius:10px!important;background:#b7f34a!important;color:#10170b!important;font:900 10px Cairo,Arial,sans-serif!important;white-space:nowrap!important;box-shadow:none!important}
+.sloom-brand-stack #enableNotifications{background:#203a2a!important;color:#eaffd6!important;border-color:#8ab56a!important}
+.sloom-brand-stack .install-app-help{display:none!important}
+.sloom-header-nav{min-width:0!important}
+@media(max-width:650px){
+ .sloom-header-top{grid-template-columns:auto minmax(0,1fr)!important;align-items:center!important;gap:8px!important;padding:9px 8px!important}
+ .sloom-brand-stack{grid-column:1/-1!important;width:100%!important}
+ .sloom-brand-stack .brand{width:100%!important;justify-content:center!important}
+ .sloom-brand-stack .install-app-slot{width:100%!important;margin:0!important}
+ .sloom-brand-stack .install-app-button{min-height:34px!important;font-size:10px!important;padding:5px 10px!important}
+ .sloom-header-top #sloomWeatherGPS{grid-column:1!important;grid-row:2!important;justify-self:start!important}
+ .sloom-header-nav{grid-column:2!important;grid-row:2!important;width:100%!important;flex:1 1 auto!important;min-width:0!important}
+ .sloom-header-nav a{min-width:0!important;padding-inline:1px!important}
+}
+@media(max-width:380px){
+ .sloom-brand-stack .install-app-button{font-size:9px!important;padding:5px 8px!important}
+ .sloom-header-nav a{font-size:8px!important}
+}
+</style>
+
 </head>
 <body><main class="wrap">
 
 <header class="sloom-header-top">
- <div class="brand"><img class="sloom-logo-animated" src="assets/sloom360-logo.svg" alt="سلوم كورة 365 | SLOOM KORA 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>سلوم كورة 365</h1><small>مباريات وأخبار كرة القدم</small></div></div>
+ <div class="sloom-brand-stack"><div class="brand"><img class="sloom-logo-animated" src="assets/sloom360-logo.svg" alt="سلوم كورة 365 | SLOOM KORA 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>سلوم كورة 365</h1><small>مباريات وأخبار كرة القدم</small></div></div>
+ <div class="install-app-slot" aria-label="إعدادات التطبيق">
+  <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365" aria-describedby="installAppHelp">📲 تثبيت التطبيق</button>
+  <button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار" aria-describedby="notificationHelp">🔔 الإشعارات</button>
+  <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
+  <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
+ </div>
+ </div>
  <button id="sloomWeatherGPS" class="sloom-gps-toggle" type="button" aria-label="تفعيل أو تحديث الموقع والطقس" aria-pressed="false"><span class="gps-icon">⌖</span><span class="gps-copy"><b>GPS</b><small id="sloomWeatherStatus" role="status" aria-live="polite">غير مفعّل</small></span></button>
  
  <nav class="sloom-bottom-nav sloom-header-nav" aria-label="التنقل الرئيسي">
@@ -1689,13 +1722,9 @@ footer{border-color:#26352b!important;color:#91a095!important}
 
 </section>
 <section class="stats"><div class="stat"><b id="matchCount">—</b><span>مباراة معروضة</span></div><div class="stat"><b id="liveCount">—</b><span>مباشر الآن</span></div><div class="stat"><b id="updated">—</b><span>آخر تحديث</span></div></section>
-<div class="section-head"><h3>🏆 الدوريات والبطولات العالمية</h3><small>مباريات من مصادر البيانات</small></div>
+<div class="section-head"><h3>🏆 الدوريات المعتمدة</h3><small>6 بطولات أوروبية</small></div>
 <div class="arabic-league-nav" id="arabicLeagueNav">
- <button class="active" data-region="all">كل البطولات</button>
- <button data-region="arab">البطولات العربية</button>
- <button data-region="asia">آسيا</button>
- <button data-region="europe">أوروبا</button>
- <button data-region="africa">أفريقيا</button>
+ <button class="active" data-region="all">كل الدوريات المعتمدة</button>
 </div>
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters day-switcher" id="dayFilters"><button class="filter" data-day="yesterday">الأمس</button><button class="filter active" data-day="today">اليوم</button><button class="filter" data-day="tomorrow">غداً</button></div>
 <!-- مصادر الفيديو معروضة أعلى الصفحة بجوار الهوية الرئيسية -->
@@ -1720,12 +1749,6 @@ footer{border-color:#26352b!important;color:#91a095!important}
 </section>
 <div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
 <div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><small class="news-source-note">أخبار من مصادر موثوقة</small>
- <div class="install-app-slot" aria-label="إعدادات التطبيق">
-  <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365" aria-describedby="installAppHelp">📲 تثبيت التطبيق</button>
-  <button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار" aria-describedby="notificationHelp">🔔 الإشعارات</button>
-  <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
-  <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
- </div>
 </div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 
 <footer>© <span id="year"></span> SLOOM 365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.<div class="broadcast-disclaimer">سياسة حقوق البث: لا يستضيف SLOOM365 أي بث مباشر ولا يعيد رفع أو تضمين أو إعادة توزيع مباريات أو مقاطع محمية. قد نعرض أسماء القنوات الناقلة بوصفها معلومات رياضية تعريفية وفق البيانات المتاحة من مصادر المباريات، ولا يعني ذكر اسم القناة أننا نملك حقوق بثها أو نمثلها. لا يستضيف SLOOM365 بثاً مباشراً ولا يعيد رفع أو تضمين أو إعادة توزيع المباريات أو المقاطع المحمية. روابط المشاهدة — إن توفرت — تقتصر على المواقع الرسمية للناقلين أو أصحاب الحقوق بعد التحقق منها؛ ولا ننشر روابط بث غير رسمية. قد تختلف القنوات حسب الدولة وحقوق النقل، لذا يُرجى الرجوع إلى الناقل للتأكد من جدول البث.</div></footer>
@@ -1737,6 +1760,8 @@ footer{border-color:#26352b!important;color:#91a095!important}
 
 <script>
 let sportsData={},activeFilter='all',activeDay='today',activeRegion='all',dataGeneratedAt=null;
+const SLOOM_ALLOWED_LEAGUES=new Set(['soccer/eng.1','soccer/esp.1','soccer/ger.1','soccer/ita.1','soccer/fra.1','soccer/uefa.champions']);
+function isSloomAllowedLeague(key){return SLOOM_ALLOWED_LEAGUES.has(key)}
 const labels={football:'كرة القدم',basketball:'كرة السلة',americanfootball:'كرة القدم الأمريكية',hockey:'هوكي',baseball:'بيسبول',other:'رياضات أخرى'};
 const clubAr={"Al Ahly":"الأهلي المصري","Al Ahli Saudi":"الأهلي السعودي","Al Shabab":"الشباب","Al Ettifaq":"الاتفاق","Al Fateh":"الفتح","Al Taawoun":"التعاون","Al Raed":"الرائد","Al Fayha":"الفيحاء","Al Riyadh":"الرياض","Al Wehda":"الوحدة","Al Sadd":"السد","Al Duhail":"الدحيل","Al Ain":"العين","Shabab Al Ahli":"شباب الأهلي","Al Wasl":"الوصل","Zamalek":"الزمالك","Pyramids FC":"بيراميدز","Ismaily":"الإسماعيلي","Newcastle United":"نيوكاسل يونايتد","West Ham United":"وست هام يونايتد","Aston Villa":"أستون فيلا","Brighton & Hove Albion":"برايتون","Everton":"إيفرتون","Wolverhampton Wanderers":"وولفرهامبتون","Nottingham Forest":"نوتنغهام فورست","Leicester City":"ليستر سيتي","Crystal Palace":"كريستال بالاس","Fulham":"فولهام","Brentford":"برينتفورد","Burnley":"بيرنلي","Sunderland":"سندرلاند","Girona":"جيرونا","Celta Vigo":"سيلتا فيغو","Real Betis":"ريال بيتيس","Mallorca":"مايوركا","Rayo Vallecano":"رايو فايكانو","Espanyol":"إسبانيول","Levante":"ليفانتي","Alaves":"ألافيس","AS Roma":"روما","Lazio":"لاتسيو","Atalanta":"أتالانتا","Fiorentina":"فيورنتينا","Bologna":"بولونيا","Torino":"تورينو","Como":"كومو","Monza":"مونزا","Lecce":"ليتشي","Genoa":"جنوى","Sassuolo":"ساسولو","Lyon":"ليون","Marseille":"مارسيليا","Monaco":"موناكو","Lille":"ليل","Nice":"نيس","Lens":"لانس","Rennes":"رين","Strasbourg":"ستراسبورغ","Feyenoord":"فينورد","AZ Alkmaar":"ألكمار","Club Brugge":"كلوب بروج","Celtic":"سيلتيك","Rangers":"رينجرز","Galatasaray":"غلطة سراي","Fenerbahce":"فنربخشة","Besiktas":"بشكتاش","Real Madrid":"ريال مدريد","Barcelona":"برشلونة","Manchester City":"مانشستر سيتي","Manchester United":"مانشستر يونايتد","Liverpool":"ليفربول","Arsenal":"أرسنال","Chelsea":"تشيلسي","Tottenham Hotspur":"توتنهام","Bayern Munich":"بايرن ميونخ","Borussia Dortmund":"بوروسيا دورتموند","Inter":"إنتر ميلان","Inter Milan":"إنتر ميلان","AC Milan":"ميلان","Juventus":"يوفنتوس","Napoli":"نابولي","Paris Saint-Germain":"باريس سان جيرمان","Al Hilal":"الهلال","Al Nassr":"النصر","Al Ittihad":"الاتحاد","Al-Ittihad":"الاتحاد","Al Ahli":"الأهلي","Getafe":"خيتافي","Sevilla":"إشبيلية","Valencia":"فالنسيا","Atlético Madrid":"أتلتيكو مدريد","Atletico Madrid":"أتلتيكو مدريد","Athletic Club":"أتلتيك بلباو","Real Sociedad":"ريال سوسيداد","Racing Santander":"راسينغ سانتاندير","Osasuna":"أوساسونا","Elche":"إلتشي","Villarreal":"فياريال","Porto":"بورتو","Benfica":"بنفيكا","Ajax":"أياكس","PSV Eindhoven":"آيندهوفن","Deportivo":"ديبورتيفو لاكورونيا","Lorient":"لوريان","Brest":"بريست","Pakhtakor":"باختاكور","Al-Quwa Al-Jawiya":"القوة الجوية","Tractor":"تراكتور","Neftchi Fergana":"نيفتشي فرغانة","Al Ittihad":"الاتحاد","Al-Gharafa":"الغرافة","Al Qadsiah":"القادسية","Newcastle Jets":"نيوكاسل جيتس","Shanghai Port FC":"شنغهاي بورت","Jeonbuk Hyundai Motors":"جيونبوك هيونداي موتورز","Johor Darul Ta'zim":"جوهور دار التعظيم","Kashiwa Reysol":"كاشيوا ريسول","Daejeon Hana Citizen FC":"دايجون هانا سيتيزن","Vissel Kobe":"فيسيل كوبي","Ratchaburi FC":"راتشابوري","Cong An Ha Noi":"كونغ آن هانوي","Kyoto Sanga":"كيوتو سانغا","Port FC":"بورت إف سي","Beijing Guoan":"بكين غوان","Esteghlal FC":"استقلال طهران","Al-Shamal":"الشمال","Pohang Steelers":"بوهانغ ستيلرز","Gamba Osaka":"غامبا أوساكا","Buriram United":"بوريرام يونايتد","Kashima Antlers":"كاشيما أنتلرز","East Bengal FC":"إيست بنغال","Al-Seeb Club":"نادي السيب","Al-Hussein SC":"الحسين إربد","Al-Shorta SC":"الشرطة","Melbourne Victory":"ملبورن فيكتوري","Persib Bandung":"بيرسيب باندونغ","FC Seoul":"إف سي سيول","The Cong-Viettel FC":"فيتيل","Arkadag FK":"أركاداغ","Gol Gohar Sirjan FC":"غول گهر سيرجان","Al Wahda FC":"الوحدة الإماراتي","Al-Khaldiya SC":"الخالدية","Al-Rayyan SC":"الريان","Al-Nahda Club":"النهضة العماني","Kuwait SC":"الكويت","FC Nasaf":"ناساف","Al-Faisaly SC":"الفيصلي","Al-Muharraq SC":"المحرق","Al Jazira Club":"الجزيرة الإماراتي","Red Bull Bragantino":"ريد بول براغانتينو","Santos":"سانتوس","Chapecoense":"شابيكوينسي","Mirassol":"ميراسول","Internacional":"إنترناسيونال","Coritiba":"كوريتيبا","Athletico-PR":"أتلتيكو باراناينسي","Vasco da Gama":"فاسكو دا غاما","Flamengo":"فلامنغو","Grêmio":"غريميو","Botafogo":"بوتافوغو","Atlético-MG":"أتلتيكو مينيرو","São Paulo":"ساو باولو","Corinthians":"كورينثيانز","Alverca":"ألفيركا","Gil Vicente":"جيل فيسنتي","Vitória de Guimaraes":"فيتوريا غيماريش","Defensa y Justicia":"ديفينسا إي خوستيسيا","Independiente":"إنديبندينتي","Platense":"بلاتينسي","Central Córdoba (Santiago del Estero)":"سنترال كوردوبا","Atlético Tucumán":"أتلتيكو توكومان","Argentinos Juniors":"أرجنتينوس جونيورز","Independiente Rivadavia":"إنديبندينتي ريفادافيا","Banfield":"بانفيلد","Stade Rennais":"رين","Olympiacos":"أولمبياكوس","VfB Stuttgart":"شتوتغارت","Shakhtar Donetsk":"شاختار دونيتسك","Sporting CP":"سبورتينغ لشبونة","Bodo/Glimt":"بودو/غليمت","Feyenoord Rotterdam":"فينورد","FC Porto":"بورتو","AEK Athens":"آيك أثينا","RB Leipzig":"لايبزيغ","Slavia Prague":"سلافيا براغ","Viking FK":"فايكينغ","Sabah FK":"ساباه","Genclerbirligi":"غنتشلربيرليغي","Alanyaspor":"ألانيا سبور","Internazionale":"إنتر ميلان","LASK Linz":"لاسـك لينتس","Slovan Bratislava":"سلوفان براتيسلافا"};const arTeam=n=>clubAr[String(n||'').trim()]||n||'الفريق';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -1763,7 +1788,7 @@ function renderStandings(){
  root.innerHTML='';
  let count=0;
  Object.entries(sportsData).forEach(([key,league])=>{
-  if(!leagueIsFresh(league)||!Array.isArray(league.standings)||!league.standings.length)return;
+  if(!isSloomAllowedLeague(key)||!leagueIsFresh(league)||!Array.isArray(league.standings)||!league.standings.length)return;
   const card=document.createElement('section');card.className='league standings-league';
   const title=document.createElement('div');title.className='league-title';title.innerHTML='<b>'+esc(league.name||key)+'</b><span>'+league.standings.length+' فريق</span>';card.appendChild(title);
   const wrap=document.createElement('div');wrap.className='standings-table-wrap';
@@ -1788,14 +1813,14 @@ function renderFanZone(){
  const favorites=readSloomStore('sloom365_favorite_teams',[]);
  const predictions=readSloomStore('sloom365_match_predictions',{});
  const teams=new Map();
- Object.entries(sportsData).forEach(([key,league])=>{if(!leagueIsFresh(league))return;(league.teams||[]).forEach(team=>{if(team?.name&&!teams.has(team.name))teams.set(team.name,team)})});
+ Object.entries(sportsData).forEach(([key,league])=>{if(!isSloomAllowedLeague(key)||!leagueIsFresh(league))return;(league.teams||[]).forEach(team=>{if(team?.name&&!teams.has(team.name))teams.set(team.name,team)})});
  const teamOptions=[...teams.keys()].sort((a,b)=>arTeam(a).localeCompare(arTeam(b),'ar'));
  const currentFavorite=favoriteSelect.value;
  favoriteSelect.innerHTML='<option value="">اختر نادياً</option>'+teamOptions.map(name=>'<option value="'+esc(name)+'">'+esc(arTeam(name))+'</option>').join('');
  if(teamOptions.includes(currentFavorite))favoriteSelect.value=currentFavorite;
  favoriteList.innerHTML=favorites.length?favorites.map((name,index)=>'<span class="favorite-chip">'+esc(arTeam(name))+'<button type="button" data-remove-favorite="'+index+'" aria-label="إزالة '+esc(arTeam(name))+'">×</button></span>').join(''):'<span class="fan-muted">لم تختر فريقاً بعد.</span>';
  const upcoming=[];
- Object.entries(sportsData).forEach(([key,league])=>{if(!leagueIsFresh(league))return;(league.matches||[]).filter(game=>game.status==='pre'&&game.id&&game.date&&Date.parse(game.date)>Date.now()).forEach(game=>upcoming.push({key,league:league.name||key,game}))});
+ Object.entries(sportsData).forEach(([key,league])=>{if(!isSloomAllowedLeague(key)||!leagueIsFresh(league))return;(league.matches||[]).filter(game=>game.status==='pre'&&game.id&&game.date&&Date.parse(game.date)>Date.now()).forEach(game=>upcoming.push({key,league:league.name||key,game}))});
  upcoming.sort((a,b)=>Date.parse(a.game.date)-Date.parse(b.game.date));
  const previous=matchSelect.value;
  matchSelect.innerHTML=upcoming.length?upcoming.map(item=>'<option value="'+esc(item.game.id)+'">'+esc(arTeam(item.game.home?.name||'الفريق الأول'))+' × '+esc(arTeam(item.game.away?.name||'الفريق الثاني'))+' — '+esc(item.league)+'</option>').join(''):'<option value="">لا توجد مباريات قادمة متاحة</option>';
@@ -1822,7 +1847,7 @@ document.getElementById('savePrediction')?.addEventListener('click',()=>{
 function render(){
  const dayNames={today:'مباريات اليوم بتوقيت عُمان',yesterday:'مباريات الأمس بتوقيت عُمان',tomorrow:'مباريات الغد بتوقيت عُمان'};document.getElementById('dayLabel').textContent=dayNames[activeDay];
  const root=document.getElementById('leagues');root.innerHTML='';let total=0,live=0,shown=0;const news=[];
- Object.entries(sportsData).forEach(([key,league])=>{if(!leagueIsFresh(league))return;const cat=league.category||getCategory(key);if(cat!=='football')return;const regionKeys={arab:['soccer/ksa.1','soccer/ksa.kings.cup'],asia:['soccer/afc.champions','soccer/afc.cup'],europe:['soccer/uefa.champions','soccer/uefa.europa','soccer/uefa.europa.conf'],africa:['soccer/caf.champions','soccer/caf.confed','soccer/caf.nations']};if(activeRegion!=='all'&&!regionKeys[activeRegion]?.includes(key))return;(league.news||[]).forEach(n=>news.push(n));const games=league.matches||[];total+=games.length;live+=games.filter(g=>g.status==='in').length;if(activeFilter!=='all'&&activeFilter!==cat)return;const dayGames=games.filter(g=>{const d=new Date(g.date||g.time||'');if(Number.isNaN(d.getTime()))return false;const key=x=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Muscat',year:'numeric',month:'2-digit',day:'2-digit'}).format(x);const today=key(new Date());const [yy,mm,dd]=today.split('-').map(Number);const offset=activeDay==='yesterday'?-1:activeDay==='tomorrow'?1:0;const target=new Date(Date.UTC(yy,mm-1,dd+offset)).toISOString().slice(0,10);return key(d)===target});
+ Object.entries(sportsData).forEach(([key,league])=>{if(!isSloomAllowedLeague(key)||!leagueIsFresh(league))return;const cat=league.category||getCategory(key);if(cat!=='football')return;(league.news||[]).forEach(n=>news.push(n));const games=league.matches||[];total+=games.length;live+=games.filter(g=>g.status==='in').length;if(activeFilter!=='all'&&activeFilter!==cat)return;const dayGames=games.filter(g=>{const d=new Date(g.date||g.time||'');if(Number.isNaN(d.getTime()))return false;const key=x=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Muscat',year:'numeric',month:'2-digit',day:'2-digit'}).format(x);const today=key(new Date());const [yy,mm,dd]=today.split('-').map(Number);const offset=activeDay==='yesterday'?-1:activeDay==='tomorrow'?1:0;const target=new Date(Date.UTC(yy,mm-1,dd+offset)).toISOString().slice(0,10);return key(d)===target});
  const upcoming=activeDay==='today'&&!dayGames.length?games.filter(g=>g.date&&Date.parse(g.date)>Date.now()).sort((a,b)=>Date.parse(a.date)-Date.parse(b.date)).slice(0,2):[];
  const visibleGames=dayGames.length?dayGames:upcoming;shown++;
  const card=document.createElement('section');card.className='league';
@@ -1843,8 +1868,8 @@ function render(){
 if(league.standings&&league.standings.length){const st=document.createElement('div');st.className='standings';st.innerHTML='<b>ترتيب مختصر</b>'+league.standings.slice(0,5).map((x,i)=>'<div><span>'+(esc(x.rank||i+1))+'</span><span>'+esc(arTeam(x.name))+'</span><span>'+esc(x.points||'—')+' ن</span></div>').join('');card.appendChild(st)}root.appendChild(card)});
  if(!shown)root.innerHTML='<div class="empty">لا توجد مباريات متاحة في هذا التصنيف حالياً.</div>';
  document.getElementById('matchCount').textContent=total;document.getElementById('liveCount').textContent=live;
- const stamps=Object.values(sportsData).map(x=>x.updated_at).filter(Boolean).sort();const stamp=stamps[stamps.length-1];document.getElementById('updated').textContent=stamp?new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'}).format(new Date(stamp)):'—';
- const clubMap=new Map();Object.values(sportsData).filter(leagueIsFresh).forEach(l=>(l.teams||[]).forEach(t=>{if(t.name&&!clubMap.has(t.name))clubMap.set(t.name,t)}));const clubs=[...clubMap.values()].sort((a,b)=>a.name.localeCompare(b.name));const q=(document.getElementById('teamSearch')?.value||'').trim().toLowerCase();const visible=clubs.filter(t=>(t.name+' '+arTeam(t.name)).toLowerCase().includes(q)).slice(0,160);document.getElementById('teamCount').textContent=clubs.length+' نادٍ';const td=document.getElementById('teamsDirectory');td.innerHTML=visible.length?'':'<div class="empty">لا توجد أندية مطابقة أو لم تصل قائمة الأندية بعد.</div>';visible.forEach(t=>{const el=document.createElement('button');el.type='button';el.className='team-chip';el.dataset.club=t.name;el.innerHTML=(t.logo?'<img loading="lazy" src="'+esc(t.logo)+'" onerror="this.style.display=\'none\'">':'')+'<span>'+esc(arTeam(t.name))+'</span>';td.appendChild(el)});const nb=document.getElementById('news');const unique=new Map();news.forEach(n=>{if(n.headline)unique.set(n.headline,n)});(sportsData.news_sources||[]).forEach(n=>{if(n.headline)unique.set(n.headline,n)});const now=Date.now();const trustedNewsSource=/(Reuters|رويترز|Associated Press|AP News|AFP|فرانس برس|BBC|بي بي سي|الجزيرة نت|الشرق الأوسط|سكاي نيوز عربية|مونت كارلو الدولية|جريدة عمان|عمان أوبزرفر|Oman Observer|Times of Oman|beIN SPORTS|العربية|The Guardian|Sky Sports|ESPN)/i;const soccerNewsPattern=/(كرة القدم|الدوري|دوري|كأس|كاس|نادي|الهلال|النصر|الاتحاد|الأهلي|الاهلي|ريال مدريد|برشلونة|ليفربول|مانشستر|رونالدو|ميسي|صلاح|انتقال|صفقة|مدرب|لاعب|football|soccer|champions league|premier league|transfer)/i;const items=[...unique.values()].filter(n=>typeof n.headline==='string'&&n.headline.trim()).filter(n=>typeof n.link==='string'&&n.link.startsWith('https://')&&n.source).filter(n=>trustedNewsSource.test(n.source||'')).filter(n=>/^(BBC Sport|Sky Sports|The Guardian|ESPN)$/i.test(n.source||'')||soccerNewsPattern.test((n.headline||'')+' '+(n.description||''))).filter(n=>{const t=Date.parse(n.published||'');return Number.isFinite(t)&&now-t>=0&&now-t<=7*86400000}).sort((a,b)=>Date.parse(b.published||b.fetched_at)-Date.parse(a.published||a.fetched_at)).slice(0,12);nb.innerHTML=items.length?'':'<div class="empty">لا توجد أخبار حديثة منشورة خلال آخر 7 أيام.</div>';items.forEach(n=>{const el=document.createElement('a');el.className='news-card';el.href=n.link||'#';el.target=n.link?'_blank':'_self';el.rel='noopener';el.innerHTML='<img loading="lazy" src="'+esc(n.image||'https://placehold.co/600x300/17211b/b7f34a?text=SLOOM+365')+'" alt=""><div><b dir="auto">'+esc(n.headline)+'</b><small>'+esc(n.source||'أخبار رياضية')+'</small></div>';nb.appendChild(el)});const ticker=document.getElementById('tickerTrack');if(ticker){const tickerItems=[...(sportsData.news_sources||[]),...news].filter(n=>n.headline&&typeof n.link==='string'&&n.link.startsWith('https://')&&n.source).filter(n=>trustedNewsSource.test(n.source||'')).filter(n=>/^(BBC Sport|Sky Sports|The Guardian|ESPN)$/i.test(n.source||'')||soccerNewsPattern.test((n.headline||'')+' '+(n.description||''))).filter(n=>{const t=Date.parse(n.published||'');return Number.isFinite(t)&&Date.now()-t>=0&&Date.now()-t<=3*86400000}).sort((a,b)=>Date.parse(b.published||b.fetched_at||0)-Date.parse(a.published||a.fetched_at||0)).filter((n,i,a)=>a.findIndex(x=>x.headline===n.headline)===i).slice(0,14);ticker.innerHTML='';const welcome=document.createElement('span');welcome.className='ticker-welcome';welcome.textContent='✦ أهلاً بكم في SLOOM365';ticker.appendChild(welcome);if(tickerItems.length){tickerItems.forEach(n=>{const item=document.createElement('span');item.dir='auto';const urgent=n.urgent===true||n.breaking===true||/\bعاجل\b|breaking|urgent/i.test((n.headline||'')+' '+(n.description||''));item.innerHTML=(urgent?'<b class="ticker-breaking">عاجل</b> ':'<b>●</b> ')+esc(n.headline)+' <small>— '+esc(n.source||'مصدر رياضي')+'</small>';ticker.appendChild(item)})}else{const item=document.createElement('span');item.textContent='لا توجد عناوين أخبار حديثة مؤكدة حالياً';ticker.appendChild(item)}const originals=Array.from(ticker.children);originals.forEach(node=>ticker.appendChild(node.cloneNode(true)));ticker.classList.add('ticker-loop-ready');}
+ const stamps=Object.entries(sportsData).filter(([key])=>isSloomAllowedLeague(key)).map(([,x])=>x.updated_at).filter(Boolean).sort();const stamp=stamps[stamps.length-1];document.getElementById('updated').textContent=stamp?new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'}).format(new Date(stamp)):'—';
+ const clubMap=new Map();Object.entries(sportsData).filter(([key,l])=>isSloomAllowedLeague(key)&&leagueIsFresh(l)).forEach(([,l])=>(l.teams||[]).forEach(t=>{if(t.name&&!clubMap.has(t.name))clubMap.set(t.name,t)}));const clubs=[...clubMap.values()].sort((a,b)=>a.name.localeCompare(b.name));const q=(document.getElementById('teamSearch')?.value||'').trim().toLowerCase();const visible=clubs.filter(t=>(t.name+' '+arTeam(t.name)).toLowerCase().includes(q)).slice(0,160);document.getElementById('teamCount').textContent=clubs.length+' نادٍ';const td=document.getElementById('teamsDirectory');td.innerHTML=visible.length?'':'<div class="empty">لا توجد أندية مطابقة أو لم تصل قائمة الأندية بعد.</div>';visible.forEach(t=>{const el=document.createElement('button');el.type='button';el.className='team-chip';el.dataset.club=t.name;el.innerHTML=(t.logo?'<img loading="lazy" src="'+esc(t.logo)+'" onerror="this.style.display=\'none\'">':'')+'<span>'+esc(arTeam(t.name))+'</span>';td.appendChild(el)});const nb=document.getElementById('news');const unique=new Map();news.forEach(n=>{if(n.headline)unique.set(n.headline,n)});(sportsData.news_sources||[]).forEach(n=>{if(n.headline)unique.set(n.headline,n)});const now=Date.now();const trustedNewsSource=/(Reuters|رويترز|Associated Press|AP News|AFP|فرانس برس|BBC|بي بي سي|الجزيرة نت|الشرق الأوسط|سكاي نيوز عربية|مونت كارلو الدولية|جريدة عمان|عمان أوبزرفر|Oman Observer|Times of Oman|beIN SPORTS|العربية|The Guardian|Sky Sports|ESPN)/i;const soccerNewsPattern=/(كرة القدم|الدوري|دوري|كأس|كاس|نادي|الهلال|النصر|الاتحاد|الأهلي|الاهلي|ريال مدريد|برشلونة|ليفربول|مانشستر|رونالدو|ميسي|صلاح|انتقال|صفقة|مدرب|لاعب|football|soccer|champions league|premier league|transfer)/i;const items=[...unique.values()].filter(n=>typeof n.headline==='string'&&n.headline.trim()).filter(n=>typeof n.link==='string'&&n.link.startsWith('https://')&&n.source).filter(n=>trustedNewsSource.test(n.source||'')).filter(n=>/^(BBC Sport|Sky Sports|The Guardian|ESPN)$/i.test(n.source||'')||soccerNewsPattern.test((n.headline||'')+' '+(n.description||''))).filter(n=>{const t=Date.parse(n.published||'');return Number.isFinite(t)&&now-t>=0&&now-t<=7*86400000}).sort((a,b)=>Date.parse(b.published||b.fetched_at)-Date.parse(a.published||a.fetched_at)).slice(0,12);nb.innerHTML=items.length?'':'<div class="empty">لا توجد أخبار حديثة منشورة خلال آخر 7 أيام.</div>';items.forEach(n=>{const el=document.createElement('a');el.className='news-card';el.href=n.link||'#';el.target=n.link?'_blank':'_self';el.rel='noopener';el.innerHTML='<img loading="lazy" src="'+esc(n.image||'https://placehold.co/600x300/17211b/b7f34a?text=SLOOM+365')+'" alt=""><div><b dir="auto">'+esc(n.headline)+'</b><small>'+esc(n.source||'أخبار رياضية')+'</small></div>';nb.appendChild(el)});const ticker=document.getElementById('tickerTrack');if(ticker){const tickerItems=[...(sportsData.news_sources||[]),...news].filter(n=>n.headline&&typeof n.link==='string'&&n.link.startsWith('https://')&&n.source).filter(n=>trustedNewsSource.test(n.source||'')).filter(n=>/^(BBC Sport|Sky Sports|The Guardian|ESPN)$/i.test(n.source||'')||soccerNewsPattern.test((n.headline||'')+' '+(n.description||''))).filter(n=>{const t=Date.parse(n.published||'');return Number.isFinite(t)&&Date.now()-t>=0&&Date.now()-t<=3*86400000}).sort((a,b)=>Date.parse(b.published||b.fetched_at||0)-Date.parse(a.published||a.fetched_at||0)).filter((n,i,a)=>a.findIndex(x=>x.headline===n.headline)===i).slice(0,14);ticker.innerHTML='';const welcome=document.createElement('span');welcome.className='ticker-welcome';welcome.textContent='✦ أهلاً بكم في SLOOM365';ticker.appendChild(welcome);if(tickerItems.length){tickerItems.forEach(n=>{const item=document.createElement('span');item.dir='auto';const urgent=n.urgent===true||n.breaking===true||/\bعاجل\b|breaking|urgent/i.test((n.headline||'')+' '+(n.description||''));item.innerHTML=(urgent?'<b class="ticker-breaking">عاجل</b> ':'<b>●</b> ')+esc(n.headline)+' <small>— '+esc(n.source||'مصدر رياضي')+'</small>';ticker.appendChild(item)})}else{const item=document.createElement('span');item.textContent='لا توجد عناوين أخبار حديثة مؤكدة حالياً';ticker.appendChild(item)}const originals=Array.from(ticker.children);originals.forEach(node=>ticker.appendChild(node.cloneNode(true)));ticker.classList.add('ticker-loop-ready');}
  renderStandings();
  renderLive();
  renderUpcoming();
@@ -1970,7 +1995,7 @@ async function loadMatchEvents(details,leagueKey,eventId){
 function renderSloomMatchTicker(){
  const track=document.getElementById('sloomMatchTicker');if(!track)return;
  const now=Date.now(),items=[];
- Object.values(sportsData).filter(leagueIsFresh).forEach(league=>(league.matches||[]).forEach(match=>{
+ Object.entries(sportsData).filter(([key,league])=>isSloomAllowedLeague(key)&&leagueIsFresh(league)).forEach(([,league])=>(league.matches||[]).forEach(match=>{
   if(match.status!=='in'&&match.status!=='pre')return;
   const ts=Date.parse(match.date||match.time||'');
   if(match.status==='pre'&&(!Number.isFinite(ts)||ts<now||ts>now+24*60*60*1000))return;
@@ -1990,7 +2015,7 @@ function renderSloomMatchTicker(){
 function renderLive(){
  const list=document.getElementById('liveBoardList'),count=document.getElementById('liveBoardCount');if(!list||!count)return;
  const active=[];
- Object.values(sportsData).filter(leagueIsFresh).forEach(league=>(league.matches||[]).forEach(match=>{if(match.status==='in')active.push({league,match})}));
+ Object.entries(sportsData).filter(([key,league])=>isSloomAllowedLeague(key)&&leagueIsFresh(league)).forEach(([,league])=>(league.matches||[]).forEach(match=>{if(match.status==='in')active.push({league,match})}));
  active.sort((a,b)=>String(a.league.name||'').localeCompare(String(b.league.name||''),'ar'));
  count.textContent=active.length+' مباراة مباشرة';
  if(!active.length){list.innerHTML='<div class="live-board-empty">لا توجد مباريات مباشرة مؤكدة الآن. ستظهر هنا تلقائياً عند انطلاقها.</div>';return}
@@ -2016,7 +2041,7 @@ function renderLive(){
 function renderUpcoming(){
  const list=document.getElementById('upcomingBoardList'),count=document.getElementById('upcomingBoardCount');if(!list||!count)return;
  const now=Date.now(),windowEnd=now+12*60*60*1000,items=[];
- Object.values(sportsData).filter(leagueIsFresh).forEach(league=>(league.matches||[]).forEach(match=>{
+ Object.entries(sportsData).filter(([key,league])=>isSloomAllowedLeague(key)&&leagueIsFresh(league)).forEach(([,league])=>(league.matches||[]).forEach(match=>{
   if(match.status!=='pre')return;
   const raw=match.date||match.time,ts=Date.parse(raw||'');
   if(!Number.isFinite(ts)||ts<=now||ts>windowEnd)return;
@@ -2079,7 +2104,7 @@ async function openClubDetails(team){
   clubModalBody.innerHTML='<div class="club-modal-head">'+(logo?'<img src="'+esc(logo)+'" alt="">':'')+'<div><h3 id="clubModalTitle">'+esc(name)+'</h3><small>'+esc(team.name)+'</small></div><button class="club-close" data-club-close>إغلاق ✕</button></div><div class="club-facts"><div class="club-fact"><span>تاريخ التأسيس</span><b>'+esc(founded)+'</b></div><div class="club-fact"><span>المصدر</span><b>'+(lang==='ar'?'ويكيبيديا العربية':'ويكيبيديا الإنجليزية')+'</b></div></div><h4>نبذة وتاريخ النادي</h4><div class="club-story">'+esc(intro||'لا تتوفر نبذة كافية في المصدر.')+'</div><h4>إنجازات ونتائج بارزة مذكورة بالمصدر</h4><div class="club-story">'+esc(honours.join('\n\n')||'لم يذكر ملخص المقال إنجازات محددة. نفضّل عدم تخمين عدد البطولات أو الألقاب.')+'</div><a class="club-source" href="https://'+lang+'.wikipedia.org/?curid='+page.pageid+'" target="_blank" rel="noopener">فتح المصدر والتحقق من التفاصيل ↗</a>';
  }catch(e){clubModalBody.innerHTML='<div class="club-loading">تعذر تحميل التفاصيل الآن. حاول مرة أخرى لاحقاً.</div>'}
 }
-document.getElementById('teamsDirectory').addEventListener('click',e=>{const btn=e.target.closest('[data-club]');if(!btn)return;const name=btn.dataset.club;const team=Object.values(sportsData).flatMap(l=>l.teams||[]).find(t=>t.name===name);if(team)openClubDetails(team)});
+document.getElementById('teamsDirectory').addEventListener('click',e=>{const btn=e.target.closest('[data-club]');if(!btn)return;const name=btn.dataset.club;const team=Object.entries(sportsData).filter(([key])=>isSloomAllowedLeague(key)).flatMap(([,l])=>l.teams||[]).find(t=>t.name===name);if(team)openClubDetails(team)});
 
 document.getElementById('teamSearch').addEventListener('input',render);
 document.getElementById('arabicLeagueNav').addEventListener('click',e=>{const b=e.target.closest('[data-region]');if(!b)return;activeRegion=b.dataset.region;document.querySelectorAll('#arabicLeagueNav button').forEach(x=>x.classList.toggle('active',x===b));render();});
@@ -2095,7 +2120,7 @@ async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'
 
 async function refreshLiveScores(){
  const now=Date.now(),localDay=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Muscat',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()).replace(/-/g,'');
- const targets=Object.entries(sportsData).filter(([key,league])=>key.startsWith('soccer/')&&(league.matches||[]).some(game=>{
+ const targets=Object.entries(sportsData).filter(([key,league])=>isSloomAllowedLeague(key)&&(league.matches||[]).some(game=>{
   const start=Date.parse(game.date||game.time||'');
   return game.status==='in'||(game.status==='pre'&&Number.isFinite(start)&&start>=now-3*60*60*1000&&start<=now+90*60*1000);
  }));
@@ -2179,8 +2204,8 @@ sloomNotificationButton?.addEventListener('click',async()=>{
 function notifySloomScoreChanges(previous,next){
  if(!sloomNotificationEnabled||!('Notification' in window)||Notification.permission!=='granted')return;
  const oldMatches=new Map();
- Object.values(previous||{}).forEach(league=>(league.matches||[]).forEach(m=>oldMatches.set(String(m.id),m)));
- Object.values(next||{}).forEach(league=>(league.matches||[]).forEach(m=>{
+ Object.entries(previous||{}).filter(([key])=>isSloomAllowedLeague(key)).forEach(([,league])=>(league.matches||[]).forEach(m=>oldMatches.set(String(m.id),m)));
+ Object.entries(next||{}).filter(([key])=>isSloomAllowedLeague(key)).forEach(([,league])=>(league.matches||[]).forEach(m=>{
   const old=oldMatches.get(String(m.id));if(!old||m.status!=='in')return;
   const oldScore=Number(old.home?.score||0)+':'+Number(old.away?.score||0);
   const newScore=Number(m.home?.score||0)+':'+Number(m.away?.score||0);
