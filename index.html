@@ -1299,6 +1299,20 @@ body{padding-bottom:125px!important}
 .full-standings-table .standing-team img{width:22px;height:22px;object-fit:contain}
 .standings-league{margin-bottom:14px}
 .sloom-header-nav a.active{background:linear-gradient(145deg,#168447,#075b2b)!important;border-color:#74d79a!important;color:#fff!important}
+
+/* ملعب سلوم: المفضلة والتوقعات المحلية المجانية */
+.fan-zone{margin:22px 0;padding:15px;border:1px solid #536b35;border-radius:18px;background:linear-gradient(145deg,#172318,#0c130e)}
+.fan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.fan-card{min-width:0;padding:13px;border:1px solid #344a32;border-radius:14px;background:#101a13}
+.fan-card h4{margin:0 0 5px;color:#d7ff9a;font-size:13px}.fan-card p{margin:0 0 10px;color:#aebcae;font-size:10px;line-height:1.8}
+.fan-controls{display:flex;gap:7px;margin:8px 0;align-items:center}
+.fan-card select{min-width:0;width:100%;padding:9px;border:1px solid #40563d;border-radius:10px;background:#0a120d;color:#f4f8f4;font:11px Cairo}
+.fan-button{flex:none;border:1px solid #c9f17c;border-radius:10px;padding:9px 11px;background:#b7f34a;color:#10170b;font:800 11px Cairo;cursor:pointer}
+.favorite-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.favorite-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border:1px solid #3d5937;border-radius:20px;background:#18271a;color:#eff8e9;font:700 10px Cairo}
+.favorite-chip button{border:0;background:transparent;color:#ff9da5;font:900 13px Cairo;cursor:pointer;padding:0 2px}
+.fan-muted{color:#93a493;font-size:10px}.prediction-controls{margin-top:8px}
+@media(max-width:620px){.fan-grid{grid-template-columns:1fr}.fan-controls{align-items:stretch}.fan-button{white-space:nowrap}}
 </style>
 </head>
 <body><main class="wrap">
@@ -1366,7 +1380,21 @@ body{padding-bottom:125px!important}
 </div>
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters day-switcher" id="dayFilters"><button class="filter" data-day="yesterday">الأمس</button><button class="filter active" data-day="today">اليوم</button><button class="filter" data-day="tomorrow">غداً</button></div>
 
-<div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><section id="standingsSection" class="standings-section">
+<div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><section class="fan-zone" id="fanZone">
+ <div class="section-head"><h3>⭐ ملعب سلوم — فريقي وتوقعاتي</h3><small>مزايا مجانية على جهازك</small></div>
+ <div class="fan-grid">
+  <div class="fan-card"><h4>⭐ فريقي المفضل</h4><p>اختر أنديتك لتجدها محفوظة عند زيارتك القادمة.</p>
+   <div class="fan-controls"><select id="favoriteTeamSelect" aria-label="اختر الفريق المفضل"><option value="">اختر نادياً</option></select><button type="button" class="fan-button" id="addFavoriteTeam">إضافة الفريق</button></div>
+   <div id="favoriteTeamsList" class="favorite-list"><span class="fan-muted">لم تختر فريقاً بعد.</span></div>
+  </div>
+  <div class="fan-card"><h4>🎯 توقع نتيجة مباراة</h4><p>احفظ توقعك للمباريات القادمة. التوقعات محفوظة على جهازك فقط.</p>
+   <select id="predictionMatchSelect" aria-label="اختر المباراة"><option value="">لا توجد مباريات قادمة متاحة</option></select>
+   <div class="fan-controls prediction-controls"><select id="predictionChoice" aria-label="اختر توقعك"><option value="home">فوز الفريق الأول</option><option value="draw">تعادل</option><option value="away">فوز الفريق الثاني</option></select><button type="button" class="fan-button" id="savePrediction">حفظ التوقع</button></div>
+   <div id="myPredictions" class="favorite-list"><span class="fan-muted">لم تحفظ توقعات بعد.</span></div>
+  </div>
+ </div>
+</section>
+<section id="standingsSection" class="standings-section">
  <div class="section-head"><h3>🏆 جداول ترتيب البطولات</h3><small>ترتيب الفرق والنقاط</small></div>
  <div id="standingsTables"><div class="empty">جارٍ تحميل جداول الترتيب…</div></div>
 </section>
@@ -1419,6 +1447,46 @@ function renderStandings(){
  });
  if(!count)root.innerHTML='<div class="empty">جداول الترتيب غير متاحة حالياً من مصدر البيانات.</div>';
 }
+
+function readSloomStore(key,fallback){try{const value=JSON.parse(localStorage.getItem(key)||'null');return value??fallback}catch(e){return fallback}}
+function renderFanZone(){
+ const favoriteSelect=document.getElementById('favoriteTeamSelect'),favoriteList=document.getElementById('favoriteTeamsList');
+ const matchSelect=document.getElementById('predictionMatchSelect'),predictionsList=document.getElementById('myPredictions');
+ if(!favoriteSelect||!favoriteList||!matchSelect||!predictionsList)return;
+ const favorites=readSloomStore('sloom365_favorite_teams',[]);
+ const predictions=readSloomStore('sloom365_match_predictions',{});
+ const teams=new Map();
+ Object.entries(sportsData).forEach(([key,league])=>{if(!leagueIsFresh(league))return;(league.teams||[]).forEach(team=>{if(team?.name&&!teams.has(team.name))teams.set(team.name,team)})});
+ const teamOptions=[...teams.keys()].sort((a,b)=>arTeam(a).localeCompare(arTeam(b),'ar'));
+ const currentFavorite=favoriteSelect.value;
+ favoriteSelect.innerHTML='<option value="">اختر نادياً</option>'+teamOptions.map(name=>'<option value="'+esc(name)+'">'+esc(arTeam(name))+'</option>').join('');
+ if(teamOptions.includes(currentFavorite))favoriteSelect.value=currentFavorite;
+ favoriteList.innerHTML=favorites.length?favorites.map((name,index)=>'<span class="favorite-chip">'+esc(arTeam(name))+'<button type="button" data-remove-favorite="'+index+'" aria-label="إزالة '+esc(arTeam(name))+'">×</button></span>').join(''):'<span class="fan-muted">لم تختر فريقاً بعد.</span>';
+ const upcoming=[];
+ Object.entries(sportsData).forEach(([key,league])=>{if(!leagueIsFresh(league))return;(league.matches||[]).filter(game=>game.status==='pre'&&game.id&&game.date&&Date.parse(game.date)>Date.now()).forEach(game=>upcoming.push({key,league:league.name||key,game}))});
+ upcoming.sort((a,b)=>Date.parse(a.game.date)-Date.parse(b.game.date));
+ const previous=matchSelect.value;
+ matchSelect.innerHTML=upcoming.length?upcoming.map(item=>'<option value="'+esc(item.game.id)+'">'+esc(arTeam(item.game.home?.name||'الفريق الأول'))+' × '+esc(arTeam(item.game.away?.name||'الفريق الثاني'))+' — '+esc(item.league)+'</option>').join(''):'<option value="">لا توجد مباريات قادمة متاحة</option>';
+ if(upcoming.some(x=>String(x.game.id)===previous))matchSelect.value=previous;
+ const saved=Object.entries(predictions).filter(([id])=>upcoming.some(x=>String(x.game.id)===id));
+ predictionsList.innerHTML=saved.length?saved.slice(0,5).map(([id,pick])=>{const item=upcoming.find(x=>String(x.game.id)===id);const label=pick==='draw'?'تعادل':pick==='away'?arTeam(item.game.away?.name||'الفريق الثاني'):arTeam(item.game.home?.name||'الفريق الأول');return '<span class="favorite-chip">'+esc(arTeam(item.game.home?.name||'الفريق الأول'))+' × '+esc(arTeam(item.game.away?.name||'الفريق الثاني'))+': '+esc(label)+'</span>'}).join(''):'<span class="fan-muted">لم تحفظ توقعات بعد.</span>';
+}
+document.getElementById('addFavoriteTeam')?.addEventListener('click',()=>{
+ const select=document.getElementById('favoriteTeamSelect'),name=select?.value;if(!name)return;
+ const favorites=readSloomStore('sloom365_favorite_teams',[]);if(!favorites.includes(name))favorites.push(name);
+ try{localStorage.setItem('sloom365_favorite_teams',JSON.stringify(favorites));renderFanZone()}catch(e){alert('تعذر حفظ الفريق على هذا الجهاز.')}
+});
+document.getElementById('favoriteTeamsList')?.addEventListener('click',e=>{
+ const button=e.target.closest('[data-remove-favorite]');if(!button)return;
+ const favorites=readSloomStore('sloom365_favorite_teams',[]);favorites.splice(Number(button.dataset.removeFavorite),1);
+ try{localStorage.setItem('sloom365_favorite_teams',JSON.stringify(favorites));renderFanZone()}catch(e){}
+});
+document.getElementById('savePrediction')?.addEventListener('click',()=>{
+ const id=document.getElementById('predictionMatchSelect')?.value,choice=document.getElementById('predictionChoice')?.value;if(!id)return;
+ const predictions=readSloomStore('sloom365_match_predictions',{});predictions[id]=choice;
+ try{localStorage.setItem('sloom365_match_predictions',JSON.stringify(predictions));renderFanZone()}catch(e){alert('تعذر حفظ التوقع على هذا الجهاز.')}
+});
+
 function render(){
  const dayNames={today:'مباريات اليوم بتوقيت عُمان',yesterday:'مباريات الأمس بتوقيت عُمان',tomorrow:'مباريات الغد بتوقيت عُمان'};document.getElementById('dayLabel').textContent=dayNames[activeDay];
  const root=document.getElementById('leagues');root.innerHTML='';let total=0,live=0,shown=0;const news=[];
@@ -1448,6 +1516,7 @@ if(league.standings&&league.standings.length){const st=document.createElement('d
  renderStandings();
  renderLive();
  renderUpcoming();
+ renderFanZone();
 }
 
 async function loadMatchEvents(details,leagueKey,eventId){
