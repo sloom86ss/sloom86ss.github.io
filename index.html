@@ -1761,17 +1761,7 @@ body{
   <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
   <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
  </div>
- <section id="sloom-video-screen" class="sloom-video-feature" aria-label="شاشة عرض ملخصات المباريات">
- <div class="sloom-video-heading">
-  <div><b>⚽ شاشة عرض ملخصات المباريات</b><small>العرض الداخلي — دون تشغيل محتوى محمي أو روابط غير مرخصة</small></div>
-  <span>عرض داخلي</span>
- </div>
- <div class="sloom-summary-screen" role="status" aria-live="polite">
-  <span class="sloom-summary-empty-icon" aria-hidden="true">▶</span>
-  <b>شاشة العرض جاهزة</b>
-  <p>لا يتوفر حالياً مصدر مجاني موثوق يمنح إذناً واضحاً لتضمين ملخصات المباريات داخل الموقع. ستظهر الملخصات هنا عند توفر مصدر مرخّص، ولن نعرض فيديوهات قديمة أو محتوى محمياً دون إذن.</p>
- </div>
-</section>
+ <section id="sloom-video-screen" class="sloom-video-feature" aria-label="شاشة عرض الفيديو"><div class="sloom-summary-screen" aria-live="off"></div></section>
   <span id="sloomWeatherStatus" hidden>غير مفعّل</span>
  
  <nav class="sloom-bottom-nav sloom-header-nav" aria-label="التنقل الرئيسي">
@@ -1961,33 +1951,20 @@ function renderSloomAutoHighlights(newsItems){
  const seen=new Set();
  const clips=all.filter(n=>{
   const link=String(n.link||'');
-  const id=(link.match(/espn\.com\/video\/clip\/(?:_\/id\/)?(\d+)/i)||link.match(/espn\.com\/video\/clip\?id=(\d+)/i)||[])[1];
+  const id=(link.match(/espn\.com\/(?:[^?#]*\/)?video\/clip\/(?:_\/id\/)?(\d+)/i)||link.match(/espn\.com\/video\/clip\?[^#]*?id=(\d+)/i)||[])[1];
   if(!id||seen.has(id)||!/(highlight|ملخص|أهداف|goals|hat trick)/i.test(String(n.headline||'')+' '+String(n.description||'')))return false;
   const published=Date.parse(n.published||'');
-  if(!Number.isFinite(published)||Date.now()-published>7*86400000||published>Date.now()+3600000)return false;
+  if(Number.isFinite(published)&&(Date.now()-published>14*86400000||published>Date.now()+3600000))return false;
   seen.add(id);n._sloomClipId=id;return true;
  }).sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0)).slice(0,12);
- if(!clips.length){
-  screen.innerHTML='<span class="sloom-summary-empty-icon" aria-hidden="true">▶</span><b>لا يوجد ملخص حديث متاح الآن</b>';
-  return;
- }
+ if(!clips.length){screen.replaceChildren();return;}
  let index=0;
  const show=()=>{
-  const clip=clips[index];
-  const title=String(clip.headline||'ملخص مباراة').replace(/[<>]/g,'');
-  const id=clip._sloomClipId;
-  const link=String(clip.link||'https://www.espn.com/soccer/');
-  const safeLink=esc(link);
-  screen.innerHTML='<div class="sloom-auto-player"><iframe title="ESPN football highlights" src="https://www.espn.com/core/video/iframe?id='+encodeURIComponent(id)+'&autoplay=1&mute=1&playsinline=1" loading="eager" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="origin"></iframe></div><div class="sloom-auto-caption"><b dir="auto">'+esc(title)+'</b><small>المصدر الرسمي: ESPN · الملخص '+(index+1)+' من '+clips.length+'</small><p class="sloom-player-fallback-note">إذا لم يظهر الفيديو داخل الشاشة بسبب قيود ESPN أو المنطقة، افتح المقطع من المصدر الرسمي:</p><div class="sloom-auto-actions"><a class="sloom-open-original" href="'+safeLink+'" target="_blank" rel="noopener">▶ تشغيل الفيديو من ESPN</a><button type="button" data-clip-step="-1">السابق</button><button type="button" data-clip-step="1">التالي</button></div></div>';
-  screen.querySelectorAll('[data-clip-step]').forEach(button=>button.addEventListener('click',()=>{index=(index+Number(button.dataset.clipStep)+clips.length)%clips.length;show()}));
+  const id=clips[index]._sloomClipId;
+  screen.innerHTML='<div class="sloom-auto-player"><iframe title="Football highlights" src="https://www.espn.com/core/video/iframe?id='+encodeURIComponent(id)+'&autoplay=1&mute=1&playsinline=1" loading="eager" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="origin"></iframe></div>';
  };
  show();
- if(clips.length>1){
-  sloomHighlightsRotationTimer=setInterval(()=>{
-   index=(index+1)%clips.length;
-   show();
-  },90000);
- }
+ if(clips.length>1)sloomHighlightsRotationTimer=setInterval(()=>{index=(index+1)%clips.length;show();},90000);
 }
 
 function render(){
@@ -2510,3 +2487,11 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 </script>
 
 </body></html>
+
+<style id="sloom-video-clean-screen">
+#sloom-video-screen{display:block!important;width:100%!important;max-width:780px!important;margin:8px auto!important;padding:0!important;border:0!important;background:#000!important;box-shadow:none!important}
+#sloom-video-screen .sloom-summary-screen{width:100%!important;min-height:0!important;aspect-ratio:16/9!important;padding:0!important;margin:0!important;overflow:hidden!important;border:1px solid #332814!important;border-radius:12px!important;background:#000!important;display:block!important}
+#sloom-video-screen .sloom-auto-player{position:relative!important;width:100%!important;height:100%!important;aspect-ratio:16/9!important;background:#000!important;overflow:hidden!important}
+#sloom-video-screen .sloom-auto-player iframe{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;border:0!important;background:#000!important}
+#sloom-video-screen .sloom-video-heading,#sloom-video-screen .sloom-auto-caption,#sloom-video-screen .sloom-summary-empty-icon,#sloom-video-screen .sloom-summary-screen>b,#sloom-video-screen .sloom-summary-screen>p{display:none!important}
+</style>
