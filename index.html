@@ -1494,6 +1494,17 @@ footer{border-color:#26352b!important;color:#91a095!important}
 @media(max-width:520px){.sloom-match-marquee{height:54px;margin-inline:-12px;padding-inline:14px}.sloom-match-ticker-item{font-size:12px}.sloom-match-ticker-item img{width:24px;height:24px}}
 @media(prefers-reduced-motion:reduce){.sloom-match-marquee-track{animation:none}}
 </style>
+<style id="sloom-video-screen-restored">
+#sloom-video-screen{display:block!important;width:100%!important;max-width:780px!important;margin:8px auto 14px!important;padding:12px!important;border:1px solid #286b43!important;border-radius:16px!important;background:linear-gradient(145deg,#101d14,#0a120d)!important;box-shadow:0 8px 24px #0007!important}
+#sloom-video-screen .sloom-video-heading{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;margin:0 0 9px!important}
+#sloom-video-screen .sloom-video-heading b{display:block!important;color:#fff!important;font-size:clamp(14px,3.8vw,19px)!important}
+#sloom-video-screen .sloom-video-heading small{display:block!important;color:#bdd4c2!important;font-size:10px!important;margin-top:3px!important}
+#sloom-video-screen .sloom-video-heading>span{flex:none!important;padding:5px 8px!important;border-radius:18px!important;background:#17472b!important;color:#d9ffe4!important;font-size:9px!important}
+#sloom-video-screen .sloom-fifa-player{position:relative!important;width:100%!important;aspect-ratio:16/9!important;overflow:hidden!important;border-radius:10px!important;background:#000!important}
+#sloom-video-screen .sloom-fifa-player iframe{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;border:0!important}
+#sloom-video-screen .sloom-video-rights{margin:7px 2px 0!important;color:#a9bdae!important;font-size:9px!important;line-height:1.6!important}
+@media(max-width:520px){#sloom-video-screen{margin:7px auto 11px!important;padding:9px!important;border-radius:13px!important}#sloom-video-screen .sloom-video-heading b{font-size:14px!important}}
+</style>
 </head>
 <body><main class="wrap">
 
@@ -1513,6 +1524,11 @@ footer{border-color:#26352b!important;color:#91a095!important}
   <a href="#teamsDirectory"><span>🏟️</span>الأندية</a>
  </nav>
 </header>
+<section id="sloom-video-screen" class="sloom-video-feature" aria-label="فيديوهات كرة القدم">
+ <div class="sloom-video-heading"><div><b>🎬 فيديوهات وملخصات كرة القدم</b><small>مقاطع رسمية من قناة UEFA</small></div><span>▶ تشغيل داخل الشاشة</span></div>
+ <div class="sloom-fifa-player"><iframe src="https://www.youtube-nocookie.com/embed/DLOUfAVwuXA?rel=0" title="ملخصات دوري أبطال أوروبا الرسمية من UEFA" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+ <div class="sloom-video-rights">المصدر: قناة UEFA الرسمية على YouTube. قد يختلف توفر المقطع حسب البلد وإعدادات صاحب الحقوق.</div>
+</section>
 <section class="sloom-match-marquee" aria-label="شريط المباريات المتحرك"><div class="sloom-match-marquee-window"><div class="sloom-match-marquee-track" id="sloomMatchTicker"><span class="sloom-match-ticker-empty">⚽ متابعة مباريات كرة القدم</span></div></div></section>
 <nav class="sloom-category-strip" aria-label="اختصارات الأقسام">
  <a href="#matches"><span>⚽</span><b>المباريات</b></a>
