@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 BASE = os.getenv("SLOOM_SITE_URL", "https://sloom86ss.github.io").rstrip("/")
 STATE_FILE = "monitor_state.json"
 MAX_DATA_AGE_MINUTES = int(os.getenv("MAX_DATA_AGE_MINUTES", "100"))
+MAX_LEAGUE_AGE_MINUTES = int(os.getenv("MAX_LEAGUE_AGE_MINUTES", "25"))
 
 def get_url(url, timeout=15):
     req = urllib.request.Request(url, headers={"User-Agent": "SLOOM360-Monitor/1.0"})
@@ -76,6 +77,28 @@ def check_data():
             return False, "لا توجد بيانات دوريات"
         match_count = sum(len(league.get("matches", [])) for league in leagues.values()
                           if isinstance(league, dict) and isinstance(league.get("matches", []), list))
+        stale_leagues = []
+        for key, league in leagues.items():
+            if not isinstance(league, dict):
+                stale_leagues.append(str(key) + " (بيانات غير صالحة)")
+                continue
+            name = league.get("name") or key
+            if league.get("stale"):
+                stale_leagues.append(name + " (المصدر متعثر)")
+                continue
+            updated_at = league.get("updated_at")
+            if not updated_at:
+                stale_leagues.append(name + " (وقت التحديث مفقود)")
+                continue
+            try:
+                league_stamp = datetime.fromisoformat(updated_at.replace("Z", "+00:00"))
+                league_age = (datetime.now(timezone.utc) - league_stamp.astimezone(timezone.utc)).total_seconds() / 60
+                if league_age < -5 or league_age > MAX_LEAGUE_AGE_MINUTES:
+                    stale_leagues.append(name + " (%.0f دقيقة)" % max(0, league_age))
+            except Exception:
+                stale_leagues.append(name + " (وقت تحديث غير صالح)")
+        if stale_leagues:
+            return False, "تحديث بعض الدوريات متأخر: " + "، ".join(stale_leagues[:8])
         news = data.get("news_sources", [])
         if not isinstance(news, list):
             return False, "قائمة الأخبار غير صالحة"
