@@ -1387,6 +1387,16 @@ footer{color:#9eafb7!important}
 }
 @media(prefers-reduced-motion:reduce){.sloom-headline-track{animation:none!important}}
 </style>
+<style id="sloom-video-sources-style">
+.sloom-video-sources{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+.sloom-video-source{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:6px!important;min-width:0!important;padding:12px 10px!important;border:1px solid #344750!important;border-radius:11px!important;background:#202d33!important;color:#f5f8f9!important;text-decoration:none!important}
+.sloom-video-source>span{font-size:23px!important}
+.sloom-video-source>b{font-size:12px!important}
+.sloom-video-source>small{font-size:10px!important;line-height:1.6!important;color:#b6c4ca!important}
+.sloom-video-source>em{font-size:10px!important;font-style:normal!important;font-weight:900!important;color:#78c3ff!important;margin-top:auto!important}
+.sloom-video-rights{margin:10px 2px 0!important;font-size:9px!important;line-height:1.8!important;color:#aab8be!important}
+@media(max-width:520px){.sloom-video-sources{grid-template-columns:1fr!important}.sloom-video-source{display:grid!important;grid-template-columns:30px 1fr!important;align-items:center!important;column-gap:8px!important;padding:9px!important}.sloom-video-source>span{grid-row:1/4}.sloom-video-source>small,.sloom-video-source>em{grid-column:2}.sloom-video-source>em{margin-top:0!important}}
+</style>
 </head>
 <body><main class="wrap">
 
@@ -1467,11 +1477,14 @@ footer{color:#9eafb7!important}
  <button data-region="africa">أفريقيا</button>
 </div>
 <div class="section-head" id="matches"><h3>⚽ المباريات والنتائج</h3><small id="dayLabel">كرة القدم العالمية</small></div><div class="filters day-switcher" id="dayFilters"><button class="filter" data-day="yesterday">الأمس</button><button class="filter active" data-day="today">اليوم</button><button class="filter" data-day="tomorrow">غداً</button></div>
-<section class="sloom-video-feature" aria-label="مقاطع وأهداف كرة القدم">
- <div class="sloom-video-heading"><div><b>🎬 فيديو وأهداف المباريات</b><small>ملخصات ومقاطع من المصادر الرسمية</small></div><span>فيديو</span></div>
- <a class="sloom-video-launch" href="https://www.youtube.com/results?search_query=official+football+highlights" target="_blank" rel="noopener noreferrer" aria-label="افتح مقاطع كرة القدم الرسمية">
-  <span class="sloom-video-play">▶</span><b>شاهد أبرز أهداف وملخصات كرة القدم</b><small>اضغط لفتح المقاطع الرسمية المتاحة</small>
- </a>
+<section class="sloom-video-feature" aria-label="مقاطع وأهداف من المصادر الرسمية">
+ <div class="sloom-video-heading"><div><b>🎬 فيديو وأهداف المباريات</b><small>مشاهدة من مواقع الناشرين وأصحاب الحقوق</small></div><span>مصادر رسمية</span></div>
+ <div class="sloom-video-sources">
+  <a class="sloom-video-source" href="https://www.plus.fifa.com/en/catalogue/archive" target="_blank" rel="noopener noreferrer"><span>🌍</span><b>FIFA+</b><small>أهداف وملخصات ومباريات أرشيفية</small><em>فتح الفيديوهات ↗</em></a>
+  <a class="sloom-video-source" href="https://www.premierleague.com/en/video?collection=highlights" target="_blank" rel="noopener noreferrer"><span>🏆</span><b>الدوري الإنجليزي</b><small>ملخصات وأهداف من الموقع الرسمي</small><em>فتح الفيديوهات ↗</em></a>
+  <a class="sloom-video-source" href="https://www.bbc.co.uk/sport/football/video" target="_blank" rel="noopener noreferrer"><span>📺</span><b>BBC Sport</b><small>تقارير ومقاطع كرة القدم</small><em>فتح الفيديوهات ↗</em></a>
+ </div>
+ <p class="sloom-video-rights">حقوق جميع الفيديوهات والعلامات والمحتويات محفوظة لأصحابها والناشرين الأصليين. سلوم كورة 365 لا يستضيف المقاطع ولا يعيد رفعها؛ المشاهدة تتم عبر مواقع المصادر وفق شروطها وتوفرها في بلدك.</p>
 </section>
 
 <div class="leagues" id="leagues"><div class="empty">جارٍ تحميل النتائج الرياضية…</div></div><section class="fan-zone" id="fanZone">
