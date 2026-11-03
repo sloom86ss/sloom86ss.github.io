@@ -1525,8 +1525,33 @@ footer{border-color:#26352b!important;color:#91a095!important}
  </nav>
 </header>
 <section id="sloom-video-screen" class="sloom-video-feature" aria-label="فيديوهات كرة القدم">
- <div class="sloom-video-heading"><div><b>🎬 فيديوهات وملخصات كرة القدم</b><small>مقاطع رسمية من قناة UEFA</small></div><span>▶ تشغيل داخل الشاشة</span></div>
- <div class="sloom-fifa-player"><iframe src="https://www.youtube.com/embed/videoseries?list=UUyGa1YEx9ST66rYrJTGIKOw&autoplay=1&mute=1&controls=1&rel=0&playsinline=1&loop=1" title="أحدث فيديوهات وملخصات كرة القدم من قناة UEFA الرسمية" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+ <div class="sloom-video-heading"><div><b>🎬 فيديوهات وملخصات كرة القدم</b><small>مقاطع كاملة تتجاوز دقيقة</small></div><span>▶ داخل الشاشة</span></div>
+ <div class="sloom-video-picks" role="group" aria-label="اختر المقطع">
+  <button type="button" class="sloom-video-pick active" data-video="DLOUfAVwuXA">أهداف الجولة الأولى · 25 دقيقة</button>
+  <button type="button" class="sloom-video-pick" data-video="-fh8XeuBfz0">أهداف باريس · 10 دقائق</button>
+ </div>
+ <div class="sloom-fifa-player"><iframe id="sloomFootballPlayer" src="https://www.youtube.com/embed/DLOUfAVwuXA?playlist=-fh8XeuBfz0&autoplay=1&mute=1&controls=1&rel=0&playsinline=1&loop=1" title="مقاطع وملخصات كرة القدم من UEFA" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+ <style>
+ #sloom-video-screen .sloom-video-picks{display:flex;gap:7px;overflow-x:auto;margin:0 0 9px;padding:2px 1px;scrollbar-width:thin}
+ #sloom-video-screen .sloom-video-pick{flex:0 0 auto;border:1px solid #36784e;border-radius:20px;background:#102719;color:#e5f5e9;padding:7px 11px;font-size:11px;font-weight:700;cursor:pointer}
+ #sloom-video-screen .sloom-video-pick.active{background:#247344;border-color:#7bd49a;color:#fff}
+ </style>
+ <script>
+ (function(){
+  var root=document.getElementById('sloom-video-screen');
+  if(!root||root.dataset.videoReady)return;
+  root.dataset.videoReady='1';
+  var player=root.querySelector('#sloomFootballPlayer');
+  var picks=root.querySelectorAll('.sloom-video-pick');
+  picks.forEach(function(btn){
+   btn.addEventListener('click',function(){
+    var id=btn.getAttribute('data-video');
+    player.src='https://www.youtube.com/embed/'+id+'?autoplay=1&mute=1&controls=1&rel=0&playsinline=1';
+    picks.forEach(function(p){p.classList.toggle('active',p===btn);});
+   });
+  });
+ })();
+ </script>
 </section>
 <section class="sloom-match-marquee" aria-label="شريط المباريات المتحرك"><div class="sloom-match-marquee-window"><div class="sloom-match-marquee-track" id="sloomMatchTicker"><span class="sloom-match-ticker-empty">⚽ متابعة مباريات كرة القدم</span></div></div></section>
 <nav class="sloom-category-strip" aria-label="اختصارات الأقسام">
