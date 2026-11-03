@@ -1,12 +1,6 @@
-name: Refresh SLOOM360 football data
+name: Refresh SLOOM360 football data (manual fallback)
 
 on:
-  push:
-    paths:
-      - ".github/workflows/refresh-football-data.yml"
-      - "scripts/refresh_data.py"
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -26,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.11"
       - name: Refresh scores, tables and football news
         run: python scripts/refresh_data.py
       - name: Commit updated data
