@@ -1546,7 +1546,7 @@ footer{border-color:#26352b!important;color:#91a095!important}
 </main>
 
 <script id="sloom365-section-order">
-(()=>{const arrange=()=>{const video=document.querySelector('.sloom-video-feature'),leagues=document.getElementById('leagues');if(video&&leagues&&video.previousElementSibling!==leagues)leagues.insertAdjacentElement('afterend',video);};arrange();})();
+(()=>{const arrange=()=>{const video=document.querySelector('.sloom-video-feature'),header=document.querySelector('.sloom-header-top');if(video&&header&&header.nextElementSibling!==video)header.insertAdjacentElement('afterend',video);};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arrange,{once:true});else arrange();})();
 </script>
 
 <script>
