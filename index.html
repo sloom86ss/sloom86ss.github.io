@@ -1822,9 +1822,15 @@ function broadcastLinkMarkup(match){
  if(!source)return '';
  return '<a class="broadcast-source-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer nofollow">📺 موقع الناقل الرسمي ↗</a><p class="broadcast-attribution">رابط خارجي موثّق يدوياً — المصدر: '+esc(source)+' · لا يستضيف SLOOM365 البث</p>';
 }
+function broadcastChannelNames(match){
+ const values=[];
+ const add=value=>{if(Array.isArray(value)){value.forEach(add);return}if(value&&typeof value==='object'){add(value.names);add(value.name);add(value.shortName);add(value.displayName);return}if(typeof value==='string')value.split(/[;,|]/).forEach(x=>{const name=x.trim();if(name&&!values.includes(name))values.push(name)})};
+ add(match?.broadcast);add(match?.broadcasts);add(match?.channels);add(match?.tv);add(match?.networks);
+ return values;
+}
 function verifiedBroadcastName(match){
- // أسماء القنوات بيانات وصفية عن الناقل وليست روابط بث؛ اعرض الاسم القادم من مصدر المباريات.
- return String(match?.broadcast||'').trim();
+ // أسماء القنوات بيانات وصفية عن الناقل وليست روابط بث؛ اعرض كل الأسماء التي يتيحها المصدر.
+ return broadcastChannelNames(match).join('، ');
 }
 function getCategory(key){if(key.startsWith('soccer/'))return'football';if(key.startsWith('basketball/'))return'basketball';if(key.startsWith('football/'))return'americanfootball';if(key.startsWith('hockey/'))return'hockey';if(key.startsWith('baseball/'))return'baseball';return'other'}
 function leagueIsFresh(league){const t=Date.parse(league.updated_at||'');return !league.stale&&Number.isFinite(t)&&Date.now()-t>=0&&Date.now()-t<=90*60*1000}
@@ -1898,12 +1904,13 @@ function render(){
  const card=document.createElement('section');card.className='league';
  const heading=dayGames.length?dayGames.length+' مباراة':upcoming.length?'أقرب المباريات القادمة':'لا توجد مباراة في هذا اليوم';
  card.innerHTML='<div class="league-title"><b>'+esc(league.name||key)+'</b><span>'+heading+'</span></div>';
- visibleGames.forEach(g=>{const home=g.home||{},away=g.away||{};const state=g.status==='in'?'<span class="live">● مباشر '+esc(g.detail||'')+'</span>':g.status==='post'?'انتهت':'لم تبدأ';const score=g.status==='pre'?'— : —':esc(home.score??'—')+' : '+esc(away.score??'—');const dt=g.date||g.time;let when='';if(dt){const d=new Date(dt);if(!Number.isNaN(d.getTime()))when=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(d)+' · بتوقيت عُمان'}
+ visibleGames.forEach(g=>{const home=g.home||{},away=g.away||{};const kickoff=Date.parse(g.date||g.time||''),nearKickoff=g.status==='pre'&&Number.isFinite(kickoff)&&kickoff>Date.now()&&kickoff<=Date.now()+12*60*60*1000;
+ const state=g.status==='in'?'<span class="live">● مباشر '+esc(g.detail||'')+'</span>':g.status==='post'?'<span class="match-status">انتهت</span>':nearKickoff?'<span class="match-status">⏳ بعد قليل</span>':'<span class="match-status">لم تبدأ</span>';const score=g.status==='pre'?'— : —':esc(home.score??'—')+' : '+esc(away.score??'—');const dt=g.date||g.time;let when='';if(dt){const d=new Date(dt);if(!Number.isNaN(d.getTime()))when=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(d)+' · بتوقيت عُمان'}
  const m=document.createElement('div');m.className='match';
  m.innerHTML='<div class="teams"><div class="team"><img loading="lazy" src="'+esc(home.logo||'')+'" onerror="this.hidden=true"><span>'+esc(arTeam(home.name||'الفريق الأول'))+'</span></div><div class="score">'+score+'</div><div class="team away"><img loading="lazy" src="'+esc(away.logo||'')+'" onerror="this.hidden=true"><span>'+esc(arTeam(away.name||'الفريق الثاني'))+'</span></div></div><div class="match-meta">'+state+'</div>'+(when?'<div class="match-meta match-time">'+esc(when)+'</div>':'');
  if(verifiedBroadcastName(g)){const broadcast=document.createElement('div');broadcast.className='match-broadcast';broadcast.innerHTML='<b>📺 القناة الناقلة:</b> <span>'+esc(verifiedBroadcastName(g))+'</span>';m.appendChild(broadcast)}
  const details=document.createElement('details');details.className='match-details';
- const detailRows=[['البطولة',league.name||key],['الملعب',g.venue||'غير متوفر من المصدر'],['القناة الناقلة',verifiedBroadcastName(g)||'لم يتم التحقق من ناقل رسمي'],['حالة المباراة',g.status_detail||g.detail||state.replace(/<[^>]*>/g,'')],['معرّف المباراة',g.id||'غير متوفر']];
+ const detailRows=[['البطولة',league.name||key],['الملعب',g.venue||'غير متوفر من المصدر'],['جميع القنوات الناقلة',verifiedBroadcastName(g)||'لم يذكر المصدر قناة ناقلة لهذه المباراة'],['حالة المباراة',g.status_detail||g.detail||state.replace(/<[^>]*>/g,'')],['معرّف المباراة',g.id||'غير متوفر']];
  details.innerHTML='<summary>عرض تفاصيل المباراة</summary><div class="match-detail-body">'+detailRows.map(x=>'<div><span>'+esc(x[0])+'</span><b>'+esc(x[1])+'</b></div>').join('')+broadcastLinkMarkup(g)+(g.id?'<a class="match-link" href="https://www.espn.com/soccer/match/_/gameId/'+encodeURIComponent(g.id)+'" target="_blank" rel="noopener">المصدر والتفاصيل الإضافية ↗</a>':'')+'</div>';
  m.appendChild(details);
  details.addEventListener('toggle',()=>{if(details.open&&!details.dataset.eventsLoaded){details.dataset.eventsLoaded='1';loadMatchEvents(details,key,g.id)}});
@@ -2129,14 +2136,17 @@ function renderUpcoming(){
  list.innerHTML='';
  shown.forEach(({league,match,ts})=>{
   const h=match.home||{},a=match.away||{},mins=Math.max(1,Math.ceil((ts-now)/60000));
-  const label=mins<=20?'بعد قليل':'قريباً';
+  const label='بعد قليل';
   const when=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(new Date(ts));
   const card=document.createElement('article');card.className='upcoming-board-card';
   card.innerHTML='<div class="upcoming-board-league">'+esc(league.name||'بطولة')+'</div><div class="upcoming-board-teams"><div class="upcoming-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name||'الفريق الأول'))+'</span></div><div class="live-board-score">VS</div><div class="upcoming-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name||'الفريق الثاني'))+'</span></div></div><div class="upcoming-board-time"><strong>'+label+'</strong><span>'+esc(when)+' · بتوقيت عُمان</span></div>';
   if(verifiedBroadcastName(match)){const channel=document.createElement('div');channel.className='upcoming-board-broadcast';channel.innerHTML='<b>📺 القناة:</b> '+esc(verifiedBroadcastName(match));card.appendChild(channel)}
   const officialLink=broadcastLinkMarkup(match);if(officialLink){const wrap=document.createElement('div');wrap.innerHTML=officialLink;card.appendChild(wrap)}
+  const details=document.createElement('details');details.className='match-details upcoming-match-details';
+  details.innerHTML='<summary>📋 تفاصيل المباراة والقنوات الناقلة</summary><div class="match-detail-body"><div><span>حالة المباراة</span><b>بعد قليل</b></div><div><span>الموعد</span><b>'+esc(when)+' · بتوقيت عُمان</b></div><div><span>الملعب</span><b>'+esc(match.venue||'غير متوفر من المصدر')+'</b></div><div><span>جميع القنوات الناقلة</span><b>'+esc(verifiedBroadcastName(match)||'لم يذكر المصدر قناة ناقلة لهذه المباراة')+'</b></div></div>';
+  card.appendChild(details);
   card.style.cursor='pointer';
-  card.addEventListener('click',e=>{if(e.target.closest('a,button'))return;openMatchModal({league:league.name||'بطولة',leagueKey:Object.keys(sportsData).find(k=>sportsData[k]===league)||'',match});});
+  card.addEventListener('click',e=>{if(e.target.closest('a,button,summary'))return;openMatchModal({league:league.name||'بطولة',leagueKey:Object.keys(sportsData).find(k=>sportsData[k]===league)||'',match});});
   list.appendChild(card);
  });
 }
@@ -2148,7 +2158,7 @@ function openMatchModal(info){
  const home=arTeam(h.name||'الفريق الأول'),away=arTeam(a.name||'الفريق الثاني');
  const score=g.status==='pre'?'لم تبدأ':String(h.score??'—')+' - '+String(a.score??'—');
  const when=g.date||g.time?new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(new Date(g.date||g.time))+' · بتوقيت عُمان':'الوقت غير متاح';
- clubModalBody.innerHTML='<div class="club-modal-head">'+(h.logo?'<img src="'+esc(h.logo)+'" alt="">':'')+'<div><h3 id="clubModalTitle">'+esc(home)+' × '+esc(away)+'</h3><small>'+esc(league)+'</small></div><button class="club-close" data-club-close>إغلاق ✕</button></div><div class="club-facts"><div class="club-fact"><span>النتيجة</span><b>'+esc(score)+'</b></div><div class="club-fact"><span>حالة المباراة</span><b>'+esc(g.status==='in'?'مباشرة':g.status==='post'?'انتهت':'لم تبدأ')+'</b></div><div class="club-fact"><span>الموعد</span><b>'+esc(when)+'</b></div><div class="club-fact"><span>الملعب</span><b>'+esc(g.venue||'غير متوفر')+'</b></div></div><div id="matchModalEvents" class="match-detail-body"><div class="event-muted">جارٍ تحميل التشكيلتين والأحداث…</div></div>';
+ clubModalBody.innerHTML='<div class="club-modal-head">'+(h.logo?'<img src="'+esc(h.logo)+'" alt="">':'')+'<div><h3 id="clubModalTitle">'+esc(home)+' × '+esc(away)+'</h3><small>'+esc(league)+'</small></div><button class="club-close" data-club-close>إغلاق ✕</button></div><div class="club-facts"><div class="club-fact"><span>النتيجة</span><b>'+esc(score)+'</b></div><div class="club-fact"><span>حالة المباراة</span><b>'+esc(g.status==='in'?'مباشرة':g.status==='post'?'انتهت':(Date.parse(g.date||g.time||'')-Date.now()<=12*60*60*1000?'بعد قليل':'لم تبدأ'))+'</b></div><div class="club-fact"><span>الموعد</span><b>'+esc(when)+'</b></div><div class="club-fact"><span>الملعب</span><b>'+esc(g.venue||'غير متوفر')+'</b></div><div class="club-fact"><span>جميع القنوات الناقلة</span><b>'+esc(verifiedBroadcastName(g)||'لم يذكر المصدر قناة ناقلة')+'</b></div></div><div id="matchModalEvents" class="match-detail-body"><div class="event-muted">جارٍ تحميل التشكيلتين والأحداث…</div></div>';
  clubModal.classList.add('open');document.body.style.overflow='hidden';
  const details=document.createElement('details');details.className='match-details';details.open=true;
  details.innerHTML='<summary>تفاصيل المباراة</summary><div class="match-detail-body"></div>';
@@ -2216,7 +2226,7 @@ async function refreshLiveScores(){
     home:{name:ht.displayName||ht.shortDisplayName||'الفريق الأول',logo:ht.logo||'',score:home.score??null},
     away:{name:at.displayName||at.shortDisplayName||'الفريق الثاني',logo:at.logo||'',score:away.score??null},
     status:status.state||'pre',detail:status.shortDetail||status.detail||'',
-    venue:(comp.venue||{}).fullName||'',broadcast:(comp.broadcasts||[]).flatMap(item=>item.names||[]).join(', '),
+    venue:(comp.venue||{}).fullName||'',broadcast:(comp.broadcasts||[]).flatMap(item=>item.names||[item.name||item.shortName||'']).filter(Boolean).filter((name,index,all)=>all.indexOf(name)===index).join('، '),
     status_detail:status.detail||'',status_short:status.shortDetail||'',
     period:(comp.status||{}).period??null,clock:(comp.status||{}).displayClock||''
    });
