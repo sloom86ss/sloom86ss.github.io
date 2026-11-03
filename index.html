@@ -2263,7 +2263,7 @@ async function refreshLiveScores(){
  const now=Date.now(),localDay=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Muscat',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()).replace(/-/g,'');
  const targets=Object.entries(sportsData).filter(([key,league])=>isSloomAllowedLeague(key)&&(league.matches||[]).some(game=>{
   const start=Date.parse(game.date||game.time||'');
-  return game.status==='in'||(game.status==='pre'&&Number.isFinite(start)&&start>=now-3*60*60*1000&&start<=now+90*60*1000);
+  return Number.isFinite(start)&&start>=now-12*60*60*1000&&start<=now+24*60*60*1000&&game.status!=='cancelled';
  }));
  if(!targets.length)return;
  const previous=JSON.parse(JSON.stringify(sportsData));
@@ -2275,7 +2275,7 @@ async function refreshLiveScores(){
    const home=competitors.find(team=>team.homeAway==='home')||{},away=competitors.find(team=>team.homeAway==='away')||{};
    const status=(comp.status||{}).type||{},date=event.date||'';
    const kickoff=Date.parse(date);
-   if(!Number.isFinite(kickoff)||kickoff<now-4*60*60*1000||kickoff>now+4*60*60*1000)continue;
+   if(!Number.isFinite(kickoff)||kickoff<now-12*60*60*1000||kickoff>now+24*60*60*1000)continue;
    const ht=home.team||{},at=away.team||{};
    byId.set(String(event.id),{
     id:String(event.id),date,time:date,
@@ -2295,7 +2295,7 @@ async function refreshLiveScores(){
 }
 
 document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,30000);
-setInterval(()=>refreshLiveScores().catch(e=>console.warn('[SLOOM365 live scores]',e)),15000);
+setInterval(()=>refreshLiveScores().catch(e=>console.warn('[SLOOM365 live scores]',e)),30000);
 
 function clockAngles(date,zone){
  const parts=new Intl.DateTimeFormat('en-GB',{timeZone:zone,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(date);
