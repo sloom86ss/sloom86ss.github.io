@@ -1657,6 +1657,17 @@ footer{border-color:#26352b!important;color:#91a095!important}
   <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
   <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
  </div>
+ <section id="sloom-video-screen" class="sloom-video-feature" aria-label="شاشة عرض ملخصات المباريات">
+ <div class="sloom-video-heading">
+  <div><b>⚽ شاشة عرض ملخصات المباريات</b><small>العرض الداخلي — دون تشغيل محتوى محمي أو روابط غير مرخصة</small></div>
+  <span>عرض داخلي</span>
+ </div>
+ <div class="sloom-summary-screen" role="status" aria-live="polite">
+  <span class="sloom-summary-empty-icon" aria-hidden="true">▶</span>
+  <b>شاشة العرض جاهزة</b>
+  <p>لا يتوفر حالياً مصدر مجاني موثوق يمنح إذناً واضحاً لتضمين ملخصات المباريات داخل الموقع. ستظهر الملخصات هنا عند توفر مصدر مرخّص، ولن نعرض فيديوهات قديمة أو محتوى محمياً دون إذن.</p>
+ </div>
+</section>
  </div>
  <button id="sloomWeatherGPS" class="sloom-gps-toggle" type="button" aria-label="تفعيل أو تحديث الموقع والطقس" aria-pressed="false"><span class="gps-icon">⌖</span><span class="gps-copy"><b>GPS</b><small id="sloomWeatherStatus" role="status" aria-live="polite">غير مفعّل</small></span></button>
  
@@ -1668,19 +1679,7 @@ footer{border-color:#26352b!important;color:#91a095!important}
   <a href="#teamsDirectory"><span>🏟️</span>الأندية</a>
  </nav>
 </header>
-<section id="sloom-video-screen" class="sloom-video-feature" aria-label="ملخصات المباريات من المصادر الرسمية">
- <div class="sloom-video-heading">
-  <div><b>⚽ أحدث ملخصات المباريات</b><small>مصادر فيديو رسمية ومجانية — اختر المصدر لمشاهدة أحدث الفيديوهات</small></div>
-  <span>مصادر رسمية</span>
- </div>
- <div class="sloom-video-source-grid">
-  <a class="sloom-video-source-card" href="https://www.fifa.com/fifaplus/en" target="_blank" rel="noopener noreferrer"><span>🌍</span><b>FIFA+</b><small>مكتبة فيديوهات وملخصات كرة القدم</small><em>مشاهدة الفيديوهات ↗</em></a>
-  <a class="sloom-video-source-card" href="https://www.uefa.tv/" target="_blank" rel="noopener noreferrer"><span>🏆</span><b>UEFA.tv</b><small>ملخصات ومسابقات الاتحاد الأوروبي</small><em>مشاهدة الفيديوهات ↗</em></a>
-  <a class="sloom-video-source-card" href="https://www.the-afc.com/en/more/video.html" target="_blank" rel="noopener noreferrer"><span>🌏</span><b>AFC</b><small>فيديوهات وملخصات الكرة الآسيوية</small><em>مشاهدة الفيديوهات ↗</em></a>
-  <a class="sloom-video-source-card" href="https://www.premierleague.com/video" target="_blank" rel="noopener noreferrer"><span>⚽</span><b>Premier League</b><small>أهداف وملخصات الدوري الإنجليزي</small><em>مشاهدة الفيديوهات ↗</em></a>
- </div>
- <p class="sloom-video-source-note">تُفتح الفيديوهات من مواقعها الرسمية. لا نعرض مقاطع قديمة على أنها حديثة، ولا نشغّل فيديو غير متاح.</p>
-</section>
+
 
 <div id="sloomWeatherData" hidden aria-hidden="true"><span id="sloomWeatherIcon">🌤️</span><span id="sloomWeatherTemp">--°</span><span id="sloomWeatherPlace">البريمي، عُمان</span><span id="sloomWeatherDesc">جارٍ تحميل حالة الطقس…</span></div>
 
@@ -1974,12 +1973,10 @@ async function loadMatchEvents(details,leagueKey,eventId){
   const matchHtml='<div class="match-detail-body"><div><span>البطولة</span><b>'+esc(data.leagues?.[0]?.name||'')+'</b></div><div><span>الفريقان</span><b>'+esc(matchTeams)+'</b></div><div><span>الملعب</span><b>'+esc(data.gameInfo?.venue?.fullName||'غير متوفر')+'</b></div></div>';
   panel.innerHTML='<nav class="match-tabs" aria-label="أقسام المباراة">'+
    '<button class="match-tab" data-tab="matches"><span class="tab-icon">▦</span><span>المباريات</span></button>'+
-   '<button class="match-tab" data-tab="events"><span class="tab-icon">♧</span><span>أحداث المباراة</span></button>'+
    '<button class="match-tab active" data-tab="lineup"><span class="tab-icon">👕</span><span>التشكيل</span></button>'+
    '<button class="match-tab" data-tab="live"><span class="tab-icon">📡</span><span>مباشر</span></button>'+
    '<button class="match-tab" data-tab="stats"><span class="tab-icon">▥</span><span>إحصائيات</span></button></nav>'+
    '<section class="match-tab-panel" data-panel="matches">'+matchHtml+'</section>'+
-   '<section class="match-tab-panel" data-panel="events">'+eventsHtml+'</section>'+
    '<section class="match-tab-panel active" data-panel="lineup">'+lineupHtml+'</section>'+
    '<section class="match-tab-panel" data-panel="live">'+liveHtml+'</section>'+
    '<section class="match-tab-panel" data-panel="stats">'+statsHtml+'</section>';
