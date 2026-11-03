@@ -1541,6 +1541,17 @@ footer{border-color:#26352b!important;color:#91a095!important}
 .sloom-header-top .sloom-gps-toggle{flex:0 0 auto!important}
 @media(max-width:650px){.sloom-header-top .brand{width:auto!important;flex:1 1 auto!important;justify-content:flex-start!important}.sloom-header-top .sloom-gps-toggle{min-width:78px!important}.sloom-header-top .sloom-top-actions{width:100%!important}}
 </style>
+
+<style id="sloom365-weather-news-ticker">
+.sloom-news-weather-ticker{display:flex!important;align-items:center!important;gap:10px!important;width:100%!important;min-height:48px!important;margin:10px 0 14px!important;padding:9px 12px!important;overflow:hidden!important;direction:rtl!important;border:1px solid #2d8050!important;border-radius:14px!important;background:linear-gradient(100deg,#071b12,#123c26 52%,#071b12)!important;color:#f4fff6!important;box-shadow:0 6px 18px #0004!important;position:relative!important;z-index:2!important}
+.sloom-news-weather-label{flex:0 0 auto!important;display:inline-flex!important;align-items:center!important;padding:7px 9px!important;border-radius:9px!important;background:#b7f34a!important;color:#102016!important;font-size:11px!important;font-weight:900!important;white-space:nowrap!important}
+.sloom-news-weather-window{flex:1 1 auto!important;min-width:0!important;overflow:hidden!important;white-space:nowrap!important}
+.sloom-news-weather-track{display:flex!important;align-items:center!important;width:max-content!important;min-width:max-content!important;gap:36px!important;animation:sloomWeatherNewsMove 30s linear infinite!important;will-change:transform!important}
+.sloom-news-weather-track span{display:inline-flex!important;align-items:center!important;flex:none!important;color:#fff!important;font-size:13px!important;font-weight:800!important;white-space:nowrap!important}
+@keyframes sloomWeatherNewsMove{from{transform:translateX(0)}to{transform:translateX(50%)}}
+@media(max-width:520px){.sloom-news-weather-ticker{min-height:44px!important;gap:7px!important;padding:7px 8px!important}.sloom-news-weather-label{font-size:10px!important;padding:6px 7px!important}.sloom-news-weather-track span{font-size:12px!important}.sloom-news-weather-track{animation-duration:36s!important}}
+@media(prefers-reduced-motion:reduce){.sloom-news-weather-track{animation:none!important;width:100%!important;min-width:0!important}}
+</style>
 </head>
 <body><main class="wrap">
 
@@ -1604,6 +1615,10 @@ footer{border-color:#26352b!important;color:#91a095!important}
 
 <div id="sloomWeatherData" hidden aria-hidden="true"><span id="sloomWeatherIcon">🌤️</span><span id="sloomWeatherTemp">--°</span><span id="sloomWeatherPlace">البريمي، عُمان</span><span id="sloomWeatherDesc">جارٍ تحميل حالة الطقس…</span></div>
 
+<section id="sloomNewsWeatherTicker" class="sloom-news-weather-ticker" aria-label="شريط الأخبار والطقس">
+ <span class="sloom-news-weather-label">📰 الأخبار والطقس</span>
+ <div class="sloom-news-weather-window"><div class="sloom-news-weather-track" id="sloomNewsTickerTrack"><span id="sloomWeatherTicker">🌤️ جارٍ تحميل طقس البريمي…</span></div></div>
+</section>
 <section class="sloom-match-marquee" aria-label="شريط المباريات المتحرك"><div class="sloom-match-marquee-window"><div class="sloom-match-marquee-track" id="sloomMatchTicker"><span class="sloom-match-ticker-empty">⚽ متابعة مباريات كرة القدم</span></div></div></section>
 <nav class="sloom-category-strip" aria-label="اختصارات الأقسام">
  <a href="#matches"><span>⚽</span><b>المباريات</b></a>
@@ -2169,7 +2184,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
  }
  const button=$('sloomWeatherGPS');
  const ensureTicker=()=>{
-  const track=document.getElementById('tickerTrack')||document.querySelector('#newsTicker .ticker-track');
+  const track=document.getElementById('sloomNewsTickerTrack');
   if(!track)return false;
   if(!$('sloomWeatherTicker')){
    const item=document.createElement('span');item.id='sloomWeatherTicker';item.className='ticker-weather';item.textContent='🌤️ طقس البريمي: جارٍ جلب درجة الحرارة…';track.appendChild(item);
