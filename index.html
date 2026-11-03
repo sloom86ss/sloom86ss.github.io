@@ -1954,8 +1954,8 @@ let sloomHighlightsRotationTimer=null;
 function renderSloomAutoHighlights(news=[]){
  const screen=document.querySelector('.sloom-summary-screen');if(!screen)return;
  const defs=[
-  {id:'esp',name:'الدوري الإسباني',re:/soccer\\/esp\\.1|الدوري الإسباني/i},
-  {id:'fra',name:'الدوري الفرنسي',re:/soccer\\/fra\\.1|الدوري الفرنسي/i}
+  {id:'esp',name:'الدوري الإسباني',re:/soccer\/esp\.1|الدوري الإسباني/i},
+  {id:'fra',name:'الدوري الفرنسي',re:/soccer\/fra\.1|الدوري الفرنسي/i}
  ];
  const groups=defs.map(def=>{
   const rows=[];
