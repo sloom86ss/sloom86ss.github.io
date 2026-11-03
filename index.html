@@ -1822,7 +1822,7 @@ a{accent-color:#b77aff}
 <section class="sloom-match-marquee" aria-label="شريط المباريات المتحرك"><div class="sloom-match-marquee-window"><div class="sloom-match-marquee-track" id="sloomMatchTicker"><span class="sloom-match-ticker-empty">⚽ متابعة مباريات كرة القدم</span></div></div></section>
 <section id="sloom-video-screen" aria-label="شاشة الفيديو" style="display:block;width:100%;max-width:900px;margin:12px auto 18px;padding:0;border:0;background:#000;box-shadow:none">
  <div class="sloom-summary-screen" aria-live="off" style="width:100%;aspect-ratio:16/9;min-height:0;overflow:hidden;border:0;border-radius:0;background:#000;padding:0;margin:0">
-  <div id="sloom-youtube-single-player" style="width:100%;height:100%;background:#000"></div>
+  <div id="sloom-youtube-pair" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;width:100%;height:100%;background:#000;direction:ltr"><div id="sloom-youtube-player-0" style="min-width:0;width:100%;height:100%;background:#000"></div><div id="sloom-youtube-player-1" style="min-width:0;width:100%;height:100%;background:#000"></div></div>
  </div>
 </section>
 <nav class="sloom-category-strip" aria-label="اختصارات الأقسام">
@@ -1988,7 +1988,7 @@ document.getElementById('savePrediction')?.addEventListener('click',()=>{
 
 
 let sloomHighlightsRotationTimer=null;
-let sloomYouTubePlayer=null;
+let sloomYouTubePlayers=[];
 let sloomYouTubeApiLoading=false;
 let sloomYouTubeChannelIndex=0;
 const sloomOfficialUploadPlaylists=[
@@ -2001,33 +2001,36 @@ function renderSloomAutoHighlights(){
  if(!screen||screen.dataset.sloomPlayerInitialized==='1')return;
  screen.dataset.sloomPlayerInitialized='1';
  screen.style.cssText='display:block!important;width:100%!important;aspect-ratio:16/9!important;min-height:0!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:#000!important;overflow:hidden!important;';
- screen.innerHTML='<div id="sloom-youtube-single-player" style="width:100%;height:100%;background:#000"></div>';
- const mountPlayer=()=>{
-  if(!window.YT||!window.YT.Player||sloomYouTubePlayer)return;
-  sloomYouTubePlayer=new YT.Player('sloom-youtube-single-player',{
-   width:'100%',height:'100%',
-   playerVars:{autoplay:1,controls:0,disablekb:1,fs:0,iv_load_policy:3,rel:0,playsinline:1,listType:'playlist',list:sloomOfficialUploadPlaylists[0]},
-   events:{
-    onReady:event=>{event.target.mute();event.target.playVideo();},
-    onStateChange:event=>{
-     if(event.data!==YT.PlayerState.ENDED)return;
-     const list=event.target.getPlaylist()||[];
-     const index=event.target.getPlaylistIndex();
-     if(list.length&&index>=list.length-1){
-      sloomYouTubeChannelIndex=(sloomYouTubeChannelIndex+1)%sloomOfficialUploadPlaylists.length;
-      event.target.loadPlaylist({listType:'playlist',list:sloomOfficialUploadPlaylists[sloomYouTubeChannelIndex],index:0});
+ screen.innerHTML='<div id="sloom-youtube-pair" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;width:100%;height:100%;background:#000;direction:ltr"><div id="sloom-youtube-player-0" style="min-width:0;width:100%;height:100%;background:#000"></div><div id="sloom-youtube-player-1" style="min-width:0;width:100%;height:100%;background:#000"></div></div>';
+ const mountPlayers=()=>{
+  if(!window.YT||!window.YT.Player||sloomYouTubePlayers.length)return;
+  [0,1].forEach(slot=>{
+   const player=new YT.Player('sloom-youtube-player-'+slot,{
+    width:'100%',height:'100%',
+    playerVars:{autoplay:1,controls:0,disablekb:1,fs:0,iv_load_policy:3,rel:0,playsinline:1,listType:'playlist',list:sloomOfficialUploadPlaylists[0],index:slot},
+    events:{
+     onReady:event=>{event.target.mute();event.target.playVideo();},
+     onStateChange:event=>{
+      if(event.data!==YT.PlayerState.ENDED)return;
+      const list=event.target.getPlaylist()||[];
+      const index=event.target.getPlaylistIndex();
+      if(list.length&&index>=list.length-1){
+       sloomYouTubeChannelIndex=(sloomYouTubeChannelIndex+1)%sloomOfficialUploadPlaylists.length;
+       event.target.loadPlaylist({listType:'playlist',list:sloomOfficialUploadPlaylists[sloomYouTubeChannelIndex],index:slot});
+      }
      }
     }
-   }
+   });
+   sloomYouTubePlayers.push(player);
   });
  };
- if(window.YT&&window.YT.Player){mountPlayer();return;}
+ if(window.YT&&window.YT.Player){mountPlayers();return;}
  if(!sloomYouTubeApiLoading){
   sloomYouTubeApiLoading=true;
   const previousReady=window.onYouTubeIframeAPIReady;
   window.onYouTubeIframeAPIReady=function(){
    if(typeof previousReady==='function')try{previousReady();}catch(error){}
-   mountPlayer();
+   mountPlayers();
   };
   const api=document.createElement('script');
   api.src='https://www.youtube.com/iframe_api';
@@ -2636,7 +2639,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 /* SLOOM365 single-screen-only YouTube player */
 #sloom-video-screen{display:block!important;width:100%!important;max-width:900px!important;margin:12px auto 18px!important;padding:0!important;border:0!important;border-radius:0!important;background:#000!important;box-shadow:none!important;overflow:hidden!important}
 #sloom-video-screen .sloom-summary-screen{display:block!important;width:100%!important;min-height:0!important;height:auto!important;aspect-ratio:16/9!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:#000!important;overflow:hidden!important}
-#sloom-video-screen #sloom-youtube-single-player,#sloom-video-screen #sloom-youtube-single-player iframe{display:block!important;width:100%!important;height:100%!important;border:0!important;background:#000!important}
+#sloom-video-screen #sloom-youtube-pair{display:grid!important;grid-template-columns:1fr 1fr!important;gap:2px!important;width:100%!important;height:100%!important;direction:ltr!important}#sloom-video-screen #sloom-youtube-pair>div,#sloom-video-screen #sloom-youtube-pair iframe{display:block!important;min-width:0!important;width:100%!important;height:100%!important;border:0!important;background:#000!important}
 #sloom-video-screen .sloom-video-heading,#sloom-video-screen .sloom-video-rights,#sloom-video-screen .sloom-auto-caption,#sloom-video-screen .sloom-video-tabs,#sloom-video-screen .sloom-video-foot{display:none!important}
 </style>
 
