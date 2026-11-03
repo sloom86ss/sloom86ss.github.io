@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SLOOM365 Smart Responder: diagnose stale feeds, retry once, and alert."""
+"""SLOOM365 smart data responder: diagnose stale ESPN feeds, retry once, and alert."""
 import json
 import os
 import subprocess
@@ -8,45 +8,100 @@ import urllib.request
 from datetime import datetime, timezone
 
 DATA_FILE = "data.json"
-MAX_AGE_MINUTES = int(os.getenv("SMART_MAX_DATA_AGE_MINUTES", "45"))
+MAX_AGE_MINUTES = int(os.getenv("SMART_MAX_DATA_AGE_MINUTES", "20"))
+LEAGUE_MAX_AGE_MINUTES = int(os.getenv("SMART_MAX_LEAGUE_AGE_MINUTES", "20"))
+
+
+def parse_age_minutes(value):
+    if not value:
+        return None
+    try:
+        stamp = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if stamp.tzinfo is None:
+            stamp = stamp.replace(tzinfo=timezone.utc)
+        return (datetime.now(timezone.utc) - stamp.astimezone(timezone.utc)).total_seconds() / 60
+    except (TypeError, ValueError):
+        return None
+
 
 def load_data():
     with open(DATA_FILE, encoding="utf-8") as f:
         return json.load(f)
 
+
 def diagnose(data):
-    problems = []
-    generated = data.get("generated_at")
-    age = None
-    try:
-        stamp = datetime.fromisoformat(generated.replace("Z", "+00:00"))
-        age = (datetime.now(timezone.utc) - stamp.astimezone(timezone.utc)).total_seconds() / 60
-        if age < -5:
-            problems.append("وقت إنشاء البيانات في المستقبل")
-        elif age > MAX_AGE_MINUTES:
-            problems.append("البيانات قديمة: %.0f دقيقة" % age)
-    except Exception:
+    problems, warnings = [], []
+    age = parse_age_minutes(data.get("generated_at"))
+    if age is None:
         problems.append("وقت generated_at مفقود أو غير صالح")
+    elif age < -5:
+        problems.append("وقت إنشاء البيانات في المستقبل")
+    elif age > MAX_AGE_MINUTES:
+        problems.append("البيانات قديمة: %.0f دقيقة" % age)
 
     leagues = data.get("leagues")
     if not isinstance(leagues, dict) or not leagues:
         problems.append("ملف البيانات لا يحتوي دوريات")
         leagues = {}
 
-    stale = []
+    stale, scoreboard_errors = [], []
     for key, league in leagues.items():
-        if league.get("stale") or not league.get("updated_at"):
-            stale.append(league.get("name", key))
-    if stale:
-        problems.append("مصادر دوريات متعثرة (%d): %s" % (len(stale), "، ".join(stale[:8])))
+        if not isinstance(league, dict):
+            problems.append("بيانات بطولة غير صالحة: " + str(key))
+            continue
+        name = league.get("name") or key
+        if league.get("stale"):
+            stale.append(name)
+        league_age = parse_age_minutes(league.get("updated_at"))
+        if league_age is None:
+            stale.append(name + " (وقت التحديث مفقود)")
+        elif league_age < -5:
+            problems.append(name + ": وقت التحديث في المستقبل")
+        elif league_age > LEAGUE_MAX_AGE_MINUTES:
+            stale.append(name + " (%.0f دقيقة)" % league_age)
 
-    feed_errors = []
-    for key, league in leagues.items():
-        for error in league.get("errors", []):
-            feed_errors.append("%s: %s" % (league.get("name", key), error))
-    for error in data.get("news_errors", []):
-        feed_errors.append("الأخبار: " + str(error))
-    return problems, feed_errors, age
+        errors = league.get("errors") or []
+        for error in errors:
+            message = str(error)
+            if message.lower().startswith("scoreboard:"):
+                scoreboard_errors.append(name + ": " + message)
+            else:
+                warnings.append(name + ": " + message)
+
+        matches = league.get("matches")
+        if not isinstance(matches, list):
+            problems.append(name + ": قائمة المباريات غير صالحة")
+            continue
+        seen = set()
+        for match in matches:
+            if not isinstance(match, dict):
+                warnings.append(name + ": سجل مباراة غير صالح")
+                continue
+            event_id = str(match.get("id") or "")
+            if event_id and event_id in seen:
+                warnings.append(name + ": مباراة مكررة " + event_id)
+            if event_id:
+                seen.add(event_id)
+            if not match.get("date") or not (match.get("home") or {}).get("name") or not (match.get("away") or {}).get("name"):
+                warnings.append(name + ": مباراة ينقصها التاريخ أو اسم أحد الفريقين")
+            if match.get("status") == "in":
+                home_score = (match.get("home") or {}).get("score")
+                away_score = (match.get("away") or {}).get("score")
+                if home_score is None or away_score is None:
+                    warnings.append(name + ": مباراة مباشرة دون نتيجة مكتملة")
+
+    if stale:
+        problems.append("تحديثات دوريات متأخرة (%d): %s" % (len(stale), "، ".join(stale[:10])))
+    if scoreboard_errors:
+        problems.append("أخطاء في جلب جداول المباريات (%d): %s" % (
+            len(scoreboard_errors), "؛ ".join(scoreboard_errors[:6])
+        ))
+
+    for error in data.get("news_errors") or []:
+        warnings.append("الأخبار: " + str(error))
+
+    return problems, warnings, age
+
 
 def notify(message, priority="high"):
     topic = os.getenv("NTFY_TOPIC", "").strip()
@@ -68,45 +123,50 @@ def notify(message, priority="high"):
         print("تعذر إرسال التنبيه:", str(exc)[:160])
         return False
 
+
 def main():
     before = load_data()
-    problems, feed_errors, age = diagnose(before)
-    print("التشخيص الأولي:", json.dumps({"problems": problems, "feed_errors": feed_errors[:15], "age_minutes": age}, ensure_ascii=False))
+    problems, warnings, age = diagnose(before)
+    print("التشخيص الأولي:", json.dumps({
+        "problems": problems, "warnings": warnings[:12], "age_minutes": age
+    }, ensure_ascii=False))
 
     retried = False
+    retry_exit_code = None
     if problems:
-        print("يوجد خلل؛ سأعيد تشغيل جامع البيانات مرة واحدة فقط.")
-        result = subprocess.run([sys.executable, "-u", "bot.py"], timeout=600)
+        print("اكتشف البوت خللاً في تحديث النتائج؛ سيعيد تشغيل جامع ESPN مرة واحدة.")
+        result = subprocess.run([sys.executable, "-u", "bot.py"], timeout=600, check=False)
         retried = True
-        if result.returncode == 0:
-            print("انتهت محاولة إعادة الجلب بنجاح.")
-        else:
-            print("فشلت محاولة إعادة الجلب برمز:", result.returncode)
+        retry_exit_code = result.returncode
+        print("رمز انتهاء محاولة إعادة الجلب:", retry_exit_code)
 
     after = load_data()
-    remaining, errors_after, age_after = diagnose(after)
+    remaining, warnings_after, age_after = diagnose(after)
     report = {
         "retried_once": retried,
+        "retry_exit_code": retry_exit_code,
         "remaining_problems": remaining,
-        "source_errors": errors_after[:15],
+        "warnings": warnings_after[:12],
         "data_age_minutes": age_after,
         "generated_at": after.get("generated_at"),
+        "scoreboard_success_count": after.get("scoreboard_success_count"),
+        "scoreboard_total_count": after.get("scoreboard_total_count"),
     }
     print("التقرير النهائي:", json.dumps(report, ensure_ascii=False))
 
-    if remaining or errors_after:
-        lines = ["حالة بيانات SLOOM365 تحتاج متابعة."]
-        if remaining:
-            lines.append("المشكلات: " + "؛ ".join(remaining))
-        if errors_after:
-            lines.append("أخطاء المصادر: " + "؛ ".join(errors_after[:8]))
+    if remaining:
+        lines = ["حالة بيانات SLOOM365 تحتاج متابعة بعد الفحص وإعادة المحاولة."]
+        lines.append("المشكلات: " + "؛ ".join(remaining[:8]))
         if retried:
             lines.append("أعاد البوت محاولة الجلب مرة واحدة.")
-        notify("\n".join(lines), "urgent" if remaining else "high")
+        notify("\n".join(lines), "urgent")
     elif retried:
-        notify("تمت إعادة جلب البيانات بعد اكتشاف خلل، والفحص النهائي سليم.", "default")
+        notify("اكتشف البوت خللاً وأعاد جلب البيانات؛ الفحص النهائي سليم.", "default")
+    elif warnings_after:
+        print("تنبيهات غير حرجة (الأخبار أو تفاصيل ثانوية):", "؛ ".join(warnings_after[:8]))
     else:
-        print("كل الفحوصات سليمة؛ لا حاجة لأي إجراء.")
+        print("كل فحوصات البيانات سليمة.")
+
 
 if __name__ == "__main__":
     main()
