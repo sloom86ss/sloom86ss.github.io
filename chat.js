@@ -26,11 +26,21 @@ const input=document.createElement('input');input.id='sloom-chat-input';input.ma
 const send=document.createElement('button');send.id='sloom-chat-send';send.type='submit';send.textContent='إرسال';form.append(input,send);
 const note=document.createElement('div');note.id='sloom-chat-note';note.textContent='مساعد كرة قدم مجاني من بيانات الموقع؛ الذكاء الاصطناعي المتقدم يحتاج تفعيل الخدمة على الخادم.';
 panel.append(head,log,captchaBox,form,note);document.body.append(launch,panel);
-let cache=null,cacheAt=0,requests=[];
+let cache=null,cacheAt=0,requests=[],turnstileSiteKey='',turnstileToken='',turnstileWidget=null;
 function add(text,who){const b=document.createElement('div');b.className='sloom-msg '+who;b.textContent=text;log.appendChild(b);log.scrollTop=log.scrollHeight}
 function normalize(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u064B-\u065F\u0670]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي')}
 function teamAr(n){const map={'Liverpool':'ليفربول','Arsenal':'أرسنال','Manchester City':'مانشستر سيتي','Manchester United':'مانشستر يونايتد','Chelsea':'تشيلسي','Tottenham Hotspur':'توتنهام','Real Madrid':'ريال مدريد','Barcelona':'برشلونة','Bayern Munich':'بايرن ميونخ','Inter':'إنتر ميلان','AC Milan':'ميلان','Juventus':'يوفنتوس','Paris Saint-Germain':'باريس سان جيرمان','Al Hilal':'الهلال','Al Nassr':'النصر','Al Ittihad':'الاتحاد','Al Ahli':'الأهلي'};return map[n]||n||'غير معروف'}
 async function getData(){if(cache&&Date.now()-cacheAt<45000)return cache;const r=await fetch('/data.json?chat='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('تعذر جلب البيانات');const d=await r.json();if(!d||!d.leagues||typeof d.leagues!=='object')throw Error('صيغة بيانات غير صحيحة');cache=d;cacheAt=Date.now();return d}
+function remoteContext(d){
+ const cleanNews=n=>({headline:String(n.headline||'').slice(0,180),description:String(n.description||'').slice(0,240),published:n.published||'',source:String(n.source||'').slice(0,60),link:String(n.link||'').slice(0,240)});
+ const leagues=Object.entries(d.leagues||{}).filter(([,l])=>!l.stale).slice(0,16).map(([key,l])=>({
+  name:l.name||key,updated_at:l.updated_at||'',stale:!!l.stale,
+  matches:(l.matches||[]).slice(0,5).map(m=>({date:m.date||m.time||'',status:m.status||'',detail:m.detail||'',home:{name:m.home?.name||'',score:m.home?.score??''},away:{name:m.away?.name||'',score:m.away?.score??''}})),
+  standings:(l.standings||[]).slice(0,6).map(x=>({name:x.name||x.team?.name||'',points:x.points??'',rank:x.rank??x.position??''})),
+  news:(l.news||[]).slice(0,2).map(cleanNews)
+ }));
+ return {generated_at:d.generated_at||'',provider:d.provider||'',timezone:'Asia/Muscat',news_sources:(d.news_sources||[]).slice(0,6).map(cleanNews),leagues};
+}
 function fresh(d){const t=Date.parse(d.generated_at||'');return Number.isFinite(t)&&Date.now()-t>=0&&Date.now()-t<90*60*1000&&t<=Date.now()+5*60*1000}
 function formatDate(v){const d=new Date(v);return Number.isNaN(d.getTime())?'موعد غير متاح':new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}).format(d)+' بتوقيت عُمان'}
 function allMatches(d){const now=Date.now();return Object.entries(d.leagues).filter(([,l])=>{const t=Date.parse(l.updated_at||'');return !l.stale&&Number.isFinite(t)&&now-t>=0&&now-t<=90*60*1000}).flatMap(([key,l])=>(l.matches||[]).map(m=>({...m,league:l.name||key})))}
@@ -58,6 +68,7 @@ form.addEventListener('submit',async e=>{
 e.preventDefault();
 const q=input.value.trim();
 if(!q||q.length>300)return;
+if(turnstileSiteKey&&!turnstileToken){add('أكمل اختبار الحماية الظاهر أسفل المحادثة قبل الإرسال.','bot');return;}
 const now=Date.now();
 requests=requests.filter(t=>now-t<30000);
 if(requests.length>=8){add('لحماية الخدمة المجانية، انتظر 30 ثانية قبل إرسال سؤال آخر.','bot');return}
@@ -69,7 +80,7 @@ try{
 const d=await getData();
 let replied=false;
 try{
-const response=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,context:d})});
+const response=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,context:remoteContext(d),turnstileToken:turnstileToken||undefined})});
 const payload=await response.json().catch(()=>({}));
 if(response.ok&&typeof payload.answer==='string'&&payload.answer.trim()){
 add(payload.answer.trim(),'bot');replied=true;
@@ -80,7 +91,30 @@ const local=answer(q,d);
 add(local+(local.startsWith('لا أستطيع تأكيد')?'':'\n\nملاحظة: هذه إجابة فورية من بيانات الموقع؛ خدمة الذكاء الاصطناعي المتقدمة لم تُفعّل بعد.'),'bot');
 }
 }catch(err){add('تعذر الوصول إلى بيانات الموقع الآن. حاول مرة أخرى بعد قليل.','bot')}
-finally{send.disabled=false;send.textContent='إرسال';input.focus()}
+finally{if(turnstileWidget!==null&&window.turnstile){window.turnstile.reset(turnstileWidget);turnstileToken='';}send.disabled=false;send.textContent='إرسال';input.focus()}
 });
+async function setupTurnstile(){
+ try{
+  const r=await fetch('/api/chat',{method:'GET',cache:'no-store'});
+  if(!r.ok)return;
+  const p=await r.json();
+  if(!p.turnstileSiteKey)return;
+  turnstileSiteKey=p.turnstileSiteKey;
+  const script=document.createElement('script');
+  script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+  script.async=true;script.defer=true;
+  script.onload=()=>{
+   if(!window.turnstile)return;
+   turnstileWidget=window.turnstile.render(captchaBox,{
+    sitekey:turnstileSiteKey,
+    callback:token=>{turnstileToken=token;},
+    'expired-callback':()=>{turnstileToken='';},
+    'error-callback':()=>{turnstileToken='';}
+   });
+  };
+  document.head.appendChild(script);
+ }catch(_){}
+}
+setupTurnstile();
 add('مرحباً بك! أنا مساعد SLOOM365 المجاني. اسألني عن مباريات اليوم وغداً، النتائج، المباريات المباشرة، الأخبار أو ترتيب الدوريات. أعتمد على بيانات الموقع ولا أخمّن عند غياب المعلومة.','bot');
 })();
