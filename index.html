@@ -1986,9 +1986,23 @@ function renderSloomAutoHighlights(news=[]){
  screen.innerHTML=css+'<div id="sloom-video-gallery"><div class="sloom-video-brand"><span>⚽</span><div>سلوم كورة 365<small>SLOOM FOOTBALL365</small></div></div>'+player+'<div class="sloom-video-caption">'+esc(chosen.headline)+'</div><div class="sloom-video-actions"><small>مقاطع كرة القدم الرسمية · ESPN</small><a href="'+esc(chosen.link)+'" target="_blank" rel="noopener noreferrer">فتح الفيديو الأصلي</a></div><div class="sloom-clip-list">'+list+'</div></div>';
 }
 function render(){
+ const leagueNav=document.getElementById('arabicLeagueNav');
+ if(leagueNav){
+  const navItems=[{key:'all',name:'كل الدوريات'}].concat(Object.entries(sportsData)
+   .filter(([key,league])=>isSloomAllowedLeague(key)&&leagueIsFresh(league))
+   .map(([key,league])=>({key,name:league.name||key})));
+  leagueNav.innerHTML='';
+  navItems.forEach(item=>{
+   const button=document.createElement('button');
+   button.type='button';button.dataset.region=item.key;
+   button.className=activeRegion===item.key?'active':'';
+   button.textContent=item.name;
+   leagueNav.appendChild(button);
+  });
+ }
  const dayNames={today:'مباريات اليوم بتوقيت عُمان',yesterday:'مباريات الأمس بتوقيت عُمان',tomorrow:'مباريات الغد بتوقيت عُمان'};document.getElementById('dayLabel').textContent=dayNames[activeDay];
  const root=document.getElementById('leagues');root.innerHTML='';let total=0,live=0,shown=0;const news=[];
- Object.entries(sportsData).forEach(([key,league])=>{if(!isSloomAllowedLeague(key))return;(league.news||[]).forEach(n=>news.push(n));if(!leagueIsFresh(league))return;const cat=league.category||getCategory(key);if(cat!=='football')return;const games=league.matches||[];if(!games.length)return;total+=games.length;live+=games.filter(g=>g.status==='in').length;if(activeFilter!=='all'&&activeFilter!==cat)return;const dayGames=games.filter(g=>{const d=new Date(g.date||g.time||'');if(Number.isNaN(d.getTime()))return false;const key=x=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Muscat',year:'numeric',month:'2-digit',day:'2-digit'}).format(x);const today=key(new Date());const [yy,mm,dd]=today.split('-').map(Number);const offset=activeDay==='yesterday'?-1:activeDay==='tomorrow'?1:0;const target=new Date(Date.UTC(yy,mm-1,dd+offset)).toISOString().slice(0,10);return key(d)===target});
+ Object.entries(sportsData).forEach(([key,league])=>{if(!isSloomAllowedLeague(key))return;if(activeRegion!=='all'&&activeRegion!==key)return;(league.news||[]).forEach(n=>news.push(n));if(!leagueIsFresh(league))return;const cat=league.category||getCategory(key);if(cat!=='football')return;const games=league.matches||[];if(!games.length&&activeRegion==='all')return;total+=games.length;live+=games.filter(g=>g.status==='in').length;if(activeFilter!=='all'&&activeFilter!==cat)return;const dayGames=games.filter(g=>{const d=new Date(g.date||g.time||'');if(Number.isNaN(d.getTime()))return false;const key=x=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Muscat',year:'numeric',month:'2-digit',day:'2-digit'}).format(x);const today=key(new Date());const [yy,mm,dd]=today.split('-').map(Number);const offset=activeDay==='yesterday'?-1:activeDay==='tomorrow'?1:0;const target=new Date(Date.UTC(yy,mm-1,dd+offset)).toISOString().slice(0,10);return key(d)===target});
  const upcoming=activeDay==='today'&&!dayGames.length?games.filter(g=>g.date&&Date.parse(g.date)>Date.now()).sort((a,b)=>Date.parse(a.date)-Date.parse(b.date)).slice(0,2):[];
  const visibleGames=dayGames.length?dayGames:upcoming;shown++;
  const card=document.createElement('section');card.className='league';
