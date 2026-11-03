@@ -1947,7 +1947,29 @@ function renderSloomAutoHighlights(newsItems){
  const screen=document.querySelector('.sloom-summary-screen');
  if(!screen)return;
  if(sloomHighlightsRotationTimer){clearInterval(sloomHighlightsRotationTimer);sloomHighlightsRotationTimer=null;}
- screen.innerHTML='<div class="sloom-auto-player"><iframe title="SLOOM365 Football Highlights" src="https://www.rematch.tv/club/embed/csuvfn5p0v9s7157trtg" loading="eager" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>';
+ const leagues=[
+  {id:'sau',name:'السعودي 🇸🇦',title:'الدوري السعودي للمحترفين',url:'https://www.spl.sa/ar/videos'},
+  {id:'eng',name:'الإنجليزي 🏴',title:'Premier League',url:'https://www.premierleague.com/en/video'},
+  {id:'esp',name:'الإسباني 🇪🇸',title:'LaLiga',url:'https://www.laliga.com/en-GB/videos'},
+  {id:'ita',name:'الإيطالي 🇮🇹',title:'Serie A',url:'https://www.legaseriea.it/serie-a/video'},
+  {id:'ger',name:'الألماني 🇩🇪',title:'Bundesliga',url:'https://www.bundesliga.com/en/bundesliga/videos'},
+  {id:'fra',name:'الفرنسي 🇫🇷',title:'Ligue 1',url:'https://www.ligue1.fr/en/videos'},
+  {id:'por',name:'البرتغالي 🇵🇹',title:'Liga Portugal',url:'https://www.ligaportal.pt/en/videos'},
+  {id:'ned',name:'الهولندي 🇳🇱',title:'Eredivisie',url:'https://eredivisie.nl/en/videos/'},
+  {id:'bra',name:'البرازيلي 🇧🇷',title:'Brasileirão',url:'https://ge.globo.com/futebol/brasileirao-serie-a/'},
+  {id:'arg',name:'الأرجنتيني 🇦🇷',title:'Liga Profesional',url:'https://www.ligaprofesional.ar/videos/'}
+ ];
+ screen.innerHTML='<div class="sloom-league-video"><div class="sloom-video-tabs" role="tablist" aria-label="دوريات الملخصات"></div><div class="sloom-video-frame"><iframe title="ملخصات كرة القدم الرسمية" loading="eager" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="sloom-video-foot"><b class="sloom-video-title"></b><a class="sloom-video-open" target="_blank" rel="noopener noreferrer">إذا لم يظهر الفيديو داخل الشاشة، افتح المصدر الرسمي ↗</a></div></div>';
+ const tabs=screen.querySelector('.sloom-video-tabs'),frame=screen.querySelector('iframe'),title=screen.querySelector('.sloom-video-title'),open=screen.querySelector('.sloom-video-open');
+ function selectLeague(league){
+  tabs.querySelectorAll('button').forEach(b=>{const active=b.dataset.id===league.id;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active))});
+  frame.src=league.url;frame.title='ملخصات '+league.title;
+  title.textContent=league.title;open.href=league.url;
+ }
+ leagues.forEach((league,index)=>{
+  const button=document.createElement('button');button.type='button';button.className='sloom-video-tab';button.textContent=league.name;button.dataset.id=league.id;button.setAttribute('role','tab');button.setAttribute('aria-selected',String(index===0));button.addEventListener('click',()=>selectLeague(league));tabs.appendChild(button);
+ });
+ selectLeague(leagues[0]);
 }
 
 function render(){
@@ -2485,4 +2507,16 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 .live-board-now{display:inline-flex!important;align-items:center!important;gap:6px!important;color:#fff!important;background:linear-gradient(135deg,#b90035,#ff315e)!important;border:1px solid #ff8298!important;border-radius:999px!important;padding:6px 11px!important;font:900 12px Cairo,Arial,sans-serif!important;white-space:nowrap!important}
 .live-board-minute{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:112px!important;color:#07162f!important;background:linear-gradient(135deg,#ffe56a,#ffbd28)!important;border:1px solid #fff0a2!important;border-radius:11px!important;padding:7px 13px!important;font:900 14px Cairo,Arial,sans-serif!important;direction:rtl!important;text-align:center!important;box-shadow:0 0 12px #ffca3a44!important;white-space:nowrap!important}
 @media(max-width:380px){.live-board-minute{font-size:13px!important;padding:7px 9px!important;min-width:104px!important}.live-board-now{font-size:11px!important;padding:6px 9px!important}}
+
+/* SLOOM365 official league highlights screen */
+#sloom-video-screen .sloom-summary-screen{aspect-ratio:auto!important;min-height:0!important;height:auto!important}
+.sloom-league-video{width:100%;background:#070b18;color:#fff;overflow:hidden;border-radius:12px}
+.sloom-video-tabs{display:flex;gap:7px;overflow-x:auto;padding:9px;background:#0f1429;scrollbar-width:thin}
+.sloom-video-tab{flex:0 0 auto;border:1px solid #26324a;border-radius:20px;background:#1a2340;color:#fff;padding:8px 13px;font:700 12px system-ui;white-space:nowrap;cursor:pointer}
+.sloom-video-tab.active{background:#00d987;color:#06130d;border-color:#00ff99}
+.sloom-video-frame{width:100%;aspect-ratio:16/9;background:#000;position:relative}
+.sloom-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.sloom-video-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 11px;background:#0f1429;font:12px system-ui}
+.sloom-video-title{color:#fff}
+.sloom-video-open{color:#00e995;text-decoration:none;font-weight:700}
 </style>
