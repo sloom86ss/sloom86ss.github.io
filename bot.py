@@ -134,6 +134,7 @@ def fetch_rss_news():
     return sorted(unique.values(), key=lambda item: item["published"], reverse=True)[:100], errors
 
 def get_json(url, attempts=3):
+    """Fetch ESPN JSON with bounded retries and respectful backoff for rate limits."""
     last = None
     for n in range(attempts):
         try:
@@ -141,14 +142,21 @@ def get_json(url, attempts=3):
                 "User-Agent": "Mozilla/5.0 (compatible; SLOOM-TV/2.0; sports data)",
                 "Accept": "application/json"
             })
-            with urllib.request.urlopen(req, timeout=15) as response:
+            with urllib.request.urlopen(req, timeout=18) as response:
                 if response.status != 200:
                     raise RuntimeError("HTTP " + str(response.status))
                 return json.loads(response.read().decode("utf-8"))
         except Exception as exc:
             last = exc
             if n + 1 < attempts:
-                time.sleep(0.8 * (n + 1))
+                retry_after = None
+                if isinstance(exc, urllib.error.HTTPError):
+                    try:
+                        retry_after = float(exc.headers.get("Retry-After", ""))
+                    except (TypeError, ValueError):
+                        retry_after = None
+                delay = retry_after if retry_after is not None else min(6.0, 1.2 * (2 ** n))
+                time.sleep(max(0.5, min(delay, 10.0)))
     raise last
 
 def team_rows(payload):
@@ -313,6 +321,8 @@ def notify_match_changes(previous, current):
         print(f"Sent {min(len(notices), 12)} match notifications (if NTFY_TOPIC is configured).")
 
 def main():
+    started_monotonic = time.monotonic()
+    started_at = NOW()
     path = os.path.join(os.path.dirname(__file__), "data.json")
     try:
         with open(path, encoding="utf-8") as f:
@@ -320,7 +330,13 @@ def main():
     except Exception:
         previous = {}
     old_leagues = previous.get("leagues", previous if isinstance(previous, dict) else {})
-    output = {"generated_at": NOW(), "timezone": "Asia/Muscat", "provider": "ESPN public API", "leagues": {}}
+    output = {
+        "generated_at": started_at,
+        "collector_started_at": started_at,
+        "timezone": "Asia/Muscat",
+        "provider": "ESPN public API",
+        "leagues": {}
+    }
     output["news_sources"], output["news_errors"] = fetch_rss_news()
     output["news_sources_updated_at"] = NOW()
     success = 0
@@ -346,10 +362,21 @@ def main():
     if success == 0:
         send_ntfy("⚠️ تحديث بيانات SLOOM360 فشل", "لم ينجح تحديث أي مصدر لنتائج كرة القدم. يرجى فحص الموقع ومصادر البيانات.", "urgent")
         raise SystemExit("No scoreboard feed succeeded; keeping existing data.json unchanged.")
+    # generated_at means the data was completed and is ready to publish, not
+    # merely when the collector started. This makes freshness checks meaningful.
+    output["generated_at"] = NOW()
+    output["collector_completed_at"] = output["generated_at"]
+    output["collection_duration_seconds"] = round(time.monotonic() - started_monotonic, 1)
+    output["scoreboard_success_count"] = success
+    output["scoreboard_total_count"] = len(FEEDS)
     notify_match_changes(previous, output)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f"Published {success}/{len(FEEDS)} current scoreboards; total matches={sum(len(x['matches']) for x in output['leagues'].values())}")
+    print(
+        f"Published {success}/{len(FEEDS)} current scoreboards; "
+        f"total matches={sum(len(x['matches']) for x in output['leagues'].values())}; "
+        f"duration={output['collection_duration_seconds']}s"
+    )
 
 if __name__ == "__main__":
     main()
