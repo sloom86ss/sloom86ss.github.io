@@ -1958,9 +1958,11 @@ document.getElementById('savePrediction')?.addEventListener('click',()=>{
 });
 
 
+let sloomHighlightsRotationTimer=null;
 function renderSloomAutoHighlights(newsItems){
  const screen=document.querySelector('.sloom-summary-screen');
  if(!screen)return;
+ if(sloomHighlightsRotationTimer){clearInterval(sloomHighlightsRotationTimer);sloomHighlightsRotationTimer=null;}
  const all=[...(newsItems||[]),...Object.values(sportsData).flatMap(l=>l.news||[])];
  const seen=new Set();
  const clips=all.filter(n=>{
@@ -1986,6 +1988,12 @@ function renderSloomAutoHighlights(newsItems){
   screen.querySelectorAll('[data-clip-step]').forEach(button=>button.addEventListener('click',()=>{index=(index+Number(button.dataset.clipStep)+clips.length)%clips.length;show()}));
  };
  show();
+ if(clips.length>1){
+  sloomHighlightsRotationTimer=setInterval(()=>{
+   index=(index+1)%clips.length;
+   show();
+  },90000);
+ }
 }
 
 function render(){
