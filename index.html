@@ -1608,6 +1608,18 @@ footer{border-color:#26352b!important;color:#91a095!important}
 #sloom-video-screen .sloom-video-rights{margin:10px 2px 0;color:#a9bdae;font-size:9px;line-height:1.8}
 @media(max-width:520px){#sloom-video-screen{padding:10px!important}.sloom-summary-controls{grid-template-columns:1fr;gap:5px}.sloom-summary-screen{min-height:230px;padding:15px 9px}.sloom-summary-details{gap:5px}.sloom-summary-details span{font-size:9px}}
 </style>
+
+<style id="sloom-video-source-cards">
+.sloom-video-source-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.sloom-video-source-card{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-width:0;padding:13px;border:1px solid #31583b;border-radius:13px;background:linear-gradient(145deg,#14251a,#0b140e);text-decoration:none!important;transition:transform .2s,border-color .2s}
+.sloom-video-source-card:active{transform:scale(.98)}
+.sloom-video-source-card>span{font-size:23px}
+.sloom-video-source-card>b{font-size:13px;color:#f5fff6}
+.sloom-video-source-card>small{font-size:10px;line-height:1.7;color:#b9cdbd;min-height:32px}
+.sloom-video-source-card>em{font-size:10px;font-style:normal;font-weight:900;color:#b7f34a;margin-top:auto}
+.sloom-video-source-note{margin:9px 2px 0;color:#a9bdae;font-size:9px;line-height:1.8}
+@media(max-width:380px){.sloom-video-source-grid{grid-template-columns:1fr}.sloom-video-source-card{display:grid;grid-template-columns:30px 1fr;column-gap:8px;padding:10px}.sloom-video-source-card>span{grid-row:1/4}.sloom-video-source-card>small,.sloom-video-source-card>em{grid-column:2}}
+</style>
 </head>
 <body><main class="wrap">
 
@@ -1623,16 +1635,18 @@ footer{border-color:#26352b!important;color:#91a095!important}
   <a href="#teamsDirectory"><span>🏟️</span>الأندية</a>
  </nav>
 </header>
-<section id="sloom-video-screen" class="sloom-video-feature" aria-label="شاشة ملخصات المباريات">
+<section id="sloom-video-screen" class="sloom-video-feature" aria-label="ملخصات المباريات من المصادر الرسمية">
  <div class="sloom-video-heading">
-  <div><b>⚽ ملخصات وأهداف المباريات</b><small>أحدث فيديوهات كرة القدم في شاشة واحدة</small></div>
-  <span>تحديث تلقائي</span>
+  <div><b>⚽ أحدث ملخصات المباريات</b><small>مصادر فيديو رسمية ومجانية — اختر المصدر لمشاهدة أحدث الفيديوهات</small></div>
+  <span>مصادر رسمية</span>
  </div>
- <div class="sloom-summary-screen" id="sloomSummaryScreen" aria-live="polite">
-  <div class="sloom-summary-empty-icon">▶</div>
-  <b id="sloomSummaryStatus">شاشة الفيديو جاهزة</b>
-  <p id="sloomSummaryMessage">سيتم عرض أحدث الملخصات تلقائياً هنا عبر مشغل فيديو رسمي.</p>
+ <div class="sloom-video-source-grid">
+  <a class="sloom-video-source-card" href="https://www.fifa.com/fifaplus/en" target="_blank" rel="noopener noreferrer"><span>🌍</span><b>FIFA+</b><small>مكتبة فيديوهات وملخصات كرة القدم</small><em>مشاهدة الفيديوهات ↗</em></a>
+  <a class="sloom-video-source-card" href="https://www.uefa.tv/" target="_blank" rel="noopener noreferrer"><span>🏆</span><b>UEFA.tv</b><small>ملخصات ومسابقات الاتحاد الأوروبي</small><em>مشاهدة الفيديوهات ↗</em></a>
+  <a class="sloom-video-source-card" href="https://www.the-afc.com/en/more/video.html" target="_blank" rel="noopener noreferrer"><span>🌏</span><b>AFC</b><small>فيديوهات وملخصات الكرة الآسيوية</small><em>مشاهدة الفيديوهات ↗</em></a>
+  <a class="sloom-video-source-card" href="https://www.premierleague.com/video" target="_blank" rel="noopener noreferrer"><span>⚽</span><b>Premier League</b><small>أهداف وملخصات الدوري الإنجليزي</small><em>مشاهدة الفيديوهات ↗</em></a>
  </div>
+ <p class="sloom-video-source-note">تُفتح الفيديوهات من مواقعها الرسمية. لا نعرض مقاطع قديمة على أنها حديثة، ولا نشغّل فيديو غير متاح.</p>
 </section>
 
 <div id="sloomWeatherData" hidden aria-hidden="true"><span id="sloomWeatherIcon">🌤️</span><span id="sloomWeatherTemp">--°</span><span id="sloomWeatherPlace">البريمي، عُمان</span><span id="sloomWeatherDesc">جارٍ تحميل حالة الطقس…</span></div>
