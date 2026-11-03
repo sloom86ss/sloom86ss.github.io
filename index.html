@@ -807,6 +807,15 @@ footer{color:#67816e!important;border-color:#d4e6d8!important}
 html,body{background:#000!important;background-image:none!important}
 /* شريط الأخبار: دورة الحركة 12 ثانية */
 .ticker-track{animation-duration:12s!important}
+
+/* SLOOM365 weather + GPS panel */
+.sloom-weather-panel{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:12px 0 7px;padding:12px 15px;border:1px solid #b9d9c1;border-radius:16px;background:#fff;box-shadow:0 5px 18px #174b2610;color:#173c27}
+.sloom-weather-main{display:flex;align-items:center;gap:11px;min-width:0}.sloom-weather-icon{font-size:30px}.sloom-weather-main strong{display:block;font-size:24px;line-height:1.2;color:#167a3e}.sloom-weather-main span:not(.sloom-weather-icon){display:block;font-size:11px;font-weight:800}.sloom-weather-main small{display:block;font-size:10px;color:#607b68;margin-top:2px}
+.sloom-weather-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.sloom-weather-actions button{border:0;border-radius:10px;padding:9px 12px;background:#167a3e;color:#fff;font:800 11px Cairo,Arial,sans-serif;cursor:pointer;touch-action:manipulation}.sloom-weather-actions button:disabled{opacity:.65;cursor:wait}.sloom-weather-actions small{font-size:9px;color:#607b68}
+.sloom-weather-ticker{display:flex;align-items:center;gap:8px;overflow:hidden;white-space:nowrap;margin:0 0 12px;padding:8px 12px;border-radius:11px;background:#eaf5ed;color:#176b39;border:1px solid #cfe3d4;font-size:11px;font-weight:800}
+@media(max-width:520px){.sloom-weather-panel{align-items:flex-start;padding:10px 11px}.sloom-weather-actions{width:100%;justify-content:space-between}.sloom-weather-actions button{min-height:40px}.sloom-weather-ticker{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.sloom-weather-panel *,.sloom-weather-ticker *{animation:none!important;transition:none!important}}
+
 </style>
 <meta name="keywords" content="SLOOM KORA 365, SLOOM KORA, SLOOM365, سلوم كورة 365, سلوم365, سلوم 365, كرة القدم, مباريات اليوم, نتائج مباشرة, أخبار كرة القدم, الانتقالات, الدوريات العالمية">
 <meta name="description" content="سلوم كورة 365 (SLOOM KORA 365) منصة كرة القدم العربية: مباريات اليوم وأمس وغداً، النتائج المباشرة، جداول الدوريات، أخبار كرة القدم والانتقالات بمصادر موثوقة وتوقيت عُمان.">
@@ -1569,6 +1578,16 @@ footer{border-color:#26352b!important;color:#91a095!important}
  playClip(0);
 })();
 </script>
+
+<section class="sloom-weather-panel" id="sloomWeatherPanel" aria-label="الطقس والموقع">
+ <div class="sloom-weather-main">
+  <span class="sloom-weather-icon" id="sloomWeatherIcon" aria-hidden="true">🌤️</span>
+  <div><strong id="sloomWeatherTemp">--°</strong><span id="sloomWeatherPlace">البريمي، عُمان</span><small id="sloomWeatherDesc" aria-live="polite">جارٍ تحميل حالة الطقس…</small></div>
+ </div>
+ <div class="sloom-weather-actions"><button type="button" id="sloomWeatherGPS">📍 استخدام موقعي GPS</button><small id="sloomWeatherStatus" role="status" aria-live="polite">الطقس الافتراضي: البريمي</small></div>
+</section>
+<div class="sloom-weather-ticker" role="status" aria-live="polite">🌤️ <span id="sloomWeatherTicker">طقس البريمي: جارٍ جلب درجة الحرارة…</span></div>
+
 <section class="sloom-match-marquee" aria-label="شريط المباريات المتحرك"><div class="sloom-match-marquee-window"><div class="sloom-match-marquee-track" id="sloomMatchTicker"><span class="sloom-match-ticker-empty">⚽ متابعة مباريات كرة القدم</span></div></div></section>
 <nav class="sloom-category-strip" aria-label="اختصارات الأقسام">
  <a href="#matches"><span>⚽</span><b>المباريات</b></a>
@@ -2094,5 +2113,70 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 
 
 
+
+
+<script>
+/* SLOOM365 weather: Al Buraimi fallback + explicit GPS permission */
+(()=>{
+ const fallback={lat:24.25,lon:55.79,name:'البريمي، عُمان'};
+ const $=id=>document.getElementById(id);
+ const weatherCode=code=>{
+  if(code===0)return ['☀️','سماء صافية'];
+  if([1,2].includes(code))return ['🌤️','غائم جزئياً'];
+  if(code===3)return ['☁️','غائم'];
+  if([45,48].includes(code))return ['🌫️','ضباب'];
+  if([51,53,55,56,57].includes(code))return ['🌦️','رذاذ'];
+  if([61,63,65,66,67,80,81,82].includes(code))return ['🌧️','أمطار'];
+  if([71,73,75,77,85,86].includes(code))return ['🌨️','ثلوج'];
+  if([95,96,99].includes(code))return ['⛈️','عواصف رعدية'];
+  return ['🌤️','حالة الطقس'];
+ };
+ async function loadWeather(lat,lon,name){
+  $('sloomWeatherStatus').textContent='جارٍ تحديث الطقس…';
+  const url='https://api.open-meteo.com/v1/forecast?latitude='+encodeURIComponent(lat)+'&longitude='+encodeURIComponent(lon)+'&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m&timezone=auto';
+  const response=await fetch(url,{cache:'no-store'});
+  if(!response.ok)throw new Error('weather HTTP '+response.status);
+  const data=await response.json(),current=data.current||{};
+  if(typeof current.temperature_2m!=='number')throw new Error('weather data missing');
+  const [icon,description]=weatherCode(Number(current.weather_code));
+  const temp=Math.round(current.temperature_2m);
+  $('sloomWeatherIcon').textContent=icon;
+  $('sloomWeatherTemp').textContent=(temp>0?'+':'')+temp+'°';
+  $('sloomWeatherPlace').textContent=name;
+  $('sloomWeatherDesc').textContent=description+' · المحسوسة '+Math.round(current.apparent_temperature??temp)+'° · الرطوبة '+Math.round(current.relative_humidity_2m??0)+'٪';
+  $('sloomWeatherTicker').textContent='طقس '+name+': '+temp+'° · '+description+' · الرطوبة '+Math.round(current.relative_humidity_2m??0)+'٪';
+  $('sloomWeatherStatus').textContent='آخر تحديث: '+new Intl.DateTimeFormat('ar-OM',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Muscat'}).format(new Date());
+ }
+ async function fallbackWeather(message){
+  try{await loadWeather(fallback.lat,fallback.lon,fallback.name);$('sloomWeatherStatus').textContent=message||'الطقس الافتراضي: البريمي';}
+  catch(e){$('sloomWeatherDesc').textContent='تعذر جلب حالة الطقس حالياً';$('sloomWeatherTicker').textContent='تعذر تحديث الطقس حالياً';$('sloomWeatherStatus').textContent='تحقق من اتصال الإنترنت';}
+ }
+ const button=$('sloomWeatherGPS');
+ button?.addEventListener('click',()=>{
+  if(!navigator.geolocation){fallbackWeather('GPS غير مدعوم؛ نعرض طقس البريمي');return;}
+  button.disabled=true;$('sloomWeatherStatus').textContent='بانتظار إذن الموقع من جهازك…';
+  navigator.geolocation.getCurrentPosition(async position=>{
+   try{
+    const lat=position.coords.latitude,lon=position.coords.longitude;
+    await loadWeather(lat,lon,'موقعك الحالي');
+    $('sloomWeatherStatus').textContent='تم تحديد موقعك بنجاح';
+   }catch(e){await fallbackWeather('تعذر تحديث الطقس من موقعك؛ نعرض طقس البريمي');}
+   finally{button.disabled=false;}
+  },async error=>{
+   const reason=error.code===1?'لم تسمح بإذن الموقع؛ نعرض طقس البريمي':error.code===2?'تعذر تحديد الموقع؛ نعرض طقس البريمي':'انتهت مهلة GPS؛ نعرض طقس البريمي';
+   await fallbackWeather(reason);button.disabled=false;
+  },{enableHighAccuracy:false,timeout:12000,maximumAge:600000});
+ });
+ fallbackWeather('الطقس الافتراضي: البريمي');
+ setInterval(()=>{
+  const place=$('sloomWeatherPlace')?.textContent||fallback.name;
+  if(place==='موقعك الحالي'){
+   // Keep the last permitted coordinates private in memory only; refresh is intentionally not automatic.
+   return;
+  }
+  fallbackWeather('تحديث تلقائي لطقس البريمي');
+ },30*60*1000);
+})();
+</script>
 
 </body></html>
