@@ -1951,27 +1951,30 @@ document.getElementById('savePrediction')?.addEventListener('click',()=>{
 
 
 let sloomHighlightsRotationTimer=null;
-function renderSloomAutoHighlights(newsItems){
- const screen=document.querySelector('.sloom-summary-screen');
- if(!screen)return;
- if(sloomHighlightsRotationTimer){clearInterval(sloomHighlightsRotationTimer);sloomHighlightsRotationTimer=null;}
- const leagues=[
-  {id:'esp',name:'🇪🇸 الدوري الإسباني',title:'LALIGA',playlist:'UUTv-XvfzLX3i4IGWAm4sbmA'},
-  {id:'fra',name:'🇫🇷 الدوري الفرنسي',title:'Ligue 1',playlist:'UUQsH5XtIc9hONE1BQjucM0g'}
+function renderSloomAutoHighlights(){
+ const screen=document.querySelector('.sloom-summary-screen');if(!screen)return;
+ const defs=[
+  {id:'esp',name:'الدوري الإسباني',re:/soccer\/(esp|spain)|la.?liga|laliga|الدوري الإسباني/i},
+  {id:'fra',name:'الدوري الفرنسي',re:/soccer\/(fra|france)|ligue.?1|الدوري الفرنسي/i}
  ];
- screen.innerHTML='<div class="sloom-league-video"><div class="sloom-video-tabs" role="tablist" aria-label="الدوري الإسباني والفرنسي"></div><div class="sloom-video-frame"><iframe title="ملخصات رسمية لكرة القدم" loading="eager" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>';
- const tabs=screen.querySelector('.sloom-video-tabs'),frame=screen.querySelector('iframe');
- function selectLeague(league){
-  tabs.querySelectorAll('button').forEach(b=>{const active=b.dataset.id===league.id;b.classList.toggle('active',active);b.setAttribute('aria-selected',String(active))});
-  frame.src='https://www.youtube.com/embed/videoseries?list='+league.playlist+'&autoplay=1&mute=1&playsinline=1&rel=0';
-  frame.title='ملخصات '+league.title;
- }
- leagues.forEach((league,index)=>{
-  const button=document.createElement('button');button.type='button';button.className='sloom-video-tab';button.textContent=league.name;button.dataset.id=league.id;button.setAttribute('role','tab');button.setAttribute('aria-selected',String(index===0));button.addEventListener('click',()=>selectLeague(league));tabs.appendChild(button);
+ const groups=defs.map(def=>{
+  const rows=[];
+  Object.entries(sportsData||{}).forEach(([key,league])=>{
+   if(!def.re.test(key+' '+(league.name||''))||!isSloomAllowedLeague(key)||!leagueIsFresh(league))return;
+   (league.matches||[]).forEach(game=>{
+    const start=Date.parse(game.date||game.time||'');
+    if(game.status==='in'||(game.status==='pre'&&Number.isFinite(start)&&start>Date.now()&&start<Date.now()+18*60*60*1000))rows.push({league:league.name||def.name,game,start});
+   });
+  });
+  rows.sort((a,b)=>(a.game.status==='in'?0:1)-(b.game.status==='in'?0:1)||(a.start||0)-(b.start||0));
+  return {def,rows};
  });
- selectLeague(leagues[0]);
+ const activeId=screen.dataset.activeLeague||'esp';
+ const style='<style id="sloom-display-board-style">#sloom-video-screen .sloom-summary-screen{width:100%;min-height:100vh;aspect-ratio:auto;height:auto;padding:clamp(12px,3vw,30px);box-sizing:border-box;border:0;border-radius:0;background:radial-gradient(ellipse at 50% 0,#292115,#050505 70%);color:#fff;font-family:Cairo,Arial,sans-serif}#sloom-display-board{width:min(1200px,100%);margin:auto}.sloom-display-top{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #806b3d;padding:8px 4px 16px;margin-bottom:18px}.sloom-display-brand{font-size:clamp(19px,4vw,30px);font-weight:900;color:#f2d58c}.sloom-display-live{color:#ff6370;font-size:12px;font-weight:900}.sloom-display-league{display:none}.sloom-display-league.active{display:block}.sloom-display-league h2{font-size:clamp(17px,3vw,24px);color:#e8d09a;margin:8px 0 14px}.sloom-display-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px}.sloom-display-match{border:1px solid #67532d;border-radius:15px;background:linear-gradient(145deg,#18150e,#080808);padding:15px;min-width:0}.sloom-display-comp{font-size:10px;color:#c6ae76;margin-bottom:10px}.sloom-display-teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:9px}.sloom-display-team{display:flex;align-items:center;gap:7px;min-width:0;font-size:clamp(12px,2.2vw,16px);font-weight:800}.sloom-display-team:last-child{justify-content:flex-end;text-align:left}.sloom-display-team img{width:clamp(25px,4vw,38px);height:clamp(25px,4vw,38px);object-fit:contain}.sloom-display-team span{overflow-wrap:anywhere}.sloom-display-score{font-size:clamp(17px,3vw,25px);font-weight:900;color:#f5e6c4;white-space:nowrap}.sloom-display-state{text-align:center;margin-top:12px;color:#d6c18e;font-size:12px}.sloom-display-state.live{color:#ff6570;font-weight:900}.sloom-display-empty{padding:28px;text-align:center;border:1px dashed #65522f;border-radius:15px;color:#c7b98f;font-size:13px}.sloom-display-clock{direction:ltr;font-weight:900;color:#f2d58c}@media(max-width:520px){#sloom-video-screen .sloom-summary-screen{padding:10px}.sloom-display-top{margin-bottom:12px}.sloom-display-match{padding:12px}.sloom-display-grid{grid-template-columns:1fr}}</style>';
+ screen.dataset.activeLeague=activeId;
+ screen.innerHTML=style+'<div id="sloom-display-board"><div class="sloom-display-top"><div class="sloom-display-brand">SLOOM 365</div><div class="sloom-display-live">● تحديث تلقائي</div></div>'+groups.map(({def,rows})=>'<section class="sloom-display-league '+(def.id===activeId?'active':'')+'" data-display-league="'+def.id+'"><h2>'+def.name+'</h2>'+(rows.length?'<div class="sloom-display-grid">'+rows.map(({league,game,start})=>{const h=game.home||{},a=game.away||{},live=game.status==='in',time=Number.isFinite(start)?new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',hour:'2-digit',minute:'2-digit'}).format(new Date(start)):'—';return '<article class="sloom-display-match"><div class="sloom-display-comp">'+esc(league)+'</div><div class="sloom-display-teams"><div class="sloom-display-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name||'الفريق الأول'))+'</span></div><div class="sloom-display-score">'+(live?esc(String(h.score??'—')+' : '+String(a.score??'—')):'VS')+'</div><div class="sloom-display-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name||'الفريق الثاني'))+'</span></div></div><div class="sloom-display-state '+(live?'live':'')+'">'+(live?'● مباشر الآن':'موعد المباراة · <span class="sloom-display-clock">'+time+'</span> · بتوقيت عُمان')+'</div></article>'}).join('')+'</div>':'<div class="sloom-display-empty">لا توجد مباريات مباشرة أو قادمة قريباً</div>')+'</section>').join('')+'</div>';
+ if(!sloomHighlightsRotationTimer)sloomHighlightsRotationTimer=setInterval(()=>{const sections=Array.from(screen.querySelectorAll('[data-display-league]'));if(sections.length<2)return;const next=(screen.dataset.activeLeague||'esp')==='esp'?'fra':'esp';screen.dataset.activeLeague=next;sections.forEach(section=>section.classList.toggle('active',section.dataset.displayLeague===next));},12000);
 }
-
 function render(){
  const dayNames={today:'مباريات اليوم بتوقيت عُمان',yesterday:'مباريات الأمس بتوقيت عُمان',tomorrow:'مباريات الغد بتوقيت عُمان'};document.getElementById('dayLabel').textContent=dayNames[activeDay];
  const root=document.getElementById('leagues');root.innerHTML='';let total=0,live=0,shown=0;const news=[];
