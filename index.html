@@ -2047,7 +2047,45 @@ function checkDataErrors(d){const errors=[];if(Array.isArray(d.news_errors))erro
 window.addEventListener('error',e=>showSiteError('حدث خطأ JavaScript في الصفحة: '+(e.message||'خطأ غير معروف')));
 window.addEventListener('unhandledrejection',e=>showSiteError('تعذر إكمال إحدى العمليات: '+String(e.reason?.message||e.reason||'خطأ غير معروف')));
 async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();checkDataErrors(d);const nextSportsData=d.leagues||d;notifySloomScoreChanges(sportsData,nextSportsData);dataGeneratedAt=d.generated_at||d.news_sources_updated_at||null;sportsData=nextSportsData;sportsData.news_sources=d.news_sources||[];render();tickSloomClocks()}catch(e){showSiteError('تعذر تحميل بيانات المباريات والأخبار. '+(e.message||'تحقق من اتصال الموقع بمصدر البيانات')+' — سنعيد المحاولة تلقائياً.');document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
+
+async function refreshLiveScores(){
+ const now=Date.now(),localDay=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Muscat',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()).replace(/-/g,'');
+ const targets=Object.entries(sportsData).filter(([key,league])=>key.startsWith('soccer/')&&(league.matches||[]).some(game=>{
+  const start=Date.parse(game.date||game.time||'');
+  return game.status==='in'||(game.status==='pre'&&Number.isFinite(start)&&start>=now-3*60*60*1000&&start<=now+90*60*1000);
+ }));
+ if(!targets.length)return;
+ const previous=JSON.parse(JSON.stringify(sportsData));
+ await Promise.allSettled(targets.map(async([key,league])=>{
+  const response=await fetch('https://site.api.espn.com/apis/site/v2/sports/'+key+'/scoreboard?dates='+localDay,{cache:'no-store'});
+  if(!response.ok)throw new Error('ESPN '+response.status);
+  const payload=await response.json(),events=payload.events||[],byId=new Map((league.matches||[]).map(game=>[String(game.id),game]));
+  for(const event of events){
+   const comp=(event.competitions||[])[0]||{},competitors=comp.competitors||[];
+   const home=competitors.find(team=>team.homeAway==='home')||{},away=competitors.find(team=>team.homeAway==='away')||{};
+   const status=(comp.status||{}).type||{},date=event.date||'';
+   const kickoff=Date.parse(date);
+   if(!Number.isFinite(kickoff)||kickoff<now-4*60*60*1000||kickoff>now+4*60*60*1000)continue;
+   const ht=home.team||{},at=away.team||{};
+   byId.set(String(event.id),{
+    id:String(event.id),date,time:date,
+    home:{name:ht.displayName||ht.shortDisplayName||'الفريق الأول',logo:ht.logo||'',score:home.score??null},
+    away:{name:at.displayName||at.shortDisplayName||'الفريق الثاني',logo:at.logo||'',score:away.score??null},
+    status:status.state||'pre',detail:status.shortDetail||status.detail||'',
+    venue:(comp.venue||{}).fullName||'',broadcast:(comp.broadcasts||[]).flatMap(item=>item.names||[]).join(', '),
+    status_detail:status.detail||'',status_short:status.shortDetail||'',
+    period:(comp.status||{}).period??null,clock:(comp.status||{}).displayClock||''
+   });
+  }
+  league.matches=Array.from(byId.values()).sort((a,b)=>Date.parse(a.date||a.time||0)-Date.parse(b.date||b.time||0));
+  league.updated_at=new Date().toISOString();league.stale=false;
+ }));
+ notifySloomScoreChanges(previous,sportsData);
+ render();tickSloomClocks();
+}
+
 document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,30000);
+setInterval(()=>refreshLiveScores().catch(e=>console.warn('[SLOOM365 live scores]',e)),30000);
 
 function clockAngles(date,zone){
  const parts=new Intl.DateTimeFormat('en-GB',{timeZone:zone,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(date);
