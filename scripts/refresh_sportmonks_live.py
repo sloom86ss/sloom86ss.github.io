@@ -18,12 +18,12 @@ UTC = dt.timezone.utc
 
 
 def clean(value):
-    return re.sub(r"\\s+", " ", str(value or "")).strip()
+    return re.sub(r"\s+", " ", str(value or "")).strip()
 
 
 def norm(value):
     value = clean(value).casefold()
-    return re.sub(r"[^\\w]", "", value, flags=re.UNICODE)
+    return re.sub(r"[^\w]", "", value, flags=re.UNICODE)
 
 
 def fetch_live(token):
@@ -154,7 +154,7 @@ def main():
     dataset["live_provider"] = "Sportmonks (live scores) + ESPN (fixtures and fallback)"
     dataset["live_updated_at"] = now
     if updated:
-        DATA_FILE.write_text(json.dumps(dataset, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        DATA_FILE.write_text(json.dumps(dataset, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Sportmonks returned {len(live_fixtures)} livescore fixtures; updated {updated} existing site fixtures; unmatched {unmatched}; without current score {without_score}.")
     if live_fixtures and updated == 0:
         print("No existing site fixture matched. ESPN data was preserved; team-name mapping may be needed.")
