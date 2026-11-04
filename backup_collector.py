@@ -142,22 +142,23 @@ def main():
         age = league_age_minutes(league)
         if league.get("stale") or age is None or age > MAX_STALE_MINUTES:
             stale.append(key)
-    if not stale:
-        print("Backup idle: all ESPN league feeds are fresh.")
-        return
-
-    print("Backup checking stale leagues:", ", ".join(stale))
     try:
         available = get_json(API + "/getavailableleagues")
     except Exception as exc:
         print("OpenLigaDB discovery unavailable:", str(exc)[:180])
         data["backup_source_status"] = {"provider": "OpenLigaDB", "checked_at": iso(now()), "status": "unavailable", "error": str(exc)[:180]}
-        DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
         return
 
     if not isinstance(available, list):
         print("OpenLigaDB returned an unexpected league catalogue.")
         return
+
+    if not stale:
+        print(f"Backup online: OpenLigaDB reachable; catalogue contains {len(available)} league-season entries. No fallback needed.")
+        return
+
+    print("Backup checking stale leagues:", ", ".join(stale))
 
     lookup = {}
     for entry in available:
