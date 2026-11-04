@@ -20,11 +20,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
-          fetch-depth: 1
+          fetch-depth: 0
+
+      # Ensure Git trusts the checked-out workspace for the scanner process.
+      - name: Trust GitHub Actions workspace
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
       - name: Scan repository for secrets
-        uses: gitleaks/gitleaks-action@v2
+        uses: gitleaks/gitleaks-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -33,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
