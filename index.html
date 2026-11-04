@@ -1796,13 +1796,7 @@ a{accent-color:#b77aff}
 
 <header class="sloom-header-top">
  <div class="sloom-brand-stack"><div class="brand"><img class="sloom-logo-animated" src="assets/sloom360-logo.svg" alt="سلوم كورة 365 | SLOOM KORA 365" style="width:40px;height:40px;max-width:12vw;object-fit:contain;flex:none"><div><h1>سلوم كورة 365</h1><small>SLOOM FOOTBALL365</small></div></div>
- <div class="install-app-slot" aria-label="إعدادات التطبيق">
-  <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM FOOTBALL365" aria-describedby="installAppHelp">📲 تثبيت التطبيق</button>
-  <button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار" aria-describedby="notificationHelp">🔔 الإشعارات</button>
-  <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
-  <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
  </div>
-  <span id="sloomWeatherStatus" hidden>غير مفعّل</span>
  
  <nav class="sloom-bottom-nav sloom-header-nav" aria-label="التنقل الرئيسي">
   <a href="#matches" class="active"><span>⚽</span>المباريات</a>
@@ -1814,7 +1808,6 @@ a{accent-color:#b77aff}
 </header>
 
 
-<div id="sloomWeatherData" hidden aria-hidden="true"><span id="sloomWeatherIcon">🌤️</span><span id="sloomWeatherTemp">--°</span><span id="sloomWeatherPlace">السيب، عُمان</span><span id="sloomWeatherDesc">جارٍ تحميل حالة الطقس…</span></div>
 <section id="newsTicker" class="ticker" aria-label="شريط أخبار كرة القدم">
  <span class="ticker-label">⚽ أخبار كرة القدم</span>
  <div class="ticker-window"><div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل آخر الأخبار الرياضية…</span></div></div>
@@ -1885,6 +1878,17 @@ a{accent-color:#b77aff}
 </section>
 <div class="section-head"><h3>🏟️ دليل الأندية</h3><small id="teamCount">من البطولات المدعومة</small></div><input class="team-search" id="teamSearch" placeholder="ابحث عن نادٍ..." autocomplete="off"><div class="teams-directory" id="teamsDirectory"><div class="empty">جارٍ تحميل الأندية…</div></div><section class="club-modal" id="clubModal" role="dialog" aria-modal="true" aria-labelledby="clubModalTitle"><div class="club-dialog"><div id="clubModalBody" class="club-loading">جارٍ تحميل معلومات النادي…</div></div></section>
 <div class="section-head news-section-head"><h3>📰 آخر الأخبار</h3><small class="news-source-note">أخبار من مصادر موثوقة</small>
+ <div class="install-app-slot" aria-label="إعدادات التطبيق والطقس">
+  <button id="installApp" type="button" class="install-app-button" aria-label="تثبيت تطبيق SLOOM365" aria-describedby="installAppHelp">📲 تثبيت التطبيق</button>
+  <button id="enableNotifications" type="button" class="install-app-button notification-app-button" aria-label="تفعيل إشعارات الأهداف والأخبار" aria-describedby="notificationHelp">🔔 الإشعارات</button>
+  <button id="sloomWeatherGPS" type="button" class="sloom-gps-toggle" aria-label="تحديد موقعي وجلب الطقس" aria-describedby="sloomWeatherStatus" aria-pressed="false">
+   <span class="gps-icon" aria-hidden="true">📍</span><span class="gps-copy"><b>موقعي</b><small>تحديد الطقس</small></span>
+  </button>
+  <div id="sloomWeatherData" class="sloom-weather-inline" aria-live="polite"><span id="sloomWeatherIcon">🌤️</span><span id="sloomWeatherTemp">--°</span><span id="sloomWeatherPlace">السيب، عُمان</span><span id="sloomWeatherDesc">جارٍ تحميل حالة الطقس…</span></div>
+  <span id="sloomWeatherStatus" class="sloom-weather-status" role="status" aria-live="polite">الطقس الافتراضي: السيب</span>
+  <p id="installAppHelp" class="install-app-help" role="status" aria-live="polite"></p>
+  <p id="notificationHelp" class="install-app-help" role="status" aria-live="polite"></p>
+ </div>
 </div><div class="news" id="news"><div class="empty">جارٍ تحميل الأخبار…</div></div>
 
 <footer>© <span id="year"></span> SLOOM FOOTBALL365 — منصة كرة القدم العربية<br>يتم تحديث النتائج تلقائياً عند توفر بيانات المصدر.<div class="broadcast-disclaimer">سياسة حقوق البث: لا يستضيف SLOOM365 أي بث مباشر ولا يعيد رفع أو تضمين أو إعادة توزيع مباريات أو مقاطع محمية. قد نعرض أسماء القنوات الناقلة بوصفها معلومات رياضية تعريفية وفق البيانات المتاحة من مصادر المباريات، ولا يعني ذكر اسم القناة أننا نملك حقوق بثها أو نمثلها. لا يستضيف SLOOM365 بثاً مباشراً ولا يعيد رفع أو تضمين أو إعادة توزيع المباريات أو المقاطع المحمية. روابط المشاهدة — إن توفرت — تقتصر على المواقع الرسمية للناقلين أو أصحاب الحقوق بعد التحقق منها؛ ولا ننشر روابط بث غير رسمية. قد تختلف القنوات حسب الدولة وحقوق النقل، لذا يُرجى الرجوع إلى الناقل للتأكد من جدول البث.</div></footer>
@@ -2643,3 +2647,24 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 #sloom-video-screen .sloom-video-heading,#sloom-video-screen .sloom-video-rights,#sloom-video-screen .sloom-auto-caption,#sloom-video-screen .sloom-video-tabs,#sloom-video-screen .sloom-video-foot{display:none!important}
 </style>
 
+<style id="sloom365-location-actions-fix">
+/* Keep the logo as a flex item while the install, notification and GPS actions live beside Latest News. */
+.sloom-brand-stack{display:contents!important}
+.news-section-head{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:9px!important;flex-wrap:wrap!important;width:100%!important}
+.news-section-head>.install-app-slot{display:flex!important;visibility:visible!important;opacity:1!important;position:static!important;inset:auto!important;transform:none!important;z-index:30!important;flex:1 1 100%!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;gap:8px!important;width:100%!important;max-width:100%!important;margin:5px 0 0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.news-section-head>.install-app-slot>.install-app-button{display:inline-flex!important;visibility:visible!important;opacity:1!important;position:static!important;flex:0 1 auto!important;align-items:center!important;justify-content:center!important;min-height:40px!important;padding:8px 12px!important;border-radius:10px!important;font:900 11px Cairo,Arial,sans-serif!important;white-space:nowrap!important;cursor:pointer!important}
+.news-section-head>.install-app-slot #installApp{background:#b7f34a!important;color:#10170b!important;border:1px solid #e2ffad!important}
+.news-section-head>.install-app-slot #enableNotifications{background:#203a2a!important;color:#eaffd6!important;border:1px solid #8ab56a!important}
+.news-section-head>.install-app-slot .sloom-gps-toggle{display:inline-flex!important;visibility:visible!important;opacity:1!important;position:static!important;flex:0 1 auto!important;min-height:40px!important;padding:5px 10px!important;border:1px solid #5b8f45!important;border-radius:10px!important;background:linear-gradient(145deg,#1b3a27,#102018)!important;color:#efffe9!important;font:800 11px Cairo,Arial,sans-serif!important;cursor:pointer!important;touch-action:manipulation!important}
+.sloom-weather-inline{display:flex!important;visibility:visible!important;align-items:center!important;flex:1 1 100%!important;flex-wrap:wrap!important;gap:6px!important;min-width:0!important;color:#dce9dd!important;font:600 10px Cairo,Arial,sans-serif!important;line-height:1.7!important}
+#sloomWeatherTemp{color:#eaffc8!important;font-size:14px!important;font-weight:900!important}
+#sloomWeatherPlace{color:#d8ff8b!important;font-weight:900!important}
+#sloomWeatherDesc{color:#aab9ac!important}
+.sloom-weather-status{display:block!important;flex:1 1 100%!important;min-height:1em!important;color:#aab9ac!important;font:600 9px Cairo,Arial,sans-serif!important}
+.news-section-head .install-app-help{display:block!important;flex:1 1 100%!important;margin:0!important;padding:0!important;color:#c5d4c7!important;font-size:10px!important}
+@media(max-width:520px){
+ .news-section-head>.install-app-slot{gap:6px!important}
+ .news-section-head>.install-app-slot>.install-app-button,.news-section-head>.install-app-slot .sloom-gps-toggle{flex:1 1 calc(33.333% - 6px)!important;min-width:0!important;min-height:38px!important;padding:6px 5px!important;font-size:10px!important}
+ .sloom-weather-inline{font-size:10px!important}
+}
+</style>
