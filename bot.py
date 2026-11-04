@@ -70,67 +70,79 @@ def parse_published(value):
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
     return dt.astimezone(timezone.utc)
+def fetch_one_rss(source, url):
+    """Fetch and validate one publisher feed; safe to run concurrently."""
+    items = []
+    try:
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "Mozilla/5.0 (compatible; SLOOM-TV/2.0; RSS reader)",
+            "Accept": "application/rss+xml, application/xml, text/xml"
+        })
+        with urllib.request.urlopen(req, timeout=15) as response:
+            root = ET.fromstring(response.read())
+        nodes = root.findall(".//item")
+        if not nodes:
+            nodes = root.findall(".//{*}entry")
+        for node in nodes[:18]:
+            def val(name):
+                found = node.find(name)
+                if found is None:
+                    found = node.find("{*}" + name)
+                return (found.text or "").strip() if found is not None else ""
+            title = val("title")
+            link = val("link")
+            if not link:
+                link_node = node.find("{*}link")
+                if link_node is not None:
+                    link = link_node.attrib.get("href", "")
+            description = val("description") or val("summary")
+            description = re.sub(r"<[^>]+>", " ", description)
+            description = re.sub(r"\\s+", " ", description).strip()
+            published = val("pubDate") or val("published") or val("updated")
+            published_dt = parse_published(published)
+            age = (datetime.now(timezone.utc) - published_dt).total_seconds() if published_dt else None
+            allowed_hosts = {
+                "BBC Sport": ("bbc.co.uk", "bbc.com"),
+                "Sky Sports": ("skysports.com",),
+                "The Guardian": ("theguardian.com",),
+                "Google News": ("news.google.com",)
+            }
+            host = (urlparse(link).hostname or "").lower()
+            valid_link = any(host == domain or host.endswith("." + domain) for domain in allowed_hosts[source])
+            if title and link.startswith("https://") and valid_link and published_dt and 0 <= age <= 7 * 86400:
+                publisher = val("source") if source == "Google News" else ""
+                display_source = (publisher + " عبر Google News") if publisher else source
+                items.append({
+                    "headline": title,
+                    "description": description[:500],
+                    "link": link,
+                    "published": published_dt.isoformat(timespec="seconds").replace("+00:00", "Z"),
+                    "fetched_at": NOW(),
+                    "source": display_source,
+                    "discovery_source": source,
+                    "category": "transfers" if re.search(r"transfer|signs|signing|deal|loan|gossip|انتقال|صفقة|ضم|تعاقد", title, re.I) else "news"
+                })
+        return items, None
+    except Exception as exc:
+        return [], source + ": " + str(exc)[:120]
+
+
 def fetch_rss_news():
-    """Collect attributed headlines from independent publisher RSS feeds."""
+    """Collect independent publisher RSS feeds concurrently to avoid blocking scores."""
     items, errors = [], []
-    for source, url in RSS_FEEDS:
-        try:
-            req = urllib.request.Request(url, headers={
-                "User-Agent": "Mozilla/5.0 (compatible; SLOOM-TV/2.0; RSS reader)",
-                "Accept": "application/rss+xml, application/xml, text/xml"
-            })
-            with urllib.request.urlopen(req, timeout=15) as response:
-                root = ET.fromstring(response.read())
-            nodes = root.findall(".//item")
-            if not nodes:
-                nodes = root.findall(".//{*}entry")
-            for node in nodes[:18]:
-                def val(name):
-                    found = node.find(name)
-                    if found is None:
-                        found = node.find("{*}" + name)
-                    return (found.text or "").strip() if found is not None else ""
-                title = val("title")
-                link = val("link")
-                if not link:
-                    link_node = node.find("{*}link")
-                    if link_node is not None:
-                        link = link_node.attrib.get("href", "")
-                description = val("description") or val("summary")
-                description = re.sub(r"<[^>]+>", " ", description)
-                description = re.sub(r"\s+", " ", description).strip()
-                published = val("pubDate") or val("published") or val("updated")
-                published_dt = parse_published(published)
-                age = (datetime.now(timezone.utc) - published_dt).total_seconds() if published_dt else None
-                allowed_hosts = {
-                    "BBC Sport": ("bbc.co.uk", "bbc.com"),
-                    "Sky Sports": ("skysports.com",),
-                    "The Guardian": ("theguardian.com",),
-                    "Google News": ("news.google.com",)
-                }
-                host = (urlparse(link).hostname or '').lower()
-                valid_link = any(host == domain or host.endswith('.' + domain) for domain in allowed_hosts[source])
-                if title and link.startswith('https://') and valid_link and published_dt and 0 <= age <= 7 * 86400:
-                    publisher = val("source") if source == "Google News" else ""
-                    display_source = (publisher + " عبر Google News") if publisher else source
-                    items.append({
-                        "headline": title,
-                        "description": description[:500],
-                        "link": link,
-                        "published": published_dt.isoformat(timespec="seconds").replace("+00:00", "Z"),
-                        "fetched_at": NOW(),
-                        "source": display_source,
-                        "discovery_source": source,
-                        "category": "transfers" if re.search(r"transfer|signs|signing|deal|loan|gossip|انتقال|صفقة|ضم|تعاقد", title, re.I) else "news"
-                    })
-        except Exception as exc:
-            errors.append(source + ": " + str(exc)[:120])
-    # Never reuse old RSS headlines when a publisher feed fails.
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures = [pool.submit(fetch_one_rss, source, url) for source, url in RSS_FEEDS]
+        for future in as_completed(futures):
+            try:
+                feed_items, error = future.result()
+                items.extend(feed_items)
+                if error:
+                    errors.append(error)
+            except Exception as exc:
+                errors.append("RSS worker: " + str(exc)[:120])
     unique = {}
     for item in items:
         unique[item["link"]] = item
-    # Sort all publishers together before applying the cap, so early feeds
-    # cannot crowd Google News and later sources out of the published list.
     return sorted(unique.values(), key=lambda item: item["published"], reverse=True)[:100], errors
 
 def get_json(url, attempts=3):
@@ -201,14 +213,15 @@ def fetch_feed(item):
               "teams": [], "standings": [], "updated_at": None, "stale": False}
     errors = []
     try:
-        # Fetch three local calendar days (yesterday, today, tomorrow) in Oman time.
+        # Fetch the same three Oman-local calendar days in one ESPN range request.
         local_today = datetime.now(ZoneInfo("Asia/Muscat")).date()
-        events_by_id = {}
-        for offset in (-1, 0, 1):
-            day = (local_today + timedelta(days=offset)).strftime("%Y%m%d")
-            payload = get_json(f"{BASE}/{key}/scoreboard?dates={day}")
-            for event in payload.get("events", []):
-                events_by_id[str(event.get("id", ""))] = event
+        first_day = (local_today - timedelta(days=1)).strftime("%Y%m%d")
+        last_day = (local_today + timedelta(days=1)).strftime("%Y%m%d")
+        payload = get_json(f"{BASE}/{key}/scoreboard?dates={first_day}-{last_day}")
+        events_by_id = {
+            str(event.get("id", "")): event
+            for event in payload.get("events", [])
+        }
         for event in events_by_id.values():
             comp = (event.get("competitions") or [{}])[0]
             competitors = comp.get("competitors", [])
