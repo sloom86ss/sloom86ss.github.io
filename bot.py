@@ -236,13 +236,19 @@ def fetch_feed(item):
             away = next((x for x in competitors if x.get("homeAway") == "away"), {})
             status = (comp.get("status") or {}).get("type", {})
             ht, at = home.get("team") or {}, away.get("team") or {}
+            home_name = ht.get("displayName") or ht.get("shortDisplayName")
+            away_name = at.get("displayName") or at.get("shortDisplayName")
+            if (not event.get("id") or not home_name or not away_name
+                    or status.get("state") not in {"pre", "in", "post"}):
+                errors.append("scoreboard: skipped an event with incomplete identity or invalid status")
+                continue
             result["matches"].append({
                 "id": str(event.get("id", "")),
                 "date": event.get("date", ""),
                 "time": event.get("date", ""),
-                "home": {"name": ht.get("displayName", ht.get("shortDisplayName", "الفريق الأول")),
+                "home": {"name": home_name,
                          "logo": ht.get("logo", ""), "score": home.get("score")},
-                "away": {"name": at.get("displayName", at.get("shortDisplayName", "الفريق الثاني")),
+                "away": {"name": away_name,
                          "logo": at.get("logo", ""), "score": away.get("score")},
                 "status": status.get("state", "pre"),
                 "detail": status.get("shortDetail") or status.get("detail", ""),
@@ -253,9 +259,18 @@ def fetch_feed(item):
                 "period": (comp.get("status") or {}).get("period"),
                 "clock": (comp.get("status") or {}).get("displayClock", "")
             })
-        if successful_days:
+        if successful_days == 3:
             result["updated_at"] = NOW()
-            result["stale"] = successful_days < 3
+            result["stale"] = False
+        else:
+            # Never label a partial three-day scoreboard fetch as fresh.
+            # main() will retain the previous matches and mark this league stale.
+            result["matches"] = []
+            result["updated_at"] = None
+            result["stale"] = True
+            errors.append(
+                f"scoreboard incomplete: {successful_days}/3 date requests succeeded"
+            )
     except Exception as exc:
         errors.append("scoreboard: " + str(exc)[:140])
     try:
