@@ -410,7 +410,7 @@ def main():
                     data["updated_at"] = old.get("updated_at")
                     data["stale"] = True
                 output["leagues"][key] = data
-                print(f"{key}: matches={len(data['matches'])}, teams={len(data['teams'])}, stale={data['stale']}, errors={len(data['errors'])}")
+                print(f"{key}: matches={len(data['matches'])}, teams={len(data['teams'])}, stale={data['stale']}, errors={'; '.join(str(e) for e in data['errors']) or 'none'}")
             except Exception as exc:
                 print("Feed task failed:", str(exc)[:200])
     if success == 0:
