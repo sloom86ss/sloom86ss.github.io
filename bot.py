@@ -256,6 +256,8 @@ def fetch_feed(item):
         if successful_days:
             result["updated_at"] = NOW()
             result["stale"] = successful_days < 3
+    except Exception as exc:
+        errors.append("scoreboard: " + str(exc)[:140])
     try:
         payload = get_json(f"{BASE}/{key}/news")
         for article in payload.get("articles", [])[:20]:
