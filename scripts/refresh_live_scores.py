@@ -149,7 +149,16 @@ def main():
     if not refreshed:
         raise SystemExit("All ESPN scoreboard requests failed; data.json was not changed.")
 
-    dataset["leagues"] = {key: refreshed.get(key, value) for key, value in leagues.items()}
+    final_leagues = {}
+    for key, value in leagues.items():
+        if key in refreshed:
+            final_leagues[key] = refreshed[key]
+        else:
+            preserved = dict(value)
+            preserved["stale"] = True
+            preserved["live_refresh_error"] = next((entry for entry in errors if entry.startswith(key + ":")), "ESPN refresh failed")
+            final_leagues[key] = preserved
+    dataset["leagues"] = final_leagues
     dataset["generated_at"] = NOW_ISO
     dataset["live_updated_at"] = NOW_ISO
     dataset["live_provider"] = "ESPN public scoreboard API"
