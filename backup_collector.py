@@ -98,11 +98,12 @@ def convert_match(source, league_name, old_matches):
     age = (now() - kickoff).total_seconds()
     if finished:
         status, detail = "post", "انتهت • المصدر الاحتياطي"
-    elif -900 <= age <= 3 * 3600:
-        status, detail = "in", "مباشر • المصدر الاحتياطي (دون دقيقة مؤكدة)"
-    elif age < -900:
+    elif age < 0:
+        # A kickoff time alone cannot prove that a match has actually started.
         status, detail = "pre", "لم تبدأ"
     else:
+        # Do not fabricate a live state or minute when the backup provider
+        # does not supply a verified in-play status.
         return None
 
     # Do not replace a known ESPN match or its score/clock with community data.
