@@ -42,6 +42,43 @@ header b{color:#d4aaff}
 .ai-empty{color:#b6a8c5;text-align:center;padding:20px 10px;font-size:13px;line-height:1.9}
 .ai-updated{font-size:10px;color:#9e8caf;margin-top:12px;text-align:center}
 @media(max-width:520px){.ai-grid{grid-template-columns:1fr}.screen-head h2{font-size:16px}.ai-screen{padding-inline:10px}.chat{height:230px}}
+
+/* Real working version of the approved SLOOM AI visual concept */
+body{position:relative;isolation:isolate;overflow-x:hidden;background:radial-gradient(ellipse at 50% 18%,#35105c 0,transparent 42%),linear-gradient(180deg,#090510 0%,#10091a 48%,#08050d 100%)}
+body:before{content:"";position:fixed;z-index:-1;inset:0;pointer-events:none;opacity:.28;background:linear-gradient(180deg,transparent 45%,#08050d 100%),repeating-linear-gradient(90deg,transparent 0 12%,#a855f7 12.1% 12.2%,transparent 12.3% 24%),radial-gradient(ellipse at 50% 100%,#54217a 0,transparent 48%)}
+header{position:relative;justify-content:center;min-height:86px;padding:10px 16px;background:linear-gradient(100deg,#10091a,#241039 50%,#10091a);border-bottom:1px solid #7541a1;box-shadow:0 5px 28px #8b35d455}
+header>div:first-child{gap:12px!important}
+header img{filter:drop-shadow(0 0 12px #a855f7);width:58px!important;height:58px!important}
+header b{font-size:20px;letter-spacing:.2px;text-shadow:0 0 14px #a855f7}
+header .top-actions{position:absolute;left:14px}
+header a{border:1px solid #704298;border-radius:20px;padding:7px 12px;background:#1b1029;color:#ead8ff}
+.notice{max-width:980px;margin:10px auto 0;text-align:center;color:#c7b3d9}
+.ai-welcome{width:min(980px,100%);margin:16px auto 4px;padding:0 14px;display:grid;grid-template-columns:minmax(110px,190px) 1fr;gap:14px;align-items:center}
+.ai-robot{height:170px;display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 10px 22px #9c43ff66)}
+.ai-robot svg{width:100%;height:100%;max-width:180px}
+.ai-welcome-card{position:relative;border:1px solid #9c55d4;border-radius:24px;background:linear-gradient(125deg,#351451,#170d22 70%);padding:17px 20px;box-shadow:0 0 24px #8b35d444,inset 0 0 24px #9b4bd51c}
+.ai-welcome-card:before{content:"";position:absolute;right:-10px;bottom:28px;width:18px;height:18px;background:#28113e;border-right:1px solid #9c55d4;border-bottom:1px solid #9c55d4;transform:rotate(-45deg)}
+.ai-welcome-card strong{display:block;color:#f1d9ff;font-size:17px;margin-bottom:7px}
+.ai-welcome-card p{margin:0;color:#fff;font-size:14px;line-height:1.9}
+.chat{width:min(980px,100%);height:clamp(170px,25vh,260px);border:1px solid #563775;border-radius:18px;background:linear-gradient(180deg,#100a18eF,#0b0712f5);box-shadow:0 10px 30px #0008;margin:12px auto 0}
+.m.u{background:linear-gradient(110deg,#8b42c8,#57218b);border:1px solid #bd83ff;box-shadow:0 4px 15px #8b35d433}
+.m.b{background:linear-gradient(110deg,#21142f,#171020);border:1px solid #52366c}
+.input{width:min(980px,100%);border:1px solid #563775;border-radius:0 0 18px 18px;background:#100b17;box-shadow:0 10px 24px #0006}
+.input input{background:#21162d;border:1px solid #69418a}
+.input button{box-shadow:0 0 15px #a855f7}
+.hint{width:min(980px,100%);margin:auto;border-radius:0 0 14px 14px}
+.ai-screen{margin-top:22px}
+.screen-head{padding:12px 16px;border:1px solid #7541a1;border-radius:17px;background:linear-gradient(100deg,#42166b,#180d26 55%,#42166b);box-shadow:0 5px 22px #8b35d433}
+.screen-head h2{font-size:20px;text-shadow:0 0 12px #b46cff}
+.live-pill{background:#251536;border-color:#9b5cc8}
+.ai-feature{border-radius:20px;background:linear-gradient(135deg,#2c1243,#100a18 70%);border-color:#7541a1;box-shadow:0 10px 30px #0007,inset 0 0 28px #8b35d41c}
+.ai-grid{gap:12px}
+.ai-card{border-radius:17px;background:linear-gradient(145deg,#1a1025,#0d0913);border-color:#583779;box-shadow:0 8px 22px #0006}
+.ai-card h3{color:#e2c4ff}
+.ai-stat{border-color:#39264b}
+.ai-updated{color:#b6a8c5}
+@media(max-width:600px){header{justify-content:flex-start;padding:9px 12px;min-height:72px}header b{font-size:17px}header img{width:48px!important;height:48px!important}header .top-actions{position:static;margin-right:auto}.ai-welcome{grid-template-columns:92px 1fr;gap:8px;padding-inline:10px}.ai-robot{height:125px}.ai-welcome-card{padding:12px;border-radius:18px}.ai-welcome-card strong{font-size:14px}.ai-welcome-card p{font-size:12px}.chat{width:calc(100% - 20px);height:220px}.input,.hint{width:calc(100% - 20px)}.screen-head h2{font-size:16px}}
+
 </style><meta name="description" content="محلل سلوم AI من سلوم كورة 365 لتحليل بيانات المباريات والنتائج والترتيب والأندية والأخبار باللغة العربية.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://sloom86ss.github.io/ai.html">
@@ -60,6 +97,24 @@ header b{color:#d4aaff}
 <body>
 <header><div style="display:flex;align-items:center;gap:9px"><img src="assets/sloom360-logo.svg" alt="شعار SLOOM 365" style="width:48px;height:48px;object-fit:contain"><b>🤖 محلل سلوم AI</b></div><div class="top-actions"><a href="index.html">العودة إلى SLOOM 365 ←</a></div></header>
 <div class="notice">مساعد كرة قدم عربي يجيب من بيانات SLOOM 365 المنشورة فقط. لا يخمّن النتائج أو التشكيلات، ويخبرك عندما تكون البيانات قديمة أو غير متاحة.</div>
+<section class="ai-welcome" aria-label="ترحيب محلل سلوم AI">
+ <div class="ai-robot" aria-hidden="true">
+  <svg viewBox="0 0 180 190" role="img">
+   <defs><linearGradient id="botmetal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".48" stop-color="#aeb4c7"/><stop offset="1" stop-color="#55536c"/></linearGradient><linearGradient id="botpurple" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c78aff"/><stop offset="1" stop-color="#542080"/></linearGradient></defs>
+   <path d="M42 69Q22 45 36 29Q50 17 59 42M138 69Q158 45 144 29Q130 17 121 42" fill="none" stroke="#aeb4c7" stroke-width="12" stroke-linecap="round"/>
+   <rect x="30" y="25" width="120" height="103" rx="42" fill="url(#botmetal)" stroke="#f5eaff" stroke-width="3"/>
+   <rect x="43" y="43" width="94" height="66" rx="28" fill="#100b20" stroke="#7541a1" stroke-width="3"/>
+   <ellipse cx="68" cy="74" rx="8" ry="13" fill="#18d9ff"/><ellipse cx="112" cy="74" rx="8" ry="13" fill="#18d9ff"/>
+   <path d="M73 91Q90 104 107 91" fill="none" stroke="#8dceff" stroke-width="3" stroke-linecap="round"/>
+   <path d="M90 24V12" stroke="#c78aff" stroke-width="5" stroke-linecap="round"/><circle cx="90" cy="9" r="7" fill="#d7a8ff"/>
+   <path d="M45 124Q90 108 135 124L151 181H29Z" fill="url(#botmetal)" stroke="#f5eaff" stroke-width="3"/>
+   <rect x="57" y="137" width="66" height="30" rx="9" fill="#21132f" stroke="#a66bd5" stroke-width="2"/>
+   <text x="90" y="157" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">SLOOM AI</text>
+   <circle cx="24" cy="93" r="10" fill="url(#botpurple)" stroke="#e6caff" stroke-width="2"/><circle cx="156" cy="93" r="10" fill="url(#botpurple)" stroke="#e6caff" stroke-width="2"/>
+  </svg>
+ </div>
+ <div class="ai-welcome-card"><strong>👑 مرحباً بك في محلل سلوم AI</strong><p>اسألني عن أي مباراة أو فريق أو بطولة، وسأعرض لك المعلومات والتحليل المتاحين من بيانات الموقع، مع توضيح ما هو مؤكد وما يحتاج إلى بيانات إضافية.</p></div>
+</section>
 <div class="chat" id="chat"><div class="m b">أهلاً بك! أنا محلل سلوم AI 🤖 أستطيع فهم أسئلتك بالعربية وشرح بيانات المباريات والنتائج والترتيب والأخبار المتاحة. سأوضح لك عندما لا تتوفر المعلومة بدلاً من تخمينها.</div></div>
 <div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو بطولة…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
 <div class="hint">المساعد يحاول استخدام Gemini عبر خادم آمن عند توفره؛ وإذا لم تتوفر الخدمة يعمل بالبيانات المحلية. البيانات الرياضية: ESPN عند توفرها. الحصة المجانية محدودة وقد تتغير.</div>
