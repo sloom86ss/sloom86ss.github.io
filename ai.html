@@ -13,6 +13,35 @@ header{padding:12px 16px;background:#111915;border-bottom:1px solid #26352b;disp
 .top-actions{display:flex;gap:8px;align-items:center}.connect{border:0;border-radius:20px;background:#b7f34a;color:#10170b;padding:8px 12px;font:700 11px Cairo;cursor:pointer}.connect.connected{background:#243b27;color:#b7f34a;border:1px solid #45633c}
 .notice{max-width:780px;width:100%;margin:10px auto 0;padding:0 14px;color:#aebcaf;font-size:11px;line-height:1.7}.notice strong{color:#b7f34a}
 .chat{flex:1;overflow:auto;padding:18px;max-width:780px;margin:auto;width:100%}.m{padding:12px 16px;border-radius:17px;margin:0 0 12px;max-width:92%;line-height:1.9;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}.u{background:#b7f34a;color:#10170b;margin-right:auto}.b{background:#151f18;border:1px solid #293b2d;margin-left:auto}.input{display:flex;gap:9px;padding:12px;background:#111915;border-top:1px solid #26352b;max-width:780px;margin:auto;width:100%}.input input{min-width:0;flex:1;background:#202b23;border:1px solid #344638;border-radius:25px;padding:12px 17px;color:white;font:14px Cairo;outline:none}.input button{background:#b7f34a;border:0;border-radius:50%;width:47px;height:47px;font-size:18px;font-weight:900;cursor:pointer}.input button:disabled,.connect:disabled{opacity:.5}.hint{text-align:center;color:#829187;font-size:10px;padding:0 12px 9px;background:#111915}
+
+/* SLOOM AI continuous visual analysis screen */
+body{height:auto;min-height:100dvh;display:flex;flex-direction:column;background:radial-gradient(ellipse at 50% -10%,#32164d 0,transparent 55%),#08050d;color:#fbf7ff}
+header{background:#130d1d;border-color:#3c2754}
+header b{color:#d4aaff}
+.notice{color:#b6a8c5}
+.chat{flex:0 0 auto;height:clamp(180px,30vh,300px);overflow:auto;border-bottom:1px solid #3c2754;padding:16px 18px 8px}
+.m.u{background:#6d35a3;color:#fff}.m.b{background:#191025;border-color:#3c2754}
+.input{flex:0 0 auto;background:#100b17;border-color:#3c2754}
+.input input{background:#21162d;border-color:#52366c}
+.input button{background:#bd83ff;color:#170d22}
+.hint{background:#100b17;color:#a99bb8;padding:0 12px 12px}
+.ai-screen{width:min(980px,100%);margin:18px auto 30px;padding:0 14px 20px}
+.screen-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+.screen-head h2{font-size:19px;margin:0;color:#f7edff}
+.live-pill{font-size:11px;color:#e8d6ff;border:1px solid #71469a;background:#251536;border-radius:20px;padding:5px 10px}
+.ai-feature{background:linear-gradient(135deg,#28143d,#130d1d 65%);border:1px solid #563775;border-radius:18px;padding:16px;margin-bottom:12px;box-shadow:0 12px 32px #0005}
+.ai-feature small,.ai-muted{color:#b6a8c5}
+.ai-feature h3{margin:5px 0 7px;font-size:17px;color:#fff}
+.ai-feature p{margin:0;color:#e1d5ed;font-size:13px;line-height:1.9}
+.ai-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ai-card{min-width:0;background:#130d1d;border:1px solid #3c2754;border-radius:15px;padding:13px}
+.ai-card h3{margin:0 0 9px;font-size:13px;color:#d9baff}
+.ai-card p{font-size:12px;line-height:1.8;margin:5px 0;color:#e7deef}
+.ai-stat{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid #342342;padding:7px 0;font-size:12px}
+.ai-stat:last-child{border:0}
+.ai-empty{color:#b6a8c5;text-align:center;padding:20px 10px;font-size:13px;line-height:1.9}
+.ai-updated{font-size:10px;color:#9e8caf;margin-top:12px;text-align:center}
+@media(max-width:520px){.ai-grid{grid-template-columns:1fr}.screen-head h2{font-size:16px}.ai-screen{padding-inline:10px}.chat{height:230px}}
 </style><meta name="description" content="محلل سلوم AI من سلوم كورة 365 لتحليل بيانات المباريات والنتائج والترتيب والأندية والأخبار باللغة العربية.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://sloom86ss.github.io/ai.html">
@@ -34,6 +63,23 @@ header{padding:12px 16px;background:#111915;border-bottom:1px solid #26352b;disp
 <div class="chat" id="chat"><div class="m b">أهلاً بك! أنا محلل سلوم AI 🤖 أستطيع فهم أسئلتك بالعربية وشرح بيانات المباريات والنتائج والترتيب والأخبار المتاحة. سأوضح لك عندما لا تتوفر المعلومة بدلاً من تخمينها.</div></div>
 <div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو بطولة…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
 <div class="hint">المساعد يحاول استخدام Gemini عبر خادم آمن عند توفره؛ وإذا لم تتوفر الخدمة يعمل بالبيانات المحلية. البيانات الرياضية: ESPN عند توفرها. الحصة المجانية محدودة وقد تتغير.</div>
+
+<section class="ai-screen" aria-label="شاشة عرض وتحليل سلوم AI">
+ <div class="screen-head"><h2>🧠 شاشة التحليل الذكي</h2><span class="live-pill" id="aiScreenState">● متابعة البيانات</span></div>
+ <div class="ai-feature">
+  <small>قراءة سلوم AI للبيانات المتاحة</small>
+  <h3 id="aiMainTitle">مركز المتابعة الكروية</h3>
+  <p id="aiMainText">يتم تجهيز لوحة العرض من بيانات المباريات والأخبار المنشورة في الموقع. تتغير اللوحة عند وصول تحديثات جديدة.</p>
+ </div>
+ <div class="ai-grid">
+  <div class="ai-card"><h3>⚽ المباريات الجارية</h3><div id="aiLiveMatches" class="ai-empty">جارٍ فحص حالة المباريات…</div></div>
+  <div class="ai-card"><h3>📊 أبرز الأرقام</h3><div id="aiStats" class="ai-empty">ستظهر الأرقام المؤكدة عند توفرها في مصدر البيانات.</div></div>
+  <div class="ai-card"><h3>📰 ملخصات وأخبار</h3><div id="aiNews" class="ai-empty">ستظهر هنا أحدث الأخبار والملخصات المتاحة.</div></div>
+  <div class="ai-card"><h3>🔎 قراءة وتحليل</h3><div id="aiInsights" class="ai-empty">سيعرض هذا القسم قراءة مبنية على النتائج والحالات المسجلة، دون اختلاق إحصائيات غير متوفرة.</div></div>
+ </div>
+ <div class="ai-updated" id="aiUpdated">بانتظار تحميل البيانات</div>
+</section>
+
 <script>
 const chat=document.getElementById('chat'),field=document.getElementById('question'),send=document.getElementById('send');
 let sportsData=null;
@@ -109,6 +155,38 @@ async function go(){
  }catch(e){answer.textContent=e.message||'تعذر الاتصال حالياً.';}
  finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight;}
 }
+
+function renderAIScreen(){
+ const live=[],all=[],news=[];
+ for(const [id,l] of Object.entries(sportsData?.leagues||{})){
+  for(const m of (l.matches||[])){const x={...m,league:l.name||id};all.push(x);if(!l.stale&&/^(in|live|halftime|1h|2h|ht|مباشر)$/i.test(String(m.status||'')))live.push(x);}
+  for(const n of (l.news||[])){if(n&&n.headline)news.push({...n,league:l.name||id});}
+ }
+ const el=id=>document.getElementById(id);
+ const liveBox=el('aiLiveMatches'),stats=el('aiStats'),newsBox=el('aiNews'),ins=el('aiInsights');
+ if(live.length){
+  liveBox.innerHTML=live.slice(0,5).map(m=>'<div class="ai-stat"><span>'+clean(teamName(m.home?.name))+' '+clean(m.home?.score??'—')+' - '+clean(m.away?.score??'—')+' '+clean(teamName(m.away?.name))+'</span><b>مباشرة</b></div>').join('');
+  el('aiMainTitle').textContent='متابعة '+live.length+' مباراة جارية';
+  el('aiMainText').textContent='توجد مباريات مصنفة جارية في آخر ملف بيانات وصل للموقع. تتحدث هذه اللوحة عند تجدد البيانات؛ تفاصيل الأحداث والإحصائيات لا تظهر إلا إذا وفرها المصدر.';
+ }else{
+  liveBox.innerHTML='<div class="ai-empty">لا توجد مباراة مؤكدة الحالة المباشرة حالياً.<br>الشاشة تعرض الأخبار والملخصات المتاحة بدلاً منها.</div>';
+  el('aiMainTitle').textContent='لا توجد مباراة جارية الآن';
+  el('aiMainText').textContent='يتحول العرض تلقائياً إلى متابعة الأخبار والنتائج السابقة والمعلومات الكروية المتاحة حتى تبقى الشاشة مفيدة طوال اليوم.';
+ }
+ const completed=all.filter(m=>/^(post|final|ended|ft|انتهت)$/i.test(String(m.status||'')));
+ stats.innerHTML='<div class="ai-stat"><span>المباريات في البيانات</span><b>'+all.length+'</b></div><div class="ai-stat"><span>المباريات الجارية المؤكدة</span><b>'+live.length+'</b></div><div class="ai-stat"><span>المباريات المنتهية المسجلة</span><b>'+completed.length+'</b></div><div class="ai-stat"><span>البطولات المتاحة</span><b>'+Object.keys(sportsData?.leagues||{}).length+'</b></div>';
+ const sorted=news.filter(n=>n.headline).sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0)).slice(0,4);
+ newsBox.innerHTML=sorted.length?sorted.map(n=>'<div class="ai-stat"><span>'+clean(n.headline)+'</span><small>'+clean(n.league)+'</small></div>').join(''):'<div class="ai-empty">لا توجد أخبار حديثة متاحة في ملف البيانات حالياً.</div>';
+ ins.innerHTML=live.length?'<p>هناك '+live.length+' مباراة بحالة مباشرة في البيانات. راقب تغيّر النتيجة والحالة عند وصول التحديث التالي.</p><p>لا تتوفر هنا بعد إحصائيات تفصيلية كافية لاستخلاص تفوق تكتيكي موثوق.</p>':'<p>وضع الشاشة الحالي: ملخصات ومتابعة كروية خارج أوقات المباريات.</p><p>تعرض اللوحة فقط ما وصل من المصدر، ولا تنشئ ملخص فيديو أو توقعات من دون مادة موثوقة.</p>';
+ el('aiUpdated').textContent='آخر توليد للبيانات: '+(sportsData?.generated_at?fmtDate(sportsData.generated_at):'غير متوفر')+' — يعاد فحص الملف كل دقيقة';
+ el('aiScreenState').textContent=live.length?'● مباريات جارية في البيانات':'● وضع الملخصات';
+}
+async function refreshAIScreen(){
+ try{const r=await fetch('data.json?screen='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();sportsData=await r.json();renderAIScreen();}
+ catch(_){document.getElementById('aiScreenState').textContent='● تعذر تحديث البيانات';}
+}
+refreshAIScreen();setInterval(refreshAIScreen,60000);
+
 send.addEventListener('click',go);field.addEventListener('keydown',e=>{if(e.key==='Enter')go()});
 </script><script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(err=>console.warn("SLOOM 365 offline support unavailable",err)));}</script>
 </body></html>
