@@ -11,6 +11,7 @@ import time
 import urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent
 DATA_FILE = ROOT / "data.json"
@@ -42,13 +43,13 @@ def now():
 def iso(dt):
     return dt.astimezone(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
-def parse_dt(value):
+def parse_dt(value, naive_zone=None):
     if not value:
         return None
     try:
         parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
         if parsed.tzinfo is None:
-            parsed = parsed.replace(tzinfo=timezone.utc)
+            parsed = parsed.replace(tzinfo=ZoneInfo(naive_zone) if naive_zone else timezone.utc)
         return parsed.astimezone(timezone.utc)
     except Exception:
         return None
@@ -75,13 +76,12 @@ def extract_score(match):
     chosen = full[-1] if full else (results[-1] if results else None)
     if chosen:
         return chosen.get("pointsTeam1"), chosen.get("pointsTeam2")
-    goals = match.get("goals") or []
-    if goals:
-        return sum(1 for g in goals if str(g.get("goalGetterID", "")) and str(g.get("goalGetterID")) == str((match.get("team1") or {}).get("teamId", ""))), None
     return None, None
 
 def event_time(match):
-    return parse_dt(match.get("matchDateTimeUTC") or match.get("matchDateTime"))
+    if match.get("matchDateTimeUTC"):
+        return parse_dt(match.get("matchDateTimeUTC"))
+    return parse_dt(match.get("matchDateTime"), "Europe/Berlin")
 
 def convert_match(source, league_name, old_matches):
     team1 = source.get("team1") or {}
@@ -109,7 +109,7 @@ def convert_match(source, league_name, old_matches):
     for old in old_matches:
         old_home = norm((old.get("home") or {}).get("name"))
         old_away = norm((old.get("away") or {}).get("name"))
-        if old_home and old_away and old_home == norm(home) and old_away == norm(away):
+        if old_home and old_away and ((old_home == norm(home) and old_away == norm(away)) or (old_home == norm(away) and old_away == norm(home))):
             return None
 
     if home_score is None or away_score is None:
