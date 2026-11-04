@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Validate collector
-        run: python -m py_compile bot.py monitor.py repair.py smart_responder.py scripts/refresh_data.py
+        run: python -m py_compile bot.py backup_collector.py monitor.py repair.py smart_responder.py scripts/refresh_data.py
       - name: Validate SLOOM360 JavaScript
         run: |
           python - <<'PY'
@@ -54,11 +54,16 @@ jobs:
           assert "Sitemap: https://sloom86ss.github.io/sitemap.xml" in Path("robots.txt").read_text(encoding="utf-8")
           print("JSON, sitemap and robots checks passed")
           PY
-      - name: Run sports data collector
+      - name: Run primary ESPN sports data collector
+        id: primary_collector
+        continue-on-error: true
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ vars.NTFY_SERVER }}
         run: python -u bot.py
+      - name: Run independent keyless backup for stale leagues
+        if: always() && steps.primary_collector.outcome != 'skipped'
+        run: python -u backup_collector.py
       - name: Diagnose stale feeds and retry once when needed
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
