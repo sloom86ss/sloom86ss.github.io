@@ -259,12 +259,15 @@ def fetch_feed(item):
                 "period": (comp.get("status") or {}).get("period"),
                 "clock": (comp.get("status") or {}).get("displayClock", "")
             })
-        if successful_days == 3:
+        result["scoreboard_days_succeeded"] = successful_days
+        result["scoreboard_days_expected"] = 3
+        result["partial"] = successful_days < 3
+        if successful_days > 0:
+            # A failed adjacent-day request must not invalidate today's
+            # successful scoreboard. Keep the failure visible for monitoring.
             result["updated_at"] = NOW()
             result["stale"] = False
         else:
-            # Never label a partial three-day scoreboard fetch as fresh.
-            # main() will retain the previous matches and mark this league stale.
             result["matches"] = []
             result["updated_at"] = None
             result["stale"] = True
