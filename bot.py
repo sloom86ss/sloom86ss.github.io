@@ -213,15 +213,22 @@ def fetch_feed(item):
               "teams": [], "standings": [], "updated_at": None, "stale": False}
     errors = []
     try:
-        # Fetch the same three Oman-local calendar days in one ESPN range request.
+        # ESPN no longer accepts date ranges on the Site scoreboard endpoint.
+        # Fetch yesterday, today and tomorrow separately, then deduplicate by event ID.
         local_today = datetime.now(ZoneInfo("Asia/Muscat")).date()
-        first_day = (local_today - timedelta(days=1)).strftime("%Y%m%d")
-        last_day = (local_today + timedelta(days=1)).strftime("%Y%m%d")
-        payload = get_json(f"{BASE}/{key}/scoreboard?dates={first_day}-{last_day}")
-        events_by_id = {
-            str(event.get("id", "")): event
-            for event in payload.get("events", [])
-        }
+        events_by_id = {}
+        successful_days = 0
+        for offset in (-1, 0, 1):
+            day = (local_today + timedelta(days=offset)).strftime("%Y%m%d")
+            try:
+                payload = get_json(f"{BASE}/{key}/scoreboard?dates={day}")
+                successful_days += 1
+                for event in payload.get("events", []):
+                    event_id = str(event.get("id", ""))
+                    if event_id:
+                        events_by_id[event_id] = event
+            except Exception as exc:
+                errors.append(f"scoreboard[{day}]: " + str(exc)[:120])
         for event in events_by_id.values():
             comp = (event.get("competitions") or [{}])[0]
             competitors = comp.get("competitors", [])
@@ -246,9 +253,9 @@ def fetch_feed(item):
                 "period": (comp.get("status") or {}).get("period"),
                 "clock": (comp.get("status") or {}).get("displayClock", "")
             })
-        result["updated_at"] = NOW()
-    except Exception as exc:
-        errors.append("scoreboard: " + str(exc)[:140])
+        if successful_days:
+            result["updated_at"] = NOW()
+            result["stale"] = successful_days < 3
     try:
         payload = get_json(f"{BASE}/{key}/news")
         for article in payload.get("articles", [])[:20]:
