@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100d19">
+<title>سلوم كورة 365 | المساعد الذكي</title>
+<style>
+:root{color-scheme:dark;--bg:#0d0b13;--panel:#171321;--panel2:#211a30;--line:#342944;--text:#f5f0ff;--muted:#b8abc9;--accent:#b99aff;--gold:#d7bd82}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% -10%,#302044 0,transparent 38%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+header{height:68px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(16px,calc((100vw - 1060px)/2));background:#100d19ed;position:sticky;top:0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900}.logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(145deg,#c6a5ff,#5e3d92);display:grid;place-items:center;color:#160e21;font-size:21px}.status{font-size:11px;color:#c6b8d8;border:1px solid var(--line);border-radius:30px;padding:7px 10px}
+main{max-width:1060px;margin:auto;padding:38px 16px 65px}.hero{text-align:center;margin:8px auto 28px}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:1.5px}.hero h1{font-size:clamp(29px,5vw,45px);margin:9px 0;background:linear-gradient(90deg,#fff,#c8aaff);background-clip:text;color:transparent}.hero p{color:var(--muted);line-height:1.9;font-size:14px;max-width:680px;margin:auto}
+.layout{display:grid;grid-template-columns:245px 1fr;gap:16px}.side,.workspace{background:#15111f;border:1px solid var(--line);border-radius:19px;padding:17px}.side h2,.workspace h2{font-size:16px;margin:2px 0 13px}.nav{display:grid;gap:7px}.nav a{display:block;text-decoration:none;color:var(--muted);padding:11px;border:1px solid transparent;border-radius:11px;font-size:13px}.nav a:hover,.nav a.active{background:var(--panel2);border-color:var(--line);color:var(--text)}.note{margin-top:17px;padding:12px;border-radius:12px;background:#211a2d;color:var(--muted);font-size:11px;line-height:1.8}
+.sub{color:var(--muted);font-size:12px;margin:-7px 0 15px}.modes{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:13px}.modes button,.quick button{border:1px solid var(--line);background:#171321;color:var(--muted);padding:9px 13px;border-radius:25px;cursor:pointer;font:inherit;font-size:12px}.modes button.active{background:#35264b;color:white;border-color:#8b6bb7}
+textarea{width:100%;min-height:150px;resize:vertical;border:1px solid var(--line);background:#0f0c16;color:var(--text);border-radius:14px;padding:14px;font:inherit;line-height:1.8;outline:none}textarea:focus{border-color:var(--accent)}
+.quick{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}.quick button{border-radius:10px;padding:8px 10px}.actions{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.hint{font-size:11px;color:#988ba8}.primary{border:0;background:linear-gradient(110deg,#b99aff,#8060b4);color:#160e21;font-weight:900;padding:11px 18px;border-radius:11px;cursor:pointer}
+.notice{margin-top:17px;border:1px solid #79613b;background:#241d12;color:#ead9ae;border-radius:12px;padding:12px;font-size:12px;line-height:1.8}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.card{border:1px solid var(--line);background:var(--panel);border-radius:13px;padding:13px}.card b{display:block;font-size:12px;margin:7px 0 4px}.card span{font-size:11px;color:var(--muted);line-height:1.7}.back{display:inline-block;margin-top:22px;color:#cdb5ff;text-decoration:none;font-size:12px}footer{text-align:center;color:#766b82;font-size:10px;margin-top:25px}
+@media(max-width:720px){.layout{grid-template-columns:1fr}.side{order:2}.workspace{order:1}.nav{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.hero{margin-top:12px}main{padding-top:24px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">س</div><span>سلوم كورة 365</span></div><div class="status">المساعد الذكي</div></header>
+<main>
+<section class="hero"><div class="eyebrow">SLOOM KORA 365 · SMART ASSISTANT</div><h1>مساعدك الذكي للمهام الصعبة</h1><p>مساحة مستقلة ضمن موقع سلوم كورة 365 لمساعدتك في البحث والتحليل والبرمجة والتخطيط، مع إمكانية تطويرها إلى وكيل ينفذ المهام بعد موافقتك.</p></section>
+<div class="layout">
+<aside class="side"><h2>مساحة العمل</h2><nav class="nav"><a class="active" href="#chat">✦ محادثة جديدة</a><a href="#chat" onclick="preset('راجع هذا الكود واكتشف الأخطاء واقترح إصلاحات واختبارات.')">⌘ البرمجة</a><a href="#chat" onclick="preset('ابحث في هذا الموضوع وقارن المصادر وميّز المؤكد من غير المؤكد.')">⌕ البحث والتحليل</a><a href="#chat" onclick="preset('حوّل هذا الهدف إلى خطة تنفيذ بمراحل ومخرجات ومعايير نجاح.')">◈ إدارة المشاريع</a></nav><div class="note"><b>مبدأ الدقة</b><br>لن يدّعي النظام تنفيذ إجراء لم ينفذه. العمليات الحساسة تتطلب موافقتك، والنتائج المهمة يجب أن تمر بمرحلة تحقق.</div></aside>
+<section class="workspace" id="chat"><h2>ما المهمة التي تريد إنجازها؟</h2><p class="sub">اكتب طلبك بالتفصيل وحدد طريقة العمل.</p>
+<div class="modes"><button class="active" id="assistant" onclick="setMode('assistant')">مساعد وتحليل</button><button id="agent" onclick="setMode('agent')">وكيل وتنفيذ بإذني</button></div>
+<textarea id="task" placeholder="مثال: افحص سبب تأخر تحديث نتائج المباريات في موقعي، وحدد أسباب المشكلة واقترح إصلاحاً واختباراً..."></textarea>
+<div class="quick"><button onclick="preset('حلّل هذه المشكلة وحدد أسبابها المحتملة ثم اقترح حلولاً مرتبة حسب الأولوية.')">تحليل مشكلة</button><button onclick="preset('راجع هذا الكود واكتشف الأخطاء واشرح الإصلاحات والاختبارات المطلوبة.')">مراجعة كود</button><button onclick="preset('ابحث في موضوع محدد وقارن المصادر وميّز الحقائق المؤكدة.')">بحث موثوق</button><button onclick="preset('حوّل هذا الهدف إلى خطة تنفيذ بمراحل ومخرجات ومعايير نجاح.')">خطة مشروع</button></div>
+<div class="actions"><span class="hint" id="modeHint">سيحلل الطلب ويعرض خطة دون إجراء تغييرات.</span><button class="primary" onclick="sendTask()">إرسال المهمة ←</button></div>
+<div class="notice" id="notice">هذه هي واجهة المساعد الأولية المنشورة. المحادثة الفعلية وتنفيذ المهام يحتاجان إلى ربط خادم ذكاء اصطناعي آمن؛ لم يتم تفعيل محرك الذكاء الاصطناعي بعد.</div>
+</section></div>
+<a class="back" href="/">← العودة إلى موقع سلوم كورة 365</a>
+<footer>© سلوم كورة 365 · مساعد ذكي قيد التطوير</footer>
+</main>
+<script>
+let mode='assistant';
+function setMode(m){mode=m;document.getElementById('assistant').classList.toggle('active',m==='assistant');document.getElementById('agent').classList.toggle('active',m==='agent');document.getElementById('modeHint').textContent=m==='agent'?'سيجهّز خطة تنفيذ ويطلب موافقتك قبل أي إجراء مؤثر.':'سيحلل الطلب ويعرض خطة دون تنفيذ تغييرات.'}
+function preset(t){document.getElementById('task').value=t;document.getElementById('task').focus()}
+function sendTask(){const t=document.getElementById('task').value.trim();if(!t){document.getElementById('task').focus();return}document.getElementById('notice').textContent='تم تجهيز طلبك في الواجهة. لتفعيل الرد الذكي والتنفيذ الفعلي، يجب الآن إعداد الخادم وربط مزود نموذج ذكاء اصطناعي بمفتاح محفوظ في الخادم، وليس داخل صفحة الموقع. وضع التشغيل المختار: '+(mode==='agent'?'وكيل بموافقتك':'مساعد وتحليل')+'.';}
+</script>
+</body></html>
