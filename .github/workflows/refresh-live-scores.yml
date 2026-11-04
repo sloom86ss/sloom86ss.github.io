@@ -1,6 +1,10 @@
 name: SLOOM365 automatic live score refresh
 
 on:
+  push:
+    paths:
+      - "scripts/refresh_live_scores.py"
+      - ".github/workflows/refresh-live-scores.yml"
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
