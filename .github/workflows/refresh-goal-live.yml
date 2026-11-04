@@ -9,8 +9,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: sloom365-goal-live-scores
-  cancel-in-progress: true
+  group: sloom365-live-data-refresh
+  cancel-in-progress: false
 
 jobs:
   refresh-live:
