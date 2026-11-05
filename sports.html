@@ -50,7 +50,7 @@ main{width:100%;max-width:1900px;margin:auto;padding:5px clamp(4px,1vw,16px) 24p
 <section class="source-area"><h2 id="sourceTitle">أحدث مقاطع كرة القدم</h2><p>تُجلب المقاطع تلقائياً من قنوات رياضية رسمية. اختر أي مقطع من القائمة لتشغيله في الشاشة الكبيرة.</p>
 <div class="clips" id="clips"></div>
 <div class="channels" id="channels"></div>
-<p class="note">المقاطع من قنوات رياضية رسمية على YouTube. يحاول الموقع استخدام أكثر من وسيط لجلب خلاصات القنوات عند تعطل أحدها. لا يمكن ضمان التضمين لكل فيديو؛ إذا منعه الناشر أو لم يتوفر في منطقتك فسيتجاوزه المشغل. لا يوجد بث مباشر مضمون.</p></section>
+<p class="note">يعطي الموقع أولوية للبث المباشر إذا أمكن تأكيد أنه يعمل من القناة الرسمية، وإلا يشغّل أحدث المقاطع والملخصات. اكتشاف البث يعتمد على المقاطع الظاهرة في خلاصات القنوات وقد لا يلتقط كل بث مجدول أو خاص. التضمين والتوفر يخضعان لقيود الناشر والمنطقة.</p></section>
 </main>
 <script>
 const channelSets={
@@ -103,6 +103,9 @@ async function getLatest(handle,label){
   return vid?{id:vid,title,channel:label,date,url:'https://www.youtube.com/watch?v='+vid}:null;
  }).filter(Boolean);
 }
+async function isLiveVideo(videoId){
+ try{const html=await fetchText('https://www.youtube.com/watch?v='+encodeURIComponent(videoId));return /"isLive"\s*:\s*true|"isLiveContent"\s*:\s*true|"isLiveNow"\s*:\s*true|"liveBroadcastDetails"\s*:\s*\{/i.test(html)}catch{return false}
+}
 function resetPlayer(){if(ytPlayer){try{ytPlayer.destroy()}catch{}}ytPlayer=null;playerReady=false;pendingClip=null;let host=document.getElementById('playerHost');if(!host){host=document.createElement('div');host.id='playerHost';host.setAttribute('aria-label','مشغل الفيديو الرياضي');document.getElementById('screen').prepend(host)}host.innerHTML='';}
 function playClip(clip){
  if(!clip)return;pendingClip=clip;currentIndex=Math.max(0,playlist.findIndex(v=>v.id===clip.id));rememberClip(clip.id);
@@ -113,7 +116,7 @@ function playClip(clip){
  ytPlayer=new YT.Player('playerHost',{width:'100%',height:'100%',videoId:clip.id,playerVars:{autoplay:1,controls:1,playsinline:1,rel:0,enablejsapi:1,origin:location.origin},events:{onReady:e=>{playerReady=true;e.target.mute();if(pendingClip&&pendingClip.id!==clip.id)e.target.loadVideoById(pendingClip.id);else e.target.playVideo()},onStateChange:e=>{if(e.data===0)playNext()},onAutoplayBlocked:()=>{document.getElementById('playNow').hidden=false;document.getElementById('status').textContent='المتصفح منع التشغيل التلقائي؛ اضغط تشغيل'},onError:e=>{failedIds.add(pendingClip?.id||clip.id);document.getElementById('status').textContent='هذا المقطع غير متاح للتضمين (رمز '+e.data+')، ننتقل للتالي…';playNext()}}});
 }
 window.onYouTubeIframeAPIReady=function(){if(pendingClip)playClip(pendingClip)};
-function renderPlaylist(){document.getElementById('clips').innerHTML=playlist.map(v=>'<button class="clip" data-id="'+esc(v.id)+'" type="button"><span>▶ '+esc(v.title)+'</span><small>'+esc(v.channel)+' · '+(v.date?new Date(v.date).toLocaleDateString('ar'): 'مقطع حديث')+'</small></button>').join('');document.querySelectorAll('.clip').forEach(btn=>btn.addEventListener('click',()=>{const v=playlist.find(x=>x.id===btn.dataset.id);if(v)playClip(v)}));}
+function renderPlaylist(){document.getElementById('clips').innerHTML=playlist.map(v=>'<button class="clip" data-id="'+esc(v.id)+'" type="button"><span>'+(v.isLive?'🔴 بث مباشر · ':'▶ ')+esc(v.title)+'</span><small>'+esc(v.channel)+' · '+(v.isLive?'متاح الآن':(v.date?new Date(v.date).toLocaleDateString('ar'):'مقطع حديث'))+'</small></button>').join('');document.querySelectorAll('.clip').forEach(btn=>btn.addEventListener('click',()=>{const v=playlist.find(x=>x.id===btn.dataset.id);if(v)playClip(v)}));}
 function playNext(){if(!playlist.length)return;for(let i=currentIndex+1;i<playlist.length;i++){if(!failedIds.has(playlist[i].id)){playClip(playlist[i]);return}}refreshInBackground().finally(()=>{const next=playlist.findIndex((v,i)=>i>currentIndex&&!failedIds.has(v.id));if(next>=0){playClip(playlist[next]);return}document.getElementById('status').textContent='انتهت المقاطع القابلة للتضمين حالياً؛ ننتظر مقاطع رسمية جديدة.';document.getElementById('playNow').hidden=true;});}
 async function refreshInBackground(){const key=activeSport;try{const set=channelSets[key];const results=await Promise.allSettled(set.sources.map(s=>getLatest(s[1],s[0])));if(key!==activeSport)return;const found=results.flatMap((r)=>r.status==='fulfilled'?r.value:[]).sort((a,b)=>new Date(b.date)-new Date(a.date));const known=new Set(playlist.map(v=>v.id));const fresh=[...new Map(found.map(v=>[v.id,v])).values()].filter(v=>!known.has(v.id)&&!readHistory().has(v.id));if(fresh.length){playlist.push(...fresh);renderPlaylist();document.getElementById('status').textContent='تمت إضافة '+fresh.length+' مقاطع رسمية جديدة إلى قائمة التشغيل';}}catch{}}
 
@@ -133,11 +136,16 @@ async function loadSport(key){
   videos.sort((a,b)=>new Date(b.date)-new Date(a.date));
   const unique=[...new Map(videos.map(v=>[v.id,v])).values()];
   if(!unique.length)throw Error('no videos');
-  const watched=readHistory();let fresh=unique.filter(v=>!watched.has(v.id));let cycled=false;
-  if(!fresh.length){try{localStorage.removeItem(HISTORY_KEY)}catch{}fresh=unique;cycled=true}
+  document.getElementById('status').textContent='نتحقق من وجود بث رسمي مباشر…';
+  const checked=await Promise.all(unique.slice(0,12).map(async v=>({...v,isLive:await isLiveVideo(v.id)})));
+  if(thisRequest!==requestNo)return;
+  checked.sort((a,b)=>Number(b.isLive)-Number(a.isLive)||new Date(b.date)-new Date(a.date));
+  const watched=readHistory();let fresh=[...checked.filter(v=>v.isLive),...checked.filter(v=>!v.isLive&&!watched.has(v.id))];let cycled=false;
+  if(!fresh.length){try{localStorage.removeItem(HISTORY_KEY)}catch{}fresh=checked;cycled=true}
   playlist=fresh.slice(0,12);currentIndex=0;renderPlaylist();
   playClip(playlist[0]);
-  document.getElementById('status').textContent=cycled?'تم عرض المقاطع المتاحة؛ ستبدأ دورة جديدة الآن':'تم العثور على '+playlist.length+' مقطعاً جديداً لم تُعرض من قبل · الأحدث يعمل الآن';
+  const liveCount=playlist.filter(v=>v.isLive).length;
+  document.getElementById('status').textContent=liveCount?'🔴 تم العثور على بث رسمي مباشر؛ يبدأ الآن داخل الشاشة':'لا يوجد بث مباشر مؤكد حالياً؛ يتم تشغيل أحدث المقاطع الرسمية';
  }catch(e){
   if(thisRequest!==requestNo)return;
   document.getElementById('status').textContent='تعذر جلب المقاطع الآن؛ يمكنك فتح القنوات الرسمية أدناه.';
