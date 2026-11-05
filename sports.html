@@ -66,6 +66,9 @@ rugby:{title:'أحدث مقاطع الرجبي',sources:[['World Rugby','WorldRu
 badminton:{title:'أحدث مقاطع الريشة الطائرة',sources:[['Badminton World Federation','bwftv']]}
 };
 const channelIds={};let activeSport='football',requestNo=0;
+const HISTORY_KEY='worldSports365_watched_v1';
+function readHistory(){try{return new Set(JSON.parse(localStorage.getItem(HISTORY_KEY)||'[]'))}catch{return new Set()}}
+function rememberClip(id){try{const h=[...readHistory()].filter(x=>x!==id);h.push(id);localStorage.setItem(HISTORY_KEY,JSON.stringify(h.slice(-120)))}catch{}}
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 async function fetchText(url){const res=await fetch('https://proxy.cors.dev/'+url,{cache:'no-store'});if(!res.ok)throw Error('feed '+res.status);return await res.text()}
 async function resolveChannel(handle){
@@ -88,6 +91,7 @@ async function getLatest(handle,label){
  }).filter(Boolean);
 }
 function playClip(clip){
+ rememberClip(clip.id);
  document.getElementById('player').src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(clip.id)+'?autoplay=1&mute=1&playsinline=1&rel=0';
  document.getElementById('screen').classList.add('has-video');
  document.querySelectorAll('.clip').forEach(x=>x.classList.toggle('selected',x.dataset.id===clip.id));
@@ -106,12 +110,15 @@ async function loadSport(key){
   if(thisRequest!==requestNo)return;
   const videos=results.flatMap((r,i)=>r.status==='fulfilled'?r.value:[]);
   videos.sort((a,b)=>new Date(b.date)-new Date(a.date));
-  const unique=[...new Map(videos.map(v=>[v.id,v])).values()].slice(0,12);
+  const unique=[...new Map(videos.map(v=>[v.id,v])).values()];
   if(!unique.length)throw Error('no videos');
-  document.getElementById('clips').innerHTML=unique.map(v=>'<button class="clip" data-id="'+esc(v.id)+'" type="button"><span>▶ '+esc(v.title)+'</span><small>'+esc(v.channel)+' · '+(v.date?new Date(v.date).toLocaleDateString('ar'): 'مقطع حديث')+'</small></button>').join('');
-  document.querySelectorAll('.clip').forEach(btn=>btn.addEventListener('click',()=>{const v=unique.find(x=>x.id===btn.dataset.id);if(v)playClip(v)}));
-  playClip(unique[0]);
-  document.getElementById('status').textContent='تم العثور على '+unique.length+' مقطعاً · الأحدث يعمل الآن';
+  const watched=readHistory();let fresh=unique.filter(v=>!watched.has(v.id));let cycled=false;
+  if(!fresh.length){try{localStorage.removeItem(HISTORY_KEY)}catch{}fresh=unique;cycled=true}
+  const playlist=fresh.slice(0,12);
+  document.getElementById('clips').innerHTML=playlist.map(v=>'<button class="clip" data-id="'+esc(v.id)+'" type="button"><span>▶ '+esc(v.title)+'</span><small>'+esc(v.channel)+' · '+(v.date?new Date(v.date).toLocaleDateString('ar'): 'مقطع حديث')+'</small></button>').join('');
+  document.querySelectorAll('.clip').forEach(btn=>btn.addEventListener('click',()=>{const v=playlist.find(x=>x.id===btn.dataset.id);if(v)playClip(v)}));
+  playClip(playlist[0]);
+  document.getElementById('status').textContent=cycled?'تم عرض المقاطع المتاحة؛ ستبدأ دورة جديدة الآن':'تم العثور على '+playlist.length+' مقطعاً جديداً لم تُعرض من قبل · الأحدث يعمل الآن';
  }catch(e){
   if(thisRequest!==requestNo)return;
   document.getElementById('status').textContent='تعذر جلب المقاطع الآن؛ يمكنك فتح القنوات الرسمية أدناه.';
