@@ -80,8 +80,32 @@ function readHistory(){try{return new Set(JSON.parse(localStorage.getItem(HISTOR
 function rememberClip(id){try{const h=[...readHistory()].filter(x=>x!==id);h.push(id);localStorage.setItem(HISTORY_KEY,JSON.stringify(h.slice(-120)))}catch{}}
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 async function fetchText(url){
- const targets=['https://proxy.cors.dev/'+url,'https://api.allorigins.win/raw?url='+encodeURIComponent(url),'https://corsproxy.io/?url='+encodeURIComponent(url)];let lastError;
- for(const target of targets){try{const res=await fetch(target,{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);const body=await res.text();if(!body||body.length<80)throw Error('empty response');return body}catch(err){lastError=err}}
+ // Public GET relays only. Never send tokens, cookies, or private data through these services.
+ const encoded=encodeURIComponent(url);
+ const targets=[
+  {name:'CORS.tools',url:'https://cors.tools/proxy?url='+encoded,mode:'text'},
+  {name:'EveryOrigin',url:'https://everyorigin.jwvbremen.nl/get?url='+encoded,mode:'json'},
+  {name:'CORS.dev',url:'https://proxy.cors.dev/'+url,mode:'text'},
+  {name:'AllOrigins',url:'https://api.allorigins.win/raw?url='+encoded,mode:'text'},
+  {name:'corsproxy.io',url:'https://corsproxy.io/?url='+encoded,mode:'text'}
+ ];
+ let lastError;
+ for(const relay of targets){
+  try{
+   const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),22000);
+   let res;
+   try{res=await fetch(relay.url,{cache:'no-store',credentials:'omit',signal:controller.signal})}finally{clearTimeout(timer)}
+   if(!res.ok)throw Error(relay.name+' HTTP '+res.status);
+   let body=await res.text();
+   if(relay.mode==='json'){
+    const wrapped=JSON.parse(body);
+    if(typeof wrapped.contents==='string')body=wrapped.contents;
+    else throw Error(relay.name+' returned no contents field');
+   }
+   if(!body||body.length<80||/^\\s*<(?:!doctype html|html)/i.test(body)&&url.includes('/feeds/videos.xml'))throw Error(relay.name+' returned an empty or blocked feed');
+   return body;
+  }catch(err){lastError=err}
+ }
  throw lastError||Error('All public feed relays failed');
 }
 async function resolveChannel(handle){
