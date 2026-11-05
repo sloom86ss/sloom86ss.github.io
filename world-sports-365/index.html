@@ -120,16 +120,22 @@ function matchStart(){
 function setupJoystick(){const base=$('joyBase'),knob=$('joyKnob');const release=()=>{state.keys['-1,0']=false;state.keys['1,0']=false;state.keys['0,-1']=false;state.keys['0,1']=false;state.joyPointer=null;knob.style.left='50%';knob.style.top='50%'};base.onpointerdown=e=>{e.preventDefault();state.joyPointer=e.pointerId;if(base.setPointerCapture)base.setPointerCapture(e.pointerId);joyMove(e)};base.onpointermove=e=>{if(state.joyPointer===e.pointerId)joyMove(e)};base.onpointerup=release;base.onpointercancel=release;base.onlostpointercapture=release;function joyMove(e){const r=base.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,dx=e.clientX-cx,dy=e.clientY-cy,max=r.width*.34,d=Math.hypot(dx,dy)||1,k=Math.min(1,max/d),x=dx*k,y=dy*k;knob.style.left='calc(50% + '+x+'px)';knob.style.top='calc(50% + '+y+'px)';const nx=x/max,ny=y/max;state.keys['-1,0']=nx<-.22;state.keys['1,0']=nx>.22;state.keys['0,-1']=ny<-.22;state.keys['0,1']=ny>.22}}
 function moveUser(dx,dy){if(!state.user||state.ended)return;state.user.x=Math.max(90,Math.min(810,state.user.x+dx*17));state.user.y=Math.max(105,Math.min(415,state.user.y+dy*17));}
 function matchPass(){if(!state||state.ended||state.passCooldown>0)return;const u=state.user,b=state.ball;if(Math.hypot(b.x-u.x,b.y-u.y)>88){message('اقترب من الكرة أولاً');return}let mate=state.players.slice(1).sort((a,b)=>Math.hypot(a.x-u.x,a.y-u.y)-Math.hypot(b.x-u.x,b.y-u.y))[0];if(mate){const sx=u.x+20,sy=u.y,dx=mate.x-sx,dy=mate.y-sy,d=Math.hypot(dx,dy)||1;b.x=sx;b.y=sy;b.vx=dx/d*430;b.vy=dy/d*430;state.passCooldown=1.0;message('تمريرة إلى زميلك');}}
-function matchShoot(){if(!state||state.ended||state.shotCooldown>0)return;const b=state.ball,u=state.user;if(Math.hypot(b.x-u.x,b.y-u.y)<92){b.x=u.x+22;b.y=u.y;const goalDx=Math.max(30,850-b.x);b.vx=1800;b.vy=(260-b.y)*1800/goalDx;state.shotCooldown=1.0;message('تسديدة نحو منتصف المرمى!')}else message('اقترب من الكرة أولاً');}
+function matchShoot(){if(!state||state.ended||state.shotCooldown>0)return;const b=state.ball,u=state.user;if(Math.hypot(b.x-u.x,b.y-u.y)<92){b.x=u.x+22;b.y=u.y;const goalDx=Math.max(45,850-b.x),flight=goalDx/1250,targetY=260+Math.max(-24,Math.min(24,(260-u.y)*.12));b.vx=1250;b.vy=(targetY-b.y)/flight;state.shotCooldown=1.0;message('تسديدة نحو المرمى!')}else message('اقترب من الكرة أولاً');}
 function matchFrame(now){
  if(current!=='match'||!active)return;let dt=Math.min(.04,(now-state.last)/1000);state.last=now;state.time-=dt;state.shotCooldown=Math.max(0,state.shotCooldown-dt);state.passCooldown=Math.max(0,state.passCooldown-dt);
  let u=state.user,dx=(state.keys['1,0']?1:0)-(state.keys['-1,0']?1:0),dy=(state.keys['0,1']?1:0)-(state.keys['0,-1']?1:0);
  if(dx||dy){let n=Math.hypot(dx,dy);u.x+=dx/n*190*dt;u.y+=dy/n*190*dt}u.x=Math.max(95,Math.min(805,u.x));u.y=Math.max(112,Math.min(408,u.y));
  const b=state.ball;
- // Teammates support the attack; opponents press the ball carrier.
- state.players.slice(1).forEach((p,i)=>{const offsets=[-125,95,-65,155],tx=Math.max(110,Math.min(790,u.x+offsets[i])),ty=Math.max(115,Math.min(405,u.y+[-105,95,105,-95][i]));p.x+=(tx-p.x)*Math.min(1,dt*.9);p.y+=(ty-p.y)*Math.min(1,dt*.9)});
- state.opponents.forEach((p,i)=>{let target=i===0?b:state.players[(i+1)%state.players.length];let tx=target.x,ty=target.y,rate=i===0?2.3:.85;p.x+=(tx-p.x)*Math.min(1,dt*rate);p.y+=(ty-p.y)*Math.min(1,dt*rate);let d=Math.hypot(p.x-b.x,p.y-b.y);if(d<24&&Math.hypot(b.vx,b.vy)<150){b.x=p.x-19;b.y=p.y;b.vx=-175;b.vy+=(Math.random()-.5)*95}});
- const nearUser=Math.hypot(u.x-b.x,u.y-b.y);if(nearUser<29&&Math.hypot(b.vx,b.vy)<170){const followX=u.x+20,followY=u.y+4;b.x+=(followX-b.x)*Math.min(1,dt*12);b.y+=(followY-b.y)*Math.min(1,dt*12);b.vx*=Math.pow(.08,dt);b.vy*=Math.pow(.08,dt)}
+ // Teammates keep their shape, while defenders pressure the ball.
+ state.players.slice(1).forEach((p,i)=>{const offsets=[-125,95,-65,155],tx=Math.max(110,Math.min(790,u.x+offsets[i])),ty=Math.max(115,Math.min(405,u.y+[-105,95,105,-95][i]));p.x+=(tx-p.x)*Math.min(1,dt*1.15);p.y+=(ty-p.y)*Math.min(1,dt*1.15)});
+ state.opponents.forEach((p,i)=>{let target=i===0?b:state.players[(i+1)%state.players.length];let tx=target.x,ty=target.y,rate=i===0?2.3:.85;p.x+=(tx-p.x)*Math.min(1,dt*rate);p.y+=(ty-p.y)*Math.min(1,dt*rate)});
+ // Separate players on contact to prevent overlapping sprites.
+ const allPlayers=state.players.concat(state.opponents);
+ for(let i=0;i<allPlayers.length;i++)for(let j=i+1;j<allPlayers.length;j++){const a=allPlayers[i],p=allPlayers[j],dxp=p.x-a.x,dyp=p.y-a.y,d=Math.hypot(dxp,dyp)||.01;if(d<29){const push=(29-d)*.5/d;a.x-=dxp*push;a.y-=dyp*push;p.x+=dxp*push;p.y+=dyp*push}}
+ // Defender wins the ball only when close enough and the ball is slow.
+ const defender=state.opponents.find(p=>Math.hypot(p.x-b.x,p.y-b.y)<21);
+ if(defender&&Math.hypot(b.vx,b.vy)<125&&Math.hypot(u.x-b.x,u.y-b.y)>38){b.x=defender.x-18;b.y=defender.y;b.vx=-115;b.vy=0;message('الخصم قطع الكرة!')}
+ const nearUser=Math.hypot(u.x-b.x,u.y-b.y);if(nearUser<34&&Math.hypot(b.vx,b.vy)<210){const followX=u.x+20,followY=u.y+4;b.x+=(followX-b.x)*Math.min(1,dt*15);b.y+=(followY-b.y)*Math.min(1,dt*15);b.vx*=Math.pow(.025,dt);b.vy*=Math.pow(.025,dt)}
  // Ball movement uses seconds, not frames, so speed stays consistent across phones.
  b.x+=b.vx*dt;b.y+=b.vy*dt;const drag=Math.pow(.24,dt);b.vx*=drag;b.vy*=drag;
  // Teammate receives the pass and becomes the controlled player.
