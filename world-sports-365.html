@@ -45,7 +45,7 @@ footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
 <div class="ball">🏆</div>
 <h1 id="screenTitle">عالم الرياضة 365</h1>
 <p id="screenText">اختر الرياضة للوصول إلى صفحات المشاهدة الرسمية وجدول الناقلين في بلدك. لا نضع بثاً داخل الشاشة إلا إذا كان تضمينه مصرحاً به من صاحب الحقوق.</p>
-<div class="screen-actions"><a class="action primary" id="watchLink" href="https://www.uefa.com/uefachampionsleague/news/0253-0d82037aaedd-f371c464f919-1000--where-to-watch-tonight-s-s" target="_blank" rel="noopener">اعرف أين تشاهد البث رسمياً</a></div>
+<div class="screen-actions"><a class="action primary" id="watchLink" href="https://www.uefa.com/match-calendar/" target="_blank" rel="noopener">اعرف أين تشاهد البث رسمياً</a></div>
 </div>
 <iframe id="player" title="مشغل المصدر الرسمي" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
 </section>
@@ -71,7 +71,7 @@ footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
 </main>
 <script>
 const catalogue={
- football:[["UEFA.tv","مقاطع ومباريات مختارة؛ دوري الأبطال عادة عبر الناقل المحلي","https://www.uefa.tv/"],["دليل ناقلي UEFA","اعرف الناقل الرسمي في عُمان وبقية الدول","https://www.uefa.com/uefachampionsleague/news/0253-0d82037aaedd-f371c464f919-1000--where-to-watch-tonight-s-s"],["الاتحاد الآسيوي AFC","موقع البطولات والأخبار والروابط الرسمية","https://www.the-afc.com/"]],
+ football:[["UEFA.tv","مقاطع ومباريات مختارة؛ دوري الأبطال عادة عبر الناقل المحلي","https://www.uefa.tv/"],["دليل ناقلي UEFA","اعرف الناقل الرسمي في عُمان وبقية الدول","https://www.uefa.com/match-calendar/"],["الاتحاد الآسيوي AFC","موقع البطولات والأخبار والروابط الرسمية","https://www.the-afc.com/"]],
  basketball:[["FIBA","صفحات البطولات وملخصات كرة السلة","https://www.fiba.basketball/"],["دليل مشاهدة FIBA","الناقلون المحليون والبث عبر Courtside 1891/DAZN حسب البلد","https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/where-to-watch"],["NBA","ملخصات ومشاهدة رسمية؛ بعض المحتوى باشتراك","https://www.nba.com/watch"]],
  tennis:[["ATP Tour","الموقع الرسمي وجدول البطولات","https://www.atptour.com/"],["WTA","الموقع الرسمي لتنس السيدات","https://www.wtatennis.com/"],["ITF","الاتحاد الدولي للتنس","https://www.itftennis.com/"]],
  cricket:[["ICC","موقع الاتحاد الدولي وجدول البطولات","https://www.icc-cricket.com/"],["ECB","الموقع الرسمي للكريكيت الإنجليزي","https://www.ecb.co.uk/"]],
@@ -89,7 +89,7 @@ function render(sport){
  document.getElementById("sourceHeading").textContent=titles[sport]||titles.all;
  document.getElementById("sourceGrid").innerHTML=items.map(x=>'<a class="source" href="'+x[2]+'" target="_blank" rel="noopener"><b>'+x[0]+'</b><small>'+x[1]+'</small></a>').join("");
  document.getElementById("screenTitle").textContent=sport==="all"?"عالم الرياضة 365":titles[sport].replace("مصادر ","");
- const primary=sport==="all"?"https://www.uefa.com/uefachampionsleague/news/0253-0d82037aaedd-f371c464f919-1000--where-to-watch-tonight-s-s":(items[1]?.[2]||items[0]?.[2]||"https://www.uefa.tv/");
+ const primary=sport==="all"?"https://www.uefa.com/match-calendar/":(items[1]?.[2]||items[0]?.[2]||"https://www.uefa.tv/");
  document.getElementById("watchLink").href=primary;
  document.getElementById("watchLink").textContent=sport==="all"?"اعرف الناقل الرسمي حسب بلدك":"افتح دليل/مصدر المشاهدة الرسمي";
  document.getElementById("player").style.display="none";
