@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#100719"><title>عالم الرياضة 365 | شاشة الفيديوهات الرياضية</title>
+<meta name="theme-color" content="#100719"><meta name="referrer" content="strict-origin-when-cross-origin"><title>عالم الرياضة 365 | شاشة الفيديوهات الرياضية</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark;--bg:#08050e;--panel:#140d20;--line:#59347b;--purple:#a855df;--white:#f8f3ff;--muted:#b8a9c7}
@@ -46,13 +46,12 @@ main{width:100%;max-width:1900px;margin:auto;padding:5px clamp(4px,1vw,16px) 24p
 <div id="playerHost" aria-label="مشغل الفيديو الرياضي"></div>
 <div class="screen-empty" id="empty"><div class="symbol">▶</div><h1>عالم الرياضة 365</h1><p>يجري البحث عن أحدث المقاطع الرياضية الرسمية…</p></div>
 </section>
-<div class="toolbar"><span class="status" id="status" aria-live="polite">جارٍ تحميل أحدث المقاطع…</span><button class="action primary" id="full">⛶ تكبير الشاشة</button></div>
+<div class="toolbar"><span class="status" id="status" aria-live="polite">جارٍ تحميل أحدث المقاطع…</span><div style="display:flex;gap:6px"><button class="action" id="playNow" hidden>▶ تشغيل</button><button class="action primary" id="full">⛶ تكبير الشاشة</button></div></div>
 <section class="source-area"><h2 id="sourceTitle">أحدث مقاطع كرة القدم</h2><p>تُجلب المقاطع تلقائياً من قنوات رياضية رسمية. اختر أي مقطع من القائمة لتشغيله في الشاشة الكبيرة.</p>
 <div class="clips" id="clips"></div>
 <div class="channels" id="channels"></div>
 <p class="note">المقاطع من قنوات رياضية رسمية على YouTube وليست بثاً مباشراً مضموناً. يبدأ التشغيل تلقائياً عند اختيار الرياضة إذا سمح المتصفح، وقد يبدأ صامتاً. يعتمد جلب المقاطع على خدمة وسيطة عامة لقراءة RSS؛ إذا تعطلت الخدمة فلن تظهر المقاطع مؤقتاً. التضمين والتوفر يخضعان لحقوق الناشر وقيود الدولة.</p></section>
 </main>
-<script src="https://www.youtube.com/iframe_api"></script>
 <script>
 const channelSets={
 football:{title:'أحدث مقاطع كرة القدم',sources:[['FIFA','FIFA'],['UEFA','UEFA'],['الدوري الإنجليزي','premierleague']]},
@@ -75,7 +74,7 @@ tabletennis:{title:'أحدث مقاطع تنس الطاولة',sources:[['ITTF',
 handball:{title:'أحدث مقاطع كرة اليد',sources:[['IHF','ihfworldhandball']]},
 taekwondo:{title:'أحدث مقاطع التايكوندو',sources:[['World Taekwondo','WorldTaekwondo']]}
 };
-const channelIds={};let activeSport='football',requestNo=0,playlist=[],currentIndex=0,ytPlayer=null,pendingClip=null;
+const channelIds={};let activeSport='football',requestNo=0,playlist=[],currentIndex=0,ytPlayer=null,pendingClip=null,playerReady=false;const failedIds=new Set();
 const HISTORY_KEY='worldSports365_watched_v1';
 function readHistory(){try{return new Set(JSON.parse(localStorage.getItem(HISTORY_KEY)||'[]'))}catch{return new Set()}}
 function rememberClip(id){try{const h=[...readHistory()].filter(x=>x!==id);h.push(id);localStorage.setItem(HISTORY_KEY,JSON.stringify(h.slice(-120)))}catch{}}
@@ -83,9 +82,9 @@ const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 async function fetchText(url){const res=await fetch('https://proxy.cors.dev/'+url,{cache:'no-store'});if(!res.ok)throw Error('feed '+res.status);return await res.text()}
 async function resolveChannel(handle){
  if(channelIds[handle])return channelIds[handle];
- const html=await fetchText('https://www.youtube.com/@'+encodeURIComponent(handle));
+ const html=await fetchText('https://www.youtube.com/@'+encodeURIComponent(handle)+'?hl=en');
  const doc=new DOMParser().parseFromString(html,'text/html');
- let id=doc.querySelector('meta[itemprop="channelId"]')?.content||doc.querySelector('meta[property="og:url"]')?.content?.match(/channel\/(UC[\w-]+)/)?.[1]||doc.documentElement.innerHTML.match(/"channelId":"(UC[\w-]+)"/)?.[1];
+ let id=doc.querySelector('meta[itemprop="channelId"]')?.content||doc.querySelector('meta[property="og:url"]')?.content?.match(/channel\/(UC[\w-]+)/)?.[1]||doc.documentElement.innerHTML.match(/"(?:channelId|externalId)":"(UC[\w-]+)"/)?.[1]||doc.documentElement.innerHTML.match(/youtube\.com\/channel\/(UC[\w-]+)/)?.[1];
  if(!id)throw Error('channel id missing: '+handle);channelIds[handle]=id;return id;
 }
 async function getLatest(handle,label){
@@ -100,22 +99,22 @@ async function getLatest(handle,label){
   return vid?{id:vid,title,channel:label,date,url:'https://www.youtube.com/watch?v='+vid}:null;
  }).filter(Boolean);
 }
-function resetPlayer(){if(ytPlayer){try{ytPlayer.destroy()}catch{}}ytPlayer=null;pendingClip=null;document.getElementById('playerHost').innerHTML='';}
+function resetPlayer(){if(ytPlayer){try{ytPlayer.destroy()}catch{}}ytPlayer=null;playerReady=false;pendingClip=null;let host=document.getElementById('playerHost');if(!host){host=document.createElement('div');host.id='playerHost';host.setAttribute('aria-label','مشغل الفيديو الرياضي');document.getElementById('screen').prepend(host)}host.innerHTML='';}
 function playClip(clip){
  if(!clip)return;pendingClip=clip;currentIndex=Math.max(0,playlist.findIndex(v=>v.id===clip.id));rememberClip(clip.id);
- document.getElementById('screen').classList.add('has-video');
+ document.getElementById('screen').classList.add('has-video');document.getElementById('playNow').hidden=true;
  document.querySelectorAll('.clip').forEach(x=>x.classList.toggle('selected',x.dataset.id===clip.id));
  if(!window.YT||!YT.Player)return;
- if(ytPlayer){ytPlayer.loadVideoById(clip.id);return;}
- ytPlayer=new YT.Player('playerHost',{width:'100%',height:'100%',videoId:clip.id,playerVars:{autoplay:1,controls:1,playsinline:1,rel:0,enablejsapi:1},events:{onReady:e=>{e.target.mute();e.target.playVideo()},onStateChange:e=>{if(e.data===0)playNext()},onError:()=>playNext()}});
+ if(ytPlayer){if(playerReady){ytPlayer.loadVideoById(clip.id)}return;}
+ ytPlayer=new YT.Player('playerHost',{width:'100%',height:'100%',videoId:clip.id,playerVars:{autoplay:1,controls:1,playsinline:1,rel:0,enablejsapi:1,origin:location.origin},events:{onReady:e=>{playerReady=true;e.target.mute();if(pendingClip&&pendingClip.id!==clip.id)e.target.loadVideoById(pendingClip.id);else e.target.playVideo()},onStateChange:e=>{if(e.data===0)playNext()},onAutoplayBlocked:()=>{document.getElementById('playNow').hidden=false;document.getElementById('status').textContent='المتصفح منع التشغيل التلقائي؛ اضغط تشغيل'},onError:e=>{failedIds.add(pendingClip?.id||clip.id);document.getElementById('status').textContent='هذا المقطع غير متاح للتضمين (رمز '+e.data+')، ننتقل للتالي…';playNext()}}});
 }
 window.onYouTubeIframeAPIReady=function(){if(pendingClip)playClip(pendingClip)};
 function renderPlaylist(){document.getElementById('clips').innerHTML=playlist.map(v=>'<button class="clip" data-id="'+esc(v.id)+'" type="button"><span>▶ '+esc(v.title)+'</span><small>'+esc(v.channel)+' · '+(v.date?new Date(v.date).toLocaleDateString('ar'): 'مقطع حديث')+'</small></button>').join('');document.querySelectorAll('.clip').forEach(btn=>btn.addEventListener('click',()=>{const v=playlist.find(x=>x.id===btn.dataset.id);if(v)playClip(v)}));}
-function playNext(){if(!playlist.length)return;if(currentIndex+1<playlist.length){playClip(playlist[currentIndex+1]);return;}refreshInBackground().finally(()=>{if(!playlist.length)return;playClip(playlist[currentIndex+1]||playlist[0]);});}
+function playNext(){if(!playlist.length)return;for(let i=currentIndex+1;i<playlist.length;i++){if(!failedIds.has(playlist[i].id)){playClip(playlist[i]);return}}refreshInBackground().finally(()=>{const next=playlist.findIndex((v,i)=>i>currentIndex&&!failedIds.has(v.id));if(next>=0){playClip(playlist[next]);return}document.getElementById('status').textContent='انتهت المقاطع القابلة للتضمين حالياً؛ ننتظر مقاطع رسمية جديدة.';document.getElementById('playNow').hidden=true;});}
 async function refreshInBackground(){const key=activeSport;try{const set=channelSets[key];const results=await Promise.allSettled(set.sources.map(s=>getLatest(s[1],s[0])));if(key!==activeSport)return;const found=results.flatMap((r)=>r.status==='fulfilled'?r.value:[]).sort((a,b)=>new Date(b.date)-new Date(a.date));const known=new Set(playlist.map(v=>v.id));const fresh=[...new Map(found.map(v=>[v.id,v])).values()].filter(v=>!known.has(v.id)&&!readHistory().has(v.id));if(fresh.length){playlist.push(...fresh);renderPlaylist();document.getElementById('status').textContent='تمت إضافة '+fresh.length+' مقاطع رسمية جديدة إلى قائمة التشغيل';}}catch{}}
 
 async function loadSport(key){
- activeSport=key;const thisRequest=++requestNo,set=channelSets[key];
+ activeSport=key;const thisRequest=++requestNo,set=channelSets[key];failedIds.clear();
  document.getElementById('sourceTitle').textContent=set.title;
  document.getElementById('clips').innerHTML='';
  document.getElementById('channels').innerHTML=set.sources.map(s=>'<a href="https://www.youtube.com/@'+encodeURIComponent(s[1])+'" target="_blank" rel="noopener">'+esc(s[0])+' الرسمي على YouTube</a>').join('');
@@ -142,8 +141,10 @@ async function loadSport(key){
  }
 }
 document.querySelectorAll('[data-sport]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-sport]').forEach(x=>x.classList.toggle('active',x.dataset.sport===b.dataset.sport));loadSport(b.dataset.sport)}));
+document.getElementById('playNow').addEventListener('click',()=>{if(ytPlayer&&playerReady){ytPlayer.playVideo();document.getElementById('playNow').hidden=true}});
 document.getElementById('full').addEventListener('click',()=>{const el=document.getElementById('screen');if(el.requestFullscreen)el.requestFullscreen();else if(el.webkitRequestFullscreen)el.webkitRequestFullscreen()});
 loadSport('football');
 setInterval(()=>{if(document.visibilityState==='visible')refreshInBackground()},8*60*1000);
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refreshInBackground()});
-</script></body></html>
+</script>
+<script src="https://www.youtube.com/iframe_api" async></script></body></html>
