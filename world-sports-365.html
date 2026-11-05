@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090711">
+<meta name="description" content="عالم الرياضة 365 — شاشة رياضية متعددة الرياضات ومصادر رسمية مجانية">
+<title>عالم الرياضة 365</title>
+<style>
+:root{color-scheme:dark;--bg:#090711;--panel:#151222;--line:#302747;--purple:#9b72ff;--text:#f7f3ff;--muted:#b6adc9}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -20%,#332052 0,transparent 55%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+main{width:min(1180px,100%);margin:auto;padding:16px 14px 36px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 2px 18px}
+.brand{font-size:clamp(19px,4vw,27px);font-weight:900;letter-spacing:.2px}.brand span{color:var(--purple)}
+.tag{font-size:11px;color:#d8caff;border:1px solid #57417c;border-radius:30px;padding:7px 11px;white-space:nowrap}
+.screen{position:relative;overflow:hidden;aspect-ratio:16/9;min-height:240px;max-height:680px;border:1px solid #59417f;border-radius:22px;background:linear-gradient(135deg,#1c1530,#090711 68%);box-shadow:0 20px 65px #0009,0 0 35px #8759dd18;display:grid;place-items:center}
+.screen:before,.screen:after{content:"";position:absolute;border-radius:50%;filter:blur(1px);pointer-events:none}.screen:before{width:45vw;height:45vw;max-width:500px;max-height:500px;border:1px solid #a17bff22;right:-15%;top:-65%}.screen:after{width:36vw;height:36vw;max-width:380px;max-height:380px;border:1px solid #a17bff1c;left:-13%;bottom:-65%}
+#player{position:absolute;inset:0;width:100%;height:100%;border:0;background:#050409;display:none}
+.placeholder{position:relative;z-index:1;text-align:center;padding:24px;max-width:620px}
+.ball{font-size:clamp(42px,8vw,78px);filter:drop-shadow(0 0 20px #9b72ff77)}
+.placeholder h1{font-size:clamp(20px,4vw,34px);margin:8px 0;font-weight:900}.placeholder p{margin:0 auto;color:var(--muted);font-size:13px;line-height:1.9}
+.screen-actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.action{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid #59417f;border-radius:12px;padding:10px 15px;background:#211936;color:white;font-size:12px;font-weight:800}
+.action.primary{background:linear-gradient(135deg,#b99aff,#8153dc);border-color:transparent;color:#160d28}
+.notice{margin:12px 2px 0;color:#aaa0bc;font-size:11px;line-height:1.8;text-align:center}
+.strip{display:flex;gap:8px;overflow-x:auto;padding:18px 1px 8px;scrollbar-width:none}.strip::-webkit-scrollbar{display:none}
+.sport{flex:0 0 auto;border:1px solid var(--line);background:#151222;color:#e9e1f8;border-radius:30px;padding:9px 15px;font-size:12px;font-weight:750;cursor:pointer}.sport[aria-pressed=true]{background:#9b72ff;color:#130b20;border-color:#9b72ff}
+.sources{margin-top:20px}.sources h2{font-size:15px;margin:0 0 11px}.source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.source{display:block;min-width:0;padding:13px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#19152a,#100d19);color:var(--text);text-decoration:none}
+.source b{display:block;font-size:12px;margin-bottom:5px}.source small{display:block;color:var(--muted);font-size:10px;line-height:1.7}
+footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
+@media(max-width:620px){main{padding:12px 10px 28px}.screen{aspect-ratio:4/3;min-height:250px;border-radius:17px}.source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tag{font-size:10px}}
+</style>
+</head>
+<body>
+<main>
+<header><div class="brand">عالم الرياضة <span>365</span></div><div class="tag">شاشة رياضية عالمية</div></header>
+<section class="screen" aria-label="شاشة الفيديو الرياضي">
+<div class="placeholder" id="placeholder">
+<div class="ball">🏆</div>
+<h1 id="screenTitle">عالم الرياضة 365</h1>
+<p id="screenText">اختر رياضتك، ثم افتح المصدر الرسمي لمشاهدة البث أو المقاطع المتاحة مجاناً. لا نعرض روابط بث مجهولة أو محتوى غير مرخّص.</p>
+<div class="screen-actions"><a class="action primary" id="watchLink" href="https://www.uefa.tv/" target="_blank" rel="noopener">افتح UEFA.tv الرسمي</a></div>
+</div>
+<iframe id="player" title="مشغل المصدر الرسمي" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</section>
+<p class="notice" id="notice">البث المباشر يعتمد على حقوق النشر وتوفره في بلدك. بعض المصادر لا تسمح بالتضمين داخل المواقع؛ عندها يفتح المصدر الرسمي مباشرة.</p>
+<nav class="strip" aria-label="اختيار الرياضة">
+<button class="sport" aria-pressed="true" data-sport="all">كل الرياضات</button>
+<button class="sport" aria-pressed="false" data-sport="football">كرة القدم</button>
+<button class="sport" aria-pressed="false" data-sport="basketball">كرة السلة</button>
+<button class="sport" aria-pressed="false" data-sport="tennis">التنس</button>
+<button class="sport" aria-pressed="false" data-sport="cricket">الكريكيت</button>
+<button class="sport" aria-pressed="false" data-sport="baseball">البيسبول</button>
+<button class="sport" aria-pressed="false" data-sport="hockey">الهوكي</button>
+<button class="sport" aria-pressed="false" data-sport="volleyball">الكرة الطائرة</button>
+<button class="sport" aria-pressed="false" data-sport="boxing">الملاكمة</button>
+<button class="sport" aria-pressed="false" data-sport="athletics">ألعاب القوى</button>
+<button class="sport" aria-pressed="false" data-sport="futsal">الفوتسال</button>
+</nav>
+<section class="sources">
+<h2 id="sourceHeading">مصادر رياضية رسمية</h2>
+<div class="source-grid" id="sourceGrid"></div>
+</section>
+<footer>عالم الرياضة 365 · مصادر رسمية فقط · لا يتضمن YouTube أو Formula 1</footer>
+</main>
+<script>
+const catalogue={
+ football:[["UEFA.tv","ملخصات ومحتوى مسابقات الاتحاد الأوروبي حسب التوفر","https://www.uefa.tv/"],["FIFA+","مباريات ومحتوى أرشيفي وبث مجاني حسب المنطقة","https://www.plus.fifa.com/"],["AFC","محتوى ومسابقات الاتحاد الآسيوي","https://www.the-afc.com/"]],
+ basketball:[["FIBA","محتوى كرة السلة الدولية ومقاطع رسمية","https://www.fiba.basketball/"],["NBA","ملخصات ومقاطع رسمية؛ البث الحي قد يتطلب اشتراكاً","https://www.nba.com/watch"],["EuroLeague","مقاطع وملخصات رسمية","https://www.euroleaguebasketball.net/"]],
+ tennis:[["ATP Tour","مقاطع وملخصات التنس للرجال","https://www.atptour.com/"],["WTA","مقاطع وملخصات التنس للسيدات","https://www.wtatennis.com/"],["ITF","محتوى الاتحاد الدولي للتنس","https://www.itftennis.com/"]],
+ cricket:[["ICC","مقاطع وملخصات الكريكيت الرسمية","https://www.icc-cricket.com/"],["ECB","محتوى الكريكيت الإنجليزي","https://www.ecb.co.uk/"]],
+ baseball:[["MLB","ملخصات ومقاطع البيسبول الرسمية","https://www.mlb.com/video"],["WBSC","محتوى الاتحاد الدولي للبيسبول والكرة اللينة","https://www.wbsc.org/"]],
+ hockey:[["NHL","ملخصات ومقاطع الهوكي الرسمية","https://www.nhl.com/video"],["IIHF","محتوى الاتحاد الدولي لهوكي الجليد","https://www.iihf.com/"]],
+ volleyball:[["Volleyball World","مقاطع ومسابقات الكرة الطائرة","https://www.volleyballworld.com/"],["FIVB","الاتحاد الدولي للكرة الطائرة","https://www.fivb.com/"]],
+ boxing:[["World Boxing","محتوى الملاكمة الدولية","https://worldboxing.org/"],["IBA","محتوى الاتحاد الدولي للملاكمة","https://www.iba.sport/"]],
+ athletics:[["World Athletics","مقاطع وملخصات ألعاب القوى","https://worldathletics.org/"],["Olympics","مقاطع رياضية أولمبية رسمية","https://olympics.com/"]],
+ futsal:[["FIFA","محتوى كرة الصالات ضمن منصات FIFA","https://www.fifa.com/"],["AFC","بطولات ومحتوى كرة الصالات الآسيوية","https://www.the-afc.com/"]]
+};
+const titles={all:"مصادر رياضية رسمية",football:"مصادر كرة القدم",basketball:"مصادر كرة السلة",tennis:"مصادر التنس",cricket:"مصادر الكريكيت",baseball:"مصادر البيسبول",hockey:"مصادر الهوكي",volleyball:"مصادر الكرة الطائرة",boxing:"مصادر الملاكمة",athletics:"مصادر ألعاب القوى",futsal:"مصادر الفوتسال"};
+function render(sport){
+ document.querySelectorAll(".sport").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.sport===sport)));
+ const items=sport==="all"?[...catalogue.football.slice(0,2),...catalogue.basketball.slice(0,1),...catalogue.tennis.slice(0,1),...catalogue.cricket.slice(0,1),...catalogue.baseball.slice(0,1),...catalogue.hockey.slice(0,1),...catalogue.volleyball.slice(0,1),...catalogue.athletics.slice(0,1)]:catalogue[sport]||[];
+ document.getElementById("sourceHeading").textContent=titles[sport]||titles.all;
+ document.getElementById("sourceGrid").innerHTML=items.map(x=>'<a class="source" href="'+x[2]+'" target="_blank" rel="noopener"><b>'+x[0]+'</b><small>'+x[1]+'</small></a>').join("");
+ document.getElementById("screenTitle").textContent=sport==="all"?"عالم الرياضة 365":titles[sport].replace("مصادر ","");
+ const primary=sport==="all"?"https://www.uefa.tv/":(items[0]?.[2]||"https://www.uefa.tv/");
+ document.getElementById("watchLink").href=primary;
+ document.getElementById("watchLink").textContent=sport==="all"?"افتح UEFA.tv الرسمي":"افتح المصدر الرسمي";
+ document.getElementById("player").style.display="none";
+ document.getElementById("player").removeAttribute("src");
+ document.getElementById("placeholder").style.display="block";
+}
+document.querySelector(".strip").addEventListener("click",e=>{const b=e.target.closest("button[data-sport]");if(b)render(b.dataset.sport)});
+render("all");
+</script>
+</body>
+</html>
