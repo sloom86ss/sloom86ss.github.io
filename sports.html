@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#100719"><title>الشاشة الرياضية | SLOOM 365</title>
+<meta name="theme-color" content="#100719"><title>عالم الرياضة 365 | شاشة الفيديوهات الرياضية</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark;--bg:#08050e;--panel:#140d20;--line:#59347b;--purple:#a855df;--white:#f8f3ff;--muted:#b8a9c7}
@@ -24,14 +24,14 @@ main{width:min(1500px,100%);margin:auto;padding:clamp(12px,2.5vw,30px)}
 @media(max-width:600px){.screen{aspect-ratio:16/10;min-height:240px}.toolbar{align-items:stretch}.sports{width:100%}.inputrow{flex-direction:column}.inputrow button{padding:11px}}
 </style></head>
 <body>
-<header class="top"><div class="brand">الشاشة الرياضية الكبيرة<small>SLOOM SPORTS</small></div><a class="back" href="index.html">↩ العودة إلى سلوم كورة 365</a></header>
+<header class="top"><div class="brand">عالم الرياضة 365<small>WORLD SPORTS 365</small></div><a class="back" href="index.html">↩ العودة إلى سلوم كورة 365</a></header>
 <main>
 <section class="screen" id="screen">
 <iframe id="player" title="مشغل الفيديو الرياضي" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-<div class="screen-empty" id="empty"><div class="symbol">▶</div><h1>شاشتك الرياضية</h1><p>اختر الرياضة ثم افتح مقطعاً رسمياً قابلاً للتضمين لعرضه هنا</p></div>
+<div class="screen-empty" id="empty"><div class="symbol">▶</div><h1>عالم الرياضة 365</h1><p>اختر الرياضة ثم افتح مقطعاً رسمياً قابلاً للتضمين لعرضه هنا</p></div>
 </section>
 <div class="toolbar"><div class="sports" id="sports">
-<button class="active" data-sport="football">⚽ كرة القدم</button><button data-sport="basketball">🏀 كرة السلة</button><button data-sport="tennis">🎾 التنس</button><button data-sport="racing">🏎️ سباقات السيارات</button><button data-sport="volleyball">🏐 الكرة الطائرة</button><button data-sport="cricket">🏏 الكريكيت</button>
+<button class="active" data-sport="football">⚽ كرة القدم</button><button data-sport="basketball">🏀 كرة السلة</button><button data-sport="tennis">🎾 التنس</button><button data-sport="racing">🏎️ سباقات السيارات</button><button data-sport="volleyball">🏐 الكرة الطائرة</button><button data-sport="cricket">🏏 الكريكيت</button><button data-sport="combat">🥊 القتال</button><button data-sport="athletics">🏃 ألعاب القوى</button><button data-sport="rugby">🏉 الرجبي</button><button data-sport="badminton">🏸 الريشة الطائرة</button>
 </div><button class="action primary" id="full">⛶ تكبير الشاشة</button></div>
 <section class="source-area"><h2 id="sourceTitle">مقاطع كرة القدم الرسمية</h2><p>الصق رابط فيديو رسمي من YouTube لعرضه داخل الشاشة الكبيرة، أو افتح القنوات الرسمية أدناه لاختيار مقطع.</p>
 <div class="inputrow"><input id="videoUrl" type="url" inputmode="url" placeholder="https://www.youtube.com/watch?v=..."><button id="load">تشغيل داخل الشاشة</button></div>
@@ -46,7 +46,7 @@ basketball:{title:'مقاطع كرة السلة الرسمية',links:[['NBA ا�
 tennis:{title:'مقاطع التنس الرسمية',links:[['ATP Tour','https://www.youtube.com/@ATPTour'],['WTA Tennis','https://www.youtube.com/@WTA']]},
 racing:{title:'مقاطع سباقات السيارات الرسمية',links:[['Formula 1','https://www.youtube.com/@Formula1'],['MotoGP','https://www.youtube.com/@MotoGP']]},
 volleyball:{title:'مقاطع الكرة الطائرة الرسمية',links:[['Volleyball World','https://www.youtube.com/@VolleyballWorld']]},
-cricket:{title:'مقاطع الكريكيت الرسمية',links:[['ICC','https://www.youtube.com/@ICC']]}
+cricket:{title:'مقاطع الكريكيت الرسمية',links:[['ICC','https://www.youtube.com/@ICC']]},combat:{title:'مقاطع الرياضات القتالية الرسمية',links:[['UFC','https://www.youtube.com/@UFC'],['Olympics','https://www.youtube.com/@Olympics']]},athletics:{title:'مقاطع ألعاب القوى الرسمية',links:[['World Athletics','https://www.youtube.com/@WorldAthletics'],['Olympics','https://www.youtube.com/@Olympics']]},rugby:{title:'مقاطع الرجبي الرسمية',links:[['World Rugby','https://www.youtube.com/@WorldRugby']]},badminton:{title:'مقاطع الريشة الطائرة الرسمية',links:[['Badminton World Federation','https://www.youtube.com/@bwftv']]}
 };
 document.querySelectorAll('[data-sport]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-sport]').forEach(x=>x.classList.toggle('active',x===b));const set=channelSets[b.dataset.sport];document.getElementById('sourceTitle').textContent=set.title;document.getElementById('channels').innerHTML=set.links.map(x=>'<a href="'+x[1]+'" target="_blank" rel="noopener">'+x[0]+'</a>').join('')}));
 function getVideoId(value){try{const u=new URL(value);if(u.hostname==='youtu.be')return u.pathname.slice(1);if(u.hostname.endsWith('youtube.com')){if(u.pathname==='/watch')return u.searchParams.get('v');if(u.pathname.startsWith('/embed/'))return u.pathname.split('/')[2];if(u.pathname.startsWith('/shorts/'))return u.pathname.split('/')[2]}}catch(e){}return null}
