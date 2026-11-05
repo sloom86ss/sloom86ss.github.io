@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#090711">
-<meta name="description" content="عالم الرياضة 365 — شاشة رياضية متعددة الرياضات ومصادر رسمية مجانية">
+<meta name="description" content="عالم الرياضة 365 — شاشة رياضية متعددة الرياضات ومصادر رياضية رسمية">
 <title>عالم الرياضة 365</title>
 <style>
 :root{color-scheme:dark;--bg:#090711;--panel:#151222;--line:#302747;--purple:#9b72ff;--text:#f7f3ff;--muted:#b6adc9}
@@ -67,11 +67,11 @@ footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
 <h2 id="sourceHeading">مصادر رياضية رسمية</h2>
 <div class="source-grid" id="sourceGrid"></div>
 </section>
-<footer>عالم الرياضة 365 · مصادر رسمية فقط · لا يتضمن YouTube أو Formula 1</footer>
+<footer>عالم الرياضة 365 · مصادر رسمية فقط · لا يتضمن YouTube أو FIFA أو Formula 1</footer>
 </main>
 <script>
 const catalogue={
- football:[["UEFA.tv","ملخصات ومحتوى مسابقات الاتحاد الأوروبي حسب التوفر","https://www.uefa.tv/"],["FIFA+","مباريات ومحتوى أرشيفي وبث مجاني حسب المنطقة","https://www.plus.fifa.com/"],["AFC","محتوى ومسابقات الاتحاد الآسيوي","https://www.the-afc.com/"]],
+ football:[["UEFA.tv","ملخصات ومحتوى مسابقات الاتحاد الأوروبي حسب التوفر","https://www.uefa.tv/"],["AFC","محتوى ومسابقات الاتحاد الآسيوي","https://www.the-afc.com/"]],
  basketball:[["FIBA","محتوى كرة السلة الدولية ومقاطع رسمية","https://www.fiba.basketball/"],["NBA","ملخصات ومقاطع رسمية؛ البث الحي قد يتطلب اشتراكاً","https://www.nba.com/watch"],["EuroLeague","مقاطع وملخصات رسمية","https://www.euroleaguebasketball.net/"]],
  tennis:[["ATP Tour","مقاطع وملخصات التنس للرجال","https://www.atptour.com/"],["WTA","مقاطع وملخصات التنس للسيدات","https://www.wtatennis.com/"],["ITF","محتوى الاتحاد الدولي للتنس","https://www.itftennis.com/"]],
  cricket:[["ICC","مقاطع وملخصات الكريكيت الرسمية","https://www.icc-cricket.com/"],["ECB","محتوى الكريكيت الإنجليزي","https://www.ecb.co.uk/"]],
@@ -80,7 +80,7 @@ const catalogue={
  volleyball:[["Volleyball World","مقاطع ومسابقات الكرة الطائرة","https://www.volleyballworld.com/"],["FIVB","الاتحاد الدولي للكرة الطائرة","https://www.fivb.com/"]],
  boxing:[["World Boxing","محتوى الملاكمة الدولية","https://worldboxing.org/"],["IBA","محتوى الاتحاد الدولي للملاكمة","https://www.iba.sport/"]],
  athletics:[["World Athletics","مقاطع وملخصات ألعاب القوى","https://worldathletics.org/"],["Olympics","مقاطع رياضية أولمبية رسمية","https://olympics.com/"]],
- futsal:[["FIFA","محتوى كرة الصالات ضمن منصات FIFA","https://www.fifa.com/"],["AFC","بطولات ومحتوى كرة الصالات الآسيوية","https://www.the-afc.com/"]]
+ futsal:[["AFC","بطولات ومحتوى كرة الصالات الآسيوية","https://www.the-afc.com/"]]
 };
 const titles={all:"مصادر رياضية رسمية",football:"مصادر كرة القدم",basketball:"مصادر كرة السلة",tennis:"مصادر التنس",cricket:"مصادر الكريكيت",baseball:"مصادر البيسبول",hockey:"مصادر الهوكي",volleyball:"مصادر الكرة الطائرة",boxing:"مصادر الملاكمة",athletics:"مصادر ألعاب القوى",futsal:"مصادر الفوتسال"};
 function render(sport){
