@@ -50,27 +50,27 @@ main{width:100%;max-width:1900px;margin:auto;padding:5px clamp(4px,1vw,16px) 24p
 <section class="source-area"><h2 id="sourceTitle">أحدث مقاطع كرة القدم</h2><p>تُجلب المقاطع تلقائياً من قنوات رياضية رسمية. اختر أي مقطع من القائمة لتشغيله في الشاشة الكبيرة.</p>
 <div class="clips" id="clips"></div>
 <div class="channels" id="channels"></div>
-<p class="note">المقاطع من قنوات رياضية رسمية على YouTube وليست بثاً مباشراً مضموناً. يبدأ التشغيل تلقائياً عند اختيار الرياضة إذا سمح المتصفح، وقد يبدأ صامتاً. يعتمد جلب المقاطع على خدمة وسيطة عامة لقراءة RSS؛ إذا تعطلت الخدمة فلن تظهر المقاطع مؤقتاً. التضمين والتوفر يخضعان لحقوق الناشر وقيود الدولة.</p></section>
+<p class="note">المقاطع من قنوات رياضية رسمية على YouTube. يحاول الموقع استخدام أكثر من وسيط لجلب خلاصات القنوات عند تعطل أحدها. لا يمكن ضمان التضمين لكل فيديو؛ إذا منعه الناشر أو لم يتوفر في منطقتك فسيتجاوزه المشغل. لا يوجد بث مباشر مضمون.</p></section>
 </main>
 <script>
 const channelSets={
-football:{title:'أحدث مقاطع كرة القدم',sources:[['FIFA','FIFA'],['UEFA','UEFA'],['الدوري الإنجليزي','premierleague']]},
-basketball:{title:'أحدث مقاطع كرة السلة',sources:[['NBA','NBA'],['FIBA','FIBA']]},
+football:{title:'أحدث مقاطع كرة القدم',sources:[['FIFA','FIFA'],['UEFA','UEFA'],['الدوري الإنجليزي','premierleague'],['LaLiga','LaLiga'],['Bundesliga','bundesliga']]},
+basketball:{title:'أحدث مقاطع كرة السلة',sources:[['NBA','NBA'],['FIBA','FIBA'],['EuroLeague','EuroLeague']]},
 tennis:{title:'أحدث مقاطع التنس',sources:[['ATP Tour','ATPTour'],['WTA Tennis','WTA']]},
-racing:{title:'أحدث مقاطع سباقات السيارات',sources:[['Formula 1','Formula1'],['MotoGP','MotoGP']]},
+racing:{title:'أحدث مقاطع سباقات السيارات',sources:[['Formula 1','Formula1'],['MotoGP','MotoGP'],['FIA','FIAOfficial']]},
 volleyball:{title:'أحدث مقاطع الكرة الطائرة',sources:[['Volleyball World','VolleyballWorld']]},
-cricket:{title:'أحدث مقاطع الكريكيت',sources:[['ICC','ICC']]},
-combat:{title:'أحدث مقاطع الرياضات القتالية',sources:[['UFC','UFC'],['Olympics','Olympics']]},
+cricket:{title:'أحدث مقاطع الكريكيت',sources:[['ICC','ICC'],['cricket.com.au','cricketcomau']]},
+combat:{title:'أحدث مقاطع الرياضات القتالية',sources:[['UFC','UFC'],['ONE Championship','onechampionship'],['Olympics','Olympics']]},
 athletics:{title:'أحدث مقاطع ألعاب القوى',sources:[['World Athletics','WorldAthletics'],['Olympics','Olympics']]},
-rugby:{title:'أحدث مقاطع الرجبي',sources:[['World Rugby','WorldRugby']]},
-badminton:{title:'أحدث مقاطع الريشة الطائرة',sources:[['Badminton World Federation','bwftv']]},
+rugby:{title:'أحدث مقاطع الرجبي',sources:[['World Rugby','WorldRugby'],['Six Nations','SixNationsRugby']]},
+badminton:{title:'أحدث مقاطع الريشة الطائرة',sources:[['Badminton World Federation','BWFtv']]},
 americanfootball:{title:'أحدث مقاطع كرة القدم الأمريكية',sources:[['NFL','NFL']]},
 baseball:{title:'أحدث مقاطع البيسبول',sources:[['MLB','MLB']]},
 hockey:{title:'أحدث مقاطع هوكي الجليد',sources:[['NHL','NHL']]},
-golf:{title:'أحدث مقاطع الغولف',sources:[['PGA TOUR','PGATOUR']]},
+golf:{title:'أحدث مقاطع الغولف',sources:[['PGA TOUR','PGATOUR'],['DP World Tour','DPWorldTour']]},
 swimming:{title:'أحدث مقاطع السباحة والرياضات المائية',sources:[['World Aquatics','WorldAquatics']]},
-cycling:{title:'أحدث مقاطع الدراجات',sources:[['UCI','UCI_Cycling']]},
-tabletennis:{title:'أحدث مقاطع تنس الطاولة',sources:[['ITTF','ITTFWorld']]},
+cycling:{title:'أحدث مقاطع الدراجات',sources:[['UCI','UCI_Cycling'],['Tour de France','LeTourDeFrance']]},
+tabletennis:{title:'أحدث مقاطع تنس الطاولة',sources:[['World Table Tennis','WTTGlobal']]},
 handball:{title:'أحدث مقاطع كرة اليد',sources:[['IHF','ihfworldhandball']]},
 taekwondo:{title:'أحدث مقاطع التايكوندو',sources:[['World Taekwondo','WorldTaekwondo']]}
 };
@@ -79,7 +79,11 @@ const HISTORY_KEY='worldSports365_watched_v1';
 function readHistory(){try{return new Set(JSON.parse(localStorage.getItem(HISTORY_KEY)||'[]'))}catch{return new Set()}}
 function rememberClip(id){try{const h=[...readHistory()].filter(x=>x!==id);h.push(id);localStorage.setItem(HISTORY_KEY,JSON.stringify(h.slice(-120)))}catch{}}
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-async function fetchText(url){const res=await fetch('https://proxy.cors.dev/'+url,{cache:'no-store'});if(!res.ok)throw Error('feed '+res.status);return await res.text()}
+async function fetchText(url){
+ const targets=['https://proxy.cors.dev/'+url,'https://api.allorigins.win/raw?url='+encodeURIComponent(url),'https://corsproxy.io/?url='+encodeURIComponent(url)];let lastError;
+ for(const target of targets){try{const res=await fetch(target,{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);const body=await res.text();if(!body||body.length<80)throw Error('empty response');return body}catch(err){lastError=err}}
+ throw lastError||Error('All public feed relays failed');
+}
 async function resolveChannel(handle){
  if(channelIds[handle])return channelIds[handle];
  const html=await fetchText('https://www.youtube.com/@'+encodeURIComponent(handle)+'?hl=en');
