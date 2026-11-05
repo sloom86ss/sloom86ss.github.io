@@ -39,17 +39,17 @@ footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
 </head>
 <body>
 <main>
-<header><div class="topline"><div class="brand">عالم الرياضة <span>365</span></div><a class="action" href="https://sloom86ss.github.io/" aria-label="الانتقال إلى سلوم كورة 365">⌂ سلوم كورة 365</a><div class="tag">الإشعارات</div></div><section class="hero"><div class="hero-player left"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Raphinha.jpg" alt="رافينيا" loading="lazy"><b>رافينيا</b></div><div class="hero-center"><div class="hero-crown">🏆</div><h1>عالم الرياضة <span>365</span></h1><p>معاً .. لكل الرياضات</p><div class="hero-ball">⚽</div></div><div class="hero-player right"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lamine_Yamal_in_2025_(cropped).jpg" alt="لامين يامال" loading="lazy"><b>لامين يامال</b></div><div class="hero-player left lower"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lionel_Messi_close-up.jpg" alt="ليونيل ميسي" loading="lazy"><b>ليونيل ميسي</b></div><div class="hero-player right lower"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cristiano_Ronaldo_2018.jpg" alt="كريستيانو رونالدو" loading="lazy"><b>كريستيانو رونالدو</b></div></section>
+<header><div class="topline"><div class="brand">عالم الرياضة <span>365</span></div><a class="action" href="https://sloom86ss.github.io/" aria-label="الانتقال إلى سلوم كورة 365">⌂ سلوم كورة 365</a><button class="action" id="notifyBtn" type="button">🔔 تفعيل التنبيهات</button></div><section class="hero"><div class="hero-player left"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Raphinha.jpg" alt="رافينيا" loading="lazy"><b>رافينيا</b></div><div class="hero-center"><div class="hero-crown">🏆</div><h1>عالم الرياضة <span>365</span></h1><p>معاً .. لكل الرياضات</p><div class="hero-ball">⚽</div></div><div class="hero-player right"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lamine_Yamal_in_2025_(cropped).jpg" alt="لامين يامال" loading="lazy"><b>لامين يامال</b></div><div class="hero-player left lower"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lionel_Messi_close-up.jpg" alt="ليونيل ميسي" loading="lazy"><b>ليونيل ميسي</b></div><div class="hero-player right lower"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cristiano_Ronaldo_2018.jpg" alt="كريستيانو رونالدو" loading="lazy"><b>كريستيانو رونالدو</b></div></section>
 <section class="screen" aria-label="شاشة الفيديو الرياضي">
 <div class="placeholder" id="placeholder">
 <div class="ball">🏆</div>
 <h1 id="screenTitle">عالم الرياضة 365</h1>
-<p id="screenText">اختر رياضتك، ثم افتح المصدر الرسمي لمشاهدة البث أو المقاطع المتاحة مجاناً. لا نعرض روابط بث مجهولة أو محتوى غير مرخّص.</p>
-<div class="screen-actions"><a class="action primary" id="watchLink" href="https://www.uefa.tv/" target="_blank" rel="noopener">افتح UEFA.tv الرسمي</a></div>
+<p id="screenText">اختر الرياضة للوصول إلى صفحات المشاهدة الرسمية وجدول الناقلين في بلدك. لا نضع بثاً داخل الشاشة إلا إذا كان تضمينه مصرحاً به من صاحب الحقوق.</p>
+<div class="screen-actions"><a class="action primary" id="watchLink" href="https://www.uefa.com/uefachampionsleague/news/0253-0d82037aaedd-f371c464f919-1000--where-to-watch-tonight-s-s" target="_blank" rel="noopener">اعرف أين تشاهد البث رسمياً</a></div>
 </div>
 <iframe id="player" title="مشغل المصدر الرسمي" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
 </section>
-<p class="notice" id="notice">البث المباشر يعتمد على حقوق النشر وتوفره في بلدك. بعض المصادر لا تسمح بالتضمين داخل المواقع؛ عندها يفتح المصدر الرسمي مباشرة.</p>
+<p class="notice" id="notice">مصداقية المشاهدة أولاً: نربطك بمالك الحقوق أو الناقل الذي يعلنه رسمياً. المجانية والتوفر الجغرافي يختلفان حسب المباراة والبلد؛ لا نعد ببث مجاني لكل مباراة ولا نستخدم روابط مقرصنة.</p>
 <nav class="strip" aria-label="اختيار الرياضة">
 <button class="sport" aria-pressed="true" data-sport="all">كل الرياضات</button>
 <button class="sport" aria-pressed="false" data-sport="football">كرة القدم</button>
@@ -64,40 +64,49 @@ footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
 <button class="sport" aria-pressed="false" data-sport="futsal">الفوتسال</button>
 </nav>
 <section class="sources">
-<h2 id="sourceHeading">مصادر رياضية رسمية</h2>
+<h2 id="sourceHeading">مصادر وطرق المشاهدة الرسمية</h2>
 <div class="source-grid" id="sourceGrid"></div>
 </section>
-<footer>عالم الرياضة 365 · مصادر رسمية فقط · لا يتضمن YouTube أو FIFA أو Formula 1</footer>
+<section class="sources" aria-label="معايير الموثوقية"><h2>كيف نضمن موثوقية روابط المشاهدة؟</h2><div class="source-grid"><div class="source"><b>١. صاحب الحقوق أولاً</b><small>نعتمد صفحات الاتحادات والبطولات الرسمية لتحديد الناقل المعتمد.</small></div><div class="source"><b>٢. توضيح حالة الوصول</b><small>قد يكون البث مجانياً أو باشتراك أو محجوباً جغرافياً؛ نوضح ذلك ولا نصفه بالمجاني دون تأكيد.</small></div><div class="source"><b>٣. لا روابط مجهولة</b><small>لا نستخدم مواقع البث غير المرخصة أو روابط إعادة التوجيه المشبوهة.</small></div></div></section><footer>عالم الرياضة 365 · دليل مصادر رسمية · آخر مراجعة للروابط: 5 نوفمبر 2026 · لا يتضمن YouTube أو FIFA أو Formula 1</footer>
 </main>
 <script>
 const catalogue={
- football:[["UEFA.tv","ملخصات ومحتوى مسابقات الاتحاد الأوروبي حسب التوفر","https://www.uefa.tv/"],["AFC","محتوى ومسابقات الاتحاد الآسيوي","https://www.the-afc.com/"]],
- basketball:[["FIBA","محتوى كرة السلة الدولية ومقاطع رسمية","https://www.fiba.basketball/"],["NBA","ملخصات ومقاطع رسمية؛ البث الحي قد يتطلب اشتراكاً","https://www.nba.com/watch"],["EuroLeague","مقاطع وملخصات رسمية","https://www.euroleaguebasketball.net/"]],
- tennis:[["ATP Tour","مقاطع وملخصات التنس للرجال","https://www.atptour.com/"],["WTA","مقاطع وملخصات التنس للسيدات","https://www.wtatennis.com/"],["ITF","محتوى الاتحاد الدولي للتنس","https://www.itftennis.com/"]],
- cricket:[["ICC","مقاطع وملخصات الكريكيت الرسمية","https://www.icc-cricket.com/"],["ECB","محتوى الكريكيت الإنجليزي","https://www.ecb.co.uk/"]],
- baseball:[["MLB","ملخصات ومقاطع البيسبول الرسمية","https://www.mlb.com/video"],["WBSC","محتوى الاتحاد الدولي للبيسبول والكرة اللينة","https://www.wbsc.org/"]],
- hockey:[["NHL","ملخصات ومقاطع الهوكي الرسمية","https://www.nhl.com/video"],["IIHF","محتوى الاتحاد الدولي لهوكي الجليد","https://www.iihf.com/"]],
- volleyball:[["Volleyball World","مقاطع ومسابقات الكرة الطائرة","https://www.volleyballworld.com/"],["FIVB","الاتحاد الدولي للكرة الطائرة","https://www.fivb.com/"]],
- boxing:[["World Boxing","محتوى الملاكمة الدولية","https://worldboxing.org/"],["IBA","محتوى الاتحاد الدولي للملاكمة","https://www.iba.sport/"]],
- athletics:[["World Athletics","مقاطع وملخصات ألعاب القوى","https://worldathletics.org/"],["Olympics","مقاطع رياضية أولمبية رسمية","https://olympics.com/"]],
- futsal:[["AFC","بطولات ومحتوى كرة الصالات الآسيوية","https://www.the-afc.com/"]]
+ football:[["UEFA.tv","مقاطع ومباريات مختارة؛ دوري الأبطال عادة عبر الناقل المحلي","https://www.uefa.tv/"],["دليل ناقلي UEFA","اعرف الناقل الرسمي في عُمان وبقية الدول","https://www.uefa.com/uefachampionsleague/news/0253-0d82037aaedd-f371c464f919-1000--where-to-watch-tonight-s-s"],["الاتحاد الآسيوي AFC","موقع البطولات والأخبار والروابط الرسمية","https://www.the-afc.com/"]],
+ basketball:[["FIBA","صفحات البطولات وملخصات كرة السلة","https://www.fiba.basketball/"],["دليل مشاهدة FIBA","الناقلون المحليون والبث عبر Courtside 1891/DAZN حسب البلد","https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/where-to-watch"],["NBA","ملخصات ومشاهدة رسمية؛ بعض المحتوى باشتراك","https://www.nba.com/watch"]],
+ tennis:[["ATP Tour","الموقع الرسمي وجدول البطولات","https://www.atptour.com/"],["WTA","الموقع الرسمي لتنس السيدات","https://www.wtatennis.com/"],["ITF","الاتحاد الدولي للتنس","https://www.itftennis.com/"]],
+ cricket:[["ICC","موقع الاتحاد الدولي وجدول البطولات","https://www.icc-cricket.com/"],["ECB","الموقع الرسمي للكريكيت الإنجليزي","https://www.ecb.co.uk/"]],
+ baseball:[["MLB","مقاطع وملخصات رسمية؛ البث المباشر حسب الحقوق","https://www.mlb.com/video"],["WBSC","الاتحاد الدولي للبيسبول والكرة اللينة","https://www.wbsc.org/"]],
+ hockey:[["NHL","مقاطع وملخصات رسمية؛ البث حسب المنطقة","https://www.nhl.com/video"],["IIHF","الاتحاد الدولي لهوكي الجليد","https://www.iihf.com/"]],
+ volleyball:[["Volleyball World","منصة VBTV للبث المباشر والمحتوى؛ قد تتطلب اشتراكاً","https://tv.volleyballworld.com/"],["FIVB","الاتحاد الدولي للكرة الطائرة","https://www.fivb.com/"]],
+ boxing:[["World Boxing","الاتحاد العالمي للملاكمة وأخباره الرسمية","https://worldboxing.org/"],["IBA","الموقع الرسمي للاتحاد الدولي للملاكمة","https://www.iba.sport/"]],
+ athletics:[["World Athletics","النتائج والملخصات ومعلومات التغطية","https://worldathletics.org/"],["Olympics","المحتوى الأولمبي الرسمي حسب التوفر","https://olympics.com/"]],
+ futsal:[["AFC","بطولات ومحتوى كرة الصالات الآسيوية","https://www.the-afc.com/"],["UEFA Futsal","بطولات ومقاطع كرة الصالات الأوروبية","https://www.uefa.com/futsal/"]]
 };
-const titles={all:"مصادر رياضية رسمية",football:"مصادر كرة القدم",basketball:"مصادر كرة السلة",tennis:"مصادر التنس",cricket:"مصادر الكريكيت",baseball:"مصادر البيسبول",hockey:"مصادر الهوكي",volleyball:"مصادر الكرة الطائرة",boxing:"مصادر الملاكمة",athletics:"مصادر ألعاب القوى",futsal:"مصادر الفوتسال"};
+const titles={all:"مصادر وطرق المشاهدة الرسمية",football:"مصادر ومشاهدة كرة القدم",basketball:"مصادر ومشاهدة كرة السلة",tennis:"مصادر ومشاهدة التنس",cricket:"مصادر ومشاهدة الكريكيت",baseball:"مصادر ومشاهدة البيسبول",hockey:"مصادر ومشاهدة الهوكي",volleyball:"مصادر ومشاهدة الكرة الطائرة",boxing:"مصادر ومشاهدة الملاكمة",athletics:"مصادر ومشاهدة ألعاب القوى",futsal:"مصادر ومشاهدة الفوتسال"};
 function render(sport){
  document.querySelectorAll(".sport").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.sport===sport)));
  const items=sport==="all"?[...catalogue.football.slice(0,2),...catalogue.basketball.slice(0,1),...catalogue.tennis.slice(0,1),...catalogue.cricket.slice(0,1),...catalogue.baseball.slice(0,1),...catalogue.hockey.slice(0,1),...catalogue.volleyball.slice(0,1),...catalogue.athletics.slice(0,1)]:catalogue[sport]||[];
  document.getElementById("sourceHeading").textContent=titles[sport]||titles.all;
  document.getElementById("sourceGrid").innerHTML=items.map(x=>'<a class="source" href="'+x[2]+'" target="_blank" rel="noopener"><b>'+x[0]+'</b><small>'+x[1]+'</small></a>').join("");
  document.getElementById("screenTitle").textContent=sport==="all"?"عالم الرياضة 365":titles[sport].replace("مصادر ","");
- const primary=sport==="all"?"https://www.uefa.tv/":(items[0]?.[2]||"https://www.uefa.tv/");
+ const primary=sport==="all"?"https://www.uefa.com/uefachampionsleague/news/0253-0d82037aaedd-f371c464f919-1000--where-to-watch-tonight-s-s":(items[1]?.[2]||items[0]?.[2]||"https://www.uefa.tv/");
  document.getElementById("watchLink").href=primary;
- document.getElementById("watchLink").textContent=sport==="all"?"افتح UEFA.tv الرسمي":"افتح المصدر الرسمي";
+ document.getElementById("watchLink").textContent=sport==="all"?"اعرف الناقل الرسمي حسب بلدك":"افتح دليل/مصدر المشاهدة الرسمي";
  document.getElementById("player").style.display="none";
  document.getElementById("player").removeAttribute("src");
  document.getElementById("placeholder").style.display="block";
 }
 document.querySelector(".strip").addEventListener("click",e=>{const b=e.target.closest("button[data-sport]");if(b)render(b.dataset.sport)});
 render("all");
+document.getElementById("notifyBtn").addEventListener("click",async()=>{
+ const btn=document.getElementById("notifyBtn");
+ if(!("Notification" in window)){btn.textContent="التنبيهات غير مدعومة";return;}
+ if(Notification.permission==="granted"){new Notification("عالم الرياضة 365",{body:"تم تفعيل تنبيهات الموقع على هذا الجهاز."});btn.textContent="✓ التنبيهات مفعّلة";return;}
+ if(Notification.permission==="denied"){btn.textContent="فعّلها من إعدادات المتصفح";return;}
+ const permission=await Notification.requestPermission();
+ if(permission==="granted"){new Notification("عالم الرياضة 365",{body:"تم تفعيل تنبيهات الموقع على هذا الجهاز."});btn.textContent="✓ التنبيهات مفعّلة";}
+ else btn.textContent="لم يتم السماح بالتنبيهات";
+});
 </script>
 </body>
 </html>
