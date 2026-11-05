@@ -50,20 +50,20 @@ main{width:100%;max-width:1900px;margin:auto;padding:5px clamp(4px,1vw,16px) 24p
 <section class="source-area"><h2 id="sourceTitle">أحدث مقاطع كرة القدم</h2><p>تُجلب المقاطع تلقائياً من قنوات رياضية رسمية. اختر أي مقطع من القائمة لتشغيله في الشاشة الكبيرة.</p>
 <div class="clips" id="clips"></div>
 <div class="channels" id="channels"></div>
-<p class="note">المقاطع من نتائج البحث العامة على YouTube وليست بثاً مباشراً مضموناً. يبدأ التشغيل تلقائياً عند اختيار الرياضة إذا سمح المتصفح، وقد يبدأ صامتاً. يعتمد جلب المقاطع على خدمة وسيطة عامة لقراءة RSS؛ إذا تعطلت الخدمة فلن تظهر المقاطع مؤقتاً. التضمين والتوفر يخضعان لحقوق الناشر وقيود الدولة.</p></section>
+<p class="note">المقاطع من قنوات رياضية رسمية على YouTube وليست بثاً مباشراً مضموناً. يبدأ التشغيل تلقائياً عند اختيار الرياضة إذا سمح المتصفح، وقد يبدأ صامتاً. يعتمد جلب المقاطع على خدمة وسيطة عامة لقراءة RSS؛ إذا تعطلت الخدمة فلن تظهر المقاطع مؤقتاً. التضمين والتوفر يخضعان لحقوق الناشر وقيود الدولة.</p></section>
 </main>
 <script>
 const channelSets={
-football:{title:'أحدث مقاطع كرة القدم',queries:['كرة القدم أهداف وملخصات','football highlights goals']},
-basketball:{title:'أحدث مقاطع كرة السلة',queries:['كرة السلة ملخصات ومهارات','basketball highlights']},
-tennis:{title:'أحدث مقاطع التنس',queries:['التنس ملخصات ومهارات','tennis highlights']},
-racing:{title:'أحدث مقاطع سباقات السيارات',queries:['سباقات السيارات ملخصات','motorsport racing highlights']},
-volleyball:{title:'أحدث مقاطع الكرة الطائرة',queries:['الكرة الطائرة ملخصات ومهارات','volleyball highlights']},
-cricket:{title:'أحدث مقاطع الكريكيت',queries:['الكريكيت ملخصات','cricket highlights']},
-combat:{title:'أحدث مقاطع الرياضات القتالية',queries:['الملاكمة والفنون القتالية ملخصات','UFC boxing MMA highlights']},
-athletics:{title:'أحدث مقاطع ألعاب القوى',queries:['ألعاب القوى ملخصات','athletics track and field highlights']},
-rugby:{title:'أحدث مقاطع الرجبي',queries:['الرجبي ملخصات','rugby highlights']},
-badminton:{title:'أحدث مقاطع الريشة الطائرة',queries:['الريشة الطائرة ملخصات ومهارات','badminton highlights']}
+football:{title:'أحدث مقاطع كرة القدم',sources:[['FIFA','FIFA'],['UEFA','UEFA'],['الدوري الإنجليزي','premierleague']]},
+basketball:{title:'أحدث مقاطع كرة السلة',sources:[['NBA','NBA'],['FIBA','FIBA']]},
+tennis:{title:'أحدث مقاطع التنس',sources:[['ATP Tour','ATPTour'],['WTA Tennis','WTA']]},
+racing:{title:'أحدث مقاطع سباقات السيارات',sources:[['Formula 1','Formula1'],['MotoGP','MotoGP']]},
+volleyball:{title:'أحدث مقاطع الكرة الطائرة',sources:[['Volleyball World','VolleyballWorld']]},
+cricket:{title:'أحدث مقاطع الكريكيت',sources:[['ICC','ICC']]},
+combat:{title:'أحدث مقاطع الرياضات القتالية',sources:[['UFC','UFC'],['Olympics','Olympics']]},
+athletics:{title:'أحدث مقاطع ألعاب القوى',sources:[['World Athletics','WorldAthletics'],['Olympics','Olympics']]},
+rugby:{title:'أحدث مقاطع الرجبي',sources:[['World Rugby','WorldRugby']]},
+badminton:{title:'أحدث مقاطع الريشة الطائرة',sources:[['Badminton World Federation','bwftv']]}
 };
 const channelIds={};let activeSport='football',requestNo=0;
 const HISTORY_KEY='worldSports365_watched_v1';
@@ -71,18 +71,22 @@ function readHistory(){try{return new Set(JSON.parse(localStorage.getItem(HISTOR
 function rememberClip(id){try{const h=[...readHistory()].filter(x=>x!==id);h.push(id);localStorage.setItem(HISTORY_KEY,JSON.stringify(h.slice(-120)))}catch{}}
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 async function fetchText(url){const res=await fetch('https://proxy.cors.dev/'+url,{cache:'no-store'});if(!res.ok)throw Error('feed '+res.status);return await res.text()}
-async function getSearchVideos(query,label){
- const target='https://www.youtube.com/results?search_query='+encodeURIComponent(query);
- const xml=await fetchText('https://openrss.org/'+target);
+async function resolveChannel(handle){
+ if(channelIds[handle])return channelIds[handle];
+ const html=await fetchText('https://www.youtube.com/@'+encodeURIComponent(handle));
+ const doc=new DOMParser().parseFromString(html,'text/html');
+ let id=doc.querySelector('meta[itemprop="channelId"]')?.content||doc.querySelector('meta[property="og:url"]')?.content?.match(/channel\/(UC[\w-]+)/)?.[1]||doc.documentElement.innerHTML.match(/"channelId":"(UC[\w-]+)"/)?.[1];
+ if(!id)throw Error('channel id missing: '+handle);channelIds[handle]=id;return id;
+}
+async function getLatest(handle,label){
+ const id=await resolveChannel(handle);
+ const xml=await fetchText('https://www.youtube.com/feeds/videos.xml?channel_id='+encodeURIComponent(id));
  const doc=new DOMParser().parseFromString(xml,'application/xml');
- if(doc.querySelector('parsererror'))throw Error('Search RSS parse error');
- return [...doc.getElementsByTagName('item'),...doc.getElementsByTagName('entry')].slice(0,12).map(entry=>{
+ if(doc.querySelector('parsererror'))throw Error('RSS parse error');
+ return [...doc.getElementsByTagName('entry')].slice(0,8).map(entry=>{
+  const vid=entry.getElementsByTagNameNS('http://www.youtube.com/xml/schemas/2015','videoId')[0]?.textContent||entry.getElementsByTagName('yt:videoId')[0]?.textContent;
   const title=entry.getElementsByTagName('title')[0]?.textContent||'مقطع رياضي';
-  const link=entry.getElementsByTagName('link')[0]?.textContent||entry.getElementsByTagName('link')[0]?.getAttribute('href')||'';
-  const guid=entry.getElementsByTagName('guid')[0]?.textContent||entry.getElementsByTagName('id')[0]?.textContent||'';
-  const url=link||guid;
-  const vid=url.match(/[?&]v=([A-Za-z0-9_-]{11})/)?.[1]||url.match(/youtu\\.be\\/([A-Za-z0-9_-]{11})/)?.[1]||guid.match(/yt:video:([A-Za-z0-9_-]{11})/)?.[1];
-  const date=entry.getElementsByTagName('pubDate')[0]?.textContent||entry.getElementsByTagName('published')[0]?.textContent||entry.getElementsByTagName('updated')[0]?.textContent||'';
+  const date=entry.getElementsByTagName('published')[0]?.textContent||'';
   return vid?{id:vid,title,channel:label,date,url:'https://www.youtube.com/watch?v='+vid}:null;
  }).filter(Boolean);
 }
@@ -96,13 +100,13 @@ async function loadSport(key){
  activeSport=key;const thisRequest=++requestNo,set=channelSets[key];
  document.getElementById('sourceTitle').textContent=set.title;
  document.getElementById('clips').innerHTML='';
- document.getElementById('channels').innerHTML='<span class="note">بحث تلقائي في مقاطع YouTube العامة: '+set.queries.map(esc).join(' · ')+'</span>';
+ document.getElementById('channels').innerHTML=set.sources.map(s=>'<a href="https://www.youtube.com/@'+encodeURIComponent(s[1])+'" target="_blank" rel="noopener">'+esc(s[0])+' الرسمي على YouTube</a>').join('');
  document.getElementById('status').textContent='جارٍ جلب أحدث المقاطع الرسمية…';
  document.getElementById('empty').querySelector('p').textContent='جارٍ البحث عن أحدث المقاطع الرسمية لهذه الرياضة…';
  document.getElementById('screen').classList.remove('has-video');
  document.getElementById('player').removeAttribute('src');
  try{
-  const results=await Promise.allSettled(set.queries.map(q=>getSearchVideos(q,q)));
+  const results=await Promise.allSettled(set.sources.map(source=>getLatest(source[1],source[0])));
   if(thisRequest!==requestNo)return;
   const videos=results.flatMap((r,i)=>r.status==='fulfilled'?r.value:[]);
   videos.sort((a,b)=>new Date(b.date)-new Date(a.date));
