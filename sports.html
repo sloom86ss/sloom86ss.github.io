@@ -79,53 +79,55 @@ const HISTORY_KEY='worldSports365_watched_v1';
 function readHistory(){try{return new Set(JSON.parse(localStorage.getItem(HISTORY_KEY)||'[]'))}catch{return new Set()}}
 function rememberClip(id){try{const h=[...readHistory()].filter(x=>x!==id);h.push(id);localStorage.setItem(HISTORY_KEY,JSON.stringify(h.slice(-120)))}catch{}}
 const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-async function fetchText(url){
- // Public GET relays only. Never send tokens, cookies, or private data through these services.
+async function fetchText(url,validate){
  const encoded=encodeURIComponent(url);
  const targets=[
-  {name:'CORS.tools',url:'https://cors.tools/proxy?url='+encoded,mode:'text'},
-  {name:'EveryOrigin',url:'https://everyorigin.jwvbremen.nl/get?url='+encoded,mode:'json'},
-  {name:'CORS.dev',url:'https://proxy.cors.dev/'+url,mode:'text'},
-  {name:'AllOrigins',url:'https://api.allorigins.win/raw?url='+encoded,mode:'text'},
-  {name:'corsproxy.io',url:'https://corsproxy.io/?url='+encoded,mode:'text'}
+  {name:'CORS.tools',url:'https://cors.tools/proxy?url='+encoded},
+  {name:'CORS.dev',url:'https://proxy.cors.dev/'+url},
+  {name:'AllOrigins',url:'https://api.allorigins.win/raw?url='+encoded},
+  {name:'corsproxy.io',url:'https://corsproxy.io/?url='+encoded}
  ];
- let lastError;
+ let errors=[];
  for(const relay of targets){
   try{
    const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),22000);
    let res;
    try{res=await fetch(relay.url,{cache:'no-store',credentials:'omit',signal:controller.signal})}finally{clearTimeout(timer)}
    if(!res.ok)throw Error(relay.name+' HTTP '+res.status);
-   let body=await res.text();
-   if(relay.mode==='json'){
-    const wrapped=JSON.parse(body);
-    if(typeof wrapped.contents==='string')body=wrapped.contents;
-    else throw Error(relay.name+' returned no contents field');
-   }
-   if(!body||body.length<80||/^\\s*<(?:!doctype html|html)/i.test(body)&&url.includes('/feeds/videos.xml'))throw Error(relay.name+' returned an empty or blocked feed');
+   const body=await res.text();
+   if(!body||body.length<80)throw Error(relay.name+' empty response');
+   if(validate&&!validate(body))throw Error(relay.name+' returned invalid/blocked content');
    return body;
-  }catch(err){lastError=err}
+  }catch(err){errors.push(relay.name+': '+(err.message||'failed'))}
  }
- throw lastError||Error('All public feed relays failed');
+ throw Error(errors.join(' | ')||'No public relay returned valid content');
 }
 async function resolveChannel(handle){
  if(channelIds[handle])return channelIds[handle];
- const html=await fetchText('https://www.youtube.com/@'+encodeURIComponent(handle)+'?hl=en');
- const doc=new DOMParser().parseFromString(html,'text/html');
- let id=doc.querySelector('meta[itemprop="channelId"]')?.content||doc.querySelector('meta[property="og:url"]')?.content?.match(/channel\/(UC[\w-]+)/)?.[1]||doc.documentElement.innerHTML.match(/"(?:channelId|externalId)":"(UC[\w-]+)"/)?.[1]||doc.documentElement.innerHTML.match(/youtube\.com\/channel\/(UC[\w-]+)/)?.[1];
- if(!id)throw Error('channel id missing: '+handle);channelIds[handle]=id;return id;
+ let found='';
+ await fetchText('https://www.youtube.com/@'+encodeURIComponent(handle)+'?hl=en',html=>{
+  const doc=new DOMParser().parseFromString(html,'text/html');
+  found=doc.querySelector('meta[itemprop="channelId"]')?.content||doc.querySelector('meta[property="og:url"]')?.content?.match(/channel\\/(UC[\\w-]+)/)?.[1]||doc.documentElement.innerHTML.match(/"(?:channelId|externalId)":"(UC[\\w-]+)"/)?.[1]||doc.documentElement.innerHTML.match(/youtube\\.com\\/channel\\/(UC[\\w-]+)/)?.[1]||'';
+  return /^UC[\\w-]+$/.test(found);
+ });
+ if(!found)throw Error('تعذر تحديد معرّف قناة '+handle);
+ channelIds[handle]=found;return found;
 }
 async function getLatest(handle,label){
  const id=await resolveChannel(handle);
- const xml=await fetchText('https://www.youtube.com/feeds/videos.xml?channel_id='+encodeURIComponent(id));
- const doc=new DOMParser().parseFromString(xml,'application/xml');
- if(doc.querySelector('parsererror'))throw Error('RSS parse error');
- return [...doc.getElementsByTagName('entry')].slice(0,8).map(entry=>{
-  const vid=entry.getElementsByTagNameNS('http://www.youtube.com/xml/schemas/2015','videoId')[0]?.textContent||entry.getElementsByTagName('yt:videoId')[0]?.textContent;
-  const title=entry.getElementsByTagName('title')[0]?.textContent||'مقطع رياضي';
-  const date=entry.getElementsByTagName('published')[0]?.textContent||'';
-  return vid?{id:vid,title,channel:label,date,url:'https://www.youtube.com/watch?v='+vid}:null;
- }).filter(Boolean);
+ let parsed=[];
+ await fetchText('https://www.youtube.com/feeds/videos.xml?channel_id='+encodeURIComponent(id),xml=>{
+  const doc=new DOMParser().parseFromString(xml,'application/xml');
+  if(doc.querySelector('parsererror')||!doc.getElementsByTagName('entry').length)return false;
+  parsed=[...doc.getElementsByTagName('entry')].slice(0,8).map(entry=>{
+   const vid=entry.getElementsByTagNameNS('http://www.youtube.com/xml/schemas/2015','videoId')[0]?.textContent||entry.getElementsByTagName('yt:videoId')[0]?.textContent;
+   const title=entry.getElementsByTagName('title')[0]?.textContent||'مقطع رياضي';
+   const date=entry.getElementsByTagName('published')[0]?.textContent||'';
+   return vid?{id:vid,title,channel:label,date,url:'https://www.youtube.com/watch?v='+vid}:null;
+  }).filter(Boolean);
+  return parsed.length>0;
+ });
+ return parsed;
 }
 async function isLiveVideo(videoId){
  try{const html=await fetchText('https://www.youtube.com/watch?v='+encodeURIComponent(videoId));return /"isLive"\s*:\s*true|"isLiveContent"\s*:\s*true|"isLiveNow"\s*:\s*true|"liveBroadcastDetails"\s*:\s*\{/i.test(html)}catch{return false}
