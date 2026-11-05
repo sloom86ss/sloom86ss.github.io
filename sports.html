@@ -54,7 +54,7 @@ main{width:100%;max-width:1900px;margin:auto;padding:5px clamp(4px,1vw,16px) 24p
 </main>
 <script>
 const channelSets={
-football:{title:'أحدث مقاطع كرة القدم',sources:[['FIFA','FIFA'],['UEFA','UEFA'],['الدوري الإنجليزي','premierleague'],['LaLiga','LaLiga'],['Bundesliga','bundesliga']]},
+football:{title:'أحدث مقاطع كرة القدم',sources:[['UEFA','UEFA'],['FIFA','FIFA'],['الدوري الإنجليزي','premierleague'],['LaLiga','LaLiga'],['Bundesliga','bundesliga']]},
 basketball:{title:'أحدث مقاطع كرة السلة',sources:[['NBA','NBA'],['FIBA','FIBA'],['EuroLeague','EuroLeague']]},
 tennis:{title:'أحدث مقاطع التنس',sources:[['ATP Tour','ATPTour'],['WTA Tennis','WTA']]},
 racing:{title:'أحدث مقاطع سباقات السيارات',sources:[['Formula 1','Formula1'],['MotoGP','MotoGP'],['FIA','FIAOfficial']]},
@@ -74,7 +74,7 @@ tabletennis:{title:'أحدث مقاطع تنس الطاولة',sources:[['World 
 handball:{title:'أحدث مقاطع كرة اليد',sources:[['IHF','ihfworldhandball']]},
 taekwondo:{title:'أحدث مقاطع التايكوندو',sources:[['World Taekwondo','WorldTaekwondo']]}
 };
-const channelIds={};let activeSport='football',requestNo=0,playlist=[],currentIndex=0,ytPlayer=null,pendingClip=null,playerReady=false;const failedIds=new Set();
+const channelIds={UEFA:'UCyGa1YEx9ST66rYrJTGIKOw',FIFA:'UCpcTrCXblq78GZrTUTLWeBw'};let activeSport='football',requestNo=0,playlist=[],currentIndex=0,ytPlayer=null,pendingClip=null,playerReady=false;const failedIds=new Set();
 const HISTORY_KEY='worldSports365_watched_v1';
 function readHistory(){try{return new Set(JSON.parse(localStorage.getItem(HISTORY_KEY)||'[]'))}catch{return new Set()}}
 function rememberClip(id){try{const h=[...readHistory()].filter(x=>x!==id);h.push(id);localStorage.setItem(HISTORY_KEY,JSON.stringify(h.slice(-120)))}catch{}}
@@ -146,6 +146,17 @@ async function isLiveVideo(videoId){
  }catch{return false}
 }
 function resetPlayer(){if(ytPlayer){try{ytPlayer.destroy()}catch{}}ytPlayer=null;playerReady=false;pendingClip=null;let host=document.getElementById('playerHost');if(!host){host=document.createElement('div');host.id='playerHost';host.setAttribute('aria-label','مشغل الفيديو الرياضي');document.getElementById('screen').prepend(host)}host.innerHTML='';}
+function showOfficialUploadsFallback(key){
+ const set=channelSets[key];const source=set?.sources.find(s=>channelIds[s[1]]);
+ if(!source)return false;
+ const channelId=channelIds[source[1]],uploads='UU'+channelId.slice(2);
+ const host=document.getElementById('playerHost');
+ host.innerHTML='<iframe title="مقاطع '+esc(source[0])+' الرسمية" src="https://www.youtube-nocookie.com/embed/videoseries?list='+uploads+'&autoplay=1&mute=1&playsinline=1&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+ document.getElementById('screen').classList.add('has-video');
+ document.getElementById('empty').querySelector('p').textContent='تشغيل أحدث مقاطع القناة الرسمية مباشرة';
+ document.getElementById('status').textContent='تعذّر جلب القائمة تلقائياً؛ نعرض قائمة مقاطع '+source[0]+' الرسمية مباشرة من YouTube';
+ return true;
+}
 function playClip(clip){
  if(!clip)return;pendingClip=clip;currentIndex=Math.max(0,playlist.findIndex(v=>v.id===clip.id));rememberClip(clip.id);
  document.getElementById('screen').classList.add('has-video');document.getElementById('playNow').hidden=true;
@@ -187,8 +198,10 @@ async function loadSport(key){
   document.getElementById('status').textContent=liveCount?'🔴 تم العثور على بث رسمي مباشر؛ يبدأ الآن داخل الشاشة':'لا يوجد بث مباشر مؤكد حالياً؛ يتم تشغيل أحدث المقاطع الرسمية';
  }catch(e){
   if(thisRequest!==requestNo)return;
-  document.getElementById('status').textContent='تعذر جلب المقاطع الآن؛ يمكنك فتح القنوات الرسمية أدناه.';
-  document.getElementById('empty').querySelector('p').textContent='لم نتمكن من تحميل المقاطع حالياً. حاول لاحقاً أو افتح إحدى القنوات الرسمية.';
+  if(!showOfficialUploadsFallback(key)){
+   document.getElementById('status').textContent='تعذر جلب المقاطع الآن؛ يمكنك فتح القنوات الرسمية أدناه.';
+   document.getElementById('empty').querySelector('p').textContent='لم نتمكن من تحميل المقاطع حالياً. حاول لاحقاً أو افتح إحدى القنوات الرسمية.';
+  }
  }
 }
 document.querySelectorAll('[data-sport]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-sport]').forEach(x=>x.classList.toggle('active',x.dataset.sport===b.dataset.sport));loadSport(b.dataset.sport)}));
