@@ -108,10 +108,10 @@ function matchStart(){
  state.players[0].x=330;state.players[0].y=260;state.user=state.players[0];
  $('modeLabel').textContent='مباراة 5 ضد 5 · الشوط التجريبي';
  $('instruction').textContent='حرّك اللاعب بالأسهم، ثم سدد أو مرّر. اقلب الهاتف أفقياً لتجربة أفضل.';
- buttons([{label:'◀',secondary:true,fn:()=>moveUser(-1,0)},{label:'▲',secondary:true,fn:()=>moveUser(0,-1)},{label:'▼',secondary:true,fn:()=>moveUser(0,1)},{label:'▶',secondary:true,fn:()=>moveUser(1,0)},{label:'تمريرة',fn:matchPass},{label:'تسديد ⚽',fn:matchShoot},{label:'⛶ تكبير',fn:toggleFullscreen}]);
+ buttons([{label:'◀',secondary:true,fn:()=>{}},{label:'▲',secondary:true,fn:()=>{}},{label:'▼',secondary:true,fn:()=>{}},{label:'▶',secondary:true,fn:()=>{}},{label:'تمريرة',fn:matchPass},{label:'تسديد ⚽',fn:matchShoot},{label:'⛶ تكبير',fn:toggleFullscreen}]);
  // Touch-and-hold controls for smoother movement.
  const cs=$('controls').children;
- [[-1,0],[0,-1],[0,1],[1,0]].forEach((d,i)=>{const el=cs[i];el.onpointerdown=e=>{e.preventDefault();state.keys[d[0]+','+d[1]]=true};el.onpointerup=el.onpointercancel=el.onpointerleave=()=>{state.keys[d[0]+','+d[1]]=false}});
+ [[-1,0],[0,-1],[0,1],[1,0]].forEach((d,i)=>{const el=cs[i];el.style.touchAction='none';el.onpointerdown=e=>{e.preventDefault();if(el.setPointerCapture)el.setPointerCapture(e.pointerId);state.keys[d[0]+','+d[1]]=true};el.onpointerup=el.onpointercancel=el.onpointerleave=()=>{state.keys[d[0]+','+d[1]]=false}});
  state.keyHandler=e=>{const map={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1],a:[-1,0],d:[1,0],w:[0,-1],s:[0,1]};if(map[e.key]){e.preventDefault();state.keys[map[e.key].join(',')]=true}};
  state.keyUp=e=>{const map={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1],a:[-1,0],d:[1,0],w:[0,-1],s:[0,1]};if(map[e.key])state.keys[map[e.key].join(',')]=false};
  window.addEventListener('keydown',state.keyHandler);window.addEventListener('keyup',state.keyUp);
@@ -126,15 +126,15 @@ function matchFrame(now){
  if(dx||dy){let n=Math.hypot(dx,dy);u.x+=dx/n*190*dt;u.y+=dy/n*190*dt}u.x=Math.max(95,Math.min(805,u.x));u.y=Math.max(112,Math.min(408,u.y));
  const b=state.ball;
  // Teammates support the attack; opponents press the ball carrier.
- state.players.slice(1).forEach((p,i)=>{let tx=u.x+65,ty=105+i*75;p.x+=(tx-p.x)*dt*.7;p.y+=(ty-p.y)*dt*.7});
- state.opponents.forEach((p,i)=>{let target=i===0?b:state.players[(i+1)%state.players.length];let tx=target.x,ty=target.y;p.x+=(tx-p.x)*dt*(i===0?1.7:.65);p.y+=(ty-p.y)*dt*(i===0?1.7:.65);let d=Math.hypot(p.x-b.x,p.y-b.y);if(d<23&&Math.random()<dt*1.8){b.vx-=2.8;b.vy+=(Math.random()-.5)*3}});
+ state.players.slice(1).forEach((p,i)=>{let tx=Math.max(110,Math.min(790,u.x+75)),ty=Math.max(115,Math.min(405,u.y+(i-1.5)*62));p.x+=(tx-p.x)*dt*.82;p.y+=(ty-p.y)*dt*.82});
+ state.opponents.forEach((p,i)=>{let target=i===0?b:state.players[(i+1)%state.players.length];let tx=target.x,ty=target.y;p.x+=(tx-p.x)*dt*(i===0?1.9:.72);p.y+=(ty-p.y)*dt*(i===0?1.9:.72);let d=Math.hypot(p.x-b.x,p.y-b.y);if(d<25&&Math.random()<dt*1.6){b.vx-=3.4;b.vy+=(Math.random()-.5)*3.5}});
  if(Math.hypot(u.x-b.x,u.y-b.y)<28&&Math.hypot(b.vx,b.vy)<3){b.vx+=(u.x-b.x)*.06+1.2;b.vy+=(u.y-b.y)*.06}
  b.x+=b.vx;b.y+=b.vy;b.vx*=.986;b.vy*=.986;
  if(b.y<91||b.y>429){b.vy*=-.8;b.y=Math.max(91,Math.min(429,b.y))}
  if(b.x>835&&b.y>205&&b.y<315){matchGoal('الأزرق');return}
  if(b.x<65&&b.y>205&&b.y<315){matchGoal('الأحمر');return}
  if(b.x<65||b.x>835)b.vx*=-.8;
- if(state.time<=0){state.time=0;state.ended=true;message('انتهت المباراة');$('instruction').textContent='النتيجة النهائية: '+state.blue+' - '+state.red;return}
+ if(state.time<=0){state.time=0;state.ended=true;message('انتهت المباراة');$('instruction').textContent='النتيجة النهائية: '+state.blue+' - '+state.red;buttons([{label:'إعادة المباراة',fn:()=>{stop();setScore(0);matchStart()}}]);drawMatch();return}
  drawMatch();raf=requestAnimationFrame(matchFrame);
 }
 function matchGoal(team){if(team==='الأزرق')state.blue++;else state.red++;bReset();$('instruction').textContent='هدف! استؤنفت المباراة.';message('هدف للفريق '+(team==='الأزرق'?'الأزرق':'الأحمر'));drawMatch();raf=requestAnimationFrame(matchFrame)}
@@ -145,9 +145,9 @@ function drawMatch(){
  c.strokeStyle='#e4f5e8cc';c.lineWidth=3;c.strokeRect(55,75,790,370);c.beginPath();c.moveTo(450,75);c.lineTo(450,445);c.stroke();c.beginPath();c.arc(450,260,68,0,Math.PI*2);c.stroke();c.strokeRect(55,180,105,160);c.strokeRect(740,180,105,160);c.strokeRect(55,220,35,80);c.strokeRect(810,220,35,80);
  // goals and net
  c.fillStyle='#dce9e4';c.fillRect(37,220,18,80);c.fillRect(845,220,18,80);c.strokeStyle='#ffffff55';for(let y=224;y<300;y+=12){line(37,y,55,y,'#ffffff55',1);line(845,y,863,y,'#ffffff55',1)}
- const player=(p,color,number)=>{circle(p.x,p.y+5,16,'#00000055');circle(p.x,p.y,15,color,'#f8f3ff');circle(p.x,p.y-3,5,'#f1cba5');text(String(number),p.x,p.y+5,10,'#fff')};
- state.players.forEach((p,i)=>player(p,'#347cf2',i+1));state.opponents.forEach((p,i)=>player(p,'#e34e62',i+1));
- circle(state.ball.x,state.ball.y,9,'#fff','#34313b');circle(state.ball.x-2,state.ball.y-2,3,'#25232b');
+ const player=(p,color,number,selected)=>{circle(p.x,p.y+13,19,'#061b13aa');if(selected){ctx.beginPath();ctx.ellipse(p.x,p.y+2,25,29,0,0,Math.PI*2);ctx.strokeStyle='#ffe39a';ctx.lineWidth=3;ctx.stroke();}line(p.x-7,p.y+10,p.x-10,p.y+23,'#e9d8c6',5);line(p.x+7,p.y+10,p.x+10,p.y+23,'#e9d8c6',5);line(p.x-10,p.y-3,p.x-18,p.y+7,color,6);line(p.x+10,p.y-3,p.x+18,p.y+7,color,6);circle(p.x,p.y,14,color,'#ffffff');circle(p.x-4,p.y-5,4,'#ffffff55');circle(p.x,p.y-18,7,'#d9a982','#684b42');text(String(number),p.x,p.y+5,10,'#fff')};
+ state.players.forEach((p,i)=>player(p,'#2677ed',i+1,i===0));state.opponents.forEach((p,i)=>player(p,'#dc4059',i+1,false));
+ circle(state.ball.x,state.ball.y+5,11,'#00000066');circle(state.ball.x,state.ball.y,9,'#fff','#34313b');circle(state.ball.x-3,state.ball.y-3,3,'#25232b');
  c.fillStyle='#080711bb';c.fillRect(320,12,260,43);text('الأزرق  '+state.blue+'  -  '+state.red+'  الأحمر',450,42,22,'#f5d58d');
  text('الوقت '+Math.ceil(state.time)+' ث',450,492,16,'#fff');
 }
