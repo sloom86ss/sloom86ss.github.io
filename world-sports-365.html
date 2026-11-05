@@ -20,7 +20,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;pa
 .tag{font-size:11px;color:#d8caff;border:1px solid #57417c;border-radius:30px;padding:7px 11px;white-space:nowrap}
 .screen{position:relative;overflow:hidden;aspect-ratio:16/9;min-height:240px;max-height:680px;border:1px solid #59417f;border-radius:22px;background:linear-gradient(135deg,#1c1530,#090711 68%);box-shadow:0 20px 65px #0009,0 0 35px #8759dd18;display:grid;place-items:center}
 .screen:before,.screen:after{content:"";position:absolute;border-radius:50%;filter:blur(1px);pointer-events:none}.screen:before{width:45vw;height:45vw;max-width:500px;max-height:500px;border:1px solid #a17bff22;right:-15%;top:-65%}.screen:after{width:36vw;height:36vw;max-width:380px;max-height:380px;border:1px solid #a17bff1c;left:-13%;bottom:-65%}
-#player{position:absolute;inset:0;width:100%;height:100%;border:0;background:#050409;display:none}
+#player{position:absolute;inset:0;width:100%;height:100%;border:0;background:#050409;display:none}.screen-head{position:absolute;z-index:3;top:12px;right:12px;left:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;pointer-events:none}.live-state{background:#24131b;border:1px solid #8e344b;color:#ffb6c3;border-radius:30px;padding:7px 12px;font-size:11px;font-weight:900}.live-state:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff526d;margin-left:7px;box-shadow:0 0 9px #ff526d}.fullscreen-btn{pointer-events:auto;cursor:pointer;border:1px solid #8c70bd;border-radius:10px;background:#211936eF;color:#fff;padding:8px 12px;font-weight:800;font-size:12px}.screen:fullscreen{width:100vw;height:100vh;max-height:none;aspect-ratio:auto;border:0;border-radius:0;background:#050409}.screen:fullscreen #player{height:100%;width:100%}.screen:fullscreen .placeholder{max-width:760px}
 .placeholder{position:relative;z-index:1;text-align:center;padding:24px;max-width:620px}
 .ball{font-size:clamp(42px,8vw,78px);filter:drop-shadow(0 0 20px #9b72ff77)}
 .placeholder h1{font-size:clamp(20px,4vw,34px);margin:8px 0;font-weight:900}.placeholder p{margin:0 auto;color:var(--muted);font-size:13px;line-height:1.9}
@@ -44,7 +44,7 @@ footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
 <div class="placeholder" id="placeholder">
 <div class="ball">🏆</div>
 <h1 id="screenTitle">عالم الرياضة 365</h1>
-<p id="screenText">اختر الرياضة للوصول إلى صفحات المشاهدة الرسمية وجدول الناقلين في بلدك. لا نضع بثاً داخل الشاشة إلا إذا كان تضمينه مصرحاً به من صاحب الحقوق.</p>
+<p id="screenText">شاشة العرض جاهزة. عند توفر بث مباشر يسمح مالك الحقوق بتضمينه سيظهر هنا داخل المشغّل نفسه. يمكنك تكبير الشاشة من الزر أعلاه.</p>
 <div class="screen-actions"><a class="action primary" id="watchLink" href="https://www.uefa.com/match-calendar/" target="_blank" rel="noopener">اعرف أين تشاهد البث رسمياً</a></div>
 </div>
 <iframe id="player" title="مشغل المصدر الرسمي" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
