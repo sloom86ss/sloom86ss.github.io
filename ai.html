@@ -79,6 +79,39 @@ header a{border:1px solid #704298;border-radius:20px;padding:7px 12px;background
 .ai-updated{color:#b6a8c5}
 @media(max-width:600px){header{justify-content:flex-start;padding:9px 12px;min-height:72px}header b{font-size:17px}header img{width:48px!important;height:48px!important}header .top-actions{position:static;margin-right:auto}.ai-welcome{grid-template-columns:92px 1fr;gap:8px;padding-inline:10px}.ai-robot{height:125px}.ai-welcome-card{padding:12px;border-radius:18px}.ai-welcome-card strong{font-size:14px}.ai-welcome-card p{font-size:12px}.chat{width:calc(100% - 20px);height:220px}.input,.hint{width:calc(100% - 20px)}.screen-head h2{font-size:16px}}
 
+
+/* Large interactive all-sports display */
+.ai-screen{width:min(1500px,100%);margin:24px auto 36px;padding:0 16px 24px}
+.screen-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;margin-bottom:12px;border:1px solid #7541a1;border-radius:18px;background:linear-gradient(100deg,#42166b,#180d26 55%,#42166b);box-shadow:0 5px 22px #8b35d433}
+.screen-head h2{margin:0;color:#f7edff;font-size:clamp(18px,2.4vw,25px)}
+.screen-head small{display:block;color:#c7addd;font-size:11px;margin-top:3px}
+.screen-full{border:1px solid #9c65c5;background:#28143c;color:#f4e7ff;border-radius:12px;padding:9px 13px;font:700 12px Cairo;cursor:pointer}
+.sport-tabs{display:flex;gap:9px;overflow-x:auto;padding:3px 1px 13px;scrollbar-width:thin}
+.sport-tab{flex:0 0 auto;border:1px solid #573875;background:#160e20;color:#e5d5f1;border-radius:30px;padding:10px 17px;font:700 12px Cairo;cursor:pointer}
+.sport-tab.active{background:linear-gradient(120deg,#b879f4,#7c35b5);border-color:#d9b4ff;color:#160b20;box-shadow:0 0 18px #a855f766}
+.sports-stage{min-height:clamp(520px,72vh,900px);border:1px solid #7541a1;border-radius:24px;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#48216b 0,transparent 48%),linear-gradient(145deg,#120a1c,#08050d 72%);box-shadow:0 18px 55px #0009,inset 0 0 45px #a855f711;display:flex;flex-direction:column}
+.stage-top,.stage-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 20px;background:#10091a99;color:#eadbfa;font-size:12px}
+.stage-top{border-bottom:1px solid #583777}.stage-bottom{margin-top:auto;border-top:1px solid #583777;color:#a995ba;font-size:10px}
+.stage-status{color:#d9b5ff}.stage-content{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(16px,3vw,36px)}
+.stage-hero{text-align:center;margin:0 auto 26px;max-width:850px}
+.stage-hero .stage-icon{font-size:clamp(45px,8vw,82px);filter:drop-shadow(0 0 20px #ad68e8)}
+.stage-hero h3{font-size:clamp(23px,4vw,38px);margin:8px 0;color:#fff}
+.stage-hero p{color:#c8b6d8;line-height:1.9;font-size:14px;margin:0}
+.stage-match-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px;width:100%;max-width:1150px;margin:0 auto}
+.stage-match{border:1px solid #71469a;border-radius:18px;background:linear-gradient(145deg,#28143b,#130c1d);padding:20px;text-align:center;box-shadow:0 8px 25px #0006}
+.stage-match .league-name{font-size:11px;color:#c6a6df}
+.stage-match .teams-line{display:flex;align-items:center;justify-content:center;gap:12px;margin:17px 0;font-weight:900;font-size:15px}
+.stage-match .score-line{font-size:clamp(23px,4vw,34px);color:#e2c1ff;font-weight:900;direction:ltr}
+.stage-match .match-state{font-size:11px;color:#bda5d0;margin-top:9px}
+.stage-empty{max-width:700px;margin:20px auto;padding:clamp(25px,5vw,55px);border:1px dashed #704493;border-radius:22px;background:#160d22;text-align:center}
+.stage-empty strong{display:block;font-size:clamp(19px,3vw,27px);color:#f2e5ff;margin:10px 0}
+.stage-empty p{color:#bdaecc;line-height:2;font-size:13px;margin:0}
+.stage-empty .empty-icon{font-size:52px}
+.stage-loader{margin:auto;color:#d8c0ec}
+.sports-stage:fullscreen{min-height:100vh;border:0;border-radius:0;padding:10px;background:radial-gradient(ellipse at 50% 0%,#48216b 0,transparent 48%),#08050d}
+.sports-stage:fullscreen .stage-content{padding:4vh 5vw}
+@media(max-width:600px){.ai-screen{padding-inline:10px}.sports-stage{min-height:68vh;border-radius:17px}.stage-top,.stage-bottom{padding:11px 13px}.stage-content{padding:15px 10px}.stage-match-grid{grid-template-columns:1fr}.screen-head{padding:12px}.screen-full{font-size:10px;padding:8px}.sport-tab{padding:9px 13px}}
+
 </style><meta name="description" content="محلل سلوم AI من سلوم كورة 365 لتحليل بيانات المباريات والنتائج والترتيب والأندية والأخبار باللغة العربية.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://sloom86ss.github.io/ai.html">
@@ -119,20 +152,21 @@ header a{border:1px solid #704298;border-radius:20px;padding:7px 12px;background
 <div class="input"><input id="question" maxlength="1000" placeholder="اسأل عن مباراة أو فريق أو بطولة…" autocomplete="off"><button id="send" aria-label="إرسال">➤</button></div>
 <div class="hint">المساعد يحاول استخدام Gemini عبر خادم آمن عند توفره؛ وإذا لم تتوفر الخدمة يعمل بالبيانات المحلية. البيانات الرياضية: ESPN عند توفرها. الحصة المجانية محدودة وقد تتغير.</div>
 
-<section class="ai-screen" aria-label="شاشة عرض وتحليل سلوم AI">
- <div class="screen-head"><h2>🧠 شاشة التحليل الذكي</h2><span class="live-pill" id="aiScreenState">● متابعة البيانات</span></div>
- <div class="ai-feature">
-  <small>قراءة سلوم AI للبيانات المتاحة</small>
-  <h3 id="aiMainTitle">مركز المتابعة الكروية</h3>
-  <p id="aiMainText">يتم تجهيز لوحة العرض من بيانات المباريات والأخبار المنشورة في الموقع. تتغير اللوحة عند وصول تحديثات جديدة.</p>
+<section class="ai-screen" aria-label="الشاشة الرياضية الشاملة لسلوم AI">
+ <div class="screen-head"><div><h2>🌐 الشاشة الرياضية الشاملة</h2><small>مركز العرض والتحليل الرياضي</small></div><button class="screen-full" id="screenFull" type="button">⛶ تكبير الشاشة</button></div>
+ <nav class="sport-tabs" id="sportTabs" aria-label="اختيار الرياضة">
+  <button class="sport-tab active" data-sport="football">⚽ كرة القدم</button>
+  <button class="sport-tab" data-sport="basketball">🏀 كرة السلة</button>
+  <button class="sport-tab" data-sport="tennis">🎾 التنس</button>
+  <button class="sport-tab" data-sport="motorsport">🏎️ سباقات السيارات</button>
+  <button class="sport-tab" data-sport="volleyball">🏐 الكرة الطائرة</button>
+  <button class="sport-tab" data-sport="cricket">🏏 الكريكيت</button>
+ </nav>
+ <div class="sports-stage" id="sportsStage">
+  <div class="stage-top"><span id="stageSport">⚽ مركز كرة القدم</span><span class="stage-status" id="stageStatus">● يجري تحميل البيانات</span></div>
+  <div class="stage-content" id="stageContent"><div class="stage-loader">جارٍ تجهيز الشاشة الرياضية…</div></div>
+  <div class="stage-bottom"><span>سلوم AI 365</span><span id="stageUpdated">بانتظار البيانات</span></div>
  </div>
- <div class="ai-grid">
-  <div class="ai-card"><h3>⚽ المباريات الجارية</h3><div id="aiLiveMatches" class="ai-empty">جارٍ فحص حالة المباريات…</div></div>
-  <div class="ai-card"><h3>📊 أبرز الأرقام</h3><div id="aiStats" class="ai-empty">ستظهر الأرقام المؤكدة عند توفرها في مصدر البيانات.</div></div>
-  <div class="ai-card"><h3>📰 ملخصات وأخبار</h3><div id="aiNews" class="ai-empty">ستظهر هنا أحدث الأخبار والملخصات المتاحة.</div></div>
-  <div class="ai-card"><h3>🔎 قراءة وتحليل</h3><div id="aiInsights" class="ai-empty">سيعرض هذا القسم قراءة مبنية على النتائج والحالات المسجلة، دون اختلاق إحصائيات غير متوفرة.</div></div>
- </div>
- <div class="ai-updated" id="aiUpdated">بانتظار تحميل البيانات</div>
 </section>
 
 <script>
@@ -211,30 +245,54 @@ async function go(){
  finally{send.disabled=false;field.focus();chat.scrollTop=chat.scrollHeight;}
 }
 
+let selectedSport='football';
+const sportInfo={
+ football:{name:'مركز كرة القدم',icon:'⚽'},
+ basketball:{name:'مركز كرة السلة',icon:'🏀'},
+ tennis:{name:'مركز التنس',icon:'🎾'},
+ motorsport:{name:'سباقات السيارات',icon:'🏎️'},
+ volleyball:{name:'الكرة الطائرة',icon:'🏐'},
+ cricket:{name:'الكريكيت',icon:'🏏'}
+};
+function selectSport(sport){
+ if(!sportInfo[sport])return;
+ selectedSport=sport;
+ document.querySelectorAll('.sport-tab').forEach(btn=>btn.classList.toggle('active',btn.dataset.sport===sport));
+ renderAIScreen();
+}
+document.getElementById('sportTabs').addEventListener('click',e=>{
+ const btn=e.target.closest('[data-sport]');if(btn)selectSport(btn.dataset.sport);
+});
+document.getElementById('screenFull').addEventListener('click',async()=>{
+ const stage=document.getElementById('sportsStage');
+ try{if(!document.fullscreenElement)await stage.requestFullscreen();else await document.exitFullscreen();}
+ catch(_){document.getElementById('screenFull').textContent='تعذر التكبير على هذا الجهاز';}
+});
 function renderAIScreen(){
- const live=[],all=[],news=[];
- for(const [id,l] of Object.entries(sportsData?.leagues||{})){
-  for(const m of (l.matches||[])){const x={...m,league:l.name||id};all.push(x);if(!l.stale&&/^(in|live|halftime|1h|2h|ht|مباشر)$/i.test(String(m.status||'')))live.push(x);}
-  for(const n of (l.news||[])){if(n&&n.headline)news.push({...n,league:l.name||id});}
+ const info=sportInfo[selectedSport],content=document.getElementById('stageContent');
+ document.getElementById('stageSport').textContent=info.icon+' '+info.name;
+ document.getElementById('stageUpdated').textContent='آخر تحديث للبيانات: '+(sportsData?.generated_at?fmtDate(sportsData.generated_at):'غير متوفر');
+ if(selectedSport!=='football'){
+  document.getElementById('stageStatus').textContent='● بانتظار مصدر موثوق';
+  content.innerHTML='<div class="stage-empty"><div class="empty-icon">'+info.icon+'</div><strong>'+info.name+'</strong><p>الشاشة جاهزة لهذه الرياضة، لكن لم يتم ربط مصدر نتائج مباشر موثوق لها بعد.<br>لن نعرض نتائج أو أحداثاً غير مؤكدة.</p></div>';
+  return;
  }
- const el=id=>document.getElementById(id);
- const liveBox=el('aiLiveMatches'),stats=el('aiStats'),newsBox=el('aiNews'),ins=el('aiInsights');
+ const entries=Object.entries(sportsData?.leagues||{});
+ const all=entries.flatMap(([id,l])=>(l.matches||[]).map(m=>({...m,league:l.name||id,stale:!!l.stale})));
+ const live=all.filter(m=>!m.stale&&/^(in|live|halftime|1h|2h|ht|مباشر)$/i.test(String(m.status||'')));
+ const freshData=dataIsFresh();
+ document.getElementById('stageStatus').textContent=freshData?'● بيانات كرة القدم متاحة':'● تحقق من حداثة البيانات';
+ if(!freshData){
+  content.innerHTML='<div class="stage-empty"><div class="empty-icon">⚠️</div><strong>البيانات تحتاج إلى تحديث</strong><p>لا يمكن تأكيد حالة المباريات الآن. ستظهر الشاشة عند وصول ملف بيانات حديث.</p></div>';
+  return;
+ }
  if(live.length){
-  liveBox.innerHTML=live.slice(0,5).map(m=>'<div class="ai-stat"><span>'+clean(teamName(m.home?.name))+' '+clean(m.home?.score??'—')+' - '+clean(m.away?.score??'—')+' '+clean(teamName(m.away?.name))+'</span><b>مباشرة</b></div>').join('');
-  el('aiMainTitle').textContent='متابعة '+live.length+' مباراة جارية';
-  el('aiMainText').textContent='توجد مباريات مصنفة جارية في آخر ملف بيانات وصل للموقع. تتحدث هذه اللوحة عند تجدد البيانات؛ تفاصيل الأحداث والإحصائيات لا تظهر إلا إذا وفرها المصدر.';
+  content.innerHTML='<div class="stage-hero"><div class="stage-icon">⚽</div><h3>المباريات الجارية</h3><p>عرض المباريات المصنفة مباشرة في مصدر البيانات الحالي</p></div><div class="stage-match-grid">'+live.slice(0,12).map(m=>'<article class="stage-match"><div class="league-name">'+clean(m.league)+'</div><div class="teams-line"><span>'+clean(teamName(m.home?.name))+'</span><span>×</span><span>'+clean(teamName(m.away?.name))+'</span></div><div class="score-line">'+clean(m.home?.score??'—')+' : '+clean(m.away?.score??'—')+'</div><div class="match-state">'+clean(m.detail||'مباشرة')+' · '+clean(m.clock||'')+'</div></article>').join('')+'</div>';
  }else{
-  liveBox.innerHTML='<div class="ai-empty">لا توجد مباراة مؤكدة الحالة المباشرة حالياً.<br>الشاشة تعرض الأخبار والملخصات المتاحة بدلاً منها.</div>';
-  el('aiMainTitle').textContent='لا توجد مباراة جارية الآن';
-  el('aiMainText').textContent='يتحول العرض تلقائياً إلى متابعة الأخبار والنتائج السابقة والمعلومات الكروية المتاحة حتى تبقى الشاشة مفيدة طوال اليوم.';
+  const upcoming=all.filter(m=>!m.stale&&m.date&&Date.parse(m.date)>=Date.now()).sort((a,b)=>Date.parse(a.date)-Date.parse(b.date)).slice(0,6);
+  const news=entries.flatMap(([id,l])=>(l.news||[]).map(n=>({...n,league:l.name||id}))).filter(n=>n.headline).sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0)).slice(0,3);
+  content.innerHTML='<div class="stage-hero"><div class="stage-icon">⚽</div><h3>مركز العرض الرياضي</h3><p>لا توجد مباراة مؤكدة مباشرة الآن. تعرض الشاشة أقرب المواجهات القادمة وآخر الأخبار المتاحة.</p></div>'+(upcoming.length?'<div class="stage-match-grid">'+upcoming.map(m=>'<article class="stage-match"><div class="league-name">'+clean(m.league)+'</div><div class="teams-line"><span>'+clean(teamName(m.home?.name))+'</span><span>×</span><span>'+clean(teamName(m.away?.name))+'</span></div><div class="match-state">'+fmtDate(m.date)+'</div></article>').join('')+'</div>':'<div class="stage-empty"><strong>لا توجد مواجهات قادمة في البيانات الحالية</strong><p>ستتجدد الشاشة تلقائياً عند وصول بيانات جديدة.</p></div>')+(news.length?'<div class="stage-empty" style="margin-top:18px"><strong>📰 آخر الأخبار</strong><p>'+news.map(n=>clean(n.headline)).join('<br>')+'</p></div>':'');
  }
- const completed=all.filter(m=>/^(post|final|ended|ft|انتهت)$/i.test(String(m.status||'')));
- stats.innerHTML='<div class="ai-stat"><span>المباريات في البيانات</span><b>'+all.length+'</b></div><div class="ai-stat"><span>المباريات الجارية المؤكدة</span><b>'+live.length+'</b></div><div class="ai-stat"><span>المباريات المنتهية المسجلة</span><b>'+completed.length+'</b></div><div class="ai-stat"><span>البطولات المتاحة</span><b>'+Object.keys(sportsData?.leagues||{}).length+'</b></div>';
- const sorted=news.filter(n=>n.headline).sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0)).slice(0,4);
- newsBox.innerHTML=sorted.length?sorted.map(n=>'<div class="ai-stat"><span>'+clean(n.headline)+'</span><small>'+clean(n.league)+'</small></div>').join(''):'<div class="ai-empty">لا توجد أخبار حديثة متاحة في ملف البيانات حالياً.</div>';
- ins.innerHTML=live.length?'<p>هناك '+live.length+' مباراة بحالة مباشرة في البيانات. راقب تغيّر النتيجة والحالة عند وصول التحديث التالي.</p><p>لا تتوفر هنا بعد إحصائيات تفصيلية كافية لاستخلاص تفوق تكتيكي موثوق.</p>':'<p>وضع الشاشة الحالي: ملخصات ومتابعة كروية خارج أوقات المباريات.</p><p>تعرض اللوحة فقط ما وصل من المصدر، ولا تنشئ ملخص فيديو أو توقعات من دون مادة موثوقة.</p>';
- el('aiUpdated').textContent='آخر توليد للبيانات: '+(sportsData?.generated_at?fmtDate(sportsData.generated_at):'غير متوفر')+' — يعاد فحص الملف كل دقيقة';
- el('aiScreenState').textContent=live.length?'● مباريات جارية في البيانات':'● وضع الملخصات';
 }
 async function refreshAIScreen(){
  try{const r=await fetch('data.json?screen='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();sportsData=await r.json();renderAIScreen();}
