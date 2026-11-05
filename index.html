@@ -2044,6 +2044,36 @@ function renderSloomAutoHighlights(){
  }
 }
  
+function sloomMatchMinute(match){
+ const rawClock=String(match.clock||'').trim();
+ const statusText=String(match.status_short||match.detail||'').trim();
+ const pauseText=(statusText+' '+String(match.status_detail||'')).toLowerCase();
+ if(/half.?time|halftime|break|interval|postpon|suspend|delay|abandon|full.?time|final/i.test(pauseText))return statusText||rawClock||'الاستراحة';
+ let seconds=null;
+ let m=rawClock.match(/^(\d{1,3}):([0-5]\d)$/);
+ if(m)seconds=Number(m[1])*60+Number(m[2]);
+ if(seconds===null){
+  const clean=statusText.replace(/['′’]/g,'').replace(/\s+/g,'');
+  m=clean.match(/^(\d{1,3})(?:\+(\d{1,2}))?$/);
+  if(m)seconds=(Number(m[1])+Number(m[2]||0))*60;
+ }
+ if(seconds===null)return statusText||rawClock||'الوقت غير متاح';
+ const received=Date.parse(match.clock_received_at||'');
+ const elapsed=Number.isFinite(received)?Math.max(0,(Date.now()-received)/1000):0;
+ const minute=Math.floor((seconds+elapsed)/60);
+ return minute+(statusText.includes('+')?'′':'′');
+}
+function updateSloomMinuteDisplays(){
+ const byId=new Map();
+ Object.values(sportsData||{}).forEach(league=>(league.matches||[]).forEach(match=>byId.set(String(match.id),match)));
+ document.querySelectorAll('[data-sloom-minute-id]').forEach(el=>{
+  const match=byId.get(el.getAttribute('data-sloom-minute-id'));
+  if(!match||match.status!=='in')return;
+  const minute=sloomMatchMinute(match);
+  el.textContent=el.classList.contains('live-board-minute')?'⏱ الدقيقة '+minute:'● مباشر '+minute;
+ });
+}
+
 function render(){
  const leagueNav=document.getElementById('arabicLeagueNav');
  if(leagueNav){
@@ -2068,7 +2098,7 @@ function render(){
  const heading=dayGames.length?dayGames.length+' مباراة':upcoming.length?'أقرب المباريات القادمة':'لا توجد مباراة في هذا اليوم';
  card.innerHTML='<div class="league-title"><b>'+esc(league.name||key)+'</b><span>'+heading+'</span></div>';
  visibleGames.forEach(g=>{const home=g.home||{},away=g.away||{};const kickoff=Date.parse(g.date||g.time||''),nearKickoff=g.status==='pre'&&Number.isFinite(kickoff)&&kickoff>Date.now()&&kickoff<=Date.now()+12*60*60*1000;
- const state=g.status==='in'?'<span class="live">● مباشر '+esc(g.detail||'')+'</span>':g.status==='post'?'<span class="match-status">انتهت</span>':nearKickoff?'<span class="match-status">⏳ بعد قليل</span>':'<span class="match-status">لم تبدأ</span>';const score=g.status==='pre'?'— : —':esc(home.score??'—')+' : '+esc(away.score??'—');const dt=g.date||g.time;let when='';if(dt){const d=new Date(dt);if(!Number.isNaN(d.getTime()))when=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(d)+' · بتوقيت عُمان'}
+ const state=g.status==='in'?'<span class="live" data-sloom-minute-id="'+esc(g.id||'')+'">● مباشر '+esc(sloomMatchMinute(g))+'</span>':g.status==='post'?'<span class="match-status">انتهت</span>':nearKickoff?'<span class="match-status">⏳ بعد قليل</span>':'<span class="match-status">لم تبدأ</span>';const score=g.status==='pre'?'— : —':esc(home.score??'—')+' : '+esc(away.score??'—');const dt=g.date||g.time;let when='';if(dt){const d=new Date(dt);if(!Number.isNaN(d.getTime()))when=new Intl.DateTimeFormat('ar-OM',{timeZone:'Asia/Muscat',weekday:'long',day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h12'}).format(d)+' · بتوقيت عُمان'}
  const m=document.createElement('div');m.className='match';
  m.innerHTML='<div class="teams"><div class="team"><img loading="lazy" src="'+esc(home.logo||'')+'" onerror="this.hidden=true"><span>'+esc(arTeam(home.name||'الفريق الأول'))+'</span></div><div class="score">'+score+'</div><div class="team away"><img loading="lazy" src="'+esc(away.logo||'')+'" onerror="this.hidden=true"><span>'+esc(arTeam(away.name||'الفريق الثاني'))+'</span></div></div><div class="match-meta">'+state+'</div>'+(when?'<div class="match-meta match-time">'+esc(when)+'</div>':'');
  if(verifiedBroadcastName(g)){const broadcast=document.createElement('div');broadcast.className='match-broadcast';broadcast.innerHTML='<b>📺 القناة الناقلة:</b> <span>'+esc(verifiedBroadcastName(g))+'</span>';m.appendChild(broadcast)}
@@ -2268,12 +2298,9 @@ function renderLive(){
  list.innerHTML='';
  active.forEach(({league,match})=>{
   const h=match.home||{},a=match.away||{},score=String(h.score??'—')+' : '+String(a.score??'—');
-  const rawClock=String(match.clock||match.status_short||match.detail||'').trim();
-  const cleanClock=rawClock.replace(/['′’]/g,'').replace(/\s+/g,'');
-  const clockParts=cleanClock.match(/^(\d{1,3})(?::\d{2})?(?:\+(\d{1,2}))?$/);
-  const minute=clockParts?'الدقيقة '+clockParts[1]+(clockParts[2]?' + '+clockParts[2]:''):(rawClock||'الوقت غير متاح من ESPN');
+  const minute='الدقيقة '+sloomMatchMinute(match);
   const card=document.createElement('article');card.className='live-board-card';
-  card.innerHTML='<div class="live-board-league">'+esc(league.name||'بطولة')+'</div><div class="live-board-teams"><div class="live-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name))+'</span></div><div class="live-board-score">'+esc(score)+'</div><div class="live-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name))+'</span></div></div><div class="live-board-meta"><span class="live-board-now">● مباشر الآن</span><span class="live-board-minute">⏱ '+esc(minute)+'</span></div>';
+  card.innerHTML='<div class="live-board-league">'+esc(league.name||'بطولة')+'</div><div class="live-board-teams"><div class="live-board-team">'+(h.logo?'<img loading="lazy" src="'+esc(h.logo)+'" alt="">':'')+'<span>'+esc(arTeam(h.name))+'</span></div><div class="live-board-score">'+esc(score)+'</div><div class="live-board-team">'+(a.logo?'<img loading="lazy" src="'+esc(a.logo)+'" alt="">':'')+'<span>'+esc(arTeam(a.name))+'</span></div></div><div class="live-board-meta"><span class="live-board-now">● مباشر الآن</span><span class="live-board-minute" data-sloom-minute-id="'+esc(match.id||'')+'">⏱ '+esc(minute)+'</span></div>';
   if(verifiedBroadcastName(match)){const channel=document.createElement('div');channel.className='live-board-broadcast';channel.innerHTML='<b>📺 القناة:</b> '+esc(verifiedBroadcastName(match));card.appendChild(channel)}
   const officialLink=broadcastLinkMarkup(match);if(officialLink){const wrap=document.createElement('div');wrap.innerHTML=officialLink;card.appendChild(wrap)}
   const details=document.createElement('details');details.className='match-details live-match-details';
@@ -2368,7 +2395,7 @@ function clearSiteError(){}
 function checkDataErrors(d){const errors=[];if(Array.isArray(d.news_errors))errors.push(...d.news_errors);Object.values(d.leagues||{}).forEach(l=>{if(l?.stale)errors.push('بيانات قديمة: '+(l.name||'إحدى البطولات'));if(Array.isArray(l?.errors))errors.push(...l.errors.map(x=>(l.name||'مصدر رياضي')+': '+x))});if(errors.length){const unique=[...new Set(errors)].slice(0,3);showSiteError('تم رصد '+errors.length+' مشكلة في جلب البيانات. '+unique.join(' · '));}else clearSiteError()}
 window.addEventListener('error',e=>showSiteError('حدث خطأ JavaScript في الصفحة: '+(e.message||'خطأ غير معروف')));
 window.addEventListener('unhandledrejection',e=>showSiteError('تعذر إكمال إحدى العمليات: '+String(e.reason?.message||e.reason||'خطأ غير معروف')));
-async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();checkDataErrors(d);const nextSportsData=d.leagues||d;notifySloomScoreChanges(sportsData,nextSportsData);dataGeneratedAt=d.generated_at||d.news_sources_updated_at||null;sportsData=nextSportsData;sportsData.news_sources=d.news_sources||[];render();tickSloomClocks()}catch(e){showSiteError('تعذر تحميل بيانات المباريات والأخبار. '+(e.message||'تحقق من اتصال الموقع بمصدر البيانات')+' — سنعيد المحاولة تلقائياً.');document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
+async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();checkDataErrors(d);const nextSportsData=d.leagues||d;Object.values(nextSportsData).forEach(league=>(league.matches||[]).forEach(match=>{if(match.status==='in'&&!match.clock_received_at)match.clock_received_at=league.live_checked_at||league.updated_at||d.generated_at||new Date().toISOString()}));notifySloomScoreChanges(sportsData,nextSportsData);dataGeneratedAt=d.generated_at||d.news_sources_updated_at||null;sportsData=nextSportsData;sportsData.news_sources=d.news_sources||[];render();tickSloomClocks()}catch(e){showSiteError('تعذر تحميل بيانات المباريات والأخبار. '+(e.message||'تحقق من اتصال الموقع بمصدر البيانات')+' — سنعيد المحاولة تلقائياً.');document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
 
 async function refreshLiveScores(){
  const now=Date.now();
@@ -2420,7 +2447,8 @@ async function refreshLiveScores(){
     status_detail:status.detail||old.status_detail||'',
     status_short:status.shortDetail||old.status_short||'',
     period:(comp.status||{}).period??old.period??null,
-    clock:(comp.status||{}).displayClock||old.clock||''
+    clock:(comp.status||{}).displayClock||old.clock||'',
+    clock_received_at:((comp.status||{}).displayClock||status.shortDetail||status.detail||'')!==String(old.clock||old.status_short||old.detail||'')?new Date().toISOString():(old.clock_received_at||new Date().toISOString())
    });
    merged++;
   }
@@ -2441,6 +2469,7 @@ async function refreshLiveScores(){
 
 document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,300000);
 setInterval(()=>refreshLiveScores().catch(e=>console.warn('[SLOOM365 live scores]',e)),15000);
+setInterval(updateSloomMinuteDisplays,1000);
 
 function clockAngles(date,zone){
  const parts=new Intl.DateTimeFormat('en-GB',{timeZone:zone,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(date);
