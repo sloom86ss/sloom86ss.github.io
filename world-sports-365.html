@@ -40,7 +40,8 @@ footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
 <body>
 <main>
 <header><div class="topline"><div class="brand">عالم الرياضة <span>365</span></div><a class="action" href="https://sloom86ss.github.io/" aria-label="الانتقال إلى سلوم كورة 365">⌂ سلوم كورة 365</a><button class="action" id="notifyBtn" type="button">🔔 تفعيل التنبيهات</button></div></header><section class="hero"><div class="hero-player left"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Raphinha.jpg" alt="رافينيا" loading="lazy"><b>رافينيا</b></div><div class="hero-center"><div class="hero-crown">🏆</div><h1>عالم الرياضة <span>365</span></h1><p>معاً .. لكل الرياضات</p><div class="hero-ball">⚽</div></div><div class="hero-player right"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lamine_Yamal_in_2025_(cropped).jpg" alt="لامين يامال" loading="lazy"><b>لامين يامال</b></div><div class="hero-player left lower"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Lionel_Messi_close-up.jpg" alt="ليونيل ميسي" loading="lazy"><b>ليونيل ميسي</b></div><div class="hero-player right lower"><img class="player-art" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cristiano_Ronaldo_2018.jpg" alt="كريستيانو رونالدو" loading="lazy"><b>كريستيانو رونالدو</b></div></section>
-<section class="screen" aria-label="شاشة الفيديو الرياضي">
+<section class="screen" id="sportsScreen" aria-label="شاشة العرض والبث الرياضي">
+<div class="screen-head"><span class="live-state" id="liveState">البث المباشر عند توفر مصدر رسمي</span><button class="fullscreen-btn" id="fullscreenBtn" type="button">⛶ تكبير الشاشة</button></div>
 <div class="placeholder" id="placeholder">
 <div class="ball">🏆</div>
 <h1 id="screenTitle">عالم الرياضة 365</h1>
@@ -98,6 +99,8 @@ function render(sport){
 }
 document.querySelector(".strip").addEventListener("click",e=>{const b=e.target.closest("button[data-sport]");if(b)render(b.dataset.sport)});
 render("all");
+document.getElementById("fullscreenBtn").addEventListener("click",async()=>{const screen=document.getElementById("sportsScreen");try{if(!document.fullscreenElement){await screen.requestFullscreen();}else{await document.exitFullscreen();}}catch(e){document.getElementById("fullscreenBtn").textContent="التكبير غير مدعوم";}});
+document.addEventListener("fullscreenchange",()=>{document.getElementById("fullscreenBtn").textContent=document.fullscreenElement?"⤢ تصغير الشاشة":"⛶ تكبير الشاشة";});
 document.getElementById("notifyBtn").addEventListener("click",async()=>{
  const btn=document.getElementById("notifyBtn");
  if(!("Notification" in window)){btn.textContent="التنبيهات غير مدعومة";return;}
