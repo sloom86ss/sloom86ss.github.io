@@ -9,6 +9,7 @@ on:
     paths-ignore:
       - 'data.json'
       - 'monitor_state.json'
+      - 'eye-of-pitch-365/data/**'
 
 permissions:
   contents: write
