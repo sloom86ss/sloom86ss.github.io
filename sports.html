@@ -107,8 +107,13 @@ async function resolveChannel(handle){
  let found='';
  await fetchText('https://www.youtube.com/@'+encodeURIComponent(handle)+'?hl=en',html=>{
   const doc=new DOMParser().parseFromString(html,'text/html');
-  found=doc.querySelector('meta[itemprop="channelId"]')?.content||doc.querySelector('meta[property="og:url"]')?.content?.match(/channel\\/(UC[\\w-]+)/)?.[1]||doc.documentElement.innerHTML.match(/"(?:channelId|externalId)":"(UC[\\w-]+)"/)?.[1]||doc.documentElement.innerHTML.match(/youtube\\.com\\/channel\\/(UC[\\w-]+)/)?.[1]||'';
-  return /^UC[\\w-]+$/.test(found);
+  const source=doc.documentElement.innerHTML;
+  found=doc.querySelector('meta[itemprop="channelId"]')?.content
+   ||doc.querySelector('meta[property="og:url"]')?.content?.match(/channel\/(UC[\w-]+)/)?.[1]
+   ||source.match(/"(?:channelId|externalId)":"(UC[\w-]+)"/)?.[1]
+   ||source.match(/youtube\.com\/channel\/(UC[\w-]+)/)?.[1]
+   ||'';
+  return /^UC[\w-]+$/.test(found);
  });
  if(!found)throw Error('تعذر تحديد معرّف قناة '+handle);
  channelIds[handle]=found;return found;
@@ -130,7 +135,15 @@ async function getLatest(handle,label){
  return parsed;
 }
 async function isLiveVideo(videoId){
- try{const html=await fetchText('https://www.youtube.com/watch?v='+encodeURIComponent(videoId));return /"isLive"\s*:\s*true|"isLiveContent"\s*:\s*true|"isLiveNow"\s*:\s*true|"liveBroadcastDetails"\s*:\s*\{/i.test(html)}catch{return false}
+ try{
+  const html=await fetchText('https://www.youtube.com/watch?v='+encodeURIComponent(videoId),body=>/ytInitialPlayerResponse/.test(body));
+  const match=html.match(/ytInitialPlayerResponse\s*=\s*(\{[\s\S]*?\})\s*;/);
+  if(!match)return false;
+  const data=JSON.parse(match[1]);
+  const live=data?.microformat?.playerMicroformatRenderer?.liveBroadcastDetails;
+  // لا نعتبر البث مباشراً إلا إذا أكدت صفحة YouTube أنه جارٍ الآن.
+  return live?.isLiveNow===true;
+ }catch{return false}
 }
 function resetPlayer(){if(ytPlayer){try{ytPlayer.destroy()}catch{}}ytPlayer=null;playerReady=false;pendingClip=null;let host=document.getElementById('playerHost');if(!host){host=document.createElement('div');host.id='playerHost';host.setAttribute('aria-label','مشغل الفيديو الرياضي');document.getElementById('screen').prepend(host)}host.innerHTML='';}
 function playClip(clip){
