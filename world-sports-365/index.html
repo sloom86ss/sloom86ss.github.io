@@ -13,7 +13,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;pa
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.game-card{min-height:142px;text-align:right;padding:15px;border:1px solid var(--line);border-radius:19px;background:linear-gradient(145deg,#1b1730,#100e1b);box-shadow:0 8px 20px #0003;transition:.18s;position:relative;overflow:hidden}.game-card:active{transform:scale(.98)}.game-card:hover{border-color:#8060ad;transform:translateY(-2px)}.game-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:26px;background:linear-gradient(145deg,#49306c,#251b3d);margin-bottom:12px;box-shadow:inset 0 1px #ffffff18}.game-card strong{display:block;font-size:14px}.game-card small{display:block;color:#a9a0bb;font-size:11px;margin-top:4px}.play-arrow{position:absolute;left:13px;bottom:14px;color:#bba0ff;font-size:18px}
 #playView{display:none}.play-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 13px}.back{background:#211a32;border:1px solid #49375f;border-radius:12px;padding:10px 14px;color:#e8dcff}.game-name{font-size:18px;font-weight:850}.game-stage{border:1px solid #4a3567;border-radius:23px;overflow:hidden;background:linear-gradient(180deg,#1b1730,#0e0c17);box-shadow:0 18px 48px #0007}.stage-head{display:flex;justify-content:space-between;align-items:center;padding:13px 16px;border-bottom:1px solid #302641;color:#c7badc;font-size:12px}.score{font-weight:800;color:var(--gold);font-size:14px}.arena{height:clamp(245px,45vh,390px);position:relative;background:radial-gradient(ellipse at 50% 30%,#433065 0%,#1b1730 48%,#100d19 100%);display:grid;place-items:center;overflow:hidden}.arena:before{content:"";position:absolute;inset:16px;border:1px solid #ffffff15;border-radius:15px;pointer-events:none}.arena canvas{width:100%;height:100%;display:block;touch-action:manipulation}.instruction{padding:13px 16px;color:#c9bfd8;text-align:center;font-size:13px;min-height:48px}.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;padding:0 13px 17px}.control{min-width:92px;padding:12px 16px;border-radius:13px;background:linear-gradient(145deg,#8156d5,#57349a);font-weight:800;box-shadow:0 6px 18px #57349a55}.control.secondary{background:#252035;border:1px solid #4b3a63;box-shadow:none}.control:disabled{opacity:.4;cursor:default}.result{color:var(--gold);font-weight:800;text-align:center;min-height:22px;padding:0 12px 8px}.meter{width:min(340px,80%);height:10px;background:#090812;border:1px solid #594775;border-radius:20px;overflow:hidden;margin:8px auto}.meter>i{display:block;height:100%;width:50%;background:linear-gradient(90deg,#7b4bd0,#f1cb80);border-radius:20px}
 footer{text-align:center;color:#777087;font-size:11px;padding:20px 0 0}
-@media(max-width:760px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.game-card{min-height:132px;padding:12px}.game-icon{width:43px;height:43px;font-size:23px}.game-card strong{font-size:12px}.game-card small{font-size:10px}.hero{padding:18px}.app{padding:10px 10px 24px}}
+@media(orientation:landscape) and (max-height:560px){.app{max-width:none;padding:5px 9px}.app>header{padding:3px 2px 6px}.brand .mark{width:34px;height:34px}.brand h1{font-size:17px}.brand p,.hero,#menuView .section-head,footer{display:none!important}#playView{height:calc(100dvh - 52px)}.play-top{margin:2px 0 5px}.game-name{font-size:15px}.back{padding:6px 10px}.game-stage{height:calc(100dvh - 82px);display:flex;flex-direction:column;border-radius:14px}.stage-head{padding:5px 10px}.arena{height:auto;min-height:0;flex:1}.instruction{padding:4px 8px;min-height:25px;font-size:11px}.controls{padding:0 5px 5px;gap:5px}.control{min-width:65px;padding:7px 10px;font-size:12px}.result{min-height:16px;padding-bottom:2px}}\n@media(max-width:760px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.game-card{min-height:132px;padding:12px}.game-icon{width:43px;height:43px;font-size:23px}.game-card strong{font-size:12px}.game-card small{font-size:10px}.hero{padding:18px}.app{padding:10px 10px 24px}}
 @media(max-width:430px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.game-card{min-height:128px}.live-pill{font-size:10px;padding:7px 9px}.brand p{font-size:10px}}
 </style>
 </head>
@@ -27,6 +27,7 @@ footer{text-align:center;color:#777087;font-size:11px;padding:20px 0 0}
 <script>
 (function(){
 const games=[
+{id:'match',name:'مباراة كرة قدم كاملة',icon:'🏟️',sub:'مباراة مباشرة وتحكم باللاعبين'},
 {id:'penalty',name:'ضربات الجزاء',icon:'⚽',sub:'سدد نحو المرمى'},
 {id:'freekick',name:'الركلات الحرة',icon:'🥅',sub:'تجاوز الحائط'},
 {id:'keeper',name:'تحدي حارس المرمى',icon:'🧤',sub:'تصدَّ للكرات'},
@@ -58,7 +59,7 @@ function launch(id){stop();current=id;round=0;setScore(0);message('');$('gameTit
 function back(){stop();play.style.display='none';menu.style.display='block';}
 $('backBtn').onclick=back;
 function stop(){active=false;if(timer)clearInterval(timer);if(raf)cancelAnimationFrame(raf);timer=null;raf=null}
-function startGame(){state={};$('modeLabel').textContent='تحدي فردي';const map={
+function startGame(){state={};$('modeLabel').textContent='تحدي فردي';const map={match:matchStart,
 penalty:penaltyStart,freekick:freeStart,keeper:keeperStart,dribble:dribbleStart,basket:basketStart,tennis:tennisStart,racing:racingStart,volley:volleyStart,tabletennis:tableStart,boxing:boxingStart,football:footballStart,badminton:badmintonStart};map[current]()}
 function penaltyStart(){state.shots=5;state.aim='الوسط';goal();text('اختر جهة التسديد',450,400,25);circle(450,470,23,'#f8f6ff');$('instruction').textContent='لديك 5 ركلات. اختر زاوية المرمى ثم سدد.';buttons([{label:'يسار',fn:()=>state.aim='اليسار',secondary:true},{label:'الوسط',fn:()=>state.aim='الوسط',secondary:true},{label:'يمين',fn:()=>state.aim='اليمين',secondary:true},{label:'سدد ⚽',fn:shootPenalty}])}
 function shootPenalty(){if(state.shots<=0)return;const keeper=['يسار','الوسط','يمين'][Math.floor(Math.random()*3)],goalSide=state.aim;state.shots--;base('ضربة الجزاء');goal();const x=goalSide==='يسار'?320:goalSide==='يمين'?580:450;circle(x,220,18,'#f8f6ff');circle(450,470,24,'#f8f6ff');text('الحارس: '+keeper,450,380,23);if(keeper!==goalSide){setScore(score+1);message('هدف رائع!');}else message('تصدى الحارس!');$('instruction').textContent='الركلات المتبقية: '+state.shots;if(state.shots===0){buttons([{label:'العب مجدداً',fn:()=>{setScore(0);penaltyStart()}}]);message('انتهى التحدي · سجلت '+score+' من 5');}else buttons([{label:'يسار',secondary:true,fn:()=>state.aim='اليسار'},{label:'وسط',secondary:true,fn:()=>state.aim='الوسط'},{label:'يمين',secondary:true,fn:()=>state.aim='اليمين'},{label:'سدد ⚽',fn:shootPenalty}])}
@@ -100,5 +101,58 @@ function badmintonStart(){state.rally=0;state.shuttleX=160;badmintonDraw();$('in
 function badmintonDraw(){base('الريشة الطائرة');rect(100,120,700,320,'#286e58','#d9f4e4');line(450,120,450,440,'#fff',5);line(100,280,800,280,'#fff',2);circle(state.shuttleX,240,13,'#fff','#bcb4c7');}
 function badmintonLoop(){const loop=()=>{if(current!=='badminton')return;state.shuttleX+=6;if(state.shuttleX>770)state.shuttleX=120;badmintonDraw();raf=requestAnimationFrame(loop)};loop()}
 function badmintonHit(){if(state.shuttleX>650&&state.shuttleX<770){setScore(score+1);message('إرجاع ناجح!');state.shuttleX=150}else message('توقيت الضربة غير مناسب.')}
+
+function matchStart(){
+ state={players:[],opponents:[],ball:{x:450,y:260,vx:0,vy:0},time:90,blue:0,red:0,keys:{},last:0,shotCooldown:0,passCooldown:0,ended:false};
+ for(let i=0;i<5;i++){state.players.push({x:170+(i%2)*105,y:105+i*76,vx:0,vy:0,homeX:170+(i%2)*105,homeY:105+i*76});state.opponents.push({x:730-(i%2)*105,y:105+i*76,vx:0,vy:0,homeX:730-(i%2)*105,homeY:105+i*76})}
+ state.players[0].x=330;state.players[0].y=260;state.user=state.players[0];
+ $('modeLabel').textContent='مباراة 5 ضد 5 · الشوط التجريبي';
+ $('instruction').textContent='حرّك اللاعب بالأسهم، ثم سدد أو مرّر. اقلب الهاتف أفقياً لتجربة أفضل.';
+ buttons([{label:'◀',secondary:true,fn:()=>moveUser(-1,0)},{label:'▲',secondary:true,fn:()=>moveUser(0,-1)},{label:'▼',secondary:true,fn:()=>moveUser(0,1)},{label:'▶',secondary:true,fn:()=>moveUser(1,0)},{label:'تمريرة',fn:matchPass},{label:'تسديد ⚽',fn:matchShoot},{label:'⛶ تكبير',fn:toggleFullscreen}]);
+ // Touch-and-hold controls for smoother movement.
+ const cs=$('controls').children;
+ [[-1,0],[0,-1],[0,1],[1,0]].forEach((d,i)=>{const el=cs[i];el.onpointerdown=e=>{e.preventDefault();state.keys[d[0]+','+d[1]]=true};el.onpointerup=el.onpointercancel=el.onpointerleave=()=>{state.keys[d[0]+','+d[1]]=false}});
+ state.keyHandler=e=>{const map={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1],a:[-1,0],d:[1,0],w:[0,-1],s:[0,1]};if(map[e.key]){e.preventDefault();state.keys[map[e.key].join(',')]=true}};
+ state.keyUp=e=>{const map={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1],a:[-1,0],d:[1,0],w:[0,-1],s:[0,1]};if(map[e.key])state.keys[map[e.key].join(',')]=false};
+ window.addEventListener('keydown',state.keyHandler);window.addEventListener('keyup',state.keyUp);
+ state.last=performance.now();active=true;raf=requestAnimationFrame(matchFrame);
+}
+function moveUser(dx,dy){if(!state.user||state.ended)return;state.user.x=Math.max(90,Math.min(810,state.user.x+dx*17));state.user.y=Math.max(105,Math.min(415,state.user.y+dy*17));}
+function matchPass(){if(!state||state.ended||state.passCooldown>0)return;let mate=state.players.slice(1).sort((a,b)=>Math.hypot(a.x-state.user.x,a.y-state.user.y)-Math.hypot(b.x-state.user.x,b.y-state.user.y))[0];if(mate){let dx=mate.x-state.ball.x,dy=mate.y-state.ball.y,d=Math.hypot(dx,dy)||1;state.ball.vx=dx/d*8;state.ball.vy=dy/d*8;state.ball.x=state.user.x;state.ball.y=state.user.y;state.passCooldown=1.1;message('تمريرة إلى زميلك');}}
+function matchShoot(){if(!state||state.ended||state.shotCooldown>0)return;let b=state.ball,u=state.user;if(Math.hypot(b.x-u.x,b.y-u.y)<85){b.x=u.x+22;b.y=u.y;b.vx=13;b.vy=(260-b.y)*.035;state.shotCooldown=1.0;message('تسديدة نحو المرمى!')}else message('اقترب من الكرة أولاً');}
+function matchFrame(now){
+ if(current!=='match'||!active)return;let dt=Math.min(.04,(now-state.last)/1000);state.last=now;state.time-=dt;state.shotCooldown=Math.max(0,state.shotCooldown-dt);state.passCooldown=Math.max(0,state.passCooldown-dt);
+ let u=state.user,dx=(state.keys['1,0']?1:0)-(state.keys['-1,0']?1:0),dy=(state.keys['0,1']?1:0)-(state.keys['0,-1']?1:0);
+ if(dx||dy){let n=Math.hypot(dx,dy);u.x+=dx/n*190*dt;u.y+=dy/n*190*dt}u.x=Math.max(95,Math.min(805,u.x));u.y=Math.max(112,Math.min(408,u.y));
+ const b=state.ball;
+ // Teammates support the attack; opponents press the ball carrier.
+ state.players.slice(1).forEach((p,i)=>{let tx=u.x+65,ty=105+i*75;p.x+=(tx-p.x)*dt*.7;p.y+=(ty-p.y)*dt*.7});
+ state.opponents.forEach((p,i)=>{let target=i===0?b:state.players[(i+1)%state.players.length];let tx=target.x,ty=target.y;p.x+=(tx-p.x)*dt*(i===0?1.7:.65);p.y+=(ty-p.y)*dt*(i===0?1.7:.65);let d=Math.hypot(p.x-b.x,p.y-b.y);if(d<23&&Math.random()<dt*1.8){b.vx-=2.8;b.vy+=(Math.random()-.5)*3}});
+ if(Math.hypot(u.x-b.x,u.y-b.y)<28&&Math.hypot(b.vx,b.vy)<3){b.vx+=(u.x-b.x)*.06+1.2;b.vy+=(u.y-b.y)*.06}
+ b.x+=b.vx;b.y+=b.vy;b.vx*=.986;b.vy*=.986;
+ if(b.y<91||b.y>429){b.vy*=-.8;b.y=Math.max(91,Math.min(429,b.y))}
+ if(b.x>835&&b.y>205&&b.y<315){state.blue++;matchGoal('الأزرق');return}
+ if(b.x<65&&b.y>205&&b.y<315){state.red++;matchGoal('الأحمر');return}
+ if(b.x<65||b.x>835)b.vx*=-.8;
+ if(state.time<=0){state.time=0;state.ended=true;message('انتهت المباراة');$('instruction').textContent='النتيجة النهائية: '+state.blue+' - '+state.red;return}
+ drawMatch();raf=requestAnimationFrame(matchFrame);
+}
+function matchGoal(team){if(team==='الأزرق')state.blue++;else state.red++;bReset();$('instruction').textContent='هدف! استؤنفت المباراة.';message('هدف للفريق '+(team==='الأزرق'?'الأزرق':'الأحمر'));drawMatch();raf=requestAnimationFrame(matchFrame)}
+function bReset(){state.ball={x:450,y:260,vx:0,vy:0};state.user.x=330;state.user.y=260;state.players.slice(1).forEach((p,i)=>{p.x=p.homeX;p.y=p.homeY});state.opponents.forEach((p,i)=>{p.x=p.homeX;p.y=p.homeY})}
+function drawMatch(){
+ const c=ctx;c.clearRect(0,0,900,520);let grad=c.createLinearGradient(0,0,0,520);grad.addColorStop(0,'#176c48');grad.addColorStop(1,'#0b422f');c.fillStyle=grad;c.fillRect(0,0,900,520);
+ for(let i=0;i<10;i++){c.fillStyle=i%2?'#ffffff08':'#00000008';c.fillRect(i*90,75,90,370)}
+ c.strokeStyle='#e4f5e8cc';c.lineWidth=3;c.strokeRect(55,75,790,370);c.beginPath();c.moveTo(450,75);c.lineTo(450,445);c.stroke();c.beginPath();c.arc(450,260,68,0,Math.PI*2);c.stroke();c.strokeRect(55,180,105,160);c.strokeRect(740,180,105,160);c.strokeRect(55,220,35,80);c.strokeRect(810,220,35,80);
+ // goals and net
+ c.fillStyle='#dce9e4';c.fillRect(37,220,18,80);c.fillRect(845,220,18,80);c.strokeStyle='#ffffff55';for(let y=224;y<300;y+=12){line(37,y,55,y,'#ffffff55',1);line(845,y,863,y,'#ffffff55',1)}
+ const player=(p,color,number)=>{circle(p.x,p.y+5,16,'#00000055');circle(p.x,p.y,15,color,'#f8f3ff');circle(p.x,p.y-3,5,'#f1cba5');text(String(number),p.x,p.y+5,10,'#fff')};
+ state.players.forEach((p,i)=>player(p,'#347cf2',i+1));state.opponents.forEach((p,i)=>player(p,'#e34e62',i+1));
+ circle(state.ball.x,state.ball.y,9,'#fff','#34313b');circle(state.ball.x-2,state.ball.y-2,3,'#25232b');
+ c.fillStyle='#080711bb';c.fillRect(320,12,260,43);text('الأزرق  '+state.blue+'  -  '+state.red+'  الأحمر',450,42,22,'#f5d58d');
+ text('الوقت '+Math.ceil(state.time)+' ث',450,492,16,'#fff');
+}
+async function toggleFullscreen(){try{const el=$('playView');if(!document.fullscreenElement){await el.requestFullscreen();if(screen.orientation&&screen.orientation.lock)await screen.orientation.lock('landscape').catch(()=>{})}else await document.exitFullscreen()}catch(e){message('يمكنك تدوير الهاتف يدوياً إلى الوضع الأفقي')}}
+
+window.addEventListener('pagehide',()=>{if(state.keyHandler)window.removeEventListener('keydown',state.keyHandler);if(state.keyUp)window.removeEventListener('keyup',state.keyUp)});
 })();
 </script></body></html>
