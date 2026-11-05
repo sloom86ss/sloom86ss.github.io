@@ -1807,7 +1807,20 @@ a{accent-color:#b77aff}
  </nav>
  <a href="sports.html" aria-label="الانتقال إلى الشاشة الرياضية الكبيرة" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 12px;border:1px solid #8f51b9;border-radius:12px;background:linear-gradient(120deg,#321747,#6b3290);color:#fff;font:800 11px Cairo;text-decoration:none;white-space:nowrap">▶ الشاشة الرياضية</a>
 </header>
-
+<div id="sloom-header-actions" aria-label="التنبيهات وتثبيت التطبيق">
+ <button id="sloom-header-install" type="button">📲 تنزيل التطبيق</button>
+ <button id="sloom-header-notify" type="button">🔔 تفعيل التنبيهات</button>
+</div>
+<style>
+#sloom-header-actions{display:flex;justify-content:flex-start;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+#sloom-header-actions button{min-height:39px;padding:7px 13px;border-radius:11px;font:900 11px Cairo,Arial,sans-serif;cursor:pointer}
+#sloom-header-install{background:#b7f34a;color:#10170b;border:1px solid #e2ffad}
+#sloom-header-notify{background:#203a2a;color:#eaffd6;border:1px solid #8ab56a}
+@media(max-width:420px){#sloom-header-actions button{flex:1 1 calc(50% - 5px);font-size:10px}}
+</style>
+<script>
+(()=>{const bind=()=>{const install=document.getElementById('installApp'),notify=document.getElementById('enableNotifications'),a=document.getElementById('sloom-header-install'),b=document.getElementById('sloom-header-notify');if(!install||!notify||!a||!b)return false;a.addEventListener('click',()=>install.click());b.addEventListener('click',()=>notify.click());const sync=()=>{a.textContent=install.textContent.includes('مثبت')?'✓ التطبيق مثبت':'📲 تنزيل التطبيق';b.textContent=notify.textContent.includes('مفعّلة')?'🔔 التنبيهات مفعّلة':notify.textContent.includes('محظورة')?'🔔 التنبيهات محظورة':'🔔 تفعيل التنبيهات';};sync();new MutationObserver(sync).observe(install,{childList:true,characterData:true,subtree:true});new MutationObserver(sync).observe(notify,{childList:true,characterData:true,subtree:true});return true;};if(!bind())document.addEventListener('DOMContentLoaded',bind,{once:true});})();
+</script>
 
 <section id="newsTicker" class="ticker" aria-label="شريط أخبار كرة القدم">
  <span class="ticker-label">⚽ أخبار كرة القدم</span>
