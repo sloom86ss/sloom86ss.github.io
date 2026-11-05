@@ -35,6 +35,25 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;pa
 .source b{display:block;font-size:12px;margin-bottom:5px}.source small{display:block;color:var(--muted);font-size:10px;line-height:1.7}
 footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
 @media(max-width:620px){main{padding:12px 10px 28px}.hero{min-height:230px;padding:12px 2%;gap:5px}.hero-player{width:18%;min-width:55px}.player-art{height:88px;font-size:34px}.hero-player b{font-size:10px}.hero-center h1{font-size:22px}.hero-center p{font-size:10px;padding:6px 10px}.hero-ball{font-size:35px}.hero-crown{font-size:25px}.screen{aspect-ratio:4/3;min-height:250px;border-radius:17px}.source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tag{font-size:10px}}
+
+.reporter{margin:20px 0 0;border:1px solid #493765;border-radius:20px;background:linear-gradient(145deg,#191329,#0f0c18);overflow:hidden;box-shadow:0 12px 35px #0006}
+.reporter-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px;border-bottom:1px solid #302541}
+.reporter-head h2{font-size:clamp(18px,3vw,24px);margin:0}.reporter-head small{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+.reporter-status{font-size:11px;color:#c6aaff;white-space:nowrap}
+.reporter-intro{padding:13px 16px;color:#e8dcff;font-size:13px;line-height:1.9;background:#9b72ff10;border-bottom:1px solid #302541}
+.news-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:14px}
+.news-card{padding:13px;border:1px solid #332746;border-radius:14px;background:#100d19;min-width:0}
+.news-meta{display:flex;justify-content:space-between;gap:8px;color:#bba5e9;font-size:10px;margin-bottom:8px}
+.news-card h3{font-size:14px;line-height:1.7;margin:0 0 8px}
+.news-card p{font-size:11px;color:var(--muted);line-height:1.8;margin:0 0 10px}
+.news-card a{color:#cbb4ff;font-size:11px;font-weight:800;text-decoration:none}
+.news-empty{padding:22px;text-align:center;color:var(--muted);font-size:12px;line-height:1.9}
+.reporter-foot{padding:0 15px 14px;color:#9589a8;font-size:10px;line-height:1.8}
+.video-fallback{margin-top:16px;border:1px solid #493765;border-radius:18px;padding:15px;background:linear-gradient(135deg,#191329,#0c0a13)}
+.video-fallback h2{font-size:16px;margin:0 0 8px}.video-fallback p{font-size:12px;line-height:1.8;color:var(--muted);margin:0 0 12px}
+.video-links{display:flex;flex-wrap:wrap;gap:8px}
+@media(max-width:620px){.news-list{grid-template-columns:1fr}.reporter-head{align-items:flex-start;flex-direction:column}}
+
 </style>
 </head>
 <body>
@@ -45,8 +64,8 @@ footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
 <div class="placeholder" id="placeholder">
 <div class="ball">🏆</div>
 <h1 id="screenTitle">عالم الرياضة 365</h1>
-<p id="screenText">شاشة العرض جاهزة. عند توفر بث مباشر يسمح مالك الحقوق بتضمينه سيظهر هنا داخل المشغّل نفسه. يمكنك تكبير الشاشة من الزر أعلاه.</p>
-<div class="screen-actions"><a class="action primary" id="watchLink" href="https://www.uefa.com/match-calendar/" target="_blank" rel="noopener">اعرف أين تشاهد البث رسمياً</a></div>
+<p id="screenText">هذه شاشة العرض الرئيسية. عند توفر بث مباشر رسمي قابل للتضمين سيعمل هنا. وعند عدم توفره نعرض أحدث الفيديوهات والملخصات الرسمية المتاحة من أصحاب الحقوق.</p>
+<div class="screen-actions"><a class="action primary" id="watchLink" href="https://www.uefa.com/video/" target="_blank" rel="noopener">الفيديوهات والملخصات الرسمية</a></div>
 </div>
 <iframe id="player" title="مشغل المصدر الرسمي" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
 </section>
@@ -64,41 +83,86 @@ footer{text-align:center;color:#837a94;font-size:10px;padding:24px 0 4px}
 <button class="sport" aria-pressed="false" data-sport="athletics">ألعاب القوى</button>
 <button class="sport" aria-pressed="false" data-sport="futsal">الفوتسال</button>
 </nav>
-<section class="sources">
-<h2 id="sourceHeading">مصادر وطرق المشاهدة الرسمية</h2>
-<div class="source-grid" id="sourceGrid"></div>
+
+<section class="reporter" aria-label="مراسل الأخبار الرياضية">
+ <div class="reporter-head"><div><h2>مراسل عالم الرياضة 365</h2><small>غرفة الأخبار الرياضية · تحديث تلقائي من مصادر موثوقة</small></div><span class="reporter-status" id="newsStatus">جارٍ جلب آخر الأخبار…</span></div>
+ <div class="reporter-intro" id="reporterIntro">مرحباً بكم. أتابع الآن أبرز المستجدات الرياضية، وأتحقق من مصدر كل خبر قبل عرضه لكم.</div>
+ <div class="news-list" id="newsList"><div class="news-empty">يتم تحميل الأخبار الرياضية…</div></div>
+ <div class="reporter-foot">تُنسب الأخبار إلى ناشريها الأصليين. العناوين والملخصات تُعرض كما توفرها المصادر، ولا ننسب للمراسل تصريحات أو معلومات غير موجودة في الخبر الأصلي.</div>
 </section>
-<section class="sources" aria-label="معايير الموثوقية"><h2>كيف نضمن موثوقية روابط المشاهدة؟</h2><div class="source-grid"><div class="source"><b>١. صاحب الحقوق أولاً</b><small>نعتمد صفحات الاتحادات والبطولات الرسمية لتحديد الناقل المعتمد.</small></div><div class="source"><b>٢. توضيح حالة الوصول</b><small>قد يكون البث مجانياً أو باشتراك أو محجوباً جغرافياً؛ نوضح ذلك ولا نصفه بالمجاني دون تأكيد.</small></div><div class="source"><b>٣. لا روابط مجهولة</b><small>لا نستخدم مواقع البث غير المرخصة أو روابط إعادة التوجيه المشبوهة.</small></div></div></section><footer>عالم الرياضة 365 · دليل مصادر رسمية · آخر مراجعة للروابط: 5 نوفمبر 2026 · لا يتضمن YouTube أو FIFA أو Formula 1</footer>
+<section class="video-fallback" aria-label="فيديوهات رياضية رسمية">
+ <h2>الفيديوهات والملخصات عند غياب البث</h2>
+ <p>عند عدم وجود بث مباشر، تبقى الشاشة على وضع الملخصات الرسمية. هذه صفحات فيديو تابعة للبطولات والاتحادات؛ تشغيل الفيديو تلقائياً داخل المشغّل يتطلب رابط تضمين أو ملف فيديو تسمح الجهة المالكة بعرضه خارج منصتها.</p>
+ <div class="video-links">
+  <a class="action" href="https://www.uefa.com/video/" target="_blank" rel="noopener">فيديوهات UEFA</a>
+  <a class="action" href="https://www.the-afc.com/en/more/video.html" target="_blank" rel="noopener">فيديوهات AFC</a>
+  <a class="action" href="https://www.fiba.basketball/videos" target="_blank" rel="noopener">فيديوهات FIBA</a>
+  <a class="action" href="https://www.atptour.com/en/video" target="_blank" rel="noopener">فيديوهات ATP</a>
+  <a class="action" href="https://worldathletics.org/videos" target="_blank" rel="noopener">فيديوهات ألعاب القوى</a>
+ </div>
+</section>
+<footer>عالم الرياضة 365 · دليل مصادر رسمية · آخر مراجعة للروابط: 5 نوفمبر 2026 · لا يتضمن YouTube أو FIFA أو Formula 1</footer>
 </main>
 <script>
+
 const catalogue={
- football:[["UEFA.tv","مقاطع ومباريات مختارة؛ دوري الأبطال عادة عبر الناقل المحلي","https://www.uefa.tv/"],["دليل ناقلي UEFA","اعرف الناقل الرسمي في عُمان وبقية الدول","https://www.uefa.com/match-calendar/"],["الاتحاد الآسيوي AFC","موقع البطولات والأخبار والروابط الرسمية","https://www.the-afc.com/"]],
- basketball:[["FIBA","صفحات البطولات وملخصات كرة السلة","https://www.fiba.basketball/"],["دليل مشاهدة FIBA","الناقلون المحليون والبث عبر Courtside 1891/DAZN حسب البلد","https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/where-to-watch"],["NBA","ملخصات ومشاهدة رسمية؛ بعض المحتوى باشتراك","https://www.nba.com/watch"]],
- tennis:[["ATP Tour","الموقع الرسمي وجدول البطولات","https://www.atptour.com/"],["WTA","الموقع الرسمي لتنس السيدات","https://www.wtatennis.com/"],["ITF","الاتحاد الدولي للتنس","https://www.itftennis.com/"]],
- cricket:[["ICC","موقع الاتحاد الدولي وجدول البطولات","https://www.icc-cricket.com/"],["ECB","الموقع الرسمي للكريكيت الإنجليزي","https://www.ecb.co.uk/"]],
- baseball:[["MLB","مقاطع وملخصات رسمية؛ البث المباشر حسب الحقوق","https://www.mlb.com/video"],["WBSC","الاتحاد الدولي للبيسبول والكرة اللينة","https://www.wbsc.org/"]],
- hockey:[["NHL","مقاطع وملخصات رسمية؛ البث حسب المنطقة","https://www.nhl.com/video"],["IIHF","الاتحاد الدولي لهوكي الجليد","https://www.iihf.com/"]],
- volleyball:[["Volleyball World","منصة VBTV للبث المباشر والمحتوى؛ قد تتطلب اشتراكاً","https://tv.volleyballworld.com/"],["FIVB","الاتحاد الدولي للكرة الطائرة","https://www.fivb.com/"]],
- boxing:[["World Boxing","الاتحاد العالمي للملاكمة وأخباره الرسمية","https://worldboxing.org/"],["IBA","الموقع الرسمي للاتحاد الدولي للملاكمة","https://www.iba.sport/"]],
- athletics:[["World Athletics","النتائج والملخصات ومعلومات التغطية","https://worldathletics.org/"],["Olympics","المحتوى الأولمبي الرسمي حسب التوفر","https://olympics.com/"]],
- futsal:[["AFC","بطولات ومحتوى كرة الصالات الآسيوية","https://www.the-afc.com/"],["UEFA Futsal","بطولات ومقاطع كرة الصالات الأوروبية","https://www.uefa.com/futsal/"]]
+ football:[["UEFA.tv","مقاطع رسمية ومباريات مختارة","https://www.uefa.tv/"],["دليل ناقلي UEFA","الناقل الرسمي حسب البلد","https://www.uefa.com/match-calendar/"],["الاتحاد الآسيوي AFC","الموقع الرسمي للبطولات الآسيوية","https://www.the-afc.com/"]],
+ basketball:[["FIBA","الاتحاد الدولي لكرة السلة","https://www.fiba.basketball/"]],
+ tennis:[["ATP Tour","الموقع الرسمي للتنس","https://www.atptour.com/"]],
+ cricket:[["ICC","الاتحاد الدولي للكريكيت","https://www.icc-cricket.com/"]],
+ baseball:[["MLB","الموقع الرسمي للبيسبول","https://www.mlb.com/"]],
+ hockey:[["NHL","الموقع الرسمي لهوكي الجليد","https://www.nhl.com/"]],
+ volleyball:[["Volleyball World","الموقع الرسمي للكرة الطائرة","https://www.volleyballworld.com/"]],
+ boxing:[["World Boxing","الاتحاد العالمي للملاكمة","https://worldboxing.org/"]],
+ athletics:[["World Athletics","الاتحاد الدولي لألعاب القوى","https://worldathletics.org/"]],
+ futsal:[["UEFA Futsal","بطولات كرة الصالات الأوروبية","https://www.uefa.com/futsal/"]]
 };
-const titles={all:"مصادر وطرق المشاهدة الرسمية",football:"مصادر ومشاهدة كرة القدم",basketball:"مصادر ومشاهدة كرة السلة",tennis:"مصادر ومشاهدة التنس",cricket:"مصادر ومشاهدة الكريكيت",baseball:"مصادر ومشاهدة البيسبول",hockey:"مصادر ومشاهدة الهوكي",volleyball:"مصادر ومشاهدة الكرة الطائرة",boxing:"مصادر ومشاهدة الملاكمة",athletics:"مصادر ومشاهدة ألعاب القوى",futsal:"مصادر ومشاهدة الفوتسال"};
+const titles={all:"كل الرياضات",football:"كرة القدم",basketball:"كرة السلة",tennis:"التنس",cricket:"الكريكيت",baseball:"البيسبول",hockey:"الهوكي",volleyball:"الكرة الطائرة",boxing:"الملاكمة",athletics:"ألعاب القوى",futsal:"الفوتسال"};
 function render(sport){
  document.querySelectorAll(".sport").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.sport===sport)));
- const items=sport==="all"?[...catalogue.football.slice(0,2),...catalogue.basketball.slice(0,1),...catalogue.tennis.slice(0,1),...catalogue.cricket.slice(0,1),...catalogue.baseball.slice(0,1),...catalogue.hockey.slice(0,1),...catalogue.volleyball.slice(0,1),...catalogue.athletics.slice(0,1)]:catalogue[sport]||[];
- document.getElementById("sourceHeading").textContent=titles[sport]||titles.all;
- document.getElementById("sourceGrid").innerHTML=items.map(x=>'<a class="source" href="'+x[2]+'" target="_blank" rel="noopener"><b>'+x[0]+'</b><small>'+x[1]+'</small></a>').join("");
- document.getElementById("screenTitle").textContent=sport==="all"?"عالم الرياضة 365":titles[sport].replace("مصادر ","");
- const primary=sport==="all"?"https://www.uefa.com/match-calendar/":(items[1]?.[2]||items[0]?.[2]||"https://www.uefa.tv/");
- document.getElementById("watchLink").href=primary;
- document.getElementById("watchLink").textContent=sport==="all"?"اعرف الناقل الرسمي حسب بلدك":"افتح دليل/مصدر المشاهدة الرسمي";
+ document.getElementById("screenTitle").textContent=sport==="all"?"عالم الرياضة 365":titles[sport];
+ document.getElementById("watchLink").href=sport==="all"?"https://www.uefa.com/video/":(catalogue[sport]?.[0]?.[2]||"https://www.uefa.com/video/");
  document.getElementById("player").style.display="none";
  document.getElementById("player").removeAttribute("src");
  document.getElementById("placeholder").style.display="block";
 }
 document.querySelector(".strip").addEventListener("click",e=>{const b=e.target.closest("button[data-sport]");if(b)render(b.dataset.sport)});
 render("all");
+const NEWS_RSS="https://news.google.com/rss/search?q=(sports%20OR%20football)%20(site%3Abbc.com%2Fsport%20OR%20site%3Abbc.co.uk%2Fsport%20OR%20site%3Auefa.com%20OR%20site%3Athe-afc.com%20OR%20site%3Afiba.basketball%20OR%20site%3Aatptour.com%20OR%20site%3Aworldathletics.org)&hl=ar&gl=OM&ceid=OM:ar";
+const NEWS_PROXY="https://api.rss2json.com/v1/api.json?rss_url="+encodeURIComponent(NEWS_RSS);
+function cleanText(s){const d=document.createElement("div");d.innerHTML=s||"";return (d.textContent||"").replace(/\\s+/g," ").trim().slice(0,280);}
+function relativeDate(s){const d=new Date(s);if(Number.isNaN(d.getTime()))return "وقت النشر غير متاح";return new Intl.DateTimeFormat("ar-OM",{dateStyle:"medium",timeStyle:"short"}).format(d);}
+async function loadSportsNews(){
+ const status=document.getElementById("newsStatus"),list=document.getElementById("newsList"),intro=document.getElementById("reporterIntro");
+ try{
+  const response=await fetch(NEWS_PROXY,{cache:"no-store"});
+  if(!response.ok)throw new Error("news request failed");
+  const data=await response.json();
+  if(data.status!=="ok"||!Array.isArray(data.items)||!data.items.length)throw new Error("empty feed");
+  const items=data.items.slice(0,8);
+  list.innerHTML="";
+  items.forEach((item,index)=>{
+   const card=document.createElement("article");card.className="news-card";
+   const meta=document.createElement("div");meta.className="news-meta";
+   const source=document.createElement("span");source.textContent=item.author||new URL(item.link).hostname.replace(/^www\\./,"");
+   const date=document.createElement("time");date.textContent=relativeDate(item.pubDate);
+   meta.append(source,date);
+   const title=document.createElement("h3");title.textContent=cleanText(item.title);
+   const summary=document.createElement("p");summary.textContent=cleanText(item.description)||"افتح الخبر للاطلاع على التفاصيل من الناشر الأصلي.";
+   const link=document.createElement("a");link.href=item.link;link.target="_blank";link.rel="noopener";link.textContent="اقرأ الخبر من المصدر ←";
+   card.append(meta,title,summary,link);list.append(card);
+  });
+  const lead=cleanText(items[0].title);
+  intro.textContent="أهلاً بكم. أبرز ما أتابعه الآن: "+lead+" — نوافيكم بالتفاصيل من المصدر الأصلي، ونحدّث موجز الأخبار تلقائياً.";
+  status.textContent="آخر تحديث: "+new Intl.DateTimeFormat("ar-OM",{hour:"2-digit",minute:"2-digit"}).format(new Date());
+ }catch(error){
+  status.textContent="تعذر تحديث الأخبار الآن";
+  list.innerHTML='<div class="news-empty">لم يصل موجز الأخبار في هذه اللحظة. لم نضع عناوين قديمة على أنها أخبار جديدة. أعد المحاولة بعد قليل أو افتح المصادر الرسمية.</div>';
+  intro.textContent="أهلاً بكم. خدمة الأخبار تواجه تعذراً مؤقتاً في جلب الموجز؛ لن أعرض أخباراً غير متحققة أو قديمة على أنها عاجلة.";
+ }
+}
+loadSportsNews();
+setInterval(loadSportsNews,10*60*1000);
 document.getElementById("fullscreenBtn").addEventListener("click",async()=>{const screen=document.getElementById("sportsScreen");try{if(!document.fullscreenElement){await screen.requestFullscreen();}else{await document.exitFullscreen();}}catch(e){document.getElementById("fullscreenBtn").textContent="التكبير غير مدعوم";}});
 document.addEventListener("fullscreenchange",()=>{document.getElementById("fullscreenBtn").textContent=document.fullscreenElement?"⤢ تصغير الشاشة":"⛶ تكبير الشاشة";});
 document.getElementById("notifyBtn").addEventListener("click",async()=>{
