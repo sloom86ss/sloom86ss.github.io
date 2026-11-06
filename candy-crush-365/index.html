@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#281052">
+<title>كاندي كروش 365</title>
+<style>
+:root{--gold:#ffe49a;--pink:#ff6cbd;--purple:#5523a5;--deep:#170b37}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:#fff;font-family:system-ui,"Segoe UI",Tahoma,sans-serif;background:radial-gradient(ellipse at 50% 8%,#8c42d7 0,#482080 35%,#1b0c3b 78%,#100722 100%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#ffd9ff 1px,transparent 1px);background-size:53px 53px,83px 83px;background-position:0 0,24px 36px}
+.wrap{position:relative;z-index:1;width:min(100%,560px);margin:auto;padding:10px 12px 22px}
+header{text-align:center;padding:4px 0 8px}.logo{display:inline-flex;align-items:center;gap:9px;padding:6px 18px;border:2px solid #ffe9a0;border-radius:30px;background:linear-gradient(180deg,#7e3ac7,#39116d);box-shadow:0 4px 0 #21083f,0 0 22px #ffb3f577,inset 0 2px 5px #fff7}.logo .candy{font-size:29px;filter:drop-shadow(0 3px 2px #260943)}h1{font-size:clamp(25px,7vw,36px);margin:0;color:#fff2b5;text-shadow:0 3px 0 #8d4a17,0 5px 10px #230b49;letter-spacing:.3px}.tag{font-size:10px;letter-spacing:4px;color:#ffd6ff;font-weight:800}
+.panel{border:2px solid #f9d889;border-radius:20px;background:linear-gradient(145deg,#542394eF,#291052f2);box-shadow:0 8px 0 #18092f,0 12px 25px #08031688,inset 0 2px 4px #fff4;margin-bottom:10px;padding:10px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.stat{border-radius:14px;text-align:center;padding:5px 3px;background:linear-gradient(180deg,#35105f,#210b43);border:1px solid #d9a9ff;box-shadow:inset 0 2px 4px #fff2}.stat small{display:block;color:#f7cfff;font-size:10px}.stat strong{font-size:22px;color:#fff2a7;text-shadow:0 2px 3px #160526}
+.goalrow{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:#ffe9b5}.goalrow b{font-size:15px;color:#fff}.progress{height:10px;border-radius:20px;background:#17072d;border:1px solid #bd8ee9;overflow:hidden;margin-top:7px}.bar{height:100%;width:0;background:linear-gradient(90deg,#ff67b8,#ffe26c);border-radius:20px;transition:width .3s}
+.board-shell{padding:8px;border-radius:23px;background:linear-gradient(145deg,#ffdc88,#a65be2 25%,#3c176e 75%,#ffce77);box-shadow:0 8px 0 #1a0838,0 14px 28px #09031caa,inset 0 2px 5px #fff}.board{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;padding:7px;border-radius:16px;background:linear-gradient(145deg,#28104e,#16072e);border:2px solid #e6aaff;touch-action:pan-y;user-select:none}
+.cell{aspect-ratio:1;min-width:0;border-radius:10px;background:linear-gradient(145deg,#482174,#281047);box-shadow:inset 0 2px 4px #0d0324,inset 0 -1px 2px #a36dd1;display:grid;place-items:center;position:relative;cursor:pointer;transition:transform .12s,filter .12s}.cell.selected{outline:3px solid #fff3a1;outline-offset:-2px;filter:brightness(1.25);transform:scale(.94)}.cell.pop{animation:pop .22s ease-in forwards}.gem{width:82%;height:82%;position:relative;display:grid;place-items:center;border-radius:32% 32% 38% 38%;transform:rotate(45deg);border:1px solid #ffffff9c;box-shadow:inset 3px 4px 5px #fff9,inset -4px -6px 7px #0004,0 3px 5px #09021b99;filter:drop-shadow(0 2px 1px #0c0325)}.gem:before{content:"";position:absolute;width:38%;height:18%;border-radius:50%;background:#ffffffa8;top:12%;left:13%;filter:blur(1px)}.gem:after{content:"";position:absolute;inset:8%;border-radius:28%;border:1px solid #ffffff45}.gem span{transform:rotate(-45deg);font-size:clamp(13px,4vw,23px);text-shadow:0 2px 2px #0004;filter:drop-shadow(0 1px 1px #fff7)}
+.g0{background:linear-gradient(140deg,#ff9bd0,#ef2589 55%,#9e075c)}.g1{background:linear-gradient(140deg,#a5edff,#24a9f2 55%,#1451bc)}.g2{background:linear-gradient(140deg,#fff18a,#ffbd25 55%,#dc5b05)}.g3{background:linear-gradient(140deg,#c9ff9b,#61d83c 55%,#168b39)}.g4{background:linear-gradient(140deg,#e7b4ff,#a64be9 55%,#5a159d)}.g5{background:linear-gradient(140deg,#ffb1a0,#fa5549 55%,#ae142e)}
+.actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:10px}.btn{border:1px solid #fff0b0;border-radius:25px;padding:10px 17px;font-size:13px;font-weight:900;color:#41134d;background:linear-gradient(180deg,#fff3a6,#ffb83c);box-shadow:0 4px 0 #9b4b17,0 6px 10px #13052677;cursor:pointer}.btn.secondary{background:linear-gradient(180deg,#f7d6ff,#ba76ed);box-shadow:0 4px 0 #56217c;color:#32104d}.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #9b4b17}.help{text-align:center;color:#f3d9ff;font-size:11px;line-height:1.6;margin:9px 4px}
+.overlay{position:fixed;inset:0;z-index:5;background:#10051ddd;display:none;place-items:center;padding:20px}.dialog{width:min(100%,350px);text-align:center;padding:24px 18px;border:3px solid #ffe39a;border-radius:24px;background:linear-gradient(145deg,#7736b5,#28104f);box-shadow:0 12px 40px #000b,inset 0 2px 5px #fff5}.dialog h2{color:#fff1a8;margin:0 0 8px;font-size:27px}.dialog p{color:#ffe5ff;font-size:14px}.dialog .btn{margin-top:8px}
+@keyframes pop{to{transform:scale(.15) rotate(100deg);opacity:0}}
+@media(max-width:380px){.wrap{padding:7px 8px}.board{gap:3px;padding:5px}.cell{border-radius:7px}.gem{width:84%;height:84%}.panel{padding:8px}.stat strong{font-size:19px}}
+</style></head>
+<body><main class="wrap">
+<header><div class="logo"><span class="candy">🍭</span><div><h1>كاندي كروش 365</h1><div class="tag">CANDY CRUSH 365</div></div><span class="candy">🍬</span></div></header>
+<section class="panel stats"><div class="stat"><small>⭐ النقاط</small><strong id="score">0</strong></div><div class="stat"><small>🎯 الهدف</small><strong id="target">1200</strong></div><div class="stat"><small>👣 الحركات</small><strong id="moves">25</strong></div></section>
+<section class="panel"><div class="goalrow"><span>🍬 اجمع الحلوى وسجّل أعلى نتيجة!</span><b id="level">المرحلة 1</b></div><div class="progress"><div class="bar" id="bar"></div></div></section>
+<section class="board-shell"><div class="board" id="board" aria-label="لوحة الحلوى"></div></section>
+<div class="actions"><button class="btn" id="restart">↻ إعادة المرحلة</button><button class="btn secondary" id="hint">✨ تلميح</button></div>
+<p class="help">بدّل مكان حبتين متجاورتين لتكوين صف أو عمود من 3 حبات متشابهة أو أكثر. اسحب بإصبعك أو المس الحبتين بالترتيب.</p>
+</main>
+<div class="overlay" id="overlay"><div class="dialog"><div style="font-size:48px" id="resultIcon">🏆</div><h2 id="resultTitle">أحسنت!</h2><p id="resultText"></p><button class="btn" id="next">متابعة اللعب</button></div></div>
+<script>
+(()=>{
+const N=8,types=6,boardEl=document.getElementById('board');let grid=[],selected=null,score=0,moves=25,level=1,busy=false,dragStart=null;
+const $=id=>document.getElementById(id),goal=()=>1000+level*200;
+const rand=()=>Math.floor(Math.random()*types);
+function makeGrid(){grid=Array.from({length:N},()=>Array(N).fill(0));for(let r=0;r<N;r++)for(let c=0;c<N;c++){let t;do{t=rand()}while((c>1&&grid[r][c-1]===t&&grid[r][c-2]===t)||(r>1&&grid[r-1][c]===t&&grid[r-2][c]===t));grid[r][c]=t}}
+function render(){boardEl.innerHTML='';for(let r=0;r<N;r++)for(let c=0;c<N;c++){let cell=document.createElement('div');cell.className='cell'+(selected&&selected.r===r&&selected.c===c?' selected':'');cell.dataset.r=r;cell.dataset.c=c;let gem=document.createElement('div');gem.className='gem g'+grid[r][c];let mark=document.createElement('span');mark.textContent=['♥','♦','★','✿','◆','●'][grid[r][c]];gem.appendChild(mark);cell.appendChild(gem);boardEl.appendChild(cell)}}
+function update(){ $('score').textContent=score.toLocaleString('en-US');$('moves').textContent=moves;$('level').textContent='المرحلة '+level;$('target').textContent=goal().toLocaleString('en-US');$('bar').style.width=Math.min(100,score/goal()*100)+'%'}
+function matches(){let found=new Set();for(let r=0;r<N;r++){let c=0;while(c<N){let e=c+1;while(e<N&&grid[r][e]===grid[r][c])e++;if(e-c>=3)for(let x=c;x<e;x++)found.add(r+','+x);c=e}}for(let c=0;c<N;c++){let r=0;while(r<N){let e=r+1;while(e<N&&grid[e][c]===grid[r][c])e++;if(e-r>=3)for(let x=r;x<e;x++)found.add(x+','+c);r=e}}return [...found].map(s=>s.split(',').map(Number))}
+function adjacent(a,b){return Math.abs(a.r-b.r)+Math.abs(a.c-b.c)===1}
+function swap(a,b){[grid[a.r][a.c],grid[b.r][b.c]]=[grid[b.r][b.c],grid[a.r][a.c]]}
+const wait=ms=>new Promise(ok=>setTimeout(ok,ms));
+async function clearMatches(){let chain=0;while(true){let m=matches();if(!m.length)break;chain++;score+=m.length*60*chain;for(let [r,c] of m)grid[r][c]=-1;render();await wait(130);for(let c=0;c<N;c++){let vals=[];for(let r=N-1;r>=0;r--)if(grid[r][c]!==-1)vals.push(grid[r][c]);for(let r=N-1;r>=0;r--)grid[r][c]=vals[N-1-r]??rand()}render();await wait(120)}}
+async function move(a,b){if(busy||!adjacent(a,b))return;busy=true;swap(a,b);if(!matches().length){await wait(130);swap(a,b);busy=false;render();return}moves--;selected=null;render();await clearMatches();update();busy=false;checkEnd()}
+function checkEnd(){if(score>=goal()){show('🏆','رائع! أكملت المرحلة','وصلت إلى الهدف. نتيجتك '+score.toLocaleString('en-US')+' نقطة.','التالي');}else if(moves<=0){show('💗','انتهت الحركات','حاول مرة أخرى لتحقق الهدف.','إعادة المحاولة')}}
+function show(icon,title,msg,btn){$('resultIcon').textContent=icon;$('resultTitle').textContent=title;$('resultText').textContent=msg;$('next').textContent=btn;$('overlay').style.display='grid'}
+function hide(){ $('overlay').style.display='none'}
+function pick(r,c){if(busy)return;if(!selected){selected={r,c};render();return}let a=selected,b={r,c};if(a.r===r&&a.c===c){selected=null;render();return}if(adjacent(a,b)){move(a,b)}else{selected=b;render()}}
+boardEl.addEventListener('click',e=>{let cell=e.target.closest('.cell');if(cell)pick(+cell.dataset.r,+cell.dataset.c)});
+boardEl.addEventListener('touchstart',e=>{let cell=e.target.closest('.cell');if(cell)dragStart={r:+cell.dataset.r,c:+cell.dataset.c,x:e.touches[0].clientX,y:e.touches[0].clientY}},{passive:true});
+boardEl.addEventListener('touchend',e=>{if(!dragStart)return;let t=e.changedTouches[0],dx=t.clientX-dragStart.x,dy=t.clientY-dragStart.y;if(Math.max(Math.abs(dx),Math.abs(dy))>18){let b={r:dragStart.r+(Math.abs(dy)>Math.abs(dx)?Math.sign(dy):0),c:dragStart.c+(Math.abs(dx)>=Math.abs(dy)?Math.sign(dx):0)};if(b.r>=0&&b.r<N&&b.c>=0&&b.c<N)move(dragStart,b)}dragStart=null},{passive:true});
+function start(){score=0;moves=25;selected=null;busy=false;makeGrid();render();update();hide()}
+$('restart').onclick=start;$('hint').onclick=()=>{if(busy)return;let found=false;for(let r=0;r<N&&!found;r++)for(let c=0;c<N&&!found;c++)for(let [dr,dc] of [[0,1],[1,0]]){let rr=r+dr,cc=c+dc;if(rr<N&&cc<N){swap({r,c},{r:rr,c:cc});if(matches().length){selected={r,c};found=true}swap({r,c},{r:rr,c:cc})}}render();if(!found)alert('لا يوجد تلميح متاح الآن.');};
+$('next').onclick=()=>{hide();if(score>=goal()){level++;start()}else start()};
+start();
+})();
+</script></body></html>
