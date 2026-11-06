@@ -1,0 +1,25 @@
+name: Copy SMART EDU 360
+on:
+  push:
+    paths:
+      - ".github/workflows/copy-smart-edu.yml"
+permissions:
+  contents: write
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Copy complete SMART EDU 360 project
+        run: |
+          git clone --depth 1 https://github.com/sloom86ss/BAR-A-LEGENDS.git /tmp/source
+          rm -rf smart-edu-365
+          cp -a /tmp/source/smart-edu-365 ./smart-edu-365
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add smart-edu-365
+          git commit -m "Deploy SMART EDU 360 project"
+          git push origin HEAD:main
