@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>القراءة الإنجليزية المتدرجة | SMART EDU 365</title>
+<style>
+:root{--bg:#0b0b10;--panel:#17171f;--gold:#e6bd65;--gold2:#ffdf91;--text:#f7f3e9;--muted:#b7b2a8;--line:#39343b;--green:#8ce0b0}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 85% 0%,#352715 0,transparent 34%),linear-gradient(160deg,#0b0b10,#111018 65%,#0b0b10);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif}
+header,main{max-width:900px;margin:auto;padding:20px}header{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:800;color:var(--gold2)}.back{color:var(--gold2);text-decoration:none;border:1px solid #76613b;border-radius:12px;padding:9px 12px;font-size:13px}
+.hero{padding:25px;border:1px solid #5c4929;border-radius:22px;background:linear-gradient(120deg,#292016,#19171b 60%,#15151d)}h1{margin:7px 0 10px;font-size:clamp(25px,5vw,38px)}p{line-height:1.8}.muted{color:var(--muted);font-size:14px}.progress{height:9px;background:#34313a;border-radius:20px;overflow:hidden;margin-top:14px}.bar{height:100%;width:0;background:linear-gradient(90deg,#b98532,var(--gold2));transition:width .25s}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.tab,button{font:inherit;cursor:pointer}.tab{border:1px solid var(--line);background:#17171f;color:var(--text);padding:10px 14px;border-radius:12px}.tab.active{background:linear-gradient(135deg,var(--gold2),#c18c35);color:#201606;border-color:var(--gold)}
+.card{background:linear-gradient(150deg,#1d1c25,#14141b);border:1px solid var(--line);border-radius:18px;padding:18px;margin:12px 0}.level{color:var(--gold2);font-size:12px;font-weight:800}.english{direction:ltr;text-align:left;font-size:clamp(23px,5vw,30px);font-weight:800;letter-spacing:.3px;margin:12px 0}.word{display:inline-block;margin:4px 8px;padding:5px 9px;border:1px solid #51432d;border-radius:10px;background:#241e14}.translation{color:#e9d8b3;background:#211b12;border-radius:12px;padding:10px 12px;margin:10px 0;line-height:1.8}.hidden{display:none}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#ffffff0b;color:var(--text);border-radius:11px;padding:10px 13px}.btn.gold{background:linear-gradient(135deg,var(--gold2),#c18c35);color:#201606;border:0;font-weight:800}.question{border-top:1px solid var(--line);margin-top:15px;padding-top:14px}.choices{display:flex;gap:8px;flex-wrap:wrap}.choice{border:1px solid #655334;background:#211b12;color:var(--text);border-radius:10px;padding:9px 12px}.feedback{min-height:24px;color:var(--green);font-size:13px;margin-top:9px}.done{color:var(--gold2);font-size:13px}.footer{text-align:center;color:#8f8a82;font-size:12px;padding:25px}
+@media(max-width:600px){header,main{padding:15px}.hero{padding:20px}.card{padding:15px}}
+</style>
+</head>
+<body>
+<header><div><div class="brand">✦ SMART EDU 365</div><small class="muted">القراءة الإنجليزية خطوة بخطوة</small></div><a class="back" href="index.html">العودة للرئيسية ←</a></header>
+<main>
+<section class="hero"><div class="level">من الكلمات إلى القصص</div><h1>📖 هيا نقرأ الإنجليزية!</h1><p class="muted">ابدأ بكلمات قصيرة، ثم اقرأ عبارات وجملاً، وبعدها قصصاً صغيرة. استمع للنطق، وافتح الترجمة عند الحاجة، وأجب عن سؤال بسيط بعد كل تدريب.</p><div id="progressText" class="done">أنجزت 0 من 9 تدريبات</div><div class="progress"><div class="bar" id="bar"></div></div></section>
+<nav class="tabs" aria-label="مراحل القراءة"><button class="tab active" data-stage="words">١. الكلمات</button><button class="tab" data-stage="phrases">٢. العبارات والجمل</button><button class="tab" data-stage="stories">٣. القصص القصيرة</button></nav>
+<div id="lessons"></div>
+<div class="footer">SMART EDU 365 · اقرأ بهدوء، واستمع، ثم جرّب بنفسك</div>
+</main>
+<script>
+const stages={
+words:[
+{title:"كلمات قصيرة: cat و sun",text:"cat · sun · pen",parts:"cat = c - a - t  |  sun = s - u - n",ar:"cat تعني قطة. sun تعني شمس. حاول قراءة كل كلمة ببطء ثم قلها كاملة.",q:"ما معنى sun؟",opts:["شمس","قلم","قطة"],a:0},
+{title:"كلمات من الحياة اليومية",text:"book · bag · cup",parts:"book = b - oo - k  |  bag = b - a - g  |  cup = c - u - p",ar:"book تعني كتاب. bag تعني حقيبة. cup تعني كوباً.",q:"أي كلمة تعني حقيبة؟",opts:["cup","bag","book"],a:1},
+{title:"كلمات تصف الأشياء",text:"big · red · hot",parts:"big = b - i - g  |  red = r - e - d  |  hot = h - o - t",ar:"big تعني كبير. red تعني أحمر. hot تعني ساخن.",q:"ما معنى red؟",opts:["ساخن","كبير","أحمر"],a:2}
+],
+phrases:[
+{title:"عبارات قصيرة",text:"Good morning!  ·  Thank you.  ·  Please.",parts:"Good / morning  ·  Thank / you  ·  Please",ar:"Good morning! = صباح الخير!<br>Thank you. = شكراً لك.<br>Please. = من فضلك.",q:"ماذا نقول عندما نشكر شخصاً؟",opts:["Please","Thank you","Good morning"],a:1},
+{title:"جمل عن نفسي",text:"I am happy.  ·  I like books.",parts:"I / am / happy  ·  I / like / books",ar:"I am happy. = أنا سعيد.<br>I like books. = أنا أحب الكتب.",q:"ما معنى I am happy؟",opts:["أنا سعيد","أنا أحب الكتب","صباح الخير"],a:0},
+{title:"جمل عن الأشياء",text:"This is my bag.  ·  The sun is hot.",parts:"This / is / my / bag  ·  The / sun / is / hot",ar:"This is my bag. = هذه حقيبتي.<br>The sun is hot. = الشمس حارة.",q:"ما معنى This is my bag؟",opts:["الشمس حارة","هذه حقيبتي","أنا سعيد"],a:1}
+],
+stories:[
+{title:"القطة الصغيرة",text:"I see a cat. The cat is small. It is cute.",ar:"أرى قطة. القطة صغيرة. إنها لطيفة.",q:"كيف كانت القطة؟",opts:["كبيرة","صغيرة","سريعة"],a:1},
+{title:"كتابي الجديد",text:"I have a book. It is blue. I read my book.",ar:"لدي كتاب. لونه أزرق. أقرأ كتابي.",q:"ما لون الكتاب؟",opts:["أحمر","أخضر","أزرق"],a:2},
+{title:"يوم مشمس",text:"The sun is up. I go to the park. I play with my friend.",ar:"الشمس مشرقة. أذهب إلى الحديقة. ألعب مع صديقي.",q:"إلى أين ذهب الطفل؟",opts:["إلى المدرسة","إلى الحديقة","إلى البيت"],a:1}
+]};
+const all=Object.values(stages).flat(), key="smartEduReadingDone";
+let completed=JSON.parse(localStorage.getItem(key)||"[]"), current="words";
+const speak=(txt,rate=0.82)=>{if(!("speechSynthesis" in window)){alert("ميزة النطق غير متاحة في هذا المتصفح.");return;}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(txt);u.lang="en-US";u.rate=rate;speechSynthesis.speak(u)};
+function render(){const host=document.getElementById("lessons");host.innerHTML="";stages[current].forEach((item,i)=>{const id=current+"-"+i;const card=document.createElement("section");card.className="card";card.innerHTML='<div class="level">'+(current==="words"?"مرحلة الكلمات":current==="phrases"?"مرحلة الجمل":"مرحلة القصص")+' · تدريب '+(i+1)+'</div><h2>'+item.title+'</h2><div class="english">'+item.text+'</div>'+(item.parts?'<p class="muted" dir="ltr" style="text-align:left">'+item.parts+'</p>':'')+'<div class="translation hidden" id="tr-'+id+'">'+item.ar+'</div><div class="actions"><button class="btn gold" data-speak="'+id+'">🔊 استمع</button><button class="btn" data-slow="'+id+'">🐢 استمع ببطء</button><button class="btn" data-translation="'+id+'">إظهار / إخفاء الترجمة</button></div><div class="question"><b>'+item.q+'</b><div class="choices">'+item.opts.map((o,j)=>'<button class="choice" data-answer="'+id+'" data-index="'+j+'">'+o+'</button>').join("")+'</div><div class="feedback" id="fb-'+id+'"></div><div class="done" id="done-'+id+'">'+(completed.includes(id)?"✓ أكملت هذا التدريب":"")+'</div></div>';host.appendChild(card);});
+host.querySelectorAll("[data-speak]").forEach(b=>b.onclick=()=>{const [s,n]=b.dataset.speak.split("-");speak(stages[s][+n].text.replaceAll("·","."),.85)});
+host.querySelectorAll("[data-slow]").forEach(b=>b.onclick=()=>{const [s,n]=b.dataset.slow.split("-");speak(stages[s][+n].text.replaceAll("·","."),.58)});
+host.querySelectorAll("[data-translation]").forEach(b=>b.onclick=()=>document.getElementById("tr-"+b.dataset.translation).classList.toggle("hidden"));
+host.querySelectorAll("[data-answer]").forEach(b=>b.onclick=()=>{const [s,n]=b.dataset.answer.split("-"),item=stages[s][+n],id=b.dataset.answer,fb=document.getElementById("fb-"+id);if(+b.dataset.index===item.a){fb.textContent="أحسنت! إجابة صحيحة 🌟";if(!completed.includes(id)){completed.push(id);localStorage.setItem(key,JSON.stringify(completed));document.getElementById("done-"+id).textContent="✓ أكملت هذا التدريب";updateProgress();}}else fb.textContent="حاول مرة أخرى، يمكنك الاستماع وقراءة الترجمة.";});
+}
+function updateProgress(){document.getElementById("progressText").textContent="أنجزت "+completed.length+" من "+all.length+" تدريبات";document.getElementById("bar").style.width=(completed.length/all.length*100)+"%"}
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{current=b.dataset.stage;document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));render()});
+updateProgress();render();
+</script>
+<script>/* SMART EDU 360 English speech reliability */(()=>{const s=window.speechSynthesis;if(!s||s.__smartEdu360Patched)return;const native=s.speak.bind(s);function voice(u){if(!(u.lang||"en-US").toLowerCase().startsWith("en"))return;if(u.voice&&u.voice.lang&&u.voice.lang.toLowerCase().startsWith("en"))return;const vs=s.getVoices()||[];const v=vs.find(x=>/^en-us$/i.test(x.lang))||vs.find(x=>/^en-gb$/i.test(x.lang))||vs.find(x=>/^en-/i.test(x.lang))||vs.find(x=>/^en$/i.test(x.lang));if(v){u.voice=v;u.lang=v.lang}}function split(t){const ss=(t.match(/[^.!?]+[.!?]?/g)||[t]).map(x=>x.trim()).filter(Boolean),out=[];for(const a of ss){if(a.length<=115){out.push(a);continue}let p="";for(const w of a.split(/\s+/)){if(p&&(p+" "+w).length>105){out.push(p);p=w}else p=p?p+" "+w:w}if(p)out.push(p)}return out.length?out:[t]}s.speak=function(u){if(!u||typeof u.text!=="string"||!(u.lang||"en-US").toLowerCase().startsWith("en"))return native(u);voice(u);const parts=split(u.text.trim());if(parts.length<2)return native(u);let i=0;const go=()=>{const q=new SpeechSynthesisUtterance(parts[i]);q.lang=u.lang||"en-US";q.rate=u.rate;q.pitch=u.pitch;q.volume=u.volume;if(u.voice)q.voice=u.voice;if(i===0&&u.onstart)q.onstart=e=>u.onstart(e);q.onend=e=>{if(++i<parts.length)go();else if(u.onend)u.onend(e)};q.onerror=e=>{if(u.onerror)u.onerror(e)};native(q)};go()};s.__smartEdu360Patched=true})();</script></body></html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>جمل إنجليزية سهلة | SMART EDU 365</title>
+<style>
+:root{--bg:#0d0d12;--panel:#191820;--gold:#f0cf83;--line:#55452c;--muted:#c8c0b2;--green:#8ce0b0}
+*{box-sizing:border-box}body{margin:0;padding:14px;background:radial-gradient(ellipse at top,#302416,#0d0d12 58%);color:#faf5e9;font-family:Tahoma,Arial,sans-serif;line-height:1.8}.wrap{max-width:760px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.gold{color:var(--gold)}.muted{color:var(--muted);font-size:14px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0}.progress{height:8px;background:#37333b;border-radius:9px;overflow:hidden}.progress span{height:100%;display:block;width:0;background:linear-gradient(90deg,#bb8735,#ffe4a0)}.sentence{font-size:clamp(30px,8vw,46px);font-weight:bold;text-align:center;direction:ltr;color:var(--gold);margin:15px 0;line-height:1.4}.translation{text-align:center;font-size:21px}.words{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;direction:ltr;margin:18px 0}.word{background:#25222a;border:1px solid #625239;border-radius:12px;padding:9px 14px;min-width:65px;text-align:center}.word b{display:block;color:var(--gold);font-size:22px}.word small{display:block;color:var(--muted);direction:rtl}.actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:16px}button{border:0;border-radius:11px;padding:11px 15px;font:inherit;font-weight:bold;cursor:pointer}.primary{background:linear-gradient(135deg,#ffe5a0,#c18c35);color:#241907}.secondary{background:#302b24;color:#fff;border:1px solid #625239}.question{padding:14px 0;border-bottom:1px solid #39343b}.options{display:grid;grid-template-columns:1fr;gap:8px;margin-top:9px}.options label{background:#111117;border:1px solid #49414a;border-radius:10px;padding:10px}.options input{accent-color:#e8c16f}.notice{background:#241e13;border:1px solid #715a31;border-radius:12px;padding:12px;color:#f2dfb5;font-size:14px}.hidden{display:none!important}a{color:var(--gold)}
+</style></head>
+<body><main class="wrap">
+<section class="panel" style="border:1px solid #b88b3d;background:#211b12;padding:14px 16px;border-radius:14px;margin:14px 0"><strong style="color:#ffdf91">✏️ أحضر دفترك وقلمك</strong><p style="margin:7px 0 0;line-height:1.9">استمع جيداً إلى الحرف أو الكلمة أو الجملة، وشاهدها على الشاشة، ثم اكتبها بيدك في دفترك. أعد الاستماع وراجع كتابتك.</p></section>
+<div class="top"><div><h1 class="gold">SMART EDU 365</h1><h2>نقرأ جُملاً إنجليزية سهلة</h2></div><div><a href="conversations.html">المحادثات السهلة</a> · <a href="index.html">الرئيسية</a></div></div>
+<p class="muted">لا تقلق! سنتعلم جملة قصيرة واحدة في كل مرة. استمع، اقرأ، وافهم معناها بالعربية. لا توجد قواعد صعبة هنا.</p>
+<section class="panel">
+<div style="display:flex;justify-content:space-between;gap:8px"><b id="lessonTitle">الجملة 1 من 5</b><span class="muted" id="progressText">1 / 5</span></div>
+<div class="progress"><span id="bar"></span></div>
+<div class="sentence" id="sentence">I am Sam.</div>
+<div class="translation" id="meaning">أنا سام.</div>
+<div class="words" id="words"></div>
+<p class="muted" id="hint" style="text-align:center">اضغط على زر الاستماع، ثم اقرأ الجملة بهدوء.</p>
+<div class="actions"><button class="primary" id="listen">🔊 استمع إلى الجملة</button><button class="secondary" id="listenSlow">🐢 استمع ببطء</button></div>
+<div class="actions"><button class="secondary" id="previous">السابق</button><button class="primary" id="next">الجملة التالية</button></div>
+</section>
+<section class="panel">
+<h3 class="gold">هل فهمت الجملة؟</h3>
+<p class="muted">اختر معناها الصحيح. الاختبار بسيط، ويمكنك المحاولة مرة أخرى.</p>
+<button class="primary" id="showQuiz">ابدأ التدريب السهل</button>
+<div id="quiz" class="hidden"></div><div id="result" class="notice hidden" aria-live="polite"></div>
+</section>
+<p class="notice">تذكّر: لا نحتاج إلى حفظ كل شيء بسرعة. كرر الجملة بصوتك، وخذ وقتك. النطق الصوتي هنا آلي من جهازك وقد يختلف حسب الصوت المتاح.</p>
+</main>
+<script>
+const lessons=[
+{en:"I am Sam.",ar:"أنا سام.",words:[["I","أنا"],["am","أكون / أُستخدم مع أنا"],["Sam","سام"]]},
+{en:"This is a cat.",ar:"هذه قطة.",words:[["This","هذه"],["is","هي / يكون"],["a","أداة قبل الاسم"],["cat","قطة"]]},
+{en:"I see a cat.",ar:"أنا أرى قطة.",words:[["I","أنا"],["see","أرى"],["a","أداة قبل الاسم"],["cat","قطة"]]},
+{en:"This is my bag.",ar:"هذه حقيبتي.",words:[["This","هذه"],["is","هي"],["my","لي / خاصتي"],["bag","حقيبة"]]},
+{en:"The sun is hot.",ar:"الشمس حارة.",words:[["The","الـ"],["sun","الشمس"],["is","تكون"],["hot","حارة"]]}
+];
+let index=0;
+const $=id=>document.getElementById(id);
+function speak(text,rate){if(!("speechSynthesis"in window)){alert("ميزة النطق غير متاحة في هذا المتصفح.");return;}speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(text);utterance.lang="en-US";utterance.rate=rate;speechSynthesis.speak(utterance);}
+function render(){const l=lessons[index];$("lessonTitle").textContent="الجملة "+(index+1)+" من "+lessons.length;$("progressText").textContent=(index+1)+" / "+lessons.length;$("bar").style.width=((index+1)/lessons.length*100)+"%";$("sentence").textContent=l.en;$("meaning").textContent=l.ar;$("words").innerHTML=l.words.map(w=>'<div class="word"><b>'+w[0]+'</b><small>'+w[1]+'</small></div>').join("");$("previous").disabled=index===0;$("next").textContent=index===lessons.length-1?"راجع الجمل من البداية":"الجملة التالية";$("quiz").classList.add("hidden");$("result").classList.add("hidden");try{localStorage.setItem("smartEdu365SentenceProgress",String(index));}catch(e){}}
+$("listen").onclick=()=>speak(lessons[index].en,.78);
+$("listenSlow").onclick=()=>speak(lessons[index].en,.55);
+$("previous").onclick=()=>{index=Math.max(0,index-1);render();};
+$("next").onclick=()=>{index=index===lessons.length-1?0:index+1;render();};
+$("showQuiz").onclick=()=>{const l=lessons[index];const wrong=lessons.filter((x,i)=>i!==index).slice(0,2);const options=[l.ar,...wrong.map(x=>x.ar)].sort(()=>Math.random()-.5);$("quiz").innerHTML='<div class="question"><b>ما معنى: <span dir="ltr">'+l.en+'</span> ؟</b><div class="options">'+options.map((x,i)=>'<label><input type="radio" name="answer" value="'+(x===l.ar?'yes':'no')+'"> '+x+'</label>').join("")+'</div><div class="actions"><button class="primary" id="check">تحقق من الإجابة</button></div></div>';$("quiz").classList.remove("hidden");$("result").classList.add("hidden");$("check").onclick=()=>{const picked=$("quiz").querySelector('input[name="answer"]:checked');if(!picked){$("result").textContent="اختر إجابة واحدة بهدوء.";return;}$("result").textContent=picked.value==="yes"?"أحسنت! إجابة صحيحة ⭐":"محاولة جميلة! اقرأ معنى الجملة مرة أخرى ثم حاول من جديد."; $("result").classList.remove("hidden");};};
+try{const saved=Number(localStorage.getItem("smartEdu365SentenceProgress"));if(Number.isInteger(saved)&&saved>=0&&saved<lessons.length)index=saved;}catch(e){}
+render();
+</script><script>/* SMART EDU 360 English speech reliability */(()=>{const s=window.speechSynthesis;if(!s||s.__smartEdu360Patched)return;const native=s.speak.bind(s);function voice(u){if(!(u.lang||"en-US").toLowerCase().startsWith("en"))return;if(u.voice&&u.voice.lang&&u.voice.lang.toLowerCase().startsWith("en"))return;const vs=s.getVoices()||[];const v=vs.find(x=>/^en-us$/i.test(x.lang))||vs.find(x=>/^en-gb$/i.test(x.lang))||vs.find(x=>/^en-/i.test(x.lang))||vs.find(x=>/^en$/i.test(x.lang));if(v){u.voice=v;u.lang=v.lang}}function split(t){const ss=(t.match(/[^.!?]+[.!?]?/g)||[t]).map(x=>x.trim()).filter(Boolean),out=[];for(const a of ss){if(a.length<=115){out.push(a);continue}let p="";for(const w of a.split(/\s+/)){if(p&&(p+" "+w).length>105){out.push(p);p=w}else p=p?p+" "+w:w}if(p)out.push(p)}return out.length?out:[t]}s.speak=function(u){if(!u||typeof u.text!=="string"||!(u.lang||"en-US").toLowerCase().startsWith("en"))return native(u);voice(u);const parts=split(u.text.trim());if(parts.length<2)return native(u);let i=0;const go=()=>{const q=new SpeechSynthesisUtterance(parts[i]);q.lang=u.lang||"en-US";q.rate=u.rate;q.pitch=u.pitch;q.volume=u.volume;if(u.voice)q.voice=u.voice;if(i===0&&u.onstart)q.onstart=e=>u.onstart(e);q.onend=e=>{if(++i<parts.length)go();else if(u.onend)u.onend(e)};q.onerror=e=>{if(u.onerror)u.onerror(e)};native(q)};go()};s.__smartEdu360Patched=true})();</script></body></html>

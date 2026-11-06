@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014"><title>تعلم الحروف الإنجليزية A–Z | SMART EDU 365</title>
+<style>
+:root{--bg:#101014;--panel:#1b1a20;--gold:#f0cf83;--line:#514633;--muted:#c8c0b2}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#2b2114,#101014 55%);color:#faf5e9;font-family:Tahoma,Arial,sans-serif;line-height:1.8;padding:18px}.wrap{max-width:900px;margin:auto}.gold{color:var(--gold)}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;margin:15px 0}.top{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.muted{color:var(--muted);font-size:14px}.progress{height:9px;background:#34313a;border-radius:9px;overflow:hidden;margin:12px 0}.progress span{height:100%;display:block;width:0;background:linear-gradient(90deg,#bb8735,#ffe4a0);transition:width .2s}.groups,.actions{display:flex;gap:8px;flex-wrap:wrap}.groups button,button{border:0;border-radius:11px;padding:10px 14px;font:inherit;font-weight:bold;cursor:pointer}.groups button{background:#302b24;color:#fff}.groups button.active{background:var(--gold);color:#241907}.groups button:disabled{opacity:.4;cursor:not-allowed}.letter{font-size:clamp(70px,17vw,120px);font-weight:900;line-height:1.2;color:var(--gold);text-align:center;margin:6px}.word{text-align:center;font-size:25px;font-weight:bold}.phonetic{text-align:center;color:#d6c8a8;font-size:19px;direction:ltr}.explain{text-align:center;color:var(--muted)}.actions{justify-content:center;margin:18px 0}.primary{background:linear-gradient(135deg,#ffe5a0,#c18c35);color:#241907}.secondary{background:#302b24;color:#fff;border:1px solid #625239}.nav{display:flex;justify-content:space-between;gap:10px}.nav button{min-width:115px}.nav button:disabled{opacity:.35}.quizq{padding:13px 0;border-bottom:1px solid #39343b}.answers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}.answers label{background:#111117;border:1px solid #49414a;border-radius:10px;padding:10px;display:flex;gap:8px;align-items:center}.answers input{accent-color:#e8c16f}.notice{background:#241e13;border:1px solid #715a31;border-radius:12px;padding:12px;color:#f2dfb5;font-size:13px}.hidden{display:none!important}a{color:var(--gold)}@media(max-width:580px){body{padding:12px}.panel{padding:15px}.answers{grid-template-columns:1fr 1fr}.nav button{min-width:0;flex:1}}
+
+.star-celebration{position:fixed;inset:0;z-index:9999;display:none;place-items:center;background:rgba(8,7,13,.94);padding:18px;overflow:hidden}.star-celebration.show{display:grid}.star-card{position:relative;z-index:2;width:min(440px,100%);text-align:center;padding:28px 18px;border:1px solid #d8b65d;border-radius:24px;background:linear-gradient(145deg,#211d13,#101016);box-shadow:0 20px 70px #000b}.star-card h2{color:#f5d58d;margin:8px 0}.star-card p{color:#fff;font-size:18px}.star-card button{border:1px solid #b88b43;background:#d4a94f;color:#241707;border-radius:12px;padding:10px 22px;font:inherit;font-weight:800}.star-burst{font-size:54px;letter-spacing:10px;color:#ffd65c;text-shadow:0 0 12px #ffcf47,0 0 30px #d99a20;animation:starGlow 1s ease-in-out infinite alternate}.falling-star{position:absolute;top:-55px;color:#ffe28a;font-size:28px;text-shadow:0 0 12px #f5c34d;animation:starFall 4.8s linear infinite;pointer-events:none}.falling-star:nth-child(2){left:12%;animation-delay:.4s}.falling-star:nth-child(3){left:28%;animation-delay:1.2s}.falling-star:nth-child(4){left:48%;animation-delay:.8s}.falling-star:nth-child(5){left:68%;animation-delay:1.8s}.falling-star:nth-child(6){left:88%;animation-delay:2.4s}@keyframes starFall{to{transform:translateY(110vh) rotate(500deg)}}@keyframes starGlow{to{transform:scale(1.2) rotate(8deg);filter:brightness(1.5)}}</style></head>
+<body><main class="wrap">
+<section class="panel" style="border:1px solid #b88b3d;background:#211b12;padding:14px 16px;border-radius:14px;margin:14px 0"><strong style="color:#ffdf91">✏️ أحضر دفترك وقلمك</strong><p style="margin:7px 0 0;line-height:1.9">استمع جيداً إلى الحرف أو الكلمة أو الجملة، وشاهدها على الشاشة، ثم اكتبها بيدك في دفترك. أعد الاستماع وراجع كتابتك.</p></section>
+<div class="top"><div><h1 class="gold">SMART EDU 365</h1><h2>رحلة الحروف الإنجليزية من الصفر</h2></div><a href="index.html">الصفحة الرئيسية</a> <a href="phonics.html">المرحلة التالية: دمج الأصوات</a></div>
+<p class="muted">تعلم اسم كل حرف، ثم صوته داخل كلمة، ثم تدرب بنفسك. ابدأ بهدوء وكرر الدرس كما تريد.</p>
+<div class="panel"><div class="top"><strong id="groupTitle">المجموعة الأولى: A–E</strong><span class="muted" id="counter">الحرف 1 من 5</span></div><div class="progress"><span id="bar"></span></div><div class="groups" id="groups"></div></div>
+<section class="panel" aria-live="polite">
+<div class="letter" id="big">A a</div><div class="word" id="word">🍎 Apple — تفاحة</div><div class="phonetic" id="phonetic">/æ/</div>
+<p class="explain" id="explain">اسم الحرف A هو /eɪ/، أما صوته القصير في كلمة apple فهو /æ/.</p>
+<div class="actions"><button class="primary" id="sayName">استمع إلى اسم الحرف</button><button class="secondary" id="saySound">استمع إلى مثال الكلمة</button></div>
+<p class="muted" style="text-align:center">استمع إلى اسم الحرف وصوته، ثم أحضر دفترك واكتب الحرف الكبير والصغير والكلمة ثلاث مرات.</p>
+<div class="nav"><button class="secondary" id="prev">السابق</button><button class="primary" id="next">أنهيت الدرس التالي</button></div>
+</section>
+<section class="panel"><h3 class="gold">اختبار المجموعة</h3><p class="muted" id="quizIntro">بعد مراجعة الحروف الخمسة، اختبر نفسك. النجاح من 4 إجابات صحيحة من 5.</p><button class="primary" id="startQuiz">ابدأ اختبار A–E</button><div id="quiz" class="hidden"></div><div id="quizResult" class="notice hidden" aria-live="polite"></div></section>
+<p class="notice">ملاحظة تعليمية: أسماء الحروف تختلف عن أصواتها في الكلمات. هذا الدرس يوضح صوتاً شائعاً واحداً لكل حرف كبداية؛ بعض الحروف لها أصوات أخرى سنتعلمها لاحقاً. النطق الصوتي هنا يعتمد على إمكانات المتصفح وليس تسجيلاً بشرياً احترافياً.</p>
+<p class="muted">التقدم يحفظ على هذا الجهاز والمتصفح فقط. لا يوجد حالياً حساب طالب أو مزامنة بين الأجهزة.</p>
+</main>
+<script>
+const groups=[
+{label:"A–E",letters:[
+{l:"A",w:"Apple",ar:"تفاحة",emoji:"🍎",name:"ay",phon:"/æ/",sound:"a as in apple",note:"اسم الحرف A هو /eɪ/، أما صوته القصير في كلمة apple فهو /æ/."},
+{l:"B",w:"Ball",ar:"كرة",emoji:"⚽",name:"bee",phon:"/b/",sound:"b as in ball",note:"اسم الحرف B هو /biː/، وصوته في بداية ball هو /b/."},
+{l:"C",w:"Cat",ar:"قطة",emoji:"🐱",name:"see",phon:"/k/",sound:"k as in cat",note:"اسم الحرف C هو /siː/، وصوته في كلمة cat هو /k/."},
+{l:"D",w:"Dog",ar:"كلب",emoji:"🐶",name:"dee",phon:"/d/",sound:"d as in dog",note:"اسم الحرف D هو /diː/، وصوته في كلمة dog هو /d/."},
+{l:"E",w:"Egg",ar:"بيضة",emoji:"🥚",name:"ee",phon:"/ɛ/",sound:"e as in egg",note:"اسم الحرف E هو /iː/، أما صوته القصير في egg فهو /ɛ/."}]},
+{label:"F–J",letters:[
+{l:"F",w:"Fish",ar:"سمكة",emoji:"🐟",name:"ef",phon:"/f/",sound:"f as in fish",note:"اسم F هو /ɛf/، وصوته في fish هو /f/."},
+{l:"G",w:"Goat",ar:"ماعز",emoji:"🐐",name:"jee",phon:"/ɡ/",sound:"g as in goat",note:"اسم G هو /dʒiː/، وصوته في goat هو /ɡ/."},
+{l:"H",w:"Hat",ar:"قبعة",emoji:"🎩",name:"aitch",phon:"/h/",sound:"h as in hat",note:"اسم H هو /eɪtʃ/، وصوته في hat هو /h/."},
+{l:"I",w:"Ink",ar:"حبر",emoji:"🖋️",name:"eye",phon:"/ɪ/",sound:"i as in ink",note:"اسم I هو /aɪ/، وصوته القصير في ink هو /ɪ/."},
+{l:"J",w:"Jam",ar:"مربى",emoji:"🍓",name:"jay",phon:"/dʒ/",sound:"j as in jam",note:"اسم J هو /dʒeɪ/، وصوته في jam هو /dʒ/."}]},
+{label:"K–O",letters:[
+{l:"K",w:"Kite",ar:"طائرة ورقية",emoji:"🪁",name:"kay",phon:"/k/",sound:"k as in kite",note:"اسم K هو /keɪ/، وصوته في kite هو /k/."},
+{l:"L",w:"Lion",ar:"أسد",emoji:"🦁",name:"el",phon:"/l/",sound:"l as in lion",note:"اسم L هو /ɛl/، وصوته في lion هو /l/."},
+{l:"M",w:"Moon",ar:"قمر",emoji:"🌙",name:"em",phon:"/m/",sound:"m as in moon",note:"اسم M هو /ɛm/، وصوته في moon هو /m/."},
+{l:"N",w:"Nest",ar:"عش",emoji:"🪺",name:"en",phon:"/n/",sound:"n as in nest",note:"اسم N هو /ɛn/، وصوته في nest هو /n/."},
+{l:"O",w:"Octopus",ar:"أخطبوط",emoji:"🐙",name:"oh",phon:"/ɑ/",sound:"o as in octopus",note:"اسم O هو /oʊ/، وصوته القصير في octopus هو /ɑ/ في النطق الأمريكي."}]},
+{label:"P–T",letters:[
+{l:"P",w:"Pen",ar:"قلم",emoji:"🖊️",name:"pee",phon:"/p/",sound:"p as in pen",note:"اسم P هو /piː/، وصوته في pen هو /p/."},
+{l:"Q",w:"Queen",ar:"ملكة",emoji:"👑",name:"cue",phon:"/kw/",sound:"q as in queen",note:"اسم Q هو /kjuː/، ويأتي غالباً مع u في صوت /kw/."},
+{l:"R",w:"Red",ar:"أحمر",emoji:"🟥",name:"ar",phon:"/ɹ/",sound:"r as in red",note:"اسم R يُنطق /ɑːr/ في بعض اللهجات و/ɑr/ في الأمريكية، وصوته في red هو /ɹ/."},
+{l:"S",w:"Sun",ar:"شمس",emoji:"☀️",name:"ess",phon:"/s/",sound:"s as in sun",note:"اسم S هو /ɛs/، وصوته في sun هو /s/."},
+{l:"T",w:"Top",ar:"قمة",emoji:"🔝",name:"tee",phon:"/t/",sound:"t as in top",note:"اسم T هو /tiː/، وصوته في top هو /t/."}]},
+{label:"U–Z",letters:[
+{l:"U",w:"Umbrella",ar:"مظلة",emoji:"☂️",name:"you",phon:"/ʌ/",sound:"u as in umbrella",note:"اسم U هو /juː/، وصوته القصير في umbrella هو /ʌ/."},
+{l:"V",w:"Van",ar:"شاحنة صغيرة",emoji:"🚐",name:"vee",phon:"/v/",sound:"v as in van",note:"اسم V هو /viː/، وصوته في van هو /v/."},
+{l:"W",w:"Water",ar:"ماء",emoji:"💧",name:"double you",phon:"/w/",sound:"w as in water",note:"اسم W هو /ˈdʌbəl.juː/، وصوته في water هو /w/."},
+{l:"X",w:"Box",ar:"صندوق",emoji:"📦",name:"ex",phon:"/ks/",sound:"x as in box",note:"اسم X هو /ɛks/، وفي نهاية box يمثل الصوتين /ks/."},
+{l:"Y",w:"Yellow",ar:"أصفر",emoji:"🟨",name:"why",phon:"/j/",sound:"y as in yellow",note:"اسم Y هو /waɪ/، وصوته في بداية yellow هو /j/."},
+{l:"Z",w:"Zoo",ar:"حديقة حيوان",emoji:"🦓",name:"zee",phon:"/z/",sound:"z as in zoo",note:"اسم Z هو /ziː/ في الأمريكية و/zed/ في البريطانية، وصوته في zoo هو /z/."}]}
+];
+let gi=0,li=0,quizMode=false;
+const $=id=>document.getElementById(id);
+function speak(text,lang="en-US"){if(!("speechSynthesis" in window)){alert("ميزة النطق غير متاحة في هذا المتصفح.");return;}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=.82;u.pitch=1;const voices=speechSynthesis.getVoices();const voice=voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith(lang.toLowerCase()));if(voice)u.voice=voice;speechSynthesis.speak(u);}
+function save(){try{localStorage.setItem("smartEdu365Alphabet",JSON.stringify({gi,li}));}catch(e){}}
+function renderGroups(){ $("groups").innerHTML=groups.map((g,i)=>'<button data-g="'+i+'" class="'+(i===gi?"active":"") +'" '+(i>maxUnlocked()?"disabled":"")+'>المرحلة '+(i+1)+' · '+ "★".repeat(i+1)+' <small>('+g.label+')</small></button>').join("");document.querySelectorAll("[data-g]").forEach(b=>b.addEventListener("click",()=>{gi=Number(b.dataset.g);li=0;render();}));}
+function maxUnlocked(){let n=0;try{n=Number(localStorage.getItem("smartEdu365UnlockedGroup")||0)}catch(e){}return Math.max(0,Math.min(4,n));}
+function render(){const a=groups[gi].letters[li];$("groupTitle").textContent="المجموعة "+(gi+1)+": "+groups[gi].label;$("counter").textContent="الحرف "+(li+1)+" من "+groups[gi].letters.length;$("bar").style.width=((li+1)/groups[gi].letters.length*100)+"%";$("big").textContent=a.l+" "+a.l.toLowerCase();$("word").textContent=a.w+" — "+a.ar;$("phonetic").textContent=a.phon;$("explain").textContent=a.note;$("prev").disabled=gi===0&&li===0;$("next").textContent=li===groups[gi].letters.length-1?(gi===4?"أنهيت الحروف":"أنهيت المجموعة، انتقل للاختبار"):"الحرف التالي";renderGroups();save();$("quiz").classList.add("hidden");$("quizResult").classList.add("hidden");}
+$("prev").onclick=()=>{if(li>0)li--;else if(gi>0){gi--;li=groups[gi].letters.length-1;}render();};
+$("next").onclick=()=>{if(li<groups[gi].letters.length-1){li++;render();}else{$("quiz").classList.remove("hidden");$("quizIntro").textContent="أكمل اختبار المجموعة الحالية للانتقال إلى المجموعة التالية.";startQuiz();}};
+$("sayName").onclick=()=>speak("The letter "+groups[gi].letters[li].l);
+$("saySound").onclick=()=>speak(groups[gi].letters[li].w);
+function startQuiz(){const letters=groups[gi].letters;const quiz=$("quiz");quiz.innerHTML=letters.map((a,i)=>{const opts=[a.w,...letters.filter(x=>x.l!==a.l).map(x=>x.w)].slice(0,3);return '<div class="quizq"><strong>'+(i+1)+'. أي كلمة تبدأ بصوت الحرف '+a.l+'؟</strong><div class="answers">'+opts.sort(()=>0.5-Math.random()).map(w=>'<label><input type="radio" name="q'+i+'" value="'+w+'">'+w+'</label>').join("")+'</div></div>';}).join("")+'<button class="primary" id="grade">صحح إجاباتي</button>';$("grade").onclick=grade;}
+function grade(){const letters=groups[gi].letters;let score=0,answered=0;letters.forEach((a,i)=>{const v=$('quiz').querySelector('input[name="q'+i+'"]:checked');if(v){answered++;if(v.value===a.w)score++;}});if(answered!==letters.length){$("quizResult").textContent="أجب عن كل الأسئلة أولاً ("+answered+"/"+letters.length+").";$("quizResult").classList.remove("hidden");return;}const passed=score>=letters.length-1;let unlocked=maxUnlocked();if(passed&&gi<4){unlocked=Math.max(unlocked,gi+1);try{localStorage.setItem("smartEdu365UnlockedGroup",String(unlocked));}catch(e){}}$("quizResult").innerHTML=(passed?"أحسنت! نجحت 🎉":"حاول مرة أخرى بعد مراجعة الحروف.")+"<br>نتيجتك: "+score+" من "+letters.length+". "+(passed?(gi<4?'<button class="primary" id="goNext">افتح المجموعة التالية</button>':'لقد أكملت مجموعات الحروف كلها!'):"تحتاج إلى إجابة صحيحة واحدة فقط أكثر من عدد الأسئلة ناقص واحد (80٪ على الأقل).");$("quizResult").classList.remove("hidden");if(passed)showStarCelebration();if(passed&&gi<4)$("goNext").onclick=()=>{gi++;li=0;render();};}
+try{const p=JSON.parse(localStorage.getItem("smartEdu365Alphabet")||"null");if(p&&Number.isInteger(p.gi)&&p.gi>=0&&p.gi<5){gi=Math.min(p.gi,maxUnlocked());li=Math.min(Number(p.li)||0,groups[gi].letters.length-1);}}catch(e){}
+render();
+function showStarCelebration(){const box=document.getElementById("starCelebration");if(!box)return;let student="";try{student=(localStorage.getItem("smartEdu365StudentName")||"").trim()}catch(e){}document.getElementById("starTitle").textContent=student?"أحسنت يا "+student+"!":"أحسنت يا بطل!";document.querySelector("#starCelebration .star-burst").textContent="★ ".repeat(gi+1).trim();document.getElementById("starMessage").textContent="اجتزت المرحلة "+(gi+1)+" بنجاح! حصلت على "+(gi+1)+" نجوم. واصل التألق!";box.classList.add("show");document.body.style.overflow="hidden";}(()=>{const box=document.getElementById("starCelebration"),close=document.getElementById("starClose");if(close)close.addEventListener("click",()=>{box.classList.remove("show");document.body.style.overflow=""});if(box)box.addEventListener("click",e=>{if(e.target===box){box.classList.remove("show");document.body.style.overflow=""}})})();
+</script><div class="star-celebration" id="starCelebration" role="dialog" aria-modal="true" aria-labelledby="starTitle"><span class="falling-star">✦</span><span class="falling-star">★</span><span class="falling-star">✧</span><span class="falling-star">⭐</span><span class="falling-star">✦</span><div class="star-card"><div class="star-burst">★ ✦ ★</div><h2 id="starTitle">أحسنت يا بطل!</h2><p id="starMessage">لقد اجتزت المرحلة بنجاح ⭐</p><button type="button" id="starClose">متابعة التعلم</button></div></div>
+<script>
+/* SMART EDU 360: تحسين نطق الإنجليزية وتشغيل المقاطع الطويلة دون انقطاع */
+(()=> {
+ const synth=window.speechSynthesis;
+ if(!synth||synth.__smartEdu360Patched)return;
+ const nativeSpeak=synth.speak.bind(synth);
+ function selectEnglishVoice(u){
+  const lang=(u.lang||"en-US").toLowerCase();
+  if(!lang.startsWith("en"))return;
+  if(u.voice&&u.voice.lang&&u.voice.lang.toLowerCase().startsWith("en"))return;
+  const voices=synth.getVoices()||[];
+  const voice=voices.find(v=>v.lang&&v.lang.toLowerCase()==="en-us")||voices.find(v=>v.lang&&v.lang.toLowerCase()==="en-gb")||voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith("en-"))||voices.find(v=>v.lang&&v.lang.toLowerCase()==="en");
+  if(voice){u.voice=voice;u.lang=voice.lang;}
+ }
+ function splitSpeech(value){
+  const sentences=(value.match(/[^.!?]+[.!?]?/g)||[value]).map(s=>s.trim()).filter(Boolean);
+  const out=[];
+  for(const sentence of sentences){
+   if(sentence.length<=115){out.push(sentence);continue;}
+   const clauses=sentence.split(/(?<=[,;:])\s+/);
+   for(const clause of clauses){
+    if(clause.length<=115){out.push(clause);continue;}
+    let part="";
+    for(const word of clause.split(/\s+/)){
+     if(part&&(part+" "+word).length>105){out.push(part);part=word;}
+     else part=part?part+" "+word:word;
+    }
+    if(part)out.push(part);
+   }
+  }
+  return out.length?out:[value];
+ }
+ synth.speak=function(original){
+  if(!original||typeof original.text!=="string")return nativeSpeak(original);
+  if(!(original.lang||"en-US").toLowerCase().startsWith("en"))return nativeSpeak(original);
+  selectEnglishVoice(original);
+  const chunks=splitSpeech(original.text.trim());
+  if(chunks.length<=1)return nativeSpeak(original);
+  let index=0;
+  const next=()=>{
+   if(index>=chunks.length)return;
+   const part=new SpeechSynthesisUtterance(chunks[index]);
+   part.lang=original.lang||"en-US";part.rate=original.rate;part.pitch=original.pitch;part.volume=original.volume;
+   if(original.voice)part.voice=original.voice;
+   if(index===0&&original.onstart)part.onstart=e=>original.onstart(e);
+   part.onend=e=>{if(index===chunks.length-1){if(original.onend)original.onend(e);}else{index++;next();}};
+   part.onerror=e=>{if(original.onerror)original.onerror(e);};
+   nativeSpeak(part);
+  };
+  next();
+ };
+ synth.__smartEdu360Patched=true;
+})();
+</script>
+<script>/* SMART EDU 360 English speech reliability */(()=>{const s=window.speechSynthesis;if(!s||s.__smartEdu360Patched)return;const native=s.speak.bind(s);function voice(u){if(!(u.lang||"en-US").toLowerCase().startsWith("en"))return;if(u.voice&&u.voice.lang&&u.voice.lang.toLowerCase().startsWith("en"))return;const vs=s.getVoices()||[];const v=vs.find(x=>/^en-us$/i.test(x.lang))||vs.find(x=>/^en-gb$/i.test(x.lang))||vs.find(x=>/^en-/i.test(x.lang))||vs.find(x=>/^en$/i.test(x.lang));if(v){u.voice=v;u.lang=v.lang}}function split(t){const ss=(t.match(/[^.!?]+[.!?]?/g)||[t]).map(x=>x.trim()).filter(Boolean),out=[];for(const a of ss){if(a.length<=115){out.push(a);continue}let p="";for(const w of a.split(/\s+/)){if(p&&(p+" "+w).length>105){out.push(p);p=w}else p=p?p+" "+w:w}if(p)out.push(p)}return out.length?out:[t]}s.speak=function(u){if(!u||typeof u.text!=="string"||!(u.lang||"en-US").toLowerCase().startsWith("en"))return native(u);voice(u);const parts=split(u.text.trim());if(parts.length<2)return native(u);let i=0;const go=()=>{const q=new SpeechSynthesisUtterance(parts[i]);q.lang=u.lang||"en-US";q.rate=u.rate;q.pitch=u.pitch;q.volume=u.volume;if(u.voice)q.voice=u.voice;if(i===0&&u.onstart)q.onstart=e=>u.onstart(e);q.onend=e=>{if(++i<parts.length)go();else if(u.onend)u.onend(e)};q.onerror=e=>{if(u.onerror)u.onerror(e)};native(q)};go()};s.__smartEdu360Patched=true})();</script></body></html>

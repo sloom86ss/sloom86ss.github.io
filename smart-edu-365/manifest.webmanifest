@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "ثقف طفلك - SMART EDU 360",
+  "short_name": "SMART EDU 360",
+  "description": "منصة تعليمية للأطفال تجمع المعرفة والأخلاق والسلوك الحسن",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0b10",
+  "theme_color": "#101014",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

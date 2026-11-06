@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>محادثات إنجليزية سهلة | SMART EDU 365</title>
+<style>
+:root{--panel:#191820;--gold:#f0cf83;--line:#55452c;--muted:#c8c0b2}
+*{box-sizing:border-box}body{margin:0;padding:14px;background:radial-gradient(ellipse at top,#302416,#0d0d12 58%);color:#faf5e9;font-family:Tahoma,Arial,sans-serif;line-height:1.8}.wrap{max-width:760px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.gold{color:var(--gold)}.muted{color:var(--muted);font-size:14px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin:14px 0}.progress{height:8px;background:#37333b;border-radius:9px;overflow:hidden}.progress span{height:100%;display:block;width:0;background:linear-gradient(90deg,#bb8735,#ffe4a0)}.bubble{border:1px solid #55452c;border-radius:14px;padding:12px;margin:10px 0;background:#24212a}.bubble .who{color:var(--gold);font-size:13px;font-weight:bold}.en{direction:ltr;text-align:left;font-size:22px;font-weight:bold}.ar{color:var(--muted);font-size:15px}.actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:14px}button{border:0;border-radius:11px;padding:11px 15px;font:inherit;font-weight:bold;cursor:pointer}.primary{background:linear-gradient(135deg,#ffe5a0,#c18c35);color:#241907}.secondary{background:#302b24;color:#fff;border:1px solid #625239}.options{display:grid;gap:9px;margin:12px 0}.options button{text-align:right;background:#111117;color:#fff;border:1px solid #49414a}.options button:focus,.options button:hover{border-color:var(--gold)}.notice{background:#241e13;border:1px solid #715a31;border-radius:12px;padding:12px;color:#f2dfb5;font-size:14px}.hidden{display:none!important}a{color:var(--gold)}
+
+.study-timer{background:#171710;border:1px solid #80632f;border-radius:14px;padding:13px 15px;margin:12px 0}.study-timer-head{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.study-timer strong{color:#f0cf83}.study-time{font-size:22px;font-weight:800;direction:ltr;unicode-bidi:isolate;color:#fff}.study-track{height:7px;background:#39342b;border-radius:20px;overflow:hidden;margin-top:9px}.study-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,#b88636,#ffe4a0)}.study-timer small{color:#c8c0b2}
+</style></head>
+<body><main class="wrap">
+<section class="panel" style="border:1px solid #b88b3d;background:#211b12;padding:14px 16px;border-radius:14px;margin:14px 0"><strong style="color:#ffdf91">✏️ أحضر دفترك وقلمك</strong><p style="margin:7px 0 0;line-height:1.9">استمع جيداً إلى الحرف أو الكلمة أو الجملة، وشاهدها على الشاشة، ثم اكتبها بيدك في دفترك. أعد الاستماع وراجع كتابتك.</p></section>
+<div class="top"><div><h1 class="gold">SMART EDU 365</h1><h2>محادثات إنجليزية سهلة جداً</h2></div><div><a href="daily-conversations.html">محادثات الحياة اليومية</a> · <a href="index.html">الرئيسية</a></div></div>
+<p class="muted">نتعلم كيف نحيّي الآخرين ونسأل عن أسمائهم. اقرأ جملة واحدة، افهم معناها، ثم استمع وكرر. لا يوجد استعجال.</p>
+<section class="study-timer" aria-label="عداد وقت التعلم"><div class="study-timer-head"><div><strong>⏱️ وقت تعلمك</strong><div class="study-time" id="studyElapsed" role="timer">00:00</div></div><div><strong>المدة المقترحة</strong><div><span>5 دقائق</span></div></div></div><div class="study-track"><span id="studyTimeBar"></span></div><div class="study-timer-head" style="margin-top:7px"><small id="studyTimeHint">خذ وقتك؛ لا يوجد اختبار سرعة.</small><button type="button" id="studyPause" class="secondary" style="padding:6px 10px">إيقاف مؤقت</button></div></section>
+<section class="panel">
+<div style="display:flex;justify-content:space-between;gap:8px"><b id="title">المحادثة 1 من 4</b><span class="muted" id="counter">1 / 4</span></div><div class="progress"><span id="bar"></span></div>
+<div id="dialogue"></div>
+<div class="actions"><button class="primary" id="play">🔊 استمع إلى المحادثة</button><button class="secondary" id="repeat">🐢 استمع ببطء</button></div>
+<div class="actions"><button class="secondary" id="prev">السابق</button><button class="primary" id="next">المحادثة التالية</button></div>
+</section>
+<section class="panel">
+<h3 class="gold">تدريب صغير</h3><p class="muted">إذا قال لك شخص: Hello! ماذا تقول؟</p>
+<div class="options" id="options"><button data-correct="yes">Hello!</button><button data-correct="no">Good night!</button><button data-correct="no">Goodbye!</button></div>
+<div class="notice hidden" id="feedback" aria-live="polite"></div>
+</section>
+<p class="notice">تذكّر: النطق هنا صوت آلي من المتصفح، وقد يختلف حسب الجهاز. تدرب مع ولي أمرك أو معلمك، ولا تشارك معلوماتك الشخصية مع الغرباء عبر الإنترنت.</p>
+</main>
+<script>
+const talks=[
+[{who:"سارة",en:"Hello!",ar:"مرحباً!"},{who:"علي",en:"Hello!",ar:"مرحباً!"}],
+[{who:"سارة",en:"What is your name?",ar:"ما اسمك؟"},{who:"علي",en:"My name is Ali.",ar:"اسمي علي."}],
+[{who:"سارة",en:"How are you?",ar:"كيف حالك؟"},{who:"علي",en:"I am fine, thank you.",ar:"أنا بخير، شكراً لك."}],
+[{who:"سارة",en:"Goodbye!",ar:"إلى اللقاء!"},{who:"علي",en:"See you!",ar:"أراك لاحقاً!"}]
+];
+let index=0;
+const $=id=>document.getElementById(id);
+function render(){const d=talks[index];$("title").textContent="المحادثة "+(index+1)+" من "+talks.length;$("counter").textContent=(index+1)+" / "+talks.length;$("bar").style.width=((index+1)/talks.length*100)+"%";$("dialogue").innerHTML=d.map(line=>'<div class="bubble"><div class="who">'+line.who+'</div><div class="en">'+line.en+'</div><div class="ar">'+line.ar+'</div></div>').join("");$("prev").disabled=index===0;$("next").textContent=index===talks.length-1?"أعد من البداية":"المحادثة التالية";try{localStorage.setItem("smartEdu365ConversationProgress",String(index));}catch(e){}}
+function speak(rate){if(!("speechSynthesis"in window)){alert("النطق الصوتي غير متاح في هذا المتصفح.");return;}speechSynthesis.cancel();const lines=talks[index];lines.forEach((line,i)=>{const u=new SpeechSynthesisUtterance(line.en);u.lang="en-US";u.rate=rate;u.pitch=i===0?1.05:.95;speechSynthesis.speak(u);});}
+$("play").onclick=()=>speak(.78);$("repeat").onclick=()=>speak(.55);
+$("prev").onclick=()=>{index=Math.max(0,index-1);render();};
+$("next").onclick=()=>{index=index===talks.length-1?0:index+1;render();};
+$("options").querySelectorAll("button").forEach(b=>b.onclick=()=>{$("feedback").textContent=b.dataset.correct==="yes"?"أحسنت! هذه إجابة صحيحة. ⭐":"حاول مرة أخرى بهدوء. تذكّر: Hello تعني مرحباً."; $("feedback").classList.remove("hidden");});
+try{const saved=Number(localStorage.getItem("smartEdu365ConversationProgress"));if(Number.isInteger(saved)&&saved>=0&&saved<talks.length)index=saved;}catch(e){}
+render();
+
+// عداد وقت التعلم: مؤشر لطيف للمدة المقترحة وليس حداً زمنياً.
+(()=>{const out=document.getElementById("studyElapsed"),bar=document.getElementById("studyTimeBar"),hint=document.getElementById("studyTimeHint"),pause=document.getElementById("studyPause");if(!out||!bar||!pause)return;let seconds=0,running=true;const target=5*60;function draw(){const m=String(Math.floor(seconds/60)).padStart(2,"0"),ss=String(seconds%60).padStart(2,"0");out.textContent=m+":"+ss;bar.style.width=Math.min(100,seconds/target*100)+"%";hint.textContent=seconds<target?"خذ وقتك؛ لا يوجد اختبار سرعة.": "أحسنت الاستمرار! يمكنك المتابعة براحتك.";pause.textContent=running?"إيقاف مؤقت":"متابعة";}setInterval(()=>{if(running){seconds++;draw()}},1000);pause.addEventListener("click",()=>{running=!running;draw()});draw()})();
+</script><script>/* SMART EDU 360 English speech reliability */(()=>{const s=window.speechSynthesis;if(!s||s.__smartEdu360Patched)return;const native=s.speak.bind(s);function voice(u){if(!(u.lang||"en-US").toLowerCase().startsWith("en"))return;if(u.voice&&u.voice.lang&&u.voice.lang.toLowerCase().startsWith("en"))return;const vs=s.getVoices()||[];const v=vs.find(x=>/^en-us$/i.test(x.lang))||vs.find(x=>/^en-gb$/i.test(x.lang))||vs.find(x=>/^en-/i.test(x.lang))||vs.find(x=>/^en$/i.test(x.lang));if(v){u.voice=v;u.lang=v.lang}}function split(t){const ss=(t.match(/[^.!?]+[.!?]?/g)||[t]).map(x=>x.trim()).filter(Boolean),out=[];for(const a of ss){if(a.length<=115){out.push(a);continue}let p="";for(const w of a.split(/\s+/)){if(p&&(p+" "+w).length>105){out.push(p);p=w}else p=p?p+" "+w:w}if(p)out.push(p)}return out.length?out:[t]}s.speak=function(u){if(!u||typeof u.text!=="string"||!(u.lang||"en-US").toLowerCase().startsWith("en"))return native(u);voice(u);const parts=split(u.text.trim());if(parts.length<2)return native(u);let i=0;const go=()=>{const q=new SpeechSynthesisUtterance(parts[i]);q.lang=u.lang||"en-US";q.rate=u.rate;q.pitch=u.pitch;q.volume=u.volume;if(u.voice)q.voice=u.voice;if(i===0&&u.onstart)q.onstart=e=>u.onstart(e);q.onend=e=>{if(++i<parts.length)go();else if(u.onend)u.onend(e)};q.onerror=e=>{if(u.onerror)u.onerror(e)};native(q)};go()};s.__smartEdu360Patched=true})();</script></body></html>

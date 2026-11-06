@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>تعلّم كتابة الحروف الإنجليزية | SMART EDU 365</title>
+<style>
+:root{--bg:#0b0b10;--panel:#191820;--gold:#e6bd65;--gold2:#ffdf91;--text:#f7f3e9;--muted:#b7b2a8;--line:#403a32;--green:#8ce0b0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0%,#352715 0,transparent 34%),linear-gradient(160deg,#0b0b10,#111018 65%,#0b0b10);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif}
+header,main{max-width:900px;margin:auto;padding:18px}header{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:800;color:var(--gold2)}a.back{color:var(--gold2);text-decoration:none;border:1px solid #76613b;border-radius:12px;padding:8px 12px;font-size:13px}
+.hero,.panel{border:1px solid var(--line);border-radius:20px;background:linear-gradient(150deg,#211f25,#15141b);padding:20px;margin:12px 0}.hero{background:linear-gradient(120deg,#292016,#19171b 60%,#15151d);border-color:#5c4929}h1{font-size:clamp(25px,5vw,36px);margin:6px 0}.muted{color:var(--muted);font-size:14px;line-height:1.8}.gold{color:var(--gold2)}.progress{height:8px;background:#34313a;border-radius:20px;overflow:hidden;margin-top:12px}.bar{height:100%;background:linear-gradient(90deg,#b98532,var(--gold2));width:0}
+.groups,.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.group,.btn{font:inherit;cursor:pointer;border:1px solid var(--line);border-radius:11px;padding:9px 13px;background:#ffffff0a;color:var(--text)}.group.active,.btn.goldbtn{background:linear-gradient(135deg,var(--gold2),#c18c35);color:#201606;border-color:transparent;font-weight:800}
+.letterline{display:flex;align-items:center;justify-content:center;gap:22px;direction:ltr;margin:8px 0}.bigletter{font-size:clamp(64px,15vw,100px);font-weight:850;line-height:1.2;color:var(--gold2)}.smallletter{font-size:clamp(54px,12vw,82px);color:#f3e7ce}.word{font-size:24px;direction:ltr;text-align:center;font-weight:750;margin:6px}.meaning{text-align:center;color:#e9d8b3}.instruction{background:#211b12;border:1px solid #62502f;padding:12px;border-radius:12px;line-height:1.9}
+.canvaswrap{background:#fff;border-radius:16px;overflow:hidden;direction:ltr;touch-action:none;border:3px solid #c9b17b}canvas{display:block;width:100%;height:250px;touch-action:none;cursor:crosshair}.canvaslabel{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin:10px 0}
+.tip{font-size:13px;color:var(--muted);line-height:1.8}.feedback{min-height:25px;color:var(--green);font-size:13px}.foot{text-align:center;color:#8f8a82;font-size:12px;padding:25px}
+@media(max-width:560px){header,main{padding:14px}.hero,.panel{padding:16px}.letterline{gap:15px}canvas{height:220px}}
+</style>
+</head>
+<body>
+<header><div><div class="brand">✦ SMART EDU 365</div><small class="muted">تعلّم الكتابة بيدك</small></div><a class="back" href="index.html">العودة للرئيسية ←</a></header>
+<main>
+<section class="panel" style="border:1px solid #b88b3d;background:#211b12;padding:14px 16px;border-radius:14px;margin:14px 0"><strong style="color:#ffdf91">✏️ أحضر دفترك وقلمك</strong><p style="margin:7px 0 0;line-height:1.9">استمع إلى النطق، وشاهد طريقة الكتابة، ثم اكتب الحروف والكلمات والجمل بيدك في دفترك. كرر التدريب حتى تتحسن كتابتك.</p></section>
+<section class="hero"><div class="gold">الكتابة الإنجليزية من الصفر</div><h1>✍️ أتعلّم كتابة الحروف A–Z</h1><p class="muted">شاهد الحرف الكبير والصغير، اقرأ تعليمات حركة القلم، ثم تتبّع الحرف بإصبعك على شاشة الهاتف، وبعدها جرّب كتابته وحدك.</p><div id="progressText" class="gold">أنجزت 0 من 26 حرفاً</div><div class="progress"><div id="bar" class="bar"></div></div></section>
+<section class="panel"><b>اختر مجموعة الحروف</b><div class="groups" id="groups"></div><div class="letterline"><span class="bigletter" id="upper">A</span><span class="smallletter" id="lower">a</span></div><div class="word" id="word">Apple</div><div class="meaning" id="meaning">تفاحة</div><div class="actions" style="justify-content:center"><button class="btn goldbtn" id="hear">🔊 استمع إلى الحرف والكلمة</button></div><div class="instruction"><b>طريقة الكتابة:</b><div id="steps"></div></div><p class="tip">تذكّر: ابدأ من نقطة البداية واتبع اتجاه السهم. اكتب الحرف الكبير ثم الصغير. يمكنك مسح اللوحة وإعادة المحاولة متى شئت.</p></section>
+<section class="panel"><b>شاهد حركة القلم خطوة بخطوة</b><p class="muted">شاهد ترتيب الضربات واتجاه كل خط، ثم كرّر الحركة بإصبعك. ابدأ بزر التشغيل.</p><div style="background:#fff;border-radius:14px;padding:12px;direction:ltr"><svg id="strokeDemo" viewBox="0 0 420 170" width="100%" role="img" aria-label="محاكاة رسم الحرف خطوة بخطوة"><g id="strokePaths" fill="none" stroke="#24212a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></g></svg></div><div class="actions"><button class="btn goldbtn" id="playStrokes">▶ شاهد طريقة الرسم</button><button class="btn" id="resetStrokes">إعادة العرض</button></div><div class="tip" id="strokeNote">يُعرض كل خط بالترتيب مع ترقيم الضربات. المحاكاة تعليمية وليست تصويراً ليد حقيقية.</div></section><section class="panel"><b>١. تتبّع الحرف بإصبعك</b><div class="canvaslabel"><span>اتبع شكل الحرف الشفاف داخل اللوحة</span><span>استخدم إصبعك أو القلم الإلكتروني</span></div><div class="canvaswrap"><canvas id="trace" aria-label="لوحة تتبع الحرف"></canvas></div><div class="actions"><button class="btn" id="clearTrace">مسح وإعادة التتبّع</button><button class="btn goldbtn" id="traceDone">أنهيت التتبّع</button></div><div class="feedback" id="traceFeedback"></div></section>
+<section class="panel"><b>٢. اكتب الحرف بنفسك</b><div class="canvaslabel"><span>اكتب الحرف الكبير والصغير دون نموذج</span><span>حاول أن يكون الحجم مناسباً</span></div><div class="canvaswrap"><canvas id="free"></canvas></div><div class="actions"><button class="btn" id="clearFree">مسح الكتابة</button><button class="btn goldbtn" id="done">أنهيت التدريب على هذا الحرف</button></div><div class="feedback" id="feedback"></div></section>
+<div class="actions" style="justify-content:space-between"><button class="btn" id="prev">← الحرف السابق</button><button class="btn goldbtn" id="next">الحرف التالي →</button></div>
+<p class="tip">ملاحظة: هذه النسخة تساعدك على تتبّع شكل الحرف والتدرّب عليه، لكنها لا تتعرّف آلياً على صحة خط اليد. اطلب من ولي أمرك أو معلمك مراجعة كتابتك.</p>
+<div class="foot">SMART EDU 365 · خطوة صغيرة كل يوم تصنع فرقاً كبيراً</div>
+</main>
+<script>
+const letters=[
+["A","a","Apple","تفاحة","اكتب A هكذا: خط مائل من الأعلى إلى الأسفل يساراً، ثم خط مائل إلى الأسفل يميناً، ثم خط أفقي في الوسط.","ابدأ a من الأعلى: ارسم قوساً دائرياً صغيراً، ثم اصعد بخط مستقيم قصير على الجانب الأيمن."],
+["B","b","Ball","كرة","ارسم خطاً رأسياً من الأعلى إلى الأسفل، ثم قوساً علوياً، ثم قوساً سفلياً.","ارسم خطاً رأسياً طويلاً، ثم أضف انتفاخاً صغيراً في الأسفل إلى اليمين."],
+["C","c","Cat","قطة","ابدأ من الأعلى، وانحنِ حول اليسار ثم إلى الأسفل، واترك الجهة اليمنى مفتوحة.","ابدأ من الأعلى، وارسم قوساً صغيراً مفتوحاً إلى اليمين."],
+["D","d","Dog","كلب","ارسم خطاً رأسياً، ثم قوساً كبيراً يصل أعلى الخط بأسفله.","ارسم دائرة صغيرة، ثم خطاً رأسياً صاعداً على يمينها."],
+["E","e","Egg","بيضة","ارسم خطاً رأسياً، ثم ثلاثة خطوط أفقية: أعلى ووسط وأسفل.","ابدأ بخط قصير أفقي، ثم ارسم قوساً صغيراً مفتوحاً."],
+["F","f","Fish","سمكة","خط رأسي طويل، ثم خط أفقي أعلى الحرف وخط أقصر في الوسط.","ارسم قوساً صغيراً من الأعلى، ثم خطاً نازلاً، وأضف خطاً قصيراً في الوسط."],
+["G","g","Goat","ماعز","ارسم شكل C كبيراً، ثم أضف خطاً أفقياً قصيراً للداخل.","ارسم دائرة صغيرة، ثم أضف ذيلاً نازلاً تحت السطر."],
+["H","h","Hat","قبعة","خط رأسي يساراً، وخط رأسي يميناً، وصلهما بخط أفقي في الوسط.","خط رأسي طويل، ثم قوس صغير يصعد وينزل على اليمين."],
+["I","i","Ice","ثلج","خط رأسي في الوسط، مع خط أفقي أعلى الحرف وأسفله.","خط رأسي قصير، ثم نقطة فوقه."],
+["J","j","Jam","مربى","خط من الأعلى إلى الأسفل، ثم انحناءة إلى اليسار في النهاية.","خط قصير نازل ينحني إلى اليسار، وضع نقطة فوقه."],
+["K","k","Kite","طائرة ورقية","خط رأسي، ثم خط مائل من الوسط إلى أعلى اليمين، وآخر إلى أسفل اليمين.","خط رأسي طويل، ثم فرعان مائلان يخرجان من منتصفه."],
+["L","l","Lion","أسد","خط رأسي من الأعلى للأسفل، ثم خط أفقي إلى اليمين عند القاعدة.","خط رأسي بسيط من الأعلى إلى الأسفل."],
+["M","m","Moon","قمر","خط رأسي، ثم خط مائل إلى الوسط، ثم مائل إلى الأعلى، ثم خط رأسي.","خط رأسي، ثم قوسان صغيران متصلان."],
+["N","n","Nest","عش","خط رأسي، ثم خط مائل إلى الأسفل، ثم خط رأسي ثانٍ.","خط رأسي، ثم قوس واحد إلى الأسفل."],
+["O","o","Orange","برتقالة","ابدأ من الأعلى وارسم دائرة بيضاوية مغلقة.","ارسم دائرة صغيرة مغلقة."],
+["P","p","Pen","قلم","خط رأسي، ثم قوس علوي يعود إلى منتصف الخط.","خط نازل تحت السطر، ثم دائرة صغيرة أعلى اليمين."],
+["Q","q","Queen","ملكة","ارسم دائرة O، ثم أضف خطاً مائلاً صغيراً عند أسفل اليمين.","ارسم دائرة صغيرة، ثم أضف ذيلاً مائلاً إلى أسفل اليمين."],
+["R","r","Rain","مطر","خط رأسي، ثم قوس علوي، ثم ساق مائلة إلى أسفل اليمين.","خط رأسي قصير، ثم قوس صغير من الأعلى."],
+["S","s","Sun","شمس","ارسم انحناءة علوية إلى اليسار، ثم انحناءة سفلية إلى اليمين بشكل متصل.","ارسم انحناءتين صغيرتين متصلتين تشبهان S."],
+["T","t","Tree","شجرة","خط أفقي في الأعلى، ثم خط رأسي ينزل من منتصفه.","خط رأسي قصير، ثم خط أفقي صغير يقطعه."],
+["U","u","Umbrella","مظلة","ابدأ من الأعلى، انزل، ثم انحنِ في الأسفل واصعد إلى الأعلى.","انزل بخط، ثم ارسم قاعاً مستديراً واصعد."],
+["V","v","Van","شاحنة","خط مائل إلى أسفل المنتصف، ثم خط مائل يصعد إلى الأعلى.","خط مائل ينزل إلى القاع، ثم خط مائل يصعد."],
+["W","w","Water","ماء","ارسم أربعة خطوط مائلة متصلة تصنع شكل W.","ارسم خطين مائلين إلى الأسفل والأعلى، ثم كررهما بشكل أصغر."],
+["X","x","Box","صندوق","ارسم خطاً مائلاً من أعلى اليسار لأسفل اليمين، ثم خطاً متقاطعاً.","ارسم خطين مائلين يتقاطعان في الوسط."],
+["Y","y","Yo-yo","لعبة يويو","ارسم فرعين مائلين يلتقيان في الوسط، ثم خطاً نازلاً.","ارسم فرعين يلتقيان، ثم ذيلاً ينزل تحت السطر."],
+["Z","z","Zoo","حديقة حيوانات","خط أفقي أعلى، ثم خط مائل إلى أسفل اليسار، ثم خط أفقي أسفل.","خط قصير، ثم خط مائل، ثم خط قصير في الأسفل."]
+];
+const key="smartEduWritingDone";let done=JSON.parse(localStorage.getItem(key)||"[]"),idx=0,mode="trace";
+const $=id=>document.getElementById(id);
+function resizeCanvas(c,guide){const rect=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1;c.width=Math.round(rect.width*dpr);c.height=Math.round(rect.height*dpr);const x=c.getContext("2d");x.setTransform(dpr,0,0,dpr,0,0);x.fillStyle="#fff";x.fillRect(0,0,rect.width,rect.height);x.strokeStyle="#e5e0d5";x.lineWidth=1;x.setLineDash([5,5]);x.beginPath();x.moveTo(12,rect.height*.76);x.lineTo(rect.width-12,rect.height*.76);x.stroke();x.setLineDash([]);if(guide){x.fillStyle="#d4d0c8";x.font="bold "+Math.min(rect.height*.65,150)+"px Arial";x.textAlign="center";x.textBaseline="middle";x.fillText(letters[idx][0]+" "+letters[idx][1],rect.width/2,rect.height*.43);x.fillStyle="#b78a36";x.beginPath();x.arc(rect.width*.22,rect.height*.18,5,0,Math.PI*2);x.fill();}}
+function setupDraw(c,guide){resizeCanvas(c,guide);let drawing=false,last=null;const pos=e=>{const r=c.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}};c.onpointerdown=e=>{drawing=true;c.setPointerCapture(e.pointerId);last=pos(e)};c.onpointermove=e=>{if(!drawing)return;const p=pos(e),x=c.getContext("2d");x.strokeStyle="#25232a";x.lineWidth=6;x.lineCap="round";x.lineJoin="round";x.beginPath();x.moveTo(last.x,last.y);x.lineTo(p.x,p.y);x.stroke();last=p};const stop=()=>{drawing=false;last=null};c.onpointerup=stop;c.onpointercancel=stop;}
+function clear(c,guide){resizeCanvas(c,guide)}
+
+const strokeShapes={
+A:["M70 130 L120 25","M120 25 L170 130","M91 88 L149 88"],
+B:["M85 135 L85 25","M85 25 L130 25 Q175 25 155 70 Q145 82 85 82","M85 82 L132 82 Q180 82 158 120 Q148 135 85 135"],
+C:["M165 40 Q95 0 65 65 Q40 125 105 140 Q140 148 165 125"],
+D:["M80 135 L80 25","M80 25 Q190 15 180 80 Q180 145 80 135"],
+E:["M155 25 L75 25 L75 135 L160 135","M75 80 L140 80"],
+F:["M80 135 L80 25 L165 25","M80 80 L145 80"],
+G:["M165 45 Q100 0 65 60 Q35 125 105 140 Q155 145 165 105 L125 105"],
+H:["M75 25 L75 135","M165 25 L165 135","M75 80 L165 80"],
+I:["M120 25 L120 135","M85 25 L155 25","M85 135 L155 135"],
+J:["M155 25 L155 105 Q155 145 100 135 Q75 130 75 105"],
+K:["M80 25 L80 135","M165 25 L80 82 L170 135"],
+L:["M80 25 L80 135 L165 135"],
+M:["M55 135 L55 25 L120 95 L185 25 L185 135"],
+N:["M65 135 L65 25 L175 135 L175 25"],
+O:["M120 20 C205 20 205 140 120 140 C35 140 35 20 120 20 Z"],
+P:["M80 135 L80 25 L135 25 Q180 25 165 65 Q155 85 80 82"],
+Q:["M120 20 C205 20 205 140 120 140 C35 140 35 20 120 20 Z","M145 112 L185 150"],
+R:["M80 135 L80 25 L135 25 Q180 25 165 65 Q155 85 80 82","M120 82 L175 135"],
+S:["M165 38 Q90 0 65 48 Q45 78 125 83 Q200 95 155 130 Q115 158 65 120"],
+T:["M55 25 L185 25","M120 25 L120 135"],
+U:["M65 25 L65 95 Q65 140 120 140 Q175 140 175 95 L175 25"],
+V:["M55 25 L120 140 L185 25"],
+W:["M45 25 L80 140 L120 75 L160 140 L195 25"],
+X:["M65 25 L175 135","M175 25 L65 135"],
+Y:["M60 25 L120 80 L180 25","M120 80 L120 140"],
+Z:["M65 25 L175 25 L65 135 L175 135"]
+};
+const lowerStrokeShapes={
+a:["M275 75 C275 35 345 35 345 80 C345 125 275 125 275 80 Z","M345 55 L345 130"],
+b:["M245 25 L245 130","M245 85 C245 40 320 40 320 90 C320 135 245 135 245 90"],
+c:["M335 70 C305 35 250 50 250 90 C250 130 305 145 335 115"],
+d:["M345 25 L345 130","M345 85 C345 40 275 40 275 85 C275 130 345 130 345 85"],
+e:["M250 90 L335 90 C335 40 265 35 255 80 C245 125 300 145 335 115"],
+f:["M285 130 L285 45 Q285 15 325 25","M260 65 L315 65"],
+g:["M345 65 C345 25 275 25 275 70 C275 115 345 115 345 70","M345 70 L345 125 Q345 155 300 150"],
+h:["M245 25 L245 130","M245 85 C245 45 325 45 325 90 L325 130"],
+i:["M290 60 L290 130","M290 30 L290 31"],
+j:["M320 60 L320 130 Q320 155 285 150","M320 30 L320 31"],
+k:["M250 25 L250 130","M325 60 L250 95 L330 130"],
+l:["M290 25 L290 130"],
+m:["M235 130 L235 60","M235 85 C235 40 285 45 285 85 L285 130","M285 85 C285 40 340 45 340 85 L340 130"],
+n:["M255 130 L255 60","M255 85 C255 40 335 45 335 85 L335 130"],
+o:["M300 55 C355 55 355 130 300 130 C245 130 245 55 300 55 Z"],
+p:["M255 60 L255 155","M255 90 C255 45 335 45 335 90 C335 130 255 130 255 90"],
+q:["M345 60 L345 155","M345 90 C345 45 265 45 265 90 C265 130 345 130 345 90"],
+r:["M260 130 L260 60","M260 85 Q275 45 325 65"],
+s:["M330 65 C285 35 250 70 285 88 C335 105 325 145 265 120"],
+t:["M290 35 L290 110 Q290 140 325 125","M260 65 L320 65"],
+u:["M255 60 L255 100 Q255 140 300 125 Q340 115 340 60","M340 60 L340 130"],
+v:["M250 60 L295 130 L340 60"],
+w:["M235 60 L265 130 L295 85 L325 130 L355 60"],
+x:["M255 60 L335 130","M335 60 L255 130"],
+y:["M250 60 L295 125 L340 60","M295 125 L275 155"],
+z:["M255 60 L340 60 L255 130 L340 130"]
+};
+function drawStrokeDemo(){
+const g=$("strokePaths");g.innerHTML="";
+const upper=letters[idx][0],lower=letters[idx][1];
+const all=[...(strokeShapes[upper]||[]).map(d=>({d,color:"#25232a"})),...(lowerStrokeShapes[lower]||[]).map(d=>({d,color:"#b17b28"}))];
+all.forEach(item=>{const p=document.createElementNS("http://www.w3.org/2000/svg","path");p.setAttribute("d",item.d);p.setAttribute("stroke",item.color);p.setAttribute("stroke-width","8");p.setAttribute("fill","none");p.setAttribute("stroke-linecap","round");p.setAttribute("stroke-linejoin","round");g.appendChild(p);const len=p.getTotalLength();p.style.strokeDasharray=len;p.style.strokeDashoffset=len;p.dataset.len=len;});
+const note=$("strokeNote");note.textContent="الأسود: الحرف الكبير "+upper+"، والذهبي: الحرف الصغير "+lower+". تُعرض الضربات بالتتابع؛ شاهدها ثم قلّدها.";
+}
+function playStrokeDemo(){const paths=[...$("strokePaths").children];paths.forEach((p,i)=>{const len=Number(p.dataset.len);p.style.transition="none";p.style.strokeDashoffset=len;requestAnimationFrame(()=>{p.style.transition="stroke-dashoffset 850ms ease "+(i*.9)+"s";p.style.strokeDashoffset="0"})})}
+$("playStrokes").onclick=playStrokeDemo;$("resetStrokes").onclick=()=>{drawStrokeDemo();playStrokeDemo()};
+
+function render(){const l=letters[idx];drawStrokeDemo();$("upper").textContent=l[0];$("lower").textContent=l[1];$("word").textContent=l[2];$("meaning").textContent=l[3];$("steps").innerHTML="<p>الحرف الكبير "+l[0]+": "+l[4]+"</p><p>الحرف الصغير "+l[1]+": "+l[5]+"</p>";$("traceFeedback").textContent="";$("feedback").textContent="";$("groups").innerHTML="";for(let g=0;g<5;g++){let b=document.createElement("button");b.className="group"+(Math.floor(idx/5)===g?" active":"");b.textContent=["A–E","F–J","K–O","P–T","U–Z"][g];b.onclick=()=>{idx=g*5;render()};$("groups").appendChild(b)}$("progressText").textContent="أنجزت "+done.length+" من 26 حرفاً";$("bar").style.width=(done.length/26*100)+"%";$("feedback").textContent=done.includes(l[0])?"✓ سبق أن أكملت التدريب على هذا الحرف. يمكنك مراجعته.":"";setupDraw($("trace"),true);setupDraw($("free"),false)}
+$("hear").onclick=()=>{if(!window.speechSynthesis){alert("النطق الآلي غير مدعوم في هذا المتصفح.");return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(letters[idx][0]+". "+letters[idx][1]+". "+letters[idx][2]);u.lang="en-US";u.rate=.75;speechSynthesis.speak(u)};
+$("clearTrace").onclick=()=>clear($("trace"),true);$("clearFree").onclick=()=>clear($("free"),false);
+$("traceDone").onclick=()=>{$("traceFeedback").textContent="أحسنت! انتقل الآن إلى كتابة الحرف بنفسك، أو أعد التتبّع إذا احتجت."};
+$("done").onclick=()=>{let l=letters[idx][0];if(!done.includes(l)){done.push(l);localStorage.setItem(key,JSON.stringify(done))}$("feedback").textContent="تم تسجيل إكمالك للتدريب على "+l+" و"+letters[idx][1]+". راجع كتابتك قبل الانتقال.";render()};
+$("prev").onclick=()=>{idx=(idx+25)%26;render()};$("next").onclick=()=>{idx=(idx+1)%26;render()};
+render();window.addEventListener("resize",()=>{setupDraw($("trace"),true);setupDraw($("free"),false)});
+</script>
+<script>
+/* SMART EDU 360: تحسين نطق الإنجليزية وتشغيل المقاطع الطويلة دون انقطاع */
+(()=> {
+ const synth=window.speechSynthesis;
+ if(!synth||synth.__smartEdu360Patched)return;
+ const nativeSpeak=synth.speak.bind(synth);
+ function selectEnglishVoice(u){
+  const lang=(u.lang||"en-US").toLowerCase();
+  if(!lang.startsWith("en"))return;
+  if(u.voice&&u.voice.lang&&u.voice.lang.toLowerCase().startsWith("en"))return;
+  const voices=synth.getVoices()||[];
+  const voice=voices.find(v=>v.lang&&v.lang.toLowerCase()==="en-us")||voices.find(v=>v.lang&&v.lang.toLowerCase()==="en-gb")||voices.find(v=>v.lang&&v.lang.toLowerCase().startsWith("en-"))||voices.find(v=>v.lang&&v.lang.toLowerCase()==="en");
+  if(voice){u.voice=voice;u.lang=voice.lang;}
+ }
+ function splitSpeech(value){
+  const sentences=(value.match(/[^.!?]+[.!?]?/g)||[value]).map(s=>s.trim()).filter(Boolean);
+  const out=[];
+  for(const sentence of sentences){
+   if(sentence.length<=115){out.push(sentence);continue;}
+   const clauses=sentence.split(/(?<=[,;:])\s+/);
+   for(const clause of clauses){
+    if(clause.length<=115){out.push(clause);continue;}
+    let part="";
+    for(const word of clause.split(/\s+/)){
+     if(part&&(part+" "+word).length>105){out.push(part);part=word;}
+     else part=part?part+" "+word:word;
+    }
+    if(part)out.push(part);
+   }
+  }
+  return out.length?out:[value];
+ }
+ synth.speak=function(original){
+  if(!original||typeof original.text!=="string")return nativeSpeak(original);
+  if(!(original.lang||"en-US").toLowerCase().startsWith("en"))return nativeSpeak(original);
+  selectEnglishVoice(original);
+  const chunks=splitSpeech(original.text.trim());
+  if(chunks.length<=1)return nativeSpeak(original);
+  let index=0;
+  const next=()=>{
+   if(index>=chunks.length)return;
+   const part=new SpeechSynthesisUtterance(chunks[index]);
+   part.lang=original.lang||"en-US";part.rate=original.rate;part.pitch=original.pitch;part.volume=original.volume;
+   if(original.voice)part.voice=original.voice;
+   if(index===0&&original.onstart)part.onstart=e=>original.onstart(e);
+   part.onend=e=>{if(index===chunks.length-1){if(original.onend)original.onend(e);}else{index++;next();}};
+   part.onerror=e=>{if(original.onerror)original.onerror(e);};
+   nativeSpeak(part);
+  };
+  next();
+ };
+ synth.__smartEdu360Patched=true;
+})();
+</script>
+<script>/* SMART EDU 360 English speech reliability */(()=>{const s=window.speechSynthesis;if(!s||s.__smartEdu360Patched)return;const native=s.speak.bind(s);function voice(u){if(!(u.lang||"en-US").toLowerCase().startsWith("en"))return;if(u.voice&&u.voice.lang&&u.voice.lang.toLowerCase().startsWith("en"))return;const vs=s.getVoices()||[];const v=vs.find(x=>/^en-us$/i.test(x.lang))||vs.find(x=>/^en-gb$/i.test(x.lang))||vs.find(x=>/^en-/i.test(x.lang))||vs.find(x=>/^en$/i.test(x.lang));if(v){u.voice=v;u.lang=v.lang}}function split(t){const ss=(t.match(/[^.!?]+[.!?]?/g)||[t]).map(x=>x.trim()).filter(Boolean),out=[];for(const a of ss){if(a.length<=115){out.push(a);continue}let p="";for(const w of a.split(/\s+/)){if(p&&(p+" "+w).length>105){out.push(p);p=w}else p=p?p+" "+w:w}if(p)out.push(p)}return out.length?out:[t]}s.speak=function(u){if(!u||typeof u.text!=="string"||!(u.lang||"en-US").toLowerCase().startsWith("en"))return native(u);voice(u);const parts=split(u.text.trim());if(parts.length<2)return native(u);let i=0;const go=()=>{const q=new SpeechSynthesisUtterance(parts[i]);q.lang=u.lang||"en-US";q.rate=u.rate;q.pitch=u.pitch;q.volume=u.volume;if(u.voice)q.voice=u.voice;if(i===0&&u.onstart)q.onstart=e=>u.onstart(e);q.onend=e=>{if(++i<parts.length)go();else if(u.onend)u.onend(e)};q.onerror=e=>{if(u.onerror)u.onerror(e)};native(q)};go()};s.__smartEdu360Patched=true})();</script></body></html>

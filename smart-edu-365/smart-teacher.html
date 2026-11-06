@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101020">
+<title>المعلّم الذكي | ثَقِّف طفلك – SMART EDU 360</title>
+<style>
+:root{color-scheme:dark;--bg:#101020;--panel:#211d3b;--purple:#a98bff;--gold:#ffd77d;--text:#fffaff;--muted:#d0c9e4}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:18px;background:radial-gradient(ellipse at 50% -10%,#49347b,transparent 48%),linear-gradient(160deg,#111020,#111326 58%,#17102a);color:var(--text);font-family:system-ui,Tahoma,sans-serif;line-height:1.9}
+main{max-width:850px;margin:auto}header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.brand{font-weight:900;color:#e5d8ff}.back{color:var(--gold);text-decoration:none;border:1px solid #a98bff66;padding:7px 12px;border-radius:12px}
+.hero,.panel{background:linear-gradient(145deg,#292448ed,#17182bdd);border:1px solid #7770a477;border-radius:24px;padding:20px;margin:16px 0;box-shadow:0 14px 36px #05051066}
+.hero{text-align:center}.robot{font-size:64px;filter:drop-shadow(0 8px 12px #a98bff77)}h1{font-size:clamp(24px,5vw,36px);margin:2px 0;color:#e8dcff}.muted{color:var(--muted);font-size:14px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap}.tab,.btn{border:1px solid #a98bff77;border-radius:14px;padding:11px 15px;color:white;background:#302653;font:700 15px system-ui;cursor:pointer}.tab.active,.btn.primary{background:linear-gradient(135deg,#8c63d8,#50318c);border-color:#d4baff}.btn.gold{background:linear-gradient(135deg,#ffe5a0,#c18c35);color:#241907;border:0}
+.chat{min-height:150px;max-height:360px;overflow:auto;display:flex;flex-direction:column;gap:12px;padding:8px 0}.bubble{padding:13px 16px;border-radius:17px;max-width:95%;white-space:pre-wrap}.teacher{background:#ffffff12;border:1px solid #a98bff55;align-self:flex-start}.child{background:#3a2a62;border:1px solid #bda4ff66;align-self:flex-end}.bubble small{display:block;color:#dfceff;font-size:11px;margin-bottom:4px}
+.row{display:flex;gap:9px;flex-wrap:wrap}.row input{flex:1;min-width:180px;background:#100f1d;color:white;border:1px solid #7770a4;border-radius:13px;padding:13px;font:inherit}
+.tools{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.note{font-size:12px;color:#c9c4dd;margin-top:12px}
+@media(max-width:600px){body{padding:12px}.hero,.panel{padding:15px;border-radius:19px}.row input{min-width:100%}.btn,.tab{flex:1}}
+</style>
+</head>
+<body><main>
+<header><div class="brand">👑 ثَقِّف طفلك – SMART EDU 360</div><a class="back" href="index.html">الرئيسية</a></header>
+<section class="hero"><div class="robot" aria-hidden="true">🤖📚</div><h1>المعلّم الذكي</h1><p class="muted">رفيقك لفهم دروس الكورسين والتدرّب عليها خطوة بخطوة.</p></section>
+<section class="panel">
+<h2>اختر الكورس الذي تريد المساعدة فيه</h2>
+<div class="tabs"><button class="tab active" data-course="english">🔤 اللغة الإنجليزية</button><button class="tab" data-course="manners">💛 الاحترام والأخلاق</button></div>
+<div class="tools" id="topics"></div>
+</section>
+<section class="panel">
+<h2>محادثتنا التعليمية</h2>
+<div class="chat" id="chat" aria-live="polite"><div class="bubble teacher"><small>المعلّم</small>مرحباً يا بطل! اختر موضوعاً أو اكتب سؤالك، وسأساعدك على فهمه. 🌟</div></div>
+<div class="row"><input id="question" maxlength="240" placeholder="اكتب سؤالك هنا..." aria-label="سؤالك للمعلّم"><button class="btn primary" id="send">إرسال</button></div>
+<div class="tools"><button class="btn" id="speak">🔊 اقرأ آخر شرح</button><button class="btn" id="repeat">↻ أعد الشرح</button><button class="btn gold" id="quiz">⭐ اختبر فهمي</button></div>
+<p class="note">يعمل هذا المعلّم مجاناً دون اشتراك أو اتصال بخدمة ذكاء اصطناعي مدفوعة. الشرح تفاعلي مُعدّ مسبقاً، والصوت يعتمد على الأصوات المتاحة في جهازك.</p>
+</section>
+<footer class="muted" style="text-align:center;padding:20px;border-top:1px solid #ffffff22">تم تطويره بواسطة <b style="color:#c5a8ff">SLOOMAI</b></footer>
+</main>
+<script src="voice.js"></script>
+<script src="voice-choice.js"></script>
+<script type="module" src="nabra-voice.js"></script>
+<script>
+const data={
+english:[
+{title:'الحروف الإنجليزية',keys:['حرف','الحروف','alphabet','a-z'],text:'الحروف الإنجليزية 26 حرفاً. لكل حرف شكل كبير وشكل صغير. مثال: A هو الشكل الكبير، وa هو الشكل الصغير. قل معي: A, B, C. تذكّر أن اسم الحرف قد يختلف عن صوته داخل الكلمة.',q:'كم عدد حروف اللغة الإنجليزية؟',a:['26','ستة وعشرون','ستة وعشرين'] ,ex:'عددها 26 حرفاً.'},
+{title:'أصوات الحروف',keys:['صوت','النطق','phonics'],text:'نتعلم صوت الحرف داخل الكلمة، وليس اسمه فقط. مثال: الحرف B اسمه «بي»، وصوته في كلمة ball قريب من «بْ». استمع إلى الكلمة وكررها بهدوء.',q:'هل اسم الحرف هو نفسه دائماً صوته داخل الكلمة؟',a:['لا','ليس دائماً'],ex:'أحسنت! قد يختلف اسم الحرف عن صوته.'},
+{title:'المفردات والقراءة',keys:['كلمة','مفردات','قراءة','ترجمة'],text:'ابدأ بكلمات قصيرة مألوفة. مثال: cat تعني قطة، وbook تعني كتاباً، وsun تعني شمساً. اقرأ الكلمة، ثم اربطها بمعناها وصورتها.',q:'ماذا تعني كلمة book؟',a:['كتاب'],ex:'كلمة book تعني كتاباً.'},
+{title:'كتابة الكلمات والإملاء',keys:['إملاء','اكتب','كتابة','تهجئة'],text:'لتحسين الإملاء، انظر إلى الكلمة، وانطقها ببطء، ثم قسّمها إلى حروف، واكتبها، وبعدها قارن كتابتك بالنموذج. لا تقلق من الخطأ؛ حاول مرة أخرى.',q:'ما الخطوة التي تفعلها بعد كتابة الكلمة؟',a:['أقارن','أقارنها','أراجع','أراجعها'],ex:'صحيح، راجع الكلمة وقارنها بالنموذج.'},
+{title:'الجمل والقواعد',keys:['جملة','الجمل','قواعد','grammar'],text:'الجملة الإنجليزية البسيطة غالباً تبدأ بالفاعل ثم الفعل ثم بقية المعنى. مثال: I read a book. معناها: أنا أقرأ كتاباً. اقرأها كلمة كلمة ثم قلها كاملة.',q:'ماذا تعني I read a book؟',a:['أنا أقرأ كتاباً','اقرأ كتاب'],ex:'معناها: أنا أقرأ كتاباً.'},
+{title:'الاستماع والمحادثة',keys:['استماع','محادثة','تحدث','حوار'],text:'في المحادثة استمع أولاً، ثم افهم السؤال، وبعدها أجب بجملة قصيرة. مثال: How are you? والجواب: I am fine, thank you. أي: أنا بخير، شكراً لك.',q:'كيف تجيب عن How are you؟',a:['i am fine','im fine','أنا بخير'],ex:'إجابة جميلة: I am fine, thank you.'}
+],
+manners:[
+{title:'أساسيات الاحترام',keys:['احترام','استئذان','تحية','شكرا','من فضلك'],text:'الاحترام يظهر في كلماتنا وأفعالنا. نبدأ بالسلام، ونقول «من فضلك» عند الطلب، و«شكراً» عند المساعدة، ونستأذن قبل استخدام أغراض الآخرين.',q:'ماذا تقول عندما يقدم لك أحد مساعدة؟',a:['شكرا','شكراً','جزاك الله خيرا','جزاك الله خيراً'],ex:'أحسنت، نقول: شكراً لك.'},
+{title:'احترام الوالدين والآخرين',keys:['والدين','الوالدين','أمي','أبي','المعلم','الأصدقاء'],text:'نحترم الوالدين بالكلام اللطيف والمساعدة المناسبة لعمرنا، ونحترم المعلم بالإنصات، ونحترم الأصدقاء بعدم السخرية منهم والتعاون معهم.',q:'اذكر طريقة تساعد بها والديك.',a:['أساعد','أرتب','أحترم','أسمع'],ex:'رائع! المساعدة والكلام الطيب من صور الاحترام.'},
+{title:'الأخلاق والسلوك',keys:['صدق','أمانة','اعتذار','تسامح','غضب'],text:'الصدق أن نقول الحقيقة، والأمانة أن نحافظ على ما اؤتمنّا عليه، والاعتذار أن نعترف بالخطأ ونحاول إصلاحه. وعندما نغضب نتوقف ونتنفس ونتحدث بهدوء.',q:'ماذا تفعل إذا أخطأت في حق صديقك؟',a:['أعتذر','اعتذر','أصلح','أصلح الخطأ'],ex:'صحيح، نعتذر ونحاول إصلاح ما حدث.'},
+{title:'الحوار والمسؤولية',keys:['حوار','خلاف','تنمر','مسؤولية','ترتيب','غرفة','كتب'],text:'في الحوار نستمع دون مقاطعة، ونعبر عن رأينا باحترام. نرتب غرفتنا وكتبنا، وإذا تعرضنا للتنمر أو شعرنا بالخطر نخبر شخصاً بالغاً موثوقاً.',q:'ماذا تفعل إذا تعرضت للتنمر؟',a:['أخبر','أخبر شخصا','أخبر شخصاً بالغاً','أطلب المساعدة'],ex:'أحسنت، أخبر شخصاً بالغاً موثوقاً واطلب المساعدة.'}
+]};
+let course='english',lastReply='مرحباً يا بطل! اختر موضوعاً أو اكتب سؤالك، وسأساعدك على فهمه. 🌟',lastQuestion='';
+const chat=document.getElementById('chat'),topics=document.getElementById('topics'),input=document.getElementById('question');
+function add(text,who){const b=document.createElement('div');b.className='bubble '+who;b.innerHTML='<small>'+(who==='teacher'?'المعلّم':'أنت')+'</small>';b.append(document.createTextNode(text));chat.appendChild(b);chat.scrollTop=chat.scrollHeight;if(who==='teacher')lastReply=text;}
+function say(text){if(window.SmartEduVoice){window.SmartEduVoice.speak(text,.86);return;}if(!('speechSynthesis'in window)){add('ميزة القراءة الصوتية غير متاحة في هذا المتصفح. يمكنك قراءة الشرح المكتوب.','teacher');return;}const u=new SpeechSynthesisUtterance(text);u.lang='ar';u.rate=.86;speechSynthesis.speak(u);}
+function replyFor(q){const s=q.toLowerCase();const list=data[course];let item=list.find(x=>x.keys.some(k=>s.includes(k)));if(!item)item=list.find(x=>s.includes(x.title.split(' ')[0]));if(item)return item.text+'\n\nسؤال للتأكد: '+item.q; if(/مرحبا|السلام|اهلا|أهلا/.test(s))return 'أهلاً بك يا بطل! اختر موضوعاً من الأزرار، وسأشرحه لك خطوة بخطوة.';if(/شكرا|شكراً/.test(s))return 'العفو يا بطل! أنا سعيد بمحاولتك. هل تريد سؤالاً تدريبياً؟';return 'سؤال جميل! اختر أحد الموضوعات الظاهرة حتى أقدم لك شرحاً دقيقاً من دروس هذا الكورس. يمكنك أيضاً كتابة كلمة مثل: الحروف، الاستماع، الاحترام، الاعتذار أو ترتيب الغرفة.';}
+function renderTopics(){topics.innerHTML='';data[course].forEach((x,i)=>{const b=document.createElement('button');b.className='btn';b.textContent=x.title;b.onclick=()=>{add(x.title,'child');add(x.text+'\n\n'+x.q,'teacher');};topics.appendChild(b);});}
+document.querySelectorAll('[data-course]').forEach(b=>b.onclick=()=>{course=b.dataset.course;document.querySelectorAll('[data-course]').forEach(x=>x.classList.toggle('active',x===b));add(course==='english'?'اخترنا كورس اللغة الإنجليزية.':'اخترنا كورس الاحترام والأخلاق.','teacher');renderTopics();});
+function send(){const q=input.value.trim();if(!q)return;lastQuestion=q;add(q,'child');add(replyFor(q),'teacher');input.value='';}
+document.getElementById('send').onclick=send;input.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('send').click();});
+document.getElementById('speak').onclick=()=>say(lastReply);document.getElementById('repeat').onclick=()=>{add(lastReply,'teacher');say(lastReply);};
+document.getElementById('quiz').onclick=()=>{const item=data[course][Math.floor(Math.random()*data[course].length)];add('سؤال التدريب: '+item.q,'teacher');lastReply='سؤال التدريب: '+item.q;window.currentQuiz=item;};
+document.getElementById('send').onclick=()=>{const q=input.value.trim();if(!q)return;add(q,'child');const item=window.currentQuiz;if(item&&item.a.some(a=>q.toLowerCase().includes(a.toLowerCase()))){add('أحسنت! إجابة صحيحة. ⭐ '+item.ex,'teacher');window.currentQuiz=null;}else{add(replyFor(q),'teacher');}input.value='';};
+renderTopics();
+</script><script src="voice-input.js"></script>\n</body></html>

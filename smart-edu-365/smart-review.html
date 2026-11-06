@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090909"><title>المراجعة الذكية | SMART EDU 365</title>
+<style>
+:root{color-scheme:dark;--gold:#d8b45e;--muted:#bdb5a5}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#29200f,#090909 58%);color:#f8f4e9;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.8}header{text-align:center;padding:25px 14px;border-bottom:1px solid #5e4924}h1{color:var(--gold);margin:4px}header p,.muted{color:var(--muted)}main{max-width:850px;margin:auto;padding:16px 13px 45px}.panel{background:linear-gradient(145deg,#1d1b17,#111);border:1px solid #5a4728;border-radius:17px;padding:16px;margin:14px 0}.panel h2{color:var(--gold);font-size:1.2rem;margin:0 0 9px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:#0c0c0c;border:1px solid #403522;border-radius:12px;padding:10px;text-align:center}.stat b{display:block;color:var(--gold);font-size:1.4rem}.task{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid #373027}.task:last-child{border:0}.tag{color:#e7ca82;font-size:.86rem}button{background:#26231d;color:white;border:1px solid #8e7137;border-radius:11px;padding:11px 13px;font:inherit;cursor:pointer}button.primary{background:linear-gradient(120deg,#c49a43,#f0d58b);color:#17120a;font-weight:700}.choices{display:grid;gap:8px}.choices button{text-align:right}.feedback{min-height:30px;color:var(--gold);font-weight:700}.progress{height:9px;background:#34302a;border-radius:20px;overflow:hidden}.progress span{display:block;height:100%;background:linear-gradient(90deg,#a77b2d,#f3d98f);width:0}.hidden{display:none}.row{display:flex;gap:8px;flex-wrap:wrap}.row button{flex:1 1 140px}.small{font-size:.9rem;color:var(--muted)}a{color:#e4c477}
+</style></head><body><header><div>SMART EDU 365</div><h1>المراجعة الذكية</h1><p>نراجع ما تعلمته، ونعطيك تدريباً إضافياً على الأسئلة الصعبة</p></header><main>
+<section class="panel"><h2>ملخص تقدمك على هذا الجهاز</h2><div class="stats"><div class="stat"><b id="completed">0</b><span>مراحل وصلت إليها</span></div><div class="stat"><b id="remaining">0</b><span>مراحل لم تصل إليها بعد</span></div><div class="stat"><b id="missed">0</b><span>أسئلة أخطأت فيها</span></div></div><p class="small">يُقرأ التقدم من ذاكرة هذا المتصفح فقط؛ لن ينتقل تلقائياً إلى هاتف آخر.</p></section>
+<section class="panel"><h2>ماذا تراجع الآن؟</h2><div id="recommendations"></div></section>
+<section class="panel"><h2>اختبار المراجعة</h2><p class="muted">أجب عن الأسئلة. إذا أخطأت، سيحفظها النظام في قائمة مراجعتك ويعيد طرحها عليك في محاولة لاحقة.</p><div class="progress"><span id="bar"></span></div><p id="counter" class="small">جاهز للبدء</p><div id="quiz" class="hidden"><h3 id="question"></h3><div class="choices" id="choices"></div><div class="feedback" id="feedback"></div><div class="row"><button id="next" class="primary hidden">السؤال التالي</button></div></div><button class="primary" id="start">ابدأ مراجعة من 10 أسئلة</button><button id="retry" class="hidden">أعد الأسئلة التي أخطأت فيها</button><p id="result" class="feedback"></p></section>
+<section class="panel"><h2>ملاحظة حول دقة المتابعة</h2><p class="small">هذه النسخة تجمع تقدم الدروس التي تحفظ بياناتها محلياً، وتبدأ من الآن بتسجيل أخطاء اختبار المراجعة نفسه. بعض الدروس القديمة لا تسجل تفاصيل الإجابات الخاطئة، لذلك لن ننسب إليها أخطاء لم يتم حفظها.</p></section>
+<footer><a href="index.html">العودة إلى الصفحة الرئيسية</a></footer></main>
+<script>
+const progressItems=[
+{name:"الحروف الإنجليزية",url:"alphabet.html",key:"smartEdu365UnlockedGroup",type:"number",total:5},
+{name:"أصوات الحروف",url:"phonics.html",key:"smartEdu365PhonicsUnlocked",type:"number",total:5},
+{name:"الجمل الإنجليزية",url:"sentences.html",key:"smartEdu365SentenceProgress",type:"index",total:5},
+{name:"المحادثات الأولى",url:"conversations.html",key:"smartEdu365ConversationProgress",type:"index",total:4},
+{name:"محادثات الحياة اليومية",url:"daily-conversations.html",key:"smartEdu365DailyTalks",type:"completed",total:5},
+{name:"تكوين الجمل",url:"build-sentences.html",key:"smartEdu365SentenceBuilder",type:"done",total:5},
+{name:"القواعد",url:"grammar-basics.html",key:"smartEdu365Grammar",type:"done",total:5},
+{name:"الاستماع",url:"listening-practice.html",key:"smartEdu365Listening",type:"completed",total:5},
+{name:"الاستماع المتقدم",url:"advanced-listening.html",key:"smartEduAdvancedListening",type:"completed",total:5}
+];
+const questions=[
+{q:"ما اسم الحرف B؟",o:["بي","بَ","دي"],a:0,topic:"الحروف"},
+{q:"أي كلمة تبدأ بصوت /æ/؟",o:["cat","pen","dog"],a:0,topic:"الأصوات"},
+{q:"ما معنى I am happy؟",o:["أنا سعيد","أنا جائع","أنا متعب"],a:0,topic:"الجمل"},
+{q:"ما الرد المناسب على How are you؟",o:["I am fine, thank you.","Good night.","My school is blue."],a:0,topic:"المحادثة"},
+{q:"ما معنى Please؟",o:["من فضلك","إلى اللقاء","صباح الخير"],a:0,topic:"المفردات"},
+{q:"اختر الجملة الصحيحة:",o:["She is kind.","She are kind.","She am kind."],a:0,topic:"القواعد"},
+{q:"ما معنى I would like some water؟",o:["أريد بعض الماء من فضلك","أين المدرسة؟","أنا أحب القراءة"],a:0,topic:"الاستماع"},
+{q:"أي ترتيب صحيح؟",o:["I like apples.","Apples I like am.","Like I apples."],a:0,topic:"تكوين الجمل"},
+{q:"ما معنى windy؟",o:["عاصف","مشمس","بارد جداً"],a:0,topic:"الاستماع المتقدم"},
+{q:"ما التصرف الأفضل إذا أخطأ صديقك؟",o:["أسخر منه","أساعده وأتحدث بلطف","أصرخ عليه"],a:1,topic:"حسن التعامل"}
+];
+let deck=[],pos=0,wrong=JSON.parse(localStorage.getItem("smartEduReviewWrong")||"[]"),score=0,answered=false;
+const $=id=>document.getElementById(id);
+function read(item){try{const raw=localStorage.getItem(item.key);if(raw===null)return 0;if(item.type==="number")return Math.min(item.total,Number(raw)+1);if(item.type==="index")return Math.min(item.total,Number(raw)+1);const obj=JSON.parse(raw);if(item.type==="completed")return Array.isArray(obj.completed)?obj.completed.length:Array.isArray(obj)?obj.length:0;if(item.type==="done")return Array.isArray(obj.done)?obj.done.length:0;}catch(e){}return 0}
+function refresh(){let sum=0,possible=0;const list=$("recommendations");list.innerHTML="";progressItems.forEach(p=>{const n=read(p);sum+=n;possible+=p.total;const d=document.createElement("div");d.className="task";const label=document.createElement("span");label.textContent=p.name+" · وصلت إلى "+n+"/"+p.total;const a=document.createElement("a");a.href=p.url;a.textContent=n>=p.total?"راجع مرة أخرى":"تابع الدرس";d.append(label,a);list.append(d)});$("completed").textContent=sum;$("remaining").textContent=Math.max(0,possible-sum);$("missed").textContent=wrong.length}
+function saveWrong(){localStorage.setItem("smartEduReviewWrong",JSON.stringify([...new Set(wrong)]));refresh()}
+function startReview(onlyWrong=false){const ids=onlyWrong?wrong.slice():questions.map((_,i)=>i);if(!ids.length){$("result").textContent="رائع! لا توجد أسئلة محفوظة للمراجعة حالياً.";return}deck=ids.sort(()=>Math.random()-.5).slice(0,onlyWrong?ids.length:10);pos=0;score=0;$("start").classList.add("hidden");$("retry").classList.add("hidden");$("quiz").classList.remove("hidden");$("result").textContent="";renderQuestion()}
+function renderQuestion(){answered=false;const q=questions[deck[pos]];$("counter").textContent="السؤال "+(pos+1)+" من "+deck.length+" · "+q.topic;$("bar").style.width=(pos/deck.length*100)+"%";$("question").textContent=q.q;$("choices").innerHTML="";q.o.forEach((v,i)=>{const b=document.createElement("button");b.textContent=v;b.onclick=()=>choose(i);$("choices").append(b)});$("feedback").textContent="";$("next").classList.add("hidden")}
+function choose(i){if(answered)return;answered=true;const id=deck[pos],q=questions[id],ok=i===q.a;if(ok){score++;wrong=wrong.filter(x=>x!==id);$("feedback").textContent="إجابة صحيحة! أحسنت ⭐"}else{if(!wrong.includes(id))wrong.push(id);$("feedback").textContent="لنحفظ هذا السؤال لمراجعته مرة أخرى. الإجابة الصحيحة: "+q.o[q.a]}saveWrong();Array.from($("choices").children).forEach((b,n)=>{b.disabled=true;if(n===q.a)b.style.borderColor="#d8b45e"});$("next").textContent=pos===deck.length-1?"عرض النتيجة":"السؤال التالي";$("next").classList.remove("hidden");}
+$("next").onclick=()=>{pos++;if(pos<deck.length)renderQuestion();else finish()};
+function finish(){$("bar").style.width="100%";$("counter").textContent="انتهت المراجعة";$("question").textContent="نتيجتك: "+score+" من "+deck.length;$("choices").innerHTML="";$("feedback").textContent=wrong.length?"سنحتفظ بالأسئلة التي تحتاج إلى تدريب إضافي.":"ممتاز! لا توجد أخطاء محفوظة."; $("next").classList.add("hidden");$("start").classList.remove("hidden");$("start").textContent="ابدأ مراجعة جديدة";$("retry").classList.toggle("hidden",wrong.length===0);refresh()}
+$("start").onclick=()=>startReview(false);$("retry").onclick=()=>startReview(true);refresh();
+</script></body></html>

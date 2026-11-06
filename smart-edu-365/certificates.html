@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>شهادات SMART EDU 365 التحفيزية</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:22px;background:#101014;color:#f8f2e5;font-family:Tahoma,Arial,sans-serif;line-height:1.8}.wrap{max-width:850px;margin:auto}.panel{background:#1b1a20;border:1px solid #6d542b;border-radius:20px;padding:22px}.gold{color:#f0cf83}label{display:block;margin:14px 0 6px}input,select{width:100%;padding:12px;border-radius:10px;border:1px solid #75613e;background:#101014;color:#fff;font:inherit}button{margin:16px 8px 0 0;padding:12px 18px;border:0;border-radius:10px;background:#e8c16f;color:#211707;font:inherit;font-weight:bold;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.certificate{display:none;margin-top:24px;padding:34px;background:#fff9e9;color:#493315;text-align:center;border:9px double #c49a4b;border-radius:16px}.certificate h1,.certificate h2{color:#805a1d}.certificate h1{font-size:32px}.certificate .name{font-size:28px;font-weight:bold;margin:12px}.small{font-size:12px;color:#725d3c}.hint{color:#cfc5b2;font-size:13px}.gate{padding:12px;border:1px solid #76613b;border-radius:10px;color:#f0cf83;margin:12px 0}.locked .controls{display:none}@media print{body{background:white;padding:0}.panel,.hint,.controls{display:none!important}.wrap{max-width:none}.certificate{display:block!important;margin:0;border-radius:0;min-height:95vh;padding:60px 30px}}
+</style>
+</head>
+<body><main class="wrap">
+<h1 class="gold">SMART EDU 365</h1><h2 id="pageTitle">شهادات الإنجاز والتحفيز</h2>
+<section class="panel" id="certificatePanel">\n<p class="gate" id="gate" aria-live="polite"></p>
+<p id="intro">احتفل بإتمام دورة الاحترام وحُسن التعامل باللغة العربية. اجتز الاختبار النهائي ثم اكتب اسم الطالب واختر لغة الشهادة.</p>
+<div class="controls">
+<label for="language" id="languageLabel">لغة الشهادة</label>
+<select id="language"><option value="ar">العربية</option><option value="en">English</option></select>
+<label for="student" id="nameLabel">الاسم المعروض على الشهادة (اختياري)</label>
+<input id="student" maxlength="40" placeholder="مثال: بطل التعلّم">
+<label for="level" id="levelLabel">اختر الإنجاز</label>
+<select id="level">
+<option value="letters">أتممت تعلّم الحروف الإنجليزية</option>
+<option value="sounds">أتقنت أصوات الحروف والنطق</option>
+<option value="reading">أنهيت مرحلة قراءة الكلمات</option>
+<option value="speaking">أتممت تكوين الجمل والمحادثة</option>
+<option value="basics">أنهيت أساسيات اللغة الإنجليزية</option>
+<option value="manners">أتممت مرحلة الاحترام وحُسن التعامل</option>
+<option value="final">اجتزت التقييم النهائي للمسار</option>
+</select>
+<button id="create">عرض الشهادة التحفيزية</button>
+<button id="print" disabled>طباعة الشهادة</button>
+</div>
+<p class="hint" id="hint">ملاحظة: هذه شهادة تحفيزية قابلة للطباعة. لا تُعد إثباتاً آلياً للإتقان؛ تعتمد الشهادة الرسمية بعد إكمال الدروس واجتياز الاختبار والتحقق من النتيجة.</p>
+</section>
+<section class="certificate" id="cert" aria-live="polite">
+<div class="small" id="brandLine">SMART EDU 365 · رحلة تعلّم وإنجاز</div>
+<h1 id="certTitle">شهادة إنجاز وتحفيز</h1>
+<p id="presented">تُقدَّم بكل فخر إلى</p>
+<div class="name" id="outName">بطل SMART EDU 365</div>
+<p id="recognition">تقديراً للمثابرة والجهد في إنجاز</p>\n<p id="assessmentLine" class="small"></p>
+<h2 id="outLevel"></h2>
+<p id="encouragement">كل خطوة تتعلمها تقرّبك من هدفك. استمر، فأنت قادر على التقدم!</p>
+<h2 id="congrats">⭐ أحسنت ⭐</h2>
+<div class="small" id="footerLine">SMART EDU 365 — التعلّم رحلة تستحق الفخر</div>
+</section></main>
+<script>
+const translations={
+ ar:{pageTitle:'شهادات الإنجاز والتحفيز',intro:'احتفل بكل مرحلة تنجزها في تعلّم الإنجليزية أو الاحترام وحُسن التعامل. اكتب الاسم الذي تريد ظهوره واختر الإنجاز.',languageLabel:'لغة الشهادة',nameLabel:'الاسم المعروض على الشهادة (اختياري)',namePlaceholder:'مثال: بطل التعلّم',levelLabel:'اختر الإنجاز',create:'عرض الشهادة التحفيزية',print:'طباعة الشهادة',hint:'ملاحظة: هذه شهادة تحفيزية قابلة للطباعة. لا تُعد إثباتاً آلياً للإتقان؛ تعتمد الشهادة الرسمية بعد إكمال الدروس واجتياز الاختبار والتحقق من النتيجة.',brandLine:'SMART EDU 365 · رحلة تعلّم وإنجاز',certTitle:'شهادة إنجاز وتحفيز',presented:'تُقدَّم بكل فخر إلى',recognition:'تقديراً للمثابرة والجهد في إنجاز',encouragement:'كل خطوة تتعلمها تقرّبك من هدفك. استمر، فأنت قادر على التقدم!',congrats:'⭐ أحسنت ⭐',footerLine:'SMART EDU 365 — التعلّم رحلة تستحق الفخر',defaultName:'بطل SMART EDU 365',levels:{letters:'أتممت تعلّم الحروف الإنجليزية',sounds:'أتقنت أصوات الحروف والنطق',reading:'أنهيت مرحلة قراءة الكلمات',speaking:'أتممت تكوين الجمل والمحادثة',basics:'أنهيت أساسيات اللغة الإنجليزية',manners:'أتممت مرحلة الاحترام وحُسن التعامل',final:'اجتزت التقييم النهائي للمسار'}},
+ en:{pageTitle:'Achievement & Motivation Certificates',intro:'Celebrate completing the Arabic Respect and Good Manners course. Pass the final assessment, then enter the student's name and choose the certificate language.',languageLabel:'Certificate language',nameLabel:'Name on certificate (optional)',namePlaceholder:'Example: Learning Champion',levelLabel:'Choose an achievement',create:'Preview certificate',print:'Print certificate',hint:'Note: This is a printable motivational certificate, not automatic proof of mastery. Official completion should be confirmed after lessons, assessment, and result verification.',brandLine:'SMART EDU 365 · A journey of learning and achievement',certTitle:'Certificate of Achievement',presented:'Proudly presented to',recognition:'In recognition of effort and dedication in completing',encouragement:'Every step forward brings you closer to your goal. Keep learning — you can do it!',congrats:'⭐ Well done! ⭐',footerLine:'SMART EDU 365 — Learning is a journey worth celebrating',defaultName:'SMART EDU 365 Champion',levels:{letters:'Completed the English alphabet',sounds:'Mastered letter sounds and pronunciation',reading:'Completed the word-reading stage',speaking:'Completed sentence building and conversation',basics:'Completed English language fundamentals',manners:'Completed the Respect and Good Manners stage',final:'Passed the final pathway assessment'}}
+};
+const language=document.getElementById('language');
+const assessment=(()=>{try{return JSON.parse(sessionStorage.getItem('smartEdu365Assessment')||localStorage.getItem('smartEdu365Assessment')||'null')}catch(e){return null}})();
+const eligible=!!(assessment&&assessment.passed&&(assessment.track==='english'?(assessment.score>=8&&assessment.total===10):(assessment.score>=4&&assessment.total===5)));
+const gate=document.getElementById('gate');
+if(!eligible){
+ document.getElementById('certificatePanel').classList.add('locked');
+ gate.innerHTML='لفتح الشهادة، أكمل اختبار المسار الذي اخترته واجتز الدرجة المطلوبة. <a href="assessment.html" style="color:#fff">اختبار الاحترام</a> أو <a href="english-assessment.html" style="color:#fff">اختبار الإنجليزية</a>.';
+ document.getElementById('create').disabled=true;
+}else{
+ const expected=assessment.track==='english'?'basics':'manners';
+ document.getElementById('level').value=expected;
+ document.getElementById('level').disabled=true;
+ gate.textContent='تم اجتياز الاختبار بنجاح: '+assessment.score+' من '+assessment.total+' ('+(Math.round(assessment.score/assessment.total*100))+'٪). يمكنك الآن إنشاء الشهادة التحفيزية.';
+}
+function applyLanguage(){
+ const t=translations[language.value],english=language.value==='en';
+ document.documentElement.lang=language.value;document.documentElement.dir=english?'ltr':'rtl';
+ ['pageTitle','intro','languageLabel','nameLabel','levelLabel','create','print','hint','brandLine','certTitle','presented','recognition','encouragement','congrats','footerLine'].forEach(id=>document.getElementById(id).textContent=t[id]);
+ document.getElementById('student').placeholder=t.namePlaceholder;
+ const level=document.getElementById('level'),selected=level.value;
+ [...level.options].forEach(option=>option.textContent=t.levels[option.value]);
+ level.value=selected;
+ document.getElementById('outLevel').textContent=t.levels[selected];
+ document.getElementById('assessmentLine').textContent=eligible?'نتيجة الاختبار: '+assessment.score+'/'+assessment.total+' ('+(Math.round(assessment.score/assessment.total*100))+'٪)':'';
+ document.getElementById('outName').textContent=document.getElementById('student').value.trim()||t.defaultName;
+}
+language.addEventListener('change',applyLanguage);
+document.getElementById('create').addEventListener('click',()=>{
+ if(!eligible){location.href='assessment.html';return;}
+ const t=translations[language.value];
+ document.getElementById('outName').textContent=document.getElementById('student').value.trim()||t.defaultName;
+ document.getElementById('outLevel').textContent=t.levels[document.getElementById('level').value];
+ document.getElementById('assessmentLine').textContent='نتيجة الاختبار: '+assessment.score+'/'+assessment.total+' ('+(Math.round(assessment.score/assessment.total*100))+'٪)';
+ document.getElementById('cert').style.display='block';
+ document.getElementById('print').disabled=false;
+ document.getElementById('cert').scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('level').addEventListener('change',()=>{if(document.getElementById('cert').style.display==='block')document.getElementById('create').click();});
+document.getElementById('student').addEventListener('input',()=>{if(document.getElementById('cert').style.display==='block')document.getElementById('create').click();});
+document.getElementById('print').addEventListener('click',()=>window.print());
+applyLanguage();
+</script></body></html>

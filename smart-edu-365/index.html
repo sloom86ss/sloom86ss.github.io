@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101020">
+<meta name="description" content="ثَقِّف طفلك – SMART EDU 360: كورسات تعليمية تفاعلية للغة الإنجليزية والاحترام والأخلاق.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>ثَقِّف طفلك – SMART EDU 360</title>
+<style>
+:root{color-scheme:dark;--bg:#101020;--panel:#1c1b35;--text:#fbf8ff;--muted:#c9c4dd;--purple:#a98bff;--blue:#7bd8ff;--gold:#ffd77d}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -12%,#49347b 0%,transparent 48%),linear-gradient(160deg,#111020,#111326 58%,#17102a);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;padding:30px 18px}
+main{width:min(1080px,100%);margin:auto}
+.brand{text-align:center;margin:0 auto 22px}
+.top-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:0 auto 25px}
+.action-btn{border:1px solid #a98bff88;border-radius:999px;padding:12px 20px;background:linear-gradient(135deg,#6738b9,#28175c);color:#fff;font:700 15px system-ui;box-shadow:0 8px 24px #08051688;cursor:pointer}
+.action-btn.install{background:linear-gradient(135deg,#1388d6,#174a9b);border-color:#7bd8ff99}
+.action-btn:disabled{opacity:.65;cursor:default}
+.action-note{min-height:22px;text-align:center;color:#d8ccff;font-size:13px;margin:-14px auto 20px}
+.crown{font-size:42px;filter:drop-shadow(0 5px 14px #d9baff88);display:block;margin-bottom:7px}
+h1{font-size:clamp(26px,4vw,40px);margin:0;font-weight:900;letter-spacing:.2px}
+.sub{color:var(--muted);font-size:17px;line-height:1.9;max-width:680px;margin:12px auto 0}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.course{position:relative;display:flex;flex-direction:column;align-items:center;min-height:510px;padding:24px 26px 30px;background:linear-gradient(145deg,#252345dd,#17182bdd);border:1px solid #7770a4;border-radius:30px;color:inherit;text-decoration:none;text-align:center;overflow:hidden;box-shadow:0 18px 50px #05051088;transition:transform .2s,border-color .2s,box-shadow .2s}
+.course:before{content:"";position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,var(--accent),#fff,var(--accent))}
+.course:after{content:"";position:absolute;width:250px;height:250px;border-radius:50%;background:var(--glow);filter:blur(65px);opacity:.3;top:20px;z-index:0}
+.course>*{position:relative;z-index:1}
+.course:hover,.course:focus-visible{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 22px 55px #050510aa;outline:none}
+.art{width:min(100%,310px);height:205px;display:grid;place-items:center;margin:8px auto 16px;border-radius:24px;background:linear-gradient(145deg,#ffffff1b,#ffffff05);border:1px solid #ffffff22;box-shadow:inset 0 1px 0 #ffffff22,0 12px 25px #05051055}
+.art .emoji{font-size:105px;filter:drop-shadow(0 12px 10px #05051088)}
+.course h2{font-size:clamp(23px,3vw,32px);line-height:1.55;margin:2px 0 10px}
+.course p{font-size:16px;line-height:2;color:var(--muted);margin:0;max-width:430px}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.meta span{font-size:13px;color:#f4edff;background:#ffffff12;border:1px solid #ffffff20;border-radius:99px;padding:5px 11px}
+.hint{margin-top:auto;padding-top:22px;color:var(--accent);font-weight:900;font-size:16px}
+.english{--accent:var(--blue);--glow:#54bfff}.manners{--accent:var(--gold);--glow:#f5b95a}
+@media(max-width:720px){body{padding:23px 13px}.brand{margin-bottom:25px}.choices{grid-template-columns:1fr;gap:17px}.course{min-height:0;padding:20px 18px 23px;border-radius:25px}.art{height:175px;width:min(100%,280px)}.art .emoji{font-size:88px}.course p{font-size:15px}.hint{padding-top:17px}}
+
+.teacher-area{margin:25px auto 0;padding:22px;background:linear-gradient(145deg,#252345dd,#17182bdd);border:1px solid #7770a4;border-radius:28px;box-shadow:0 18px 50px #05051088;text-align:center}.teacher-area h2{color:#e8dcff}.teacher-robot{font-size:52px}.teacher-tabs,.teacher-topics,.teacher-tools{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin:12px 0}.teacher-area button,.teacher-open{border:1px solid #a98bff88;border-radius:13px;padding:10px 14px;background:#302653;color:white;font:700 14px system-ui;cursor:pointer;text-decoration:none;display:inline-block}.teacher-area button.active{background:linear-gradient(135deg,#8c63d8,#50318c)}.teacher-chat{min-height:76px;max-height:220px;overflow:auto;padding:10px;background:#100f1d88;border:1px solid #ffffff20;border-radius:16px;text-align:right}.teacher-msg{padding:10px 13px;margin:7px 0;border-radius:13px;white-space:pre-wrap;background:#ffffff12}.teacher-input{display:flex;gap:8px;margin-top:10px}.teacher-input input{flex:1;min-width:0;padding:12px;border-radius:12px;border:1px solid #7770a4;background:#100f1d;color:white;font:inherit}.teacher-note{font-size:12px!important}.site-footer{max-width:1080px;margin:30px auto 0;padding:18px;text-align:center;color:#c9c4dd;border-top:1px solid #ffffff20}.site-footer strong{color:#c5a8ff}@media(max-width:600px){.teacher-area{padding:15px}.teacher-input{flex-wrap:wrap}.teacher-input input{flex-basis:100%}}
+
+/* التصميم الثالث المعتمد: واجهة بنفسجية ذهبية لامعة */
+body{background:radial-gradient(ellipse at 50% -10%,#7650b8 0%,transparent 42%),radial-gradient(circle at 8% 35%,#39256c66,transparent 28%),linear-gradient(155deg,#090813 0%,#17112d 48%,#090b18 100%);padding-top:22px}
+.brand{position:relative;padding:28px 18px 24px;margin-bottom:22px;border:1px solid #d7b66b66;border-radius:30px;background:linear-gradient(135deg,#38245fdd,#171329ee 58%,#21163cdd);box-shadow:0 18px 55px #05030caa,inset 0 1px 0 #fff2;overflow:hidden}
+.brand:before{content:"";position:absolute;width:270px;height:270px;border-radius:50%;background:#a77aff55;filter:blur(65px);top:-155px;right:8%}
+.brand:after{content:"";position:absolute;inset:auto 12% 0;height:2px;background:linear-gradient(90deg,transparent,#f6d88d,transparent)}
+.brand>*{position:relative;z-index:1}
+.crown{font-size:50px;filter:drop-shadow(0 0 16px #f5d27caa)}
+h1{color:#fff4d6;text-shadow:0 3px 18px #c39bff77}
+.sub{color:#e2d9f4}
+.hero-scene{position:relative;display:flex;align-items:center;justify-content:center;gap:clamp(10px,4vw,34px);margin:0 auto 25px;padding:17px 12px;max-width:720px;border:1px solid #d5b86b55;border-radius:26px;background:linear-gradient(120deg,#251a43cc,#161329dd);box-shadow:inset 0 1px 0 #fff2,0 14px 35px #05030c88;overflow:hidden}
+.hero-scene:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,#a77aff22,transparent 65%);pointer-events:none}
+.hero-character{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
+.hero-character .figure{font-size:clamp(42px,8vw,68px);line-height:1.25;filter:drop-shadow(0 8px 9px #0009)}
+.hero-character strong{font-size:12px;color:#f7dda0}
+.hero-character.teacher .figure{font-size:clamp(54px,10vw,82px)}
+.hero-orbit{position:absolute;width:180px;height:180px;border:1px solid #e4c77c33;border-radius:50%;box-shadow:0 0 35px #a77aff22}
+.choices{gap:20px}
+.course{min-height:490px;background:linear-gradient(145deg,#30244fef,#171529f5 65%,#21183a);border:1px solid #c9a8ff66;box-shadow:0 18px 50px #03020aaa,inset 0 1px 0 #fff2}
+.course:before{height:4px;background:linear-gradient(90deg,transparent,var(--accent),#fff,var(--accent),transparent)}
+.course:after{opacity:.38}
+.art{width:min(100%,330px);height:220px;background:linear-gradient(145deg,#ffffff20,#a78bfa12);border:1px solid #f0d58a55;box-shadow:inset 0 1px 0 #fff3,0 12px 28px #05051088}
+.art img{width:100%;height:100%;object-fit:contain;padding:9px;filter:drop-shadow(0 10px 12px #0008)}
+.course h2{color:#fff0cf}
+.meta span{border-color:#d7bd7955;background:#fff1}
+.teacher-area{background:linear-gradient(145deg,#30234fee,#171329f5);border-color:#d2b36b77;box-shadow:0 18px 50px #03020aaa,inset 0 1px 0 #fff2}
+.teacher-robot{filter:drop-shadow(0 8px 14px #b28aff66)}
+.action-btn{box-shadow:0 8px 25px #080516aa,inset 0 1px 0 #fff3}
+.action-btn:not(.install){background:linear-gradient(135deg,#9b70dc,#4d2c83);border-color:#e4c77c99}
+.action-btn.install{background:linear-gradient(135deg,#d8b76b,#90652b);color:#21152d;border-color:#ffe7a5}
+.site-footer{border-color:#d5b86b44}
+@media(max-width:720px){.brand{padding:22px 12px 20px}.hero-scene{margin-bottom:18px;padding:13px 6px;gap:7px}.hero-character strong{font-size:10px}.art{height:190px}}
+
+
+/* عالم الأكاديمية السحري – الاتجاه البصري الثاني */
+body{background:radial-gradient(ellipse at 50% -8%,#287caa 0%,transparent 42%),radial-gradient(ellipse at 12% 45%,#255a8c55,transparent 32%),linear-gradient(160deg,#071426 0%,#10243e 48%,#11142d 100%);color:#f4fbff}
+.brand{border:1px solid #78d9e888;background:linear-gradient(135deg,#153d60f2,#17264af2 55%,#2b2356f2);box-shadow:0 18px 55px #020b1dcc,inset 0 1px 0 #fff4}
+.brand:before{background:#55d5ff55}.brand:after{background:linear-gradient(90deg,transparent,#ffe7a5,transparent)}
+.crown{filter:drop-shadow(0 0 15px #ffe49a)}
+h1{color:#fff4d7;text-shadow:0 3px 18px #55caff77}.sub{color:#d5edff}
+.academy-world{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:340px;max-width:850px;margin:0 auto 28px;padding:28px 22px 18px;overflow:hidden;border:1px solid #77d9e899;border-radius:34px;background:radial-gradient(ellipse at 50% 100%,#438bbd77,transparent 48%),linear-gradient(145deg,#174d70ee,#1c2855f5 58%,#38245fee);box-shadow:0 24px 65px #020b1dcc,inset 0 1px 0 #ffffff55}
+.academy-world:before,.academy-world:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.academy-world:before{width:270px;height:270px;top:-145px;right:-50px;background:#67e4ff55;filter:blur(48px)}
+.academy-world:after{width:260px;height:260px;bottom:-180px;left:12%;background:#a68bff55;filter:blur(42px)}
+.world-stars{position:absolute;inset:15px 0 auto;text-align:center;color:#ffe8a6;letter-spacing:10px;font-size:19px;opacity:.8}
+.academy-copy{position:relative;z-index:2;text-align:center}
+.academy-kicker{display:inline-block;padding:6px 15px;border:1px solid #ffe3a277;border-radius:99px;background:#fff1;color:#ffe6a7;font-size:12px;font-weight:900;letter-spacing:2px}
+.academy-copy h2{margin:12px 0 5px;color:#fff3d1;font-size:clamp(24px,4vw,36px);text-shadow:0 3px 16px #030b24}
+.academy-copy p{margin:0;color:#d8f2ff;font-size:15px;line-height:1.8}
+.academy-characters{position:relative;z-index:2;display:flex;align-items:end;justify-content:center;gap:clamp(5px,4vw,35px);height:150px;margin-top:8px}
+.academy-characters span{filter:drop-shadow(0 12px 9px #020817aa)}
+.kid{font-size:clamp(50px,9vw,76px);animation:floatKid 3.5s ease-in-out infinite}
+.kid-right{animation-delay:.7s}.academy-robot{font-size:clamp(66px,11vw,94px);animation:floatKid 3s ease-in-out infinite}
+.magic-book{font-size:clamp(35px,6vw,50px);align-self:center;animation:bookGlow 2.8s ease-in-out infinite}
+.academy-platform{position:absolute;z-index:1;bottom:13px;left:14%;right:14%;height:35px;border:1px solid #a9eaffaa;border-radius:50%;background:linear-gradient(90deg,#153c66,#3a78a4,#27346b);box-shadow:0 8px 25px #020817aa,0 0 28px #5ad9ff66,inset 0 3px 9px #ffffff44}
+.academy-platform span{position:absolute;top:-13px;color:#ffe8a6}.academy-platform span:nth-child(1){left:18%}.academy-platform span:nth-child(2){left:49%;top:-21px}.academy-platform span:nth-child(3){right:18%}
+@keyframes floatKid{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes bookGlow{0%,100%{transform:translateY(0) rotate(-7deg);filter:drop-shadow(0 0 5px #ffe7a5)}50%{transform:translateY(-10px) rotate(7deg);filter:drop-shadow(0 0 16px #ffe7a5)}}
+.choices{gap:22px}
+.course{min-height:480px;border:1px solid #83d9e899;border-radius:30px;background:linear-gradient(150deg,#1a4d6bee,#18264bf5 60%,#2b2456f5);box-shadow:0 20px 55px #020817bb,inset 0 1px 0 #ffffff44}
+.course:before{height:4px;background:linear-gradient(90deg,transparent,var(--accent),#fff,var(--accent),transparent)}
+.course:after{opacity:.42;filter:blur(58px)}
+.english{--accent:#79e5ff;--glow:#43d5f5}.manners{--accent:#ffe09a;--glow:#f5bb64}
+.art{height:220px;border:1px solid #a6e9f477;border-radius:25px;background:linear-gradient(145deg,#ffffff24,#79d9ff0d);box-shadow:inset 0 1px 0 #ffffff44,0 13px 30px #02081788}
+.art img{width:100%;height:100%;object-fit:contain;padding:8px;filter:drop-shadow(0 10px 13px #02081799)}
+.course h2{color:#fff1ce}.course p{color:#d5eaff}
+.meta span{border-color:#a9eaff66;background:#ffffff12;color:#e9f8ff}
+.hint{color:var(--accent)}
+.teacher-area{border:1px solid #79d9e899;background:linear-gradient(145deg,#1b4a66ee,#182344f5 65%,#2b2353f5);box-shadow:0 18px 50px #020817aa,inset 0 1px 0 #ffffff33}
+.teacher-area h2{color:#fff0c7}.teacher-area button,.teacher-open{border-color:#79d9e899;background:linear-gradient(135deg,#276d91,#34306f);color:#fff}
+.teacher-area button.active{background:linear-gradient(135deg,#4bb4d3,#6552a4)}
+.teacher-chat{background:#07182dbb;border-color:#8bdff044}.teacher-msg{background:#ffffff12}
+.teacher-input input{background:#07182d;color:#fff;border-color:#79d9e899}
+.action-btn{border-color:#79d9e899;background:linear-gradient(135deg,#286e91,#34306f);box-shadow:0 8px 25px #020817aa,inset 0 1px 0 #fff3}
+.action-btn.install{background:linear-gradient(135deg,#ffe6a2,#c58d43);color:#18223a;border-color:#fff0bc}
+.action-note{color:#d8f2ff}.site-footer{border-color:#79d9e855;color:#d5eaff}.site-footer strong{color:#ffe09a}
+@media(max-width:720px){.academy-world{min-height:315px;padding:26px 12px 17px;border-radius:26px}.academy-characters{height:130px;gap:5px}.academy-platform{left:8%;right:8%}.course{min-height:0}.art{height:190px}}
+@media(prefers-reduced-motion:reduce){.kid,.academy-robot,.magic-book{animation:none}}
+
+</style>
+</head>
+<body>
+<main>
+<div class="top-actions" aria-label="خيارات التطبيق">
+<button class="action-btn install" id="installApp" type="button">⬇ تحميل التطبيق</button>
+<button class="action-btn" id="enableNotifications" type="button">🔔 تفعيل التنبيهات</button>
+</div>
+<p class="action-note" id="actionNote" aria-live="polite"></p>
+<header class="brand">
+<span class="crown" aria-label="تاج">👑</span>
+<h1>ثَقِّف طفلك – SMART EDU 360</h1>
+<p class="sub">رحلة تعليمية ممتعة تبني المعرفة والمهارات والأخلاق خطوة بخطوة. اختر الكورس وابدأ رحلة التعلّم.</p>
+</header>
+
+<section class="hero-scene academy-world" aria-label="أكاديمية ثَقِّف طفلك التعليمية">
+ <div class="world-stars" aria-hidden="true">✦　 ·　 ✧　 ·　 ✦　 ·　 ✧</div>
+ <div class="academy-copy"><span class="academy-kicker">SMART EDU 360</span><h2>أهلاً بك في عالم المعرفة!</h2><p>هنا تبدأ مغامرتك… تعلّم، اكتشف، وارتقِ كل يوم.</p></div>
+ <div class="academy-characters" aria-hidden="true">
+  <span class="kid kid-left">👧🏻</span><span class="magic-book">📖</span><span class="academy-robot">🤖</span><span class="kid kid-right">👦🏻</span>
+ </div>
+ <div class="academy-platform" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span></div>
+</section>
+
+<div class="choices" aria-label="اختر الكورس التعليمي">
+<a class="course english" href="english-course.html">
+<div class="art"><img src="./images/lessons/alphabet.svg" alt="رسمة كرتونية لتعلّم الحروف الإنجليزية" loading="eager"></div>
+<h2>كورس اللغة الإنجليزية</h2>
+<p>من الحروف وأصواتها إلى القراءة والكتابة والمفردات والقواعد والمحادثة والتواصل بثقة.</p>
+<div class="meta"><span>7 مراحل تعليمية</span><span>استماع وتدريبات</span><span>اختبار وشهادة</span></div>
+<span class="hint">استكشف الكورس وابدأ التعلّم ←</span>
+</a>
+<a class="course manners" href="manners-course.html">
+<div class="art"><img src="./images/lessons/manners-1.svg" alt="رسمة كرتونية لتعلّم الاحترام والأخلاق" loading="eager"></div>
+<h2>كورس الاحترام والأخلاق</h2>
+<p>تعلّم الأدب والكلمة الطيبة واحترام الوالدين والآخرين والحوار والاعتذار والتسامح وحل الخلافات.</p>
+<div class="meta"><span>4 مراحل تعليمية</span><span>استماع ومهمة يومية</span><span>اختبار وشهادة</span></div>
+<span class="hint">استكشف الكورس وابدأ التعلّم ←</span>
+</a>
+</div>
+<section class="teacher-area"><div class="teacher-robot">🤖📚</div><h2>المعلّم الذكي</h2><p class="sub">مساعد مجاني يشرح دروس الكورسين داخل نفس التصميم.</p><div class="teacher-tabs"><button class="active" data-tcourse="english">🔤 اللغة الإنجليزية</button><button data-tcourse="manners">💛 الاحترام والأخلاق</button></div><div class="teacher-topics" id="teacherTopics"></div><div class="teacher-chat" id="teacherChat" aria-live="polite"><div class="teacher-msg">المعلّم: أهلاً يا بطل! اختر موضوعاً لأشرحه لك.</div></div><div class="teacher-input"><input id="teacherQuestion" maxlength="220" placeholder="اكتب سؤالك هنا..." aria-label="سؤالك للمعلّم"><button id="teacherSend">إرسال</button></div><div class="teacher-tools"><button id="teacherRead">🔊 اقرأ الشرح</button><button id="teacherAgain">↻ أعد الشرح</button><button id="teacherQuiz">⭐ سؤال تدريبي</button></div><p class="teacher-note">مجاني دون اشتراك أو مفتاح مدفوع. الشرح معدّ مسبقاً، والصوت يعتمد على الأصوات العربية في هاتفك.</p><a class="teacher-open" href="smart-teacher.html">افتح صفحة المعلّم الذكي الكاملة ←</a></section>
+</main>
+<footer class="site-footer">تم تطويره بواسطة <strong>SLOOMAI</strong></footer>
+<style>.site-footer{max-width:1080px;margin:34px auto 0;padding:18px 12px 8px;text-align:center;color:#c9c4dd;font-size:14px;border-top:1px solid #ffffff20}.site-footer strong{color:#c5a8ff;letter-spacing:.8px;text-shadow:0 0 14px #a98bff66}</style>
+
+<script>
+let deferredInstallPrompt=null;
+const installButton=document.getElementById('installApp');
+const notificationButton=document.getElementById('enableNotifications');
+const actionNote=document.getElementById('actionNote');
+if('serviceWorker' in navigator){
+ window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{actionNote.textContent='تعذر تهيئة بعض ميزات التطبيق حالياً.';}));
+}
+window.addEventListener('beforeinstallprompt',event=>{
+ event.preventDefault();deferredInstallPrompt=event;installButton.hidden=false;
+});
+if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone){
+ installButton.textContent='✓ التطبيق مثبت';installButton.disabled=true;
+}
+installButton.addEventListener('click',async()=>{
+ if(deferredInstallPrompt){
+  deferredInstallPrompt.prompt();
+  const choice=await deferredInstallPrompt.userChoice;
+  actionNote.textContent=choice.outcome==='accepted'?'تم قبول تثبيت التطبيق.':'يمكنك تثبيته لاحقاً من قائمة المتصفح.';
+  deferredInstallPrompt=null;return;
+ }
+ if(/iphone|ipad|ipod/i.test(navigator.userAgent)){
+  actionNote.textContent='على iPhone: اضغط مشاركة في Safari ثم «إضافة إلى الشاشة الرئيسية».';
+ }else{
+  actionNote.textContent='افتح قائمة المتصفح ⋮ ثم اختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».';
+ }
+});
+notificationButton.addEventListener('click',async()=>{
+ if(!('Notification' in window)){actionNote.textContent='هذا المتصفح لا يدعم التنبيهات.';return;}
+ if(!('serviceWorker' in navigator)){actionNote.textContent='التنبيهات غير مدعومة في هذا المتصفح.';return;}
+ try{
+  const permission=await Notification.requestPermission();
+  if(permission!=='granted'){actionNote.textContent='لم يتم السماح بالتنبيهات. يمكنك تفعيلها من إعدادات المتصفح.';return;}
+  const registration=await navigator.serviceWorker.ready;
+  await registration.showNotification('ثَقِّف طفلك – SMART EDU 360',{body:'تم تفعيل تنبيهات المنصة على هذا الجهاز.',icon:'./icon.svg',badge:'./icon.svg',tag:'smart-edu-welcome'});
+  notificationButton.textContent='✓ التنبيهات مفعّلة';
+  actionNote.textContent='تم السماح بإشعارات المنصة على هذا الجهاز.';
+ }catch(error){actionNote.textContent='تعذر تفعيل التنبيهات. تحقق من إذن المتصفح.';}
+});
+</script>
+<script src="voice.js"></script>
+<script>(()=>{const d={english:[["الحروف الإنجليزية","الحروف الإنجليزية 26 حرفاً، ولكل حرف شكل كبير وصغير. مثال A وa. كرر معي A, B, C.","كم عدد حروف الإنجليزية؟","26"],["أصوات الحروف","اسم الحرف قد يختلف عن صوته داخل الكلمة. B اسمه بي وصوته في ball قريب من بْ.","هل اسم الحرف هو نفسه دائماً صوته؟","لا"],["المفردات والقراءة","cat تعني قطة، وbook تعني كتاباً، وsun تعني شمساً.","ماذا تعني book؟","كتاب"],["الكتابة والإملاء","انطق الكلمة ببطء، وقسّمها إلى حروف، ثم اكتبها وقارنها بالنموذج.","ماذا تفعل بعد الكتابة؟","أراجع"],["الجمل والقواعد","I read a book تعني: أنا أقرأ كتاباً.","ماذا تعني I read a book؟","أنا أقرأ كتاباً"],["الاستماع والمحادثة","How are you? تعني كيف حالك؟ أجب: I am fine, thank you.","كيف تجيب عن How are you؟","I am fine"]],manners:[["أساسيات الاحترام","نبدأ بالسلام، ونقول من فضلك عند الطلب، وشكراً عند المساعدة، ونستأذن قبل استخدام أغراض الآخرين.","ماذا تقول عند تلقي المساعدة؟","شكراً"],["احترام الوالدين","نحترم الوالدين بالكلام اللطيف والمساعدة المناسبة لعمرنا.","كيف تساعد والديك؟","أساعد"],["الأخلاق والسلوك","الصدق قول الحقيقة، والأمانة حفظ الأمانة، والاعتذار اعتراف بالخطأ وإصلاحه.","ماذا تفعل إذا أخطأت؟","أعتذر"],["الحوار والمسؤولية","نستمع دون مقاطعة، ونعبر باحترام، ونرتب غرفتنا وكتبنا، ونخبر بالغاً موثوقاً عند التنمر.","ماذا تفعل عند التنمر؟","أخبر"]]};let course="english",last="مرحباً يا بطل! اختر موضوعاً لأشرحه لك.",quiz=null;const topics=document.getElementById("teacherTopics"),chat=document.getElementById("teacherChat"),input=document.getElementById("teacherQuestion");function msg(t){last=t;const e=document.createElement("div");e.className="teacher-msg";e.textContent="المعلّم: "+t;chat.appendChild(e);chat.scrollTop=chat.scrollHeight}function read(t){if(window.SmartEduVoice){window.SmartEduVoice.speak(t,.86);return}if(!("speechSynthesis"in window))return;const u=new SpeechSynthesisUtterance(t);u.lang="ar";u.rate=.86;speechSynthesis.speak(u)}function draw(){topics.innerHTML="";d[course].forEach(x=>{const b=document.createElement("button");b.textContent=x[0];b.onclick=()=>{msg(x[1]+"\n\n"+x[2]);quiz=x};topics.appendChild(b)})}document.querySelectorAll("[data-tcourse]").forEach(b=>b.onclick=()=>{course=b.dataset.tcourse;document.querySelectorAll("[data-tcourse]").forEach(x=>x.classList.toggle("active",x===b));draw();msg("تم اختيار الكورس. اختر موضوعاً للتعلّم.")});document.getElementById("teacherSend").onclick=()=>{const q=input.value.trim();if(!q)return;const e=document.createElement("div");e.className="teacher-msg";e.textContent="أنت: "+q;chat.appendChild(e);if(quiz&&q.toLowerCase().includes(quiz[3].toLowerCase())){msg("أحسنت! إجابة صحيحة ⭐");quiz=null}else{const x=d[course].find(a=>a[0].includes(q));msg(x?x[1]:"اختر موضوعاً من الأزرار لأشرح لك درساً من هذا الكورس.")}input.value=""};input.addEventListener("keydown",e=>{if(e.key==="Enter")document.getElementById("teacherSend").click()});document.getElementById("teacherRead").onclick=()=>read(last);document.getElementById("teacherAgain").onclick=()=>{msg(last);read(last)};document.getElementById("teacherQuiz").onclick=()=>{quiz=d[course][Math.floor(Math.random()*d[course].length)];msg("سؤال التدريب: "+quiz[2])};draw()})();</script></body>
+</html>
