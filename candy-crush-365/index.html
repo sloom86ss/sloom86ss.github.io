@@ -90,6 +90,6 @@ class GameScene extends Phaser.Scene{constructor(){super("CandyScene")}preload()
 function boot(){if(!window.Phaser){$("resourceLoader").querySelector(".loaderText").textContent="تعذر تحميل محرك اللعبة. تحقق من الاتصال ثم أعد فتح الصفحة.";return}game=new Phaser.Game({type:Phaser.AUTO,parent:"gameCanvas",width:window.innerWidth,height:window.innerHeight,backgroundColor:"#10071d",transparent:false,scale:{mode:Phaser.Scale.RESIZE,autoCenter:Phaser.Scale.CENTER_BOTH},render:{antialias:true,roundPixels:true},scene:[GameScene]});}
 $("restart").onclick=reset;$("hint").onclick=()=>{if(busy)return;let found=null;for(let r=0;r<N&&!found;r++)for(let c=0;c<N&&!found;c++)for(const [dr,dc] of [[0,1],[1,0]]){const rr=r+dr,cc=c+dc;if(rr<N&&cc<N){[grid[r][c],grid[rr][cc]]=[grid[rr][cc],grid[r][c]];if(matches().length)found={r,c};[grid[r][c],grid[rr][cc]]=[grid[rr][cc],grid[r][c]]}}if(found){selected=found;drawBoard()}};
 $("next").onclick=()=>{if(score>=target())level++;reset()};
-const phaserScript=document.querySelector('script[src*="phaser"]');if(phaserScript){phaserScript.onload=boot;phaserScript.onerror=()=>{$("resourceLoader").querySelector(".loaderText").textContent="تعذر تحميل المحرك. أعد المحاولة عند توفر الإنترنت."}}else boot();
+const phaserScript=document.querySelector('script[src*="phaser"]');if(window.Phaser){boot()}else if(phaserScript){phaserScript.onload=boot;phaserScript.onerror=()=>{$("resourceLoader").querySelector(".loaderText").textContent="تعذر تحميل المحرك. أعد المحاولة عند توفر الإنترنت."}}else boot();
 })();
 </script></body></html>
