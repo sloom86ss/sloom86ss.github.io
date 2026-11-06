@@ -1,116 +1,74 @@
-// Selectable female Arabic neural voice with a reliable device-voice fallback.
+// Boy / girl voice preference controls for SMART EDU 360.
+// Uses only Arabic voices actually available in the learner's device.
 (() => {
   const panel = document.querySelector('.smart-voice-panel');
   const select = panel && panel.querySelector('select');
-  if (!select) return;
+  if (!panel || !select) return;
 
-  const voiceKey = 'smartEdu360VoiceURI';
-  const modeKey = 'smartEdu360VoiceMode';
   const note = panel.querySelector('small');
-  let mode = localStorage.getItem(modeKey) || 'nabra-neural';
+  const key = 'smartEdu360VoiceGender';
+  const voiceKey = 'smartEdu360VoiceURI';
+  const savedGender = localStorage.getItem(key) || '';
+  const buttons = document.createElement('div');
+  buttons.className = 'smart-voice-gender';
+  buttons.setAttribute('role', 'group');
+  buttons.setAttribute('aria-label', 'اختيار صوت المعلم');
+  buttons.innerHTML =
+    '<button type="button" data-gender="male" aria-pressed="false">👦 صوت ولد</button>' +
+    '<button type="button" data-gender="female" aria-pressed="false">👧 صوت فتاة</button>';
+  const style = document.createElement('style');
+  style.textContent =
+    '.smart-voice-gender{display:flex;gap:8px;flex-wrap:wrap;width:100%}' +
+    '.smart-voice-gender button{flex:1;min-width:120px;padding:10px;border:1px solid #d5b86b;border-radius:10px;background:#101020;color:#fff;font:700 14px system-ui;cursor:pointer}' +
+    '.smart-voice-gender button[aria-pressed="true"]{background:#d5b86b;color:#20172d;outline:2px solid #fff5}' ;
+  document.head.appendChild(style);
+  panel.insertBefore(buttons, select);
 
-  function ensureNeuralOption() {
-    if (!Array.from(select.options).some(o => o.value === 'nabra-neural')) {
-      const option = document.createElement('option');
-      option.value = 'nabra-neural';
-      option.textContent = 'نبرة — صوت فتاة عربية فصحى';
-      select.insertBefore(option, select.firstChild);
-    }
-    select.disabled = false;
+  const maleNames = /male|man|boy|ahmed|mohammed|muhammad|omar|ali|abdullah|naif|nayef|tarek|youssef|yusuf|khalid|sultan|hamza|majed|طارق|أحمد|محمد|عمر|علي|عبدالله/i;
+  const femaleNames = /female|woman|girl|hoda|heba|sara|salma|farida|noura|haifa|reem|aya|aysha|mona|laila|layla|fatima|maryam|هدى|هبة|سارة|سلمى|نورة|هيفاء|ريم|آية|منى|ليلى|فاطمة|مريم/i;
+
+  function voices() {
+    return window.speechSynthesis
+      ? window.speechSynthesis.getVoices().filter(v => /^ar([_-]|$)/i.test(v.lang))
+      : [];
   }
-
-  function deviceVoices() {
-    const synth = window.speechSynthesis;
-    return synth ? synth.getVoices().filter(v => /^ar([_-]|$)/i.test(v.lang)) : [];
+  function matchVoice(gender) {
+    const list = voices();
+    const pattern = gender === 'male' ? maleNames : femaleNames;
+    return list.find(v => pattern.test(v.name + ' ' + v.voiceURI)) || null;
   }
-
-  function updateNote(message) {
-    if (!note) return;
-    if (message) { note.textContent = message; return; }
-    if (select.value === 'nabra-neural') {
-      note.textContent = window.SmartEduNabraSpeak
-        ? 'صوت الفتاة العربية الفصحى جاهز.'
-        : 'صوت الفتاة الطبيعي لم يُحمّل بعد؛ سيعمل الصوت العربي المتاح في جهازك مؤقتاً.';
-    } else {
-      const v = deviceVoices().find(v => v.voiceURI === select.value);
-      note.textContent = v ? 'تم اختيار صوت الجهاز: ' + v.name : 'سيُستخدم الصوت العربي المتاح في جهازك.';
-    }
-  }
-
-  function restoreChoice() {
-    ensureNeuralOption();
-    if (mode === 'nabra-neural') {
-      select.value = 'nabra-neural';
-    } else {
-      const savedVoice = localStorage.getItem(voiceKey);
-      if (savedVoice && Array.from(select.options).some(o => o.value === savedVoice)) {
-        select.value = savedVoice;
-      } else {
-        select.value = 'nabra-neural';
-        mode = 'nabra-neural';
-      }
-    }
-    updateNote();
-  }
-
-  function speakWithDevice(text, rate) {
-    const synth = window.speechSynthesis;
-    if (!synth || typeof window.SpeechSynthesisUtterance !== 'function') {
-      updateNote('ميزة الصوت غير مدعومة في هذا المتصفح. افتح الموقع في Chrome وحدّث الصفحة.');
-      return false;
-    }
-    const utterance = new SpeechSynthesisUtterance(String(text));
-    const voices = deviceVoices();
-    const saved = localStorage.getItem(voiceKey);
-    const voice = voices.find(v => v.voiceURI === saved) || voices[0];
-    utterance.lang = voice ? voice.lang : 'ar-SA';
-    if (voice) utterance.voice = voice;
-    utterance.rate = rate || 0.88;
-    utterance.pitch = 1.05;
-    utterance.onerror = () => updateNote('تعذر تشغيل صوت الجهاز. تحقق من رفع صوت الوسائط وإعدادات تحويل النص إلى كلام.');
-    synth.cancel();
-    synth.resume();
-    synth.speak(utterance);
-    updateNote(voice ? 'يعمل الآن الصوت العربي المتاح في جهازك: ' + voice.name : 'يعمل الآن الصوت العربي الافتراضي في الجهاز.');
-    return true;
-  }
-
-  function say(text, rate = 0.88) {
-    if (!text) return false;
-    if (select.value === 'nabra-neural' && typeof window.SmartEduNabraSpeak === 'function') {
-      window.SmartEduNabraSpeak(text).then(ok => {
-        if (!ok) speakWithDevice(text, rate);
-      }).catch(() => speakWithDevice(text, rate));
-      return true;
-    }
-    // Do not leave the learner with silence while the optional neural model is not loaded.
-    return speakWithDevice(text, rate);
-  }
-
-  select.addEventListener('change', () => {
-    mode = select.value === 'nabra-neural' ? 'nabra-neural' : 'device';
-    localStorage.setItem(modeKey, mode);
-    if (mode === 'device') localStorage.setItem(voiceKey, select.value);
-    updateNote();
-  });
-
-  if (window.SmartEduVoice) window.SmartEduVoice.speak = say;
-  const oldTest = panel.querySelector('#smartVoiceTest') || panel.querySelector('button');
-  if (oldTest) {
-    const test = oldTest.cloneNode(true);
-    oldTest.replaceWith(test);
-    test.addEventListener('click', () => say('مَرْحَبًا يا بَطَل! أَنا مُعَلِّمَتُكَ الذَّكِيَّةُ. هَيَّا نَتَعَلَّمُ مَعًا.', 0.88));
-  }
-
-  restoreChoice();
-  if (window.speechSynthesis) {
-    window.speechSynthesis.addEventListener('voiceschanged', () => {
-      restoreChoice();
-      if (window.SmartEduVoice) window.SmartEduVoice.speak = say;
+  function setActive(gender) {
+    buttons.querySelectorAll('button').forEach(b => {
+      b.setAttribute('aria-pressed', String(b.dataset.gender === gender));
     });
   }
-  // Refresh the voice list after the browser has initialized its speech service.
-  setTimeout(() => {
-    if (mode === 'device') restoreChoice();
-  }, 500);
+  function choose(gender) {
+    localStorage.setItem(key, gender);
+    setActive(gender);
+    const voice = matchVoice(gender);
+    if (!voice) {
+      if (note) note.textContent = gender === 'male'
+        ? 'لم أجد صوت ولد عربيًا محددًا في أصوات جهازك. اختر صوتًا عربيًا من القائمة أو ثبّت صوتًا مناسبًا في إعدادات الجهاز.'
+        : 'لم أجد صوت فتاة عربيًا محددًا في أصوات جهازك. اختر صوتًا عربيًا من القائمة أو ثبّت صوتًا مناسبًا في إعدادات الجهاز.';
+      return;
+    }
+    select.value = voice.voiceURI;
+    localStorage.setItem(voiceKey, voice.voiceURI);
+    if (note) note.textContent = 'تم اختيار الصوت المتاح: ' + voice.name + '. اضغط «تجربة الصوت» للاستماع.';
+    window.speechSynthesis.cancel();
+  }
+
+  buttons.addEventListener('click', event => {
+    const button = event.target.closest('button[data-gender]');
+    if (button) choose(button.dataset.gender);
+  });
+  select.addEventListener('change', () => {
+    localStorage.setItem(voiceKey, select.value);
+    if (note) note.textContent = 'تم اختيار صوت الجهاز. قد لا يحدد المتصفح جنس الصوت بدقة؛ استمع إلى العينة للتأكد.';
+  });
+  if (savedGender) setActive(savedGender);
+  window.speechSynthesis?.addEventListener('voiceschanged', () => {
+    const gender = localStorage.getItem(key);
+    if (gender && matchVoice(gender)) choose(gender);
+  });
 })();
