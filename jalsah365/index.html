@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>جلسة 365 | الستة العُمانية</title>
+<style>
+:root{--gold:#d8b45d;--gold2:#f4df9a}*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 35%,#282019,#0b0b0d 58%,#030304);color:#f8f3e7;font-family:system-ui,"Segoe UI",Tahoma,sans-serif}
+header{text-align:center;padding:18px 12px 8px}h1{margin:0;color:var(--gold2);font-size:clamp(25px,5vw,38px);text-shadow:0 2px 18px #9c742b66}header p{margin:5px 0;color:#c7b98f;font-size:13px}
+main{max-width:1050px;margin:auto;padding:10px}.table{position:relative;min-height:650px;border:9px solid #8d6828;border-radius:48%/38%;background:radial-gradient(ellipse at center,#244237,#142a23 58%,#0a1713);box-shadow:inset 0 0 0 4px #e1c06a55,inset 0 0 50px #000,0 15px 50px #000;overflow:hidden}.table:before{content:"";position:absolute;inset:13px;border:1px solid #d8b45d88;border-radius:48%/38%;pointer-events:none}
+.brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;color:#e3c778;opacity:.17;font-weight:900;font-size:clamp(28px,6vw,56px);white-space:nowrap}.brand small{display:block;font-size:13px;letter-spacing:5px}
+.seat{position:absolute;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:100px;z-index:2}.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#292929,#090909);border:2px solid var(--gold);box-shadow:0 3px 12px #000;font-size:20px}.name{font-size:12px;color:#f6e7bb;background:#080909c9;border:1px solid #c6a34d66;border-radius:20px;padding:3px 10px}.hand{display:flex;justify-content:center;min-height:65px}
+.top{top:18px;left:50%;transform:translateX(-50%)}.ur{top:25%;right:4%}.lr{bottom:22%;right:4%}.bottom{bottom:15px;left:50%;transform:translateX(-50%)}.ll{bottom:22%;left:4%}.ul{top:25%;left:4%}
+.card{width:40px;height:59px;border-radius:6px;background:linear-gradient(145deg,#fff,#e9e5dc);color:#151515;border:1px solid #c8c4bc;box-shadow:0 3px 7px #0009;position:relative;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:bold;flex-shrink:0;margin-left:-17px;user-select:none}.card:first-child{margin-left:0}.red{color:#c51d2a}.corner{position:absolute;top:3px;left:4px;font-size:10px;line-height:10px;text-align:center}.big{font-size:21px}.back{background:repeating-linear-gradient(45deg,#17130c 0 4px,#2a2112 4px 7px);border:2px solid #d7b45f;outline:1px solid #6f511c;box-shadow:inset 0 0 0 3px #17120b}.back:after{content:"♠";font-size:23px;color:#e4c16a;text-shadow:0 1px 7px #000}
+.controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:17px 0}.btn{border:1px solid #e2c16e;border-radius:24px;padding:11px 22px;background:linear-gradient(180deg,#d8b45d,#8f6827);color:#171108;font-weight:800;font-size:15px;cursor:pointer}.btn.alt{background:#151515;color:#f0d58b}.status{text-align:center;color:#e8d9ad;font-size:13px;min-height:22px;margin:6px}.note{text-align:center;color:#a99c7a;font-size:11px;padding:6px 12px 18px}
+@media(max-width:600px){.table{min-height:560px;border-width:7px;border-radius:42%/30%}.table:before{inset:9px}.seat{min-width:76px}.avatar{width:34px;height:34px;font-size:17px}.name{font-size:10px;padding:2px 7px}.card{width:30px;height:46px;margin-left:-14px}.corner{font-size:8px;top:2px;left:3px}.big{font-size:16px}.back:after{font-size:18px}.ur,.lr{right:1%}.ul,.ll{left:1%}.top{top:14px}.bottom{bottom:11px}}
+</style></head>
+<body><header><h1>جلسة 365</h1><p>الستة العُمانية 61 · طاولة من ستة لاعبين</p></header>
+<main><section class="table" aria-label="طاولة اللعب">
+<div class="brand">جلسة 365<small>PLAY • CONNECT • ENJOY</small></div>
+<div class="seat top"><div class="avatar">🤖</div><div class="name">لاعب آلي 1</div><div class="hand" id="hand0"></div></div>
+<div class="seat ur"><div class="avatar">🤖</div><div class="name">لاعب آلي 2</div><div class="hand" id="hand1"></div></div>
+<div class="seat lr"><div class="avatar">🤖</div><div class="name">لاعب آلي 3</div><div class="hand" id="hand2"></div></div>
+<div class="seat bottom"><div class="avatar">👤</div><div class="name">أنت</div><div class="hand" id="hand3"></div></div>
+<div class="seat ll"><div class="avatar">🤖</div><div class="name">لاعب آلي 4</div><div class="hand" id="hand4"></div></div>
+<div class="seat ul"><div class="avatar">🤖</div><div class="name">لاعب آلي 5</div><div class="hand" id="hand5"></div></div>
+</section>
+<div class="status" id="status">الطاولة جاهزة — اضغط «خلط وتوزيع» لبدء العرض التجريبي.</div>
+<div class="controls"><button class="btn" id="deal">خلط وتوزيع</button><button class="btn alt" id="shuffle">خلط الأوراق</button><button class="btn alt" id="reset">إعادة الطاولة</button></div>
+<div class="note">نموذج أولي لواجهة الطاولة وتوزيع الأوراق فقط. قواعد اللعب المحلية، الشراكة، النقاط والغرف متعددة اللاعبين لم تُبرمج بعد.</div></main>
+<script>
+const suits=[['♠','black'],['♥','red'],['♦','red'],['♣','black']],ranks=['A','2','3','4','5','6','7','8','9','10','J','Q','K'];let deck=[],hands=Array.from({length:6},()=>[]),dealt=false;const statusEl=document.getElementById('status');
+function fresh(){deck=[];for(const [s,c] of suits)for(const r of ranks)deck.push({s,c,r})}
+function shuffle(){for(let i=deck.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]]}dealt=false;renderBacks();statusEl.textContent='تم خلط الأوراق الـ52 وأصبحت جاهزة للتوزيع.'}
+function face(c){let e=document.createElement('div');e.className='card '+c.c;e.innerHTML='<span class="corner">'+c.r+'<br>'+c.s+'</span><span class="big">'+c.s+'</span>';return e}
+function renderBacks(){hands.forEach((h,i)=>{let n=document.getElementById('hand'+i);n.innerHTML='';for(let k=0;k<(dealt?h.length:3);k++){let c=document.createElement('div');c.className='card back';n.appendChild(c)}})}
+function deal(){if(dealt){statusEl.textContent='الأوراق موزعة بالفعل. أعد الطاولة لبدء عرض جديد.';return}hands=Array.from({length:6},()=>[]);for(let round=0;round<6;round++)for(let p=0;p<6;p++)hands[p].push(deck.pop());dealt=true;hands.forEach((h,i)=>{let n=document.getElementById('hand'+i);n.innerHTML='';h.forEach(c=>n.appendChild(face(c)))});statusEl.textContent='وُزعت 6 أوراق لكل لاعب. المتبقي في الرزمة: '+deck.length+' ورقة.'}
+function reset(){fresh();hands=Array.from({length:6},()=>[]);dealt=false;renderBacks();statusEl.textContent='عادت الطاولة إلى وضع الاستعداد.'}
+document.getElementById('deal').onclick=deal;document.getElementById('shuffle').onclick=()=>{fresh();shuffle()};document.getElementById('reset').onclick=reset;fresh();shuffle();
+</script></body></html>
