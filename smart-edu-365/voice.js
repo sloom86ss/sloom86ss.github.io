@@ -39,10 +39,6 @@
  function selected(){return voices.find(v=>v.voiceURI===select.value)||voices[0]||null}
  function speak(text,rate=.88){
    if(!text)return false;
-   if(typeof window.SmartEduNabraSpeak==='function'){
-     window.SmartEduNabraSpeak(text).then(ok=>{if(!ok&&voices.length){synth.cancel();const u=new SpeechSynthesisUtterance(String(text));const v=selected();if(v){u.voice=v;u.lang=v.lang}u.rate=rate;synth.speak(u);}});
-     return true;
-   }
    if(!voices.length)return false;
    synth.cancel();
    const u=new SpeechSynthesisUtterance(String(text));
