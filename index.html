@@ -2143,29 +2143,36 @@ function sloomSmartCandidates(){
 }
 async function refreshSloomSmartScreen(){
  if(sloomSmartLineupBusy||!document.querySelector('#sloom-video-screen .sloom-summary-screen'))return;
- const candidates=sloomSmartCandidates(),target=candidates[0];
- if(!target){sloomSmartLineupLastKey='';document.getElementById('sloom-smart-lineup')?.remove();return;}
- const key=target.key+':'+target.match.id;
- if(key===sloomSmartLineupLastKey&&Date.now()-sloomSmartLineupLastCheck<60000)return;
+ const candidates=sloomSmartCandidates();
+ if(!candidates.length){sloomSmartLineupLastKey='';document.getElementById('sloom-smart-lineup')?.remove();return;}
+ if(sloomSmartLineupLastKey&&Date.now()-sloomSmartLineupLastCheck<60000)return;
  sloomSmartLineupBusy=true;sloomSmartLineupLastCheck=Date.now();
  try{
-  const leaguePath=String(target.key).replace(/^soccer\//,'');
-  const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(target.match.id)+'&lang=ar';
-  const data=await fetchEspnJson(url,{ttl:45000,timeout:9000,retries:1});
-  const groups=Array.isArray(data.rosters)?data.rosters:[];
-  const cards=groups.slice(0,2).map(sloomBuildSmartTeam).filter(Boolean);
-  if(cards.length<2){document.getElementById('sloom-smart-lineup')?.remove();sloomSmartLineupLastKey='';return;}
-  const screen=document.querySelector('#sloom-video-screen .sloom-summary-screen');
-  if(!screen)return;
-  sloomSmartScreenStyle();
-  const home=arTeam(target.match.home?.name||'الفريق الأول'),away=arTeam(target.match.away?.name||'الفريق الثاني');
-  const status=target.match.status==='in'?'مباراة مباشرة':'قبل انطلاق المباراة';
-  let overlay=document.getElementById('sloom-smart-lineup');
-  if(!overlay){overlay=document.createElement('div');overlay.id='sloom-smart-lineup';screen.appendChild(overlay);}
-  overlay.innerHTML='<div class="smart-top"><b>👕 التشكيلة الرسمية · '+esc(home)+' × '+esc(away)+'</b><small>'+status+'</small></div><div class="smart-teams">'+cards.join('')+'</div><div class="smart-note">تشكيلة منشورة من مصدر البيانات · '+esc(target.league.name||'كرة القدم')+'</div>';
-  sloomSmartLineupLastKey=key;
- }catch(error){console.warn('[SLOOM365 smart lineup]',error);}
- finally{sloomSmartLineupBusy=false;}
+  for(const target of candidates.slice(0,5)){
+   const key=target.key+':'+target.match.id;
+   if(key===sloomSmartLineupLastKey)continue;
+   const leaguePath=String(target.key).replace(/^soccer\\//,'');
+   const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(target.match.id)+'&lang=ar';
+   try{
+    const data=await fetchEspnJson(url,{ttl:45000,timeout:9000,retries:1});
+    const groups=Array.isArray(data.rosters)?data.rosters:[];
+    const cards=groups.slice(0,2).map(sloomBuildSmartTeam).filter(Boolean);
+    if(cards.length<2)continue;
+    const screen=document.querySelector('#sloom-video-screen .sloom-summary-screen');
+    if(!screen)return;
+    sloomSmartScreenStyle();
+    const home=arTeam(target.match.home?.name||'الفريق الأول'),away=arTeam(target.match.away?.name||'الفريق الثاني');
+    const status=target.match.status==='in'?'مباراة مباشرة':'قبل انطلاق المباراة';
+    let overlay=document.getElementById('sloom-smart-lineup');
+    if(!overlay){overlay=document.createElement('div');overlay.id='sloom-smart-lineup';screen.appendChild(overlay);}
+    overlay.innerHTML='<div class="smart-top"><b>👕 التشكيلة الرسمية · '+esc(home)+' × '+esc(away)+'</b><small>'+status+'</small></div><div class="smart-teams">'+cards.join('')+'</div><div class="smart-note">تشكيلة منشورة من مصدر البيانات · '+esc(target.league.name||'كرة القدم')+'</div>';
+    sloomSmartLineupLastKey=key;
+    return;
+   }catch(error){console.warn('[SLOOM365 lineup fetch]',key,error);}
+  }
+  document.getElementById('sloom-smart-lineup')?.remove();
+  sloomSmartLineupLastKey='';
+ }finally{sloomSmartLineupBusy=false;}
 }
 setTimeout(refreshSloomSmartScreen,5000);
 setInterval(refreshSloomSmartScreen,30000);
