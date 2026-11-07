@@ -1,0 +1,25 @@
+{
+  "id": "/shop/",
+  "name": "SLOOM 365 SHOP",
+  "short_name": "SLOOM SHOP",
+  "description": "متجر تسوق بالعمولة مخصص لسلطنة عُمان",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/shop/",
+  "scope": "/shop/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#09060f",
+  "theme_color": "#100819",
+  "categories": [
+    "shopping"
+  ],
+  "icons": [
+    {
+      "src": "/shop/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
