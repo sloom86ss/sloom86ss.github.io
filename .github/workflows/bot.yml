@@ -62,7 +62,11 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ vars.NTFY_SERVER }}
         run: python -u bot.py
-      - name: Verify SportScore backup source using repository secret\n        env:\n          SPORTSCORE_API_KEY: ${{ secrets.SPORTSCORE_API_KEY }}\n        run: python -u sportscore_probe.py\n      - name: Run independent keyless backup for stale leagues
+      - name: Verify SportScore backup source using repository secret
+        env:
+          SPORTSCORE_API_KEY: ${{ secrets.SPORTSCORE_API_KEY }}
+        run: python -u sportscore_probe.py
+      - name: Run independent keyless backup for stale leagues
         if: always() && steps.primary_collector.outcome != 'skipped'
         run: python -u backup_collector.py
       - name: Diagnose stale feeds and retry once when needed
