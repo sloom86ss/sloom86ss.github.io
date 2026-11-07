@@ -2059,7 +2059,14 @@ function renderSloomAutoHighlights(){
  }
  setTimeout(()=>{if(!screen.querySelector('iframe'))fallback();},12000);
 }
- 
+
+// Start the single 16:9 video player independently of the news feed.
+if(document.readyState==='loading'){
+ document.addEventListener('DOMContentLoaded',()=>renderSloomAutoHighlights(),{once:true});
+}else{
+ renderSloomAutoHighlights();
+}
+
 function sloomIsHalftime(match){
  const statusText=[match.status_short,match.status_detail,match.detail,match.clock].filter(Boolean).join(' ').toLowerCase();
  return /half\s*[- ]?time|halftime|\bht\b|interval|استراحة|بين الشوطين/i.test(statusText);
