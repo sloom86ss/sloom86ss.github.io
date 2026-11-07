@@ -2117,7 +2117,7 @@ function sloomBuildSmartTeam(group){
  const team=group.team?.displayName||group.team?.name||group.team?.abbreviation||'الفريق';
  const roster=group.roster||group.athletes||[];
  const starters=roster.filter(p=>p.starter===true||p.isStarter===true||String(p.status||'').toLowerCase()==='starter');
- if(starters.length<7)return '';
+ if(starters.length<11)return '';
  const rows=[[],[],[],[]];starters.forEach(p=>rows[sloomSmartPosition(p)].push(p));
  const names=rows.map(row=>row.map(p=>{
   const athlete=p.athlete||p.player||p||{},shirt=p.jersey||p.jerseyNumber||p.number||athlete.jersey||'';
