@@ -1,0 +1,42 @@
+name: Generate SLOOM365 SEO pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data.json"
+      - "scripts/generate_seo_pages.py"
+      - "index.html"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sloom365-seo-pages
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Generate Arabic league and match pages
+        run: python scripts/generate_seo_pages.py
+      - name: Commit generated SEO pages and sitemap
+        run: |
+          if git diff --quiet -- seo sitemap.xml; then
+            echo "SEO pages are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add seo sitemap.xml
+          git commit -m "Generate Arabic SEO pages for leagues and matches"
+          git push
