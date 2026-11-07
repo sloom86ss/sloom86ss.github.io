@@ -2150,7 +2150,6 @@ async function refreshSloomSmartScreen(){
  try{
   for(const target of candidates.slice(0,5)){
    const key=target.key+':'+target.match.id;
-   if(key===sloomSmartLineupLastKey)continue;
    const leaguePath=String(target.key).replace(/^soccer\\//,'');
    const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(target.match.id)+'&lang=ar';
    try{
