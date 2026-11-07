@@ -23,14 +23,33 @@ jobs:
           python-version: "3.11"
       - name: Generate Arabic league and match pages
         run: python scripts/generate_seo_pages.py
-      - name: Commit generated SEO pages and sitemap
+      - name: Commit generated SEO pages and sitemap safely
         run: |
-          if git diff --quiet -- seo sitemap.xml; then
-            echo "SEO pages are already current."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add seo sitemap.xml
+          if git diff --cached --quiet; then
+            echo "SEO pages are already current."
+            exit 0
+          fi
           git commit -m "Generate Arabic SEO pages for leagues and matches"
-          git push
+          for attempt in 1 2 3; do
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              git reset --hard origin/main
+              python scripts/generate_seo_pages.py
+              git add seo sitemap.xml
+              if git diff --cached --quiet; then
+                echo "SEO pages are already current after syncing main."
+                exit 0
+              fi
+              git commit -m "Generate Arabic SEO pages for leagues and matches"
+            fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; syncing with latest main."
+          done
+          echo "Could not push SEO pages after 3 attempts."
+          exit 1
