@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Validate collector
-        run: python -m py_compile bot.py backup_collector.py monitor.py repair.py smart_responder.py scripts/refresh_data.py scripts/generate_seo_pages.py
+        run: python -m py_compile bot.py backup_collector.py monitor.py repair.py smart_responder.py sportscore_probe.py scripts/refresh_data.py scripts/generate_seo_pages.py
       - name: Validate SLOOM360 JavaScript
         run: |
           python - <<'PY'
@@ -62,7 +62,7 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           NTFY_SERVER: ${{ vars.NTFY_SERVER }}
         run: python -u bot.py
-      - name: Run independent keyless backup for stale leagues
+      - name: Verify SportScore backup source using repository secret\n        env:\n          SPORTSCORE_API_KEY: ${{ secrets.SPORTSCORE_API_KEY }}\n        run: python -u sportscore_probe.py\n      - name: Run independent keyless backup for stale leagues
         if: always() && steps.primary_collector.outcome != 'skipped'
         run: python -u backup_collector.py
       - name: Diagnose stale feeds and retry once when needed
