@@ -2830,7 +2830,11 @@ body{background:radial-gradient(ellipse at 50% -15%,#28123d 0,transparent 48%),#
 (()=>{const mount=()=>{
  const host=document.getElementById('standingsTables');if(!host||host.dataset.scoreaxisLoaded)return;
  host.dataset.scoreaxisLoaded='1';
- host.innerHTML='<div class="scoreaxis-frame"><div id="widget-8l3wmw6ak95q" class="scoreaxis-widget" style="width:auto;height:auto;font-size:14px;background-color:#ffffff;color:#141416;border:1px solid #ecf1f7;overflow:auto;"><script src="https://widgets.scoreaxis.com/api/football/league-table/6232265abf1fa71a672159ec?widgetId=8l3wmw6ak95q&lang=ar&highlightTeamColor=%23000000&teamLogo=1&tableLines=0&homeAway=1&header=1&position=1&goals=1&gamesCount=1&diff=1&winCount=1&drawCount =1&loseCount=1&lastGames=1&points=1&teamsLimit=all&links=1&noFollowLinks=0&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%2300ff00" async><\/script><div class="scoreaxis-credit">بيانات الترتيب من <a href="https://www.scoreaxis.com/" target="_blank" rel="noopener noreferrer">Scoreaxis</a></div></div></div>';
+ host.innerHTML='<div class="scoreaxis-frame"><div id="widget-8l3wmw6ak95q" class="scoreaxis-widget" style="width:auto;height:auto;font-size:14px;background-color:#ffffff;color:#141416;border:1px solid #ecf1f7;overflow:auto;"></div><div class="scoreaxis-credit">بيانات الترتيب من <a href="https://www.scoreaxis.com/" target="_blank" rel="noopener noreferrer">Scoreaxis</a></div></div>';
+ const script=document.createElement('script');
+ script.async=true;
+ script.src='https://widgets.scoreaxis.com/api/football/league-table/6232265abf1fa71a672159ec?widgetId=8l3wmw6ak95q&lang=ar&highlightTeamColor=%23000000&teamLogo=1&tableLines=0&homeAway=1&header=1&position=1&goals=1&gamesCount=1&diff=1&winCount=1&drawCount =1&loseCount=1&lastGames=1&points=1&teamsLimit=all&links=1&noFollowLinks=0&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%2300ff00';
+ host.querySelector('.scoreaxis-frame').appendChild(script);
 };
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
 })();
