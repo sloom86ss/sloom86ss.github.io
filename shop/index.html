@@ -55,7 +55,7 @@ footer{margin-top:28px;border-top:1px solid var(--line);padding:18px 0;color:var
 </nav>
 <div class="section-head"><h3>منتجات مختارة</h3><span id="market-label">السوق: عُمان</span></div>
 <section class="grid" id="products" aria-live="polite">
- <div class="empty">نجهّز قائمة المنتجات وروابط الشراء المعتمدة.<br>ستظهر المنتجات هنا بعد إضافة روابط العمولة والتحقق من إمكانية الشحن إلى سلطنة عُمان.</div>
+ <div class="empty">نجهّز قائمة المنتجات وروابط الشراء المعتمدة.<br>ستظهر المنتجات هنا بعد إضافة روابط الشراء عبر المنصة الأصلية والتحقق من إمكانية الشحن إلى سلطنة عُمان.</div>
 </section>
 <div class="section-head"><h3>كيف تتم عملية الشراء؟</h3><span>بخطوات بسيطة</span></div>
 <section class="steps">
@@ -69,7 +69,7 @@ footer{margin-top:28px;border-top:1px solid var(--line);padding:18px 0;color:var
 </main>
 <script>
 const market="عُمان";
-const products=[]; // أضف المنتجات بعد الحصول على روابط العمولة والتحقق من الشحن إلى عُمان.
+const products=[]; // أضف المنتجات بعد الحصول على روابط الشراء عبر المنصة الأصلية والتحقق من الشحن إلى عُمان.
 let activeCategory="all";
 const productsEl=document.getElementById("products");
 function render(){
@@ -77,7 +77,7 @@ function render(){
  const q=document.getElementById("search").value.trim().toLowerCase();
  const filtered=products.filter(p=>(activeCategory==="all"||p.category===activeCategory)&&(!q||(p.name+" "+p.description).toLowerCase().includes(q))&&p.markets.includes("OM"));
  productsEl.innerHTML="";
- if(!filtered.length){productsEl.innerHTML='<div class="empty">لا توجد منتجات منشورة لهذا الاختيار حالياً.<br>ستضاف المنتجات بعد التأكد من رابط العمولة وتوفر الشحن.</div>';return;}
+ if(!filtered.length){productsEl.innerHTML='<div class="empty">لا توجد منتجات منشورة لهذا الاختيار حالياً.<br>ستضاف المنتجات بعد التأكد من رابط الشراء عبر المنصة الأصلية وتوفر الشحن.</div>';return;}
  filtered.forEach(p=>{
   const card=document.createElement("article");card.className="card";
   const art=document.createElement("div");art.className="product-art";art.textContent=p.icon||"🛍️";
