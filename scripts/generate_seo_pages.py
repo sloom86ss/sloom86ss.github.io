@@ -62,9 +62,60 @@ def parse_club_names():
         return {}
 
 CLUB_AR = parse_club_names()
+EXTRA_CLUB_AR = {
+    "Coventry City":"كوفنتري سيتي","Leeds United":"ليدز يونايتد","Hull City":"هال سيتي",
+    "Ipswich Town":"إيبسويتش تاون","AFC Bournemouth":"بورنموث","Hamburg SV":"هامبورغ",
+    "Borussia Mönchengladbach":"بوروسيا مونشنغلادباخ","SV Elversberg":"إلفيرسبرغ",
+    "Mainz":"ماينز","FC Augsburg":"أوغسبورغ","SC Paderborn 07":"بادربورن",
+    "Eintracht Frankfurt":"آينتراخت فرانكفورت","Werder Bremen":"فيردر بريمن",
+    "FC Cologne":"كولن","Bayer Leverkusen":"باير ليفركوزن","SC Freiburg":"فرايبورغ",
+    "1. FC Union Berlin":"يونيون برلين","TSG Hoffenheim":"هوفنهايم","Schalke 04":"شالكه",
+    "Toulouse":"تولوز","AJ Auxerre":"أوكسير","Paris FC":"باريس إف سي","Troyes":"تروا",
+    "Angers":"أنجيه","Le Havre AC":"لوهافر","Le Mans":"لومان","AS Monaco":"موناكو",
+    "Alavés":"ألافيس","Málaga":"ملقا","Al Hazem":"الحزم","Neom SC":"نيوم",
+    "Al Faisaly":"الفيصلي","Al Diriyah":"الدرعية","Venezia":"فينيتسيا","Udinese":"أودينيزي",
+    "Cagliari":"كالياري","Frosinone":"فروزينوني","Parma":"بارما",
+    "Barracas Central":"باراكاس سنترال","Racing Club":"راسينغ كلوب",
+    "Deportivo Riestra":"ديبورتيفو ريسترا","San Lorenzo":"سان لورينزو",
+    "Unión (Santa Fe)":"يونيون سانتا في","Vélez Sarsfield":"فيليز سارسفيلد",
+    "Tigre":"تيغري","Sarmiento (Junín)":"سارمينتو","Gimnasia (Mendoza)":"خيمناسيا ميندوزا",
+    "Talleres (Córdoba)":"تاليريس","Estudiantes de La Plata":"إستوديانتس",
+    "Huracán":"هوراكان","Boca Juniors":"بوكا جونيورز","Rosario Central":"روزاريو سنترال",
+    "Willem II":"فيلم تو","PEC Zwolle":"بي إي سي زفوله","Fortuna Sittard":"فورتونا سيتارد",
+    "Telstar":"تيلستار","ADO Den Haag":"إيه دي أو لاهاي","Sparta Rotterdam":"سبارتا روتردام",
+    "Excelsior":"إكسلسيور","Go Ahead Eagles":"غو أهيد إيغلز","Heerenveen":"هيرينفين",
+    "FC Twente":"تفينتي","Ajax Amsterdam":"أياكس أمستردام","FC Groningen":"غرونينغن",
+    "CF Montréal":"مونتريال","Vancouver Whitecaps":"فانكوفر وايتكابس",
+    "Chicago Fire FC":"شيكاغو فاير","Columbus Crew":"كولومبوس كرو",
+    "D.C. United":"دي سي يونايتد","New York City FC":"نيويورك سيتي",
+    "FC Cincinnati":"سينسيناتي","Nashville SC":"ناشفيل","Inter Miami CF":"إنتر ميامي",
+    "FC Famalicao":"فاماليكاو","Arouca":"أروكا","C.D. Nacional":"ناسيونال ماديرا",
+    "Académico de Viseu":"أكاديميكو فيسيو","Casa Pia":"كاسا بيا","Moreirense":"موريرينسي",
+    "Estoril":"إستوريل","Maritimo":"ماريتيمو","Santa Clara":"سانتا كلارا",
+    "Estrela":"إستريلا أمادورا","Rio Ave":"ريو آفي","Braga":"سبورتينغ براغا",
+    "Vitória":"فيتوريا","Fluminense":"فلومينينسي","Gaziantep FK":"غازي عنتاب",
+    "Kasimpasa":"قاسم باشا","Eyupspor":"إيوب سبور","Kocaelispor":"كوجالي سبور",
+    "Samsunspor":"سامسون سبور","Konyaspor":"قونية سبور","Amed SFK":"آمد سبور",
+    "Goztepe":"غوزتبه","Istanbul Basaksehir":"باشاك شهير","Caykur Rizespor":"ريزه سبور",
+    "Dundee United":"دندي يونايتد","Motherwell":"ماذرويل","St Johnstone":"سانت جونستون",
+    "Dundee":"دندي","Aberdeen":"أبردين","Hibernian":"هيبرنيان",
+    "St Mirren":"سانت ميرين","Heart of Midlothian":"هارتس","Falkirk":"فالكيرك",
+    "Kilmarnock":"كيلمارنوك","Shimizu S-Pulse":"شيميزو إس بالس",
+    "Tokyo Verdy 1969":"طوكيو فيردي","Nagoya Grampus":"ناغويا غرامبوس",
+    "Yokohama F. Marinos":"يوكوهاما مارينوس","Fagiano Okayama":"فاجيانو أوكاياما",
+    "Avispa Fukuoka":"أفيسبا فوكوكا","FC Tokyo":"إف سي طوكيو",
+    "Kawasaki Frontale":"كاواساكي فرونتال","Machida Zelvia":"ماتشيدا زيلفيا",
+    "Sanfrecce Hiroshima":"سانفريتشي هيروشيما","Urawa Red Diamonds":"أوراوا ريد دايموندز",
+    "Atlético de San Luis":"أتلتيكو سان لويس","FC Juárez":"خواريز","Necaxa":"نيكاكسا",
+    "Tijuana":"تيخوانا","Atlante":"أتلانتي","Atlas":"أطلس","Pachuca":"باتشوكا",
+    "Tigres UANL":"تيغريس","Cruz Azul":"كروز أزول","Toluca":"تولوكا",
+    "Monterrey":"مونتيري","Pumas UNAM":"بوماس",
+}
 
 def team_ar(name):
     name = str(name or "").strip()
+    if name in EXTRA_CLUB_AR:
+        return EXTRA_CLUB_AR[name]
     if name in CLUB_AR:
         return CLUB_AR[name]
     # Arabic phonetic fallback keeps generated sports pages Arabic-first.
