@@ -34,11 +34,9 @@ footer{margin-top:28px;border-top:1px solid var(--line);padding:18px 0;color:var
 <main class="wrap">
 <header>
  <a class="brand" href="#" aria-label="SLOOM 365 SHOP">
-  <span class="logo">S</span><span><h1>SLOOM 365 SHOP</h1><small>GULF SHOPPING</small></span>
+  <span class="logo">S</span><span><h1>SLOOM 365 SHOP</h1><small>OMAN SHOPPING</small></span>
  </a>
- <select class="country" id="country" aria-label="اختر الدولة">
-  <option value="OM">🇴🇲 سلطنة عُمان — ر.ع</option><option value="AE">🇦🇪 الإمارات — د.إ</option><option value="SA">🇸🇦 السعودية — ر.س</option><option value="KW">🇰🇼 الكويت — د.ك</option><option value="QA">🇶🇦 قطر — ر.ق</option><option value="BH">🇧🇭 البحرين — د.ب</option>
- </select>
+ <div class="country" aria-label="السوق المعتمد">🇴🇲 سلطنة عُمان — الريال العُماني</div>
 </header>
 <section class="hero">
  <div class="eyebrow">وجهتك للتسوّق في عُمان</div>
@@ -66,12 +64,11 @@ footer{margin-top:28px;border-top:1px solid var(--line);padding:18px 0;color:var
 </main>
 <script>
 const market="عُمان";
-const products=[]; // أضف المنتجات بعد الحصول على روابط العمولة والتحقق من الشحن لكل سوق.
+const products=[]; // أضف المنتجات بعد الحصول على روابط العمولة والتحقق من الشحن إلى عُمان.
 let activeCategory="all";
 const productsEl=document.getElementById("products");
 function render(){
- const market=document.getElementById("country").value;
- document.getElementById("market-label").textContent="السوق: "+markets[market];
+ document.getElementById("market-label").textContent="السوق: "+market+" · الريال العُماني";
  const q=document.getElementById("search").value.trim().toLowerCase();
  const filtered=products.filter(p=>(activeCategory==="all"||p.category===activeCategory)&&(!q||(p.name+" "+p.description).toLowerCase().includes(q))&&p.markets.includes("OM"));
  productsEl.innerHTML="";
@@ -85,7 +82,6 @@ function render(){
   card.append(art,h,d,a);productsEl.append(card);
  });
 }
-document.getElementById("country").addEventListener("change",render);
 document.getElementById("search").addEventListener("input",render);
 document.getElementById("categories").addEventListener("click",e=>{const b=e.target.closest("button[data-category]");if(!b)return;activeCategory=b.dataset.category;document.querySelectorAll("#categories button").forEach(x=>x.classList.toggle("active",x===b));render();});
 document.getElementById("year").textContent=new Date().getFullYear();render();
