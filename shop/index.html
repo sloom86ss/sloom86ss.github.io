@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100819">
+<title>SLOOM 365 SHOP | متجر الخليج</title>
+<meta name="description" content="تسوّق منتجات مختارة لعملاء دول الخليج عبر روابط الشراء الرسمية لدى المتاجر المشاركة.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09060f;--panel:#171020;--panel2:#21152d;--line:#49305d;--purple:#b878ed;--gold:#e6c77c;--muted:#b9a9c7;--white:#fffaff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#35194b 0,transparent 48%),var(--bg);color:var(--white);font-family:Cairo,Arial,sans-serif}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1120px,100%);margin:auto;padding:18px 16px 70px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 0 18px}
+.brand{display:flex;align-items:center;gap:11px}.logo{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(145deg,#d8a9ff,#672c91);color:#160b20;font-size:25px;font-weight:900;box-shadow:0 8px 28px #a34bd955}
+.brand h1{font-size:21px;margin:0;font-weight:900}.brand small{display:block;direction:ltr;text-align:right;color:var(--gold);font-size:10px;letter-spacing:2px;margin-top:1px}
+.country{background:var(--panel);border:1px solid var(--line);color:white;border-radius:12px;padding:10px 12px;min-width:185px}
+.hero{border:1px solid #68438a;border-radius:25px;padding:clamp(22px,5vw,42px);background:linear-gradient(125deg,#29163b,#130d1c 70%);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:230px;height:230px;border:1px solid #c18aff55;border-radius:50%;left:-75px;top:-95px;box-shadow:0 0 0 22px #c18aff0c,0 0 0 48px #c18aff08}
+.eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:1px}.hero h2{font-size:clamp(27px,5vw,43px);line-height:1.45;margin:9px 0}.hero h2 span{color:#d5a5ff}.hero p{color:#d2c3dd;max-width:610px;line-height:2;margin:0;font-size:13px}
+.hero-note{display:inline-flex;margin-top:18px;border:1px solid #775296;background:#1b1027;border-radius:30px;padding:8px 13px;color:#efdcff;font-size:11px}
+.toolbar{display:flex;gap:10px;margin:22px 0 12px;flex-wrap:wrap}.search{flex:1;min-width:180px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:white;outline:none}.search:focus,.country:focus{border-color:var(--purple)}
+.categories{display:flex;gap:8px;overflow:auto;padding:4px 0 12px;scrollbar-width:none}.categories button{white-space:nowrap;border:1px solid var(--line);border-radius:30px;background:var(--panel);color:#e8d9f3;padding:8px 15px;font-size:11px;font-weight:800;cursor:pointer}.categories button.active{background:linear-gradient(120deg,#71359a,#a85bd1);border-color:#c18aff;color:white}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:24px 0 12px}.section-head h3{font-size:18px;margin:0}.section-head span{font-size:10px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.card{border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#1b1225,#110b18);padding:15px;min-width:0}.product-art{height:130px;border-radius:12px;background:radial-gradient(circle at 50% 35%,#57366c,#24172f 70%);display:grid;place-items:center;font-size:48px;margin-bottom:12px}.card h4{font-size:13px;margin:0 0 5px}.card p{font-size:10px;color:var(--muted);line-height:1.8;margin:0 0 12px}.buy{display:block;text-align:center;padding:10px;border-radius:10px;background:#4a315d;color:#e9d8f7;border:1px solid #684b7e;font-size:11px;font-weight:900}.buy:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.empty{grid-column:1/-1;border:1px dashed #6b4b83;border-radius:17px;padding:27px;text-align:center;color:#cdb9dc;background:#160e20;line-height:2;font-size:12px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.step{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:13px}.step b{display:block;color:var(--gold);font-size:12px;margin-bottom:5px}.step span{color:#d1c2dc;font-size:10px;line-height:1.8}
+.notice{margin-top:24px;padding:15px;border:1px solid #66502d;border-radius:15px;background:#211a12;color:#e7d6ae;font-size:10px;line-height:2}
+footer{margin-top:28px;border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-size:10px;text-align:center;line-height:2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:430px){.wrap{padding:12px 11px 50px}.brand h1{font-size:18px}.country{width:100%}.grid{gap:9px}.product-art{height:105px}.card{padding:11px}.hero{border-radius:19px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header>
+ <a class="brand" href="#" aria-label="SLOOM 365 SHOP">
+  <span class="logo">S</span><span><h1>SLOOM 365 SHOP</h1><small>GULF SHOPPING</small></span>
+ </a>
+ <select class="country" id="country" aria-label="اختر الدولة">
+  <option value="OM">🇴🇲 سلطنة عُمان — ر.ع</option><option value="AE">🇦🇪 الإمارات — د.إ</option><option value="SA">🇸🇦 السعودية — ر.س</option><option value="KW">🇰🇼 الكويت — د.ك</option><option value="QA">🇶🇦 قطر — ر.ق</option><option value="BH">🇧🇭 البحرين — د.ب</option>
+ </select>
+</header>
+<section class="hero">
+ <div class="eyebrow">وجهتك للتسوّق في الخليج</div>
+ <h2>اختيارات ذكية،<br><span>وتسوّق أسهل.</span></h2>
+ <p>اكتشف منتجات من متاجر التسوق العالمية، واختر دولتك لمشاهدة الخيارات المناسبة. عند الشراء تنتقل إلى المنصة لإتمام الدفع والشحن مباشرة.</p>
+ <div class="hero-note">🛍️ عُمان · الإمارات · السعودية · الكويت · قطر · البحرين</div>
+</section>
+<div class="toolbar"><input id="search" class="search" type="search" placeholder="ابحث عن منتج أو قسم..." aria-label="ابحث عن منتج"></div>
+<nav class="categories" id="categories" aria-label="أقسام المتجر">
+ <button class="active" data-category="all">الكل</button><button data-category="electronics">إلكترونيات</button><button data-category="home">المنزل</button><button data-category="fashion">الأزياء</button><button data-category="beauty">الجمال</button><button data-category="accessories">إكسسوارات</button>
+</nav>
+<div class="section-head"><h3>منتجات مختارة</h3><span id="market-label">السوق: عُمان</span></div>
+<section class="grid" id="products" aria-live="polite">
+ <div class="empty">نجهّز قائمة المنتجات وروابط الشراء المعتمدة.<br>ستظهر المنتجات هنا بعد إضافة روابط العمولة والتحقق من الشحن إلى الدولة المختارة.</div>
+</section>
+<div class="section-head"><h3>كيف تتم عملية الشراء؟</h3><span>بخطوات بسيطة</span></div>
+<section class="steps">
+ <div class="step"><b>١. اختر دولتك</b><span>حدد الدولة لعرض الخيارات المناسبة لسوقك.</span></div>
+ <div class="step"><b>٢. اختر المنتج</b><span>راجع الوصف والتفاصيل قبل الانتقال للشراء.</span></div>
+ <div class="step"><b>٣. ادفع للمنصة</b><span>يتم الدفع على Temu أو AliExpress، وليس داخل متجرنا.</span></div>
+ <div class="step"><b>٤. استلم طلبك</b><span>تتولى المنصة أو البائع الشحن وفق التوفر وشروط الطلب.</span></div>
+</section>
+<div class="notice">إفصاح العمولة: قد يحصل المتجر على عمولة عند إتمام عملية شراء مؤهلة عبر روابطه، دون أن يعني ذلك بالضرورة زيادة السعر عليك. الأسعار والتوفر ورسوم الشحن وموعد التسليم يحددها المتجر الأصلي وقد تتغير. لا يستقبل SLOOM 365 SHOP المدفوعات ولا يتولى تنفيذ الطلبات أو المرتجعات.</div>
+<footer>© <span id="year"></span> SLOOM 365 SHOP — متجر تسوّق بالعمولة لدول الخليج<br>Temu وAliExpress منصتان مستقلتان ولسنا تابعين لهما.</footer>
+</main>
+<script>
+const markets={OM:"عُمان",AE:"الإمارات",SA:"السعودية",KW:"الكويت",QA:"قطر",BH:"البحرين"};
+const products=[]; // أضف المنتجات بعد الحصول على روابط العمولة والتحقق من الشحن لكل سوق.
+let activeCategory="all";
+const productsEl=document.getElementById("products");
+function render(){
+ const market=document.getElementById("country").value;
+ document.getElementById("market-label").textContent="السوق: "+markets[market];
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const filtered=products.filter(p=>(activeCategory==="all"||p.category===activeCategory)&&(!q||(p.name+" "+p.description).toLowerCase().includes(q))&&p.markets.includes(market));
+ productsEl.innerHTML="";
+ if(!filtered.length){productsEl.innerHTML='<div class="empty">لا توجد منتجات منشورة لهذا الاختيار حالياً.<br>ستضاف المنتجات بعد التأكد من رابط العمولة وتوفر الشحن.</div>';return;}
+ filtered.forEach(p=>{
+  const card=document.createElement("article");card.className="card";
+  const art=document.createElement("div");art.className="product-art";art.textContent=p.icon||"🛍️";
+  const h=document.createElement("h4");h.textContent=p.name;
+  const d=document.createElement("p");d.textContent=p.description;
+  const a=document.createElement("a");a.className="buy";a.textContent="اشترِ الآن";a.href=p.url;a.target="_blank";a.rel="sponsored nofollow noopener";
+  card.append(art,h,d,a);productsEl.append(card);
+ });
+}
+document.getElementById("country").addEventListener("change",render);
+document.getElementById("search").addEventListener("input",render);
+document.getElementById("categories").addEventListener("click",e=>{const b=e.target.closest("button[data-category]");if(!b)return;activeCategory=b.dataset.category;document.querySelectorAll("#categories button").forEach(x=>x.classList.toggle("active",x===b));render();});
+document.getElementById("year").textContent=new Date().getFullYear();render();
+</script>
+</body></html>
