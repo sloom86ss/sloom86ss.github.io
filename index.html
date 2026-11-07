@@ -2093,6 +2093,13 @@ function sloomSmartScreenStyle(){
  #sloom-smart-lineup .smart-name{max-width:100%;margin-top:2px;font-size:clamp(6px,1vw,10px);font-weight:800;overflow-wrap:anywhere;text-shadow:0 1px 2px #000}
  #sloom-smart-lineup .smart-position{font-size:clamp(5px,.75vw,8px);color:#d8f8e1}
  #sloom-smart-lineup .smart-note{text-align:center;color:#d7f3df;font-size:clamp(6px,.9vw,9px)}
+ #sloom-smart-lineup.smart-live-score{justify-content:center;background:radial-gradient(ellipse at center,#28123d,#050308 82%)}
+ #sloom-smart-lineup .smart-score-teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;flex:1}
+ #sloom-smart-lineup .smart-score-team{display:flex;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center;font-size:clamp(10px,2vw,17px);font-weight:900}
+ #sloom-smart-lineup .smart-score-team img{width:clamp(28px,7vw,58px);height:clamp(28px,7vw,58px);object-fit:contain}
+ #sloom-smart-lineup .smart-score{font-size:clamp(25px,7vw,54px);font-weight:1000;letter-spacing:2px;color:#fff;text-shadow:0 2px 12px #000}
+ #sloom-smart-lineup .smart-score-status{text-align:center;color:#e7d2ff;font-size:clamp(10px,1.8vw,15px);font-weight:900}
+
  @media(max-width:520px){#sloom-smart-lineup{padding:5px;gap:3px}#sloom-smart-lineup .smart-teams{gap:4px}#sloom-smart-lineup .smart-team-head{padding:3px}#sloom-smart-lineup .smart-rows{padding:2px}}
  `;
  document.head.appendChild(style);
@@ -2145,32 +2152,50 @@ async function refreshSloomSmartScreen(){
  if(sloomSmartLineupBusy||!document.querySelector('#sloom-video-screen .sloom-summary-screen'))return;
  const candidates=sloomSmartCandidates();
  if(!candidates.length){sloomSmartLineupLastKey='';document.getElementById('sloom-smart-lineup')?.remove();return;}
- if(sloomSmartLineupLastKey&&Date.now()-sloomSmartLineupLastCheck<60000)return;
+ if(sloomSmartLineupLastKey&&Date.now()-sloomSmartLineupLastCheck<30000)return;
  sloomSmartLineupBusy=true;sloomSmartLineupLastCheck=Date.now();
+ let liveFallback=null;
  try{
-  for(const target of candidates.slice(0,5)){
+  for(const target of candidates.slice(0,6)){
    const key=target.key+':'+target.match.id;
    const leaguePath=String(target.key).replace(/^soccer\\//,'');
    const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(target.match.id)+'&lang=ar';
-   try{
-    const data=await fetchEspnJson(url,{ttl:45000,timeout:9000,retries:1});
-    const groups=Array.isArray(data.rosters)?data.rosters:[];
-    const cards=groups.slice(0,2).map(sloomBuildSmartTeam).filter(Boolean);
-    if(cards.length<2)continue;
-    const screen=document.querySelector('#sloom-video-screen .sloom-summary-screen');
-    if(!screen)return;
+   let data=null;
+   try{data=await fetchEspnJson(url,{ttl:45000,timeout:9000,retries:1});}
+   catch(error){console.warn('[SLOOM365 lineup fetch]',key,error);}
+   const groups=Array.isArray(data?.rosters)?data.rosters:[];
+   const cards=groups.slice(0,2).map(sloomBuildSmartTeam).filter(Boolean);
+   const screen=document.querySelector('#sloom-video-screen .sloom-summary-screen');
+   if(!screen)return;
+   if(cards.length===2){
     sloomSmartScreenStyle();
     const home=arTeam(target.match.home?.name||'الفريق الأول'),away=arTeam(target.match.away?.name||'الفريق الثاني');
     const status=target.match.status==='in'?'مباراة مباشرة':'قبل انطلاق المباراة';
     let overlay=document.getElementById('sloom-smart-lineup');
     if(!overlay){overlay=document.createElement('div');overlay.id='sloom-smart-lineup';screen.appendChild(overlay);}
+    overlay.className='';
     overlay.innerHTML='<div class="smart-top"><b>👕 التشكيلة الرسمية · '+esc(home)+' × '+esc(away)+'</b><small>'+status+'</small></div><div class="smart-teams">'+cards.join('')+'</div><div class="smart-note">تشكيلة منشورة من مصدر البيانات · '+esc(target.league.name||'كرة القدم')+'</div>';
     sloomSmartLineupLastKey=key;
     return;
-   }catch(error){console.warn('[SLOOM365 lineup fetch]',key,error);}
+   }
+   if(target.match.status==='in'&&!liveFallback)liveFallback=target;
   }
-  document.getElementById('sloom-smart-lineup')?.remove();
-  sloomSmartLineupLastKey='';
+  const screen=document.querySelector('#sloom-video-screen .sloom-summary-screen');
+  if(liveFallback&&screen){
+   sloomSmartScreenStyle();
+   const m=liveFallback.match,h=m.home||{},a=m.away||{};
+   const homeLogo=h.logo?'<img src="'+esc(h.logo)+'" alt="">':'';
+   const awayLogo=a.logo?'<img src="'+esc(a.logo)+'" alt="">':'';
+   const status=sloomIsHalftime(m)?'استراحة بين الشوطين':sloomMatchMinute(m);
+   let overlay=document.getElementById('sloom-smart-lineup');
+   if(!overlay){overlay=document.createElement('div');overlay.id='sloom-smart-lineup';screen.appendChild(overlay);}
+   overlay.className='smart-live-score';
+   overlay.innerHTML='<div class="smart-top"><b>⚽ مباشر · '+esc(liveFallback.league.name||'كرة القدم')+'</b><small>سلوم كورة 365</small></div><div class="smart-score-teams"><div class="smart-score-team">'+homeLogo+'<span>'+esc(arTeam(h.name||'الفريق الأول'))+'</span></div><div class="smart-score">'+esc(String(h.score??'0'))+' - '+esc(String(a.score??'0'))+'</div><div class="smart-score-team">'+awayLogo+'<span>'+esc(arTeam(a.name||'الفريق الثاني'))+'</span></div></div><div class="smart-score-status">'+esc(status)+'</div>';
+   sloomSmartLineupLastKey='live:'+liveFallback.key+':'+m.id;
+  }else{
+   document.getElementById('sloom-smart-lineup')?.remove();
+   sloomSmartLineupLastKey='';
+  }
  }finally{sloomSmartLineupBusy=false;}
 }
 setTimeout(refreshSloomSmartScreen,5000);
