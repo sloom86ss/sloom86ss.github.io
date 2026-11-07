@@ -1819,6 +1819,7 @@ a{accent-color:#b77aff}
 <script>
 (()=>{const bind=()=>{const install=document.getElementById('installApp'),notify=document.getElementById('enableNotifications'),a=document.getElementById('sloom-header-install'),b=document.getElementById('sloom-header-notify');if(!install||!notify||!a||!b)return false;a.addEventListener('click',()=>install.click());b.addEventListener('click',()=>notify.click());const sync=()=>{a.textContent=install.textContent.includes('مثبت')?'✓ التطبيق مثبت':'📲 تنزيل التطبيق';b.textContent=notify.textContent.includes('مفعّلة')?'🔔 التنبيهات مفعّلة':notify.textContent.includes('محظورة')?'🔔 التنبيهات محظورة':'🔔 تفعيل التنبيهات';};sync();new MutationObserver(sync).observe(install,{childList:true,characterData:true,subtree:true});new MutationObserver(sync).observe(notify,{childList:true,characterData:true,subtree:true});return true;};if(!bind())document.addEventListener('DOMContentLoaded',bind,{once:true});})();
 </script>
+</header>
 
 <section id="newsTicker" class="ticker" aria-label="شريط أخبار كرة القدم">
  <span class="ticker-label">⚽ أخبار كرة القدم</span>
@@ -2807,11 +2808,7 @@ body{background:radial-gradient(ellipse at 50% -15%,#28123d 0,transparent 48%),#
    actions.style.visibility='visible';
    actions.style.opacity='1';
   }
-  if(header&&actions&&ticker&&matchTicker&&video){
-   actions.after(ticker);
-   ticker.after(matchTicker);
-   matchTicker.after(video);
-  }
+  /* News ticker, match ticker and video remain in normal page flow, outside the header. */
  };
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arrange,{once:true});
  else arrange();
