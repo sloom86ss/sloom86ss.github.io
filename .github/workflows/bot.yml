@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Validate collector
-        run: python -m py_compile bot.py backup_collector.py monitor.py repair.py smart_responder.py scripts/refresh_data.py
+        run: python -m py_compile bot.py backup_collector.py monitor.py repair.py smart_responder.py scripts/refresh_data.py scripts/generate_seo_pages.py
       - name: Validate SLOOM360 JavaScript
         run: |
           python - <<'PY'
@@ -80,7 +80,8 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
           cp /tmp/sloom365-data.json data.json
-          git add data.json
+          python -u scripts/generate_seo_pages.py
+          git add data.json seo sitemap.xml
           git diff --cached --quiet && echo "No football data changes" && exit 0
           git commit -m "Update football scores, clubs and standings"
           git push origin main
