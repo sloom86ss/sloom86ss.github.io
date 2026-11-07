@@ -1821,6 +1821,7 @@ a{accent-color:#b77aff}
 </script>
 </header>
 
+<div id="sloomSiteError" class="site-error-alert" role="alert" aria-live="assertive"></div>
 <section id="newsTicker" class="ticker" aria-label="شريط أخبار كرة القدم">
  <span class="ticker-label">⚽ أخبار كرة القدم</span>
  <div class="ticker-window"><div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل آخر الأخبار الرياضية…</span></div></div>
@@ -2416,8 +2417,25 @@ document.getElementById('arabicLeagueNav').addEventListener('click',e=>{const b=
 function selectSloomDay(day){if(!['yesterday','today','tomorrow'].includes(day))return;activeDay=day;document.querySelectorAll('#dayFilters [data-day]').forEach(x=>x.classList.toggle('active',x.dataset.day===day));render();document.getElementById('matches')?.scrollIntoView({behavior:'smooth',block:'start'});}
 document.getElementById('dayFilters').addEventListener('click',e=>{const b=e.target.closest('[data-day]');if(!b)return;selectSloomDay(b.dataset.day);});
 document.querySelector('.sloom-header-nav')?.addEventListener('click',e=>{const link=e.target.closest('a');if(link)document.querySelectorAll('.sloom-header-nav a').forEach(x=>x.classList.toggle('active',x===link));});
-function showSiteError(message){console.warn('[SLOOM365]',message)}
-function clearSiteError(){}
+function showSiteError(message){
+ const alertBox=document.getElementById('sloomSiteError');
+ const safeMessage=String(message||'حدث خطأ غير معروف').slice(0,700);
+ console.warn('[SLOOM365]',safeMessage);
+ if(!alertBox)return;
+ alertBox.replaceChildren();
+ const heading=document.createElement('strong');
+ heading.textContent='تنبيه من سلوم كورة 365';
+ const detail=document.createElement('span');
+ detail.textContent=safeMessage;
+ alertBox.append(heading,detail);
+ alertBox.classList.add('visible');
+}
+function clearSiteError(){
+ const alertBox=document.getElementById('sloomSiteError');
+ if(!alertBox)return;
+ alertBox.classList.remove('visible');
+ alertBox.replaceChildren();
+}
 function checkDataErrors(d){const errors=[];if(Array.isArray(d.news_errors))errors.push(...d.news_errors);Object.values(d.leagues||{}).forEach(l=>{if(l?.stale)errors.push('بيانات قديمة: '+(l.name||'إحدى البطولات'));if(Array.isArray(l?.errors))errors.push(...l.errors.map(x=>(l.name||'مصدر رياضي')+': '+x))});if(errors.length){const unique=[...new Set(errors)].slice(0,3);showSiteError('تم رصد '+errors.length+' مشكلة في جلب البيانات. '+unique.join(' · '));}else clearSiteError()}
 window.addEventListener('error',e=>showSiteError('حدث خطأ JavaScript في الصفحة: '+(e.message||'خطأ غير معروف')));
 window.addEventListener('unhandledrejection',e=>showSiteError('تعذر إكمال إحدى العمليات: '+String(e.reason?.message||e.reason||'خطأ غير معروف')));
