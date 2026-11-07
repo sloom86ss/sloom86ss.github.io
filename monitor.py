@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 BASE = os.getenv("SLOOM_SITE_URL", "https://sloom86ss.github.io").rstrip("/")
 STATE_FILE = "monitor_state.json"
 MAX_DATA_AGE_MINUTES = int(os.getenv("MAX_DATA_AGE_MINUTES", "100"))
-MAX_LEAGUE_AGE_MINUTES = int(os.getenv("MAX_LEAGUE_AGE_MINUTES", "25"))
+MAX_LEAGUE_AGE_MINUTES = int(os.getenv("MAX_LEAGUE_AGE_MINUTES", "35"))
 
 def get_url(url, timeout=15):
     req = urllib.request.Request(url, headers={"User-Agent": "SLOOM360-Monitor/1.0"})
