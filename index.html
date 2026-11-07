@@ -2775,30 +2775,25 @@ body{background:radial-gradient(ellipse at 50% -15%,#28123d 0,transparent 48%),#
  const arrange=()=>{
   const header=document.querySelector('.sloom-header-top');
   const actions=document.getElementById('sloom-header-actions');
-  const install=document.getElementById('installApp');
-  const notify=document.getElementById('enableNotifications');
-  const installHelp=document.getElementById('installAppHelp');
-  const notifyHelp=document.getElementById('notificationHelp');
-  if(actions&&install&&notify){
-   actions.replaceChildren();
-   actions.append(install,notify);
-   if(installHelp)actions.append(installHelp);
-   if(notifyHelp)actions.append(notifyHelp);
-   install.classList.add('install-app-button');
-   notify.classList.add('install-app-button');
-  }
+  const ticker=document.getElementById('newsTicker');
+  const matchTicker=document.querySelector('.sloom-match-marquee');
+  const video=document.getElementById('sloom-video-screen');
+  /* Keep the visible proxy buttons in the header. The real controls stay in their
+     original settings slot (visually hidden) and are triggered by the proxy clicks. */
   const slot=document.querySelector('.news-section-head .install-app-slot');
   if(slot)slot.hidden=true;
   const duplicateNav=document.querySelector('.sloom-category-strip');
   if(duplicateNav)duplicateNav.setAttribute('aria-hidden','true');
   const duplicateTiles=document.querySelector('.sloom-quick-grid');
   if(duplicateTiles)duplicateTiles.setAttribute('aria-hidden','true');
-  const wrap=document.querySelector('main.wrap');
-  const ticker=document.getElementById('newsTicker');
-  const matchTicker=document.querySelector('.sloom-match-marquee');
-  const video=document.getElementById('sloom-video-screen');
-  if(wrap&&header&&actions&&ticker&&matchTicker&&video){
-   header.append(actions);
+  if(header&&actions){
+   if(actions.parentElement!==header)header.append(actions);
+   actions.hidden=false;
+   actions.style.display='flex';
+   actions.style.visibility='visible';
+   actions.style.opacity='1';
+  }
+  if(header&&actions&&ticker&&matchTicker&&video){
    actions.after(ticker);
    ticker.after(matchTicker);
    matchTicker.after(video);
@@ -2890,5 +2885,42 @@ body{padding-bottom:100px!important}
  .sloom-header-top>.sloom-header-nav a{font-size:8px!important}
 }
 </style>
+
+<style id="sloom365-layout-repair-2026-11">
+/* Compact, single-screen mobile layout and visible header actions */
+.sloom-header-top{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-areas:"brand actions"!important;align-items:center!important;gap:8px!important;padding:7px 8px!important}
+.sloom-header-top>.sloom-brand-stack{grid-area:brand!important;min-width:0!important}
+.sloom-header-top>#sloom-header-actions{grid-area:actions!important;display:flex!important;visibility:visible!important;opacity:1!important;gap:6px!important;flex-wrap:nowrap!important;margin:0!important}
+#sloom-header-actions button{display:inline-flex!important;position:static!important;left:auto!important;top:auto!important;width:auto!important;height:auto!important;min-width:0!important;min-height:36px!important;opacity:1!important;pointer-events:auto!important;visibility:visible!important;padding:6px 9px!important;font:800 10px Cairo,Arial,sans-serif!important;white-space:nowrap!important;border-radius:10px!important}
+.sloom-header-top>.sloom-header-nav{position:fixed!important;left:7px!important;right:7px!important;top:auto!important;bottom:calc(env(safe-area-inset-bottom,0px) + 7px)!important;transform:none!important;width:auto!important;max-width:none!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;z-index:99999!important}
+#sloom-video-screen{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;max-width:900px!important;margin:8px auto 14px!important;padding:0!important}
+#sloom-video-screen .sloom-summary-screen{display:block!important;width:100%!important;aspect-ratio:16/9!important;min-height:0!important;height:auto!important;overflow:hidden!important;background:#000!important}
+#sloom-youtube-pair{display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;height:100%!important}
+#sloom-youtube-player-0{width:100%!important;height:100%!important;min-height:0!important}
+#sloom-youtube-player-0:empty{display:grid!important;place-items:center!important;background:radial-gradient(ellipse at center,#211331,#050307 75%)!important}
+#sloom-youtube-player-0:empty:before{content:"سلوم كورة 365  •  شاشة الملخصات والأهداف";display:block;padding:12px;color:#e8d5ff;font:800 13px Cairo,Arial,sans-serif;text-align:center}
+.wrap{padding:8px 12px calc(env(safe-area-inset-bottom,0px) + 94px)!important}
+.sloom-logo-animated{width:34px!important;height:34px!important;max-width:34px!important}
+.sloom-brand-stack .brand h1{font-size:clamp(13px,3.6vw,18px)!important;line-height:1.25!important}
+.sloom-brand-stack .brand small{font-size:8px!important;letter-spacing:1px!important;margin-top:2px!important}
+.ticker{margin:5px 0 8px!important;padding:7px 9px!important;font-size:10px!important}
+.sloom-match-marquee{margin:0 0 8px!important}
+.hero{padding:13px!important;border-radius:16px!important;margin-bottom:12px!important}
+@media(max-width:520px){
+ .sloom-header-top{grid-template-columns:minmax(0,1fr) auto!important;grid-template-areas:"brand actions"!important;gap:5px!important;padding:6px 2px!important}
+ #sloom-header-actions{gap:4px!important}
+ #sloom-header-actions button{min-height:34px!important;padding:5px 6px!important;font-size:9px!important}
+ .wrap{padding-left:9px!important;padding-right:9px!important}
+ #sloom-video-screen{margin:6px auto 12px!important}
+ #sloom-video-screen .sloom-summary-screen{aspect-ratio:16/9!important}
+ .sloom-header-top>.sloom-header-nav{left:5px!important;right:5px!important;bottom:calc(env(safe-area-inset-bottom,0px) + 5px)!important}
+ .sloom-header-top>.sloom-header-nav a{min-height:46px!important;font-size:9px!important}
+}
+@media(max-width:350px){
+ .sloom-brand-stack .brand h1{font-size:12px!important}
+ #sloom-header-actions button{font-size:8px!important;padding:5px 4px!important}
+}
+</style>
+
 </body>
 </html>
