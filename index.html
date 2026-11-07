@@ -2016,29 +2016,31 @@ function renderSloomAutoHighlights(){
  const screen=document.querySelector('#sloom-video-screen .sloom-summary-screen');
  if(!screen||screen.dataset.sloomPlayerInitialized==='1')return;
  screen.dataset.sloomPlayerInitialized='1';
- screen.style.cssText='display:block!important;width:100%!important;aspect-ratio:16/9!important;min-height:0!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:#000!important;overflow:hidden!important;';
- screen.innerHTML='<div id="sloom-youtube-pair" style="display:grid;grid-template-columns:1fr;gap:2px;width:100%;height:100%;background:#000;direction:ltr"><div id="sloom-youtube-player-0" style="min-width:0;width:100%;height:100%;background:#000"></div></div>';
+ screen.style.cssText='position:relative;display:block!important;width:100%!important;aspect-ratio:16/9!important;min-height:190px!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;border-radius:12px!important;background:#050308!important;overflow:hidden!important;';
+ screen.innerHTML='<div id="sloom-youtube-pair" style="position:absolute;inset:0;width:100%;height:100%;background:#050308;direction:ltr"><div id="sloom-youtube-player-0" style="width:100%;height:100%;min-height:190px;background:#050308"></div></div><div id="sloom-video-fallback" role="status" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:18px;text-align:center;background:radial-gradient(ellipse at center,#28123d,#050308 78%);color:#f6eaff;font:800 13px Cairo,Arial,sans-serif"><span style="font-size:30px">⚽</span><b>سلوم كورة 365</b><span style="font-size:11px;color:#cbb5df">جارٍ تحميل شاشة الملخصات والأهداف…</span></div>';
+ const fallback=()=>{const box=document.getElementById('sloom-video-fallback');if(box){box.style.display='flex';box.innerHTML='<span style="font-size:30px">⚽</span><b>شاشة سلوم كورة 365</b><span style="font-size:11px;color:#cbb5df">تعذر تحميل الفيديو حالياً. تحقق من الاتصال ثم أعد تحميل الصفحة.</span><button type="button" onclick="location.reload()" style="margin-top:5px;padding:8px 15px;border:1px solid #a86bd2;border-radius:10px;background:#35184b;color:#fff;font:700 11px Cairo,Arial,sans-serif">إعادة المحاولة</button>';}}
  const mountPlayers=()=>{
   if(!window.YT||!window.YT.Player||sloomYouTubePlayers.length)return;
-  [0].forEach(slot=>{
-   const player=new YT.Player('sloom-youtube-player-'+slot,{
+  try{
+   const player=new YT.Player('sloom-youtube-player-0',{
     width:'100%',height:'100%',
-    playerVars:{autoplay:1,controls:0,disablekb:1,fs:0,iv_load_policy:3,rel:0,playsinline:1,listType:'playlist',list:sloomOfficialUploadPlaylists[0],index:slot},
+    playerVars:{autoplay:1,controls:1,disablekb:0,fs:1,iv_load_policy:3,rel:0,playsinline:1,listType:'playlist',list:sloomOfficialUploadPlaylists[sloomYouTubeChannelIndex],index:0},
     events:{
-     onReady:event=>{event.target.mute();event.target.playVideo();},
+     onReady:event=>{const box=document.getElementById('sloom-video-fallback');if(box)box.remove();event.target.mute();event.target.playVideo();},
+     onError:()=>fallback(),
      onStateChange:event=>{
       if(event.data!==YT.PlayerState.ENDED)return;
       const list=event.target.getPlaylist()||[];
       const index=event.target.getPlaylistIndex();
       if(list.length&&index>=list.length-1){
        sloomYouTubeChannelIndex=(sloomYouTubeChannelIndex+1)%sloomOfficialUploadPlaylists.length;
-       event.target.loadPlaylist({listType:'playlist',list:sloomOfficialUploadPlaylists[sloomYouTubeChannelIndex],index:slot});
+       event.target.loadPlaylist({listType:'playlist',list:sloomOfficialUploadPlaylists[sloomYouTubeChannelIndex],index:0});
       }
      }
     }
    });
    sloomYouTubePlayers.push(player);
-  });
+  }catch(error){console.warn('[SLOOM365 video]',error);fallback();}
  };
  if(window.YT&&window.YT.Player){mountPlayers();return;}
  if(!sloomYouTubeApiLoading){
@@ -2051,8 +2053,10 @@ function renderSloomAutoHighlights(){
   const api=document.createElement('script');
   api.src='https://www.youtube.com/iframe_api';
   api.async=true;
+  api.onerror=fallback;
   document.head.appendChild(api);
  }
+ setTimeout(()=>{if(!screen.querySelector('iframe'))fallback();},12000);
 }
  
 function sloomIsHalftime(match){
@@ -2082,10 +2086,20 @@ function updateSloomMinuteDisplays(){
  Object.values(sportsData||{}).forEach(league=>(league.matches||[]).forEach(match=>byId.set(String(match.id),match)));
  document.querySelectorAll('[data-sloom-minute-id]').forEach(el=>{
   const match=byId.get(el.getAttribute('data-sloom-minute-id'));
-  if(!match||match.status!=='in')return;
-  const minute=sloomMatchMinute(match);
-  if(sloomIsHalftime(match)){el.textContent='استراحة بين الشوطين';el.classList.add('is-halftime');}
-  else{el.classList.remove('is-halftime');el.textContent=el.classList.contains('live-board-minute')?'⏱ الدقيقة '+minute:'● مباشر '+minute;}
+  if(!match){el.classList.remove('is-halftime');return;}
+  if(match.status!=='in'){
+   el.classList.remove('is-halftime');
+   el.textContent=match.status==='post'?'انتهت':match.status==='pre'?'لم تبدأ':'حالة المباراة غير متاحة';
+   return;
+  }
+  if(sloomIsHalftime(match)){
+   el.textContent='استراحة بين الشوطين';
+   el.classList.add('is-halftime');
+  }else{
+   el.classList.remove('is-halftime');
+   const minute=sloomMatchMinute(match);
+   el.textContent=el.classList.contains('live-board-minute')?'⏱ الدقيقة '+minute:'● مباشر '+minute;
+  }
  });
 }
 
@@ -2922,5 +2936,34 @@ body{padding-bottom:100px!important}
 }
 </style>
 
+
+<style id="sloom365-structural-fix-2026-11-07">
+/* One consistent mobile layout: logo/actions above, five navigation buttons fixed below */
+html,body{width:100%!important;max-width:100%!important;overflow-x:hidden!important}
+body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
+.wrap{width:100%!important;max-width:1100px!important;min-width:0!important;margin-inline:auto!important;overflow-x:clip!important}
+.sloom-header-top{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-areas:"brand actions"!important;align-items:center!important;gap:8px!important;width:100%!important;min-width:0!important;min-height:0!important;padding:8px 6px!important;overflow:visible!important}
+.sloom-header-top>.sloom-brand-stack{grid-area:brand!important;display:flex!important;justify-content:flex-start!important;min-width:0!important;max-width:100%!important}
+.sloom-header-top>.sloom-brand-stack .brand{min-width:0!important;max-width:100%!important}
+.sloom-header-top>.sloom-brand-stack .brand h1{font-size:clamp(12px,3.8vw,18px)!important;white-space:nowrap!important}
+.sloom-header-top>#sloom-header-actions{grid-area:actions!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:5px!important;flex-wrap:nowrap!important;min-width:0!important;margin:0!important}
+.sloom-header-top>#sloom-header-actions button{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:0!important;min-height:35px!important;padding:5px 7px!important;font:800 9px Cairo,Arial,sans-serif!important;white-space:nowrap!important}
+.sloom-header-top>nav.sloom-bottom-nav.sloom-header-nav{position:fixed!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;left:6px!important;right:6px!important;top:auto!important;bottom:calc(env(safe-area-inset-bottom,0px) + 6px)!important;inset-inline:auto!important;transform:none!important;width:auto!important;max-width:none!important;min-width:0!important;gap:4px!important;margin:0!important;padding:5px!important;z-index:2147483646!important;border:1px solid #8154a8!important;border-radius:15px!important;background:linear-gradient(145deg,#241334f7,#090610f7)!important;box-shadow:0 8px 24px #000a!important;backdrop-filter:blur(12px)!important}
+.sloom-header-top>nav.sloom-bottom-nav.sloom-header-nav a{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;min-width:0!important;min-height:47px!important;gap:2px!important;padding:3px 1px!important;border:1px solid #51346b!important;border-radius:10px!important;background:#1a1025!important;color:#f5eaff!important;font-size:clamp(8px,2.4vw,10px)!important;line-height:1.25!important;white-space:nowrap!important;overflow:hidden!important}
+.sloom-header-top>nav.sloom-bottom-nav.sloom-header-nav a span{font-size:17px!important;line-height:1!important}
+.sloom-header-top>nav.sloom-bottom-nav.sloom-header-nav a.active{background:linear-gradient(120deg,#692ba0,#a653d4)!important;color:#fff!important;border-color:#c18aff!important}
+#sloom-video-screen{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;max-width:900px!important;min-width:0!important;margin:8px auto 14px!important;padding:0!important;border:1px solid #563277!important;border-radius:13px!important;background:#050308!important;overflow:hidden!important}
+#sloom-video-screen .sloom-summary-screen{position:relative!important;display:block!important;width:100%!important;aspect-ratio:16/9!important;min-height:190px!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;border-radius:12px!important;background:#050308!important;overflow:hidden!important}
+#sloom-video-screen iframe{display:block!important;width:100%!important;height:100%!important;min-height:190px!important;border:0!important}
+@media(max-width:380px){
+ .sloom-header-top{gap:4px!important;padding-inline:2px!important}
+ .sloom-header-top>.sloom-brand-stack .brand h1{font-size:11px!important}
+ .sloom-header-top>#sloom-header-actions{gap:3px!important}
+ .sloom-header-top>#sloom-header-actions button{font-size:8px!important;padding-inline:4px!important}
+ .sloom-header-top>nav.sloom-bottom-nav.sloom-header-nav{left:4px!important;right:4px!important;gap:2px!important}
+ .sloom-header-top>nav.sloom-bottom-nav.sloom-header-nav a{font-size:7px!important;min-height:44px!important}
+ .sloom-header-top>nav.sloom-bottom-nav.sloom-header-nav a span{font-size:15px!important}
+}
+</style>
 </body>
 </html>
