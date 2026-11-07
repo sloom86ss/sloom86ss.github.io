@@ -1943,7 +1943,7 @@ function verifiedBroadcastName(match){
  return broadcastChannelNames(match).join('، ');
 }
 function getCategory(key){if(key.startsWith('soccer/'))return'football';if(key.startsWith('basketball/'))return'basketball';if(key.startsWith('football/'))return'americanfootball';if(key.startsWith('hockey/'))return'hockey';if(key.startsWith('baseball/'))return'baseball';return'other'}
-function leagueIsFresh(league){const t=Date.parse(league.updated_at||'');const age=Date.now()-t;/* A source timestamp slightly ahead of the device clock is not stale data. */return !league.stale&&Number.isFinite(t)&&age>=-2*60*1000&&age<=15*60*1000}
+function leagueIsFresh(league){const t=Date.parse(league.updated_at||'');const age=Date.now()-t;/* A source timestamp slightly ahead of the device clock is not stale data. */return !league.stale&&Number.isFinite(t)&&age>=-2*60*1000&&age<=35*60*1000}
 function renderStandings(){
  const root=document.getElementById('standingsTables');if(!root)return;
  root.innerHTML='';
