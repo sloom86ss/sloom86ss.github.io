@@ -1805,7 +1805,6 @@ a{accent-color:#b77aff}
   <a href="#news"><span>📰</span>الأخبار</a>
   <a href="ai.html"><span>🤖</span>محلل AI</a>
  </nav>
-</header>
 <div id="sloom-header-actions" aria-label="التنبيهات وتثبيت التطبيق">
  <button id="sloom-header-install" type="button">📲 تنزيل التطبيق</button>
  <button id="sloom-header-notify" type="button">🔔 تفعيل التنبيهات</button>
@@ -2806,7 +2805,7 @@ body{background:radial-gradient(ellipse at 50% -15%,#28123d 0,transparent 48%),#
   const matchTicker=document.querySelector('.sloom-match-marquee');
   const video=document.getElementById('sloom-video-screen');
   if(wrap&&header&&actions&&ticker&&matchTicker&&video){
-   header.after(actions);
+   header.append(actions);
    actions.after(ticker);
    ticker.after(matchTicker);
    matchTicker.after(video);
@@ -2833,12 +2832,26 @@ body{background:radial-gradient(ellipse at 50% -15%,#28123d 0,transparent 48%),#
  host.innerHTML='<div class="scoreaxis-frame"><div id="widget-8l3wmw6ak95q" class="scoreaxis-widget" style="width:auto;height:auto;font-size:14px;background-color:#ffffff;color:#141416;border:1px solid #ecf1f7;overflow:auto;"></div><div class="scoreaxis-credit">بيانات الترتيب من <a href="https://www.scoreaxis.com/" target="_blank" rel="noopener noreferrer">Scoreaxis</a></div></div>';
  const script=document.createElement('script');
  script.async=true;
- script.src='https://widgets.scoreaxis.com/api/football/league-table/6232265abf1fa71a672159ec?widgetId=8l3wmw6ak95q&lang=ar&highlightTeamColor=%23000000&teamLogo=1&tableLines=0&homeAway=1&header=1&position=1&goals=1&gamesCount=1&diff=1&winCount=1&drawCount =1&loseCount=1&lastGames=1&points=1&teamsLimit=all&links=1&noFollowLinks=0&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%2300ff00';
- host.querySelector('.scoreaxis-frame').appendChild(script);
+ script.src='https://widgets.scoreaxis.com/api/football/league-table/6232265abf1fa71a672159ec?widgetId=8l3wmw6ak95q&lang=ar&highlightTeamColor=%23000000&teamLogo=1&tableLines=0&homeAway=1&header=1&position=1&goals=1&gamesCount=1&diff=1&winCount=1&drawCount=1&loseCount=1&lastGames=1&points=1&teamsLimit=all&links=1&noFollowLinks=0&font=heebo&fontSize=14&rowDensity=100&widgetWidth=auto&widgetHeight=auto&bodyColor=%23ffffff&textColor=%23141416&linkColor=%23141416&borderColor=%23ecf1f7&tabColor=%2300ff00';
+ host.querySelector('#widget-8l3wmw6ak95q').appendChild(script);
+ script.onload=()=>{const box=host.querySelector('#widget-8l3wmw6ak95q');setTimeout(()=>{if(box&&!box.querySelector('table,iframe,[class*=table]')){const note=document.createElement('div');note.style.cssText='padding:14px;text-align:center;color:#352348;background:#fff;font:13px Cairo,Arial,sans-serif';note.textContent='جارٍ تحميل جدول الترتيب من Scoreaxis… إذا لم يظهر، افتح المصدر مباشرة.';box.appendChild(note);}},8000);};
+ script.onerror=()=>{const box=host.querySelector('#widget-8l3wmw6ak95q');if(box)box.innerHTML='<div style="padding:16px;text-align:center;color:#352348;background:#fff;font:13px Cairo,Arial,sans-serif">تعذر تحميل جدول الترتيب حالياً. <a href="https://www.scoreaxis.com/" target="_blank" rel="noopener">زيارة Scoreaxis</a></div>';};
 };
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount,{once:true});else mount();
 })();
 </script>
+
+
+<style id="sloom-header-actions-top-final">
+.sloom-header-top{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;flex-wrap:wrap!important;overflow:visible!important}
+.sloom-header-top .sloom-brand-stack{order:1!important;flex:0 0 auto!important}
+.sloom-header-top .sloom-header-nav{order:3!important;flex:1 1 100%!important;width:100%!important;position:static!important;transform:none!important;inset:auto!important;margin:4px 0 0!important}
+.sloom-header-top #sloom-header-actions{order:2!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:7px!important;flex:0 1 auto!important;width:auto!important;margin:0!important;padding:0!important;visibility:visible!important;opacity:1!important}
+.sloom-header-top #sloom-header-actions button{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:38px!important;padding:7px 10px!important;border-radius:10px!important;font:900 10px Cairo,Arial,sans-serif!important;white-space:nowrap!important}
+.sloom-header-top #sloom-header-install{background:linear-gradient(120deg,#692ba0,#a653d4)!important;color:#fff!important;border:1px solid #c18aff!important}
+.sloom-header-top #sloom-header-notify{background:#171020!important;color:#f5eaff!important;border:1px solid #8154a8!important}
+@media(max-width:520px){.sloom-header-top{gap:8px!important}.sloom-header-top .sloom-brand-stack{flex:1 1 100%!important;justify-content:center!important}.sloom-header-top #sloom-header-actions{order:2!important;flex:1 1 100%!important;justify-content:center!important}.sloom-header-top #sloom-header-actions button{flex:1 1 0!important;max-width:190px!important}.sloom-header-top .sloom-header-nav{order:3!important}}
+</style>
 
 </body>
 </html>
