@@ -2158,7 +2158,7 @@ async function refreshSloomSmartScreen(){
  try{
   for(const target of candidates.slice(0,6)){
    const key=target.key+':'+target.match.id;
-   const leaguePath=String(target.key).replace(/^soccer\\//,'');
+   const leaguePath=String(target.key).replace('soccer/','');
    const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(target.match.id)+'&lang=ar';
    let data=null;
    try{data=await fetchEspnJson(url,{ttl:45000,timeout:9000,retries:1});}
