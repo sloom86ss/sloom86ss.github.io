@@ -2735,5 +2735,87 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 .wrap{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 110px)!important}
 </style>
 
+
+<style id="sloom365-page-organization-v1">
+/* توحيد الهوية البنفسجية الداكنة والأسود */
+:root{--bg:#08050e;--panel:#120c1b;--panel2:#1b1128;--line:#39264d;--green:#c18aff;--muted:#b5a4c5;--white:#fbf7ff;--red:#ff526f}
+body{background:radial-gradient(ellipse at 50% -15%,#28123d 0,transparent 48%),#08050e!important}
+.stat,.league,.news-card,.team-chip,.fan-card,.standings-league{background:linear-gradient(145deg,#171020,#100b17)!important;border-color:#39264d!important}
+.hero,.clock-card{background:linear-gradient(145deg,#211331,#100b17)!important;border-color:#68458a!important}
+.filter.active,.arabic-league-nav button.active,.btn.primary{background:linear-gradient(120deg,#692ba0,#a653d4)!important;color:#fff!important;border-color:#c18aff!important}
+.filter,.arabic-league-nav button{background:#150e20!important;border-color:#563277!important;color:#eadcf8!important}
+.section-head h3,.live-board-head h2,.upcoming-board-head h2{color:#f4eaff!important}
+.ticker{background:#130c1c!important;border-color:#563277!important;color:#e2c7ff!important}
+.ticker-track b,.ticker-label{color:#fff!important}
+.sloom-match-marquee{border-color:#563277!important;background:#120b1a!important}
+.sloom-header-top{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;flex-wrap:wrap!important}
+.sloom-brand-stack{display:block!important}
+.sloom-brand-stack .brand h1{color:#fff!important}
+.sloom-brand-stack .brand small{color:#c9a8e8!important}
+#sloom-header-actions{display:flex!important;align-items:center!important;gap:8px!important;flex-wrap:wrap!important;margin:10px 0 14px!important}
+#sloom-header-actions .install-app-button{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:40px!important;padding:8px 13px!important;border:1px solid #8154a8!important;border-radius:12px!important;background:linear-gradient(135deg,#28143b,#4b2868)!important;color:#fff!important;font:800 11px Cairo,Arial,sans-serif!important}
+#sloom-header-actions #enableNotifications{background:#171020!important;border-color:#67458a!important}
+#sloom-header-actions .install-app-help{flex:1 1 100%!important;margin:0!important;color:#c7b2d9!important;font-size:10px!important}
+#sloom-video-screen{max-width:900px!important;margin:12px auto 20px!important;border:1px solid #563277!important;border-radius:14px!important;overflow:hidden!important;box-shadow:0 12px 34px #0009,0 0 18px #8b42c522!important}
+#sloom-video-screen .sloom-summary-screen{border-radius:12px!important}
+.live-board,.upcoming-board{border-color:#563277!important;background:linear-gradient(145deg,#171020,#0e0915)!important}
+.live-board-head,.upcoming-board-head{border-color:#39264d!important}
+.sloom-quick-grid,.sloom-category-strip{display:none!important}
+.news-section-head>.install-app-slot{display:none!important}
+#sloomWeatherGPS,#sloomWeatherData,#sloomWeatherStatus{display:none!important}
+.stats{gap:8px!important}
+.stat{padding:10px!important}
+.sloom-bottom-nav{background:#0d0714!important;border:1px solid #563277!important;box-shadow:0 -7px 24px #000b!important}
+.sloom-bottom-nav a.active{background:linear-gradient(120deg,#692ba0,#a653d4)!important;color:#fff!important}
+.match,.standings-table-wrap{border-color:#39264d!important}
+.team-search,.fan-controls select,.prediction-controls select{background:#130c1c!important;border-color:#563277!important;color:#fff!important}
+@media(max-width:520px){
+ .wrap{padding-left:12px!important;padding-right:12px!important}
+ .sloom-header-top{align-items:center!important}
+ #sloom-header-actions{display:grid!important;grid-template-columns:1fr 1fr!important}
+ #sloom-header-actions .install-app-button{width:100%!important;font-size:10px!important;padding:8px 5px!important}
+ #sloom-video-screen{width:100%!important;margin:9px auto 16px!important}
+ .section-head{margin-top:19px!important}
+}
+</style>
+<script id="sloom365-page-organization-v1-script">
+(()=> {
+ const arrange=()=>{
+  const header=document.querySelector('.sloom-header-top');
+  const actions=document.getElementById('sloom-header-actions');
+  const install=document.getElementById('installApp');
+  const notify=document.getElementById('enableNotifications');
+  const installHelp=document.getElementById('installAppHelp');
+  const notifyHelp=document.getElementById('notificationHelp');
+  if(actions&&install&&notify){
+   actions.replaceChildren();
+   actions.append(install,notify);
+   if(installHelp)actions.append(installHelp);
+   if(notifyHelp)actions.append(notifyHelp);
+   install.classList.add('install-app-button');
+   notify.classList.add('install-app-button');
+  }
+  const slot=document.querySelector('.news-section-head .install-app-slot');
+  if(slot)slot.hidden=true;
+  const duplicateNav=document.querySelector('.sloom-category-strip');
+  if(duplicateNav)duplicateNav.setAttribute('aria-hidden','true');
+  const duplicateTiles=document.querySelector('.sloom-quick-grid');
+  if(duplicateTiles)duplicateTiles.setAttribute('aria-hidden','true');
+  const wrap=document.querySelector('main.wrap');
+  const ticker=document.getElementById('newsTicker');
+  const matchTicker=document.querySelector('.sloom-match-marquee');
+  const video=document.getElementById('sloom-video-screen');
+  if(wrap&&header&&actions&&ticker&&matchTicker&&video){
+   header.after(actions);
+   actions.after(ticker);
+   ticker.after(matchTicker);
+   matchTicker.after(video);
+  }
+ };
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',arrange,{once:true});
+ else arrange();
+})();
+</script>
+
 </body>
 </html>
