@@ -1,12 +1,6 @@
 name: Generate SLOOM365 SEO pages
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "data.json"
-      - "scripts/generate_seo_pages.py"
-      - "index.html"
   workflow_dispatch:
 
 permissions:
