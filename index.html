@@ -1791,7 +1791,19 @@ a{accent-color:#b77aff}
 #sloom-video-gallery .sloom-clip-button{background:#140c21!important;border-color:#563277!important}
 #sloom-video-gallery .sloom-clip-button.active{border-color:#c18aff!important;background:#25133b!important}
 @media(prefers-reduced-motion:no-preference){.filter.active,.arabic-league-nav button.active{transition:background .2s,border-color .2s,box-shadow .2s}}
-</style></head>
+</style>
+<style id="sloom-display-cards-style">
+#sloom-video-screen{padding:0 0 10px!important;background:#09070f!important;border:1px solid #563277!important;border-radius:14px!important;overflow:hidden!important;box-shadow:0 8px 24px #0008!important}
+#sloom-video-screen .sloom-summary-screen{border-radius:0!important}
+.sloom-display-cards{display:flex;flex-direction:column;gap:7px;padding:10px 12px 2px;background:linear-gradient(145deg,#100b19,#1b1028)}
+.sul-carte{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#ddd;border-right:3px solid #b7f34a;border-radius:10px 0 10px 10px;box-sizing:border-box;color:#373a3c;font:700 15px/1.5 Arial,sans-serif;padding:9px 11px;text-align:right}
+.sloom-display-subtitle{font-size:10px;font-weight:500;color:#62666a}
+.sli-carte{display:flex;align-items:center;gap:8px;min-width:0;background:#fff;border:1px solid #888;border-radius:5px;box-shadow:0 0 0 1px #d9dce1;box-sizing:border-box;color:#373a3c;font:12px/1.5 Arial,sans-serif;margin:0;padding:7px 10px;text-align:right}
+.sli-carte strong{color:#d9534f;white-space:nowrap}
+.sli-carte .divider{flex:1 1 auto;height:1px;background:#aaa;margin:0 3px;min-width:12px}
+@media(max-width:520px){.sloom-display-cards{padding:8px;gap:6px}.sul-carte{font-size:13px}.sli-carte{font-size:11px}}
+</style>
+</head>
 <body><main class="wrap">
 
 <header class="sloom-header-top">
@@ -1830,6 +1842,11 @@ a{accent-color:#b77aff}
 <section id="sloom-video-screen" aria-label="شاشة الفيديو" style="display:block;width:100%;max-width:900px;margin:12px auto 18px;padding:0;border:0;background:#000;box-shadow:none">
  <div class="sloom-summary-screen" aria-live="off" style="width:100%;aspect-ratio:16/9;min-height:0;overflow:hidden;border:0;border-radius:0;background:#000;padding:0;margin:0">
   <div id="sloom-youtube-pair" style="display:grid;grid-template-columns:1fr;gap:2px;width:100%;height:100%;background:#000;direction:ltr"><div id="sloom-youtube-player-0" style="min-width:0;width:100%;height:100%;background:#000"></div></div>
+ </div>
+ <div class="sloom-display-cards" dir="rtl" aria-label="معلومات شاشة العرض">
+  <div class="sul-carte">سلوم كورة 365 <span class="sloom-display-subtitle">منصة كرة القدم الذكية</span></div>
+  <div class="sli-carte"><strong>شاشة العرض</strong><span class="divider"></span><span>البث واللقطات الرياضية</span></div>
+  <div class="sli-carte"><strong>المحتوى</strong><span class="divider"></span><span>أهداف وملخصات كرة القدم</span></div>
  </div>
 </section>
 <nav class="sloom-category-strip" aria-label="اختصارات الأقسام">
