@@ -1802,18 +1802,7 @@ a{accent-color:#b77aff}
  <div class="ticker-window"><div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل آخر الأخبار الرياضية…</span></div></div>
 </section>
 <section class="sloom-match-marquee" aria-label="شريط المباريات المتحرك"><div class="sloom-match-marquee-window"><div class="sloom-match-marquee-track" id="sloomMatchTicker"><span class="sloom-match-ticker-empty">⚽ متابعة مباريات كرة القدم</span></div></div></section>
-<section id="sloom-video-screen" aria-label="شاشة الفيديو" style="display:block;width:100%;max-width:900px;margin:12px auto 18px;padding:0;border:0;background:#000;box-shadow:none">
- <div class="sloom-summary-screen" aria-live="off" style="width:100%;height:800px;min-height:620px;overflow:hidden;border:0;border-radius:0;background:#111;padding:0;margin:0">
-  <iframe src="https://www.scorebat.com/embed/videopanel/?token=NDE4MDI0XzE3OTQxMzc3ODdfNGI5YjdkOTNlODc1ZjM5MzM4MjU5NTcwMmEzNGI5ZmRhZGE1YzRmZQ==&pref=%7B%22language%22%3A%22ar%22%2C%22autoplay%22%3Atrue%7D" frameborder="0" allowfullscreen allow="autoplay; fullscreen" title="أهداف وملخصات كرة القدم - ScoreBat" style="display:block;background-color:rgb(17,17,17);border:0;width:100%;height:100%" class="_scorebatEmbeddedPanel_"></iframe>
- </div>
- <script>(function(d,w,id){
-  var js,fjs=d.getElementsByTagName('script')[0];
-  if(d.getElementById(id)) return;
-  js=d.createElement('script');js.id=id;js.src='https://www.scorebat.com/embed/panelx.js?v=f4fksn';
-  fjs.parentNode.insertBefore(js,fjs);
-  w.SCOREBAT_OPTIONS={panelClassName:'_scorebatEmbeddedPanel_',panelSizing:'responsive'};
- })(document,window,'scorebat-paneljs');</script>
-</section>
+<section id="sloom-video-screen" aria-label="شاشة فيديو الملخصات" style="display:block;width:100%;max-width:900px;margin:12px auto 18px;padding:0;border:0;background:#000;box-shadow:none"><div class="sloom-summary-screen" aria-live="off"><div class="sloom-archive-loading">جارٍ تجهيز أرشيف الملخصات…</div></div></section>
 <section id="sloom-scorebat-livescore" aria-label="النتائج المباشرة من ScoreBat" style="display:block;width:100%;max-width:900px;margin:0 auto 18px;padding:10px;border:1px solid #563277;border-radius:14px;background:linear-gradient(145deg,#160d22,#08050d);box-shadow:0 8px 22px #0007;overflow:hidden">
  <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 8px;color:#f5eaff;font:900 15px Cairo,Arial,sans-serif">
   <b>⚽ النتائج المباشرة</b><span style="font-size:10px;color:#c9a9e8">ScoreBat</span>
@@ -3051,6 +3040,7 @@ body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
 </style>
 
 
+<link rel="stylesheet" href="./assets/scorebat-archive.css?v=1">
 <script src="./assets/scorebat-archive.js?v=1" defer></script>
 </body>
 </html>
