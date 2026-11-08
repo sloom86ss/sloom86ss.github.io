@@ -1,35 +1,7 @@
 {
-  "updated_at": "2026-11-08T13:41:00.555821+00:00",
+  "updated_at": "2026-11-08T13:41:26.913294+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
-    {
-      "video_id": "-qlzBL66Ges",
-      "title": "Liam Delap WONDERGOAL + Ronaldo SIU 🤯",
-      "competition": "الدوري الإنجليزي الممتاز",
-      "date": "2026-11-07T22:20:31+00:00",
-      "videos": [
-        {
-          "title": "ملخص المباراة الرسمي",
-          "embed": "https://www.youtube.com/embed/-qlzBL66Ges"
-        }
-      ],
-      "source": "قناة الدوري الإنجليزي الرسمية على YouTube",
-      "source_url": "https://www.youtube.com/watch?v=-qlzBL66Ges"
-    },
-    {
-      "video_id": "QEwj-nLuApc",
-      "title": "Oli McBurnie RATES Hull City's Best Premier League Goals",
-      "competition": "الدوري الإنجليزي الممتاز",
-      "date": "2026-11-05T14:01:23+00:00",
-      "videos": [
-        {
-          "title": "ملخص المباراة الرسمي",
-          "embed": "https://www.youtube.com/embed/QEwj-nLuApc"
-        }
-      ],
-      "source": "قناة الدوري الإنجليزي الرسمية على YouTube",
-      "source_url": "https://www.youtube.com/watch?v=QEwj-nLuApc"
-    },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1893339/?token=NDE4MDI0XzE3OTQxNDUyNjBfOTBiZWQ3MWYzZjVmOGE4NWQwMDFhM2Y5NzFiY2U5ODI3YTI0YTZkNg==",
       "title": "Pachuca - Tigres",
@@ -803,4 +775,4 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1901966/?token=NDE4MDI0XzE3OTQxNDUyNjBfOTBiZWQ3MWYzZjVmOGE4NWQwMDFhM2Y5NzFiY2U5ODI3YTI0YTZkNg=="
     }
   ]
-}\n
+}
