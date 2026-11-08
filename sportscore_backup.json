@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-08T04:29:06Z",
-  "source_updated_at": "2026-11-08T04:28:36.089063+00:00",
+  "checked_at": "2026-11-08T05:19:47Z",
+  "source_updated_at": "2026-11-08T05:19:03.149531+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -894,28 +894,6 @@
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
       "home": {
-        "name": "Athletic Club Boise",
-        "logo": "https://img.thesports.com/football/team/0c1fafa55b2bc6ee9a9c6b9106e37177.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Chattanooga Red Wolves",
-        "logo": "https://img.thesports.com/football/team/aa5f84991d1941b4b2e1d79fdec495ff.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "Half time",
-      "competition": "USL League One",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:41",
-      "slug": "",
-      "date": "2026-11-08T02:00:00+00:00",
-      "time": "2026-11-08T02:00:00+00:00",
-      "home": {
         "name": "LD Alajuelense",
         "logo": "https://img.thesports.com/football/team/f65f7ccfb6989fb3af9b9ff1a6f46c25.png",
         "score": "2"
@@ -933,7 +911,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:42",
+      "id": "sportscore:41",
       "slug": "",
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
@@ -955,7 +933,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:43",
+      "id": "sportscore:42",
       "slug": "",
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
@@ -972,6 +950,28 @@
       "status": "post",
       "detail": "Finished",
       "competition": "Guatemala Liga Nacional",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:43",
+      "slug": "",
+      "date": "2026-11-08T02:00:00+00:00",
+      "time": "2026-11-08T02:00:00+00:00",
+      "home": {
+        "name": "Athletic Club Boise",
+        "logo": "https://img.thesports.com/football/team/0c1fafa55b2bc6ee9a9c6b9106e37177.png",
+        "score": "1"
+      },
+      "away": {
+        "name": "Chattanooga Red Wolves",
+        "logo": "https://img.thesports.com/football/team/aa5f84991d1941b4b2e1d79fdec495ff.png",
+        "score": "0"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "USL League One",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -1035,8 +1035,8 @@
         "logo": "https://img.thesports.com/football/team/75da1b4c0c787b6e7b1ef320e71af80c.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "USL Championship",
       "period": null,
       "clock": "",
@@ -1050,15 +1050,15 @@
       "home": {
         "name": "Eastern Suburbs AFC",
         "logo": "https://img.thesports.com/football/team/400d98a7d41f425de763148e54299823.png",
-        "score": "0"
+        "score": "2"
       },
       "away": {
         "name": "Cashmere Technical",
         "logo": "https://img.thesports.com/football/team/4aab48b6ffbfc1f7688015b8f79808c3.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "New Zealand Football Championship",
       "period": null,
       "clock": "",
@@ -1079,8 +1079,8 @@
         "logo": "https://img.thesports.com/football/team/327ba784c0f6eb8f2e6ae4494b523d70.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "USL Championship",
       "period": null,
       "clock": "",
@@ -1094,15 +1094,15 @@
       "home": {
         "name": "Club Atletico Tijuana",
         "logo": "https://img.thesports.com/football/team/a495a2f6b240e72b9a35d15190eacae9.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "La Tribu de Cd. Juarez B",
         "logo": "https://img.thesports.com/football/team/94c9886bd516f7a083e7de556ecd1d7b.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Mexican TDP League",
       "period": null,
       "clock": "",
