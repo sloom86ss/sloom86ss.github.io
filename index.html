@@ -1932,69 +1932,8 @@ function renderStandings(){
  if(!count)root.innerHTML='<div class="empty">جداول الترتيب غير متاحة حالياً من مصدر البيانات.</div>';
 }
 
-let sloomHighlightsRotationTimer=null;
-let sloomYouTubePlayers=[];
-let sloomYouTubeApiLoading=false;
-let sloomYouTubeChannelIndex=0;
-const sloomOfficialUploadPlaylists=[
- 'UUG5qGWdu8nIRZqJ_GgDwQ-w',
- 'UUTv-XvfzLX3i4IGWAm4sbmA',
- 'UUpryVRk_VDudG8SHXgWcG0w'
-];
-function renderSloomAutoHighlights(){
- const screen=document.querySelector('#sloom-video-screen .sloom-summary-screen');
- if(!screen||screen.dataset.sloomPlayerInitialized==='1')return;
- screen.dataset.sloomPlayerInitialized='1';
- screen.style.cssText='position:relative;display:block!important;width:100%!important;aspect-ratio:16/9!important;min-height:190px!important;height:auto!important;padding:0!important;margin:0!important;border:0!important;border-radius:12px!important;background:#050308!important;overflow:hidden!important;';
- screen.innerHTML='<div id="sloom-youtube-pair" style="position:absolute;inset:0;width:100%;height:100%;background:#050308;direction:ltr"><div id="sloom-youtube-player-0" style="width:100%;height:100%;min-height:190px;background:#050308"></div></div><div id="sloom-video-fallback" role="status" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:18px;text-align:center;background:radial-gradient(ellipse at center,#28123d,#050308 78%);color:#f6eaff;font:800 13px Cairo,Arial,sans-serif"><span style="font-size:30px">⚽</span><b>سلوم كورة 365</b><span style="font-size:11px;color:#cbb5df">جارٍ تحميل شاشة الملخصات والأهداف…</span></div>';
- const fallback=()=>{const box=document.getElementById('sloom-video-fallback');if(box){box.style.display='flex';box.innerHTML='<span style="font-size:30px">⚽</span><b>شاشة سلوم كورة 365</b><span style="font-size:11px;color:#cbb5df">تعذر تحميل الفيديو حالياً. تحقق من الاتصال ثم أعد تحميل الصفحة.</span><button type="button" onclick="location.reload()" style="margin-top:5px;padding:8px 15px;border:1px solid #a86bd2;border-radius:10px;background:#35184b;color:#fff;font:700 11px Cairo,Arial,sans-serif">إعادة المحاولة</button>';}}
- const mountPlayers=()=>{
-  if(!window.YT||!window.YT.Player||sloomYouTubePlayers.length)return;
-  try{
-   const player=new YT.Player('sloom-youtube-player-0',{
-    width:'100%',height:'100%',
-    playerVars:{autoplay:1,controls:1,disablekb:0,fs:1,iv_load_policy:3,rel:0,playsinline:1,listType:'playlist',list:sloomOfficialUploadPlaylists[sloomYouTubeChannelIndex],index:0},
-    events:{
-     onReady:event=>{const box=document.getElementById('sloom-video-fallback');if(box)box.remove();event.target.mute();event.target.playVideo();},
-     onError:()=>fallback(),
-     onStateChange:event=>{
-      if(event.data!==YT.PlayerState.ENDED)return;
-      const list=event.target.getPlaylist()||[];
-      const index=event.target.getPlaylistIndex();
-      if(list.length&&index>=list.length-1){
-       sloomYouTubeChannelIndex=(sloomYouTubeChannelIndex+1)%sloomOfficialUploadPlaylists.length;
-       event.target.loadPlaylist({listType:'playlist',list:sloomOfficialUploadPlaylists[sloomYouTubeChannelIndex],index:0});
-      }
-     }
-    }
-   });
-   sloomYouTubePlayers.push(player);
-  }catch(error){console.warn('[SLOOM365 video]',error);fallback();}
- };
- if(window.YT&&window.YT.Player){mountPlayers();return;}
- if(!sloomYouTubeApiLoading){
-  sloomYouTubeApiLoading=true;
-  const previousReady=window.onYouTubeIframeAPIReady;
-  window.onYouTubeIframeAPIReady=function(){
-   if(typeof previousReady==='function')try{previousReady();}catch(error){}
-   mountPlayers();
-  };
-  const api=document.createElement('script');
-  api.src='https://www.youtube.com/iframe_api';
-  api.async=true;
-  api.onerror=fallback;
-  document.head.appendChild(api);
- }
- setTimeout(()=>{if(!screen.querySelector('iframe'))fallback();},12000);
-}
-
-// Start the single 16:9 video player independently of the news feed.
-if(document.readyState==='loading'){
- document.addEventListener('DOMContentLoaded',()=>renderSloomAutoHighlights(),{once:true});
-}else{
- renderSloomAutoHighlights();
-}
-
+// ScoreBat is the only player inside the dedicated video screen.
+function renderSloomAutoHighlights(){ return; }
 
 /* SLOOM KORA 365 — smart single-screen lineup mode */
 let sloomSmartLineupBusy=false;
@@ -2078,55 +2017,7 @@ function sloomSmartCandidates(){
  });
  return items.sort((a,b)=>a.priority-b.priority||(a.priority===0?b.start-a.start:a.start-b.start));
 }
-async function refreshSloomSmartScreen(){
- if(sloomSmartLineupBusy||!document.querySelector('#sloom-video-screen .sloom-summary-screen'))return;
- const candidates=sloomSmartCandidates().filter(x=>x.match.status==='in');
- const screen=document.querySelector('#sloom-video-screen .sloom-summary-screen');
- if(!screen)return;
- if(!candidates.length){
-  sloomSmartLineupLastKey='';
-  let overlay=document.getElementById('sloom-smart-lineup');
-  if(!overlay){sloomSmartScreenStyle();overlay=document.createElement('div');overlay.id='sloom-smart-lineup';screen.appendChild(overlay);}
-  overlay.className='smart-live-score';
-  overlay.innerHTML='<div class="smart-top"><b>⚽ شاشة المباريات المباشرة</b><small>سلوم كورة 365</small></div><div class="smart-score-status">لا توجد مباراة مباشرة حالياً</div><div class="smart-note">ستظهر المباريات هنا تلقائياً عند انطلاقها</div>';
-  return;
- }
- const index=window.sloomLiveCarouselIndex||0;
- const target=candidates[index%candidates.length];
- window.sloomLiveCarouselIndex=(index+1)%candidates.length;
- const key=target.key+':'+target.match.id;
- sloomSmartLineupBusy=true;sloomSmartLineupLastCheck=Date.now();
- try{
-  const m=target.match,h=m.home||{},away=m.away||{};
-  const leaguePath=String(target.key).replace('soccer/','');
-  let data=null;
-  try{
-   const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(m.id)+'&lang=ar';
-   data=await fetchEspnJson(url,{ttl:45000,timeout:9000,retries:1});
-  }catch(error){console.warn('[SLOOM365 live screen]',key,error);}
-  const groups=Array.isArray(data?.rosters)?data.rosters:[];
-  const builtCards=groups.slice(0,2).map(sloomBuildSmartTeam);
-  const homeName=arTeam(h.name||'الفريق الأول'),awayName=arTeam(away.name||'الفريق الثاني');
-  const homeLogo=h.logo?'<img src="'+esc(h.logo)+'" alt="'+esc(homeName)+'">':'<span class="smart-logo-fallback">⚽</span>';
-  const awayLogo=away.logo?'<img src="'+esc(away.logo)+'" alt="'+esc(awayName)+'">':'<span class="smart-logo-fallback">⚽</span>';
-  const status=sloomIsHalftime(m)?'استراحة بين الشوطين':'الدقيقة '+sloomMatchMinute(m);
-  const venue=data?.header?.competitions?.[0]?.venue?.fullName||data?.gameInfo?.venue?.fullName||m.venue||'الملعب غير متاح';
-  const scoring=Array.isArray(data?.scoringPlays)?data.scoringPlays.slice(-4).map(p=>{
-   const scorer=p?.athletesInvolved?.[0]?.displayName||p?.text||'';
-   return scorer?'<span>⚽ '+esc(arTeam(scorer))+'</span>':'';
-  }).filter(Boolean).join(''):'';
-  let overlay=document.getElementById('sloom-smart-lineup');
-  if(!overlay){sloomSmartScreenStyle();overlay=document.createElement('div');overlay.id='sloom-smart-lineup';screen.appendChild(overlay);}
-  overlay.className='smart-live-score';
-  const score='<div class="smart-score-teams"><div class="smart-score-team">'+homeLogo+'<span>'+esc(homeName)+'</span></div><div class="smart-score">'+esc(String(h.score??'0'))+' - '+esc(String(away.score??'0'))+'</div><div class="smart-score-team">'+awayLogo+'<span>'+esc(awayName)+'</span></div></div>';
-  const detail='<div class="smart-match-details"><span>🏆 '+esc(target.league.name||'كرة القدم')+'</span><span>⏱ '+esc(status)+'</span><span>🏟 '+esc(venue)+'</span>'+(scoring?'<div class="smart-scorers">'+scoring+'</div>':'')+'</div>';
-  const lineups=builtCards.some(Boolean)?'<div class="smart-teams">'+builtCards.map((card,i)=>card||'<section class="smart-team smart-team-unavailable"><header class="smart-team-head"><b>'+esc(i===0?homeName:awayName)+'</b><small>التشكيلة غير منشورة</small></header><div class="smart-rows"><div class="smart-row"><span class="smart-name">لم يعلن المصدر التشكيلة بعد</span></div></div></section>').join('')+'</div>':'';
-  overlay.innerHTML='<div class="smart-top"><b>🔴 مباراة مباشرة · '+esc(target.league.name||'كرة القدم')+'</b><small>'+(candidates.length>1?'المباراة '+(index%candidates.length+1)+' من '+candidates.length:'سلوم كورة 365')+'</small></div>'+score+detail+lineups+'<div class="smart-note">تتغير الشاشة تلقائياً بين جميع المباريات المباشرة</div>';
-  sloomSmartLineupLastKey=key;
- }finally{sloomSmartLineupBusy=false;}
-}
-setTimeout(refreshSloomSmartScreen,5000);
-setInterval(refreshSloomSmartScreen,15000);
+async function refreshSloomSmartScreen(){ return; }
 
 function sloomIsHalftime(match){
  const statusText=[match.status_short,match.status_detail,match.detail,match.clock].filter(Boolean).join(' ').toLowerCase();
