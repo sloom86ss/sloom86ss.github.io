@@ -2251,7 +2251,7 @@ async function loadMatchEvents(details,leagueKey,eventId){
  const url='https://site.api.espn.com/apis/site/v2/sports/soccer/'+encodeURIComponent(leaguePath)+'/summary?event='+encodeURIComponent(eventId)+'&lang=ar';
  try{
   const data=await fetchEspnJson(url,{ttl:20000,timeout:10000,retries:1});
-  const eventList=Array.isArray(data.keyEvents)?data.keyEvents:Array.isArray(data.plays)?data.plays:Array.isArray(data.commentary)?data.commentary:[];
+  const eventList=[data.keyEvents,data.plays,data.commentary].find(list=>Array.isArray(list)&&list.length>0)||[];
   const arabicNames={
    'Cristiano Ronaldo':'كريستيانو رونالدو','Lionel Messi':'ليونيل ميسي','Kylian Mbappe':'كيليان مبابي','Kylian Mbappé':'كيليان مبابي',
    'Erling Haaland':'إيرلينغ هالاند','Mohamed Salah':'محمد صلاح','Sadio Mane':'ساديو ماني','Sadio Mané':'ساديو ماني',
