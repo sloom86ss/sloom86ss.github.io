@@ -2536,8 +2536,32 @@ setInterval(tickSloomClocks,1000);tickSloomClocks();
 </script>
 <script>
 let sloomNotificationEnabled=false;
+let sloomGoalAudioContext=null;
+let sloomGoalAudioReady=false;
 const sloomNotificationButton=document.getElementById('enableNotifications');
 const sloomNotificationHelp=document.getElementById('notificationHelp')||document.getElementById('installAppHelp');
+function unlockSloomGoalSound(){
+ try{
+  const AudioCtx=window.AudioContext||window.webkitAudioContext;
+  if(!AudioCtx)return;
+  if(!sloomGoalAudioContext)sloomGoalAudioContext=new AudioCtx();
+  if(sloomGoalAudioContext.state==='suspended')sloomGoalAudioContext.resume();
+  sloomGoalAudioReady=true;
+ }catch(e){sloomGoalAudioReady=false;}
+}
+function playSloomGoalSound(){
+ if(!sloomGoalAudioReady||!sloomGoalAudioContext)return;
+ try{
+  const ctx=sloomGoalAudioContext;
+  [0,0.22,0.44].forEach((delay,index)=>{
+   const osc=ctx.createOscillator(),gain=ctx.createGain(),start=ctx.currentTime+delay;
+   osc.type='sine';osc.frequency.setValueAtTime(index===1?1046:880,start);
+   gain.gain.setValueAtTime(0.0001,start);gain.gain.exponentialRampToValueAtTime(0.18,start+0.025);
+   gain.gain.exponentialRampToValueAtTime(0.0001,start+0.18);
+   osc.connect(gain);gain.connect(ctx.destination);osc.start(start);osc.stop(start+0.2);
+  });
+ }catch(e){}
+}
 function updateSloomNotificationButton(){
  if(!sloomNotificationButton)return;
  if(!('Notification' in window)){sloomNotificationButton.textContent='🔔 الإشعارات غير مدعومة';sloomNotificationButton.disabled=true;return;}
@@ -2546,13 +2570,14 @@ function updateSloomNotificationButton(){
  else{sloomNotificationButton.textContent='🔔 تفعيل الإشعارات';}
 }
 sloomNotificationButton?.addEventListener('click',async()=>{
+ unlockSloomGoalSound();
  if(!('Notification' in window)){if(sloomNotificationHelp)sloomNotificationHelp.textContent='متصفحك لا يدعم إشعارات الويب.';return;}
  if(!('serviceWorker' in navigator)){if(sloomNotificationHelp)sloomNotificationHelp.textContent='يلزم متصفح يدعم Service Worker لتفعيل التنبيهات.';return;}
  try{
   const permission=await Notification.requestPermission();
   sloomNotificationEnabled=permission==='granted';
   updateSloomNotificationButton();
-  if(sloomNotificationHelp)sloomNotificationHelp.textContent=permission==='granted'?'تم تفعيل الإشعارات. ستصلك تنبيهات الأهداف الجديدة أثناء فتح الموقع.':'لم يتم السماح بالإشعارات. يمكنك تفعيلها من إعدادات المتصفح.';
+  if(sloomNotificationHelp)sloomNotificationHelp.textContent=permission==='granted'?'تم تفعيل إشعارات الأهداف والصوت أثناء فتح الموقع.':'لم يتم السماح بالإشعارات. يمكنك تفعيلها من إعدادات المتصفح.';
  }catch(error){if(sloomNotificationHelp)sloomNotificationHelp.textContent='تعذر تفعيل الإشعارات؛ تحقق من إذن المتصفح.';}
 });
 function notifySloomScoreChanges(previous,next){
@@ -2561,12 +2586,13 @@ function notifySloomScoreChanges(previous,next){
  Object.entries(previous||{}).filter(([key])=>isSloomAllowedLeague(key)).forEach(([,league])=>(league.matches||[]).forEach(m=>oldMatches.set(String(m.id),m)));
  Object.entries(next||{}).filter(([key])=>isSloomAllowedLeague(key)).forEach(([,league])=>(league.matches||[]).forEach(m=>{
   const old=oldMatches.get(String(m.id));if(!old||m.status!=='in')return;
-  const oldScore=Number(old.home?.score||0)+':'+Number(old.away?.score||0);
-  const newScore=Number(m.home?.score||0)+':'+Number(m.away?.score||0);
-  if(oldScore===newScore)return;
-  const title='⚽ هدف جديد — SLOOM FOOTBALL365';
+  const oldTotal=Number(old.home?.score||0)+Number(old.away?.score||0);
+  const newTotal=Number(m.home?.score||0)+Number(m.away?.score||0);
+  if(!Number.isFinite(oldTotal)||!Number.isFinite(newTotal)||newTotal<=oldTotal)return;
+  playSloomGoalSound();
+  const title='⚽ هدف جديد — سلوم كورة 365';
   const body=(m.home?.name||'الفريق الأول')+' '+(m.home?.score??0)+' - '+(m.away?.score??0)+' '+(m.away?.name||'الفريق الثاني');
-  if('serviceWorker' in navigator)navigator.serviceWorker.ready.then(reg=>reg.showNotification(title,{body,icon:'/assets/sloom-icon-192.svg',tag:'sloom-goal-'+m.id,renotify:true})).catch(()=>{});
+  if('serviceWorker' in navigator)navigator.serviceWorker.ready.then(reg=>reg.showNotification(title,{body,icon:'/assets/sloom-icon-192.svg',tag:'sloom-goal-'+m.id+'-'+newTotal,renotify:true})).catch(()=>{});
   else new Notification(title,{body});
  }));
 }
