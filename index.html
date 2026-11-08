@@ -2344,7 +2344,7 @@ async function loadMatchEvents(details,leagueKey,eventId){
    '<button class="match-tab" data-tab="stats"><span class="tab-icon">▥</span><span>إحصائيات</span></button></nav>'+
    '<section class="match-tab-panel" data-panel="matches">'+matchHtml+'</section>'+
    '<section class="match-tab-panel active" data-panel="lineup">'+lineupHtml+'</section>'+
-   '<section class="match-tab-panel" data-panel="live">'+liveHtml+'</section>'+
+   '<section class="match-tab-panel" data-panel="live">'+liveHtml+eventsHtml+'</section>'+
    '<section class="match-tab-panel" data-panel="stats">'+statsHtml+'</section>';
   panel.querySelectorAll('.match-tab').forEach(btn=>btn.addEventListener('click',()=>{
    panel.querySelectorAll('.match-tab').forEach(x=>x.classList.toggle('active',x===btn));
