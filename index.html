@@ -1798,7 +1798,7 @@ a{accent-color:#b77aff}
 
 <div id="sloomSiteError" class="site-error-alert" role="alert" aria-live="assertive"></div>
 <section id="newsTicker" class="ticker" aria-label="شريط أخبار كرة القدم">
- <span class="ticker-label">🔴 أخبار عاجلة</span>
+ <span class="ticker-label">🔴 عاجل | انتقالات</span>
  <div class="ticker-window"><div class="ticker-track" id="tickerTrack"><span>جارٍ تحميل آخر الأخبار الرياضية…</span></div></div>
 </section>
 <section class="sloom-match-marquee" aria-label="شريط المباريات المتحرك"><div class="sloom-match-marquee-window"><div class="sloom-match-marquee-track" id="sloomMatchTicker"><span class="sloom-match-ticker-empty">⚽ متابعة مباريات كرة القدم</span></div></div></section>
@@ -3102,6 +3102,15 @@ body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
  #clubModal .club-fact b{font-size:13px!important}
  #clubModal .match-detail-body>div{font-size:12px!important}
 }
+</style>
+
+
+<style id="sloom365-breaking-transfers-ticker">
+/* One existing ticker for verified breaking football news and transfer headlines */
+#newsTicker{background:linear-gradient(100deg,#160d20,#09070d 58%,#21102d)!important;border:1px solid #75469a!important;border-bottom:2px solid #e33c59!important;border-radius:13px!important;box-shadow:0 5px 18px #0007!important;color:#fff!important}
+#newsTicker .ticker-label{background:linear-gradient(135deg,#f0445c,#a90e38)!important;color:#fff!important;border:1px solid #ff8a9b!important;box-shadow:0 0 12px #e33c5944!important}
+#tickerTrack .ticker-breaking{background:#e32648!important;color:#fff!important}
+#tickerTrack small{color:#d5c2e4!important}
 </style>
 
 </body>
