@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-08T22:46:28Z",
-  "source_updated_at": "2026-11-08T22:45:59.408456+00:00",
+  "checked_at": "2026-11-08T23:17:36Z",
+  "source_updated_at": "2026-11-08T23:16:35.521401+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
