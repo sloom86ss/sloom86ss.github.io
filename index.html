@@ -2426,7 +2426,11 @@ window.addEventListener('error',e=>showSiteError('حدث خطأ JavaScript في 
 window.addEventListener('unhandledrejection',e=>showSiteError('تعذر إكمال إحدى العمليات: '+String(e.reason?.message||e.reason||'خطأ غير معروف')));
 async function load(){try{const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();checkDataErrors(d);const nextSportsData=d.leagues||d;Object.values(nextSportsData).forEach(league=>(league.matches||[]).forEach(match=>{if(match.status==='in'&&!match.clock_received_at)match.clock_received_at=league.live_checked_at||league.updated_at||d.generated_at||new Date().toISOString()}));notifySloomScoreChanges(sportsData,nextSportsData);dataGeneratedAt=d.generated_at||d.news_sources_updated_at||null;sportsData=nextSportsData;sportsData.news_sources=d.news_sources||[];render();tickSloomClocks()}catch(e){showSiteError('تعذر تحميل بيانات المباريات والأخبار. '+(e.message||'تحقق من اتصال الموقع بمصدر البيانات')+' — سنعيد المحاولة تلقائياً.');document.getElementById('leagues').innerHTML='<div class="empty">تعذر تحميل البيانات حالياً. حاول تحديث الصفحة بعد قليل.</div>';console.error(e)}}
 
+let sloomLiveRefreshInFlight=false;
 async function refreshLiveScores(){
+ if(sloomLiveRefreshInFlight)return;
+ sloomLiveRefreshInFlight=true;
+ try{
  const now=Date.now();
  const omanDay=offset=>{
   const d=new Date(now+offset*86400000);
@@ -2441,7 +2445,9 @@ async function refreshLiveScores(){
  }));
  if(!targets.length)return;
  const previous=JSON.parse(JSON.stringify(sportsData));
+ let liveDataChanged=false;
  const results=await Promise.allSettled(targets.map(async([key,league])=>{
+  const beforeMatches=JSON.stringify(league.matches||[]);
   const liveUrl='https://site.api.espn.com/apis/site/v2/sports/'+key+'/scoreboard?dates='+dateRange+'&limit=500&_='+Date.now();
   const payload=await fetchEspnJson(liveUrl,{ttl:10000,timeout:8000,retries:1});
   if(!payload||!Array.isArray(payload.events))throw Error('ESPN returned an invalid scoreboard payload');
@@ -2483,6 +2489,7 @@ async function refreshLiveScores(){
   }
   if(!merged)throw Error('No matching fixtures in ESPN response; previous data preserved');
   league.matches=Array.from(byId.values()).sort((a,b)=>Date.parse(a.date||a.time||0)-Date.parse(b.date||b.time||0));
+  if(JSON.stringify(league.matches)!==beforeMatches)liveDataChanged=true;
   league.updated_at=new Date().toISOString();
   league.live_checked_at=league.updated_at;
   league.live_refresh_error='';
@@ -2493,7 +2500,8 @@ async function refreshLiveScores(){
   if(result.status==='rejected')console.warn('[SLOOM365 live refresh]',targets[index][0],result.reason?.message||result.reason);
  });
  notifySloomScoreChanges(previous,sportsData);
- render();tickSloomClocks();
+ if(liveDataChanged){render();tickSloomClocks();}
+ }finally{sloomLiveRefreshInFlight=false;}
 }
 
 document.getElementById('year').textContent=new Date().getFullYear();load();setInterval(load,300000);
