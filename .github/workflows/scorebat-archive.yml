@@ -94,7 +94,7 @@ jobs:
               "provider": "ScoreBat Free Feed",
               "response": result
           }
-          path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+          path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
           print(f"ScoreBat returned {len(incoming)} entries; {added} new matches merged; {len(result)} total archived.")
           PY
       - name: Commit archive
