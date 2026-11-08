@@ -1,4 +1,4 @@
-name: Update official Premier League highlights archive
+name: Update ScoreBat football highlights archive
 on:
   workflow_dispatch:
   push:
@@ -17,23 +17,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Fetch official Premier League YouTube RSS
+      - name: Fetch ScoreBat free feed and merge archive
         run: |
           python3 - <<'PY'
-          import json, re, urllib.request, xml.etree.ElementTree as ET
+          import json, urllib.request
           from datetime import datetime, timezone
           from pathlib import Path
 
-          channel_id = "UCG5qGWdu8nIRZqJ_GgDwQ-w"
-          feed_url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
-          req = urllib.request.Request(feed_url, headers={"User-Agent": "SLOOM-KORA-365/1.0"})
-          with urllib.request.urlopen(req, timeout=30) as response:
-              root = ET.fromstring(response.read())
+          feed_url = "https://www.scorebat.com/video-api/v3/free-feed/?token=NDE4MDI0XzE3OTQxNDUwODNfNzVlMzZiY2U1YmYwNDA2ZDRkYjg1OTFlYTIxMTFiNGNhM2QxZWI5Ng%3D%3D"
+          request = urllib.request.Request(
+              feed_url,
+              headers={"User-Agent": "SLOOM-KORA-365/1.0", "Accept": "application/json"}
+          )
+          with urllib.request.urlopen(request, timeout=45) as response:
+              data = json.loads(response.read().decode("utf-8"))
 
-          ns = {
-              "atom": "http://www.w3.org/2005/Atom",
-              "yt": "http://www.youtube.com/xml/schemas/2015",
-          }
+          incoming = data.get("response") if isinstance(data, dict) else None
+          if not isinstance(incoming, list):
+              raise RuntimeError("ScoreBat response format was not a response list")
+
           path = Path("data/scorebat-highlights.json")
           path.parent.mkdir(parents=True, exist_ok=True)
           try:
@@ -44,30 +46,43 @@ jobs:
           merged = {}
           for item in old.get("response", []):
               if isinstance(item, dict):
-                  key = str(item.get("video_id") or item.get("title", "") + "|" + str(item.get("date", "")))
+                  key = str(item.get("matchviewUrl") or item.get("source_url") or item.get("video_id") or (item.get("title", "") + "|" + str(item.get("date", ""))))
                   merged[key] = item
 
-          accepted = re.compile(r"highlight|goal|goals|matchday|best saves|best goals|extended", re.I)
-          received = 0
-          for entry in root.findall("atom:entry", ns):
-              video_id = (entry.findtext("yt:videoId", default="", namespaces=ns) or "").strip()
-              title = (entry.findtext("atom:title", default="", namespaces=ns) or "").strip()
-              published = (entry.findtext("atom:published", default="", namespaces=ns) or "").strip()
-              if not video_id or not title or not accepted.search(title):
+          added = 0
+          for match in incoming:
+              if not isinstance(match, dict):
                   continue
-              received += 1
-              merged[video_id] = {
-                  "video_id": video_id,
+              title = str(match.get("title") or "").strip()
+              videos = match.get("videos") or []
+              videos = [
+                  {"title": str(video.get("title") or "ملخص المباراة"),
+                   "embed": str(video.get("embed") or "")}
+                  for video in videos
+                  if isinstance(video, dict) and video.get("embed")
+              ]
+              if not title or not videos:
+                  continue
+
+              competition = match.get("competition")
+              if isinstance(competition, dict):
+                  competition = competition.get("name") or ""
+              competition = str(competition or "كرة القدم")
+              date = str(match.get("date") or "")
+              source_url = str(match.get("matchviewUrl") or match.get("url") or "")
+              key = str(match.get("matchviewUrl") or source_url or (title + "|" + date))
+              record = {
+                  "video_id": key,
                   "title": title,
-                  "competition": "الدوري الإنجليزي الممتاز",
-                  "date": published,
-                  "videos": [{
-                      "title": "ملخص المباراة الرسمي",
-                      "embed": f"https://www.youtube.com/embed/{video_id}"
-                  }],
-                  "source": "قناة الدوري الإنجليزي الرسمية على YouTube",
-                  "source_url": f"https://www.youtube.com/watch?v={video_id}"
+                  "competition": competition,
+                  "date": date,
+                  "videos": videos,
+                  "source": "ScoreBat",
+                  "source_url": source_url
               }
+              if key not in merged:
+                  added += 1
+              merged[key] = record
 
           result = sorted(
               merged.values(),
@@ -76,16 +91,16 @@ jobs:
           )
           payload = {
               "updated_at": datetime.now(timezone.utc).isoformat(),
-              "provider": "Official Premier League YouTube RSS",
+              "provider": "ScoreBat Free Feed",
               "response": result
           }
-          path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-          print(f"Archived {received} new official uploads; {len(result)} videos retained.")
+          path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+          print(f"ScoreBat returned {len(incoming)} entries; {added} new matches merged; {len(result)} total archived.")
           PY
       - name: Commit archive
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/scorebat-highlights.json
-          git diff --cached --quiet || git commit -m "Update official Premier League highlights archive"
+          git diff --cached --quiet || git commit -m "Update ScoreBat highlights archive"
           git push
