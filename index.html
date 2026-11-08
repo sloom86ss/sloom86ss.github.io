@@ -1816,11 +1816,22 @@ a{accent-color:#b77aff}
 
 
 
-<section class="live-board" id="liveBoard" aria-live="polite" aria-label="المباريات المباشرة">
- <div class="live-board-head"><h2>🔴 المباريات المباشرة الآن</h2><span id="liveBoardCount">جارٍ التحقق من المصدر…</span></div>
- <div class="live-board-list" id="liveBoardList"><div class="empty">جارٍ تحميل حالة المباريات…</div></div>
- <div class="live-board-foot">تُراجع نتائج المباريات المباشرة كل 30 ثانية من ESPN عند توفرها، وتُحدّث بقية البيانات تلقائياً كل 5 دقائق.</div>
+<section id="liveBoard" class="scorebat-live-primary" aria-label="واجهة ScoreBat للمباريات المباشرة">
+ <div class="scorebat-live-heading"><span>🔴 مباشر الآن</span><b>واجهة ScoreBat الرسمية</b></div>
+ <div class="scorebat-live-frame">
+  <iframe src="https://www.scorebat.com/embed/livescore/?token=NDE4MDI0XzE3OTQxNDU1NjdfOWYxZjY2YmQyNDBjYWU3MGUwMDUyYzEyNWVkNzBhZTAyMGVhZGVjOA==&amp;pref=%7B%22language%22%3A%22ar%22%2C%22limitwidth%22%3Atrue%7D" title="ScoreBat - النتائج المباشرة باللغة العربية" frameborder="0" allowfullscreen allow="autoplay; fullscreen" loading="eager"></iframe>
+ </div>
 </section>
+<style id="sloom-scorebat-primary-style">
+.scorebat-live-primary{width:100%;max-width:1000px;margin:10px auto 20px;padding:12px;border:1px solid #75469a;border-radius:16px;background:linear-gradient(145deg,#1b1028,#09070d);box-shadow:0 8px 26px #0007;overflow:hidden}
+.scorebat-live-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;color:#f5eaff;font:800 13px Cairo,Arial,sans-serif}
+.scorebat-live-heading span{color:#ff6178}
+.scorebat-live-heading b{color:#d9b7f1;font-size:11px}
+.scorebat-live-frame{width:100%;height:760px;overflow:hidden;border-radius:11px;background:#09070d}
+.scorebat-live-frame iframe{display:block;width:100%;height:100%;min-height:680px;border:0;background:#09070d}
+@media(max-width:520px){.scorebat-live-primary{padding:8px;margin:8px auto 16px}.scorebat-live-frame{height:760px}.scorebat-live-frame iframe{min-height:760px}.scorebat-live-heading{font-size:12px}}
+</style>
+<script>(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src='https://www.scorebat.com/embed/embed.js?v=arrv';fjs.parentNode.insertBefore(js,fjs);}(document,'script','scorebat-jssdk'));</script>
 
 <section class="upcoming-board" id="upcomingBoard" aria-live="polite" aria-label="المباريات القادمة قريباً">
  <div class="upcoming-board-head"><h2>⏳ المباريات القادمة بعد قليل</h2><span id="upcomingBoardCount">جارٍ التحقق من المواعيد…</span></div>
