@@ -1,4 +1,34 @@
 {
-  "updated_at": null,
-  "response": []
+  "updated_at": "2026-11-08T13:36:35.325573+00:00",
+  "provider": "Official Premier League YouTube RSS",
+  "response": [
+    {
+      "video_id": "-qlzBL66Ges",
+      "title": "Liam Delap WONDERGOAL + Ronaldo SIU 🤯",
+      "competition": "الدوري الإنجليزي الممتاز",
+      "date": "2026-11-07T22:20:31+00:00",
+      "videos": [
+        {
+          "title": "ملخص المباراة الرسمي",
+          "embed": "https://www.youtube.com/embed/-qlzBL66Ges"
+        }
+      ],
+      "source": "قناة الدوري الإنجليزي الرسمية على YouTube",
+      "source_url": "https://www.youtube.com/watch?v=-qlzBL66Ges"
+    },
+    {
+      "video_id": "QEwj-nLuApc",
+      "title": "Oli McBurnie RATES Hull City's Best Premier League Goals",
+      "competition": "الدوري الإنجليزي الممتاز",
+      "date": "2026-11-05T14:01:23+00:00",
+      "videos": [
+        {
+          "title": "ملخص المباراة الرسمي",
+          "embed": "https://www.youtube.com/embed/QEwj-nLuApc"
+        }
+      ],
+      "source": "قناة الدوري الإنجليزي الرسمية على YouTube",
+      "source_url": "https://www.youtube.com/watch?v=QEwj-nLuApc"
+    }
+  ]
 }
