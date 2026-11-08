@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-08T06:06:16Z",
-  "source_updated_at": "2026-11-08T06:06:11.712532+00:00",
+  "checked_at": "2026-11-08T06:57:56Z",
+  "source_updated_at": "2026-11-08T06:57:04.212435+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -80,28 +80,6 @@
       "date": "2026-11-08T00:00:00+00:00",
       "time": "2026-11-08T00:00:00+00:00",
       "home": {
-        "name": "La Tribu de Cd. Juarez",
-        "logo": "https://img.thesports.com/football/team/f7b78b82af5bdb2bf036d778aae58fa3.png",
-        "score": "8"
-      },
-      "away": {
-        "name": "Club Canoneros Marina",
-        "logo": "https://img.thesports.com/football/team/4a276e4c43175727cddae86756681832.png",
-        "score": "0"
-      },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "MEX Liga Premier",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:4",
-      "slug": "",
-      "date": "2026-11-08T00:00:00+00:00",
-      "time": "2026-11-08T00:00:00+00:00",
-      "home": {
         "name": "Louisville City FC",
         "logo": "https://img.thesports.com/football/team/8f4c8b7e2cd333ab2e32d65bcbd3c7ff.png",
         "score": "3"
@@ -119,7 +97,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:5",
+      "id": "sportscore:4",
       "slug": "",
       "date": "2026-11-08T00:00:00+00:00",
       "time": "2026-11-08T00:00:00+00:00",
@@ -141,7 +119,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:6",
+      "id": "sportscore:5",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -163,7 +141,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:7",
+      "id": "sportscore:6",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -185,7 +163,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:8",
+      "id": "sportscore:7",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -207,7 +185,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:9",
+      "id": "sportscore:8",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -229,7 +207,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:10",
+      "id": "sportscore:9",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -251,7 +229,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:11",
+      "id": "sportscore:10",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -273,7 +251,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:12",
+      "id": "sportscore:11",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -295,7 +273,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:13",
+      "id": "sportscore:12",
       "slug": "",
       "date": "2026-11-08T00:30:00+00:00",
       "time": "2026-11-08T00:30:00+00:00",
@@ -317,7 +295,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:14",
+      "id": "sportscore:13",
       "slug": "",
       "date": "2026-11-08T00:30:00+00:00",
       "time": "2026-11-08T00:30:00+00:00",
@@ -339,7 +317,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:15",
+      "id": "sportscore:14",
       "slug": "",
       "date": "2026-11-08T00:30:00+00:00",
       "time": "2026-11-08T00:30:00+00:00",
@@ -361,7 +339,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:16",
+      "id": "sportscore:15",
       "slug": "",
       "date": "2026-11-08T00:30:00+00:00",
       "time": "2026-11-08T00:30:00+00:00",
@@ -383,7 +361,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:17",
+      "id": "sportscore:16",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -405,7 +383,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:18",
+      "id": "sportscore:17",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -427,7 +405,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:19",
+      "id": "sportscore:18",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -449,7 +427,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:20",
+      "id": "sportscore:19",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -471,7 +449,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:21",
+      "id": "sportscore:20",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -493,7 +471,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:22",
+      "id": "sportscore:21",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -515,19 +493,41 @@
       "data_source": "SportScore"
     },
     {
+      "id": "sportscore:22",
+      "slug": "",
+      "date": "2026-11-08T01:00:00+00:00",
+      "time": "2026-11-08T01:00:00+00:00",
+      "home": {
+        "name": "Chiangmai U15",
+        "logo": "https://img.thesports.com/football/team/48d6ebb20dd8de98c911d90bef31cea9.png",
+        "score": "3"
+      },
+      "away": {
+        "name": "Hangzhou U15",
+        "logo": "https://img.thesports.com/football/team/b700f59b0d33488fab65e4ecc5864631.png",
+        "score": "0"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Hangzhou \"Qianchao Cup\" International Youth Football Invitational Tournament",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
       "id": "sportscore:23",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
       "home": {
-        "name": "Group A 6th",
-        "logo": "https://img.thesports.com/football/team/0f8324b374874e5e6e0e14eb1726c8ac.png",
-        "score": "3"
+        "name": "Bournemouth FC U15",
+        "logo": "https://img.thesports.com/football/team/8aaeac01829af24e53e32ec9ac9480d4.png",
+        "score": "1"
       },
       "away": {
-        "name": "Group B 6th",
-        "logo": "https://img.thesports.com/football/team/7dca44ae4d8f0c282d2728938b5fc57a.png",
-        "score": "0"
+        "name": "Standard Liege U15",
+        "logo": "https://img.thesports.com/football/team/966593c6f4b646808f6eade21e05d0ba.png",
+        "score": "2"
       },
       "status": "post",
       "detail": "Finished",
@@ -542,18 +542,18 @@
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
       "home": {
-        "name": "Gruop A 5th",
-        "logo": "https://img.thesports.com/football/team/b761910d4aee8d590e45305c1839bcf0.png",
-        "score": "1"
+        "name": "La Tribu de Cd. Juarez",
+        "logo": "https://img.thesports.com/football/team/f7b78b82af5bdb2bf036d778aae58fa3.png",
+        "score": "8"
       },
       "away": {
-        "name": "Group B 5th",
-        "logo": "https://img.thesports.com/football/team/e5375a8e6a3f1be35c18f9d4197f1992.png",
-        "score": "2"
+        "name": "Club Canoneros Marina",
+        "logo": "https://img.thesports.com/football/team/4a276e4c43175727cddae86756681832.png",
+        "score": "0"
       },
       "status": "post",
       "detail": "Finished",
-      "competition": "Hangzhou \"Qianchao Cup\" International Youth Football Invitational Tournament",
+      "competition": "MEX Liga Premier",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -781,28 +781,6 @@
     {
       "id": "sportscore:35",
       "slug": "",
-      "date": "2026-11-08T01:15:00+00:00",
-      "time": "2026-11-08T01:15:00+00:00",
-      "home": {
-        "name": "America de Cali",
-        "logo": "https://img.thesports.com/football/team/ed6ae7fa894cb5bdbccfd605d1d6ad04.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Deportivo Cali",
-        "logo": "https://img.thesports.com/football/team/b997a2811a0caed43ff38b631a708420.png",
-        "score": "0"
-      },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Categoría Primera A",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:36",
-      "slug": "",
       "date": "2026-11-08T01:30:00+00:00",
       "time": "2026-11-08T01:30:00+00:00",
       "home": {
@@ -823,7 +801,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:37",
+      "id": "sportscore:36",
       "slug": "",
       "date": "2026-11-08T01:30:00+00:00",
       "time": "2026-11-08T01:30:00+00:00",
@@ -845,7 +823,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:38",
+      "id": "sportscore:37",
       "slug": "",
       "date": "2026-11-08T01:30:00+00:00",
       "time": "2026-11-08T01:30:00+00:00",
@@ -867,7 +845,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:39",
+      "id": "sportscore:38",
       "slug": "",
       "date": "2026-11-08T01:30:00+00:00",
       "time": "2026-11-08T01:30:00+00:00",
@@ -884,6 +862,28 @@
       "status": "post",
       "detail": "Finished",
       "competition": "BRA WD1",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:39",
+      "slug": "",
+      "date": "2026-11-08T01:45:00+00:00",
+      "time": "2026-11-08T01:45:00+00:00",
+      "home": {
+        "name": "America de Cali",
+        "logo": "https://img.thesports.com/football/team/ed6ae7fa894cb5bdbccfd605d1d6ad04.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Deportivo Cali",
+        "logo": "https://img.thesports.com/football/team/b997a2811a0caed43ff38b631a708420.png",
+        "score": "0"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Categoría Primera A",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -1001,8 +1001,8 @@
     {
       "id": "sportscore:45",
       "slug": "",
-      "date": "2026-11-08T02:00:00+00:00",
-      "time": "2026-11-08T02:00:00+00:00",
+      "date": "2026-11-08T02:15:00+00:00",
+      "time": "2026-11-08T02:15:00+00:00",
       "home": {
         "name": "Malaita Kingz",
         "logo": "https://img.thesports.com/football/team/3fe0e3609ec6539eee3cb3cff5a38276.png",
@@ -1070,28 +1070,6 @@
       "date": "2026-11-08T03:00:00+00:00",
       "time": "2026-11-08T03:00:00+00:00",
       "home": {
-        "name": "Sacramento Republic FC",
-        "logo": "https://img.thesports.com/football/team/3b1eedbf7ab45c8c57b3eeb7c7ade1c6.png",
-        "score": "2"
-      },
-      "away": {
-        "name": "El Paso Locomotive FC",
-        "logo": "https://img.thesports.com/football/team/327ba784c0f6eb8f2e6ae4494b523d70.png",
-        "score": "1"
-      },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "USL Championship",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:49",
-      "slug": "",
-      "date": "2026-11-08T03:00:00+00:00",
-      "time": "2026-11-08T03:00:00+00:00",
-      "home": {
         "name": "Club Atletico Tijuana",
         "logo": "https://img.thesports.com/football/team/a495a2f6b240e72b9a35d15190eacae9.png",
         "score": "2"
@@ -1104,6 +1082,28 @@
       "status": "post",
       "detail": "Finished",
       "competition": "Mexican TDP League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:49",
+      "slug": "",
+      "date": "2026-11-08T03:10:00+00:00",
+      "time": "2026-11-08T03:10:00+00:00",
+      "home": {
+        "name": "Pumas U.N.A.M.",
+        "logo": "https://img.thesports.com/football/team/7654a95374767f93f6bec6a3d4819f76.png",
+        "score": "2"
+      },
+      "away": {
+        "name": "Club America",
+        "logo": "https://img.thesports.com/football/team/775a930b77d31e8f8a6d6ba8afc17c03.png",
+        "score": "2"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Mexico Liga MX",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
