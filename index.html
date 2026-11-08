@@ -2426,8 +2426,39 @@ function renderUpcoming(){
 }
 
 const clubModal=document.getElementById('clubModal'),clubModalBody=document.getElementById('clubModalBody');
-function closeClubModal(){clubModal.classList.remove('open');document.body.style.overflow=''}
-function openMatchModal(info){
+let sloomAutoMatchTimer=null,sloomActiveMatchInfo=null;
+function stopSloomAutoMatch(){if(sloomAutoMatchTimer){clearInterval(sloomAutoMatchTimer);sloomAutoMatchTimer=null;}sloomActiveMatchInfo=null;}
+function getSloomLiveMatchQueue(){
+ const queue=[];
+ Object.entries(sportsData||{}).filter(([key,league])=>isSloomAllowedLeague(key)&&leagueIsFresh(league)).forEach(([key,league])=>(league.matches||[]).forEach(match=>{
+  if(match.status==='in')queue.push({league:league.name||key,leagueKey:key,match});
+ }));
+ return queue;
+}
+function sloomMatchIdentity(info){
+ const g=info?.match||{};
+ return String(g.id||[info?.leagueKey||'',g.home?.name||'',g.away?.name||'',g.date||g.time||''].join('|'));
+}
+function startSloomAutoMatch(){
+ if(sloomAutoMatchTimer){clearInterval(sloomAutoMatchTimer);sloomAutoMatchTimer=null;}
+ const initialQueue=getSloomLiveMatchQueue();
+ if(!sloomActiveMatchInfo||sloomActiveMatchInfo.match?.status!=='in'||initialQueue.length<2)return;
+ sloomAutoMatchTimer=setInterval(()=>{
+  if(!clubModal.classList.contains('open')){stopSloomAutoMatch();return;}
+  const queue=getSloomLiveMatchQueue();
+  if(queue.length<2){if(sloomAutoMatchTimer){clearInterval(sloomAutoMatchTimer);sloomAutoMatchTimer=null;}return;}
+  const currentId=sloomMatchIdentity(sloomActiveMatchInfo);
+  const currentIndex=queue.findIndex(item=>sloomMatchIdentity(item)===currentId);
+  const next=queue[(currentIndex<0?0:currentIndex+1)%queue.length];
+  sloomActiveMatchInfo=next;
+  openMatchModal(next,true);
+ },10000);
+}
+function closeClubModal(){stopSloomAutoMatch();clubModal.classList.remove('open');document.body.style.overflow=''}
+function openMatchModal(info,fromAuto=false){
+ sloomActiveMatchInfo=info;
+ if(!fromAuto){if(sloomAutoMatchTimer){clearInterval(sloomAutoMatchTimer);sloomAutoMatchTimer=null;}}
+
  const league=info.league||'مباراة',key=info.leagueKey||'',g=info.match||{},h=g.home||{},a=g.away||{};
  const home=arTeam(h.name||'الفريق الأول'),away=arTeam(a.name||'الفريق الثاني');
  const score=g.status==='pre'?'لم تبدأ':String(h.score??'—')+' - '+String(a.score??'—');
@@ -2440,10 +2471,12 @@ function openMatchModal(info){
  details.querySelector('.match-detail-body').innerHTML='<div class="event-muted">جارٍ جلب التشكيلات والأهداف والبطاقات والتبديلات من المصدر…</div>';
  target.appendChild(details);
  loadMatchEvents(details,key,g.id);
+ if(!fromAuto)startSloomAutoMatch();
 }
 clubModal.addEventListener('click',e=>{if(e.target===clubModal||e.target.closest('[data-club-close]'))closeClubModal()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeClubModal()});
 async function openClubDetails(team){
+ stopSloomAutoMatch();
  clubModal.classList.add('open');document.body.style.overflow='hidden';
  const name=arTeam(team.name),logo=team.logo||'';
  clubModalBody.innerHTML='<div class="club-loading">جارٍ البحث عن تاريخ '+esc(name)+' وإنجازاته من ويكيبيديا وويكي بيانات…</div>';
@@ -3041,5 +3074,35 @@ body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))!important}
 }
 </style>
 <style id="sloom365-news-ticker-only">#news{display:none!important;visibility:hidden!important;height:0!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;overflow:hidden!important}#news[hidden]{display:none!important}</style>
+
+<style id="sloom365-match-details-contrast-and-auto-cycle">
+/* Match details: improve readability on mobile and desktop */
+#clubModal .club-dialog{background:linear-gradient(155deg,#1b1028,#0c0912)!important;border:1px solid #8959ad!important;color:#fff!important}
+#clubModal .club-modal-head{border-color:#604477!important}
+#clubModal .club-modal-head h3{color:#fff!important;font-size:19px!important;line-height:1.6!important}
+#clubModal .club-modal-head small{color:#d8c4e9!important;font-size:12px!important}
+#clubModal .club-fact{background:#21152d!important;border-color:#684887!important}
+#clubModal .club-fact span{color:#d4b9e8!important;font-size:12px!important}
+#clubModal .club-fact b{color:#fff!important;font-size:14px!important;line-height:1.8!important}
+#clubModal .match-detail-body{color:#fff!important;padding:11px!important;gap:9px!important}
+#clubModal .match-detail-body>div{font-size:13px!important;line-height:1.9!important}
+#clubModal .match-detail-body>div span{color:#d4b9e8!important}
+#clubModal .match-detail-body>div b{color:#fff!important}
+#clubModal .match-details{background:#1a1124!important;border-color:#8054a2!important}
+#clubModal .match-details summary{color:#f0d9ff!important;font-size:14px!important;padding:12px!important}
+#clubModal .match-events h4{color:#e4baff!important;font-size:14px!important}
+#clubModal .match-events .event-row{background:#261831!important;font-size:13px!important;line-height:1.9!important}
+#clubModal .match-events .event-row b{color:#fff!important}
+#clubModal .match-events .event-row small{color:#d9aaff!important;font-size:12px!important}
+#clubModal .event-muted,#clubModal .match-tab-empty{color:#e0d2e9!important;font-size:13px!important;line-height:2!important}
+#clubModal .club-close{background:#38204a!important;border-color:#9868b7!important;color:#fff!important;font-size:12px!important}
+@media(max-width:520px){
+ #clubModal .club-dialog{padding:13px!important;max-height:90vh!important}
+ #clubModal .club-modal-head h3{font-size:16px!important}
+ #clubModal .club-fact b{font-size:13px!important}
+ #clubModal .match-detail-body>div{font-size:12px!important}
+}
+</style>
+
 </body>
 </html>
