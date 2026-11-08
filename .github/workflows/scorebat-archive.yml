@@ -1,0 +1,69 @@
+name: Update shared ScoreBat highlights archive
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17,47 * * * *"
+permissions:
+  contents: write
+concurrency:
+  group: scorebat-highlights-archive
+  cancel-in-progress: false
+jobs:
+  update-archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Fetch and merge ScoreBat feed
+        env:
+          SCOREBAT_TOKEN: ${{ secrets.SCOREBAT_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys, urllib.request
+          from pathlib import Path
+
+          token = os.environ.get("SCOREBAT_TOKEN", "").strip()
+          if not token:
+              sys.exit("Missing repository secret SCOREBAT_TOKEN")
+          url = "https://www.scorebat.com/video-api/v3/free-feed/?token=" + token
+          req = urllib.request.Request(url, headers={"User-Agent": "SLOOM-KORA-365-Archive/1.0"})
+          with urllib.request.urlopen(req, timeout=30) as response:
+              incoming = json.load(response)
+          fresh = incoming.get("response", [])
+          if not isinstance(fresh, list):
+              sys.exit("Unexpected ScoreBat response format")
+
+          path = Path("data/scorebat-highlights.json")
+          path.parent.mkdir(parents=True, exist_ok=True)
+          try:
+              old = json.loads(path.read_text(encoding="utf-8"))
+          except (FileNotFoundError, json.JSONDecodeError):
+              old = {"response": []}
+          merged = {}
+          for item in old.get("response", []):
+              if isinstance(item, dict):
+                  key = "|".join(str(item.get(k, "")) for k in ("title", "competition", "date"))
+                  merged[key] = item
+          for item in fresh:
+              if not isinstance(item, dict):
+                  continue
+              key = "|".join(str(item.get(k, "")) for k in ("title", "competition", "date"))
+              prior = merged.get(key, {})
+              videos = {}
+              for video in (prior.get("videos", []) + item.get("videos", [])):
+                  if isinstance(video, dict):
+                      vkey = str(video.get("title", "")) + "|" + str(video.get("embed", ""))
+                      videos[vkey] = video
+              merged[key] = {**prior, **item, "videos": list(videos.values())}
+          result = sorted(merged.values(), key=lambda x: str(x.get("date", "")), reverse=True)
+          payload = {"updated_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(), "response": result}
+          path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print(f"Saved {len(result)} matches; {len(fresh)} received from ScoreBat.")
+          PY
+      - name: Commit archive
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/scorebat-highlights.json
+          git diff --cached --quiet || git commit -m "Update shared ScoreBat highlights archive"
+          git push
