@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-08T01:06:05Z",
-  "source_updated_at": "2026-11-08T01:05:12.374341+00:00",
+  "checked_at": "2026-11-08T02:04:17Z",
+  "source_updated_at": "2026-11-08T02:03:42.098187+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -14,13 +14,13 @@
       "date": "2026-11-08T00:00:00+00:00",
       "time": "2026-11-08T00:00:00+00:00",
       "home": {
-        "name": "Jaguares Chiapas FC",
-        "logo": "https://img.thesports.com/football/team/515effb0ab092d17cf9e61f0909259c6.png",
-        "score": "1"
+        "name": "La Tribu de Cd. Juarez",
+        "logo": "https://img.thesports.com/football/team/f7b78b82af5bdb2bf036d778aae58fa3.png",
+        "score": "3"
       },
       "away": {
-        "name": "H2O Purepechas FC",
-        "logo": "https://img.thesports.com/football/team/eead379c0cd2074e0fa894d6684c850b.png",
+        "name": "Club Canoneros Marina",
+        "logo": "https://img.thesports.com/football/team/4a276e4c43175727cddae86756681832.png",
         "score": "0"
       },
       "status": "in",
@@ -38,7 +38,7 @@
       "home": {
         "name": "Louisville City FC",
         "logo": "https://img.thesports.com/football/team/8f4c8b7e2cd333ab2e32d65bcbd3c7ff.png",
-        "score": "0"
+        "score": "3"
       },
       "away": {
         "name": "Miami FC",
@@ -46,7 +46,7 @@
         "score": "2"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "USL Championship",
       "period": null,
       "clock": "",
@@ -60,15 +60,15 @@
       "home": {
         "name": "AD San Carlos",
         "logo": "https://img.thesports.com/football/team/86a67c4a9b9275a04cd42fe90e5e35e7.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Municipal Pérez Zeledón",
         "logo": "https://img.thesports.com/football/team/71b66f0b7a71294f9c30f7f5bdf0cf86.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Costa Rica Primera Division",
       "period": null,
       "clock": "",
@@ -82,15 +82,15 @@
       "home": {
         "name": "Inter F.A",
         "logo": "https://img.thesports.com/football/team/597d6547f5c6d6e6ca19406c27f9ead7.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Luis Angel Firpo",
         "logo": "https://img.thesports.com/football/team/e6541c73ce2605793bd7c91c0e02e800.png",
-        "score": "1"
+        "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "El Salvador Primera Division",
       "period": null,
       "clock": "",
@@ -102,18 +102,18 @@
       "date": "2026-11-08T00:00:00+00:00",
       "time": "2026-11-08T00:00:00+00:00",
       "home": {
-        "name": "Juventus Managua",
-        "logo": "https://img.thesports.com/football/team/c0125433f2bc40099c202b52dbc16afd.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Chinandega FC",
-        "logo": "https://img.thesports.com/football/team/ad9dce37c4b3288e3e7fc84d3aa82362.png",
+        "name": "Jaguares Chiapas FC",
+        "logo": "https://img.thesports.com/football/team/515effb0ab092d17cf9e61f0909259c6.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
-      "competition": "Nicaragua Segunda Division",
+      "away": {
+        "name": "H2O Purepechas FC",
+        "logo": "https://img.thesports.com/football/team/eead379c0cd2074e0fa894d6684c850b.png",
+        "score": "1"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "MEX Liga Premier",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -124,18 +124,18 @@
       "date": "2026-11-08T00:00:00+00:00",
       "time": "2026-11-08T00:00:00+00:00",
       "home": {
-        "name": "La Tribu de Cd. Juarez",
-        "logo": "https://img.thesports.com/football/team/f7b78b82af5bdb2bf036d778aae58fa3.png",
-        "score": null
+        "name": "Juventus Managua",
+        "logo": "https://img.thesports.com/football/team/c0125433f2bc40099c202b52dbc16afd.png",
+        "score": "1"
       },
       "away": {
-        "name": "Club Canoneros Marina",
-        "logo": "https://img.thesports.com/football/team/4a276e4c43175727cddae86756681832.png",
-        "score": null
+        "name": "Chinandega FC",
+        "logo": "https://img.thesports.com/football/team/ad9dce37c4b3288e3e7fc84d3aa82362.png",
+        "score": "2"
       },
-      "status": "pre",
-      "detail": "Postponed",
-      "competition": "MEX Liga Premier",
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Nicaragua Segunda Division",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -146,17 +146,17 @@
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
       "home": {
-        "name": "Austin FC",
-        "logo": "https://img.thesports.com/football/team/90c95cd154f9b016cbf26854770b8401.png",
-        "score": "0"
+        "name": "FC Dallas",
+        "logo": "https://img.thesports.com/football/team/e829da6b3050ec03f3c8715690ec39c4.png",
+        "score": "3"
       },
       "away": {
-        "name": "Portland Timbers",
-        "logo": "https://img.thesports.com/football/team/5dcc5306778fc1089f808833ac7fc477.png",
+        "name": "Colorado Rapids",
+        "logo": "https://img.thesports.com/football/team/2d874c6a14447ac110695b300849ca7c.png",
         "score": "1"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "United States Major League Soccer",
       "period": null,
       "clock": "",
@@ -164,28 +164,6 @@
     },
     {
       "id": "sportscore:7",
-      "slug": "",
-      "date": "2026-11-08T00:10:00+00:00",
-      "time": "2026-11-08T00:10:00+00:00",
-      "home": {
-        "name": "FC Dallas",
-        "logo": "https://img.thesports.com/football/team/e829da6b3050ec03f3c8715690ec39c4.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Colorado Rapids",
-        "logo": "https://img.thesports.com/football/team/2d874c6a14447ac110695b300849ca7c.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "Half time",
-      "competition": "United States Major League Soccer",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:8",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -200,21 +178,21 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "United States Major League Soccer",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:9",
+      "id": "sportscore:8",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
       "home": {
         "name": "Minnesota United FC",
         "logo": "https://img.thesports.com/football/team/256ff71a20fb72145a66dcef2f604a48.png",
-        "score": "0"
+        "score": "3"
       },
       "away": {
         "name": "San Jose Earthquakes",
@@ -222,14 +200,14 @@
         "score": "1"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "United States Major League Soccer",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:10",
+      "id": "sportscore:9",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -244,14 +222,14 @@
         "score": "1"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "United States Major League Soccer",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:11",
+      "id": "sportscore:10",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -263,17 +241,17 @@
       "away": {
         "name": "Sporting Kansas City",
         "logo": "https://img.thesports.com/football/team/648caa25c55909457ef7f432e7f34224.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "United States Major League Soccer",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:12",
+      "id": "sportscore:11",
       "slug": "",
       "date": "2026-11-08T00:10:00+00:00",
       "time": "2026-11-08T00:10:00+00:00",
@@ -285,10 +263,32 @@
       "away": {
         "name": "Los Angeles FC",
         "logo": "https://img.thesports.com/football/team/9c5ad5227377e12b87f77790d3d88c1c.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
+      "competition": "United States Major League Soccer",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:12",
+      "slug": "",
+      "date": "2026-11-08T00:10:00+00:00",
+      "time": "2026-11-08T00:10:00+00:00",
+      "home": {
+        "name": "Austin FC",
+        "logo": "https://img.thesports.com/football/team/90c95cd154f9b016cbf26854770b8401.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Portland Timbers",
+        "logo": "https://img.thesports.com/football/team/5dcc5306778fc1089f808833ac7fc477.png",
+        "score": "2"
+      },
+      "status": "post",
+      "detail": "Finished",
       "competition": "United States Major League Soccer",
       "period": null,
       "clock": "",
@@ -307,10 +307,10 @@
       "away": {
         "name": "CRB AL",
         "logo": "https://img.thesports.com/football/team/96413c5ef284eec6c6e0d76c87732471.png",
-        "score": "0"
+        "score": "3"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Brazilian Serie B",
       "period": null,
       "clock": "",
@@ -324,15 +324,15 @@
       "home": {
         "name": "Flamengo/RJ Women",
         "logo": "https://img.thesports.com/football/team/e3987bcb77d5379ec3f8e7ac57a65eb1.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "EC Bahia Women",
         "logo": "https://img.thesports.com/football/team/2fc52f4221ce53fe6e84ef9ca86e0482.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Brazilian Women's Cup",
       "period": null,
       "clock": "",
@@ -351,10 +351,10 @@
       "away": {
         "name": "Hartford Athletic",
         "logo": "https://img.thesports.com/football/team/78febf9c2b8c7c5bff95797b00c90459.png",
-        "score": "2"
+        "score": "3"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "USL Championship",
       "period": null,
       "clock": "",
@@ -373,10 +373,10 @@
       "away": {
         "name": "Old Road Jets",
         "logo": "https://img.thesports.com/football/team/0b41e6424abe5829ccc32c9fd20f3fc1.png",
-        "score": "0"
+        "score": "2"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Saint Kitts Nevis Premier League",
       "period": null,
       "clock": "",
@@ -384,94 +384,6 @@
     },
     {
       "id": "sportscore:17",
-      "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
-        "name": "Celaya FC",
-        "logo": "https://img.thesports.com/football/team/6dcb3d6cf364125f4f7671ef04ef5360.png",
-        "score": null
-      },
-      "away": {
-        "name": "Tigres de Alica FC",
-        "logo": "https://img.thesports.com/football/team/b1fdb2c2e7c85032ef4ddf3f62e609e3.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "MEX Liga Premier",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:18",
-      "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
-        "name": "Vaqueros Reynosa",
-        "logo": "",
-        "score": null
-      },
-      "away": {
-        "name": "Artesanos Metepec FC",
-        "logo": "https://img.thesports.com/football/team/d3bdf8d2d98a01339bd26edf98abb678.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "MEX Liga Premier",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:19",
-      "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
-        "name": "Southern United (NZL)Women",
-        "logo": "https://img.thesports.com/football/team/b4e3d726e9adbf70cc42ba3fb15d9ac6.png",
-        "score": null
-      },
-      "away": {
-        "name": "West Coast Rangers (W)",
-        "logo": "https://img.thesports.com/football/team/11c51e2e4aff549bbf80d9bb9ca41537.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "New Zealand Women's Premier Division",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:20",
-      "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
-        "name": "AD Carmelita",
-        "logo": "https://img.thesports.com/football/team/8052a3f96ae76069389e32296e4607d9.png",
-        "score": null
-      },
-      "away": {
-        "name": "AD Grecia",
-        "logo": "https://img.thesports.com/football/team/3b444f4c4f81549d024c9e67422c76bf.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Costa Rica 2.Liga",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:21",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -493,23 +405,111 @@
       "data_source": "SportScore"
     },
     {
+      "id": "sportscore:18",
+      "slug": "",
+      "date": "2026-11-08T01:00:00+00:00",
+      "time": "2026-11-08T01:00:00+00:00",
+      "home": {
+        "name": "Tigres UANL",
+        "logo": "https://img.thesports.com/football/team/a7df6424c12ac9b7a6e5ca3ff953d5b3.png",
+        "score": "1"
+      },
+      "away": {
+        "name": "Cruz Azul",
+        "logo": "https://img.thesports.com/football/team/2addd50487c8f61276d5fff8714f6a5c.png",
+        "score": "1"
+      },
+      "status": "in",
+      "detail": "Half time",
+      "competition": "Mexico Liga MX",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:19",
+      "slug": "",
+      "date": "2026-11-08T01:00:00+00:00",
+      "time": "2026-11-08T01:00:00+00:00",
+      "home": {
+        "name": "Toluca",
+        "logo": "https://img.thesports.com/football/team/725ccd5793be6b4f8dd917170dd17d04.png",
+        "score": "2"
+      },
+      "away": {
+        "name": "Rayados de Monterrey",
+        "logo": "https://img.thesports.com/football/team/5c3f819a35454f424d85df5757650f8b.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "Half time",
+      "competition": "Mexico Liga MX",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:20",
+      "slug": "",
+      "date": "2026-11-08T01:00:00+00:00",
+      "time": "2026-11-08T01:00:00+00:00",
+      "home": {
+        "name": "Instituto de Córdoba",
+        "logo": "https://img.thesports.com/football/team/a01279fdf6589b3c11529ca1ab4201fc.png",
+        "score": "1"
+      },
+      "away": {
+        "name": "Club Atlético Newell's Old Boys",
+        "logo": "https://img.thesports.com/football/team/845eed665066a19144dad9f96e550b50.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "Half time",
+      "competition": "Argentine Division 1",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:21",
+      "slug": "",
+      "date": "2026-11-08T01:00:00+00:00",
+      "time": "2026-11-08T01:00:00+00:00",
+      "home": {
+        "name": "Celaya FC",
+        "logo": "https://img.thesports.com/football/team/6dcb3d6cf364125f4f7671ef04ef5360.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Tigres de Alica FC",
+        "logo": "https://img.thesports.com/football/team/b1fdb2c2e7c85032ef4ddf3f62e609e3.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "Half time",
+      "competition": "MEX Liga Premier",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
       "id": "sportscore:22",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
       "home": {
-        "name": "Nueva Santa Rosa CDF",
-        "logo": "https://img.thesports.com/football/team/622864654bc290581f7e072fbf9522b6.png",
-        "score": null
+        "name": "Auckland FC Reserves",
+        "logo": "https://img.thesports.com/football/team/c6cb750c514ef46797d8950e649d0aad.png",
+        "score": "1"
       },
       "away": {
-        "name": "Coatepeque",
-        "logo": "https://img.thesports.com/football/team/8a2e115a80adeb0e6b61f0bff5e85fd4.png",
-        "score": null
+        "name": "Napier City Rovers",
+        "logo": "https://img.thesports.com/football/team/39416fb90fdda16a63b16b7988d1c834.png",
+        "score": "2"
       },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Guatemala Division 2",
+      "status": "in",
+      "detail": "Half time",
+      "competition": "New Zealand Football Championship",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -520,18 +520,18 @@
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
       "home": {
-        "name": "Villa San Antonio",
-        "logo": "https://img.thesports.com/football/team/610b4ef2386c37ec358cea5ca76cd066.png",
-        "score": null
+        "name": "Gruop A 5th",
+        "logo": "https://img.thesports.com/football/team/b761910d4aee8d590e45305c1839bcf0.png",
+        "score": "1"
       },
       "away": {
-        "name": "Concepcion FC",
-        "logo": "https://img.thesports.com/football/team/bfd82144fdcb8716ce0e1c2ea42a6ed5.png",
-        "score": null
+        "name": "Group B 5th",
+        "logo": "https://img.thesports.com/football/team/e5375a8e6a3f1be35c18f9d4197f1992.png",
+        "score": "2"
       },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "ARFC",
+      "status": "in",
+      "detail": "Half time",
+      "competition": "Hangzhou \"Qianchao Cup\" International Youth Football Invitational Tournament",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -542,18 +542,18 @@
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
       "home": {
-        "name": "Tigres UANL",
-        "logo": "https://img.thesports.com/football/team/a7df6424c12ac9b7a6e5ca3ff953d5b3.png",
+        "name": "Vaqueros Reynosa",
+        "logo": "",
         "score": "0"
       },
       "away": {
-        "name": "Cruz Azul",
-        "logo": "https://img.thesports.com/football/team/2addd50487c8f61276d5fff8714f6a5c.png",
+        "name": "Artesanos Metepec FC",
+        "logo": "https://img.thesports.com/football/team/d3bdf8d2d98a01339bd26edf98abb678.png",
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
-      "competition": "Mexico Liga MX",
+      "detail": "Half time",
+      "competition": "MEX Liga Premier",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -564,18 +564,18 @@
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
       "home": {
-        "name": "Toluca",
-        "logo": "https://img.thesports.com/football/team/725ccd5793be6b4f8dd917170dd17d04.png",
+        "name": "Southern United (NZL)Women",
+        "logo": "https://img.thesports.com/football/team/b4e3d726e9adbf70cc42ba3fb15d9ac6.png",
         "score": "0"
       },
       "away": {
-        "name": "Rayados de Monterrey",
-        "logo": "https://img.thesports.com/football/team/5c3f819a35454f424d85df5757650f8b.png",
-        "score": "0"
+        "name": "West Coast Rangers (W)",
+        "logo": "https://img.thesports.com/football/team/11c51e2e4aff549bbf80d9bb9ca41537.png",
+        "score": "2"
       },
       "status": "in",
-      "detail": "1st half",
-      "competition": "Mexico Liga MX",
+      "detail": "Half time",
+      "competition": "New Zealand Women's Premier Division",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -586,112 +586,24 @@
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
       "home": {
-        "name": "Instituto de Córdoba",
-        "logo": "https://img.thesports.com/football/team/a01279fdf6589b3c11529ca1ab4201fc.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Club Atlético Newell's Old Boys",
-        "logo": "https://img.thesports.com/football/team/845eed665066a19144dad9f96e550b50.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "1st half",
-      "competition": "Argentine Division 1",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:27",
-      "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
-        "name": "Auckland FC Reserves",
-        "logo": "https://img.thesports.com/football/team/c6cb750c514ef46797d8950e649d0aad.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Napier City Rovers",
-        "logo": "https://img.thesports.com/football/team/39416fb90fdda16a63b16b7988d1c834.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "1st half",
-      "competition": "New Zealand Football Championship",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:28",
-      "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
-        "name": "Group A 6th",
-        "logo": "https://img.thesports.com/football/team/0f8324b374874e5e6e0e14eb1726c8ac.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Group B 6th",
-        "logo": "https://img.thesports.com/football/team/7dca44ae4d8f0c282d2728938b5fc57a.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "1st half",
-      "competition": "Hangzhou \"Qianchao Cup\" International Youth Football Invitational Tournament",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:29",
-      "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
-        "name": "Gruop A 5th",
-        "logo": "https://img.thesports.com/football/team/b761910d4aee8d590e45305c1839bcf0.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Group B 5th",
-        "logo": "https://img.thesports.com/football/team/e5375a8e6a3f1be35c18f9d4197f1992.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "1st half",
-      "competition": "Hangzhou \"Qianchao Cup\" International Youth Football Invitational Tournament",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:30",
-      "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
         "name": "Atletico Morelia",
         "logo": "https://img.thesports.com/football/team/1cd995bdc2b652d31129d027afb27ed8.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Venados FC Yucatán",
         "logo": "https://img.thesports.com/football/team/c28028bd9f03205a308a016f39e238f6.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
       "competition": "Mexico Ascenso MX",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:31",
+      "id": "sportscore:27",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -703,17 +615,61 @@
       "away": {
         "name": "CD Cabanes",
         "logo": "",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
       "competition": "Guatemala Division 4",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:32",
+      "id": "sportscore:28",
+      "slug": "",
+      "date": "2026-11-08T01:00:00+00:00",
+      "time": "2026-11-08T01:00:00+00:00",
+      "home": {
+        "name": "Villa San Antonio",
+        "logo": "https://img.thesports.com/football/team/610b4ef2386c37ec358cea5ca76cd066.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Concepcion FC",
+        "logo": "https://img.thesports.com/football/team/bfd82144fdcb8716ce0e1c2ea42a6ed5.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "Half time",
+      "competition": "ARFC",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:29",
+      "slug": "",
+      "date": "2026-11-08T01:00:00+00:00",
+      "time": "2026-11-08T01:00:00+00:00",
+      "home": {
+        "name": "Group A 6th",
+        "logo": "https://img.thesports.com/football/team/0f8324b374874e5e6e0e14eb1726c8ac.png",
+        "score": "2"
+      },
+      "away": {
+        "name": "Group B 6th",
+        "logo": "https://img.thesports.com/football/team/7dca44ae4d8f0c282d2728938b5fc57a.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "2nd half",
+      "competition": "Hangzhou \"Qianchao Cup\" International Youth Football Invitational Tournament",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:30",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -735,7 +691,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:33",
+      "id": "sportscore:31",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -757,7 +713,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:34",
+      "id": "sportscore:32",
       "slug": "",
       "date": "2026-11-08T01:00:00+00:00",
       "time": "2026-11-08T01:00:00+00:00",
@@ -779,6 +735,50 @@
       "data_source": "SportScore"
     },
     {
+      "id": "sportscore:33",
+      "slug": "",
+      "date": "2026-11-08T01:00:00+00:00",
+      "time": "2026-11-08T01:00:00+00:00",
+      "home": {
+        "name": "AD Carmelita",
+        "logo": "https://img.thesports.com/football/team/8052a3f96ae76069389e32296e4607d9.png",
+        "score": null
+      },
+      "away": {
+        "name": "AD Grecia",
+        "logo": "https://img.thesports.com/football/team/3b444f4c4f81549d024c9e67422c76bf.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Postponed",
+      "competition": "Costa Rica 2.Liga",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:34",
+      "slug": "",
+      "date": "2026-11-08T01:00:00+00:00",
+      "time": "2026-11-08T01:00:00+00:00",
+      "home": {
+        "name": "Nueva Santa Rosa CDF",
+        "logo": "https://img.thesports.com/football/team/622864654bc290581f7e072fbf9522b6.png",
+        "score": null
+      },
+      "away": {
+        "name": "Coatepeque",
+        "logo": "https://img.thesports.com/football/team/8a2e115a80adeb0e6b61f0bff5e85fd4.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Postponed",
+      "competition": "Guatemala Division 2",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
       "id": "sportscore:35",
       "slug": "",
       "date": "2026-11-08T01:15:00+00:00",
@@ -786,15 +786,15 @@
       "home": {
         "name": "America de Cali",
         "logo": "https://img.thesports.com/football/team/ed6ae7fa894cb5bdbccfd605d1d6ad04.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Deportivo Cali",
         "logo": "https://img.thesports.com/football/team/b997a2811a0caed43ff38b631a708420.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Categoría Primera A",
       "period": null,
       "clock": "",
@@ -808,15 +808,15 @@
       "home": {
         "name": "Cienciano",
         "logo": "https://img.thesports.com/football/team/e868bb2eac1923c5aecaddd492860b32.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Sport Huancayo",
         "logo": "https://img.thesports.com/football/team/5467a13f0c1c7b3a862587f64ba0a6ed.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Peruvian Liga 1",
       "period": null,
       "clock": "",
@@ -830,15 +830,15 @@
       "home": {
         "name": "CD Olimpia",
         "logo": "https://img.thesports.com/football/team/4519ae1d1e9015ef859c968090bbd9de.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Olancho FC",
         "logo": "https://img.thesports.com/football/team/3fa6132601229808cd393c20d8ac4639.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Honduras Primera Division",
       "period": null,
       "clock": "",
@@ -852,15 +852,15 @@
       "home": {
         "name": "SV Caiquetio",
         "logo": "https://img.thesports.com/football/team/21b2d8d0b48a90628ad003b218b5888e.png",
-        "score": null
+        "score": "5"
       },
       "away": {
         "name": "SV Estrella",
         "logo": "https://img.thesports.com/football/team/ee906cc8b8b2161cfc720db79a858d2e.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Aruba Division Di Honor",
       "period": null,
       "clock": "",
@@ -874,15 +874,15 @@
       "home": {
         "name": "Plaza Amador Women",
         "logo": "https://img.thesports.com/football/team/89de0842ded71260c3996a06e8048b8a.jpg",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Inter Panama CF Women",
         "logo": "https://img.thesports.com/football/team/7fe94fe1d6d3d4464531516bab9363b0.png",
-        "score": null
+        "score": "3"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "BRA WD1",
       "period": null,
       "clock": "",
@@ -938,28 +938,6 @@
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
       "home": {
-        "name": "Marquense",
-        "logo": "https://img.thesports.com/football/team/497958b4762e58596d7973fe63de1a13.png",
-        "score": null
-      },
-      "away": {
-        "name": "C.S.D. Comunicaciones",
-        "logo": "https://img.thesports.com/football/team/8113129ff76a917579f55ccf1ada7a3c.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Guatemala Liga Nacional",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:43",
-      "slug": "",
-      "date": "2026-11-08T02:00:00+00:00",
-      "time": "2026-11-08T02:00:00+00:00",
-      "home": {
         "name": "Athletic Club Boise",
         "logo": "https://img.thesports.com/football/team/0c1fafa55b2bc6ee9a9c6b9106e37177.png",
         "score": null
@@ -977,7 +955,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:44",
+      "id": "sportscore:43",
       "slug": "",
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
@@ -999,7 +977,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:45",
+      "id": "sportscore:44",
       "slug": "",
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
@@ -1016,6 +994,28 @@
       "status": "pre",
       "detail": "Not started",
       "competition": "Solomon Islands Telekom S-League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:45",
+      "slug": "",
+      "date": "2026-11-08T02:00:00+00:00",
+      "time": "2026-11-08T02:00:00+00:00",
+      "home": {
+        "name": "Marquense",
+        "logo": "https://img.thesports.com/football/team/497958b4762e58596d7973fe63de1a13.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "C.S.D. Comunicaciones",
+        "logo": "https://img.thesports.com/football/team/8113129ff76a917579f55ccf1ada7a3c.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Guatemala Liga Nacional",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
