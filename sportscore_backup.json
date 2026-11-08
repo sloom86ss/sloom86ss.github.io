@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-08T17:59:18Z",
-  "source_updated_at": "2026-11-08T17:59:16.952627+00:00",
+  "checked_at": "2026-11-08T18:33:25Z",
+  "source_updated_at": "2026-11-08T18:33:23.325029+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -715,72 +715,6 @@
     {
       "id": "sportscore:32",
       "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
-        "name": "Sporting San Miguelito",
-        "logo": "https://img.thesports.com/football/team/6293c44ab7fc90a120afb07ab59b20d4.png",
-        "score": null
-      },
-      "away": {
-        "name": "CD Arabe Unido",
-        "logo": "https://img.thesports.com/football/team/9ba2cb847c7393a0e5da458a723f551e.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Delayed",
-      "competition": "Panamanian Liga de Futbol",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:33",
-      "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
-        "name": "Tauro FC",
-        "logo": "https://img.thesports.com/football/team/63a87d7e95cd9f437afe976be3a1c25b.png",
-        "score": null
-      },
-      "away": {
-        "name": "Alianza FC (PAN)",
-        "logo": "https://img.thesports.com/football/team/899ba9e1bfbb1984e0adc85ba820afc6.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Delayed",
-      "competition": "Panamanian Liga de Futbol",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:34",
-      "slug": "",
-      "date": "2026-11-08T01:00:00+00:00",
-      "time": "2026-11-08T01:00:00+00:00",
-      "home": {
-        "name": "UMECIT",
-        "logo": "https://img.thesports.com/football/team/6e821e6fcb49a65d00e7cb818ae23fc0.png",
-        "score": null
-      },
-      "away": {
-        "name": "Plaza Amador",
-        "logo": "https://img.thesports.com/football/team/61345966c099bcd6597a5044368b37a5.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Delayed",
-      "competition": "Panamanian Liga de Futbol",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:35",
-      "slug": "",
       "date": "2026-11-08T01:30:00+00:00",
       "time": "2026-11-08T01:30:00+00:00",
       "home": {
@@ -801,7 +735,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:36",
+      "id": "sportscore:33",
       "slug": "",
       "date": "2026-11-08T01:30:00+00:00",
       "time": "2026-11-08T01:30:00+00:00",
@@ -823,7 +757,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:37",
+      "id": "sportscore:34",
       "slug": "",
       "date": "2026-11-08T01:30:00+00:00",
       "time": "2026-11-08T01:30:00+00:00",
@@ -845,7 +779,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:38",
+      "id": "sportscore:35",
       "slug": "",
       "date": "2026-11-08T01:30:00+00:00",
       "time": "2026-11-08T01:30:00+00:00",
@@ -867,7 +801,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:39",
+      "id": "sportscore:36",
       "slug": "",
       "date": "2026-11-08T01:45:00+00:00",
       "time": "2026-11-08T01:45:00+00:00",
@@ -889,7 +823,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:40",
+      "id": "sportscore:37",
       "slug": "",
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
@@ -911,7 +845,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:41",
+      "id": "sportscore:38",
       "slug": "",
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
@@ -933,7 +867,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:42",
+      "id": "sportscore:39",
       "slug": "",
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
@@ -955,7 +889,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:43",
+      "id": "sportscore:40",
       "slug": "",
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
@@ -977,7 +911,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:44",
+      "id": "sportscore:41",
       "slug": "",
       "date": "2026-11-08T02:00:00+00:00",
       "time": "2026-11-08T02:00:00+00:00",
@@ -999,7 +933,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:45",
+      "id": "sportscore:42",
       "slug": "",
       "date": "2026-11-08T02:15:00+00:00",
       "time": "2026-11-08T02:15:00+00:00",
@@ -1021,7 +955,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:46",
+      "id": "sportscore:43",
       "slug": "",
       "date": "2026-11-08T02:30:00+00:00",
       "time": "2026-11-08T02:30:00+00:00",
@@ -1043,7 +977,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:47",
+      "id": "sportscore:44",
       "slug": "",
       "date": "2026-11-08T03:00:00+00:00",
       "time": "2026-11-08T03:00:00+00:00",
@@ -1065,7 +999,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:48",
+      "id": "sportscore:45",
       "slug": "",
       "date": "2026-11-08T03:00:00+00:00",
       "time": "2026-11-08T03:00:00+00:00",
@@ -1087,7 +1021,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:49",
+      "id": "sportscore:46",
       "slug": "",
       "date": "2026-11-08T03:10:00+00:00",
       "time": "2026-11-08T03:10:00+00:00",
@@ -1104,6 +1038,72 @@
       "status": "post",
       "detail": "Finished",
       "competition": "Mexico Liga MX",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:47",
+      "slug": "",
+      "date": "2026-11-08T03:10:00+00:00",
+      "time": "2026-11-08T03:10:00+00:00",
+      "home": {
+        "name": "Club Atletico La Paz",
+        "logo": "https://img.thesports.com/football/team/7e16680bbd661fd90dbf08501ae7a98e.png",
+        "score": "3"
+      },
+      "away": {
+        "name": "Tlaxcala FC",
+        "logo": "https://img.thesports.com/football/team/92b3930be1795a5c2b97a7e19f46a277.png",
+        "score": "3"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Mexico Ascenso MX",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:48",
+      "slug": "",
+      "date": "2026-11-08T03:10:00+00:00",
+      "time": "2026-11-08T03:10:00+00:00",
+      "home": {
+        "name": "Sacramento Republic FC",
+        "logo": "https://img.thesports.com/football/team/3b1eedbf7ab45c8c57b3eeb7c7ade1c6.png",
+        "score": "2"
+      },
+      "away": {
+        "name": "El Paso Locomotive FC",
+        "logo": "https://img.thesports.com/football/team/327ba784c0f6eb8f2e6ae4494b523d70.png",
+        "score": "1"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "USL Championship",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:49",
+      "slug": "",
+      "date": "2026-11-08T03:30:00+00:00",
+      "time": "2026-11-08T03:30:00+00:00",
+      "home": {
+        "name": "JEF United Ichihara Chiba Ladies Women",
+        "logo": "https://img.thesports.com/football/team/9a0821eac483f99d3f578be0b384beb7.png",
+        "score": "2"
+      },
+      "away": {
+        "name": "RB Omiya Ardija Ventus",
+        "logo": "https://img.thesports.com/football/team/46453d24ed3673b774bf0d13271bd60a.png",
+        "score": "0"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Women Empowerment League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
