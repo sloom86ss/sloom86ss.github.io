@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-09T00:22:52Z",
-  "source_updated_at": "2026-11-09T00:22:03.086966+00:00",
+  "checked_at": "2026-11-09T01:37:48Z",
+  "source_updated_at": "2026-11-09T01:37:38.395077+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -21,10 +21,10 @@
       "away": {
         "name": "Puebla",
         "logo": "https://img.thesports.com/football/team/a98bd615308472b65dc82bcc3a2d54fb.png",
-        "score": "1"
+        "score": "2"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Mexico Liga MX",
       "period": null,
       "clock": "",
@@ -38,7 +38,7 @@
       "home": {
         "name": "Antigua GFC",
         "logo": "https://img.thesports.com/football/team/b3c66f6f52c354c8f7281e49485b2f2b.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "Malacateco",
@@ -46,7 +46,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Guatemala Liga Nacional",
       "period": null,
       "clock": "",
@@ -60,7 +60,7 @@
       "home": {
         "name": "SV Sporting",
         "logo": "https://img.thesports.com/football/team/0a529dbb5bdf4c0d92d0a0168c7a25fd.png",
-        "score": "0"
+        "score": "2"
       },
       "away": {
         "name": "Bubali SC",
@@ -68,7 +68,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Aruba Division Di Honor",
       "period": null,
       "clock": "",
@@ -82,7 +82,7 @@
       "home": {
         "name": "Charlotte Independence",
         "logo": "https://img.thesports.com/football/team/d3be245c5465ff63fd26c25f52fc65a4.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "Forward Madison FC",
@@ -90,7 +90,7 @@
         "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "USL League One",
       "period": null,
       "clock": "",
@@ -109,10 +109,10 @@
       "away": {
         "name": "PCU Pelicans SC",
         "logo": "https://img.thesports.com/football/team/147a023b1c4b7d59279305a468d996e3.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "National Premier Soccer League",
       "period": null,
       "clock": "",
@@ -126,15 +126,15 @@
       "home": {
         "name": "Florida Elite",
         "logo": "https://img.thesports.com/football/team/bf3bb588f641d6159261257f801a06b0.png",
-        "score": "0"
+        "score": "2"
       },
       "away": {
         "name": "Miami FC U20",
         "logo": "https://img.thesports.com/football/team/aad37c6fe9a045108c209ee67a10c8f0.png",
-        "score": "0"
+        "score": "3"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "National Premier Soccer League",
       "period": null,
       "clock": "",
@@ -153,10 +153,10 @@
       "away": {
         "name": "Bragantino RB U20",
         "logo": "https://img.thesports.com/football/team/702254bbb73528c82cfa4c6a7f7db8bd.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Brazilian Campeonato Paulista Youth",
       "period": null,
       "clock": "",
@@ -170,15 +170,15 @@
       "home": {
         "name": "CS Herediano",
         "logo": "https://img.thesports.com/football/team/a507b1509e1f640108395b0580b46976.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "International San Carlos",
         "logo": "https://img.thesports.com/football/team/fc2983212373493c10636dc641310eea.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "2nd half",
       "competition": "Costa Rica Primera Division",
       "period": null,
       "clock": "",
@@ -192,15 +192,15 @@
       "home": {
         "name": "Taurinos",
         "logo": "https://img.thesports.com/football/team/45177c958dffb39db02eb1da5a9ce9f3.png",
-        "score": null
+        "score": "2"
       },
       "away": {
         "name": "Puerto Rico Surf SC",
         "logo": "https://img.thesports.com/football/team/f74cd7e9173bfbf92aa9499150bb0c38.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "2nd half",
       "competition": "PUR LPR",
       "period": null,
       "clock": "",
@@ -214,15 +214,15 @@
       "home": {
         "name": "CD FAS",
         "logo": "https://img.thesports.com/football/team/049b165b7cdeaedffc1966ca7564a87a.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Fuerte San Francisco",
         "logo": "https://img.thesports.com/football/team/d93652b2dd714100acc2cb66aca539cc.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "El Salvador Primera Division",
       "period": null,
       "clock": "",
@@ -236,15 +236,15 @@
       "home": {
         "name": "Piratas FC",
         "logo": "https://img.thesports.com/football/team/472eb7cb6d1d6e03153c5a4c0db96474.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Cancun FC",
         "logo": "https://img.thesports.com/football/team/6fe27a17397454cb43b104a6657e90d7.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Mexico Ascenso MX",
       "period": null,
       "clock": "",
@@ -258,15 +258,15 @@
       "home": {
         "name": "Alianza Fútbol Club",
         "logo": "https://img.thesports.com/football/team/242d6977e9b86cba5cea704d996edbf8.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Llaneros FC",
         "logo": "https://img.thesports.com/football/team/f83a93401d7a60595338bae0337d344c.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Categoría Primera A",
       "period": null,
       "clock": "",
@@ -280,15 +280,15 @@
       "home": {
         "name": "Universitario De Deportes",
         "logo": "https://img.thesports.com/football/team/415e4ed317b0b0a4aea7c8ddc5cdd658.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Moquegua",
         "logo": "https://img.thesports.com/football/team/19be19d979fd79bf0a2e6a78dfdadc4c.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Peruvian Liga 1",
       "period": null,
       "clock": "",
@@ -302,15 +302,15 @@
       "home": {
         "name": "Marathon",
         "logo": "https://img.thesports.com/football/team/505365bf79d6e38406333c99613ca975.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Atletico Choloma",
         "logo": "https://img.thesports.com/football/team/6efc34c36daa9ca8a84c495a829964fa.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Honduras Primera Division",
       "period": null,
       "clock": "",
@@ -363,6 +363,28 @@
     {
       "id": "sportscore:16",
       "slug": "",
+      "date": "2026-11-09T03:30:00+00:00",
+      "time": "2026-11-09T03:30:00+00:00",
+      "home": {
+        "name": "Team pxwrxlhvd3dryk0",
+        "logo": "",
+        "score": null
+      },
+      "away": {
+        "name": "Anstrengung United",
+        "logo": "https://img.thesports.com/football/team/8f232ae317360cffddf10fd63ff11098.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "India Mumbai Super Division",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:17",
+      "slug": "",
       "date": "2026-11-09T05:00:00+00:00",
       "time": "2026-11-09T05:00:00+00:00",
       "home": {
@@ -383,7 +405,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:17",
+      "id": "sportscore:18",
       "slug": "",
       "date": "2026-11-09T05:30:00+00:00",
       "time": "2026-11-09T05:30:00+00:00",
@@ -405,7 +427,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:18",
+      "id": "sportscore:19",
       "slug": "",
       "date": "2026-11-09T05:30:00+00:00",
       "time": "2026-11-09T05:30:00+00:00",
@@ -427,7 +449,51 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:19",
+      "id": "sportscore:20",
+      "slug": "",
+      "date": "2026-11-09T05:30:00+00:00",
+      "time": "2026-11-09T05:30:00+00:00",
+      "home": {
+        "name": "Bombay Ymca",
+        "logo": "https://img.thesports.com/football/team/4213250f104f77e4ec35b6b6c995bd79.png",
+        "score": null
+      },
+      "away": {
+        "name": "Oscar Foundation FC",
+        "logo": "https://img.thesports.com/football/team/e0399cf654d54269af72fbf253814448.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "India Mumbai Super Division",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:21",
+      "slug": "",
+      "date": "2026-11-09T06:15:00+00:00",
+      "time": "2026-11-09T06:15:00+00:00",
+      "home": {
+        "name": "Rangdajied united U21",
+        "logo": "https://img.thesports.com/football/team/256ffd26cd3d2b8055b053cdb0180291.png",
+        "score": null
+      },
+      "away": {
+        "name": "Mawlai SC U21",
+        "logo": "https://img.thesports.com/football/team/37684ac9ee81731339a9c20f26a8a3e1.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "India U21 DL",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:22",
       "slug": "",
       "date": "2026-11-09T07:00:00+00:00",
       "time": "2026-11-09T07:00:00+00:00",
@@ -449,7 +515,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:20",
+      "id": "sportscore:23",
       "slug": "",
       "date": "2026-11-09T07:00:00+00:00",
       "time": "2026-11-09T07:00:00+00:00",
@@ -471,7 +537,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:21",
+      "id": "sportscore:24",
       "slug": "",
       "date": "2026-11-09T07:00:00+00:00",
       "time": "2026-11-09T07:00:00+00:00",
@@ -493,7 +559,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:22",
+      "id": "sportscore:25",
       "slug": "",
       "date": "2026-11-09T07:00:00+00:00",
       "time": "2026-11-09T07:00:00+00:00",
@@ -515,7 +581,29 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:23",
+      "id": "sportscore:26",
+      "slug": "",
+      "date": "2026-11-09T07:30:00+00:00",
+      "time": "2026-11-09T07:30:00+00:00",
+      "home": {
+        "name": "Mumbai Warriors",
+        "logo": "https://img.thesports.com/football/team/06506c13327488161bc7fbd5f72d623a.png",
+        "score": null
+      },
+      "away": {
+        "name": "Kopana FC",
+        "logo": "https://img.thesports.com/football/team/93d4a7bf6721948b74aa361d8109dee8.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "India Mumbai Super Division",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:27",
       "slug": "",
       "date": "2026-11-09T08:00:00+00:00",
       "time": "2026-11-09T08:00:00+00:00",
@@ -537,7 +625,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:24",
+      "id": "sportscore:28",
       "slug": "",
       "date": "2026-11-09T08:30:00+00:00",
       "time": "2026-11-09T08:30:00+00:00",
@@ -559,7 +647,29 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:25",
+      "id": "sportscore:29",
+      "slug": "",
+      "date": "2026-11-09T08:30:00+00:00",
+      "time": "2026-11-09T08:30:00+00:00",
+      "home": {
+        "name": "Kasem Bundit FC Women",
+        "logo": "https://img.thesports.com/football/team/a2084ca691626cffc7bc3a4400790ca5.png",
+        "score": null
+      },
+      "away": {
+        "name": "College of Asian Scholars Women",
+        "logo": "https://img.thesports.com/football/team/6e0d069a8e8c63f58835aba4469ec4d4.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Thai Women's Super League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:30",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -581,7 +691,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:26",
+      "id": "sportscore:31",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -603,7 +713,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:27",
+      "id": "sportscore:32",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -625,7 +735,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:28",
+      "id": "sportscore:33",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -647,7 +757,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:29",
+      "id": "sportscore:34",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -669,7 +779,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:30",
+      "id": "sportscore:35",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -691,7 +801,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:31",
+      "id": "sportscore:36",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -713,7 +823,29 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:32",
+      "id": "sportscore:37",
+      "slug": "",
+      "date": "2026-11-09T09:00:00+00:00",
+      "time": "2026-11-09T09:00:00+00:00",
+      "home": {
+        "name": "FC Zorya Luhansk U21",
+        "logo": "",
+        "score": null
+      },
+      "away": {
+        "name": "LNZ Cherkasy U21",
+        "logo": "https://img.thesports.com/football/team/3d84980e4dec8902b3bf627228141c2d.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Ukrainian Youth Team Championship",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:38",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -735,7 +867,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:33",
+      "id": "sportscore:39",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -757,29 +889,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:34",
-      "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
-      "home": {
-        "name": "FC Zorya Luhansk U21",
-        "logo": "",
-        "score": null
-      },
-      "away": {
-        "name": "LNZ Cherkasy U21",
-        "logo": "https://img.thesports.com/football/team/3d84980e4dec8902b3bf627228141c2d.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Postponed",
-      "competition": "Ukrainian Youth Team Championship",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:35",
+      "id": "sportscore:40",
       "slug": "",
       "date": "2026-11-09T10:00:00+00:00",
       "time": "2026-11-09T10:00:00+00:00",
@@ -801,7 +911,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:36",
+      "id": "sportscore:41",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
@@ -823,7 +933,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:37",
+      "id": "sportscore:42",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
@@ -845,7 +955,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:38",
+      "id": "sportscore:43",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
@@ -867,7 +977,51 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:39",
+      "id": "sportscore:44",
+      "slug": "",
+      "date": "2026-11-09T10:30:00+00:00",
+      "time": "2026-11-09T10:30:00+00:00",
+      "home": {
+        "name": "Sportivo Luqueno Reserves",
+        "logo": "https://img.thesports.com/football/team/68d769a4c46bf807352c36c0d3a93be1.png",
+        "score": null
+      },
+      "away": {
+        "name": "2 de Mayo PJC Reserves",
+        "logo": "https://img.thesports.com/football/team/06bb9203fe0287e8873e233f159fb71e.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Paraguayan Reserve League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:45",
+      "slug": "",
+      "date": "2026-11-09T10:30:00+00:00",
+      "time": "2026-11-09T10:30:00+00:00",
+      "home": {
+        "name": "Sportivo Trinidense Reserves",
+        "logo": "https://img.thesports.com/football/team/7e82f0aa75f455171d87b216e8277f11.png",
+        "score": null
+      },
+      "away": {
+        "name": "Sportivo Ameliano Reserves",
+        "logo": "https://img.thesports.com/football/team/bea9ca5e1f24636c5bd5388e7e3e5c23.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Paraguayan Reserve League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:46",
       "slug": "",
       "date": "2026-11-09T11:00:00+00:00",
       "time": "2026-11-09T11:00:00+00:00",
@@ -889,7 +1043,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:40",
+      "id": "sportscore:47",
       "slug": "",
       "date": "2026-11-09T11:00:00+00:00",
       "time": "2026-11-09T11:00:00+00:00",
@@ -911,7 +1065,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:41",
+      "id": "sportscore:48",
       "slug": "",
       "date": "2026-11-09T11:30:00+00:00",
       "time": "2026-11-09T11:30:00+00:00",
@@ -933,7 +1087,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:42",
+      "id": "sportscore:49",
       "slug": "",
       "date": "2026-11-09T11:30:00+00:00",
       "time": "2026-11-09T11:30:00+00:00",
@@ -950,160 +1104,6 @@
       "status": "pre",
       "detail": "Not started",
       "competition": "CFA Team China Futsal International Tournament Yinchuan",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:43",
-      "slug": "",
-      "date": "2026-11-09T11:30:00+00:00",
-      "time": "2026-11-09T11:30:00+00:00",
-      "home": {
-        "name": "Al Hussein",
-        "logo": "https://img.thesports.com/football/team/eee60ec0bfc28f5d32acb80f7f18f762.png",
-        "score": null
-      },
-      "away": {
-        "name": "Al Nasiriyah",
-        "logo": "https://img.thesports.com/football/team/703f1d85f365f141847a039a39686373.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Iraq Premier Division",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:44",
-      "slug": "",
-      "date": "2026-11-09T11:30:00+00:00",
-      "time": "2026-11-09T11:30:00+00:00",
-      "home": {
-        "name": "Al Hashd Al Shade",
-        "logo": "https://img.thesports.com/football/team/f3ad765e4b612e149053843357cddeac.png",
-        "score": null
-      },
-      "away": {
-        "name": "Al-Etisalat",
-        "logo": "https://img.thesports.com/football/team/0a9471d6c3c4511fb39bdf755c4bb68f.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Iraq Premier Division",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:45",
-      "slug": "",
-      "date": "2026-11-09T12:00:00+00:00",
-      "time": "2026-11-09T12:00:00+00:00",
-      "home": {
-        "name": "Saipa",
-        "logo": "https://img.thesports.com/football/team/6c6bc5fbbea45b80e686feec124b17b0.png",
-        "score": null
-      },
-      "away": {
-        "name": "Havadar Tehran",
-        "logo": "https://img.thesports.com/football/team/091ddb48197c0fd09b7f549b871ce197.955322",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Iran Azadegan League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:46",
-      "slug": "",
-      "date": "2026-11-09T12:00:00+00:00",
-      "time": "2026-11-09T12:00:00+00:00",
-      "home": {
-        "name": "Equatorial Guinea U23",
-        "logo": "https://img.thesports.com/football/team/a8ed71126b12732b838cee58de4efe3f.jpg",
-        "score": null
-      },
-      "away": {
-        "name": "Niger U23",
-        "logo": "https://img.thesports.com/football/team/162421aa50e82df1e8be0e90492ced78.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "AFRNC U23",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:47",
-      "slug": "",
-      "date": "2026-11-09T12:00:00+00:00",
-      "time": "2026-11-09T12:00:00+00:00",
-      "home": {
-        "name": "South Sudan U23",
-        "logo": "https://img.thesports.com/football/team/07cdd3d1a783ab3713ea1c9ab677b20f.png",
-        "score": null
-      },
-      "away": {
-        "name": "Senegal U23",
-        "logo": "https://img.thesports.com/football/team/0ee9c379193a36ff72820564f7f64c37.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "AFRNC U23",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:48",
-      "slug": "",
-      "date": "2026-11-09T12:00:00+00:00",
-      "time": "2026-11-09T12:00:00+00:00",
-      "home": {
-        "name": "KF Ferizaj",
-        "logo": "https://img.thesports.com/football/team/f98968290a37a8407d7f5925e8ee5a01.png",
-        "score": null
-      },
-      "away": {
-        "name": "FC Suhareka",
-        "logo": "https://img.thesports.com/football/team/253a0ea1e3dbbea7b6df6c52f833b9ce.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Kosovo Division 1",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:49",
-      "slug": "",
-      "date": "2026-11-09T12:10:00+00:00",
-      "time": "2026-11-09T12:10:00+00:00",
-      "home": {
-        "name": "Al-Nasr Youth",
-        "logo": "https://img.thesports.com/football/team/a19b30f4d9a60272481ae671e578b558.png",
-        "score": null
-      },
-      "away": {
-        "name": "Al Ula FC Youths",
-        "logo": "https://img.thesports.com/football/team/830ac3015e38c3e66b99e0945e1bbf03.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Postponed",
-      "competition": "Saudi Arabia Youth League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
