@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-09T05:28:55Z",
-  "source_updated_at": "2026-11-09T05:28:33.073149+00:00",
+  "checked_at": "2026-11-09T06:32:06Z",
+  "source_updated_at": "2026-11-09T06:31:43.154836+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -363,11 +363,11 @@
     {
       "id": "sportscore:16",
       "slug": "",
-      "date": "2026-11-09T03:30:00+00:00",
-      "time": "2026-11-09T03:30:00+00:00",
+      "date": "2026-11-09T03:55:00+00:00",
+      "time": "2026-11-09T03:55:00+00:00",
       "home": {
-        "name": "Team pxwrxlhvd3dryk0",
-        "logo": "",
+        "name": "Tiwana FC",
+        "logo": "https://img.thesports.com/football/team/9304fa278225def2a2eb1e01c295c4a7.png",
         "score": "2"
       },
       "away": {
@@ -375,8 +375,8 @@
         "logo": "https://img.thesports.com/football/team/8f232ae317360cffddf10fd63ff11098.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "India Mumbai Super Division",
       "period": null,
       "clock": "",
@@ -395,10 +395,10 @@
       "away": {
         "name": "Khovd Western",
         "logo": "https://img.thesports.com/football/team/9ae36debba0abd59c01de2e60fc42648.png",
-        "score": "1"
+        "score": "2"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Mongolia Premier League",
       "period": null,
       "clock": "",
@@ -412,15 +412,15 @@
       "home": {
         "name": "Uptown Rebels SC",
         "logo": "",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "South United",
         "logo": "https://img.thesports.com/football/team/15f6890f73ff4f23a4b0fb1bd0f00eb8.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "Half time",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -434,15 +434,15 @@
       "home": {
         "name": "Hong Kong Futsal",
         "logo": "https://img.thesports.com/football/team/e5598102396c326e2d46add29f29512d.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Korea Republic Futsal",
         "logo": "https://img.thesports.com/football/team/7dab9abcdaeb9fa6761792737602cc93.png",
-        "score": null
+        "score": "6"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "2nd half",
       "competition": "CFA Team China Futsal International Tournament Yinchuan",
       "period": null,
       "clock": "",
@@ -464,7 +464,7 @@
         "score": null
       },
       "status": "pre",
-      "detail": "Not started",
+      "detail": "Postponed",
       "competition": "India Mumbai Super Division",
       "period": null,
       "clock": "",
@@ -478,15 +478,15 @@
       "home": {
         "name": "Rangdajied united U21",
         "logo": "https://img.thesports.com/football/team/256ffd26cd3d2b8055b053cdb0180291.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Mawlai SC U21",
         "logo": "https://img.thesports.com/football/team/37684ac9ee81731339a9c20f26a8a3e1.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "India U21 DL",
       "period": null,
       "clock": "",
@@ -1023,6 +1023,28 @@
     {
       "id": "sportscore:46",
       "slug": "",
+      "date": "2026-11-09T10:30:00+00:00",
+      "time": "2026-11-09T10:30:00+00:00",
+      "home": {
+        "name": "GOG FCC",
+        "logo": "https://img.thesports.com/football/team/3d1a54fe6e24f1b3e0d71279103b57e6.png",
+        "score": null
+      },
+      "away": {
+        "name": "Salgaocar Sports Club",
+        "logo": "https://img.thesports.com/football/team/8358a3172c8be4768a46021c8dd699d9.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Indian Bangalore Super Division",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:47",
+      "slug": "",
       "date": "2026-11-09T11:00:00+00:00",
       "time": "2026-11-09T11:00:00+00:00",
       "home": {
@@ -1043,7 +1065,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:47",
+      "id": "sportscore:48",
       "slug": "",
       "date": "2026-11-09T11:00:00+00:00",
       "time": "2026-11-09T11:00:00+00:00",
@@ -1065,45 +1087,23 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:48",
-      "slug": "",
-      "date": "2026-11-09T11:30:00+00:00",
-      "time": "2026-11-09T11:30:00+00:00",
-      "home": {
-        "name": "Mes Soongoun Varzaghan",
-        "logo": "https://img.thesports.com/football/team/77e7266e99f38919477c22524644aa60.png",
-        "score": null
-      },
-      "away": {
-        "name": "Naft Gachsaran",
-        "logo": "https://img.thesports.com/football/team/57cf3b157c82953b6f6cecbf836407be.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Iran Azadegan League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
       "id": "sportscore:49",
       "slug": "",
-      "date": "2026-11-09T11:30:00+00:00",
-      "time": "2026-11-09T11:30:00+00:00",
+      "date": "2026-11-09T11:00:00+00:00",
+      "time": "2026-11-09T11:00:00+00:00",
       "home": {
-        "name": "Maldives Futsal",
-        "logo": "",
+        "name": "Berari Kokeboch (W)",
+        "logo": "https://img.thesports.com/football/team/6c952683ac799d8c33b0124e35cf0ee1.png",
         "score": null
       },
       "away": {
-        "name": "China Futsal",
-        "logo": "https://img.thesports.com/football/team/3ae957d44a5dfbe4d4d8a8488a81bc32.png",
+        "name": "Addis Ababa Ketema Women",
+        "logo": "https://img.thesports.com/football/team/a80fe45f566d8e10706c5c42592eb9b3.png",
         "score": null
       },
       "status": "pre",
       "detail": "Not started",
-      "competition": "CFA Team China Futsal International Tournament Yinchuan",
+      "competition": "Ethiopia HL W",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
