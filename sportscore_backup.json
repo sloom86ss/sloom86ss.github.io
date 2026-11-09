@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-09T02:32:28Z",
-  "source_updated_at": "2026-11-09T02:31:52.149756+00:00",
+  "checked_at": "2026-11-09T03:21:25Z",
+  "source_updated_at": "2026-11-09T03:20:48.343890+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -219,10 +219,10 @@
       "away": {
         "name": "Fuerte San Francisco",
         "logo": "https://img.thesports.com/football/team/d93652b2dd714100acc2cb66aca539cc.png",
-        "score": "1"
+        "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "El Salvador Primera Division",
       "period": null,
       "clock": "",
@@ -243,8 +243,8 @@
         "logo": "https://img.thesports.com/football/team/6fe27a17397454cb43b104a6657e90d7.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Mexico Ascenso MX",
       "period": null,
       "clock": "",
@@ -265,8 +265,8 @@
         "logo": "https://img.thesports.com/football/team/f83a93401d7a60595338bae0337d344c.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Categoría Primera A",
       "period": null,
       "clock": "",
@@ -280,15 +280,15 @@
       "home": {
         "name": "Universitario De Deportes",
         "logo": "https://img.thesports.com/football/team/415e4ed317b0b0a4aea7c8ddc5cdd658.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "Moquegua",
         "logo": "https://img.thesports.com/football/team/19be19d979fd79bf0a2e6a78dfdadc4c.png",
-        "score": "1"
+        "score": "2"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "Peruvian Liga 1",
       "period": null,
       "clock": "",
@@ -310,7 +310,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "Honduras Primera Division",
       "period": null,
       "clock": "",
@@ -332,7 +332,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Mexico Liga MX",
       "period": null,
       "clock": "",
@@ -346,15 +346,15 @@
       "home": {
         "name": "Zinc Football Academy",
         "logo": "https://img.thesports.com/football/team/8741e011cde9fd0ea45dc4539b27b64b.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Kickstart Karnataka FC",
         "logo": "https://img.thesports.com/football/team/90d20fe07b1480e7d6c2ee39bbb89d80.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Indian Championship I-League",
       "period": null,
       "clock": "",
