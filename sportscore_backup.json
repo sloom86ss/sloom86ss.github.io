@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-09T11:28:21Z",
-  "source_updated_at": "2026-11-09T11:28:04.431252+00:00",
+  "checked_at": "2026-11-09T12:24:48Z",
+  "source_updated_at": "2026-11-09T12:24:24.385794+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -674,28 +674,6 @@
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
       "home": {
-        "name": "FC Zorya Luhansk U21",
-        "logo": "",
-        "score": "1"
-      },
-      "away": {
-        "name": "LNZ Cherkasy U21",
-        "logo": "https://img.thesports.com/football/team/3d84980e4dec8902b3bf627228141c2d.png",
-        "score": "1"
-      },
-      "status": "in",
-      "detail": "2nd half",
-      "competition": "Ukrainian Youth Team Championship",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:31",
-      "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
-      "home": {
         "name": "FK Gazalkent",
         "logo": "https://img.thesports.com/football/team/5866a054076a612b1cc7cefd7241aecc.png",
         "score": "0"
@@ -713,7 +691,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:32",
+      "id": "sportscore:31",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -735,7 +713,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:33",
+      "id": "sportscore:32",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -757,7 +735,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:34",
+      "id": "sportscore:33",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -779,7 +757,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:35",
+      "id": "sportscore:34",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -801,7 +779,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:36",
+      "id": "sportscore:35",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -823,7 +801,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:37",
+      "id": "sportscore:36",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -840,6 +818,28 @@
       "status": "post",
       "detail": "Finished",
       "competition": "Ukrainian First League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:37",
+      "slug": "",
+      "date": "2026-11-09T09:00:00+00:00",
+      "time": "2026-11-09T09:00:00+00:00",
+      "home": {
+        "name": "FC Zorya Luhansk U21",
+        "logo": "",
+        "score": "1"
+      },
+      "away": {
+        "name": "LNZ Cherkasy U21",
+        "logo": "https://img.thesports.com/football/team/3d84980e4dec8902b3bf627228141c2d.png",
+        "score": "1"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Ukrainian Youth Team Championship",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -903,8 +903,8 @@
         "logo": "https://img.thesports.com/football/team/23f94da90c69b79d0d869ae5934c539c.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Ukrainian Youth Team Championship",
       "period": null,
       "clock": "",
@@ -912,28 +912,6 @@
     },
     {
       "id": "sportscore:41",
-      "slug": "",
-      "date": "2026-11-09T10:30:00+00:00",
-      "time": "2026-11-09T10:30:00+00:00",
-      "home": {
-        "name": "Bentonit Idzhevan",
-        "logo": "https://img.thesports.com/football/team/b177b48f951b473e9e18dda8d1515b59.png",
-        "score": "1"
-      },
-      "away": {
-        "name": "Araks Ararat",
-        "logo": "https://img.thesports.com/football/team/94afae03640ce5e36aa68a6c3283583a.png",
-        "score": "1"
-      },
-      "status": "in",
-      "detail": "Half time",
-      "competition": "Armenian First League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:42",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
@@ -948,8 +926,30 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "Indian Bangalore Super Division",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:42",
+      "slug": "",
+      "date": "2026-11-09T10:30:00+00:00",
+      "time": "2026-11-09T10:30:00+00:00",
+      "home": {
+        "name": "Bentonit Idzhevan",
+        "logo": "https://img.thesports.com/football/team/b177b48f951b473e9e18dda8d1515b59.png",
+        "score": "2"
+      },
+      "away": {
+        "name": "Araks Ararat",
+        "logo": "https://img.thesports.com/football/team/94afae03640ce5e36aa68a6c3283583a.png",
+        "score": "2"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Armenian First League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -962,15 +962,15 @@
       "home": {
         "name": "Sportivo Luqueno Reserves",
         "logo": "https://img.thesports.com/football/team/68d769a4c46bf807352c36c0d3a93be1.png",
-        "score": "1"
+        "score": "4"
       },
       "away": {
         "name": "2 de Mayo PJC Reserves",
         "logo": "https://img.thesports.com/football/team/06bb9203fe0287e8873e233f159fb71e.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Paraguayan Reserve League",
       "period": null,
       "clock": "",
@@ -984,15 +984,15 @@
       "home": {
         "name": "Sportivo Trinidense Reserves",
         "logo": "https://img.thesports.com/football/team/7e82f0aa75f455171d87b216e8277f11.png",
-        "score": "0"
+        "score": "2"
       },
       "away": {
         "name": "Sportivo Ameliano Reserves",
         "logo": "https://img.thesports.com/football/team/bea9ca5e1f24636c5bd5388e7e3e5c23.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Paraguayan Reserve League",
       "period": null,
       "clock": "",
@@ -1006,15 +1006,15 @@
       "home": {
         "name": "GOG FCC",
         "logo": "https://img.thesports.com/football/team/3d1a54fe6e24f1b3e0d71279103b57e6.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "Salgaocar Sports Club",
         "logo": "https://img.thesports.com/football/team/8358a3172c8be4768a46021c8dd699d9.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -1050,7 +1050,7 @@
       "home": {
         "name": "Mashuk-KMV Pyatigorsk",
         "logo": "https://img.thesports.com/football/team/877faf356c8d2ec82eafc30365710223.png",
-        "score": "1"
+        "score": "3"
       },
       "away": {
         "name": "Rodina Moskva II",
@@ -1058,7 +1058,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "RUS D3A",
       "period": null,
       "clock": "",
@@ -1077,10 +1077,10 @@
       "away": {
         "name": "Addis Ababa Ketema Women",
         "logo": "https://img.thesports.com/football/team/a80fe45f566d8e10706c5c42592eb9b3.png",
-        "score": "0"
+        "score": "4"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Ethiopia HL W",
       "period": null,
       "clock": "",
