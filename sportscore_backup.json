@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-09T03:21:25Z",
-  "source_updated_at": "2026-11-09T03:20:48.343890+00:00",
+  "checked_at": "2026-11-09T04:23:46Z",
+  "source_updated_at": "2026-11-09T04:22:55.733603+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -287,8 +287,8 @@
         "logo": "https://img.thesports.com/football/team/19be19d979fd79bf0a2e6a78dfdadc4c.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Peruvian Liga 1",
       "period": null,
       "clock": "",
@@ -309,8 +309,8 @@
         "logo": "https://img.thesports.com/football/team/6efc34c36daa9ca8a84c495a829964fa.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Honduras Primera Division",
       "period": null,
       "clock": "",
@@ -324,15 +324,15 @@
       "home": {
         "name": "Club Leon",
         "logo": "https://img.thesports.com/football/team/4695f653aca6ac49ff2baa4a961fa67b.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Club Deportivo Guadalajara",
         "logo": "https://img.thesports.com/football/team/872867a492989e6a9a0785cfd0a40680.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Mexico Liga MX",
       "period": null,
       "clock": "",
@@ -351,10 +351,10 @@
       "away": {
         "name": "Kickstart Karnataka FC",
         "logo": "https://img.thesports.com/football/team/90d20fe07b1480e7d6c2ee39bbb89d80.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Indian Championship I-League",
       "period": null,
       "clock": "",
@@ -368,15 +368,15 @@
       "home": {
         "name": "Team pxwrxlhvd3dryk0",
         "logo": "",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Anstrengung United",
         "logo": "https://img.thesports.com/football/team/8f232ae317360cffddf10fd63ff11098.png",
-        "score": null
+        "score": "2"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "India Mumbai Super Division",
       "period": null,
       "clock": "",
