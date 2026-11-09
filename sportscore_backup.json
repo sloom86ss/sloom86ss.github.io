@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-09T07:54:44Z",
-  "source_updated_at": "2026-11-09T07:53:45.654551+00:00",
+  "checked_at": "2026-11-09T08:54:07Z",
+  "source_updated_at": "2026-11-09T08:53:32.409272+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -464,7 +464,7 @@
         "score": null
       },
       "status": "pre",
-      "detail": "Postponed",
+      "detail": "Delayed",
       "competition": "India Mumbai Super Division",
       "period": null,
       "clock": "",
@@ -485,8 +485,8 @@
         "logo": "https://img.thesports.com/football/team/37684ac9ee81731339a9c20f26a8a3e1.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "India U21 DL",
       "period": null,
       "clock": "",
@@ -500,15 +500,15 @@
       "home": {
         "name": "Qingdao West Coast Women",
         "logo": "https://img.thesports.com/football/team/70d70b67bf64e59c9e77cfbe976dc4dd.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Wuhan Sports Three Towns University Women",
         "logo": "https://img.thesports.com/football/team/3f0e25007351fae3b94424b62533f7b1.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "CFA Women's League One",
       "period": null,
       "clock": "",
@@ -529,8 +529,8 @@
         "logo": "https://img.thesports.com/football/team/472f7c5ddfb1d2f194e4a0f824c3b913.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "CFA Women's League One",
       "period": null,
       "clock": "",
@@ -549,10 +549,10 @@
       "away": {
         "name": "Henan Wanxianshan Women",
         "logo": "https://img.thesports.com/football/team/b7769e06012d84dc2ed5e9779e49528d.png",
-        "score": "1"
+        "score": "3"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "CFA Women's League One",
       "period": null,
       "clock": "",
@@ -571,10 +571,10 @@
       "away": {
         "name": "Hebei Snow Ruyi  Women",
         "logo": "https://img.thesports.com/football/team/69b57bf85b223fc09bdeb5768bff90bb.png",
-        "score": "1"
+        "score": "3"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "CFA Women's League One",
       "period": null,
       "clock": "",
@@ -588,15 +588,15 @@
       "home": {
         "name": "Mumbai Warriors",
         "logo": "https://img.thesports.com/football/team/06506c13327488161bc7fbd5f72d623a.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Kopana FC",
         "logo": "https://img.thesports.com/football/team/93d4a7bf6721948b74aa361d8109dee8.png",
-        "score": null
+        "score": "2"
       },
-      "status": "pre",
-      "detail": "Postponed",
+      "status": "in",
+      "detail": "Half time",
       "competition": "India Mumbai Super Division",
       "period": null,
       "clock": "",
@@ -610,15 +610,15 @@
       "home": {
         "name": "Ulaangom City FC",
         "logo": "https://img.thesports.com/football/team/869f9d5a3552f86ffbe7eed9c0e09d79.png",
-        "score": null
+        "score": "4"
       },
       "away": {
         "name": "Khovd",
         "logo": "https://img.thesports.com/football/team/876f6160eafc92115b442945c80fdba7.png",
-        "score": null
+        "score": "2"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "Half time",
       "competition": "Mongolia Premier League",
       "period": null,
       "clock": "",
@@ -632,15 +632,15 @@
       "home": {
         "name": "China Hong Kong Futsal(w)",
         "logo": "https://img.thesports.com/football/team/1e31f7b96a28c1fcf0acedcd1583fff3.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "China Futsal(W)",
         "logo": "https://img.thesports.com/football/team/568a4044065a9c24255064384e742075.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Futsal International Tournament Yinchuan Women",
       "period": null,
       "clock": "",
@@ -654,15 +654,15 @@
       "home": {
         "name": "Kasem Bundit FC Women",
         "logo": "https://img.thesports.com/football/team/a2084ca691626cffc7bc3a4400790ca5.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "College of Asian Scholars Women",
         "logo": "https://img.thesports.com/football/team/6e0d069a8e8c63f58835aba4469ec4d4.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Thai Women's Super League",
       "period": null,
       "clock": "",
