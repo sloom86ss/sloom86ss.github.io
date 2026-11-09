@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-09T17:31:56Z",
-  "source_updated_at": "2026-11-09T17:31:50.161844+00:00",
+  "checked_at": "2026-11-09T19:16:57Z",
+  "source_updated_at": "2026-11-09T19:16:30.235091+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -913,6 +913,28 @@
     {
       "id": "sportscore:41",
       "slug": "",
+      "date": "2026-11-09T10:00:00+00:00",
+      "time": "2026-11-09T10:00:00+00:00",
+      "home": {
+        "name": "Uzbekistan U17",
+        "logo": "https://img.thesports.com/football/team/9a351d67c7d778c962fcfd734a25913d.png",
+        "score": "1"
+      },
+      "away": {
+        "name": "Ecuador U17",
+        "logo": "https://img.thesports.com/football/team/a1319379e867b2da282acfe3c5131564.png",
+        "score": "1"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "International Friendly",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:42",
+      "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
       "home": {
@@ -933,7 +955,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:42",
+      "id": "sportscore:43",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
@@ -955,7 +977,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:43",
+      "id": "sportscore:44",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
@@ -977,7 +999,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:44",
+      "id": "sportscore:45",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
@@ -999,7 +1021,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:45",
+      "id": "sportscore:46",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
@@ -1021,7 +1043,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:46",
+      "id": "sportscore:47",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
@@ -1043,7 +1065,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:47",
+      "id": "sportscore:48",
       "slug": "",
       "date": "2026-11-09T11:00:00+00:00",
       "time": "2026-11-09T11:00:00+00:00",
@@ -1065,7 +1087,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:48",
+      "id": "sportscore:49",
       "slug": "",
       "date": "2026-11-09T11:00:00+00:00",
       "time": "2026-11-09T11:00:00+00:00",
@@ -1082,28 +1104,6 @@
       "status": "post",
       "detail": "Finished",
       "competition": "Ethiopia HL W",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:49",
-      "slug": "",
-      "date": "2026-11-09T11:00:00+00:00",
-      "time": "2026-11-09T11:00:00+00:00",
-      "home": {
-        "name": "Tunisia U17",
-        "logo": "https://img.thesports.com/football/team/4c82f2392a9844bdf7068ac1dc6269a5.png",
-        "score": null
-      },
-      "away": {
-        "name": "Libya U17",
-        "logo": "https://img.thesports.com/football/team/fb29f71e5149d2bc466e7b3d0565a962.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Delayed",
-      "competition": "CAF U17 Championship",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
