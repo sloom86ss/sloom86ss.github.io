@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-09T09:46:57Z",
-  "source_updated_at": "2026-11-09T09:46:31.217129+00:00",
+  "checked_at": "2026-11-09T10:36:42Z",
+  "source_updated_at": "2026-11-09T10:36:14.889717+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -595,8 +595,8 @@
         "logo": "https://img.thesports.com/football/team/93d4a7bf6721948b74aa361d8109dee8.png",
         "score": "3"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "India Mumbai Super Division",
       "period": null,
       "clock": "",
@@ -610,15 +610,15 @@
       "home": {
         "name": "Ulaangom City FC",
         "logo": "https://img.thesports.com/football/team/869f9d5a3552f86ffbe7eed9c0e09d79.png",
-        "score": "5"
+        "score": "6"
       },
       "away": {
         "name": "Khovd",
         "logo": "https://img.thesports.com/football/team/876f6160eafc92115b442945c80fdba7.png",
         "score": "3"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Mongolia Premier League",
       "period": null,
       "clock": "",
@@ -637,10 +637,10 @@
       "away": {
         "name": "China Futsal(W)",
         "logo": "https://img.thesports.com/football/team/568a4044065a9c24255064384e742075.png",
-        "score": "0"
+        "score": "3"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Futsal International Tournament Yinchuan Women",
       "period": null,
       "clock": "",
@@ -659,10 +659,10 @@
       "away": {
         "name": "College of Asian Scholars Women",
         "logo": "https://img.thesports.com/football/team/6e0d069a8e8c63f58835aba4469ec4d4.png",
-        "score": "4"
+        "score": "6"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Thai Women's Super League",
       "period": null,
       "clock": "",
@@ -674,18 +674,18 @@
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
       "home": {
-        "name": "FK Gazalkent",
-        "logo": "https://img.thesports.com/football/team/5866a054076a612b1cc7cefd7241aecc.png",
+        "name": "FC Zorya Luhansk U21",
+        "logo": "",
         "score": "0"
       },
       "away": {
-        "name": "Respublika FA",
-        "logo": "https://img.thesports.com/football/team/662dc29a9e88fb3a347d3c2d70aec0b5.png",
-        "score": "0"
+        "name": "LNZ Cherkasy U21",
+        "logo": "https://img.thesports.com/football/team/3d84980e4dec8902b3bf627228141c2d.png",
+        "score": "1"
       },
       "status": "in",
       "detail": "1st half",
-      "competition": "Uzbekistan Pro League",
+      "competition": "Ukrainian Youth Team Championship",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -696,17 +696,17 @@
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
       "home": {
-        "name": "Metallurg Bekobod",
-        "logo": "https://img.thesports.com/football/team/4aa9ac9ceebfd497212c8f17ab6c7162.png",
+        "name": "FK Gazalkent",
+        "logo": "https://img.thesports.com/football/team/5866a054076a612b1cc7cefd7241aecc.png",
         "score": "0"
       },
       "away": {
-        "name": "Aral Nukus",
-        "logo": "https://img.thesports.com/football/team/4904dff7aaee65b425e9062dea802e8f.png",
-        "score": "0"
+        "name": "Respublika FA",
+        "logo": "https://img.thesports.com/football/team/662dc29a9e88fb3a347d3c2d70aec0b5.png",
+        "score": "3"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Uzbekistan Pro League",
       "period": null,
       "clock": "",
@@ -714,6 +714,50 @@
     },
     {
       "id": "sportscore:32",
+      "slug": "",
+      "date": "2026-11-09T09:00:00+00:00",
+      "time": "2026-11-09T09:00:00+00:00",
+      "home": {
+        "name": "QMU Jayxun",
+        "logo": "https://img.thesports.com/football/team/d5f466d4b8ee5ea82ab5d1b6ee3ff397.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Olympic MobiUz",
+        "logo": "https://img.thesports.com/football/team/44c1dadc2be145799eebb39b4dc72984.png",
+        "score": "1"
+      },
+      "status": "in",
+      "detail": "2nd half",
+      "competition": "Uzbekistan Pro League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:33",
+      "slug": "",
+      "date": "2026-11-09T09:00:00+00:00",
+      "time": "2026-11-09T09:00:00+00:00",
+      "home": {
+        "name": "Metallurg Bekobod",
+        "logo": "https://img.thesports.com/football/team/4aa9ac9ceebfd497212c8f17ab6c7162.png",
+        "score": "1"
+      },
+      "away": {
+        "name": "Aral Nukus",
+        "logo": "https://img.thesports.com/football/team/4904dff7aaee65b425e9062dea802e8f.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "2nd half",
+      "competition": "Uzbekistan Pro League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:34",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -728,14 +772,14 @@
         "score": "2"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Uzbekistan Pro League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:33",
+      "id": "sportscore:35",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -750,14 +794,14 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Uzbekistan Pro League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:34",
+      "id": "sportscore:36",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -772,14 +816,14 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Uzbekistan Pro League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:35",
+      "id": "sportscore:37",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -794,14 +838,14 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Ukrainian First League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:36",
+      "id": "sportscore:38",
       "slug": "",
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
@@ -813,55 +857,11 @@
       "away": {
         "name": "Yangon City U20",
         "logo": "https://img.thesports.com/football/team/3c4a021b72ba132b41deb2cf81e3a709.png",
-        "score": "3"
+        "score": "4"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Myanmar U20 League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:37",
-      "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
-      "home": {
-        "name": "QMU Jayxun",
-        "logo": "https://img.thesports.com/football/team/d5f466d4b8ee5ea82ab5d1b6ee3ff397.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Olympic MobiUz",
-        "logo": "https://img.thesports.com/football/team/44c1dadc2be145799eebb39b4dc72984.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "Half time",
-      "competition": "Uzbekistan Pro League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:38",
-      "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
-      "home": {
-        "name": "Prishtina U19",
-        "logo": "https://img.thesports.com/football/team/b7b286792696c84eafa7c702c43754e6.png",
-        "score": "2"
-      },
-      "away": {
-        "name": "KF Malisheva U19",
-        "logo": "https://img.thesports.com/football/team/fb5df08e132ce15a65c5971b5ed14f28.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "Half time",
-      "competition": "Kos U19",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -872,18 +872,18 @@
       "date": "2026-11-09T09:00:00+00:00",
       "time": "2026-11-09T09:00:00+00:00",
       "home": {
-        "name": "FC Zorya Luhansk U21",
-        "logo": "",
-        "score": null
+        "name": "Prishtina U19",
+        "logo": "https://img.thesports.com/football/team/b7b286792696c84eafa7c702c43754e6.png",
+        "score": "6"
       },
       "away": {
-        "name": "LNZ Cherkasy U21",
-        "logo": "https://img.thesports.com/football/team/3d84980e4dec8902b3bf627228141c2d.png",
-        "score": null
+        "name": "KF Malisheva U19",
+        "logo": "https://img.thesports.com/football/team/fb5df08e132ce15a65c5971b5ed14f28.png",
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Postponed",
-      "competition": "Ukrainian Youth Team Championship",
+      "status": "in",
+      "detail": "2nd half",
+      "competition": "Kos U19",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -896,15 +896,15 @@
       "home": {
         "name": "FC Bukovyna Chernivtsi U21",
         "logo": "https://img.thesports.com/football/team/b1e21e366b7c46a401c4a43b4227f9fb.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Kolos Kovalivka U21",
         "logo": "https://img.thesports.com/football/team/23f94da90c69b79d0d869ae5934c539c.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Ukrainian Youth Team Championship",
       "period": null,
       "clock": "",
@@ -912,28 +912,6 @@
     },
     {
       "id": "sportscore:41",
-      "slug": "",
-      "date": "2026-11-09T10:30:00+00:00",
-      "time": "2026-11-09T10:30:00+00:00",
-      "home": {
-        "name": "Bentonit Idzhevan",
-        "logo": "https://img.thesports.com/football/team/b177b48f951b473e9e18dda8d1515b59.png",
-        "score": null
-      },
-      "away": {
-        "name": "Araks Ararat",
-        "logo": "https://img.thesports.com/football/team/94afae03640ce5e36aa68a6c3283583a.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Armenian First League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:42",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
       "time": "2026-11-09T10:30:00+00:00",
@@ -955,6 +933,28 @@
       "data_source": "SportScore"
     },
     {
+      "id": "sportscore:42",
+      "slug": "",
+      "date": "2026-11-09T10:30:00+00:00",
+      "time": "2026-11-09T10:30:00+00:00",
+      "home": {
+        "name": "Bentonit Idzhevan",
+        "logo": "https://img.thesports.com/football/team/b177b48f951b473e9e18dda8d1515b59.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Araks Ararat",
+        "logo": "https://img.thesports.com/football/team/94afae03640ce5e36aa68a6c3283583a.png",
+        "score": "1"
+      },
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Armenian First League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
       "id": "sportscore:43",
       "slug": "",
       "date": "2026-11-09T10:30:00+00:00",
@@ -962,15 +962,15 @@
       "home": {
         "name": "Hal FC",
         "logo": "https://img.thesports.com/football/team/cedefb834d84c29f26ebdf2384b381a4.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Bengaluru B",
         "logo": "https://img.thesports.com/football/team/c8883c8cf4c8e8afda5ebf7b33302161.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -984,15 +984,15 @@
       "home": {
         "name": "Sportivo Luqueno Reserves",
         "logo": "https://img.thesports.com/football/team/68d769a4c46bf807352c36c0d3a93be1.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "2 de Mayo PJC Reserves",
         "logo": "https://img.thesports.com/football/team/06bb9203fe0287e8873e233f159fb71e.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Paraguayan Reserve League",
       "period": null,
       "clock": "",
@@ -1006,15 +1006,15 @@
       "home": {
         "name": "Sportivo Trinidense Reserves",
         "logo": "https://img.thesports.com/football/team/7e82f0aa75f455171d87b216e8277f11.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Sportivo Ameliano Reserves",
         "logo": "https://img.thesports.com/football/team/bea9ca5e1f24636c5bd5388e7e3e5c23.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Paraguayan Reserve League",
       "period": null,
       "clock": "",
@@ -1028,15 +1028,15 @@
       "home": {
         "name": "GOG FCC",
         "logo": "https://img.thesports.com/football/team/3d1a54fe6e24f1b3e0d71279103b57e6.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Salgaocar Sports Club",
         "logo": "https://img.thesports.com/football/team/8358a3172c8be4768a46021c8dd699d9.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
