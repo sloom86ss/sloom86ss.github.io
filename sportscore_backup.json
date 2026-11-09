@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-09T01:37:48Z",
-  "source_updated_at": "2026-11-09T01:37:38.395077+00:00",
+  "checked_at": "2026-11-09T02:32:28Z",
+  "source_updated_at": "2026-11-09T02:31:52.149756+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -23,8 +23,8 @@
         "logo": "https://img.thesports.com/football/team/a98bd615308472b65dc82bcc3a2d54fb.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Mexico Liga MX",
       "period": null,
       "clock": "",
@@ -45,8 +45,8 @@
         "logo": "https://img.thesports.com/football/team/8e967e1050555c71c488cd64e252ae6b.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Guatemala Liga Nacional",
       "period": null,
       "clock": "",
@@ -67,8 +67,8 @@
         "logo": "https://img.thesports.com/football/team/87fd46bde6b10f373b0fde7ae1cb3ba8.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Aruba Division Di Honor",
       "period": null,
       "clock": "",
@@ -89,8 +89,8 @@
         "logo": "https://img.thesports.com/football/team/4038a49fc13691c4ba07628cecb307bc.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "USL League One",
       "period": null,
       "clock": "",
@@ -111,8 +111,8 @@
         "logo": "https://img.thesports.com/football/team/147a023b1c4b7d59279305a468d996e3.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "National Premier Soccer League",
       "period": null,
       "clock": "",
@@ -133,8 +133,8 @@
         "logo": "https://img.thesports.com/football/team/aad37c6fe9a045108c209ee67a10c8f0.png",
         "score": "3"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "National Premier Soccer League",
       "period": null,
       "clock": "",
@@ -155,8 +155,8 @@
         "logo": "https://img.thesports.com/football/team/702254bbb73528c82cfa4c6a7f7db8bd.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Brazilian Campeonato Paulista Youth",
       "period": null,
       "clock": "",
@@ -175,10 +175,10 @@
       "away": {
         "name": "International San Carlos",
         "logo": "https://img.thesports.com/football/team/fc2983212373493c10636dc641310eea.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Costa Rica Primera Division",
       "period": null,
       "clock": "",
@@ -199,8 +199,8 @@
         "logo": "https://img.thesports.com/football/team/f74cd7e9173bfbf92aa9499150bb0c38.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "PUR LPR",
       "period": null,
       "clock": "",
@@ -214,7 +214,7 @@
       "home": {
         "name": "CD FAS",
         "logo": "https://img.thesports.com/football/team/049b165b7cdeaedffc1966ca7564a87a.png",
-        "score": "0"
+        "score": "2"
       },
       "away": {
         "name": "Fuerte San Francisco",
@@ -222,7 +222,7 @@
         "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "El Salvador Primera Division",
       "period": null,
       "clock": "",
@@ -236,15 +236,15 @@
       "home": {
         "name": "Piratas FC",
         "logo": "https://img.thesports.com/football/team/472eb7cb6d1d6e03153c5a4c0db96474.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Cancun FC",
         "logo": "https://img.thesports.com/football/team/6fe27a17397454cb43b104a6657e90d7.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Mexico Ascenso MX",
       "period": null,
       "clock": "",
@@ -263,10 +263,10 @@
       "away": {
         "name": "Llaneros FC",
         "logo": "https://img.thesports.com/football/team/f83a93401d7a60595338bae0337d344c.png",
-        "score": "1"
+        "score": "2"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Categoría Primera A",
       "period": null,
       "clock": "",
@@ -280,15 +280,15 @@
       "home": {
         "name": "Universitario De Deportes",
         "logo": "https://img.thesports.com/football/team/415e4ed317b0b0a4aea7c8ddc5cdd658.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Moquegua",
         "logo": "https://img.thesports.com/football/team/19be19d979fd79bf0a2e6a78dfdadc4c.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
       "competition": "Peruvian Liga 1",
       "period": null,
       "clock": "",
@@ -302,7 +302,7 @@
       "home": {
         "name": "Marathon",
         "logo": "https://img.thesports.com/football/team/505365bf79d6e38406333c99613ca975.png",
-        "score": "0"
+        "score": "2"
       },
       "away": {
         "name": "Atletico Choloma",
@@ -310,7 +310,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
       "competition": "Honduras Primera Division",
       "period": null,
       "clock": "",
@@ -324,15 +324,15 @@
       "home": {
         "name": "Club Leon",
         "logo": "https://img.thesports.com/football/team/4695f653aca6ac49ff2baa4a961fa67b.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Club Deportivo Guadalajara",
         "logo": "https://img.thesports.com/football/team/872867a492989e6a9a0785cfd0a40680.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Mexico Liga MX",
       "period": null,
       "clock": "",
