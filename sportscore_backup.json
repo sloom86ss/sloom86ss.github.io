@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T02:14:39Z",
-  "source_updated_at": "2026-11-10T02:14:06.525939+00:00",
+  "checked_at": "2026-11-10T02:59:11Z",
+  "source_updated_at": "2026-11-10T02:58:45.487903+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -82,15 +82,15 @@
       "home": {
         "name": "SV River Plate",
         "logo": "https://img.thesports.com/football/team/4b8d35a13c1d7f30e373561308865f69.png",
-        "score": "3"
+        "score": "4"
       },
       "away": {
         "name": "SV Deportivo Nacional",
         "logo": "https://img.thesports.com/football/team/ea7aef1497ae50d0d773f116214689a8.png",
         "score": "3"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Aruba Division Di Honor",
       "period": null,
       "clock": "",
@@ -104,15 +104,15 @@
       "home": {
         "name": "Aurora",
         "logo": "https://img.thesports.com/football/team/ec2ed16825c0bf497854333615c4e2af.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Universitario De Vinto",
         "logo": "https://img.thesports.com/football/team/78806733b03788c901fd2f2cda1f0bd2.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Bolivian Primera Division",
       "period": null,
       "clock": "",
@@ -120,28 +120,6 @@
     },
     {
       "id": "sportscore:5",
-      "slug": "",
-      "date": "2026-11-10T01:00:00+00:00",
-      "time": "2026-11-10T01:00:00+00:00",
-      "home": {
-        "name": "Arnett Gardens",
-        "logo": "https://img.thesports.com/football/team/04d998a10ab2fd063aff16bfaa7aeb50.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Waterhouse FC",
-        "logo": "https://img.thesports.com/football/team/49795d03e912a2fba9f26f2fb294695f.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "2nd half",
-      "competition": "Jamaica Premier League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:6",
       "slug": "",
       "date": "2026-11-10T01:00:00+00:00",
       "time": "2026-11-10T01:00:00+00:00",
@@ -163,6 +141,28 @@
       "data_source": "SportScore"
     },
     {
+      "id": "sportscore:6",
+      "slug": "",
+      "date": "2026-11-10T01:00:00+00:00",
+      "time": "2026-11-10T01:00:00+00:00",
+      "home": {
+        "name": "Arnett Gardens",
+        "logo": "https://img.thesports.com/football/team/04d998a10ab2fd063aff16bfaa7aeb50.png",
+        "score": "1"
+      },
+      "away": {
+        "name": "Waterhouse FC",
+        "logo": "https://img.thesports.com/football/team/49795d03e912a2fba9f26f2fb294695f.png",
+        "score": "0"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Jamaica Premier League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
       "id": "sportscore:7",
       "slug": "",
       "date": "2026-11-10T02:05:00+00:00",
@@ -178,7 +178,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
       "competition": "MEX Liga Premier",
       "period": null,
       "clock": "",
