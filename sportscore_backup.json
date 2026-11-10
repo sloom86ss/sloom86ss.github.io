@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T15:20:32Z",
-  "source_updated_at": "2026-11-10T15:20:02.007443+00:00",
+  "checked_at": "2026-11-10T16:11:56Z",
+  "source_updated_at": "2026-11-10T16:11:17.530957+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -1035,8 +1035,8 @@
         "logo": "https://img.thesports.com/football/team/d764dd4b7db966672b35de808751b9f0.png",
         "score": "4"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "English U21 Professional Development League 2",
       "period": null,
       "clock": "",
@@ -1055,10 +1055,10 @@
       "away": {
         "name": "CR Beni Thour",
         "logo": "https://img.thesports.com/football/team/5f4384d68a7da468e8de20028b0e271b.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
@@ -1072,15 +1072,15 @@
       "home": {
         "name": "MO Bejaia",
         "logo": "https://img.thesports.com/football/team/a921cb96205eb90e04b5b55a4258be7b.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "IRB Nezla",
         "logo": "https://img.thesports.com/football/team/33d4f40b3602babb5d8e6d49fc254cc9.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
@@ -1101,8 +1101,8 @@
         "logo": "https://img.thesports.com/football/team/f5952d47de7990e742d8660dac81c26c.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
