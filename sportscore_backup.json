@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T18:22:39Z",
-  "source_updated_at": "2026-11-10T18:21:57.531065+00:00",
+  "checked_at": "2026-11-10T19:23:39Z",
+  "source_updated_at": "2026-11-10T19:22:50.282737+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -769,7 +769,7 @@
       "away": {
         "name": "Torreense U23",
         "logo": "https://img.thesports.com/football/team/b39d3c74dea7f5c47361e7733c1932b2.png",
-        "score": "2"
+        "score": "3"
       },
       "status": "post",
       "detail": "Finished",
@@ -786,7 +786,7 @@
       "home": {
         "name": "Vietnam U23",
         "logo": "https://img.thesports.com/football/team/b6303fe60c0094702179e08d6d27a798.png",
-        "score": "2"
+        "score": "3"
       },
       "away": {
         "name": "Thailand U23",
@@ -808,12 +808,12 @@
       "home": {
         "name": "Cerro Largo Reserves",
         "logo": "https://img.thesports.com/football/team/8ed58d880e7fd6ebff2375645c638702.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "Liverpool Montevideo Reserve",
         "logo": "https://img.thesports.com/football/team/a5fec7a09ce971a7a31d1b5c0fe2393e.png",
-        "score": "1"
+        "score": "2"
       },
       "status": "post",
       "detail": "Finished",
@@ -894,14 +894,14 @@
       "date": "2026-11-10T12:30:00+00:00",
       "time": "2026-11-10T12:30:00+00:00",
       "home": {
-        "name": "Tiradentes PA U20",
-        "logo": "https://img.thesports.com/football/team/ab6f9240e3428b61039cfc4e3e10cdc8.png",
-        "score": "3"
+        "name": "Remo PA Youth",
+        "logo": "https://img.thesports.com/football/team/d15566a1468aaba1421449e2892be57a.png",
+        "score": "0"
       },
       "away": {
-        "name": "Pinheirense EC U20",
-        "logo": "https://img.thesports.com/football/team/46244bb5215f2a826a6c85379485decc.png",
-        "score": "1"
+        "name": "Comercial EC U20",
+        "logo": "https://img.thesports.com/football/team/41a9aea9941f074235f772f1461e7096.png",
+        "score": "0"
       },
       "status": "post",
       "detail": "Finished",
@@ -935,20 +935,20 @@
     {
       "id": "sportscore:42",
       "slug": "",
-      "date": "2026-11-10T12:30:00+00:00",
-      "time": "2026-11-10T12:30:00+00:00",
+      "date": "2026-11-10T12:55:00+00:00",
+      "time": "2026-11-10T12:55:00+00:00",
       "home": {
-        "name": "Remo PA Youth",
-        "logo": "https://img.thesports.com/football/team/d15566a1468aaba1421449e2892be57a.png",
-        "score": null
+        "name": "Tiradentes PA U20",
+        "logo": "https://img.thesports.com/football/team/ab6f9240e3428b61039cfc4e3e10cdc8.png",
+        "score": "3"
       },
       "away": {
-        "name": "Comercial EC U20",
-        "logo": "https://img.thesports.com/football/team/41a9aea9941f074235f772f1461e7096.png",
-        "score": null
+        "name": "Pinheirense EC U20",
+        "logo": "https://img.thesports.com/football/team/46244bb5215f2a826a6c85379485decc.png",
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Delayed",
+      "status": "post",
+      "detail": "Finished",
       "competition": "BRA CP U20",
       "period": null,
       "clock": "",
