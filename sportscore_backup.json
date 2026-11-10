@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T02:59:11Z",
-  "source_updated_at": "2026-11-10T02:58:45.487903+00:00",
+  "checked_at": "2026-11-10T03:43:13Z",
+  "source_updated_at": "2026-11-10T03:42:27.192446+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -124,28 +124,6 @@
       "date": "2026-11-10T01:00:00+00:00",
       "time": "2026-11-10T01:00:00+00:00",
       "home": {
-        "name": "AD Rosario",
-        "logo": "https://img.thesports.com/football/team/cc1c87c38c9abb7af5a63a9704fd8d91.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Pitbulls",
-        "logo": "https://img.thesports.com/football/team/41911226032029e7bd96545594ded0fe.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "2nd half",
-      "competition": "Costa Rica 2.Liga",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:6",
-      "slug": "",
-      "date": "2026-11-10T01:00:00+00:00",
-      "time": "2026-11-10T01:00:00+00:00",
-      "home": {
         "name": "Arnett Gardens",
         "logo": "https://img.thesports.com/football/team/04d998a10ab2fd063aff16bfaa7aeb50.png",
         "score": "1"
@@ -163,6 +141,28 @@
       "data_source": "SportScore"
     },
     {
+      "id": "sportscore:6",
+      "slug": "",
+      "date": "2026-11-10T01:00:00+00:00",
+      "time": "2026-11-10T01:00:00+00:00",
+      "home": {
+        "name": "AD Rosario",
+        "logo": "https://img.thesports.com/football/team/cc1c87c38c9abb7af5a63a9704fd8d91.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Pitbulls",
+        "logo": "https://img.thesports.com/football/team/41911226032029e7bd96545594ded0fe.png",
+        "score": "0"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Costa Rica 2.Liga",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
       "id": "sportscore:7",
       "slug": "",
       "date": "2026-11-10T02:05:00+00:00",
@@ -170,7 +170,7 @@
       "home": {
         "name": "Chapulineros",
         "logo": "https://img.thesports.com/football/team/c440378d8997aca3722daf651b9734ad.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Cordobes Futbol Club",
@@ -178,7 +178,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "MEX Liga Premier",
       "period": null,
       "clock": "",
