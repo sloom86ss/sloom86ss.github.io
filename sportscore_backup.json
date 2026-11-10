@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T14:36:50Z",
-  "source_updated_at": "2026-11-10T14:36:08.255007+00:00",
+  "checked_at": "2026-11-10T15:20:32Z",
+  "source_updated_at": "2026-11-10T15:20:02.007443+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -874,15 +874,15 @@
       "home": {
         "name": "Congo Women",
         "logo": "https://img.thesports.com/football/team/1b8e08327c6294ec0f833447a67acae3.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Central African Republic Women",
         "logo": "https://img.thesports.com/football/team/e50bb86d3e0a5413e1fea1ea4e57a082.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Postponed",
+      "status": "post",
+      "detail": "Finished",
       "competition": "International Friendly",
       "period": null,
       "clock": "",
@@ -903,8 +903,8 @@
         "logo": "https://img.thesports.com/football/team/46244bb5215f2a826a6c85379485decc.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "BRA CP U20",
       "period": null,
       "clock": "",
@@ -948,7 +948,7 @@
         "score": null
       },
       "status": "pre",
-      "detail": "Postponed",
+      "detail": "Delayed",
       "competition": "BRA CP U20",
       "period": null,
       "clock": "",
@@ -969,8 +969,8 @@
         "logo": "https://img.thesports.com/football/team/160bea0f14ab941c316f3f1c97acf98d.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "English U21 Professional Development League 2",
       "period": null,
       "clock": "",
@@ -991,8 +991,8 @@
         "logo": "https://img.thesports.com/football/team/f24868ce67a31d285fbac253dc57256d.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "CAF U17 Championship",
       "period": null,
       "clock": "",
@@ -1033,10 +1033,10 @@
       "away": {
         "name": "Charlton Athletic U21",
         "logo": "https://img.thesports.com/football/team/d764dd4b7db966672b35de808751b9f0.png",
-        "score": "3"
+        "score": "4"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "English U21 Professional Development League 2",
       "period": null,
       "clock": "",
@@ -1050,7 +1050,7 @@
       "home": {
         "name": "Djijel",
         "logo": "https://img.thesports.com/football/team/0306d24ee61ce2b5cfdc22eefb652443.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "CR Beni Thour",
@@ -1058,7 +1058,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
@@ -1080,7 +1080,7 @@
         "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
@@ -1102,7 +1102,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
