@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10091b">
+<meta name="description" content="سلوم365 AI — مساعدك الذكي للمحادثة والكتابة والترجمة والتلخيص.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="سلوم365 AI">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon.svg">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<title>سلوم365 AI | المساعد الذكي</title>
+<style>
+:root{color-scheme:dark;--bg:#090611;--panel:#140d20;--panel2:#1c122b;--line:#39264e;--purple:#a855e8;--violet:#7135a2;--text:#f7efff;--muted:#b7a5c7;--user:#49236b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#3b1d53 0,transparent 48%),var(--bg);color:var(--text);font-family:system-ui,"Noto Sans Arabic",Tahoma,sans-serif;min-height:100vh}
+.app{width:min(900px,100%);height:100dvh;margin:auto;display:flex;flex-direction:column;padding:0 14px env(safe-area-inset-bottom,0)}
+header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 2px;border-bottom:1px solid #ffffff14}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#bd72f0,#5b2586);display:grid;place-items:center;font-weight:900;font-size:17px;box-shadow:0 5px 24px #9c4bd655}.brand h1{font-size:17px;margin:0}.brand small{display:block;color:var(--muted);font-size:10px;margin-top:2px}
+.actions{display:flex;gap:7px;align-items:center}.btn{border:1px solid var(--line);background:#21152f;color:var(--text);border-radius:11px;padding:9px 11px;font:700 11px inherit;cursor:pointer}.btn.install{background:linear-gradient(130deg,#a855e8,#7135a2);border-color:#c98af3;color:white}.btn:disabled{opacity:.5;cursor:not-allowed}
+.status{display:flex;align-items:center;gap:7px;color:#c8b8d6;font-size:10px;padding:10px 2px}.dot{width:7px;height:7px;border-radius:50%;background:#f0b94b;box-shadow:0 0 8px #f0b94b}
+main{flex:1;min-height:0;overflow:auto;padding:14px 2px 20px;scroll-behavior:smooth}
+.welcome{text-align:center;margin:clamp(22px,8vh,70px) auto 25px;max-width:550px}.welcome-mark{width:64px;height:64px;border-radius:22px;margin:0 auto 14px;background:linear-gradient(145deg,#b96cec,#57227d);display:grid;place-items:center;font-size:27px;box-shadow:0 10px 40px #9e4bd444}.welcome h2{font-size:clamp(22px,5vw,30px);margin:0 0 8px}.welcome p{color:var(--muted);font-size:13px;line-height:1.9;margin:0}
+.suggestions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;max-width:600px;margin:20px auto}.suggestion{background:linear-gradient(145deg,#1c1229,#120c1b);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:right;color:#e8d9f4;font:600 12px inherit;cursor:pointer}.suggestion:hover{border-color:var(--purple)}
+.message{display:flex;margin:14px 0;gap:9px;align-items:flex-start}.message.user{justify-content:flex-start}.avatar{width:29px;height:29px;flex:none;border-radius:10px;display:grid;place-items:center;background:#342047;color:#e7c8ff;font-size:11px;font-weight:900}.message.user .avatar{background:#543075}.bubble{max-width:min(78%,680px);padding:11px 14px;border:1px solid #49305f;border-radius:15px;background:#1a1126;font-size:14px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere}.message.user .bubble{background:linear-gradient(145deg,#492568,#321847);border-color:#704294}.message.error .bubble{border-color:#8d424c;background:#321820}
+.typing{display:flex;gap:5px;padding:7px}.typing i{width:6px;height:6px;border-radius:50%;background:#c18ae9;animation:pulse .9s infinite alternate}.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}@keyframes pulse{to{opacity:.25;transform:translateY(-3px)}}
+.composer-wrap{padding:10px 0 calc(12px + env(safe-area-inset-bottom));border-top:1px solid #ffffff16;background:linear-gradient(180deg,transparent,#090611 15%)}
+.composer{display:flex;align-items:flex-end;gap:8px;background:#1a1125;border:1px solid #68458a;border-radius:18px;padding:8px;box-shadow:0 8px 30px #0005}.composer textarea{flex:1;min-height:42px;max-height:140px;resize:none;background:transparent;border:0;outline:0;color:white;font:14px inherit;line-height:1.7;padding:9px 7px}.composer textarea::placeholder{color:#9e8aaa}.send{width:43px;height:43px;flex:none;border:0;border-radius:13px;background:linear-gradient(145deg,#b76bea,#7439a5);color:white;font-size:19px;cursor:pointer}.send:disabled{opacity:.5}.hint{text-align:center;color:#877894;font-size:10px;margin:8px 0 0}.toast{position:fixed;bottom:95px;left:50%;transform:translateX(-50%);background:#2b1b39;border:1px solid #765093;color:#f5eaff;border-radius:12px;padding:10px 14px;font-size:12px;display:none;max-width:90%;text-align:center}.toast.show{display:block}
+@media(max-width:480px){.app{padding-inline:10px}.brand h1{font-size:15px}.btn{padding:8px 9px;font-size:10px}.bubble{max-width:86%;font-size:13px}.suggestions{grid-template-columns:1fr}.welcome{margin-top:7vh}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+ <div class="brand"><div class="logo">365</div><div><h1>سلوم365 AI</h1><small>مساعدك الذكي</small></div></div>
+ <div class="actions"><button class="btn" id="newChat" type="button">محادثة جديدة</button><button class="btn install" id="installBtn" type="button">تنزيل التطبيق</button></div>
+</header>
+<div class="status"><span class="dot" id="statusDot"></span><span id="statusText">جارٍ فحص المحرك...</span></div>
+<main id="messages" aria-live="polite">
+ <section class="welcome" id="welcome">
+  <div class="welcome-mark">✦</div><h2>مرحباً بك في سلوم365 AI</h2><p>اسألني عمّا تريد. أستطيع مساعدتك في الكتابة والشرح والترجمة والتلخيص والأفكار بلغات متعددة.</p>
+  <div class="suggestions">
+   <button class="suggestion" data-prompt="اشرح لي الذكاء الاصطناعي بطريقة بسيطة">اشرح لي موضوعاً ببساطة</button>
+   <button class="suggestion" data-prompt="ترجم هذه العبارة إلى الإنجليزية: صباح الخير، كيف حالك؟">ترجمة نص</button>
+   <button class="suggestion" data-prompt="اكتب لي رسالة رسمية قصيرة">كتابة رسالة</button>
+   <button class="suggestion" data-prompt="لخص لي فوائد تنظيم الوقت في نقاط">تلخيص موضوع</button>
+  </div>
+ </section>
+</main>
+<div class="composer-wrap">
+ <form class="composer" id="chatForm"><textarea id="prompt" rows="1" maxlength="6000" placeholder="اكتب رسالتك إلى سلوم365 AI..." aria-label="اكتب رسالتك"></textarea><button class="send" id="sendBtn" type="submit" aria-label="إرسال">➤</button></form>
+ <p class="hint">قد تكون بعض الإجابات غير دقيقة؛ تحقق من المعلومات المهمة.</p>
+</div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const API="https://sloom365-live.sloom86ss.workers.dev/v1/chat";
+const HEALTH="https://sloom365-live.sloom86ss.workers.dev/health";
+const $=id=>document.getElementById(id);
+const messagesEl=$("messages"),promptEl=$("prompt"),sendBtn=$("sendBtn"),statusText=$("statusText"),statusDot=$("statusDot"),installBtn=$("installBtn");
+let history=[],busy=false,deferredInstall=null;
+function toast(t){const el=$("toast");el.textContent=t;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),3200);}
+function status(t,ok){statusText.textContent=t;statusDot.style.background=ok?"#52dc91":"#f0b94b";statusDot.style.boxShadow=ok?"0 0 8px #52dc91":"0 0 8px #f0b94b";}
+async function checkHealth(){try{const r=await fetch(HEALTH,{cache:"no-store"});if(!r.ok)throw Error();const d=await r.json();status(d.status==="online"?"المحرك متصل":"المحرك غير متاح",d.status==="online");}catch{status("تعذر التحقق من الاتصال حالياً",false);}}
+function addMessage(role,text,error=false){$("welcome")?.remove();const row=document.createElement("div");row.className="message "+role+(error?" error":"");const av=document.createElement("div");av.className="avatar";av.textContent=role==="user"?"أنت":"365";const bubble=document.createElement("div");bubble.className="bubble";bubble.textContent=text;row.append(av,bubble);messagesEl.append(row);messagesEl.scrollTop=messagesEl.scrollHeight;return row;}
+function typing(){const row=document.createElement("div");row.className="message";row.innerHTML='<div class="avatar">365</div><div class="bubble"><div class="typing"><i></i><i></i><i></i></div></div>';messagesEl.append(row);messagesEl.scrollTop=messagesEl.scrollHeight;return row;}
+async function send(text){text=text.trim();if(!text||busy)return;busy=true;sendBtn.disabled=true;promptEl.disabled=true;addMessage("user",text);history.push({role:"user",content:text});const pending=typing();try{const r=await fetch(API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({messages:history.slice(-20)})});const d=await r.json().catch(()=>({}));if(!r.ok||!d.answer)throw Error(d.error||"تعذر الحصول على رد من المحرك.");pending.remove();addMessage("assistant",d.answer);history.push({role:"assistant",content:d.answer});status("متصل · "+(d.provider||"AI"),true);}catch(e){pending.remove();addMessage("assistant",e.message||"حدث خطأ في الاتصال. حاول مرة أخرى.",true);history.pop();status("تعذر الاتصال بالمحرك",false);}finally{busy=false;sendBtn.disabled=false;promptEl.disabled=false;promptEl.focus();}}
+$("chatForm").addEventListener("submit",e=>{e.preventDefault();const t=promptEl.value;promptEl.value="";promptEl.style.height="auto";send(t);});
+promptEl.addEventListener("input",()=>{promptEl.style.height="auto";promptEl.style.height=Math.min(promptEl.scrollHeight,140)+"px";});
+promptEl.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();$("chatForm").requestSubmit();}});
+document.querySelectorAll("[data-prompt]").forEach(b=>b.addEventListener("click",()=>{promptEl.value=b.dataset.prompt;send(promptEl.value);promptEl.value="";}));
+$("newChat").addEventListener("click",()=>{history=[];messagesEl.innerHTML='<section class="welcome" id="welcome"><div class="welcome-mark">✦</div><h2>محادثة جديدة</h2><p>ما الذي تود أن نتحدث عنه؟</p></section>';});
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredInstall=e;installBtn.hidden=false;});
+installBtn.addEventListener("click",async()=>{if(deferredInstall){deferredInstall.prompt();const choice=await deferredInstall.userChoice;deferredInstall=null;if(choice.outcome==="accepted")toast("بدأ تثبيت سلوم365 AI.");return;}if(/iphone|ipad|ipod/i.test(navigator.userAgent)&&!window.MSStream){toast("لتثبيت التطبيق: اضغط مشاركة في Safari ثم «إضافة إلى الشاشة الرئيسية».");}else if(window.matchMedia("(display-mode: standalone)").matches){toast("التطبيق مثبت بالفعل على جهازك.");}else{toast("افتح قائمة المتصفح وابحث عن «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».");}});
+if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}
+checkHealth();
+</script>
+</body></html>
