@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T10:17:49Z",
-  "source_updated_at": "2026-11-10T10:17:33.779610+00:00",
+  "checked_at": "2026-11-10T11:07:10Z",
+  "source_updated_at": "2026-11-10T11:06:24.345748+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -212,6 +212,28 @@
       "date": "2026-11-10T05:00:00+00:00",
       "time": "2026-11-10T05:00:00+00:00",
       "home": {
+        "name": "Fujieda City Hall FC",
+        "logo": "https://img.thesports.com/football/team/ba2b6110bca7bc0b64f9e348a61d04e5.png",
+        "score": "3"
+      },
+      "away": {
+        "name": "Wyvern FC",
+        "logo": "https://img.thesports.com/football/team/b1528552aa2bffb4ca24b0349b761af4.png",
+        "score": "2"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Japanese Regional League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:10",
+      "slug": "",
+      "date": "2026-11-10T05:00:00+00:00",
+      "time": "2026-11-10T05:00:00+00:00",
+      "home": {
         "name": "Yonsei University",
         "logo": "https://img.thesports.com/football/team/6d50346d1781b9e444565042fd9fc046.png",
         "score": "2"
@@ -229,7 +251,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:10",
+      "id": "sportscore:11",
       "slug": "",
       "date": "2026-11-10T05:00:00+00:00",
       "time": "2026-11-10T05:00:00+00:00",
@@ -251,7 +273,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:11",
+      "id": "sportscore:12",
       "slug": "",
       "date": "2026-11-10T05:00:00+00:00",
       "time": "2026-11-10T05:00:00+00:00",
@@ -273,7 +295,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:12",
+      "id": "sportscore:13",
       "slug": "",
       "date": "2026-11-10T05:00:00+00:00",
       "time": "2026-11-10T05:00:00+00:00",
@@ -290,28 +312,6 @@
       "status": "post",
       "detail": "Finished",
       "competition": "South Korea University Championship",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:13",
-      "slug": "",
-      "date": "2026-11-10T05:00:00+00:00",
-      "time": "2026-11-10T05:00:00+00:00",
-      "home": {
-        "name": "Fujieda City Hall FC",
-        "logo": "https://img.thesports.com/football/team/ba2b6110bca7bc0b64f9e348a61d04e5.png",
-        "score": null
-      },
-      "away": {
-        "name": "Wyvern FC",
-        "logo": "https://img.thesports.com/football/team/b1528552aa2bffb4ca24b0349b761af4.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Postponed",
-      "competition": "Japanese Regional League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -483,10 +483,10 @@
       "away": {
         "name": "Prachuap U21",
         "logo": "https://img.thesports.com/football/team/182b609c6a204670a76dac1babeb36d1.png",
-        "score": "1"
+        "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "THA U21",
       "period": null,
       "clock": "",
@@ -527,10 +527,10 @@
       "away": {
         "name": "Johor Darul Takzim III FC U20",
         "logo": "https://img.thesports.com/football/team/f1b2c0c73d436718ad5daa736ad87c8b.png",
-        "score": "1"
+        "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Malaysian President Cup",
       "period": null,
       "clock": "",
@@ -551,8 +551,8 @@
         "logo": "https://img.thesports.com/football/team/03da2bdab2f899d26e624c8887e4600a.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Malaysian President Cup",
       "period": null,
       "clock": "",
@@ -571,10 +571,10 @@
       "away": {
         "name": "Yadanarbon FC U20",
         "logo": "https://img.thesports.com/football/team/efbbc1aeb47870e3cdf493e005e8cdd3.png",
-        "score": "1"
+        "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Myanmar U20 League",
       "period": null,
       "clock": "",
@@ -596,7 +596,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "International Club Friendly",
       "period": null,
       "clock": "",
@@ -632,15 +632,15 @@
       "home": {
         "name": "FC Bengaluru United",
         "logo": "https://img.thesports.com/football/team/3e4ab507d5b1007d9932d22ac716be74.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Real Bengaluru",
         "logo": "https://img.thesports.com/football/team/4b6b4944af08355d5375a8d95e6a8395.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -654,15 +654,15 @@
       "home": {
         "name": "China Futsal(W)",
         "logo": "https://img.thesports.com/football/team/568a4044065a9c24255064384e742075.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Iran Futsal (w)",
         "logo": "https://img.thesports.com/football/team/c6783fa0703fa4c5b151d86a8b2eae27.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Futsal International Tournament Yinchuan Women",
       "period": null,
       "clock": "",
