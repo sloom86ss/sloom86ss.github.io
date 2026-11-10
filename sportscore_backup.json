@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T11:07:10Z",
-  "source_updated_at": "2026-11-10T11:06:24.345748+00:00",
+  "checked_at": "2026-11-10T11:53:00Z",
+  "source_updated_at": "2026-11-10T11:51:59.411052+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -500,15 +500,15 @@
       "home": {
         "name": "Chonburi U21",
         "logo": "https://img.thesports.com/football/team/f3bb415b9d3d63a99f040d49c6caa59f.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Chainat Hornbill U21",
         "logo": "https://img.thesports.com/football/team/38626ab090fd21a17c2581df63cddfe0.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Postponed",
+      "status": "post",
+      "detail": "Finished",
       "competition": "THA U21",
       "period": null,
       "clock": "",
@@ -588,15 +588,15 @@
       "home": {
         "name": "SCM Ramnicu Valcea",
         "logo": "https://img.thesports.com/football/team/cfc04de9949091b8d3476fff54ca852e.png",
-        "score": "1"
+        "score": "4"
       },
       "away": {
         "name": "CS Vulturii Farcasesti",
         "logo": "https://img.thesports.com/football/team/bb34663c775be270377a47118f3d600b.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "International Club Friendly",
       "period": null,
       "clock": "",
@@ -632,7 +632,7 @@
       "home": {
         "name": "FC Bengaluru United",
         "logo": "https://img.thesports.com/football/team/3e4ab507d5b1007d9932d22ac716be74.png",
-        "score": "1"
+        "score": "3"
       },
       "away": {
         "name": "Real Bengaluru",
@@ -640,7 +640,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -654,7 +654,7 @@
       "home": {
         "name": "China Futsal(W)",
         "logo": "https://img.thesports.com/football/team/568a4044065a9c24255064384e742075.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "Iran Futsal (w)",
@@ -662,7 +662,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
       "competition": "Futsal International Tournament Yinchuan Women",
       "period": null,
       "clock": "",
@@ -671,27 +671,49 @@
     {
       "id": "sportscore:30",
       "slug": "",
-      "date": "2026-11-10T11:38:00+00:00",
-      "time": "2026-11-10T11:38:00+00:00",
+      "date": "2026-11-10T11:00:00+00:00",
+      "time": "2026-11-10T11:00:00+00:00",
       "home": {
-        "name": "Shaoyang Football Team",
-        "logo": "https://img.thesports.com/football/team/57da81a4870e171117e64ab3e52eb27d.png",
-        "score": null
+        "name": "AI Nairab",
+        "logo": "https://img.thesports.com/football/team/af06898a8fb6924d3a15dfc9bad53611.png",
+        "score": "0"
       },
       "away": {
-        "name": "Xiangtan Football Team",
-        "logo": "https://img.thesports.com/football/team/f65788daaba4c8b426528f010cbc9878.png",
-        "score": null
+        "name": "Al-Nabek",
+        "logo": "https://img.thesports.com/football/team/a5548aa21124137863a2b169e8b6d489.png",
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Hunan Football League",
+      "status": "in",
+      "detail": "Half time",
+      "competition": "Syrian 1st Division",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
       "id": "sportscore:31",
+      "slug": "",
+      "date": "2026-11-10T11:38:00+00:00",
+      "time": "2026-11-10T11:38:00+00:00",
+      "home": {
+        "name": "Shaoyang Football Team",
+        "logo": "https://img.thesports.com/football/team/57da81a4870e171117e64ab3e52eb27d.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Xiangtan Football Team",
+        "logo": "https://img.thesports.com/football/team/f65788daaba4c8b426528f010cbc9878.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Hunan Football League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:32",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -713,7 +735,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:32",
+      "id": "sportscore:33",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -735,7 +757,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:33",
+      "id": "sportscore:34",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -757,7 +779,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:34",
+      "id": "sportscore:35",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -779,7 +801,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:35",
+      "id": "sportscore:36",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -801,7 +823,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:36",
+      "id": "sportscore:37",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -823,7 +845,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:37",
+      "id": "sportscore:38",
       "slug": "",
       "date": "2026-11-10T12:30:00+00:00",
       "time": "2026-11-10T12:30:00+00:00",
@@ -845,7 +867,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:38",
+      "id": "sportscore:39",
       "slug": "",
       "date": "2026-11-10T12:30:00+00:00",
       "time": "2026-11-10T12:30:00+00:00",
@@ -867,7 +889,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:39",
+      "id": "sportscore:40",
       "slug": "",
       "date": "2026-11-10T12:30:00+00:00",
       "time": "2026-11-10T12:30:00+00:00",
@@ -889,7 +911,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:40",
+      "id": "sportscore:41",
       "slug": "",
       "date": "2026-11-10T13:00:00+00:00",
       "time": "2026-11-10T13:00:00+00:00",
@@ -911,7 +933,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:41",
+      "id": "sportscore:42",
       "slug": "",
       "date": "2026-11-10T13:00:00+00:00",
       "time": "2026-11-10T13:00:00+00:00",
@@ -933,7 +955,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:42",
+      "id": "sportscore:43",
       "slug": "",
       "date": "2026-11-10T13:00:00+00:00",
       "time": "2026-11-10T13:00:00+00:00",
@@ -955,7 +977,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:43",
+      "id": "sportscore:44",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -977,7 +999,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:44",
+      "id": "sportscore:45",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -999,7 +1021,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:45",
+      "id": "sportscore:46",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -1021,7 +1043,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:46",
+      "id": "sportscore:47",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -1043,7 +1065,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:47",
+      "id": "sportscore:48",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -1065,7 +1087,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:48",
+      "id": "sportscore:49",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -1082,28 +1104,6 @@
       "status": "pre",
       "detail": "Not started",
       "competition": "DR Congo Vodacom Ligue 1",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:49",
-      "slug": "",
-      "date": "2026-11-10T15:00:00+00:00",
-      "time": "2026-11-10T15:00:00+00:00",
-      "home": {
-        "name": "El Mokawloon El Arab",
-        "logo": "https://img.thesports.com/football/team/d2ba8945533ebbda0bcccf6cf21a4bd4.png",
-        "score": null
-      },
-      "away": {
-        "name": "Telecom Egypt",
-        "logo": "https://img.thesports.com/football/team/c8ce27e068948a636fe9a3cce25c13e2.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Egyptian Scores Cup",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
