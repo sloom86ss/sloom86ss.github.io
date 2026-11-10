@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T08:33:14Z",
-  "source_updated_at": "2026-11-10T08:32:19.019052+00:00",
+  "checked_at": "2026-11-10T09:25:12Z",
+  "source_updated_at": "2026-11-10T09:24:28.308163+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -412,7 +412,7 @@
       "home": {
         "name": "Deren FC",
         "logo": "https://img.thesports.com/football/team/e4f8faa800643a16387371e8f8234079.png",
-        "score": "1"
+        "score": "3"
       },
       "away": {
         "name": "FC Ulaanbaatar",
@@ -420,7 +420,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Mongolia Premier League",
       "period": null,
       "clock": "",
@@ -442,7 +442,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "International Friendly",
       "period": null,
       "clock": "",
@@ -461,10 +461,10 @@
       "away": {
         "name": "Parikrma FC",
         "logo": "https://img.thesports.com/football/team/9797959a20ca90fb6901b819293bb1bd.png",
-        "score": "0"
+        "score": "3"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -472,28 +472,6 @@
     },
     {
       "id": "sportscore:21",
-      "slug": "",
-      "date": "2026-11-10T08:30:00+00:00",
-      "time": "2026-11-10T08:30:00+00:00",
-      "home": {
-        "name": "Chonburi U21",
-        "logo": "https://img.thesports.com/football/team/f3bb415b9d3d63a99f040d49c6caa59f.png",
-        "score": null
-      },
-      "away": {
-        "name": "Chainat Hornbill U21",
-        "logo": "https://img.thesports.com/football/team/38626ab090fd21a17c2581df63cddfe0.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "THA U21",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:22",
       "slug": "",
       "date": "2026-11-10T08:30:00+00:00",
       "time": "2026-11-10T08:30:00+00:00",
@@ -508,7 +486,29 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
+      "competition": "THA U21",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:22",
+      "slug": "",
+      "date": "2026-11-10T08:30:00+00:00",
+      "time": "2026-11-10T08:30:00+00:00",
+      "home": {
+        "name": "Chonburi U21",
+        "logo": "https://img.thesports.com/football/team/f3bb415b9d3d63a99f040d49c6caa59f.png",
+        "score": null
+      },
+      "away": {
+        "name": "Chainat Hornbill U21",
+        "logo": "https://img.thesports.com/football/team/38626ab090fd21a17c2581df63cddfe0.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Postponed",
       "competition": "THA U21",
       "period": null,
       "clock": "",
@@ -522,15 +522,15 @@
       "home": {
         "name": "Selangor PB U20",
         "logo": "https://img.thesports.com/football/team/1dae6ef651e470ae9dc14d16987deccd.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Johor Darul Takzim III FC U20",
         "logo": "https://img.thesports.com/football/team/f1b2c0c73d436718ad5daa736ad87c8b.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Malaysian President Cup",
       "period": null,
       "clock": "",
@@ -544,15 +544,15 @@
       "home": {
         "name": "Penang U20",
         "logo": "https://img.thesports.com/football/team/5762913506fe179aa5c8f929e65c04a4.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Terengganu U20",
         "logo": "https://img.thesports.com/football/team/03da2bdab2f899d26e624c8887e4600a.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Malaysian President Cup",
       "period": null,
       "clock": "",
@@ -566,15 +566,15 @@
       "home": {
         "name": "Shan Utd U20",
         "logo": "https://img.thesports.com/football/team/c2239b16c6ef2d4efeefe8970071e8b9.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Yadanarbon FC U20",
         "logo": "https://img.thesports.com/football/team/efbbc1aeb47870e3cdf493e005e8cdd3.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Myanmar U20 League",
       "period": null,
       "clock": "",
