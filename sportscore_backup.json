@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T03:43:13Z",
-  "source_updated_at": "2026-11-10T03:42:27.192446+00:00",
+  "checked_at": "2026-11-10T05:27:52Z",
+  "source_updated_at": "2026-11-10T05:26:58.246679+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -175,10 +175,10 @@
       "away": {
         "name": "Cordobes Futbol Club",
         "logo": "https://img.thesports.com/football/team/5b024a4c8c2ec1f2d54d8ded1a645e37.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "MEX Liga Premier",
       "period": null,
       "clock": "",
@@ -192,15 +192,15 @@
       "home": {
         "name": "Tuv Azarganuud",
         "logo": "https://img.thesports.com/football/team/7b518d4cb1c747a41d279221bea7ac96.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Hunters FC",
         "logo": "https://img.thesports.com/football/team/e8082f36740ea4295a8bc67e28741933.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Mongolia Premier League",
       "period": null,
       "clock": "",
@@ -222,7 +222,7 @@
         "score": null
       },
       "status": "pre",
-      "detail": "Not started",
+      "detail": "Postponed",
       "competition": "Japanese Regional League",
       "period": null,
       "clock": "",
@@ -1058,7 +1058,7 @@
         "score": null
       },
       "status": "pre",
-      "detail": "Not started",
+      "detail": "Cancelled",
       "competition": "International Friendly",
       "period": null,
       "clock": "",
