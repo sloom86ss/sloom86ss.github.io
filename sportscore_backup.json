@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T12:41:12Z",
-  "source_updated_at": "2026-11-10T12:40:12.311936+00:00",
+  "checked_at": "2026-11-10T14:36:50Z",
+  "source_updated_at": "2026-11-10T14:36:08.255007+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -385,6 +385,28 @@
     {
       "id": "sportscore:17",
       "slug": "",
+      "date": "2026-11-10T06:00:00+00:00",
+      "time": "2026-11-10T06:00:00+00:00",
+      "home": {
+        "name": "Azure",
+        "logo": "https://img.thesports.com/football/team/3fa014e53b613dbb7c88cb4349feb01e.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Oktepa",
+        "logo": "https://img.thesports.com/football/team/6c2cb8d5b9c236f4200b466be1eaa33c.png",
+        "score": "2"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Uzbekistan First League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:18",
+      "slug": "",
       "date": "2026-11-10T06:15:00+00:00",
       "time": "2026-11-10T06:15:00+00:00",
       "home": {
@@ -405,7 +427,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:18",
+      "id": "sportscore:19",
       "slug": "",
       "date": "2026-11-10T08:00:00+00:00",
       "time": "2026-11-10T08:00:00+00:00",
@@ -427,7 +449,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:19",
+      "id": "sportscore:20",
       "slug": "",
       "date": "2026-11-10T08:00:00+00:00",
       "time": "2026-11-10T08:00:00+00:00",
@@ -449,7 +471,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:20",
+      "id": "sportscore:21",
       "slug": "",
       "date": "2026-11-10T08:00:00+00:00",
       "time": "2026-11-10T08:00:00+00:00",
@@ -471,7 +493,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:21",
+      "id": "sportscore:22",
       "slug": "",
       "date": "2026-11-10T08:30:00+00:00",
       "time": "2026-11-10T08:30:00+00:00",
@@ -493,7 +515,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:22",
+      "id": "sportscore:23",
       "slug": "",
       "date": "2026-11-10T08:30:00+00:00",
       "time": "2026-11-10T08:30:00+00:00",
@@ -515,7 +537,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:23",
+      "id": "sportscore:24",
       "slug": "",
       "date": "2026-11-10T08:45:00+00:00",
       "time": "2026-11-10T08:45:00+00:00",
@@ -537,7 +559,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:24",
+      "id": "sportscore:25",
       "slug": "",
       "date": "2026-11-10T08:45:00+00:00",
       "time": "2026-11-10T08:45:00+00:00",
@@ -559,7 +581,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:25",
+      "id": "sportscore:26",
       "slug": "",
       "date": "2026-11-10T09:00:00+00:00",
       "time": "2026-11-10T09:00:00+00:00",
@@ -581,7 +603,29 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:26",
+      "id": "sportscore:27",
+      "slug": "",
+      "date": "2026-11-10T09:15:00+00:00",
+      "time": "2026-11-10T09:15:00+00:00",
+      "home": {
+        "name": "Gulistan",
+        "logo": "https://img.thesports.com/football/team/4bc6a07b3786430edc39e069f0210e3c.png",
+        "score": "4"
+      },
+      "away": {
+        "name": "Karakalpakstan FA",
+        "logo": "https://img.thesports.com/football/team/5e962900985c2b87dc1ccdbd291f0e31.png",
+        "score": "0"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Uzbekistan First League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:28",
       "slug": "",
       "date": "2026-11-10T10:00:00+00:00",
       "time": "2026-11-10T10:00:00+00:00",
@@ -603,7 +647,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:27",
+      "id": "sportscore:29",
       "slug": "",
       "date": "2026-11-10T10:30:00+00:00",
       "time": "2026-11-10T10:30:00+00:00",
@@ -625,29 +669,29 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:28",
+      "id": "sportscore:30",
       "slug": "",
       "date": "2026-11-10T11:00:00+00:00",
       "time": "2026-11-10T11:00:00+00:00",
       "home": {
-        "name": "AI Nairab",
-        "logo": "https://img.thesports.com/football/team/af06898a8fb6924d3a15dfc9bad53611.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Al-Nabek",
-        "logo": "https://img.thesports.com/football/team/a5548aa21124137863a2b169e8b6d489.png",
+        "name": "Ravshan Kulob",
+        "logo": "https://img.thesports.com/football/team/82560a88a439752dcf0f31923d87586a.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
-      "competition": "Syrian 1st Division",
+      "away": {
+        "name": "FC Khatlon",
+        "logo": "https://img.thesports.com/football/team/640c65d4d62cf8e57a7136e34afaa012.png",
+        "score": "2"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Tajikistan Higher League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:29",
+      "id": "sportscore:31",
       "slug": "",
       "date": "2026-11-10T11:00:00+00:00",
       "time": "2026-11-10T11:00:00+00:00",
@@ -669,7 +713,29 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:30",
+      "id": "sportscore:32",
+      "slug": "",
+      "date": "2026-11-10T11:00:00+00:00",
+      "time": "2026-11-10T11:00:00+00:00",
+      "home": {
+        "name": "AI Nairab",
+        "logo": "https://img.thesports.com/football/team/af06898a8fb6924d3a15dfc9bad53611.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Al-Nabek",
+        "logo": "https://img.thesports.com/football/team/a5548aa21124137863a2b169e8b6d489.png",
+        "score": "2"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Syrian 1st Division",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:33",
       "slug": "",
       "date": "2026-11-10T11:38:00+00:00",
       "time": "2026-11-10T11:38:00+00:00",
@@ -681,17 +747,17 @@
       "away": {
         "name": "Xiangtan Football Team",
         "logo": "https://img.thesports.com/football/team/f65788daaba4c8b426528f010cbc9878.png",
-        "score": "0"
+        "score": "2"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Hunan Football League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:31",
+      "id": "sportscore:34",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -703,39 +769,39 @@
       "away": {
         "name": "Torreense U23",
         "logo": "https://img.thesports.com/football/team/b39d3c74dea7f5c47361e7733c1932b2.png",
-        "score": "1"
+        "score": "2"
       },
-      "status": "in",
-      "detail": "1st half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Portuguese U23 League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:32",
+      "id": "sportscore:35",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
       "home": {
         "name": "Vietnam U23",
         "logo": "https://img.thesports.com/football/team/b6303fe60c0094702179e08d6d27a798.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "Thailand U23",
         "logo": "https://img.thesports.com/football/team/e9895562f65f070155d757c250e6be73.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "1st half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "International Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:33",
+      "id": "sportscore:36",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -749,15 +815,37 @@
         "logo": "https://img.thesports.com/football/team/a5fec7a09ce971a7a31d1b5c0fe2393e.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "1st half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Uruguay Reserve League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:34",
+      "id": "sportscore:37",
+      "slug": "",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
+      "home": {
+        "name": "SC Paderborn 07",
+        "logo": "https://img.thesports.com/football/team/7c8c3c50966c793eba910e18659759a1.png",
+        "score": "4"
+      },
+      "away": {
+        "name": "Eintracht Braunschweig",
+        "logo": "https://img.thesports.com/football/team/87bb5a518063bbac24b51048dfb5c996.png",
+        "score": "1"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "International Club Friendly",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:38",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -779,29 +867,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:35",
-      "slug": "",
-      "date": "2026-11-10T12:00:00+00:00",
-      "time": "2026-11-10T12:00:00+00:00",
-      "home": {
-        "name": "SC Paderborn 07",
-        "logo": "https://img.thesports.com/football/team/7c8c3c50966c793eba910e18659759a1.png",
-        "score": null
-      },
-      "away": {
-        "name": "Eintracht Braunschweig",
-        "logo": "https://img.thesports.com/football/team/87bb5a518063bbac24b51048dfb5c996.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Postponed",
-      "competition": "International Club Friendly",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:36",
+      "id": "sportscore:39",
       "slug": "",
       "date": "2026-11-10T12:15:00+00:00",
       "time": "2026-11-10T12:15:00+00:00",
@@ -823,29 +889,51 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:37",
+      "id": "sportscore:40",
       "slug": "",
       "date": "2026-11-10T12:30:00+00:00",
       "time": "2026-11-10T12:30:00+00:00",
       "home": {
         "name": "Tiradentes PA U20",
         "logo": "https://img.thesports.com/football/team/ab6f9240e3428b61039cfc4e3e10cdc8.png",
-        "score": null
+        "score": "3"
       },
       "away": {
         "name": "Pinheirense EC U20",
         "logo": "https://img.thesports.com/football/team/46244bb5215f2a826a6c85379485decc.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "2nd half",
       "competition": "BRA CP U20",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:38",
+      "id": "sportscore:41",
+      "slug": "",
+      "date": "2026-11-10T12:30:00+00:00",
+      "time": "2026-11-10T12:30:00+00:00",
+      "home": {
+        "name": "Touch Electronics U20",
+        "logo": "https://img.thesports.com/football/team/c2f0b2ff15226278e15f2883a1ecb8f9.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Kedah U20",
+        "logo": "https://img.thesports.com/football/team/7e87a6233df56857872ab95db50a3ebe.png",
+        "score": "1"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Malaysian President Cup",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:42",
       "slug": "",
       "date": "2026-11-10T12:30:00+00:00",
       "time": "2026-11-10T12:30:00+00:00",
@@ -860,80 +948,58 @@
         "score": null
       },
       "status": "pre",
-      "detail": "Not started",
+      "detail": "Postponed",
       "competition": "BRA CP U20",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:39",
-      "slug": "",
-      "date": "2026-11-10T12:30:00+00:00",
-      "time": "2026-11-10T12:30:00+00:00",
-      "home": {
-        "name": "Touch Electronics U20",
-        "logo": "https://img.thesports.com/football/team/c2f0b2ff15226278e15f2883a1ecb8f9.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Kedah U20",
-        "logo": "https://img.thesports.com/football/team/7e87a6233df56857872ab95db50a3ebe.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "1st half",
-      "competition": "Malaysian President Cup",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:40",
+      "id": "sportscore:43",
       "slug": "",
       "date": "2026-11-10T13:00:00+00:00",
       "time": "2026-11-10T13:00:00+00:00",
       "home": {
         "name": "Hull City U21",
         "logo": "https://img.thesports.com/football/team/9f86ab814456b8ab5f2b29de593487f4.png",
-        "score": null
+        "score": "3"
       },
       "away": {
         "name": "Fleetwood Town U21",
         "logo": "https://img.thesports.com/football/team/160bea0f14ab941c316f3f1c97acf98d.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "2nd half",
       "competition": "English U21 Professional Development League 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:41",
+      "id": "sportscore:44",
       "slug": "",
       "date": "2026-11-10T13:00:00+00:00",
       "time": "2026-11-10T13:00:00+00:00",
       "home": {
         "name": "Algeria U17",
         "logo": "https://img.thesports.com/football/team/e8cf5f6d2078faa01108507e14a7bc64.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Morocco U17",
         "logo": "https://img.thesports.com/football/team/f24868ce67a31d285fbac253dc57256d.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "2nd half",
       "competition": "CAF U17 Championship",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:42",
+      "id": "sportscore:45",
       "slug": "",
       "date": "2026-11-10T13:00:00+00:00",
       "time": "2026-11-10T13:00:00+00:00",
@@ -948,74 +1014,8 @@
         "score": null
       },
       "status": "pre",
-      "detail": "Not started",
+      "detail": "Postponed",
       "competition": "DR Congo Vodacom Ligue 1",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:43",
-      "slug": "",
-      "date": "2026-11-10T14:00:00+00:00",
-      "time": "2026-11-10T14:00:00+00:00",
-      "home": {
-        "name": "Colchester United U21",
-        "logo": "https://img.thesports.com/football/team/353b090145013276ddc62f470c187721.png",
-        "score": null
-      },
-      "away": {
-        "name": "Charlton Athletic U21",
-        "logo": "https://img.thesports.com/football/team/d764dd4b7db966672b35de808751b9f0.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "English U21 Professional Development League 2",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:44",
-      "slug": "",
-      "date": "2026-11-10T14:00:00+00:00",
-      "time": "2026-11-10T14:00:00+00:00",
-      "home": {
-        "name": "Djijel",
-        "logo": "https://img.thesports.com/football/team/0306d24ee61ce2b5cfdc22eefb652443.png",
-        "score": null
-      },
-      "away": {
-        "name": "CR Beni Thour",
-        "logo": "https://img.thesports.com/football/team/5f4384d68a7da468e8de20028b0e271b.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Algerian Ligue Professionnelle 2",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:45",
-      "slug": "",
-      "date": "2026-11-10T14:00:00+00:00",
-      "time": "2026-11-10T14:00:00+00:00",
-      "home": {
-        "name": "MO Bejaia",
-        "logo": "https://img.thesports.com/football/team/a921cb96205eb90e04b5b55a4258be7b.png",
-        "score": null
-      },
-      "away": {
-        "name": "IRB Nezla",
-        "logo": "https://img.thesports.com/football/team/33d4f40b3602babb5d8e6d49fc254cc9.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -1026,18 +1026,18 @@
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
       "home": {
-        "name": "WA Tlemcen",
-        "logo": "https://img.thesports.com/football/team/c4f4ccf86f3c8a3bfea1186f9059f684.png",
-        "score": null
+        "name": "Colchester United U21",
+        "logo": "https://img.thesports.com/football/team/353b090145013276ddc62f470c187721.png",
+        "score": "0"
       },
       "away": {
-        "name": "RC Arba",
-        "logo": "https://img.thesports.com/football/team/f5952d47de7990e742d8660dac81c26c.png",
-        "score": null
+        "name": "Charlton Athletic U21",
+        "logo": "https://img.thesports.com/football/team/d764dd4b7db966672b35de808751b9f0.png",
+        "score": "3"
       },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Algerian Ligue Professionnelle 2",
+      "status": "in",
+      "detail": "1st half",
+      "competition": "English U21 Professional Development League 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -1048,17 +1048,17 @@
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
       "home": {
-        "name": "Paradou AC",
-        "logo": "https://img.thesports.com/football/team/a494e0dd2c7a57093c62cde943d76616.png",
-        "score": null
+        "name": "Djijel",
+        "logo": "https://img.thesports.com/football/team/0306d24ee61ce2b5cfdc22eefb652443.png",
+        "score": "1"
       },
       "away": {
-        "name": "JSM Skikda",
-        "logo": "https://img.thesports.com/football/team/62fbbd7067ffd42069924d138115aedb.png",
-        "score": null
+        "name": "CR Beni Thour",
+        "logo": "https://img.thesports.com/football/team/5f4384d68a7da468e8de20028b0e271b.png",
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
@@ -1070,18 +1070,18 @@
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
       "home": {
-        "name": "Celeste",
-        "logo": "https://img.thesports.com/football/team/3b44acb45f16a8d7f0369e37893ee09c.png",
-        "score": null
+        "name": "MO Bejaia",
+        "logo": "https://img.thesports.com/football/team/a921cb96205eb90e04b5b55a4258be7b.png",
+        "score": "1"
       },
       "away": {
-        "name": "Maniema Union",
-        "logo": "https://img.thesports.com/football/team/1241ff09368c9f403edd4d769be0391b.png",
-        "score": null
+        "name": "IRB Nezla",
+        "logo": "https://img.thesports.com/football/team/33d4f40b3602babb5d8e6d49fc254cc9.png",
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "DR Congo Vodacom Ligue 1",
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -1089,21 +1089,21 @@
     {
       "id": "sportscore:49",
       "slug": "",
-      "date": "2026-11-10T14:30:00+00:00",
-      "time": "2026-11-10T14:30:00+00:00",
+      "date": "2026-11-10T14:00:00+00:00",
+      "time": "2026-11-10T14:00:00+00:00",
       "home": {
-        "name": "Gabon Women",
-        "logo": "https://img.thesports.com/football/team/8485694bae96aebc7c4fe6119599d0e0.bmp",
-        "score": null
+        "name": "WA Tlemcen",
+        "logo": "https://img.thesports.com/football/team/c4f4ccf86f3c8a3bfea1186f9059f684.png",
+        "score": "0"
       },
       "away": {
-        "name": "Chad Women",
-        "logo": "https://img.thesports.com/football/team/5f92bf20922d6f7e2ad7538d74acee8a.png",
-        "score": null
+        "name": "RC Arba",
+        "logo": "https://img.thesports.com/football/team/f5952d47de7990e742d8660dac81c26c.png",
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "International Friendly",
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
