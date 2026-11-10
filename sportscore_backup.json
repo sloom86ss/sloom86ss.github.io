@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T07:37:19Z",
-  "source_updated_at": "2026-11-10T07:37:18.365256+00:00",
+  "checked_at": "2026-11-10T08:33:14Z",
+  "source_updated_at": "2026-11-10T08:32:19.019052+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -322,28 +322,6 @@
       "date": "2026-11-10T05:30:00+00:00",
       "time": "2026-11-10T05:30:00+00:00",
       "home": {
-        "name": "Mumbai Tigers",
-        "logo": "https://img.thesports.com/football/team/d53f7e8be2094165687bd0c7ef9898a3.png",
-        "score": "4"
-      },
-      "away": {
-        "name": "India Rush SC",
-        "logo": "https://img.thesports.com/football/team/1b231454f9e0c0be1a8cacaa78d02ef1.png",
-        "score": "1"
-      },
-      "status": "in",
-      "detail": "2nd half",
-      "competition": "India Mumbai Super Division",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:15",
-      "slug": "",
-      "date": "2026-11-10T05:30:00+00:00",
-      "time": "2026-11-10T05:30:00+00:00",
-      "home": {
         "name": "Stride",
         "logo": "https://img.thesports.com/football/team/ea6e7468642b0b6e9f46c23b50a929e4.png",
         "score": "2"
@@ -361,6 +339,28 @@
       "data_source": "SportScore"
     },
     {
+      "id": "sportscore:15",
+      "slug": "",
+      "date": "2026-11-10T05:30:00+00:00",
+      "time": "2026-11-10T05:30:00+00:00",
+      "home": {
+        "name": "Mumbai Tigers",
+        "logo": "https://img.thesports.com/football/team/d53f7e8be2094165687bd0c7ef9898a3.png",
+        "score": "4"
+      },
+      "away": {
+        "name": "India Rush SC",
+        "logo": "https://img.thesports.com/football/team/1b231454f9e0c0be1a8cacaa78d02ef1.png",
+        "score": "1"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "India Mumbai Super Division",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
       "id": "sportscore:16",
       "slug": "",
       "date": "2026-11-10T06:00:00+00:00",
@@ -368,15 +368,15 @@
       "home": {
         "name": "East Coast Bays",
         "logo": "https://img.thesports.com/football/team/6e01eb0d2742ea4c084913aabb1e81cd.png",
-        "score": null
+        "score": "11"
       },
       "away": {
         "name": "Tonga",
         "logo": "https://img.thesports.com/football/team/c27f55237f28baba5de953481caf4c3b.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Postponed",
+      "status": "post",
+      "detail": "Finished",
       "competition": "International Friendly",
       "period": null,
       "clock": "",
@@ -390,15 +390,15 @@
       "home": {
         "name": "Shillong Lajong U21",
         "logo": "https://img.thesports.com/football/team/30016904973678ddbdd150606b291874.png",
-        "score": "3"
+        "score": "4"
       },
       "away": {
         "name": "PFR Academy U21",
         "logo": "https://img.thesports.com/football/team/c14748a33d242c87f1497771d485c351.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "India U21 DL",
       "period": null,
       "clock": "",
@@ -412,15 +412,15 @@
       "home": {
         "name": "Deren FC",
         "logo": "https://img.thesports.com/football/team/e4f8faa800643a16387371e8f8234079.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "FC Ulaanbaatar",
         "logo": "https://img.thesports.com/football/team/0c7d6546c9204e45c17bc2d9d05f7a4b.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Mongolia Premier League",
       "period": null,
       "clock": "",
@@ -434,15 +434,15 @@
       "home": {
         "name": "Qatar U23",
         "logo": "https://img.thesports.com/football/team/e12c0fe957d6ad675db027dbbc4f024c.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Singapore U23",
         "logo": "https://img.thesports.com/football/team/1badd2578cdba6c75e4392e001bce876.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "International Friendly",
       "period": null,
       "clock": "",
@@ -456,15 +456,15 @@
       "home": {
         "name": "Bangalore Dream United FC",
         "logo": "https://img.thesports.com/football/team/adc9a8d697f1b5a2e9ea74962caef4d1.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Parikrma FC",
         "logo": "https://img.thesports.com/football/team/9797959a20ca90fb6901b819293bb1bd.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -472,28 +472,6 @@
     },
     {
       "id": "sportscore:21",
-      "slug": "",
-      "date": "2026-11-10T08:30:00+00:00",
-      "time": "2026-11-10T08:30:00+00:00",
-      "home": {
-        "name": "Kasem Bundit University U21",
-        "logo": "https://img.thesports.com/football/team/698c5dc9de07d25819751b785dea63bc.png",
-        "score": null
-      },
-      "away": {
-        "name": "Prachuap U21",
-        "logo": "https://img.thesports.com/football/team/182b609c6a204670a76dac1babeb36d1.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "THA U21",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:22",
       "slug": "",
       "date": "2026-11-10T08:30:00+00:00",
       "time": "2026-11-10T08:30:00+00:00",
@@ -509,6 +487,28 @@
       },
       "status": "pre",
       "detail": "Not started",
+      "competition": "THA U21",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:22",
+      "slug": "",
+      "date": "2026-11-10T08:30:00+00:00",
+      "time": "2026-11-10T08:30:00+00:00",
+      "home": {
+        "name": "Kasem Bundit University U21",
+        "logo": "https://img.thesports.com/football/team/698c5dc9de07d25819751b785dea63bc.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Prachuap U21",
+        "logo": "https://img.thesports.com/football/team/182b609c6a204670a76dac1babeb36d1.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "1st half",
       "competition": "THA U21",
       "period": null,
       "clock": "",
