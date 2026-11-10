@@ -1,0 +1,22 @@
+{
+  "id": "/chat/",
+  "name": "سلوم365 AI",
+  "short_name": "سلوم365 AI",
+  "description": "مساعدك الذكي",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/chat/",
+  "scope": "/chat/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#090611",
+  "theme_color": "#10091b",
+  "icons": [
+    {
+      "src": "/chat/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
