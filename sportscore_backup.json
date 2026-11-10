@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-09T23:41:03Z",
-  "source_updated_at": "2026-11-09T23:40:33.832420+00:00",
+  "checked_at": "2026-11-10T00:14:10Z",
+  "source_updated_at": "2026-11-10T00:14:02.161641+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -11,21 +11,21 @@
     {
       "id": "sportscore:0",
       "slug": "",
-      "date": "2026-11-09T00:00:00+00:00",
-      "time": "2026-11-09T00:00:00+00:00",
+      "date": "2026-11-10T00:00:00+00:00",
+      "time": "2026-11-10T00:00:00+00:00",
       "home": {
-        "name": "Queretaro FC",
-        "logo": "https://img.thesports.com/football/team/74eb06ea57f32cb35dcc025665caa97e.png",
+        "name": "Atletico Junior Barranquilla",
+        "logo": "https://img.thesports.com/football/team/fd3230c7fa4ad7bde28c640f2f32ca43.png",
         "score": "0"
       },
       "away": {
-        "name": "Puebla",
-        "logo": "https://img.thesports.com/football/team/a98bd615308472b65dc82bcc3a2d54fb.png",
-        "score": "2"
+        "name": "Cucuta Deportivo",
+        "logo": "https://img.thesports.com/football/team/972c2e951d1ba7680faee53a342bd0a2.png",
+        "score": "0"
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Mexico Liga MX",
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Categoría Primera A",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -33,21 +33,21 @@
     {
       "id": "sportscore:1",
       "slug": "",
-      "date": "2026-11-09T00:00:00+00:00",
-      "time": "2026-11-09T00:00:00+00:00",
+      "date": "2026-11-10T00:00:00+00:00",
+      "time": "2026-11-10T00:00:00+00:00",
       "home": {
-        "name": "Antigua GFC",
-        "logo": "https://img.thesports.com/football/team/b3c66f6f52c354c8f7281e49485b2f2b.png",
-        "score": "2"
+        "name": "Corinthians U20 Women",
+        "logo": "https://img.thesports.com/football/team/855432e17d46685d958d84506e1afb70.png",
+        "score": "1"
       },
       "away": {
-        "name": "Malacateco",
-        "logo": "https://img.thesports.com/football/team/8e967e1050555c71c488cd64e252ae6b.png",
+        "name": "Palmeiras U20 (W)",
+        "logo": "https://img.thesports.com/football/team/59eacd1dd3e4cee2902d5731657e3349.png",
         "score": "0"
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Guatemala Liga Nacional",
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Brazilian Paulista Women's League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -55,21 +55,21 @@
     {
       "id": "sportscore:2",
       "slug": "",
-      "date": "2026-11-09T00:00:00+00:00",
-      "time": "2026-11-09T00:00:00+00:00",
+      "date": "2026-11-10T00:00:00+00:00",
+      "time": "2026-11-10T00:00:00+00:00",
       "home": {
-        "name": "SV Sporting",
-        "logo": "https://img.thesports.com/football/team/0a529dbb5bdf4c0d92d0a0168c7a25fd.png",
-        "score": "2"
-      },
-      "away": {
-        "name": "Bubali SC",
-        "logo": "https://img.thesports.com/football/team/87fd46bde6b10f373b0fde7ae1cb3ba8.png",
+        "name": "Deportivo Maldonado",
+        "logo": "https://img.thesports.com/football/team/932f3790a25e5c4f40ae328ad9060055.png",
         "score": "0"
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Aruba Division Di Honor",
+      "away": {
+        "name": "Nacional Montevideo",
+        "logo": "https://img.thesports.com/football/team/aa97d18606e06696fd770ed04a5d040b.png",
+        "score": "1"
+      },
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Uruguay Cup",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -77,21 +77,21 @@
     {
       "id": "sportscore:3",
       "slug": "",
-      "date": "2026-11-09T00:00:00+00:00",
-      "time": "2026-11-09T00:00:00+00:00",
+      "date": "2026-11-10T00:30:00+00:00",
+      "time": "2026-11-10T00:30:00+00:00",
       "home": {
-        "name": "Charlotte Independence",
-        "logo": "https://img.thesports.com/football/team/d3be245c5465ff63fd26c25f52fc65a4.png",
-        "score": "2"
+        "name": "SV River Plate",
+        "logo": "https://img.thesports.com/football/team/4b8d35a13c1d7f30e373561308865f69.png",
+        "score": null
       },
       "away": {
-        "name": "Forward Madison FC",
-        "logo": "https://img.thesports.com/football/team/4038a49fc13691c4ba07628cecb307bc.png",
-        "score": "1"
+        "name": "SV Deportivo Nacional",
+        "logo": "https://img.thesports.com/football/team/ea7aef1497ae50d0d773f116214689a8.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "USL League One",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Aruba Division Di Honor",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -99,21 +99,21 @@
     {
       "id": "sportscore:4",
       "slug": "",
-      "date": "2026-11-09T00:00:00+00:00",
-      "time": "2026-11-09T00:00:00+00:00",
+      "date": "2026-11-10T00:30:00+00:00",
+      "time": "2026-11-10T00:30:00+00:00",
       "home": {
-        "name": "Tampa Rangers",
-        "logo": "https://img.thesports.com/football/team/175b128fa9314cf345f0ce6513052366.png",
-        "score": "0"
+        "name": "Aurora",
+        "logo": "https://img.thesports.com/football/team/ec2ed16825c0bf497854333615c4e2af.png",
+        "score": null
       },
       "away": {
-        "name": "PCU Pelicans SC",
-        "logo": "https://img.thesports.com/football/team/147a023b1c4b7d59279305a468d996e3.png",
-        "score": "1"
+        "name": "Universitario De Vinto",
+        "logo": "https://img.thesports.com/football/team/78806733b03788c901fd2f2cda1f0bd2.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "National Premier Soccer League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Bolivian Primera Division",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -121,21 +121,21 @@
     {
       "id": "sportscore:5",
       "slug": "",
-      "date": "2026-11-09T00:00:00+00:00",
-      "time": "2026-11-09T00:00:00+00:00",
+      "date": "2026-11-10T01:00:00+00:00",
+      "time": "2026-11-10T01:00:00+00:00",
       "home": {
-        "name": "Florida Elite",
-        "logo": "https://img.thesports.com/football/team/bf3bb588f641d6159261257f801a06b0.png",
-        "score": "2"
+        "name": "Arnett Gardens",
+        "logo": "https://img.thesports.com/football/team/04d998a10ab2fd063aff16bfaa7aeb50.png",
+        "score": null
       },
       "away": {
-        "name": "Miami FC U20",
-        "logo": "https://img.thesports.com/football/team/aad37c6fe9a045108c209ee67a10c8f0.png",
-        "score": "3"
+        "name": "Waterhouse FC",
+        "logo": "https://img.thesports.com/football/team/49795d03e912a2fba9f26f2fb294695f.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "National Premier Soccer League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Jamaica Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -143,21 +143,21 @@
     {
       "id": "sportscore:6",
       "slug": "",
-      "date": "2026-11-09T00:15:00+00:00",
-      "time": "2026-11-09T00:15:00+00:00",
+      "date": "2026-11-10T01:00:00+00:00",
+      "time": "2026-11-10T01:00:00+00:00",
       "home": {
-        "name": "Corinthians Paulista Youth",
-        "logo": "https://img.thesports.com/football/team/3d8fede633a03bdc3e42f80185053c92.png",
-        "score": "0"
+        "name": "AD Rosario",
+        "logo": "https://img.thesports.com/football/team/cc1c87c38c9abb7af5a63a9704fd8d91.png",
+        "score": null
       },
       "away": {
-        "name": "Bragantino RB U20",
-        "logo": "https://img.thesports.com/football/team/702254bbb73528c82cfa4c6a7f7db8bd.png",
-        "score": "1"
+        "name": "Pitbulls",
+        "logo": "https://img.thesports.com/football/team/41911226032029e7bd96545594ded0fe.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Brazilian Campeonato Paulista Youth",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Costa Rica 2.Liga",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -165,21 +165,21 @@
     {
       "id": "sportscore:7",
       "slug": "",
-      "date": "2026-11-09T00:30:00+00:00",
-      "time": "2026-11-09T00:30:00+00:00",
+      "date": "2026-11-10T02:05:00+00:00",
+      "time": "2026-11-10T02:05:00+00:00",
       "home": {
-        "name": "CS Herediano",
-        "logo": "https://img.thesports.com/football/team/a507b1509e1f640108395b0580b46976.png",
-        "score": "1"
+        "name": "Chapulineros",
+        "logo": "https://img.thesports.com/football/team/c440378d8997aca3722daf651b9734ad.png",
+        "score": null
       },
       "away": {
-        "name": "International San Carlos",
-        "logo": "https://img.thesports.com/football/team/fc2983212373493c10636dc641310eea.png",
-        "score": "1"
+        "name": "Cordobes Futbol Club",
+        "logo": "https://img.thesports.com/football/team/5b024a4c8c2ec1f2d54d8ded1a645e37.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Costa Rica Primera Division",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "MEX Liga Premier",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -187,21 +187,21 @@
     {
       "id": "sportscore:8",
       "slug": "",
-      "date": "2026-11-09T00:30:00+00:00",
-      "time": "2026-11-09T00:30:00+00:00",
+      "date": "2026-11-10T05:00:00+00:00",
+      "time": "2026-11-10T05:00:00+00:00",
       "home": {
-        "name": "Taurinos",
-        "logo": "https://img.thesports.com/football/team/45177c958dffb39db02eb1da5a9ce9f3.png",
-        "score": "2"
+        "name": "Tuv Azarganuud",
+        "logo": "https://img.thesports.com/football/team/7b518d4cb1c747a41d279221bea7ac96.png",
+        "score": null
       },
       "away": {
-        "name": "Puerto Rico Surf SC",
-        "logo": "https://img.thesports.com/football/team/f74cd7e9173bfbf92aa9499150bb0c38.png",
-        "score": "0"
+        "name": "Hunters FC",
+        "logo": "https://img.thesports.com/football/team/e8082f36740ea4295a8bc67e28741933.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "PUR LPR",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Mongolia Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -209,21 +209,21 @@
     {
       "id": "sportscore:9",
       "slug": "",
-      "date": "2026-11-09T01:00:00+00:00",
-      "time": "2026-11-09T01:00:00+00:00",
+      "date": "2026-11-10T05:30:00+00:00",
+      "time": "2026-11-10T05:30:00+00:00",
       "home": {
-        "name": "CD FAS",
-        "logo": "https://img.thesports.com/football/team/049b165b7cdeaedffc1966ca7564a87a.png",
-        "score": "2"
+        "name": "Stride",
+        "logo": "https://img.thesports.com/football/team/ea6e7468642b0b6e9f46c23b50a929e4.png",
+        "score": null
       },
       "away": {
-        "name": "Fuerte San Francisco",
-        "logo": "https://img.thesports.com/football/team/d93652b2dd714100acc2cb66aca539cc.png",
-        "score": "2"
+        "name": "FC Agniputhra",
+        "logo": "https://img.thesports.com/football/team/e29b3acb01197b457489523c7fef32a5.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "El Salvador Primera Division",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -231,21 +231,21 @@
     {
       "id": "sportscore:10",
       "slug": "",
-      "date": "2026-11-09T01:00:00+00:00",
-      "time": "2026-11-09T01:00:00+00:00",
+      "date": "2026-11-10T08:00:00+00:00",
+      "time": "2026-11-10T08:00:00+00:00",
       "home": {
-        "name": "Piratas FC",
-        "logo": "https://img.thesports.com/football/team/472eb7cb6d1d6e03153c5a4c0db96474.png",
-        "score": "1"
+        "name": "Deren FC",
+        "logo": "https://img.thesports.com/football/team/e4f8faa800643a16387371e8f8234079.png",
+        "score": null
       },
       "away": {
-        "name": "Cancun FC",
-        "logo": "https://img.thesports.com/football/team/6fe27a17397454cb43b104a6657e90d7.png",
-        "score": "1"
+        "name": "FC Ulaanbaatar",
+        "logo": "https://img.thesports.com/football/team/0c7d6546c9204e45c17bc2d9d05f7a4b.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Mexico Ascenso MX",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Mongolia Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -253,21 +253,21 @@
     {
       "id": "sportscore:11",
       "slug": "",
-      "date": "2026-11-09T01:15:00+00:00",
-      "time": "2026-11-09T01:15:00+00:00",
+      "date": "2026-11-10T08:00:00+00:00",
+      "time": "2026-11-10T08:00:00+00:00",
       "home": {
-        "name": "Alianza Fútbol Club",
-        "logo": "https://img.thesports.com/football/team/242d6977e9b86cba5cea704d996edbf8.png",
-        "score": "1"
+        "name": "Qatar U23",
+        "logo": "https://img.thesports.com/football/team/e12c0fe957d6ad675db027dbbc4f024c.png",
+        "score": null
       },
       "away": {
-        "name": "Llaneros FC",
-        "logo": "https://img.thesports.com/football/team/f83a93401d7a60595338bae0337d344c.png",
-        "score": "2"
+        "name": "Singapore U23",
+        "logo": "https://img.thesports.com/football/team/1badd2578cdba6c75e4392e001bce876.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Categoría Primera A",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "International Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -275,21 +275,21 @@
     {
       "id": "sportscore:12",
       "slug": "",
-      "date": "2026-11-09T01:30:00+00:00",
-      "time": "2026-11-09T01:30:00+00:00",
+      "date": "2026-11-10T08:00:00+00:00",
+      "time": "2026-11-10T08:00:00+00:00",
       "home": {
-        "name": "Universitario De Deportes",
-        "logo": "https://img.thesports.com/football/team/415e4ed317b0b0a4aea7c8ddc5cdd658.png",
-        "score": "2"
+        "name": "Bangalore Dream United FC",
+        "logo": "https://img.thesports.com/football/team/adc9a8d697f1b5a2e9ea74962caef4d1.png",
+        "score": null
       },
       "away": {
-        "name": "Moquegua",
-        "logo": "https://img.thesports.com/football/team/19be19d979fd79bf0a2e6a78dfdadc4c.png",
-        "score": "2"
+        "name": "Parikrma FC",
+        "logo": "https://img.thesports.com/football/team/9797959a20ca90fb6901b819293bb1bd.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Peruvian Liga 1",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -297,21 +297,21 @@
     {
       "id": "sportscore:13",
       "slug": "",
-      "date": "2026-11-09T01:30:00+00:00",
-      "time": "2026-11-09T01:30:00+00:00",
+      "date": "2026-11-10T08:30:00+00:00",
+      "time": "2026-11-10T08:30:00+00:00",
       "home": {
-        "name": "Marathon",
-        "logo": "https://img.thesports.com/football/team/505365bf79d6e38406333c99613ca975.png",
-        "score": "2"
+        "name": "China Futsal(W)",
+        "logo": "https://img.thesports.com/football/team/568a4044065a9c24255064384e742075.png",
+        "score": null
       },
       "away": {
-        "name": "Atletico Choloma",
-        "logo": "https://img.thesports.com/football/team/6efc34c36daa9ca8a84c495a829964fa.png",
-        "score": "0"
+        "name": "Iran Futsal (w)",
+        "logo": "https://img.thesports.com/football/team/c6783fa0703fa4c5b151d86a8b2eae27.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Honduras Primera Division",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Futsal International Tournament Yinchuan Women",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -319,21 +319,21 @@
     {
       "id": "sportscore:14",
       "slug": "",
-      "date": "2026-11-09T02:10:00+00:00",
-      "time": "2026-11-09T02:10:00+00:00",
+      "date": "2026-11-10T08:30:00+00:00",
+      "time": "2026-11-10T08:30:00+00:00",
       "home": {
-        "name": "Club Leon",
-        "logo": "https://img.thesports.com/football/team/4695f653aca6ac49ff2baa4a961fa67b.png",
-        "score": "1"
+        "name": "Kasem Bundit University U21",
+        "logo": "https://img.thesports.com/football/team/698c5dc9de07d25819751b785dea63bc.png",
+        "score": null
       },
       "away": {
-        "name": "Club Deportivo Guadalajara",
-        "logo": "https://img.thesports.com/football/team/872867a492989e6a9a0785cfd0a40680.png",
-        "score": "1"
+        "name": "Prachuap U21",
+        "logo": "https://img.thesports.com/football/team/182b609c6a204670a76dac1babeb36d1.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Mexico Liga MX",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "THA U21",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -341,21 +341,21 @@
     {
       "id": "sportscore:15",
       "slug": "",
-      "date": "2026-11-09T03:00:00+00:00",
-      "time": "2026-11-09T03:00:00+00:00",
+      "date": "2026-11-10T09:00:00+00:00",
+      "time": "2026-11-10T09:00:00+00:00",
       "home": {
-        "name": "Zinc Football Academy",
-        "logo": "https://img.thesports.com/football/team/8741e011cde9fd0ea45dc4539b27b64b.png",
-        "score": "1"
+        "name": "Shan Utd U20",
+        "logo": "https://img.thesports.com/football/team/c2239b16c6ef2d4efeefe8970071e8b9.png",
+        "score": null
       },
       "away": {
-        "name": "Kickstart Karnataka FC",
-        "logo": "https://img.thesports.com/football/team/90d20fe07b1480e7d6c2ee39bbb89d80.png",
-        "score": "2"
+        "name": "Yadanarbon FC U20",
+        "logo": "https://img.thesports.com/football/team/efbbc1aeb47870e3cdf493e005e8cdd3.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Indian Championship I-League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Myanmar U20 League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -363,21 +363,21 @@
     {
       "id": "sportscore:16",
       "slug": "",
-      "date": "2026-11-09T03:55:00+00:00",
-      "time": "2026-11-09T03:55:00+00:00",
+      "date": "2026-11-10T10:00:00+00:00",
+      "time": "2026-11-10T10:00:00+00:00",
       "home": {
-        "name": "Tiwana FC",
-        "logo": "https://img.thesports.com/football/team/9304fa278225def2a2eb1e01c295c4a7.png",
-        "score": "2"
+        "name": "Gabon Women",
+        "logo": "https://img.thesports.com/football/team/8485694bae96aebc7c4fe6119599d0e0.bmp",
+        "score": null
       },
       "away": {
-        "name": "Anstrengung United",
-        "logo": "https://img.thesports.com/football/team/8f232ae317360cffddf10fd63ff11098.png",
-        "score": "2"
+        "name": "Chad Women",
+        "logo": "https://img.thesports.com/football/team/5f92bf20922d6f7e2ad7538d74acee8a.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "India Mumbai Super Division",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "International Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -385,21 +385,21 @@
     {
       "id": "sportscore:17",
       "slug": "",
-      "date": "2026-11-09T05:00:00+00:00",
-      "time": "2026-11-09T05:00:00+00:00",
+      "date": "2026-11-10T10:30:00+00:00",
+      "time": "2026-11-10T10:30:00+00:00",
       "home": {
-        "name": "Khaan Khuns-Erchim FC",
-        "logo": "https://img.thesports.com/football/team/c8188e3985db5cee9be1f4ea436f2fc2.png",
-        "score": "0"
+        "name": "FC Bengaluru United",
+        "logo": "https://img.thesports.com/football/team/3e4ab507d5b1007d9932d22ac716be74.png",
+        "score": null
       },
       "away": {
-        "name": "Khovd Western",
-        "logo": "https://img.thesports.com/football/team/9ae36debba0abd59c01de2e60fc42648.png",
-        "score": "3"
+        "name": "Real Bengaluru",
+        "logo": "https://img.thesports.com/football/team/4b6b4944af08355d5375a8d95e6a8395.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Mongolia Premier League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -407,21 +407,21 @@
     {
       "id": "sportscore:18",
       "slug": "",
-      "date": "2026-11-09T05:30:00+00:00",
-      "time": "2026-11-09T05:30:00+00:00",
+      "date": "2026-11-10T11:38:00+00:00",
+      "time": "2026-11-10T11:38:00+00:00",
       "home": {
-        "name": "Uptown Rebels SC",
-        "logo": "",
-        "score": "0"
+        "name": "Shaoyang Football Team",
+        "logo": "https://img.thesports.com/football/team/57da81a4870e171117e64ab3e52eb27d.png",
+        "score": null
       },
       "away": {
-        "name": "South United",
-        "logo": "https://img.thesports.com/football/team/15f6890f73ff4f23a4b0fb1bd0f00eb8.png",
-        "score": "1"
+        "name": "Xiangtan Football Team",
+        "logo": "https://img.thesports.com/football/team/f65788daaba4c8b426528f010cbc9878.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Indian Bangalore Super Division",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Hunan Football League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -429,21 +429,21 @@
     {
       "id": "sportscore:19",
       "slug": "",
-      "date": "2026-11-09T05:30:00+00:00",
-      "time": "2026-11-09T05:30:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Hong Kong Futsal",
-        "logo": "https://img.thesports.com/football/team/e5598102396c326e2d46add29f29512d.png",
-        "score": "2"
+        "name": "Santa Clara U23",
+        "logo": "https://img.thesports.com/football/team/e7f496f594add2954bb58b2132e1e788.png",
+        "score": null
       },
       "away": {
-        "name": "Korea Republic Futsal",
-        "logo": "https://img.thesports.com/football/team/7dab9abcdaeb9fa6761792737602cc93.png",
-        "score": "10"
+        "name": "Torreense U23",
+        "logo": "https://img.thesports.com/football/team/b39d3c74dea7f5c47361e7733c1932b2.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "CFA Team China Futsal International Tournament Yinchuan",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Portuguese U23 League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -451,21 +451,21 @@
     {
       "id": "sportscore:20",
       "slug": "",
-      "date": "2026-11-09T05:30:00+00:00",
-      "time": "2026-11-09T05:30:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Bombay Ymca",
-        "logo": "https://img.thesports.com/football/team/4213250f104f77e4ec35b6b6c995bd79.png",
+        "name": "Bandari",
+        "logo": "https://img.thesports.com/football/team/a165d8c3da9a195bfc01fd1c41e91a02.png",
         "score": null
       },
       "away": {
-        "name": "Oscar Foundation FC",
-        "logo": "https://img.thesports.com/football/team/e0399cf654d54269af72fbf253814448.png",
+        "name": "Muranga",
+        "logo": "https://img.thesports.com/football/team/c3793c33377be4d92d492e2d7813762b.png",
         "score": null
       },
       "status": "pre",
-      "detail": "Delayed",
-      "competition": "India Mumbai Super Division",
+      "detail": "Not started",
+      "competition": "Kenyan Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -473,21 +473,21 @@
     {
       "id": "sportscore:21",
       "slug": "",
-      "date": "2026-11-09T06:15:00+00:00",
-      "time": "2026-11-09T06:15:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Rangdajied united U21",
-        "logo": "https://img.thesports.com/football/team/256ffd26cd3d2b8055b053cdb0180291.png",
-        "score": "1"
+        "name": "Mathare United",
+        "logo": "https://img.thesports.com/football/team/10ec9289a1feae59a7686df1c9da48f0.png",
+        "score": null
       },
       "away": {
-        "name": "Mawlai SC U21",
-        "logo": "https://img.thesports.com/football/team/37684ac9ee81731339a9c20f26a8a3e1.png",
-        "score": "2"
+        "name": "Kakamega Homeboyz",
+        "logo": "https://img.thesports.com/football/team/7a4d34e6c812c6a844f5166b8ce6602b.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "India U21 DL",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Kenyan Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -495,21 +495,21 @@
     {
       "id": "sportscore:22",
       "slug": "",
-      "date": "2026-11-09T07:00:00+00:00",
-      "time": "2026-11-09T07:00:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Qingdao West Coast Women",
-        "logo": "https://img.thesports.com/football/team/70d70b67bf64e59c9e77cfbe976dc4dd.png",
-        "score": "1"
+        "name": "Shabana FC",
+        "logo": "https://img.thesports.com/football/team/0315dd4986dceffaf71bd3fb208bedb5.png",
+        "score": null
       },
       "away": {
-        "name": "Wuhan Sports Three Towns University Women",
-        "logo": "https://img.thesports.com/football/team/3f0e25007351fae3b94424b62533f7b1.png",
-        "score": "2"
+        "name": "Mara Sugar FC",
+        "logo": "https://img.thesports.com/football/team/8fe5451eacc3aee291ab4789cd323161.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "CFA Women's League One",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Kenyan Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -517,21 +517,21 @@
     {
       "id": "sportscore:23",
       "slug": "",
-      "date": "2026-11-09T07:00:00+00:00",
-      "time": "2026-11-09T07:00:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Shanghai Shenhua Women",
-        "logo": "https://img.thesports.com/football/team/3caf35580f659ce3acd72df2ae386d77.png",
-        "score": "0"
+        "name": "Migori Youth",
+        "logo": "https://img.thesports.com/football/team/32e03e5b80ebc81e37687a20db4705f4.png",
+        "score": null
       },
       "away": {
-        "name": "Chongqing Women",
-        "logo": "https://img.thesports.com/football/team/472f7c5ddfb1d2f194e4a0f824c3b913.png",
-        "score": "0"
+        "name": "AFC Leopards",
+        "logo": "https://img.thesports.com/football/team/f14df5c3c5849402b8b5fc7d7a7ab829.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "CFA Women's League One",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Kenyan Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -539,21 +539,21 @@
     {
       "id": "sportscore:24",
       "slug": "",
-      "date": "2026-11-09T07:00:00+00:00",
-      "time": "2026-11-09T07:00:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Shanghai Jiading Huilong Women",
-        "logo": "https://img.thesports.com/football/team/41c1aa6a1bbc211ada891d87525a946d.png",
-        "score": "0"
+        "name": "Kenya Police FC",
+        "logo": "https://img.thesports.com/football/team/afdbdb6ab8cc18ffdba28a2740eed3c2.png",
+        "score": null
       },
       "away": {
-        "name": "Henan Wanxianshan Women",
-        "logo": "https://img.thesports.com/football/team/b7769e06012d84dc2ed5e9779e49528d.png",
-        "score": "3"
+        "name": "APS Bomet",
+        "logo": "https://img.thesports.com/football/team/a63a265858037349a81e2f1b500df35e.jfif",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "CFA Women's League One",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Kenyan Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -561,21 +561,21 @@
     {
       "id": "sportscore:25",
       "slug": "",
-      "date": "2026-11-09T07:00:00+00:00",
-      "time": "2026-11-09T07:00:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Fujian Nanan Women",
-        "logo": "https://img.thesports.com/football/team/9b25df8c492c6a9e37404e0757109c11.png",
-        "score": "3"
+        "name": "KCB SC",
+        "logo": "https://img.thesports.com/football/team/8b5e868c8dc65f53c302f6b8962cd97f.png",
+        "score": null
       },
       "away": {
-        "name": "Hebei Snow Ruyi  Women",
-        "logo": "https://img.thesports.com/football/team/69b57bf85b223fc09bdeb5768bff90bb.png",
-        "score": "3"
+        "name": "3K FC",
+        "logo": "https://img.thesports.com/football/team/0bf6bb622df989f2a45d86a4432f66f0.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "CFA Women's League One",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Kenyan Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -583,21 +583,21 @@
     {
       "id": "sportscore:26",
       "slug": "",
-      "date": "2026-11-09T08:00:00+00:00",
-      "time": "2026-11-09T08:00:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Ulaangom City FC",
-        "logo": "https://img.thesports.com/football/team/869f9d5a3552f86ffbe7eed9c0e09d79.png",
-        "score": "6"
+        "name": "Posta Rangers",
+        "logo": "https://img.thesports.com/football/team/4f41a1f185a570db95c26d222db9825a.png",
+        "score": null
       },
       "away": {
-        "name": "Khovd",
-        "logo": "https://img.thesports.com/football/team/876f6160eafc92115b442945c80fdba7.png",
-        "score": "3"
+        "name": "Gor Mahia",
+        "logo": "https://img.thesports.com/football/team/c243f0e9c2c15e80f02cd2e0ac855dc6.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Mongolia Premier League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Kenyan Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -605,21 +605,21 @@
     {
       "id": "sportscore:27",
       "slug": "",
-      "date": "2026-11-09T08:00:00+00:00",
-      "time": "2026-11-09T08:00:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Mumbai Warriors",
-        "logo": "https://img.thesports.com/football/team/06506c13327488161bc7fbd5f72d623a.png",
-        "score": "1"
+        "name": "Nairobi United",
+        "logo": "https://img.thesports.com/football/team/05f29f45dbfa3bf432ec69c4fcd49d74.png",
+        "score": null
       },
       "away": {
-        "name": "Kopana FC",
-        "logo": "https://img.thesports.com/football/team/93d4a7bf6721948b74aa361d8109dee8.png",
-        "score": "3"
+        "name": "Tusker",
+        "logo": "https://img.thesports.com/football/team/b1f41dc92801201b751314126bc0939c.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "India Mumbai Super Division",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Kenyan Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -627,21 +627,21 @@
     {
       "id": "sportscore:28",
       "slug": "",
-      "date": "2026-11-09T08:30:00+00:00",
-      "time": "2026-11-09T08:30:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "China Hong Kong Futsal(w)",
-        "logo": "https://img.thesports.com/football/team/1e31f7b96a28c1fcf0acedcd1583fff3.png",
-        "score": "1"
+        "name": "Mombasa Elite",
+        "logo": "https://img.thesports.com/football/team/0f0beeacd593f302674599db1c0c9f86.png",
+        "score": null
       },
       "away": {
-        "name": "China Futsal(W)",
-        "logo": "https://img.thesports.com/football/team/568a4044065a9c24255064384e742075.png",
-        "score": "3"
+        "name": "Ulinzi Stars Nakuru",
+        "logo": "https://img.thesports.com/football/team/a38beb934ab1f2d9700c6dcc7bcd4385.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Futsal International Tournament Yinchuan Women",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Kenyan Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -649,21 +649,21 @@
     {
       "id": "sportscore:29",
       "slug": "",
-      "date": "2026-11-09T08:30:00+00:00",
-      "time": "2026-11-09T08:30:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Kasem Bundit FC Women",
-        "logo": "https://img.thesports.com/football/team/a2084ca691626cffc7bc3a4400790ca5.png",
-        "score": "0"
+        "name": "Anges Verts",
+        "logo": "https://img.thesports.com/football/team/244d68ffeafdef588da131cb4cc6556e.png",
+        "score": null
       },
       "away": {
-        "name": "College of Asian Scholars Women",
-        "logo": "https://img.thesports.com/football/team/6e0d069a8e8c63f58835aba4469ec4d4.png",
-        "score": "6"
+        "name": "FC MK Etancheite",
+        "logo": "https://img.thesports.com/football/team/7d11c0e4ae0707bc5a7b926fce517304.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Thai Women's Super League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "DR Congo Vodacom Ligue 1",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -671,21 +671,21 @@
     {
       "id": "sportscore:30",
       "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "FK Gazalkent",
-        "logo": "https://img.thesports.com/football/team/5866a054076a612b1cc7cefd7241aecc.png",
-        "score": "0"
+        "name": "Vietnam U23",
+        "logo": "https://img.thesports.com/football/team/b6303fe60c0094702179e08d6d27a798.png",
+        "score": null
       },
       "away": {
-        "name": "Respublika FA",
-        "logo": "https://img.thesports.com/football/team/662dc29a9e88fb3a347d3c2d70aec0b5.png",
-        "score": "3"
+        "name": "Thailand U23",
+        "logo": "https://img.thesports.com/football/team/e9895562f65f070155d757c250e6be73.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Uzbekistan Pro League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "International Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -693,21 +693,21 @@
     {
       "id": "sportscore:31",
       "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "QMU Jayxun",
-        "logo": "https://img.thesports.com/football/team/d5f466d4b8ee5ea82ab5d1b6ee3ff397.png",
-        "score": "0"
+        "name": "Congo Women",
+        "logo": "https://img.thesports.com/football/team/1b8e08327c6294ec0f833447a67acae3.png",
+        "score": null
       },
       "away": {
-        "name": "Olympic MobiUz",
-        "logo": "https://img.thesports.com/football/team/44c1dadc2be145799eebb39b4dc72984.png",
-        "score": "3"
+        "name": "Central African Republic Women",
+        "logo": "https://img.thesports.com/football/team/e50bb86d3e0a5413e1fea1ea4e57a082.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Uzbekistan Pro League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "International Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -715,21 +715,21 @@
     {
       "id": "sportscore:32",
       "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Metallurg Bekobod",
-        "logo": "https://img.thesports.com/football/team/4aa9ac9ceebfd497212c8f17ab6c7162.png",
-        "score": "1"
+        "name": "Cerro Largo Reserves",
+        "logo": "https://img.thesports.com/football/team/8ed58d880e7fd6ebff2375645c638702.png",
+        "score": null
       },
       "away": {
-        "name": "Aral Nukus",
-        "logo": "https://img.thesports.com/football/team/4904dff7aaee65b425e9062dea802e8f.png",
-        "score": "0"
+        "name": "Liverpool Montevideo Reserve",
+        "logo": "https://img.thesports.com/football/team/a5fec7a09ce971a7a31d1b5c0fe2393e.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Uzbekistan Pro League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Uruguay Reserve League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -737,21 +737,21 @@
     {
       "id": "sportscore:33",
       "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
+      "date": "2026-11-10T13:00:00+00:00",
+      "time": "2026-11-10T13:00:00+00:00",
       "home": {
-        "name": "Pakhtakor II",
-        "logo": "https://img.thesports.com/football/team/4022217a18617e36b2d07e3ccf5cf673.png",
-        "score": "0"
+        "name": "Hull City U21",
+        "logo": "https://img.thesports.com/football/team/9f86ab814456b8ab5f2b29de593487f4.png",
+        "score": null
       },
       "away": {
-        "name": "FC Kattaqorgon",
-        "logo": "https://img.thesports.com/football/team/e4e62ec30cb5000a541421a36e94dcab.png",
-        "score": "2"
+        "name": "Fleetwood Town U21",
+        "logo": "https://img.thesports.com/football/team/160bea0f14ab941c316f3f1c97acf98d.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Uzbekistan Pro League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "English U21 Professional Development League 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -759,21 +759,21 @@
     {
       "id": "sportscore:34",
       "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
+      "date": "2026-11-10T13:00:00+00:00",
+      "time": "2026-11-10T13:00:00+00:00",
       "home": {
-        "name": "Shurtan Guzor",
-        "logo": "https://img.thesports.com/football/team/e3f43baa257e74cda43f756dd4049a22.png",
-        "score": "3"
+        "name": "Algeria U17",
+        "logo": "https://img.thesports.com/football/team/e8cf5f6d2078faa01108507e14a7bc64.png",
+        "score": null
       },
       "away": {
-        "name": "Bukhara State University",
-        "logo": "https://img.thesports.com/football/team/59d954b4e0f648530960462a6ca6a835.png",
-        "score": "0"
+        "name": "Morocco U17",
+        "logo": "https://img.thesports.com/football/team/f24868ce67a31d285fbac253dc57256d.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Uzbekistan Pro League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "CAF U17 Championship",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -781,21 +781,21 @@
     {
       "id": "sportscore:35",
       "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
+      "date": "2026-11-10T13:00:00+00:00",
+      "time": "2026-11-10T13:00:00+00:00",
       "home": {
-        "name": "Yaypan FK",
-        "logo": "https://img.thesports.com/football/team/a4f0f6927ad2a2ab41fc8606b0d826cd.png",
-        "score": "1"
+        "name": "TP Mazembe Englebert",
+        "logo": "https://img.thesports.com/football/team/99edabfb372f6ed13e1499ab2cfc21aa.jpg",
+        "score": null
       },
       "away": {
-        "name": "FC Lochin",
-        "logo": "https://img.thesports.com/football/team/0f68e99e5c5eb82da0f5f5842d390209.png",
-        "score": "0"
+        "name": "CS Don Bosco",
+        "logo": "https://img.thesports.com/football/team/a2377b6047b825c1e771ba2c3caa3d5e.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Uzbekistan Pro League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "DR Congo Vodacom Ligue 1",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -803,21 +803,21 @@
     {
       "id": "sportscore:36",
       "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
+      "date": "2026-11-10T14:00:00+00:00",
+      "time": "2026-11-10T14:00:00+00:00",
       "home": {
-        "name": "Hantharwady United U20",
-        "logo": "https://img.thesports.com/football/team/866055218d95fdb4096048ea715be960.png",
-        "score": "0"
+        "name": "Colchester United U21",
+        "logo": "https://img.thesports.com/football/team/353b090145013276ddc62f470c187721.png",
+        "score": null
       },
       "away": {
-        "name": "Yangon City U20",
-        "logo": "https://img.thesports.com/football/team/3c4a021b72ba132b41deb2cf81e3a709.png",
-        "score": "4"
+        "name": "Charlton Athletic U21",
+        "logo": "https://img.thesports.com/football/team/d764dd4b7db966672b35de808751b9f0.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Myanmar U20 League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "English U21 Professional Development League 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -825,21 +825,21 @@
     {
       "id": "sportscore:37",
       "slug": "",
-      "date": "2026-11-09T09:00:00+00:00",
-      "time": "2026-11-09T09:00:00+00:00",
+      "date": "2026-11-10T14:00:00+00:00",
+      "time": "2026-11-10T14:00:00+00:00",
       "home": {
-        "name": "Prishtina U19",
-        "logo": "https://img.thesports.com/football/team/b7b286792696c84eafa7c702c43754e6.png",
-        "score": "6"
+        "name": "Djijel",
+        "logo": "https://img.thesports.com/football/team/0306d24ee61ce2b5cfdc22eefb652443.png",
+        "score": null
       },
       "away": {
-        "name": "KF Malisheva U19",
-        "logo": "https://img.thesports.com/football/team/fb5df08e132ce15a65c5971b5ed14f28.png",
-        "score": "0"
+        "name": "CR Beni Thour",
+        "logo": "https://img.thesports.com/football/team/5f4384d68a7da468e8de20028b0e271b.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Kos U19",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -847,21 +847,21 @@
     {
       "id": "sportscore:38",
       "slug": "",
-      "date": "2026-11-09T09:25:00+00:00",
-      "time": "2026-11-09T09:25:00+00:00",
+      "date": "2026-11-10T14:00:00+00:00",
+      "time": "2026-11-10T14:00:00+00:00",
       "home": {
-        "name": "FC Victoria Mykolaivka",
-        "logo": "https://img.thesports.com/football/team/a2324c377a142d82de9b710308cca602.png",
-        "score": "2"
+        "name": "MO Bejaia",
+        "logo": "https://img.thesports.com/football/team/a921cb96205eb90e04b5b55a4258be7b.png",
+        "score": null
       },
       "away": {
-        "name": "Ahrobiznes Volochysk",
-        "logo": "https://img.thesports.com/football/team/af22d4dbc58d0ede8457845472207807.png",
-        "score": "0"
+        "name": "IRB Nezla",
+        "logo": "https://img.thesports.com/football/team/33d4f40b3602babb5d8e6d49fc254cc9.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Ukrainian First League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -869,21 +869,21 @@
     {
       "id": "sportscore:39",
       "slug": "",
-      "date": "2026-11-09T09:55:00+00:00",
-      "time": "2026-11-09T09:55:00+00:00",
+      "date": "2026-11-10T14:00:00+00:00",
+      "time": "2026-11-10T14:00:00+00:00",
       "home": {
-        "name": "FC Zorya Luhansk U21",
-        "logo": "",
-        "score": "1"
+        "name": "WA Tlemcen",
+        "logo": "https://img.thesports.com/football/team/c4f4ccf86f3c8a3bfea1186f9059f684.png",
+        "score": null
       },
       "away": {
-        "name": "LNZ Cherkasy U21",
-        "logo": "https://img.thesports.com/football/team/3d84980e4dec8902b3bf627228141c2d.png",
-        "score": "1"
+        "name": "RC Arba",
+        "logo": "https://img.thesports.com/football/team/f5952d47de7990e742d8660dac81c26c.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Ukrainian Youth Team Championship",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -891,21 +891,21 @@
     {
       "id": "sportscore:40",
       "slug": "",
-      "date": "2026-11-09T10:00:00+00:00",
-      "time": "2026-11-09T10:00:00+00:00",
+      "date": "2026-11-10T14:00:00+00:00",
+      "time": "2026-11-10T14:00:00+00:00",
       "home": {
-        "name": "FC Bukovyna Chernivtsi U21",
-        "logo": "https://img.thesports.com/football/team/b1e21e366b7c46a401c4a43b4227f9fb.png",
-        "score": "0"
+        "name": "Paradou AC",
+        "logo": "https://img.thesports.com/football/team/a494e0dd2c7a57093c62cde943d76616.png",
+        "score": null
       },
       "away": {
-        "name": "Kolos Kovalivka U21",
-        "logo": "https://img.thesports.com/football/team/23f94da90c69b79d0d869ae5934c539c.png",
-        "score": "1"
+        "name": "JSM Skikda",
+        "logo": "https://img.thesports.com/football/team/62fbbd7067ffd42069924d138115aedb.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Ukrainian Youth Team Championship",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Algerian Ligue Professionnelle 2",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -913,21 +913,21 @@
     {
       "id": "sportscore:41",
       "slug": "",
-      "date": "2026-11-09T10:00:00+00:00",
-      "time": "2026-11-09T10:00:00+00:00",
+      "date": "2026-11-10T14:00:00+00:00",
+      "time": "2026-11-10T14:00:00+00:00",
       "home": {
-        "name": "Uzbekistan U17",
-        "logo": "https://img.thesports.com/football/team/9a351d67c7d778c962fcfd734a25913d.png",
-        "score": "1"
+        "name": "Celeste",
+        "logo": "https://img.thesports.com/football/team/3b44acb45f16a8d7f0369e37893ee09c.png",
+        "score": null
       },
       "away": {
-        "name": "Ecuador U17",
-        "logo": "https://img.thesports.com/football/team/a1319379e867b2da282acfe3c5131564.png",
-        "score": "1"
+        "name": "Maniema Union",
+        "logo": "https://img.thesports.com/football/team/1241ff09368c9f403edd4d769be0391b.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "International Friendly",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "DR Congo Vodacom Ligue 1",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -935,21 +935,21 @@
     {
       "id": "sportscore:42",
       "slug": "",
-      "date": "2026-11-09T10:30:00+00:00",
-      "time": "2026-11-09T10:30:00+00:00",
+      "date": "2026-11-10T15:00:00+00:00",
+      "time": "2026-11-10T15:00:00+00:00",
       "home": {
-        "name": "Bentonit Idzhevan",
-        "logo": "https://img.thesports.com/football/team/b177b48f951b473e9e18dda8d1515b59.png",
-        "score": "2"
+        "name": "El Mokawloon El Arab",
+        "logo": "https://img.thesports.com/football/team/d2ba8945533ebbda0bcccf6cf21a4bd4.png",
+        "score": null
       },
       "away": {
-        "name": "Araks Ararat",
-        "logo": "https://img.thesports.com/football/team/94afae03640ce5e36aa68a6c3283583a.png",
-        "score": "2"
+        "name": "Telecom Egypt",
+        "logo": "https://img.thesports.com/football/team/c8ce27e068948a636fe9a3cce25c13e2.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Armenian First League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Egyptian Scores Cup",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -957,21 +957,21 @@
     {
       "id": "sportscore:43",
       "slug": "",
-      "date": "2026-11-09T10:30:00+00:00",
-      "time": "2026-11-09T10:30:00+00:00",
+      "date": "2026-11-10T15:30:00+00:00",
+      "time": "2026-11-10T15:30:00+00:00",
       "home": {
-        "name": "MIKA Ashtarak",
-        "logo": "https://img.thesports.com/football/team/3401de8b952be45d382a512a14d59dcd.png",
-        "score": "3"
+        "name": "Sporting Club Nyanga W",
+        "logo": "https://img.thesports.com/football/team/4751862dc1d0436c84079a3efbb218b6.png",
+        "score": null
       },
       "away": {
-        "name": "Shirak Gjumri B",
-        "logo": "https://img.thesports.com/football/team/ae96d766c4acc2d0cd795dfd882470f6.png",
-        "score": "0"
+        "name": "Sao Tome and Principe Women",
+        "logo": "",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Armenian First League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "International Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -979,21 +979,21 @@
     {
       "id": "sportscore:44",
       "slug": "",
-      "date": "2026-11-09T10:30:00+00:00",
-      "time": "2026-11-09T10:30:00+00:00",
+      "date": "2026-11-10T16:00:00+00:00",
+      "time": "2026-11-10T16:00:00+00:00",
       "home": {
-        "name": "Hal FC",
-        "logo": "https://img.thesports.com/football/team/cedefb834d84c29f26ebdf2384b381a4.png",
-        "score": "0"
+        "name": "Tunisia U17",
+        "logo": "https://img.thesports.com/football/team/4c82f2392a9844bdf7068ac1dc6269a5.png",
+        "score": null
       },
       "away": {
-        "name": "Bengaluru B",
-        "logo": "https://img.thesports.com/football/team/c8883c8cf4c8e8afda5ebf7b33302161.png",
-        "score": "0"
+        "name": "Egypt U17",
+        "logo": "https://img.thesports.com/football/team/78b7966ba025c6c6a792115de8adc087.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Indian Bangalore Super Division",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "CAF U17 Championship",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -1001,21 +1001,21 @@
     {
       "id": "sportscore:45",
       "slug": "",
-      "date": "2026-11-09T10:30:00+00:00",
-      "time": "2026-11-09T10:30:00+00:00",
+      "date": "2026-11-10T16:00:00+00:00",
+      "time": "2026-11-10T16:00:00+00:00",
       "home": {
-        "name": "Sportivo Luqueno Reserves",
-        "logo": "https://img.thesports.com/football/team/68d769a4c46bf807352c36c0d3a93be1.png",
-        "score": "4"
+        "name": "Belgium Women U16",
+        "logo": "https://img.thesports.com/football/team/7a57385db064edeb12c332e45f2a3e52.png",
+        "score": null
       },
       "away": {
-        "name": "2 de Mayo PJC Reserves",
-        "logo": "https://img.thesports.com/football/team/06bb9203fe0287e8873e233f159fb71e.png",
-        "score": "2"
+        "name": "Scotland U16 Women",
+        "logo": "https://img.thesports.com/football/team/acb43c4da1cf5c081e6219c02552ae59.webp",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Paraguayan Reserve League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "International Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -1023,21 +1023,21 @@
     {
       "id": "sportscore:46",
       "slug": "",
-      "date": "2026-11-09T10:30:00+00:00",
-      "time": "2026-11-09T10:30:00+00:00",
+      "date": "2026-11-10T16:00:00+00:00",
+      "time": "2026-11-10T16:00:00+00:00",
       "home": {
-        "name": "Sportivo Trinidense Reserves",
-        "logo": "https://img.thesports.com/football/team/7e82f0aa75f455171d87b216e8277f11.png",
-        "score": "2"
+        "name": "Obolon Kyiv",
+        "logo": "https://img.thesports.com/football/team/260dd85236710e5fe82be0480ce4764c.png",
+        "score": null
       },
       "away": {
-        "name": "Sportivo Ameliano Reserves",
-        "logo": "https://img.thesports.com/football/team/bea9ca5e1f24636c5bd5388e7e3e5c23.png",
-        "score": "1"
+        "name": "FC Shakhtar Donetsk",
+        "logo": "https://img.thesports.com/football/team/141bcf6ab6d0bc7b8c67dc5eeb9f347d.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Paraguayan Reserve League",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Ukrainian Premier League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -1045,21 +1045,21 @@
     {
       "id": "sportscore:47",
       "slug": "",
-      "date": "2026-11-09T10:30:00+00:00",
-      "time": "2026-11-09T10:30:00+00:00",
+      "date": "2026-11-10T16:30:00+00:00",
+      "time": "2026-11-10T16:30:00+00:00",
       "home": {
-        "name": "GOG FCC",
-        "logo": "https://img.thesports.com/football/team/3d1a54fe6e24f1b3e0d71279103b57e6.png",
-        "score": "2"
+        "name": "Finland Indoor Soccer",
+        "logo": "https://img.thesports.com/football/team/516df74a3dc527be89a19daffeebca8c.png",
+        "score": null
       },
       "away": {
-        "name": "Salgaocar Sports Club",
-        "logo": "https://img.thesports.com/football/team/8358a3172c8be4768a46021c8dd699d9.png",
-        "score": "1"
+        "name": "North Macedonia Indoor Soccer",
+        "logo": "https://img.thesports.com/football/team/4f55b66706bd0f3c3b9223c2d16929a2.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Indian Bangalore Super Division",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "FIFA Futsal World Cup qualification (UEFA)",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -1067,21 +1067,21 @@
     {
       "id": "sportscore:48",
       "slug": "",
-      "date": "2026-11-09T11:00:00+00:00",
-      "time": "2026-11-09T11:00:00+00:00",
+      "date": "2026-11-10T16:30:00+00:00",
+      "time": "2026-11-10T16:30:00+00:00",
       "home": {
-        "name": "Mashuk-KMV Pyatigorsk",
-        "logo": "https://img.thesports.com/football/team/877faf356c8d2ec82eafc30365710223.png",
-        "score": "3"
+        "name": "Slovenia Indoor Soccer",
+        "logo": "https://img.thesports.com/football/team/43cf083abed4375e17a4f7da0324e1b3.png",
+        "score": null
       },
       "away": {
-        "name": "Rodina Moskva II",
-        "logo": "https://img.thesports.com/football/team/091b62ea38705019589736ed09230332.png",
-        "score": "0"
+        "name": "Belgium Indoor Soccer",
+        "logo": "https://img.thesports.com/football/team/1f7fad197c6005fce17791d52d7a08d2.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "RUS D3A",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "FIFA Futsal World Cup qualification (UEFA)",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -1089,21 +1089,21 @@
     {
       "id": "sportscore:49",
       "slug": "",
-      "date": "2026-11-09T11:00:00+00:00",
-      "time": "2026-11-09T11:00:00+00:00",
+      "date": "2026-11-10T17:00:00+00:00",
+      "time": "2026-11-10T17:00:00+00:00",
       "home": {
-        "name": "Berari Kokeboch (W)",
-        "logo": "https://img.thesports.com/football/team/6c952683ac799d8c33b0124e35cf0ee1.png",
-        "score": "0"
+        "name": "Slovakia Indoor Soccer",
+        "logo": "https://img.thesports.com/football/team/483dc7323c01c845eb27fff5ef094b9b.png",
+        "score": null
       },
       "away": {
-        "name": "Addis Ababa Ketema Women",
-        "logo": "https://img.thesports.com/football/team/a80fe45f566d8e10706c5c42592eb9b3.png",
-        "score": "7"
+        "name": "Ukraine Indoor Soccer",
+        "logo": "https://img.thesports.com/football/team/83e302fe0a816092623551cfdb07f8e2.png",
+        "score": null
       },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Ethiopia HL W",
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "FIFA Futsal World Cup qualification (UEFA)",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
