@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-10T11:53:00Z",
-  "source_updated_at": "2026-11-10T11:51:59.411052+00:00",
+  "checked_at": "2026-11-10T12:41:12Z",
+  "source_updated_at": "2026-11-10T12:40:12.311936+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -605,28 +605,6 @@
     {
       "id": "sportscore:27",
       "slug": "",
-      "date": "2026-11-10T10:00:00+00:00",
-      "time": "2026-11-10T10:00:00+00:00",
-      "home": {
-        "name": "Gabon Women",
-        "logo": "https://img.thesports.com/football/team/8485694bae96aebc7c4fe6119599d0e0.bmp",
-        "score": null
-      },
-      "away": {
-        "name": "Chad Women",
-        "logo": "https://img.thesports.com/football/team/5f92bf20922d6f7e2ad7538d74acee8a.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Postponed",
-      "competition": "International Friendly",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:28",
-      "slug": "",
       "date": "2026-11-10T10:30:00+00:00",
       "time": "2026-11-10T10:30:00+00:00",
       "home": {
@@ -637,11 +615,33 @@
       "away": {
         "name": "Real Bengaluru",
         "logo": "https://img.thesports.com/football/team/4b6b4944af08355d5375a8d95e6a8395.png",
+        "score": "1"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Indian Bangalore Super Division",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:28",
+      "slug": "",
+      "date": "2026-11-10T11:00:00+00:00",
+      "time": "2026-11-10T11:00:00+00:00",
+      "home": {
+        "name": "AI Nairab",
+        "logo": "https://img.thesports.com/football/team/af06898a8fb6924d3a15dfc9bad53611.png",
         "score": "0"
+      },
+      "away": {
+        "name": "Al-Nabek",
+        "logo": "https://img.thesports.com/football/team/a5548aa21124137863a2b169e8b6d489.png",
+        "score": "1"
       },
       "status": "in",
       "detail": "2nd half",
-      "competition": "Indian Bangalore Super Division",
+      "competition": "Syrian 1st Division",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -659,10 +659,10 @@
       "away": {
         "name": "Iran Futsal (w)",
         "logo": "https://img.thesports.com/football/team/c6783fa0703fa4c5b151d86a8b2eae27.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Futsal International Tournament Yinchuan Women",
       "period": null,
       "clock": "",
@@ -670,28 +670,6 @@
     },
     {
       "id": "sportscore:30",
-      "slug": "",
-      "date": "2026-11-10T11:00:00+00:00",
-      "time": "2026-11-10T11:00:00+00:00",
-      "home": {
-        "name": "AI Nairab",
-        "logo": "https://img.thesports.com/football/team/af06898a8fb6924d3a15dfc9bad53611.png",
-        "score": "0"
-      },
-      "away": {
-        "name": "Al-Nabek",
-        "logo": "https://img.thesports.com/football/team/a5548aa21124137863a2b169e8b6d489.png",
-        "score": "0"
-      },
-      "status": "in",
-      "detail": "Half time",
-      "competition": "Syrian 1st Division",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:31",
       "slug": "",
       "date": "2026-11-10T11:38:00+00:00",
       "time": "2026-11-10T11:38:00+00:00",
@@ -706,8 +684,30 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
       "competition": "Hunan Football League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:31",
+      "slug": "",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
+      "home": {
+        "name": "Santa Clara U23",
+        "logo": "https://img.thesports.com/football/team/e7f496f594add2954bb58b2132e1e788.png",
+        "score": "2"
+      },
+      "away": {
+        "name": "Torreense U23",
+        "logo": "https://img.thesports.com/football/team/b39d3c74dea7f5c47361e7733c1932b2.png",
+        "score": "1"
+      },
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Portuguese U23 League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -718,24 +718,46 @@
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
       "home": {
-        "name": "Santa Clara U23",
-        "logo": "https://img.thesports.com/football/team/e7f496f594add2954bb58b2132e1e788.png",
-        "score": null
+        "name": "Vietnam U23",
+        "logo": "https://img.thesports.com/football/team/b6303fe60c0094702179e08d6d27a798.png",
+        "score": "1"
       },
       "away": {
-        "name": "Torreense U23",
-        "logo": "https://img.thesports.com/football/team/b39d3c74dea7f5c47361e7733c1932b2.png",
-        "score": null
+        "name": "Thailand U23",
+        "logo": "https://img.thesports.com/football/team/e9895562f65f070155d757c250e6be73.png",
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Portuguese U23 League",
+      "status": "in",
+      "detail": "1st half",
+      "competition": "International Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
       "id": "sportscore:33",
+      "slug": "",
+      "date": "2026-11-10T12:00:00+00:00",
+      "time": "2026-11-10T12:00:00+00:00",
+      "home": {
+        "name": "Cerro Largo Reserves",
+        "logo": "https://img.thesports.com/football/team/8ed58d880e7fd6ebff2375645c638702.png",
+        "score": "1"
+      },
+      "away": {
+        "name": "Liverpool Montevideo Reserve",
+        "logo": "https://img.thesports.com/football/team/a5fec7a09ce971a7a31d1b5c0fe2393e.png",
+        "score": "1"
+      },
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Uruguay Reserve League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:34",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -750,80 +772,14 @@
         "score": null
       },
       "status": "pre",
-      "detail": "Not started",
+      "detail": "Postponed",
       "competition": "DR Congo Vodacom Ligue 1",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:34",
-      "slug": "",
-      "date": "2026-11-10T12:00:00+00:00",
-      "time": "2026-11-10T12:00:00+00:00",
-      "home": {
-        "name": "Vietnam U23",
-        "logo": "https://img.thesports.com/football/team/b6303fe60c0094702179e08d6d27a798.png",
-        "score": null
-      },
-      "away": {
-        "name": "Thailand U23",
-        "logo": "https://img.thesports.com/football/team/e9895562f65f070155d757c250e6be73.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "International Friendly",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
       "id": "sportscore:35",
-      "slug": "",
-      "date": "2026-11-10T12:00:00+00:00",
-      "time": "2026-11-10T12:00:00+00:00",
-      "home": {
-        "name": "Congo Women",
-        "logo": "https://img.thesports.com/football/team/1b8e08327c6294ec0f833447a67acae3.png",
-        "score": null
-      },
-      "away": {
-        "name": "Central African Republic Women",
-        "logo": "https://img.thesports.com/football/team/e50bb86d3e0a5413e1fea1ea4e57a082.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "International Friendly",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:36",
-      "slug": "",
-      "date": "2026-11-10T12:00:00+00:00",
-      "time": "2026-11-10T12:00:00+00:00",
-      "home": {
-        "name": "Cerro Largo Reserves",
-        "logo": "https://img.thesports.com/football/team/8ed58d880e7fd6ebff2375645c638702.png",
-        "score": null
-      },
-      "away": {
-        "name": "Liverpool Montevideo Reserve",
-        "logo": "https://img.thesports.com/football/team/a5fec7a09ce971a7a31d1b5c0fe2393e.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Uruguay Reserve League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:37",
       "slug": "",
       "date": "2026-11-10T12:00:00+00:00",
       "time": "2026-11-10T12:00:00+00:00",
@@ -838,14 +794,36 @@
         "score": null
       },
       "status": "pre",
-      "detail": "Not started",
+      "detail": "Postponed",
       "competition": "International Club Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:38",
+      "id": "sportscore:36",
+      "slug": "",
+      "date": "2026-11-10T12:15:00+00:00",
+      "time": "2026-11-10T12:15:00+00:00",
+      "home": {
+        "name": "Congo Women",
+        "logo": "https://img.thesports.com/football/team/1b8e08327c6294ec0f833447a67acae3.png",
+        "score": null
+      },
+      "away": {
+        "name": "Central African Republic Women",
+        "logo": "https://img.thesports.com/football/team/e50bb86d3e0a5413e1fea1ea4e57a082.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Postponed",
+      "competition": "International Friendly",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:37",
       "slug": "",
       "date": "2026-11-10T12:30:00+00:00",
       "time": "2026-11-10T12:30:00+00:00",
@@ -867,7 +845,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:39",
+      "id": "sportscore:38",
       "slug": "",
       "date": "2026-11-10T12:30:00+00:00",
       "time": "2026-11-10T12:30:00+00:00",
@@ -889,29 +867,29 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:40",
+      "id": "sportscore:39",
       "slug": "",
       "date": "2026-11-10T12:30:00+00:00",
       "time": "2026-11-10T12:30:00+00:00",
       "home": {
         "name": "Touch Electronics U20",
         "logo": "https://img.thesports.com/football/team/c2f0b2ff15226278e15f2883a1ecb8f9.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Kedah U20",
         "logo": "https://img.thesports.com/football/team/7e87a6233df56857872ab95db50a3ebe.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Malaysian President Cup",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:41",
+      "id": "sportscore:40",
       "slug": "",
       "date": "2026-11-10T13:00:00+00:00",
       "time": "2026-11-10T13:00:00+00:00",
@@ -933,7 +911,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:42",
+      "id": "sportscore:41",
       "slug": "",
       "date": "2026-11-10T13:00:00+00:00",
       "time": "2026-11-10T13:00:00+00:00",
@@ -955,7 +933,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:43",
+      "id": "sportscore:42",
       "slug": "",
       "date": "2026-11-10T13:00:00+00:00",
       "time": "2026-11-10T13:00:00+00:00",
@@ -977,7 +955,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:44",
+      "id": "sportscore:43",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -999,7 +977,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:45",
+      "id": "sportscore:44",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -1021,7 +999,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:46",
+      "id": "sportscore:45",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -1043,7 +1021,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:47",
+      "id": "sportscore:46",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -1065,7 +1043,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:48",
+      "id": "sportscore:47",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -1087,7 +1065,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:49",
+      "id": "sportscore:48",
       "slug": "",
       "date": "2026-11-10T14:00:00+00:00",
       "time": "2026-11-10T14:00:00+00:00",
@@ -1104,6 +1082,28 @@
       "status": "pre",
       "detail": "Not started",
       "competition": "DR Congo Vodacom Ligue 1",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:49",
+      "slug": "",
+      "date": "2026-11-10T14:30:00+00:00",
+      "time": "2026-11-10T14:30:00+00:00",
+      "home": {
+        "name": "Gabon Women",
+        "logo": "https://img.thesports.com/football/team/8485694bae96aebc7c4fe6119599d0e0.bmp",
+        "score": null
+      },
+      "away": {
+        "name": "Chad Women",
+        "logo": "https://img.thesports.com/football/team/5f92bf20922d6f7e2ad7538d74acee8a.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "International Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
