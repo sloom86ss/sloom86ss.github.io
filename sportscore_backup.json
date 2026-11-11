@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T08:48:12Z",
-  "source_updated_at": "2026-11-11T08:47:57.819503+00:00",
+  "checked_at": "2026-11-11T09:43:05Z",
+  "source_updated_at": "2026-11-11T09:42:07.522908+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -280,15 +280,15 @@
       "home": {
         "name": "Team 4jwq2gh1lz6m0ve",
         "logo": "",
-        "score": "1"
+        "score": "4"
       },
       "away": {
         "name": "Sohryngkham",
         "logo": "https://img.thesports.com/football/team/ddccbb4b7f603c5cc688b18089d1ae41.png",
-        "score": "1"
+        "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "India Shillong Champions Cup",
       "period": null,
       "clock": "",
@@ -307,10 +307,10 @@
       "away": {
         "name": "Palestine U17",
         "logo": "https://img.thesports.com/football/team/c656e78a66f572791fa22a3bf0d6d6cc.png",
-        "score": "4"
+        "score": "5"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -331,8 +331,8 @@
         "logo": "https://img.thesports.com/football/team/41f3aa3ae28eae59b37560400d5896cb.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Panda Cup",
       "period": null,
       "clock": "",
@@ -351,10 +351,10 @@
       "away": {
         "name": "Hong Kong U17",
         "logo": "https://img.thesports.com/football/team/d7ae6855175b54ec46ee3965f5ba7471.png",
-        "score": "4"
+        "score": "7"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -368,15 +368,15 @@
       "home": {
         "name": "Mongolia U17",
         "logo": "https://img.thesports.com/football/team/a050f06d75dd03a76c5afd1054e9f177.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Yemen U17",
         "logo": "https://img.thesports.com/football/team/b156f1c1b2e51d69c028101f09951c8a.png",
-        "score": "1"
+        "score": "3"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -395,10 +395,10 @@
       "away": {
         "name": "Italy U17",
         "logo": "https://img.thesports.com/football/team/df36f9a62afd5ed5d09b0b1fde620c42.png",
-        "score": "1"
+        "score": "4"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "UEFA European U17 Football Championship",
       "period": null,
       "clock": "",
@@ -412,7 +412,7 @@
       "home": {
         "name": "MEG",
         "logo": "https://img.thesports.com/football/team/0822416345e2d8d33a657df506467eea.png",
-        "score": "0"
+        "score": "2"
       },
       "away": {
         "name": "Bengaluru Roots FC",
@@ -420,7 +420,7 @@
         "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -439,10 +439,10 @@
       "away": {
         "name": "Afghanistan U17",
         "logo": "https://img.thesports.com/football/team/ec0599eddfb717c21bb62aa45b252d97.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -461,10 +461,10 @@
       "away": {
         "name": "Indonesia U17",
         "logo": "https://img.thesports.com/football/team/a222bcd619abdcee951b28cae8d1cce6.png",
-        "score": "0"
+        "score": "2"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -486,7 +486,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Thai League 3",
       "period": null,
       "clock": "",
@@ -500,15 +500,15 @@
       "home": {
         "name": "Pluakdaeng United",
         "logo": "https://img.thesports.com/football/team/d2b64048d579be14ed8c4c9af1710151.png",
-        "score": "2"
+        "score": null
       },
       "away": {
         "name": "BFB Pattaya City",
         "logo": "https://img.thesports.com/football/team/6629a20c8eaa0a331c3d6f8a327eb1b9.png",
-        "score": "3"
+        "score": null
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "pre",
+      "detail": "Postponed",
       "competition": "Thai League 3",
       "period": null,
       "clock": "",
@@ -522,15 +522,15 @@
       "home": {
         "name": "Pakistan U17",
         "logo": "https://img.thesports.com/football/team/ae41c8d1ea006bf7f93bb36f2da03e8b.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Iran U17",
         "logo": "https://img.thesports.com/football/team/31c9c81355a90ecaf838eb077de77b6a.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -544,15 +544,15 @@
       "home": {
         "name": "Hungary U17",
         "logo": "https://img.thesports.com/football/team/f4de9ac730ef4bbca5a4c12aab03493b.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "North Macedonia U17",
         "logo": "https://img.thesports.com/football/team/eb42f68108d123f08b48fda984bd3fb5.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "UEFA European U17 Football Championship",
       "period": null,
       "clock": "",
@@ -566,15 +566,15 @@
       "home": {
         "name": "Rayong FC U21",
         "logo": "https://img.thesports.com/football/team/9ae1b0b2e7192b63a71191b0fe517bb7.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Port FC U21",
         "logo": "https://img.thesports.com/football/team/68998f2bc72beea00fd6fdf7a484d837.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "THA U21",
       "period": null,
       "clock": "",
@@ -588,15 +588,15 @@
       "home": {
         "name": "ISPE FC U20",
         "logo": "https://img.thesports.com/football/team/71ea2ca7ff5ee5e8a8f51195b26b251d.jpg",
-        "score": null
+        "score": "3"
       },
       "away": {
         "name": "Myawady FC U20",
         "logo": "https://img.thesports.com/football/team/c7d8e0b8a493b0480f9ffe6bc0ac6b5f.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Myanmar U20 League",
       "period": null,
       "clock": "",
@@ -604,6 +604,50 @@
     },
     {
       "id": "sportscore:27",
+      "slug": "",
+      "date": "2026-11-11T09:30:00+00:00",
+      "time": "2026-11-11T09:30:00+00:00",
+      "home": {
+        "name": "India",
+        "logo": "https://img.thesports.com/football/team/995feb7417a4db11561338678169e045.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Maldives",
+        "logo": "https://img.thesports.com/football/team/5de7e7b0cc4659edc7b3ea4795a6d2d5.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "1st half",
+      "competition": "SAFF Championship",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:28",
+      "slug": "",
+      "date": "2026-11-11T09:30:00+00:00",
+      "time": "2026-11-11T09:30:00+00:00",
+      "home": {
+        "name": "Ubon Eastern FC",
+        "logo": "https://img.thesports.com/football/team/1a69cef797a92fe5be8225dba041d9c4.png",
+        "score": "1"
+      },
+      "away": {
+        "name": "Pitchayabundit College",
+        "logo": "https://img.thesports.com/football/team/cad3ffe8caabef830cc773f20d87fcec.png",
+        "score": "0"
+      },
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Thai League 3",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:29",
       "slug": "",
       "date": "2026-11-11T09:30:00+00:00",
       "time": "2026-11-11T09:30:00+00:00",
@@ -618,52 +662,8 @@
         "score": null
       },
       "status": "pre",
-      "detail": "Not started",
+      "detail": "Delayed",
       "competition": "Ukrainian First League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:28",
-      "slug": "",
-      "date": "2026-11-11T09:30:00+00:00",
-      "time": "2026-11-11T09:30:00+00:00",
-      "home": {
-        "name": "India",
-        "logo": "https://img.thesports.com/football/team/995feb7417a4db11561338678169e045.png",
-        "score": null
-      },
-      "away": {
-        "name": "Maldives",
-        "logo": "https://img.thesports.com/football/team/5de7e7b0cc4659edc7b3ea4795a6d2d5.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "SAFF Championship",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:29",
-      "slug": "",
-      "date": "2026-11-11T09:30:00+00:00",
-      "time": "2026-11-11T09:30:00+00:00",
-      "home": {
-        "name": "Ubon Eastern FC",
-        "logo": "https://img.thesports.com/football/team/1a69cef797a92fe5be8225dba041d9c4.png",
-        "score": null
-      },
-      "away": {
-        "name": "Pitchayabundit College",
-        "logo": "https://img.thesports.com/football/team/cad3ffe8caabef830cc773f20d87fcec.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Thai League 3",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
