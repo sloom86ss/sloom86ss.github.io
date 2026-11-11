@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T01:29:57Z",
-  "source_updated_at": "2026-11-11T01:29:18.041192+00:00",
+  "checked_at": "2026-11-11T02:21:39Z",
+  "source_updated_at": "2026-11-11T02:20:55.558786+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -16,15 +16,15 @@
       "home": {
         "name": "Liverpool URU",
         "logo": "https://img.thesports.com/football/team/051be0a9b61dedb583315fb75eaa8308.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "CA Juventud",
         "logo": "https://img.thesports.com/football/team/928b41b8c6f948cf8b1f515d4b301b80.png",
-        "score": "1"
+        "score": "4"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Uruguay Cup",
       "period": null,
       "clock": "",
@@ -43,10 +43,10 @@
       "away": {
         "name": "Queretaro U21",
         "logo": "https://img.thesports.com/football/team/3275c04e50864662eb660cca20306c83.png",
-        "score": "0"
+        "score": "3"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Copa Promesas MX",
       "period": null,
       "clock": "",
@@ -60,7 +60,7 @@
       "home": {
         "name": "Sint Maarten",
         "logo": "https://img.thesports.com/football/team/3358f441ecdd93c315c8c4e570ca15f2.png",
-        "score": "2"
+        "score": "3"
       },
       "away": {
         "name": "Anguilla",
@@ -68,7 +68,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "International Friendly",
       "period": null,
       "clock": "",
@@ -90,7 +90,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "National Premier Soccer League",
       "period": null,
       "clock": "",
@@ -112,7 +112,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "BRA FMFC",
       "period": null,
       "clock": "",
@@ -126,7 +126,7 @@
       "home": {
         "name": "RAMS Village Superstars",
         "logo": "https://img.thesports.com/football/team/961442373773bfd38f29de29cff3a7de.png",
-        "score": "1"
+        "score": "3"
       },
       "away": {
         "name": "Conaree United",
@@ -134,7 +134,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "Saint Kitts Nevis Premier League",
       "period": null,
       "clock": "",
@@ -148,7 +148,7 @@
       "home": {
         "name": "CS Desamparados Reserves",
         "logo": "https://img.thesports.com/football/team/18bf34f557ff0dcfde56f0dfaa86191a.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "CA Minero Argentino",
@@ -156,7 +156,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "Argentine Regional League",
       "period": null,
       "clock": "",
@@ -175,10 +175,10 @@
       "away": {
         "name": "CD Platense Municipal Zacatecoluca",
         "logo": "https://img.thesports.com/football/team/63b0933cc303927659846a4ed54b1522.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "El Salvador Primera Division",
       "period": null,
       "clock": "",
@@ -192,15 +192,15 @@
       "home": {
         "name": "Unam Pumas Women",
         "logo": "https://img.thesports.com/football/team/920c76f9a745c87b6d43aaeb8483a960.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "Tigres Women",
         "logo": "https://img.thesports.com/football/team/652f72cf824d752d94375426a432e86d.png",
-        "score": "1"
+        "score": "2"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Mexico Liga MX Femenil",
       "period": null,
       "clock": "",
@@ -214,15 +214,15 @@
       "home": {
         "name": "Deportiva Once Caldas",
         "logo": "https://img.thesports.com/football/team/b060f70150fe2b52fba8aa026a930c4e.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Atletico Nacional Medellin",
         "logo": "https://img.thesports.com/football/team/4ee24366d09a9239bb2c4207a5008111.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "Half time",
       "competition": "Colombian Copa BetPlay DIMAYOR",
       "period": null,
       "clock": "",
