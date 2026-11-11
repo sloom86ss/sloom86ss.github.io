@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T04:01:49Z",
-  "source_updated_at": "2026-11-11T04:01:15.737772+00:00",
+  "checked_at": "2026-11-11T04:56:11Z",
+  "source_updated_at": "2026-11-11T04:55:27.319650+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -244,7 +244,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "Mexico Liga MX Femenil",
       "period": null,
       "clock": "",
@@ -388,28 +388,6 @@
       "date": "2026-11-11T08:00:00+00:00",
       "time": "2026-11-11T08:00:00+00:00",
       "home": {
-        "name": "Hang Yuen FC",
-        "logo": "https://img.thesports.com/football/team/91e49a523ef52f9b264ce8c5a56d432b.png",
-        "score": null
-      },
-      "away": {
-        "name": "Taiwan Power Company FC",
-        "logo": "https://img.thesports.com/football/team/49d6da5b0010a9d4f25c6cb71b8255cf.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Chinese Taipei Intercity League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:18",
-      "slug": "",
-      "date": "2026-11-11T08:00:00+00:00",
-      "time": "2026-11-11T08:00:00+00:00",
-      "home": {
         "name": "MEG",
         "logo": "https://img.thesports.com/football/team/0822416345e2d8d33a657df506467eea.png",
         "score": null
@@ -422,6 +400,28 @@
       "status": "pre",
       "detail": "Not started",
       "competition": "Indian Bangalore Super Division",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:18",
+      "slug": "",
+      "date": "2026-11-11T08:00:00+00:00",
+      "time": "2026-11-11T08:00:00+00:00",
+      "home": {
+        "name": "Hang Yuen FC",
+        "logo": "https://img.thesports.com/football/team/91e49a523ef52f9b264ce8c5a56d432b.png",
+        "score": null
+      },
+      "away": {
+        "name": "Taiwan Power Company FC",
+        "logo": "https://img.thesports.com/football/team/49d6da5b0010a9d4f25c6cb71b8255cf.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Delayed",
+      "competition": "Chinese Taipei Intercity League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
