@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T06:45:19Z",
-  "source_updated_at": "2026-11-11T06:44:37.127328+00:00",
+  "checked_at": "2026-11-11T07:58:14Z",
+  "source_updated_at": "2026-11-11T07:57:46.985053+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -258,15 +258,15 @@
       "home": {
         "name": "Kodagu FC",
         "logo": "https://img.thesports.com/football/team/50ce7bce72e26e6d0bbf86e1b2fa763d.png",
-        "score": "1"
+        "score": "5"
       },
       "away": {
         "name": "FC United Stars",
         "logo": "https://img.thesports.com/football/team/5ad3bc248f9d187464ddd33e064a6f24.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -280,15 +280,15 @@
       "home": {
         "name": "Team 4jwq2gh1lz6m0ve",
         "logo": "",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Sohryngkham",
         "logo": "https://img.thesports.com/football/team/ddccbb4b7f603c5cc688b18089d1ae41.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "India Shillong Champions Cup",
       "period": null,
       "clock": "",
@@ -302,15 +302,15 @@
       "home": {
         "name": "Guam U17",
         "logo": "https://img.thesports.com/football/team/0e1e97a44219befffbd7278d292669e6.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Palestine U17",
         "logo": "https://img.thesports.com/football/team/c656e78a66f572791fa22a3bf0d6d6cc.png",
-        "score": null
+        "score": "2"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -324,15 +324,15 @@
       "home": {
         "name": "South Korea U19",
         "logo": "https://img.thesports.com/football/team/7298ee5d12d457380e9f82df42885020.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Tajikistan U19",
         "logo": "https://img.thesports.com/football/team/41f3aa3ae28eae59b37560400d5896cb.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Panda Cup",
       "period": null,
       "clock": "",
