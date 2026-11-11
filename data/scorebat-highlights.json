@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11T20:08:13.986068+00:00",
+  "updated_at": "2026-11-11T23:31:55.703580+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -309,6 +309,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQ0Mjc2OTNfYjk2NTJiYTE2MjMwMzkwYTEyYjg2NDI4YzRiMmYzODg4YmIyZjQ0ZA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQ0Mzk5MTVfOWE2NWM5OTgxYTNhZDExOGUwMjZkMTM0ODcxMzA2Y2Q4NzY5Yjk0MQ==",
+      "title": "Chapecoense - Mirassol",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-03T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQ0Mzk5MTVfOWE2NWM5OTgxYTNhZDExOGUwMjZkMTM0ODcxMzA2Y2Q4NzY5Yjk0MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQ0Mzk5MTVfOWE2NWM5OTgxYTNhZDExOGUwMjZkMTM0ODcxMzA2Y2Q4NzY5Yjk0MQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1948997/?token=NDE4MDI0XzE3OTQzNTk3MjNfM2M5N2NlZTZjZTgyODc1YjU4NTY1NTg0MTY2MGM4ODIwOWRiZGI5OA==",
@@ -2787,20 +2801,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1949001/?token=NDE4MDI0XzE3OTQ0Mjc2OTNfYjk2NTJiYTE2MjMwMzkwYTEyYjg2NDI4YzRiMmYzODg4YmIyZjQ0ZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1948998/?token=NDE4MDI0XzE3OTQ0Mjc2OTNfYjk2NTJiYTE2MjMwMzkwYTEyYjg2NDI4YzRiMmYzODg4YmIyZjQ0ZA==",
-      "title": "Bodo-Glimt - Lille",
-      "competition": "EUROPE: Champions League, League Stage",
-      "date": "2026-11-03T20:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SmRYZEQrZ2UzOHRPejh3UXhjREJpdFd0ZHJ3TWFWSGk1UEZhSWpBWTA1ND0=/?token=NDE4MDI0XzE3OTQ0Mjc2OTNfYjk2NTJiYTE2MjMwMzkwYTEyYjg2NDI4YzRiMmYzODg4YmIyZjQ0ZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1948998/?token=NDE4MDI0XzE3OTQ0Mjc2OTNfYjk2NTJiYTE2MjMwMzkwYTEyYjg2NDI4YzRiMmYzODg4YmIyZjQ0ZA=="
     }
   ]
 }
