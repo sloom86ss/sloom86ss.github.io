@@ -1,0 +1,6 @@
+title = "SLOOM365 secret scanning configuration"
+
+[[allowlists]]
+description = "ScoreBat public matchview embed URLs include provider-issued public feed tokens. This narrow exception applies only to the archived ScoreBat data file and ScoreBat matchview URLs."
+paths = ['''data/scorebat-highlights\.json$''']
+regexes = ['''(?i)https?://(?:www\.)?scorebat\.com/[^"\s]*[?&]token=[A-Za-z0-9%=_-]+''']
