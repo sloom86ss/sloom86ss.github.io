@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T04:56:11Z",
-  "source_updated_at": "2026-11-11T04:55:27.319650+00:00",
+  "checked_at": "2026-11-11T05:47:35Z",
+  "source_updated_at": "2026-11-11T05:46:34.137170+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -243,8 +243,8 @@
         "logo": "https://img.thesports.com/football/team/1b3145c36b91e56bd3e1329351ad2258.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Mexico Liga MX Femenil",
       "period": null,
       "clock": "",
@@ -258,15 +258,15 @@
       "home": {
         "name": "Kodagu FC",
         "logo": "https://img.thesports.com/football/team/50ce7bce72e26e6d0bbf86e1b2fa763d.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "FC United Stars",
         "logo": "https://img.thesports.com/football/team/5ad3bc248f9d187464ddd33e064a6f24.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
