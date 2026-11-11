@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T11:35:17Z",
-  "source_updated_at": "2026-11-11T11:35:08.461091+00:00",
+  "checked_at": "2026-11-11T12:31:31Z",
+  "source_updated_at": "2026-11-11T12:31:07.663499+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -278,18 +278,18 @@
       "date": "2026-11-11T07:00:00+00:00",
       "time": "2026-11-11T07:00:00+00:00",
       "home": {
-        "name": "Team 4jwq2gh1lz6m0ve",
-        "logo": "",
-        "score": "4"
+        "name": "Pluakdaeng United",
+        "logo": "https://img.thesports.com/football/team/d2b64048d579be14ed8c4c9af1710151.png",
+        "score": "2"
       },
       "away": {
-        "name": "Sohryngkham",
-        "logo": "https://img.thesports.com/football/team/ddccbb4b7f603c5cc688b18089d1ae41.png",
-        "score": "2"
+        "name": "BFB Pattaya City",
+        "logo": "https://img.thesports.com/football/team/6629a20c8eaa0a331c3d6f8a327eb1b9.png",
+        "score": "4"
       },
       "status": "post",
       "detail": "Finished",
-      "competition": "India Shillong Champions Cup",
+      "competition": "Thai League 3",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -341,6 +341,28 @@
     {
       "id": "sportscore:15",
       "slug": "",
+      "date": "2026-11-11T07:30:00+00:00",
+      "time": "2026-11-11T07:30:00+00:00",
+      "home": {
+        "name": "Team 4jwq2gh1lz6m0ve",
+        "logo": "",
+        "score": "4"
+      },
+      "away": {
+        "name": "Sohryngkham",
+        "logo": "https://img.thesports.com/football/team/ddccbb4b7f603c5cc688b18089d1ae41.png",
+        "score": "2"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "India Shillong Champions Cup",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:16",
+      "slug": "",
       "date": "2026-11-11T08:00:00+00:00",
       "time": "2026-11-11T08:00:00+00:00",
       "home": {
@@ -361,7 +383,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:16",
+      "id": "sportscore:17",
       "slug": "",
       "date": "2026-11-11T08:00:00+00:00",
       "time": "2026-11-11T08:00:00+00:00",
@@ -383,7 +405,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:17",
+      "id": "sportscore:18",
       "slug": "",
       "date": "2026-11-11T08:00:00+00:00",
       "time": "2026-11-11T08:00:00+00:00",
@@ -405,7 +427,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:18",
+      "id": "sportscore:19",
       "slug": "",
       "date": "2026-11-11T08:00:00+00:00",
       "time": "2026-11-11T08:00:00+00:00",
@@ -427,7 +449,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:19",
+      "id": "sportscore:20",
       "slug": "",
       "date": "2026-11-11T08:30:00+00:00",
       "time": "2026-11-11T08:30:00+00:00",
@@ -449,7 +471,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:20",
+      "id": "sportscore:21",
       "slug": "",
       "date": "2026-11-11T08:30:00+00:00",
       "time": "2026-11-11T08:30:00+00:00",
@@ -466,28 +488,6 @@
       "status": "post",
       "detail": "Finished",
       "competition": "AFC U17 Asian Cup",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:21",
-      "slug": "",
-      "date": "2026-11-11T08:30:00+00:00",
-      "time": "2026-11-11T08:30:00+00:00",
-      "home": {
-        "name": "Pluakdaeng United",
-        "logo": "https://img.thesports.com/football/team/d2b64048d579be14ed8c4c9af1710151.png",
-        "score": "2"
-      },
-      "away": {
-        "name": "BFB Pattaya City",
-        "logo": "https://img.thesports.com/football/team/6629a20c8eaa0a331c3d6f8a327eb1b9.png",
-        "score": "4"
-      },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "Thai League 3",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -649,21 +649,21 @@
     {
       "id": "sportscore:29",
       "slug": "",
-      "date": "2026-11-11T09:30:00+00:00",
-      "time": "2026-11-11T09:30:00+00:00",
+      "date": "2026-11-11T10:00:00+00:00",
+      "time": "2026-11-11T10:00:00+00:00",
       "home": {
-        "name": "FC Chernigiv",
-        "logo": "https://img.thesports.com/football/team/99ba7fc8678d8ee40ab1c56443f4b1a3.png",
-        "score": null
+        "name": "Zhejiang Professional FC U21",
+        "logo": "https://img.thesports.com/football/team/3746e3fba62790b0f2694bf858180c04.png",
+        "score": "4"
       },
       "away": {
-        "name": "FC Inhulets Petrove",
-        "logo": "https://img.thesports.com/football/team/0f136ac0300a9cd9d27ff0a5c7b6f2a7.png",
-        "score": null
+        "name": "Shanghai Shenhua U21",
+        "logo": "https://img.thesports.com/football/team/ed30322db3ad908bb673f25820ee0469.png",
+        "score": "4"
       },
-      "status": "pre",
-      "detail": "Delayed",
-      "competition": "Ukrainian First League",
+      "status": "in",
+      "detail": "Extra time",
+      "competition": "Chinese Football Assorciation U-20 League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -681,10 +681,10 @@
       "away": {
         "name": "HB Koge Reserve",
         "logo": "https://img.thesports.com/football/team/f69cf5a0b620937076fa781e9b1a2579.png",
-        "score": "1"
+        "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Danish Reserves League",
       "period": null,
       "clock": "",
@@ -705,8 +705,8 @@
         "logo": "https://img.thesports.com/football/team/17283d74f6d6976e2649a55b0092d844.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -720,15 +720,15 @@
       "home": {
         "name": "Germany U17",
         "logo": "https://img.thesports.com/football/team/0ea3e5bb859d96ff3ca72c57d5a40613.png",
-        "score": "5"
+        "score": "7"
       },
       "away": {
         "name": "Azerbaijan U17",
         "logo": "https://img.thesports.com/football/team/7bcb404713177ac7c0226542f0d9fa53.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "UEFA European U17 Football Championship",
       "period": null,
       "clock": "",
@@ -749,8 +749,8 @@
         "logo": "https://img.thesports.com/football/team/384d0d5950a923a98390dccebd6f716b.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "UEFA European U17 Football Championship",
       "period": null,
       "clock": "",
@@ -764,15 +764,15 @@
       "home": {
         "name": "Latvia U17",
         "logo": "https://img.thesports.com/football/team/0f2652d7965e8be349a9e462547f2b4c.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "Croatia U17",
         "logo": "https://img.thesports.com/football/team/c83b30902e5c767ce01f31d63719c99d.crdownload",
-        "score": "1"
+        "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "UEFA European U17 Football Championship",
       "period": null,
       "clock": "",
@@ -786,15 +786,15 @@
       "home": {
         "name": "Duzcespor",
         "logo": "https://img.thesports.com/football/team/4c07fe24771249c343e70c32289c1192.jpg",
-        "score": "3"
+        "score": "4"
       },
       "away": {
         "name": "Golcukspor",
         "logo": "https://img.thesports.com/football/team/5cc3749a6e56ef6d656735dff9176074.jpg",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -813,10 +813,10 @@
       "away": {
         "name": "Orduspor",
         "logo": "https://img.thesports.com/football/team/c60d870eaad6a3946ab3e8734466e532.jpg",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -837,8 +837,8 @@
         "logo": "https://img.thesports.com/football/team/8d47098b6c3cdbcdafd7ab124aca4b2b.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -859,8 +859,8 @@
         "logo": "https://img.thesports.com/football/team/9dcf7f7de4591ebc28cbfa49f5fbafd3.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -881,8 +881,8 @@
         "logo": "https://img.thesports.com/football/team/2192ce96446c3440a803cc6935030e8d.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -903,8 +903,8 @@
         "logo": "https://img.thesports.com/football/team/80c368a34f833797daab22135b3cf821.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -925,8 +925,8 @@
         "logo": "https://img.thesports.com/football/team/3389c10323340806a65f2469c82d1393.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -947,8 +947,8 @@
         "logo": "https://img.thesports.com/football/team/9ba357bbea2b20af19bec4c6ca3e9a42.png",
         "score": "5"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -969,8 +969,8 @@
         "logo": "https://img.thesports.com/football/team/77ff9518ea7d1a2eafe3022ad9e306b6.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -991,8 +991,8 @@
         "logo": "https://img.thesports.com/football/team/d6476d033055c7e16243b0ecc3410703.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -1000,6 +1000,28 @@
     },
     {
       "id": "sportscore:45",
+      "slug": "",
+      "date": "2026-11-11T10:00:00+00:00",
+      "time": "2026-11-11T10:00:00+00:00",
+      "home": {
+        "name": "Yeni Malatyaspor",
+        "logo": "https://img.thesports.com/football/team/34335c5e5fb9f69b7e1722db2d92c142.png",
+        "score": "0"
+      },
+      "away": {
+        "name": "Turk Metal Kirikkale",
+        "logo": "https://img.thesports.com/football/team/2988017a5e362425783596fd9b579ab9.png",
+        "score": "3"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Turkish Third League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:46",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -1013,30 +1035,8 @@
         "logo": "https://img.thesports.com/football/team/02596daff29e25a374daa016417c3a96.jpg",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
-      "competition": "Turkish Third League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:46",
-      "slug": "",
-      "date": "2026-11-11T10:00:00+00:00",
-      "time": "2026-11-11T10:00:00+00:00",
-      "home": {
-        "name": "Bursa Yıldırımspor",
-        "logo": "https://img.thesports.com/football/team/6515591ad44570536353318150f74d0b.png",
-        "score": "1"
-      },
-      "away": {
-        "name": "Etimesgut Belediye Spor",
-        "logo": "https://img.thesports.com/football/team/5757004e143b2e2b739770e20ceb4bb7.png",
-        "score": "3"
-      },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -1048,17 +1048,17 @@
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
       "home": {
-        "name": "Anadolu Universitesi",
-        "logo": "https://img.thesports.com/football/team/7a7e49a6e0df153211ea610de347eba4.png",
-        "score": "0"
+        "name": "Bursa Yıldırımspor",
+        "logo": "https://img.thesports.com/football/team/6515591ad44570536353318150f74d0b.png",
+        "score": "1"
       },
       "away": {
-        "name": "Eskisehirspor",
-        "logo": "https://img.thesports.com/football/team/88c040adb393832c87914347cc2afc3f.png",
-        "score": "0"
+        "name": "Etimesgut Belediye Spor",
+        "logo": "https://img.thesports.com/football/team/5757004e143b2e2b739770e20ceb4bb7.png",
+        "score": "4"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -1070,17 +1070,17 @@
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
       "home": {
-        "name": "Kepez Belediyespor",
-        "logo": "https://img.thesports.com/football/team/160f24321ceea00a078e6266b2e71904.png",
-        "score": "1"
+        "name": "Anadolu Universitesi",
+        "logo": "https://img.thesports.com/football/team/7a7e49a6e0df153211ea610de347eba4.png",
+        "score": "0"
       },
       "away": {
-        "name": "Balikesirspor",
-        "logo": "https://img.thesports.com/football/team/42172df81aac29598033e178d44787fc.png",
-        "score": "1"
+        "name": "Eskisehirspor",
+        "logo": "https://img.thesports.com/football/team/88c040adb393832c87914347cc2afc3f.png",
+        "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -1092,18 +1092,18 @@
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
       "home": {
-        "name": "Zhejiang Professional FC U21",
-        "logo": "https://img.thesports.com/football/team/3746e3fba62790b0f2694bf858180c04.png",
-        "score": "0"
+        "name": "Kepez Belediyespor",
+        "logo": "https://img.thesports.com/football/team/160f24321ceea00a078e6266b2e71904.png",
+        "score": "1"
       },
       "away": {
-        "name": "Shanghai Shenhua U21",
-        "logo": "https://img.thesports.com/football/team/ed30322db3ad908bb673f25820ee0469.png",
+        "name": "Balikesirspor",
+        "logo": "https://img.thesports.com/football/team/42172df81aac29598033e178d44787fc.png",
         "score": "2"
       },
-      "status": "in",
-      "detail": "2nd half",
-      "competition": "Chinese Football Assorciation U-20 League",
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Turkish Third League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
