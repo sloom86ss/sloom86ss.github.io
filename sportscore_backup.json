@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T05:47:35Z",
-  "source_updated_at": "2026-11-11T05:46:34.137170+00:00",
+  "checked_at": "2026-11-11T06:45:19Z",
+  "source_updated_at": "2026-11-11T06:44:37.127328+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -58,28 +58,6 @@
       "date": "2026-11-11T00:30:00+00:00",
       "time": "2026-11-11T00:30:00+00:00",
       "home": {
-        "name": "Sint Maarten",
-        "logo": "https://img.thesports.com/football/team/3358f441ecdd93c315c8c4e570ca15f2.png",
-        "score": "5"
-      },
-      "away": {
-        "name": "Anguilla",
-        "logo": "https://img.thesports.com/football/team/193bce8f0070a6f42e63edd5a2e288ca.png",
-        "score": "1"
-      },
-      "status": "post",
-      "detail": "Finished",
-      "competition": "International Friendly",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:3",
-      "slug": "",
-      "date": "2026-11-11T00:30:00+00:00",
-      "time": "2026-11-11T00:30:00+00:00",
-      "home": {
         "name": "Florida Premier FC",
         "logo": "https://img.thesports.com/football/team/9a09a739f5d452a0c0c146d840fa0896.png",
         "score": "0"
@@ -97,7 +75,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:4",
+      "id": "sportscore:3",
       "slug": "",
       "date": "2026-11-11T00:30:00+00:00",
       "time": "2026-11-11T00:30:00+00:00",
@@ -113,13 +91,13 @@
       },
       "status": "post",
       "detail": "Finished",
-      "competition": "BRA FMFC",
+      "competition": "BRA CM",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:5",
+      "id": "sportscore:4",
       "slug": "",
       "date": "2026-11-11T00:30:00+00:00",
       "time": "2026-11-11T00:30:00+00:00",
@@ -141,7 +119,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:6",
+      "id": "sportscore:5",
       "slug": "",
       "date": "2026-11-11T00:30:00+00:00",
       "time": "2026-11-11T00:30:00+00:00",
@@ -158,6 +136,28 @@
       "status": "post",
       "detail": "Finished",
       "competition": "Argentine Regional League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:6",
+      "slug": "",
+      "date": "2026-11-11T00:40:00+00:00",
+      "time": "2026-11-11T00:40:00+00:00",
+      "home": {
+        "name": "Sint Maarten",
+        "logo": "https://img.thesports.com/football/team/3358f441ecdd93c315c8c4e570ca15f2.png",
+        "score": "5"
+      },
+      "away": {
+        "name": "Anguilla",
+        "logo": "https://img.thesports.com/football/team/193bce8f0070a6f42e63edd5a2e288ca.png",
+        "score": "1"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "International Friendly",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -258,7 +258,7 @@
       "home": {
         "name": "Kodagu FC",
         "logo": "https://img.thesports.com/football/team/50ce7bce72e26e6d0bbf86e1b2fa763d.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "FC United Stars",
@@ -266,7 +266,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -274,6 +274,28 @@
     },
     {
       "id": "sportscore:12",
+      "slug": "",
+      "date": "2026-11-11T07:00:00+00:00",
+      "time": "2026-11-11T07:00:00+00:00",
+      "home": {
+        "name": "Team 4jwq2gh1lz6m0ve",
+        "logo": "",
+        "score": null
+      },
+      "away": {
+        "name": "Sohryngkham",
+        "logo": "https://img.thesports.com/football/team/ddccbb4b7f603c5cc688b18089d1ae41.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "India Shillong Champions Cup",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:13",
       "slug": "",
       "date": "2026-11-11T07:30:00+00:00",
       "time": "2026-11-11T07:30:00+00:00",
@@ -295,7 +317,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:13",
+      "id": "sportscore:14",
       "slug": "",
       "date": "2026-11-11T07:30:00+00:00",
       "time": "2026-11-11T07:30:00+00:00",
@@ -317,7 +339,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:14",
+      "id": "sportscore:15",
       "slug": "",
       "date": "2026-11-11T08:00:00+00:00",
       "time": "2026-11-11T08:00:00+00:00",
@@ -339,7 +361,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:15",
+      "id": "sportscore:16",
       "slug": "",
       "date": "2026-11-11T08:00:00+00:00",
       "time": "2026-11-11T08:00:00+00:00",
@@ -361,7 +383,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:16",
+      "id": "sportscore:17",
       "slug": "",
       "date": "2026-11-11T08:00:00+00:00",
       "time": "2026-11-11T08:00:00+00:00",
@@ -383,7 +405,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:17",
+      "id": "sportscore:18",
       "slug": "",
       "date": "2026-11-11T08:00:00+00:00",
       "time": "2026-11-11T08:00:00+00:00",
@@ -400,28 +422,6 @@
       "status": "pre",
       "detail": "Not started",
       "competition": "Indian Bangalore Super Division",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:18",
-      "slug": "",
-      "date": "2026-11-11T08:00:00+00:00",
-      "time": "2026-11-11T08:00:00+00:00",
-      "home": {
-        "name": "Hang Yuen FC",
-        "logo": "https://img.thesports.com/football/team/91e49a523ef52f9b264ce8c5a56d432b.png",
-        "score": null
-      },
-      "away": {
-        "name": "Taiwan Power Company FC",
-        "logo": "https://img.thesports.com/football/team/49d6da5b0010a9d4f25c6cb71b8255cf.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Delayed",
-      "competition": "Chinese Taipei Intercity League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
@@ -495,6 +495,28 @@
     {
       "id": "sportscore:22",
       "slug": "",
+      "date": "2026-11-11T08:30:00+00:00",
+      "time": "2026-11-11T08:30:00+00:00",
+      "home": {
+        "name": "Pluakdaeng United",
+        "logo": "https://img.thesports.com/football/team/d2b64048d579be14ed8c4c9af1710151.png",
+        "score": null
+      },
+      "away": {
+        "name": "BFB Pattaya City",
+        "logo": "https://img.thesports.com/football/team/6629a20c8eaa0a331c3d6f8a327eb1b9.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Interrupted",
+      "competition": "Thai League 3",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:23",
+      "slug": "",
       "date": "2026-11-11T09:00:00+00:00",
       "time": "2026-11-11T09:00:00+00:00",
       "home": {
@@ -515,7 +537,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:23",
+      "id": "sportscore:24",
       "slug": "",
       "date": "2026-11-11T09:00:00+00:00",
       "time": "2026-11-11T09:00:00+00:00",
@@ -537,7 +559,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:24",
+      "id": "sportscore:25",
       "slug": "",
       "date": "2026-11-11T09:00:00+00:00",
       "time": "2026-11-11T09:00:00+00:00",
@@ -559,7 +581,29 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:25",
+      "id": "sportscore:26",
+      "slug": "",
+      "date": "2026-11-11T09:00:00+00:00",
+      "time": "2026-11-11T09:00:00+00:00",
+      "home": {
+        "name": "ISPE FC U20",
+        "logo": "https://img.thesports.com/football/team/71ea2ca7ff5ee5e8a8f51195b26b251d.jpg",
+        "score": null
+      },
+      "away": {
+        "name": "Myawady FC U20",
+        "logo": "https://img.thesports.com/football/team/c7d8e0b8a493b0480f9ffe6bc0ac6b5f.png",
+        "score": null
+      },
+      "status": "pre",
+      "detail": "Not started",
+      "competition": "Myanmar U20 League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:27",
       "slug": "",
       "date": "2026-11-11T09:30:00+00:00",
       "time": "2026-11-11T09:30:00+00:00",
@@ -581,7 +625,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:26",
+      "id": "sportscore:28",
       "slug": "",
       "date": "2026-11-11T09:30:00+00:00",
       "time": "2026-11-11T09:30:00+00:00",
@@ -603,7 +647,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:27",
+      "id": "sportscore:29",
       "slug": "",
       "date": "2026-11-11T09:30:00+00:00",
       "time": "2026-11-11T09:30:00+00:00",
@@ -625,7 +669,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:28",
+      "id": "sportscore:30",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -647,7 +691,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:29",
+      "id": "sportscore:31",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -669,7 +713,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:30",
+      "id": "sportscore:32",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -691,7 +735,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:31",
+      "id": "sportscore:33",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -713,7 +757,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:32",
+      "id": "sportscore:34",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -735,7 +779,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:33",
+      "id": "sportscore:35",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -757,7 +801,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:34",
+      "id": "sportscore:36",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -779,7 +823,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:35",
+      "id": "sportscore:37",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -801,7 +845,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:36",
+      "id": "sportscore:38",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -823,7 +867,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:37",
+      "id": "sportscore:39",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -845,7 +889,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:38",
+      "id": "sportscore:40",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -867,7 +911,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:39",
+      "id": "sportscore:41",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -889,7 +933,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:40",
+      "id": "sportscore:42",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -911,7 +955,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:41",
+      "id": "sportscore:43",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -933,7 +977,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:42",
+      "id": "sportscore:44",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -955,7 +999,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:43",
+      "id": "sportscore:45",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -977,7 +1021,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:44",
+      "id": "sportscore:46",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -999,7 +1043,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:45",
+      "id": "sportscore:47",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -1021,7 +1065,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:46",
+      "id": "sportscore:48",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -1043,7 +1087,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:47",
+      "id": "sportscore:49",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -1060,50 +1104,6 @@
       "status": "pre",
       "detail": "Not started",
       "competition": "Turkish Third League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:48",
-      "slug": "",
-      "date": "2026-11-11T10:00:00+00:00",
-      "time": "2026-11-11T10:00:00+00:00",
-      "home": {
-        "name": "Zhejiang Professional FC U21",
-        "logo": "https://img.thesports.com/football/team/3746e3fba62790b0f2694bf858180c04.png",
-        "score": null
-      },
-      "away": {
-        "name": "Shanghai Shenhua U21",
-        "logo": "https://img.thesports.com/football/team/ed30322db3ad908bb673f25820ee0469.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Chinese Football Assorciation U-20 League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:49",
-      "slug": "",
-      "date": "2026-11-11T10:00:00+00:00",
-      "time": "2026-11-11T10:00:00+00:00",
-      "home": {
-        "name": "Azerbaijan U19",
-        "logo": "https://img.thesports.com/football/team/bb6c62672b99f1251432192588becb4f.png",
-        "score": null
-      },
-      "away": {
-        "name": "Montenegro  U19",
-        "logo": "https://img.thesports.com/football/team/782d1fac8cea293142988c2d0764f347.png",
-        "score": null
-      },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "UEFA European U19 Football Championship",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
