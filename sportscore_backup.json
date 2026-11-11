@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T09:43:05Z",
-  "source_updated_at": "2026-11-11T09:42:07.522908+00:00",
+  "checked_at": "2026-11-11T10:41:18Z",
+  "source_updated_at": "2026-11-11T10:40:33.268068+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -351,10 +351,10 @@
       "away": {
         "name": "Hong Kong U17",
         "logo": "https://img.thesports.com/football/team/d7ae6855175b54ec46ee3965f5ba7471.png",
-        "score": "7"
+        "score": "9"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -373,10 +373,10 @@
       "away": {
         "name": "Yemen U17",
         "logo": "https://img.thesports.com/football/team/b156f1c1b2e51d69c028101f09951c8a.png",
-        "score": "3"
+        "score": "4"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -395,10 +395,10 @@
       "away": {
         "name": "Italy U17",
         "logo": "https://img.thesports.com/football/team/df36f9a62afd5ed5d09b0b1fde620c42.png",
-        "score": "4"
+        "score": "6"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "UEFA European U17 Football Championship",
       "period": null,
       "clock": "",
@@ -419,8 +419,8 @@
         "logo": "https://img.thesports.com/football/team/bc575d043f92657a6dd97751cd326cce.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Indian Bangalore Super Division",
       "period": null,
       "clock": "",
@@ -439,10 +439,10 @@
       "away": {
         "name": "Afghanistan U17",
         "logo": "https://img.thesports.com/football/team/ec0599eddfb717c21bb62aa45b252d97.png",
-        "score": "1"
+        "score": "3"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -461,10 +461,10 @@
       "away": {
         "name": "Indonesia U17",
         "logo": "https://img.thesports.com/football/team/a222bcd619abdcee951b28cae8d1cce6.png",
-        "score": "2"
+        "score": "3"
       },
-      "status": "in",
-      "detail": "Half time",
+      "status": "post",
+      "detail": "Finished",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -478,15 +478,15 @@
       "home": {
         "name": "Udon United",
         "logo": "https://img.thesports.com/football/team/21086abfd23e5e34874921539d9169ba.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Udon Banjan United",
         "logo": "https://img.thesports.com/football/team/33da8849c2f088cfd0f49830c674c9a2.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Thai League 3",
       "period": null,
       "clock": "",
@@ -530,7 +530,7 @@
         "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "AFC U17 Asian Cup",
       "period": null,
       "clock": "",
@@ -544,15 +544,15 @@
       "home": {
         "name": "Hungary U17",
         "logo": "https://img.thesports.com/football/team/f4de9ac730ef4bbca5a4c12aab03493b.png",
-        "score": "1"
+        "score": "2"
       },
       "away": {
         "name": "North Macedonia U17",
         "logo": "https://img.thesports.com/football/team/eb42f68108d123f08b48fda984bd3fb5.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "UEFA European U17 Football Championship",
       "period": null,
       "clock": "",
@@ -574,7 +574,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "THA U21",
       "period": null,
       "clock": "",
@@ -588,15 +588,15 @@
       "home": {
         "name": "ISPE FC U20",
         "logo": "https://img.thesports.com/football/team/71ea2ca7ff5ee5e8a8f51195b26b251d.jpg",
-        "score": "3"
+        "score": "4"
       },
       "away": {
         "name": "Myawady FC U20",
         "logo": "https://img.thesports.com/football/team/c7d8e0b8a493b0480f9ffe6bc0ac6b5f.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Myanmar U20 League",
       "period": null,
       "clock": "",
@@ -610,7 +610,7 @@
       "home": {
         "name": "India",
         "logo": "https://img.thesports.com/football/team/995feb7417a4db11561338678169e045.png",
-        "score": "0"
+        "score": "1"
       },
       "away": {
         "name": "Maldives",
@@ -618,7 +618,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "SAFF Championship",
       "period": null,
       "clock": "",
@@ -637,10 +637,10 @@
       "away": {
         "name": "Pitchayabundit College",
         "logo": "https://img.thesports.com/football/team/cad3ffe8caabef830cc773f20d87fcec.png",
-        "score": "0"
+        "score": "1"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "2nd half",
       "competition": "Thai League 3",
       "period": null,
       "clock": "",
@@ -676,15 +676,15 @@
       "home": {
         "name": "Lyngby Reserve",
         "logo": "https://img.thesports.com/football/team/6fdda3cf5229c12e9b9f65025db8f576.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "HB Koge Reserve",
         "logo": "https://img.thesports.com/football/team/f69cf5a0b620937076fa781e9b1a2579.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Danish Reserves League",
       "period": null,
       "clock": "",
@@ -698,15 +698,15 @@
       "home": {
         "name": "Adana Adaletgucu",
         "logo": "",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Karaköprü Belediyesi Spor Kulübü",
         "logo": "https://img.thesports.com/football/team/17283d74f6d6976e2649a55b0092d844.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -720,15 +720,15 @@
       "home": {
         "name": "Germany U17",
         "logo": "https://img.thesports.com/football/team/0ea3e5bb859d96ff3ca72c57d5a40613.png",
-        "score": null
+        "score": "2"
       },
       "away": {
         "name": "Azerbaijan U17",
         "logo": "https://img.thesports.com/football/team/7bcb404713177ac7c0226542f0d9fa53.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "UEFA European U17 Football Championship",
       "period": null,
       "clock": "",
@@ -742,15 +742,15 @@
       "home": {
         "name": "Netherlands U17",
         "logo": "https://img.thesports.com/football/team/a83acdaac9a676d7b65e07e3d5350126.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Norway U17",
         "logo": "https://img.thesports.com/football/team/384d0d5950a923a98390dccebd6f716b.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "UEFA European U17 Football Championship",
       "period": null,
       "clock": "",
@@ -764,15 +764,15 @@
       "home": {
         "name": "Latvia U17",
         "logo": "https://img.thesports.com/football/team/0f2652d7965e8be349a9e462547f2b4c.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Croatia U17",
         "logo": "https://img.thesports.com/football/team/c83b30902e5c767ce01f31d63719c99d.crdownload",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "UEFA European U17 Football Championship",
       "period": null,
       "clock": "",
@@ -786,15 +786,15 @@
       "home": {
         "name": "Duzcespor",
         "logo": "https://img.thesports.com/football/team/4c07fe24771249c343e70c32289c1192.jpg",
-        "score": null
+        "score": "2"
       },
       "away": {
         "name": "Golcukspor",
         "logo": "https://img.thesports.com/football/team/5cc3749a6e56ef6d656735dff9176074.jpg",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -808,15 +808,15 @@
       "home": {
         "name": "Karabuk Idman",
         "logo": "https://img.thesports.com/football/team/b4ee5177bb37390836a07e23beaff807.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Orduspor",
         "logo": "https://img.thesports.com/football/team/c60d870eaad6a3946ab3e8734466e532.jpg",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -830,15 +830,15 @@
       "home": {
         "name": "Pazarspor",
         "logo": "https://img.thesports.com/football/team/bbf2e6b9ea132fa65cbbb4d07c57332d.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Bulvarspor",
         "logo": "https://img.thesports.com/football/team/8d47098b6c3cdbcdafd7ab124aca4b2b.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -852,15 +852,15 @@
       "home": {
         "name": "Tokat Bld Plevnespor",
         "logo": "https://img.thesports.com/football/team/71fe745e35e1462b0a31fab4196b582e.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Beykoz Ishakli Spor",
         "logo": "https://img.thesports.com/football/team/9dcf7f7de4591ebc28cbfa49f5fbafd3.png",
-        "score": null
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -874,15 +874,15 @@
       "home": {
         "name": "Zonguldak",
         "logo": "https://img.thesports.com/football/team/5d9be50ed106807156ce7d61e4270a84.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Kdz Ereglispor",
         "logo": "https://img.thesports.com/football/team/2192ce96446c3440a803cc6935030e8d.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -896,15 +896,15 @@
       "home": {
         "name": "Agri 1970 Spor",
         "logo": "https://img.thesports.com/football/team/a7fb46d186aadf6c377dd6659ebc77d7.png",
-        "score": null
+        "score": "2"
       },
       "away": {
         "name": "Adanaspor",
         "logo": "https://img.thesports.com/football/team/80c368a34f833797daab22135b3cf821.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -918,15 +918,15 @@
       "home": {
         "name": "Bitlis 1916",
         "logo": "https://img.thesports.com/football/team/a85ac571775f1e213258a92aca22e500.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Diyarbakirspor",
         "logo": "https://img.thesports.com/football/team/3389c10323340806a65f2469c82d1393.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -940,15 +940,15 @@
       "home": {
         "name": "Karaman FK",
         "logo": "https://img.thesports.com/football/team/18bae8da068edaf2aeadabba48ba8711.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Talasgucu Belediyespor",
         "logo": "https://img.thesports.com/football/team/9ba357bbea2b20af19bec4c6ca3e9a42.png",
-        "score": null
+        "score": "3"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -962,15 +962,15 @@
       "home": {
         "name": "Kirsehir Koyhizmetleri",
         "logo": "https://img.thesports.com/football/team/1406ca94541220f1019a579fd9e51dfa.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Mazidagi Fosfatspo",
         "logo": "https://img.thesports.com/football/team/77ff9518ea7d1a2eafe3022ad9e306b6.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -984,15 +984,15 @@
       "home": {
         "name": "Nigde Belediyesispor",
         "logo": "https://img.thesports.com/football/team/7949c0bb7974a637b479f3c6812e670d.png",
-        "score": null
+        "score": "1"
       },
       "away": {
         "name": "Yesilyurt Belediyespor",
         "logo": "https://img.thesports.com/football/team/d6476d033055c7e16243b0ecc3410703.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -1004,17 +1004,17 @@
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
       "home": {
-        "name": "Yeni Malatyaspor",
-        "logo": "https://img.thesports.com/football/team/34335c5e5fb9f69b7e1722db2d92c142.png",
-        "score": null
+        "name": "Yozgat Bld Bozokspor",
+        "logo": "https://img.thesports.com/football/team/6db2b2b9f9bb8467e44a0e9c7eba31d2.png",
+        "score": "0"
       },
       "away": {
-        "name": "Turk Metal Kirikkale",
-        "logo": "https://img.thesports.com/football/team/2988017a5e362425783596fd9b579ab9.png",
-        "score": null
+        "name": "Osmaniyespor",
+        "logo": "https://img.thesports.com/football/team/02596daff29e25a374daa016417c3a96.jpg",
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -1026,17 +1026,17 @@
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
       "home": {
-        "name": "Yozgat Bld Bozokspor",
-        "logo": "https://img.thesports.com/football/team/6db2b2b9f9bb8467e44a0e9c7eba31d2.png",
-        "score": null
+        "name": "Bursa Yıldırımspor",
+        "logo": "https://img.thesports.com/football/team/6515591ad44570536353318150f74d0b.png",
+        "score": "1"
       },
       "away": {
-        "name": "Osmaniyespor",
-        "logo": "https://img.thesports.com/football/team/02596daff29e25a374daa016417c3a96.jpg",
-        "score": null
+        "name": "Etimesgut Belediye Spor",
+        "logo": "https://img.thesports.com/football/team/5757004e143b2e2b739770e20ceb4bb7.png",
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -1048,17 +1048,17 @@
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
       "home": {
-        "name": "Bursa Yıldırımspor",
-        "logo": "https://img.thesports.com/football/team/6515591ad44570536353318150f74d0b.png",
-        "score": null
+        "name": "Anadolu Universitesi",
+        "logo": "https://img.thesports.com/football/team/7a7e49a6e0df153211ea610de347eba4.png",
+        "score": "0"
       },
       "away": {
-        "name": "Etimesgut Belediye Spor",
-        "logo": "https://img.thesports.com/football/team/5757004e143b2e2b739770e20ceb4bb7.png",
-        "score": null
+        "name": "Eskisehirspor",
+        "logo": "https://img.thesports.com/football/team/88c040adb393832c87914347cc2afc3f.png",
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -1070,17 +1070,17 @@
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
       "home": {
-        "name": "Anadolu Universitesi",
-        "logo": "https://img.thesports.com/football/team/7a7e49a6e0df153211ea610de347eba4.png",
-        "score": null
+        "name": "Kepez Belediyespor",
+        "logo": "https://img.thesports.com/football/team/160f24321ceea00a078e6266b2e71904.png",
+        "score": "1"
       },
       "away": {
-        "name": "Eskisehirspor",
-        "logo": "https://img.thesports.com/football/team/88c040adb393832c87914347cc2afc3f.png",
-        "score": null
+        "name": "Balikesirspor",
+        "logo": "https://img.thesports.com/football/team/42172df81aac29598033e178d44787fc.png",
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Turkish Third League",
       "period": null,
       "clock": "",
@@ -1092,18 +1092,18 @@
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
       "home": {
-        "name": "Kepez Belediyespor",
-        "logo": "https://img.thesports.com/football/team/160f24321ceea00a078e6266b2e71904.png",
-        "score": null
+        "name": "Zhejiang Professional FC U21",
+        "logo": "https://img.thesports.com/football/team/3746e3fba62790b0f2694bf858180c04.png",
+        "score": "0"
       },
       "away": {
-        "name": "Balikesirspor",
-        "logo": "https://img.thesports.com/football/team/42172df81aac29598033e178d44787fc.png",
-        "score": null
+        "name": "Shanghai Shenhua U21",
+        "logo": "https://img.thesports.com/football/team/ed30322db3ad908bb673f25820ee0469.png",
+        "score": "1"
       },
-      "status": "pre",
-      "detail": "Not started",
-      "competition": "Turkish Third League",
+      "status": "in",
+      "detail": "1st half",
+      "competition": "Chinese Football Assorciation U-20 League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
