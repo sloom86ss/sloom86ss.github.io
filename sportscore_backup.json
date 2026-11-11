@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T02:21:39Z",
-  "source_updated_at": "2026-11-11T02:20:55.558786+00:00",
+  "checked_at": "2026-11-11T03:12:11Z",
+  "source_updated_at": "2026-11-11T03:11:25.313551+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -60,15 +60,15 @@
       "home": {
         "name": "Sint Maarten",
         "logo": "https://img.thesports.com/football/team/3358f441ecdd93c315c8c4e570ca15f2.png",
-        "score": "3"
+        "score": "5"
       },
       "away": {
         "name": "Anguilla",
         "logo": "https://img.thesports.com/football/team/193bce8f0070a6f42e63edd5a2e288ca.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "International Friendly",
       "period": null,
       "clock": "",
@@ -89,8 +89,8 @@
         "logo": "https://img.thesports.com/football/team/c84afca4f5e867eeffe24259621ef62f.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "National Premier Soccer League",
       "period": null,
       "clock": "",
@@ -111,8 +111,8 @@
         "logo": "https://img.thesports.com/football/team/c779934d9b98637a03999d34a329ce1d.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "BRA FMFC",
       "period": null,
       "clock": "",
@@ -133,8 +133,8 @@
         "logo": "https://img.thesports.com/football/team/2fc32d98d076734c38479c801fdca490.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Saint Kitts Nevis Premier League",
       "period": null,
       "clock": "",
@@ -155,8 +155,8 @@
         "logo": "https://img.thesports.com/football/team/acf57504492efdd88897514b9d3c6d37.png",
         "score": "0"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Argentine Regional League",
       "period": null,
       "clock": "",
@@ -170,7 +170,7 @@
       "home": {
         "name": "A.D. Isidro Metapan",
         "logo": "https://img.thesports.com/football/team/07dcab592845adde2d6b14ce70c5c670.png",
-        "score": "0"
+        "score": "2"
       },
       "away": {
         "name": "CD Platense Municipal Zacatecoluca",
@@ -197,10 +197,10 @@
       "away": {
         "name": "Tigres Women",
         "logo": "https://img.thesports.com/football/team/652f72cf824d752d94375426a432e86d.png",
-        "score": "2"
+        "score": "3"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Mexico Liga MX Femenil",
       "period": null,
       "clock": "",
@@ -222,7 +222,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "Half time",
+      "detail": "2nd half",
       "competition": "Colombian Copa BetPlay DIMAYOR",
       "period": null,
       "clock": "",
@@ -236,15 +236,15 @@
       "home": {
         "name": "Juarez FC Women",
         "logo": "https://img.thesports.com/football/team/4397a531ffa800e9c600159faea23c23.png",
-        "score": null
+        "score": "0"
       },
       "away": {
         "name": "Chivas Guadalajara Women",
         "logo": "https://img.thesports.com/football/team/1b3145c36b91e56bd3e1329351ad2258.png",
-        "score": null
+        "score": "0"
       },
-      "status": "pre",
-      "detail": "Not started",
+      "status": "in",
+      "detail": "1st half",
       "competition": "Mexico Liga MX Femenil",
       "period": null,
       "clock": "",
