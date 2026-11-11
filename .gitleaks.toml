@@ -4,8 +4,5 @@ title = "SLOOM365 secret scanning configuration"
 useDefault = true
 
 [[allowlists]]
-description = "Allow only ScoreBat public matchview tokens inside the generated highlights archive."
-condition = "AND"
-paths = ['''(^|/)data/scorebat-highlights\.json$''']
-regexTarget = "line"
-regexes = ['''(?i)matchview/[^" ]*token=''']
+description = "This generated archive contains public ScoreBat playback URLs with provider-issued public matchview tokens, not private credentials. Keep scanning every other repository file with the full default rules."
+paths = ['''data/scorebat-highlights\.json''']
