@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T03:12:11Z",
-  "source_updated_at": "2026-11-11T03:11:25.313551+00:00",
+  "checked_at": "2026-11-11T04:01:49Z",
+  "source_updated_at": "2026-11-11T04:01:15.737772+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -177,8 +177,8 @@
         "logo": "https://img.thesports.com/football/team/63b0933cc303927659846a4ed54b1522.png",
         "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "El Salvador Primera Division",
       "period": null,
       "clock": "",
@@ -219,10 +219,10 @@
       "away": {
         "name": "Atletico Nacional Medellin",
         "logo": "https://img.thesports.com/football/team/4ee24366d09a9239bb2c4207a5008111.png",
-        "score": "0"
+        "score": "1"
       },
-      "status": "in",
-      "detail": "2nd half",
+      "status": "post",
+      "detail": "Finished",
       "competition": "Colombian Copa BetPlay DIMAYOR",
       "period": null,
       "clock": "",
@@ -244,7 +244,7 @@
         "score": "0"
       },
       "status": "in",
-      "detail": "1st half",
+      "detail": "Half time",
       "competition": "Mexico Liga MX Femenil",
       "period": null,
       "clock": "",
