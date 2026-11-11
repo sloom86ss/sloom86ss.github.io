@@ -84,11 +84,12 @@ jobs:
                   added += 1
               merged[key] = record
 
+          # Keep the newest 200 matches so the mobile archive stays lightweight.
           result = sorted(
               merged.values(),
               key=lambda item: str(item.get("date", "")),
               reverse=True
-          )
+          )[:200]
           payload = {
               "updated_at": datetime.now(timezone.utc).isoformat(),
               "provider": "ScoreBat Free Feed",
