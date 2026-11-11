@@ -1,8 +1,8 @@
 {
   "provider": "SportScore",
   "source_url": "https://sportscore.com/api/widget/matches/?sport=football&limit=50&src=sloom86ss.github.io",
-  "checked_at": "2026-11-11T12:31:31Z",
-  "source_updated_at": "2026-11-11T12:31:07.663499+00:00",
+  "checked_at": "2026-11-11T13:45:27Z",
+  "source_updated_at": "2026-11-11T13:45:06.165480+00:00",
   "sport": "football",
   "count_reported": 50,
   "count_saved": 50,
@@ -652,28 +652,6 @@
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
       "home": {
-        "name": "Zhejiang Professional FC U21",
-        "logo": "https://img.thesports.com/football/team/3746e3fba62790b0f2694bf858180c04.png",
-        "score": "4"
-      },
-      "away": {
-        "name": "Shanghai Shenhua U21",
-        "logo": "https://img.thesports.com/football/team/ed30322db3ad908bb673f25820ee0469.png",
-        "score": "4"
-      },
-      "status": "in",
-      "detail": "Extra time",
-      "competition": "Chinese Football Assorciation U-20 League",
-      "period": null,
-      "clock": "",
-      "data_source": "SportScore"
-    },
-    {
-      "id": "sportscore:30",
-      "slug": "",
-      "date": "2026-11-11T10:00:00+00:00",
-      "time": "2026-11-11T10:00:00+00:00",
-      "home": {
         "name": "Lyngby Reserve",
         "logo": "https://img.thesports.com/football/team/6fdda3cf5229c12e9b9f65025db8f576.png",
         "score": "0"
@@ -691,7 +669,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:31",
+      "id": "sportscore:30",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -713,7 +691,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:32",
+      "id": "sportscore:31",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -735,7 +713,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:33",
+      "id": "sportscore:32",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -757,7 +735,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:34",
+      "id": "sportscore:33",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -779,7 +757,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:35",
+      "id": "sportscore:34",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -801,7 +779,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:36",
+      "id": "sportscore:35",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -823,7 +801,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:37",
+      "id": "sportscore:36",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -845,7 +823,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:38",
+      "id": "sportscore:37",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -867,7 +845,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:39",
+      "id": "sportscore:38",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -889,7 +867,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:40",
+      "id": "sportscore:39",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -911,7 +889,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:41",
+      "id": "sportscore:40",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -933,7 +911,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:42",
+      "id": "sportscore:41",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -955,7 +933,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:43",
+      "id": "sportscore:42",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -977,7 +955,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:44",
+      "id": "sportscore:43",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -999,7 +977,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:45",
+      "id": "sportscore:44",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -1021,7 +999,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:46",
+      "id": "sportscore:45",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -1043,7 +1021,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:47",
+      "id": "sportscore:46",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -1065,7 +1043,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:48",
+      "id": "sportscore:47",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -1087,7 +1065,7 @@
       "data_source": "SportScore"
     },
     {
-      "id": "sportscore:49",
+      "id": "sportscore:48",
       "slug": "",
       "date": "2026-11-11T10:00:00+00:00",
       "time": "2026-11-11T10:00:00+00:00",
@@ -1104,6 +1082,28 @@
       "status": "post",
       "detail": "Finished",
       "competition": "Turkish Third League",
+      "period": null,
+      "clock": "",
+      "data_source": "SportScore"
+    },
+    {
+      "id": "sportscore:49",
+      "slug": "",
+      "date": "2026-11-11T10:00:00+00:00",
+      "time": "2026-11-11T10:00:00+00:00",
+      "home": {
+        "name": "Zhejiang Professional FC U21",
+        "logo": "https://img.thesports.com/football/team/3746e3fba62790b0f2694bf858180c04.png",
+        "score": "8"
+      },
+      "away": {
+        "name": "Shanghai Shenhua U21",
+        "logo": "https://img.thesports.com/football/team/ed30322db3ad908bb673f25820ee0469.png",
+        "score": "7"
+      },
+      "status": "post",
+      "detail": "Finished",
+      "competition": "Chinese Football Assorciation U-20 League",
       "period": null,
       "clock": "",
       "data_source": "SportScore"
