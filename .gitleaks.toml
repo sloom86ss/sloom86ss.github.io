@@ -3,6 +3,6 @@ title = "SLOOM365 secret scanning configuration"
 [extend]
 useDefault = true
 
-[[allowlists]]
+[allowlist]
 description = "This generated archive contains public ScoreBat playback URLs with provider-issued public matchview tokens, not private credentials. Keep scanning every other repository file with the full default rules."
 paths = ['''data/scorebat-highlights\.json''']
