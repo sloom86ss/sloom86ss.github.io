@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T11:37:19.233197+00:00",
+  "updated_at": "2026-11-12T12:39:02.623293+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -337,6 +337,34 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841762/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841758/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Atletico-PR - Vasco",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-04T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/a0RFN0tpeC9BaEdxWnhUSW0wQTRoWW0zcmowSnVnY1pGYlZCRjJmKzZHWT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841758/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841762/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Flamengo - Gremio",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-04T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MFNxcTM2VFN0WElNcEMxdXNadzZ0aWNBbGYwOXdrWEp6NnlDTS9SanYxRT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841762/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1949011/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
@@ -1109,6 +1137,76 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1900136/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1949011/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Slavia Praha - Arsenal",
+      "competition": "EUROPE: Champions League, League Stage",
+      "date": "2026-11-04T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VGNDYnlWcXI2a0NaUmF1RGJOV2puLzlHNmpSTXpoVWM1ZkYwTkV4WmRlMD0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1949011/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1949006/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Borussia Dortmund - Real Betis",
+      "competition": "EUROPE: Champions League, League Stage",
+      "date": "2026-11-04T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WkJ5NlQ4c1lraG5NVDRKWVZmWG4rVWJVVXBiRGZpTDlmR0I0VjNpK0ptVT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1949006/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1949009/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "RB Leipzig - Manchester City",
+      "competition": "EUROPE: Champions League, League Stage",
+      "date": "2026-11-04T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WVUzaXZaekdQaElJVHZraDJnekhQOFhEYXJoR1FVK1grTXQvSHIyS1FvVT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1949009/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1949008/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "PSV - Club Brugge",
+      "competition": "EUROPE: Champions League, League Stage",
+      "date": "2026-11-04T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Um5pNWlrd0pHMW00OWVESDNsNGtEcG9zTzhBN1hsTG1mL09NTGRSZmhOND0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1949008/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900136/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Bristol City - Wolves",
+      "competition": "ENGLAND: Championship",
+      "date": "2026-11-04T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZGU4WlNkRVV3cnJwSlkzSEVmdU4rSUFndTJDNnVLVy9VWnQzQ1dmUjFZVT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900136/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1900139/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
       "title": "Wrexham - Middlesbrough",
       "competition": "ENGLAND: Championship",
@@ -1571,6 +1669,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1900137/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900139/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Wrexham - Middlesbrough",
+      "competition": "ENGLAND: Championship",
+      "date": "2026-11-04T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eFhYanVLcFB1VlI0OGRjK1ptcEJXdVpXckhjVmdoK3BheXUrYXl1SU8vQT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900139/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900543/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Oxford United - Reading",
+      "competition": "ENGLAND: League One",
+      "date": "2026-11-04T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/clphb2NLS1FoZXQ4VnJvN0FSUFo4NnBIeHB1TjB2cVVRZHdBVmh5eE5jTT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900543/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900137/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Cardiff City - West Ham United",
+      "competition": "ENGLAND: Championship",
+      "date": "2026-11-04T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bDQ0S3pJbW1KQkgycjUvYmJIWFBFSGFCYkFNcHZLaEhaZkZJWDBWdlFubz0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900137/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
       "title": "Kortrijk - Mechelen",
       "competition": "BELGIUM: First Division A",
@@ -1767,6 +1907,24 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Kortrijk - Mechelen",
+      "competition": "BELGIUM: First Division A",
+      "date": "2026-11-04T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1949004/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
@@ -2077,6 +2235,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1949005/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1949004/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "AEK - Real Madrid",
+      "competition": "EUROPE: Champions League, League Stage",
+      "date": "2026-11-04T17:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Z0xaUTFxaW95eUM3UXZKaDJLUS9FaEZGdDdzTldPQktxY05Jc0ZLMlI4UT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1949004/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1949005/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Fenerbahce - Liverpool",
+      "competition": "EUROPE: Champions League, League Stage",
+      "date": "2026-11-04T17:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/T29CREY0S0hKVDdrM2FjL2JpSWY3WDFkazhtRWpaejhocGRSb0RtTWc3OD0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1949005/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1905966/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
       "title": "Artis Brno - Bohemians 1905",
       "competition": "CZECHIA: 1. Liga",
@@ -2229,6 +2415,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1905966/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1905966/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Artis Brno - Bohemians 1905",
+      "competition": "CZECHIA: 1. Liga",
+      "date": "2026-11-04T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VjBla2dXbTFtMjZWQWxoMzhGczVLWUZUc1hLOGk5MVpGTnR0ZzBFRHhEcz0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1905966/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1989134/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
@@ -2385,6 +2585,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1989134/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1989134/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Buriram United - Kashima Antlers",
+      "competition": "ASIA: Champions League, Group Stage",
+      "date": "2026-11-04T12:15:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RFpOU3lvQkd0YnF3bWhUYjdlRGtHSGN1RXIrcnFxOVBCT1dLRDU4cWVYTT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1989134/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1989133/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
       "title": "Pohang Steelers - Gamba Osaka",
       "competition": "ASIA: Champions League, Group Stage",
@@ -2539,6 +2753,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1989133/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1989133/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
+      "title": "Pohang Steelers - Gamba Osaka",
+      "competition": "ASIA: Champions League, Group Stage",
+      "date": "2026-11-04T10:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/S1B2ZmxIVllwcDlGS0tTQ3dFMWM5RFl4WXlybEVOaGtnek9BVzN1Zm82dz0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1989133/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
       "title": "Internacional - Coritiba",
       "competition": "BRAZIL: Serie A",
@@ -2621,230 +2849,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0NjM5ODJfM2E4NzY0NzM4Y2M4M2U3ZjFlY2RjMjhjNzFhODg4ZmQ5M2ZhZGFhNg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0Njg2NzRfMDcwZTdlZjE4MWE5NjkwNmU3ZDE3ZThlNWMyZThhMGUxYjZjMzFjNQ==",
-      "title": "Internacional - Coritiba",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-04T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MkljR2gyTTJJUjFtUjBtckpRdDd6dFc5eFg5Yi9ISmcycFJJaTQrV01iaz0=/?token=NDE4MDI0XzE3OTQ0Njg2NzRfMDcwZTdlZjE4MWE5NjkwNmU3ZDE3ZThlNWMyZThhMGUxYjZjMzFjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0Njg2NzRfMDcwZTdlZjE4MWE5NjkwNmU3ZDE3ZThlNWMyZThhMGUxYjZjMzFjNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0NzI5MzZfOTRkODRjNWFmNjI1YzYxZmNjNjlmNDM5MTNmZWZlNzgwYWRjOTU4Mg==",
-      "title": "Internacional - Coritiba",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-04T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MkljR2gyTTJJUjFtUjBtckpRdDd6dFc5eFg5Yi9ISmcycFJJaTQrV01iaz0=/?token=NDE4MDI0XzE3OTQ0NzI5MzZfOTRkODRjNWFmNjI1YzYxZmNjNjlmNDM5MTNmZWZlNzgwYWRjOTU4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0NzI5MzZfOTRkODRjNWFmNjI1YzYxZmNjNjlmNDM5MTNmZWZlNzgwYWRjOTU4Mg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0NzYyNDJfOGRiNGIyZjJhMWI4ODllZDExNTU4YzJhOTAzZGU0ZGNhMGJlYzc5MQ==",
-      "title": "Internacional - Coritiba",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-04T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MkljR2gyTTJJUjFtUjBtckpRdDd6dFc5eFg5Yi9ISmcycFJJaTQrV01iaz0=/?token=NDE4MDI0XzE3OTQ0NzYyNDJfOGRiNGIyZjJhMWI4ODllZDExNTU4YzJhOTAzZGU0ZGNhMGJlYzc5MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0NzYyNDJfOGRiNGIyZjJhMWI4ODllZDExNTU4YzJhOTAzZGU0ZGNhMGJlYzc5MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0ODAwNjhfOTE5NGRjMWIxZGUwZjQ4ZmIyODM5MzYzNTE0YzQ1ZTExYzIwMWI2Yw==",
-      "title": "Internacional - Coritiba",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-04T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MkljR2gyTTJJUjFtUjBtckpRdDd6dFc5eFg5Yi9ISmcycFJJaTQrV01iaz0=/?token=NDE4MDI0XzE3OTQ0ODAwNjhfOTE5NGRjMWIxZGUwZjQ4ZmIyODM5MzYzNTE0YzQ1ZTExYzIwMWI2Yw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0ODAwNjhfOTE5NGRjMWIxZGUwZjQ4ZmIyODM5MzYzNTE0YzQ1ZTExYzIwMWI2Yw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ==",
-      "title": "Internacional - Coritiba",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-04T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MkljR2gyTTJJUjFtUjBtckpRdDd6dFc5eFg5Yi9ISmcycFJJaTQrV01iaz0=/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841763/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNTk3MjNfM2M5N2NlZTZjZTgyODc1YjU4NTY1NTg0MTY2MGM4ODIwOWRiZGI5OA==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzNTk3MjNfM2M5N2NlZTZjZTgyODc1YjU4NTY1NTg0MTY2MGM4ODIwOWRiZGI5OA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNTk3MjNfM2M5N2NlZTZjZTgyODc1YjU4NTY1NTg0MTY2MGM4ODIwOWRiZGI5OA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNjMxOTVfZWM5MWVkMTc5YjRiODVlNTgxODIyN2Y4Yzg1NWJiMTBiZjM3YmQ4OQ==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzNjMxOTVfZWM5MWVkMTc5YjRiODVlNTgxODIyN2Y4Yzg1NWJiMTBiZjM3YmQ4OQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNjMxOTVfZWM5MWVkMTc5YjRiODVlNTgxODIyN2Y4Yzg1NWJiMTBiZjM3YmQ4OQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNjU5NzhfMDMxNDUxOWJmOTlhZjMxOTgwOTRhOTgxOTE5ZmNlOTYzOTRmYmJhNw==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzNjU5NzhfMDMxNDUxOWJmOTlhZjMxOTgwOTRhOTgxOTE5ZmNlOTYzOTRmYmJhNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNjU5NzhfMDMxNDUxOWJmOTlhZjMxOTgwOTRhOTgxOTE5ZmNlOTYzOTRmYmJhNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNjk4NTlfNzAzNDQ1N2I1ZDE0OGEzZWVhNTY3YjMzZDVlNzgyNTU1MDYyNzhjNQ==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzNjk4NTlfNzAzNDQ1N2I1ZDE0OGEzZWVhNTY3YjMzZDVlNzgyNTU1MDYyNzhjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNjk4NTlfNzAzNDQ1N2I1ZDE0OGEzZWVhNTY3YjMzZDVlNzgyNTU1MDYyNzhjNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNzM3ODBfY2IyZDlmZDk2ZTk4YWZiZjgzZTVmYmE5MjFkM2JjNWZjYjA5Nzk4NA==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzNzM3ODBfY2IyZDlmZDk2ZTk4YWZiZjgzZTVmYmE5MjFkM2JjNWZjYjA5Nzk4NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNzM3ODBfY2IyZDlmZDk2ZTk4YWZiZjgzZTVmYmE5MjFkM2JjNWZjYjA5Nzk4NA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNzczMzdfNjQwOWNlZmZiMTc1ZDk1NGNhNTBkNWVhNjc1NThiNDA1MTE2MzkxYg==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzNzczMzdfNjQwOWNlZmZiMTc1ZDk1NGNhNTBkNWVhNjc1NThiNDA1MTE2MzkxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzNzczMzdfNjQwOWNlZmZiMTc1ZDk1NGNhNTBkNWVhNjc1NThiNDA1MTE2MzkxYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzODE5NTVfZjBkMmNjOWZiNGQ0MzJiY2I5YjU4MmVkZTFjNDcyMjFhOTM0NjgxOA==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzODE5NTVfZjBkMmNjOWZiNGQ0MzJiY2I5YjU4MmVkZTFjNDcyMjFhOTM0NjgxOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzODE5NTVfZjBkMmNjOWZiNGQ0MzJiY2I5YjU4MmVkZTFjNDcyMjFhOTM0NjgxOA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzODYyNThfZDFiMzM2ODQzNzY3MDIzMzFkNjc5ODU5ZjAwYzI1ZDYxYWQ0MWJlMQ==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzODYyNThfZDFiMzM2ODQzNzY3MDIzMzFkNjc5ODU5ZjAwYzI1ZDYxYWQ0MWJlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzODYyNThfZDFiMzM2ODQzNzY3MDIzMzFkNjc5ODU5ZjAwYzI1ZDYxYWQ0MWJlMQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzODk5MTRfYTMzZGY3NmFmNDRiNWE0MmFkOTgxYjNjYzJmNTI1NWE5ZTYxMmI4NA==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzODk5MTRfYTMzZGY3NmFmNDRiNWE0MmFkOTgxYjNjYzJmNTI1NWE5ZTYxMmI4NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzODk5MTRfYTMzZGY3NmFmNDRiNWE0MmFkOTgxYjNjYzJmNTI1NWE5ZTYxMmI4NA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzOTM2NTZfYzM0NTgyNTFkMjg0NGQwZGZhYjcwNGVkN2QzM2ZiODE0MmEzOGI1Nw==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzOTM2NTZfYzM0NTgyNTFkMjg0NGQwZGZhYjcwNGVkN2QzM2ZiODE0MmEzOGI1Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzOTM2NTZfYzM0NTgyNTFkMjg0NGQwZGZhYjcwNGVkN2QzM2ZiODE0MmEzOGI1Nw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzOTcwMjlfOGUwZTRlMmFhY2NlMDZiODlhMGRmZmUzOWM3ODQxYTVhMTY3Yzc5NA==",
-      "title": "Chapecoense - Mirassol",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-03T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WUUwNFhuTTNIOEk1MG96WEFtVXo0NnhlTXhyVUlIek56ZUpVNGt6bGxTYz0=/?token=NDE4MDI0XzE3OTQzOTcwMjlfOGUwZTRlMmFhY2NlMDZiODlhMGRmZmUzOWM3ODQxYTVhMTY3Yzc5NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841760/?token=NDE4MDI0XzE3OTQzOTcwMjlfOGUwZTRlMmFhY2NlMDZiODlhMGRmZmUzOWM3ODQxYTVhMTY3Yzc5NA=="
     }
   ]
 }
