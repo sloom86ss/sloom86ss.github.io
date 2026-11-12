@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T19:05:50.745783+00:00",
+  "updated_at": "2026-11-12T20:02:12.259913+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -533,6 +533,34 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841762/?token=NDE4MDI0XzE3OTQ1MTAzNTBfZGNlNjI5ZDQ5ZjRhNzQ0MTY2YjczYjg2ZWVjMjNjMWRiYzk4YmE3Ng=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841758/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==",
+      "title": "Atletico-PR - Vasco",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-04T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/a0RFN0tpeC9BaEdxWnhUSW0wQTRoWW0zcmowSnVnY1pGYlZCRjJmKzZHWT0=/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841758/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841762/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==",
+      "title": "Flamengo - Gremio",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-04T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MFNxcTM2VFN0WElNcEMxdXNadzZ0aWNBbGYwOXdrWEp6NnlDTS9SanYxRT0=/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841762/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1949011/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
@@ -1795,6 +1823,76 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1900136/?token=NDE4MDI0XzE3OTQ1MTAzNTBfZGNlNjI5ZDQ5ZjRhNzQ0MTY2YjczYjg2ZWVjMjNjMWRiYzk4YmE3Ng=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1949011/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==",
+      "title": "Slavia Praha - Arsenal",
+      "competition": "EUROPE: Champions League, League Stage",
+      "date": "2026-11-04T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VGNDYnlWcXI2a0NaUmF1RGJOV2puLzlHNmpSTXpoVWM1ZkYwTkV4WmRlMD0=/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1949011/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1949006/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==",
+      "title": "Borussia Dortmund - Real Betis",
+      "competition": "EUROPE: Champions League, League Stage",
+      "date": "2026-11-04T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WkJ5NlQ4c1lraG5NVDRKWVZmWG4rVWJVVXBiRGZpTDlmR0I0VjNpK0ptVT0=/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1949006/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1949009/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==",
+      "title": "RB Leipzig - Manchester City",
+      "competition": "EUROPE: Champions League, League Stage",
+      "date": "2026-11-04T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WVUzaXZaekdQaElJVHZraDJnekhQOFhEYXJoR1FVK1grTXQvSHIyS1FvVT0=/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1949009/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1949008/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==",
+      "title": "PSV - Club Brugge",
+      "competition": "EUROPE: Champions League, League Stage",
+      "date": "2026-11-04T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Um5pNWlrd0pHMW00OWVESDNsNGtEcG9zTzhBN1hsTG1mL09NTGRSZmhOND0=/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1949008/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900136/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==",
+      "title": "Bristol City - Wolves",
+      "competition": "ENGLAND: Championship",
+      "date": "2026-11-04T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZGU4WlNkRVV3cnJwSlkzSEVmdU4rSUFndTJDNnVLVy9VWnQzQ1dmUjFZVT0=/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900136/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1900139/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
       "title": "Wrexham - Middlesbrough",
       "competition": "ENGLAND: Championship",
@@ -2551,6 +2649,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1900137/?token=NDE4MDI0XzE3OTQ1MTAzNTBfZGNlNjI5ZDQ5ZjRhNzQ0MTY2YjczYjg2ZWVjMjNjMWRiYzk4YmE3Ng=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900139/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==",
+      "title": "Wrexham - Middlesbrough",
+      "competition": "ENGLAND: Championship",
+      "date": "2026-11-04T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eFhYanVLcFB1VlI0OGRjK1ptcEJXdVpXckhjVmdoK3BheXUrYXl1SU8vQT0=/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900139/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900543/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==",
+      "title": "Oxford United - Reading",
+      "competition": "ENGLAND: League One",
+      "date": "2026-11-04T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/clphb2NLS1FoZXQ4VnJvN0FSUFo4NnBIeHB1TjB2cVVRZHdBVmh5eE5jTT0=/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900543/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900137/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==",
+      "title": "Cardiff City - West Ham United",
+      "competition": "ENGLAND: Championship",
+      "date": "2026-11-04T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bDQ0S3pJbW1KQkgycjUvYmJIWFBFSGFCYkFNcHZLaEhaZkZJWDBWdlFubz0=/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900137/?token=NDE4MDI0XzE3OTQ1MTM3MzJfZDcyZDYwZjA0Y2E1ODA5OTM1YTBlOGJjZjY1OTQzMzhmYWQ3NGE1Ng=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0NDM2MTdfMzhiMmM1OGUwMmQzNGE2ODk4ZWJkMDVhZTNmZGQ1MTE0ZjQ3NzFiYQ==",
       "title": "Kortrijk - Mechelen",
       "competition": "BELGIUM: First Division A",
@@ -2693,186 +2833,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0NzI5MzZfOTRkODRjNWFmNjI1YzYxZmNjNjlmNDM5MTNmZWZlNzgwYWRjOTU4Mg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0NzYyNDJfOGRiNGIyZjJhMWI4ODllZDExNTU4YzJhOTAzZGU0ZGNhMGJlYzc5MQ==",
-      "title": "Kortrijk - Mechelen",
-      "competition": "BELGIUM: First Division A",
-      "date": "2026-11-04T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ0NzYyNDJfOGRiNGIyZjJhMWI4ODllZDExNTU4YzJhOTAzZGU0ZGNhMGJlYzc5MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ0NzYyNDJfOGRiNGIyZjJhMWI4ODllZDExNTU4YzJhOTAzZGU0ZGNhMGJlYzc5MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0NzYyNDJfOGRiNGIyZjJhMWI4ODllZDExNTU4YzJhOTAzZGU0ZGNhMGJlYzc5MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0ODAwNjhfOTE5NGRjMWIxZGUwZjQ4ZmIyODM5MzYzNTE0YzQ1ZTExYzIwMWI2Yw==",
-      "title": "Kortrijk - Mechelen",
-      "competition": "BELGIUM: First Division A",
-      "date": "2026-11-04T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ0ODAwNjhfOTE5NGRjMWIxZGUwZjQ4ZmIyODM5MzYzNTE0YzQ1ZTExYzIwMWI2Yw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ0ODAwNjhfOTE5NGRjMWIxZGUwZjQ4ZmIyODM5MzYzNTE0YzQ1ZTExYzIwMWI2Yw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0ODAwNjhfOTE5NGRjMWIxZGUwZjQ4ZmIyODM5MzYzNTE0YzQ1ZTExYzIwMWI2Yw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ==",
-      "title": "Kortrijk - Mechelen",
-      "competition": "BELGIUM: First Division A",
-      "date": "2026-11-04T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0ODM0MTdfYmQ1Y2FjYTkyOTI5MGZkMmY2ZjRiNGFhZDU4YWYyY2FhN2E0NDEzMQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==",
-      "title": "Kortrijk - Mechelen",
-      "competition": "BELGIUM: First Division A",
-      "date": "2026-11-04T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0ODcxNDJfM2EzNDQxZTJlMGNjYmY2ODkxYmE4ODE1ODdjN2VjYmMzNTkxYzYzZg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0OTE3NDRfMDViMDNkYzJlZWI1OGEwZGRkY2VkMmNiMGU5ODBhOGRjNzcwNjYyNQ==",
-      "title": "Kortrijk - Mechelen",
-      "competition": "BELGIUM: First Division A",
-      "date": "2026-11-04T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ0OTE3NDRfMDViMDNkYzJlZWI1OGEwZGRkY2VkMmNiMGU5ODBhOGRjNzcwNjYyNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ0OTE3NDRfMDViMDNkYzJlZWI1OGEwZGRkY2VkMmNiMGU5ODBhOGRjNzcwNjYyNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0OTE3NDRfMDViMDNkYzJlZWI1OGEwZGRkY2VkMmNiMGU5ODBhOGRjNzcwNjYyNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0OTU4NjhfYjczMmU2NjA4Njk1NDYyMTI3ZGIyN2I3NGMwZTVkY2ExMTQ2MWNlOQ==",
-      "title": "Kortrijk - Mechelen",
-      "competition": "BELGIUM: First Division A",
-      "date": "2026-11-04T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ0OTU4NjhfYjczMmU2NjA4Njk1NDYyMTI3ZGIyN2I3NGMwZTVkY2ExMTQ2MWNlOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ0OTU4NjhfYjczMmU2NjA4Njk1NDYyMTI3ZGIyN2I3NGMwZTVkY2ExMTQ2MWNlOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0OTU4NjhfYjczMmU2NjA4Njk1NDYyMTI3ZGIyN2I3NGMwZTVkY2ExMTQ2MWNlOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0OTk5MTlfZjM2NzI1YjYxZjBjZWJkYWQ5Njg2MWYzOTYyYWI5MzlmYWIxNzVhYg==",
-      "title": "Kortrijk - Mechelen",
-      "competition": "BELGIUM: First Division A",
-      "date": "2026-11-04T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ0OTk5MTlfZjM2NzI1YjYxZjBjZWJkYWQ5Njg2MWYzOTYyYWI5MzlmYWIxNzVhYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ0OTk5MTlfZjM2NzI1YjYxZjBjZWJkYWQ5Njg2MWYzOTYyYWI5MzlmYWIxNzVhYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ0OTk5MTlfZjM2NzI1YjYxZjBjZWJkYWQ5Njg2MWYzOTYyYWI5MzlmYWIxNzVhYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ1MDM1NjJfM2YwOWU2ZWU2OGQyZjBmMTVhNGY1ZGMwZmI4YzBlOThlNDk0YTg3Nw==",
-      "title": "Kortrijk - Mechelen",
-      "competition": "BELGIUM: First Division A",
-      "date": "2026-11-04T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ1MDM1NjJfM2YwOWU2ZWU2OGQyZjBmMTVhNGY1ZGMwZmI4YzBlOThlNDk0YTg3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ1MDM1NjJfM2YwOWU2ZWU2OGQyZjBmMTVhNGY1ZGMwZmI4YzBlOThlNDk0YTg3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ1MDM1NjJfM2YwOWU2ZWU2OGQyZjBmMTVhNGY1ZGMwZmI4YzBlOThlNDk0YTg3Nw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ1MDY0MDVfODI0ZWFlODM2OTdlNWNjNTM5NjdmNTBjZDQ3MjBkY2E4MTEyNjVhYg==",
-      "title": "Kortrijk - Mechelen",
-      "competition": "BELGIUM: First Division A",
-      "date": "2026-11-04T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ1MDY0MDVfODI0ZWFlODM2OTdlNWNjNTM5NjdmNTBjZDQ3MjBkY2E4MTEyNjVhYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ1MDY0MDVfODI0ZWFlODM2OTdlNWNjNTM5NjdmNTBjZDQ3MjBkY2E4MTEyNjVhYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ1MDY0MDVfODI0ZWFlODM2OTdlNWNjNTM5NjdmNTBjZDQ3MjBkY2E4MTEyNjVhYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ1MTAzNTBfZGNlNjI5ZDQ5ZjRhNzQ0MTY2YjczYjg2ZWVjMjNjMWRiYzk4YmE3Ng==",
-      "title": "Kortrijk - Mechelen",
-      "competition": "BELGIUM: First Division A",
-      "date": "2026-11-04T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UGV4dmNoZlU4NmR1UEFFRXNtM3R3QkRlZ2RQcmphT1RINDYzc1oxWitXMD0=/?token=NDE4MDI0XzE3OTQ1MTAzNTBfZGNlNjI5ZDQ5ZjRhNzQ0MTY2YjczYjg2ZWVjMjNjMWRiYzk4YmE3Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cjd3ajFoTlp4WENwSkR3WGpISGgwVHg4WkVTVmZCVVRrR1NkUUpVdW1STT0=/?token=NDE4MDI0XzE3OTQ1MTAzNTBfZGNlNjI5ZDQ5ZjRhNzQ0MTY2YjczYjg2ZWVjMjNjMWRiYzk4YmE3Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1898726/?token=NDE4MDI0XzE3OTQ1MTAzNTBfZGNlNjI5ZDQ5ZjRhNzQ0MTY2YjczYjg2ZWVjMjNjMWRiYzk4YmE3Ng=="
     }
   ]
 }
