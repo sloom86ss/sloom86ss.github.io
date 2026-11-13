@@ -2438,7 +2438,7 @@ async function refreshLiveScores(){
  };
  // ESPN dates are UTC-oriented for many competitions; include the adjacent
  // calendar days so late Oman kickoffs are not missed around midnight.
- const dateRange=omanDay(-1)+'-'+omanDay(1);
+ const dateKeys=[omanDay(-1),omanDay(0),omanDay(1)];
  const targets=Object.entries(sportsData).filter(([key,league])=>isSloomAllowedLeague(key)&&(league.matches||[]).some(game=>{
   const start=Date.parse(game.date||game.time||'');
   return Number.isFinite(start)&&start>=now-12*60*60*1000&&start<=now+24*60*60*1000&&game.status!=='cancelled';
@@ -2448,13 +2448,24 @@ async function refreshLiveScores(){
  let liveDataChanged=false;
  const results=await Promise.allSettled(targets.map(async([key,league])=>{
   const beforeMatches=JSON.stringify(league.matches||[]);
-  const liveUrl='https://site.api.espn.com/apis/site/v2/sports/'+key+'/scoreboard?dates='+dateRange+'&limit=500&_='+Date.now();
-  const payload=await fetchEspnJson(liveUrl,{ttl:10000,timeout:8000,retries:1});
-  if(!payload||!Array.isArray(payload.events))throw Error('ESPN returned an invalid scoreboard payload');
-  if(!payload.events.length)throw Error('ESPN returned an empty scoreboard; keeping the last verified scores');
+  // ESPN scoreboard date-range requests are unreliable; query each calendar day separately.
+  const dayResults=await Promise.allSettled(dateKeys.map(day=>{
+   const liveUrl='https://site.api.espn.com/apis/site/v2/sports/'+key+'/scoreboard?dates='+day+'&limit=500&_='+Date.now();
+   return fetchEspnJson(liveUrl,{ttl:10000,timeout:8000,retries:1});
+  }));
+  const eventMap=new Map();
+  let successfulDays=0;
+  dayResults.forEach(result=>{
+   if(result.status!=='fulfilled'||!result.value||!Array.isArray(result.value.events))return;
+   successfulDays++;
+   result.value.events.forEach(event=>{if(event?.id)eventMap.set(String(event.id),event)});
+  });
+  if(!successfulDays)throw Error('ESPN scoreboard failed for all three dates');
+  const events=[...eventMap.values()];
+  if(!events.length)throw Error('ESPN returned no fixtures for the checked dates; keeping the last verified scores');
   const byId=new Map((league.matches||[]).map(game=>[String(game.id),game]));
   let merged=0;
-  for(const event of payload.events){
+  for(const event of events){
    const eventId=String(event.id||'');
    if(!eventId)continue;
    const comp=(event.competitions||[])[0]||{},competitors=comp.competitors||[];
