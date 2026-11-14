@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T08:30:12.113571+00:00",
+  "updated_at": "2026-11-14T09:27:16.191599+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -141,6 +141,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841767/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841767/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Vitoria - Fluminense",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-06T23:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/V1RPQnlvYU9HQVlWd1M1K09kTlNwYlpvMWFlTENWU2FCZHQ3S1JTL2U0dz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841767/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
@@ -303,6 +317,24 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Famalicao - Arouca",
+      "competition": "PORTUGAL: Liga Portugal",
+      "date": "2026-11-06T20:45:00+00:00",
+      "videos": [
+        {
+          "title": "1-0 Paulo Moreira",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1911870/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
@@ -717,6 +749,52 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1891007/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1911870/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Sevilla - Alaves",
+      "competition": "SPAIN: La Liga",
+      "date": "2026-11-06T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/b0RzNnpIYjNISUtQM1pDU2gvSlNHVERjdmJ1emtKWVpmTkxtK1RpNE1lMD0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ODN0TmJDRFBPc3M5SXZyQXRGY215YnZ3NEhoZjlvbGN4b2pxUlhyMUN3ST0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1911870/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900145/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Derby County - Bolton",
+      "competition": "ENGLAND: Championship",
+      "date": "2026-11-06T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RHd3UExVYlF6OS81OHVsdTVPNFAxMkNuc24ybG13dHZDQ2s4ZDNUQXlzVT0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900145/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1891007/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Everton - Coventry",
+      "competition": "ENGLAND: Premier League",
+      "date": "2026-11-06T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bytQR1QrYkR6ZjBTdkc5ZFVYbTNlRGxuL1R6UXQyeW5kc0Rxa1cwSHkraz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1891007/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1898749/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
@@ -1259,6 +1337,66 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1989816/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1898749/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Standard - Beveren",
+      "competition": "BELGIUM: First Division A",
+      "date": "2026-11-06T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MmxtbEV4TmxFMEFsNEMwVGozS1ZsUVgwekdiOElBK2JkeXcvb2hRMmtCRT0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dUVKYW1vZzROV0pwV0V5cnpveGVzdmFqOU82bm1ERzdHcUljT3hzN0NGZz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1898749/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1902527/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Toulouse - Strasbourg",
+      "competition": "FRANCE: Ligue 1",
+      "date": "2026-11-06T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dkZPbzI1VkUxUUFlVFY2M2xTS2p0bHRUZWhSWjJEc0NaM1dQYzBzdXFlaz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1902527/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1902001/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Venezia - Udinese",
+      "competition": "ITALY: Serie A",
+      "date": "2026-11-06T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/OTkyZURSTEYwaFVzWHRVOEt6T0RPTkF2M2tYVm9kZlkyS2tSR2hEQjlLRT0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1902001/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1989816/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Oxford City - Leicester City",
+      "competition": "ENGLAND: FA Cup",
+      "date": "2026-11-06T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UXV6d2lqWkdkbUx1QXNXQmZwRUtUU1dyVmV1Nk9jcFc2TDlFbVJPb1JxUT0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1989816/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1912259/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
       "title": "Hamburg - Borussia Monchengladbach",
       "competition": "GERMANY: Bundesliga",
@@ -1637,6 +1775,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1894801/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1912259/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Hamburg - Borussia Monchengladbach",
+      "competition": "GERMANY: Bundesliga",
+      "date": "2026-11-06T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K3RZQUdvQWgxQVZFbGg5QWFZV0FCU3daMDJXcnp1Q3h2TUdwaExVMWc1Yz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1912259/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1989815/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Bristol Rovers - Cambridge United",
+      "competition": "ENGLAND: FA Cup",
+      "date": "2026-11-06T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NXlRSVk3MW1rc1lIcWVWMDhWVlFvSnNqTVdINGdqVjNmSTkzYk8wZE5LMD0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1989815/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1894801/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Wisla Krakow - Cracovia",
+      "competition": "POLAND: Ekstraklasa",
+      "date": "2026-11-06T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUZpd3Z3WnJvS3piQ0hOSE1HcENzUWd6MTUvV1YrSEJyRUYzcGRnM1NTcz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1894801/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1898082/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
       "title": "Willem II - Zwolle",
       "competition": "NETHERLANDS: Eredivisie",
@@ -1761,6 +1941,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1898082/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1898082/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Willem II - Zwolle",
+      "competition": "NETHERLANDS: Eredivisie",
+      "date": "2026-11-06T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R2lTek9rS2w5MzB3Nm1NS0lNUVdiNmpkUHRBYmR0VzhnUFBqaGZCY2JKRT0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1898082/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1894799/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
@@ -2393,6 +2587,76 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1923655/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1894799/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Motor Lublin - Wisla Plock",
+      "competition": "POLAND: Ekstraklasa",
+      "date": "2026-11-06T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RU1qa1g1Z01oYUJrQVc0OU0xVHlqcFB2T3pnVExDTlprZjlUZFlGT1VFaz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1894799/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1897181/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Lokomotiva Zagreb - Rudes",
+      "competition": "CROATIA: HNL",
+      "date": "2026-11-06T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d0dtRUUzcEVoZzUrQTZGSGVoaERJZDZvcytyZSs3ekRHenlhVkZOOTZyWT0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1897181/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1937866/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "B.B. Gaziantep - Kasimpasa",
+      "competition": "TURKIYE: Super Lig",
+      "date": "2026-11-06T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/S3hLakFOUDNDRFk4TkR1Ykpkdk01VzlGUnJ4NjlwWWNiSGVmdUFnN1BJYz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1937866/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1923659/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Nea Salamis - Omonia Aradippou",
+      "competition": "CYPRUS: 1. Division",
+      "date": "2026-11-06T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/OXFtZ0hCV0xoMGZVaWNROHFNaWpKSi9QMEduTFNEWjJkeHdBeUgzNkNCaz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1923659/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1923655/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "AEK Larnaca - Karmiotissa",
+      "competition": "CYPRUS: 1. Division",
+      "date": "2026-11-06T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZUpZSThTWGh3UVFjU0htRFR1ZUQ1Y0pRTXlRNEFjb0FDMXU0T2RYdER1RT0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1923655/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841761/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
       "title": "Cruzeiro - Bahia",
       "competition": "BRAZIL: Serie A",
@@ -2519,6 +2783,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841761/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841761/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
+      "title": "Cruzeiro - Bahia",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-06T00:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZU5CblZVbFk0U2hXcExxT2hmamtNRmYxcjVISUM2SkZmSVNnYmxBMHBRbz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841761/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1MzI3ODlfZGYzZmY4ZDIzYWE5YjU4NjcwMTBhNDVhZjgxZDM0NDgyNDUxYWUxZA==",
       "title": "Palmeiras - Remo",
       "competition": "BRAZIL: Serie A",
@@ -2643,272 +2921,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1NjQ1ODBfNjkxM2I2OTJhNDQ3YzMzOTk1MDUxMTRiNDA4YTBjZjJlYWZiMWUwNg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1NjgxNzdfZWYzMDliN2Y1ZDdmMDZkN2E4Y2YxNTM0ZTRkYTEzNTA2Zjc5YjJkMg==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ1NjgxNzdfZWYzMDliN2Y1ZDdmMDZkN2E4Y2YxNTM0ZTRkYTEzNTA2Zjc5YjJkMg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1NjgxNzdfZWYzMDliN2Y1ZDdmMDZkN2E4Y2YxNTM0ZTRkYTEzNTA2Zjc5YjJkMg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1NzE0MjZfMWZjZDQwMGY5MTJkMzk4MDBhYjVlNzY0NjU5YjAwMWI5NDRjYjI5Nw==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ1NzE0MjZfMWZjZDQwMGY5MTJkMzk4MDBhYjVlNzY0NjU5YjAwMWI5NDRjYjI5Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1NzE0MjZfMWZjZDQwMGY5MTJkMzk4MDBhYjVlNzY0NjU5YjAwMWI5NDRjYjI5Nw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1NzYwOTZfNGY1MTY2YTFkYTM1MzYyZmNhOGNhZWRlN2ExNTY5YjJhODUxZTAxNQ==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ1NzYwOTZfNGY1MTY2YTFkYTM1MzYyZmNhOGNhZWRlN2ExNTY5YjJhODUxZTAxNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1NzYwOTZfNGY1MTY2YTFkYTM1MzYyZmNhOGNhZWRlN2ExNTY5YjJhODUxZTAxNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1ODA0NTJfMTFjMGVhZGIwM2E2NDZmYTEwOGFhY2ExZTgwOTg5ZDY1ZTY0NWYzOA==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ1ODA0NTJfMTFjMGVhZGIwM2E2NDZmYTEwOGFhY2ExZTgwOTg5ZDY1ZTY0NWYzOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1ODA0NTJfMTFjMGVhZGIwM2E2NDZmYTEwOGFhY2ExZTgwOTg5ZDY1ZTY0NWYzOA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1ODM2NjlfMzgyNDViM2U5NjkyNWVhZTVmMGY0MzRiYTZlOWY2M2JlYjFlN2I0YQ==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ1ODM2NjlfMzgyNDViM2U5NjkyNWVhZTVmMGY0MzRiYTZlOWY2M2JlYjFlN2I0YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1ODM2NjlfMzgyNDViM2U5NjkyNWVhZTVmMGY0MzRiYTZlOWY2M2JlYjFlN2I0YQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1ODc2NjdfMDUxOTE0OTJhYTI4YzliNTUzMjU4ZWU5NTcxNzYwNTdiYmNiY2QzYg==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ1ODc2NjdfMDUxOTE0OTJhYTI4YzliNTUzMjU4ZWU5NTcxNzYwNTdiYmNiY2QzYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1ODc2NjdfMDUxOTE0OTJhYTI4YzliNTUzMjU4ZWU5NTcxNzYwNTdiYmNiY2QzYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1OTEyNDZfMDk0M2ViMWFjODk2NjBmOWI5NmRmYmE3MmNjMGYwZTc1NTM3MTNlNA==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ1OTEyNDZfMDk0M2ViMWFjODk2NjBmOWI5NmRmYmE3MmNjMGYwZTc1NTM3MTNlNA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1OTEyNDZfMDk0M2ViMWFjODk2NjBmOWI5NmRmYmE3MmNjMGYwZTc1NTM3MTNlNA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1OTQ1NDVfNTMxZjY3NGQzMjQxYWYwNGU1MTZkYTQyNjUyMDY3OGQ3Zjc1NjNhZQ==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ1OTQ1NDVfNTMxZjY3NGQzMjQxYWYwNGU1MTZkYTQyNjUyMDY3OGQ3Zjc1NjNhZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1OTQ1NDVfNTMxZjY3NGQzMjQxYWYwNGU1MTZkYTQyNjUyMDY3OGQ3Zjc1NjNhZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1OTg2NzJfZjlhNWFkNjQ0OTYwNWEzMGYyOTA0ZGI1OTJhMTlhY2MyOTA5YWM0MA==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ1OTg2NzJfZjlhNWFkNjQ0OTYwNWEzMGYyOTA0ZGI1OTJhMTlhY2MyOTA5YWM0MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ1OTg2NzJfZjlhNWFkNjQ0OTYwNWEzMGYyOTA0ZGI1OTJhMTlhY2MyOTA5YWM0MA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MDIwNTlfNWZiZDIxYWY0YjFhODE4N2NlMGJlN2JmMTE1NTA1ZThiMWVhZGU1Nw==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ2MDIwNTlfNWZiZDIxYWY0YjFhODE4N2NlMGJlN2JmMTE1NTA1ZThiMWVhZGU1Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MDIwNTlfNWZiZDIxYWY0YjFhODE4N2NlMGJlN2JmMTE1NTA1ZThiMWVhZGU1Nw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MDUzOTlfZWE0NTJlMzI2MmFmZWQ5NTkxYjg1MDljNzgxNGRmYmQ2ZDM3ZTU5NA==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ2MDUzOTlfZWE0NTJlMzI2MmFmZWQ5NTkxYjg1MDljNzgxNGRmYmQ2ZDM3ZTU5NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MDUzOTlfZWE0NTJlMzI2MmFmZWQ5NTkxYjg1MDljNzgxNGRmYmQ2ZDM3ZTU5NA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MDg3NjlfYWIyNDcxNmE5YmVkYzYzMzk0YmQ5ZjFmYTMwNDBjM2QxZWIwNWM3Ng==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ2MDg3NjlfYWIyNDcxNmE5YmVkYzYzMzk0YmQ5ZjFmYTMwNDBjM2QxZWIwNWM3Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MDg3NjlfYWIyNDcxNmE5YmVkYzYzMzk0YmQ5ZjFmYTMwNDBjM2QxZWIwNWM3Ng=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MTIxNzJfZDBkNzY0MDAwZTA1ZjY4YWI3ZmI3ZTc5ZTc4YmMwNjM4NDIyOTQ5ZA==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ2MTIxNzJfZDBkNzY0MDAwZTA1ZjY4YWI3ZmI3ZTc5ZTc4YmMwNjM4NDIyOTQ5ZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MTIxNzJfZDBkNzY0MDAwZTA1ZjY4YWI3ZmI3ZTc5ZTc4YmMwNjM4NDIyOTQ5ZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MjM1MjBfNmY5YWYxYzM4OTY0OGM2MTY3YzhlZWZjMTliYzgxZWFhYmU3NGNkNA==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ2MjM1MjBfNmY5YWYxYzM4OTY0OGM2MTY3YzhlZWZjMTliYzgxZWFhYmU3NGNkNA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MjM1MjBfNmY5YWYxYzM4OTY0OGM2MTY3YzhlZWZjMTliYzgxZWFhYmU3NGNkNA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MjY5ODJfMGY4MDZmYjQ1ZWZlMTc5NjJhY2U0ZTc1N2JmMDEyMDNkMDNhZWVmNQ==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ2MjY5ODJfMGY4MDZmYjQ1ZWZlMTc5NjJhY2U0ZTc1N2JmMDEyMDNkMDNhZWVmNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MjY5ODJfMGY4MDZmYjQ1ZWZlMTc5NjJhY2U0ZTc1N2JmMDEyMDNkMDNhZWVmNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MzA3NjFfODg2Zjc4MTdmMTE3ZjJhNzczNjU1YTEyNGY4ODlmY2U1MzY4NjExNw==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ2MzA3NjFfODg2Zjc4MTdmMTE3ZjJhNzczNjU1YTEyNGY4ODlmY2U1MzY4NjExNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MzA3NjFfODg2Zjc4MTdmMTE3ZjJhNzczNjU1YTEyNGY4ODlmY2U1MzY4NjExNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MzQyODVfMWRmZTQ1MTlmNTY2ZTBmZWU2MWZlMjc5MjVlZjY0ZmRmOTQzNGU1OQ==",
-      "title": "Palmeiras - Remo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-05T22:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUszU1Ntczd2RTY5WmJIb3RJSFpPbFFicDRtd0JhVVFaRDhSbDRHbzVqOD0=/?token=NDE4MDI0XzE3OTQ2MzQyODVfMWRmZTQ1MTlmNTY2ZTBmZWU2MWZlMjc5MjVlZjY0ZmRmOTQzNGU1OQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841764/?token=NDE4MDI0XzE3OTQ2MzQyODVfMWRmZTQ1MTlmNTY2ZTBmZWU2MWZlMjc5MjVlZjY0ZmRmOTQzNGU1OQ=="
     }
   ]
 }
