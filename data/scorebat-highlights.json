@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T05:35:33.327931+00:00",
+  "updated_at": "2026-11-15T06:35:59.886205+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -71,6 +71,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1893348/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1893348/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Atlas - Pachuca",
+      "competition": "MEXICO: Primera Division, Apertura",
+      "date": "2026-11-07T23:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SXZMSmpHcW50NnBXQkdKY1lCZmkyWHo4ZGppNW5FUVhVTjRhcnk3bXlyTT0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1893348/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
     },
     {
       "video_id": "-qlzBL66Ges",
@@ -155,6 +169,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1989856/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1989856/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Atletico-MG - Gremio",
+      "competition": "BRAZIL: National Cup",
+      "date": "2026-11-07T21:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cU5KeFpwTUpnUmJPcDFzNnZCSXdmZ0gyK0VWd2NnVnBJRGFhS2lRT2JVQT0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1989856/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1910546/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
@@ -247,6 +275,24 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1910546/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1910546/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Sporting - Moreirense",
+      "competition": "PORTUGAL: Liga Portugal",
+      "date": "2026-11-07T20:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cDJaVG14QlpEUGVjeVFqdkZYZmNUK3cvMkw5M29zVzNDRkRndzFxYW84dz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "1-0 L. Suárez",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YXBIZmNzcTFqK2xWYmJNbFNvRnREdmQxTytRZlZqWVZUUTkxVUV4c0U1az0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1910546/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1902523/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
       "title": "PSG - Troyes",
       "competition": "FRANCE: Ligue 1",
@@ -335,6 +381,24 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1902523/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1902523/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "PSG - Troyes",
+      "competition": "FRANCE: Ligue 1",
+      "date": "2026-11-07T20:05:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bUlhL1lqbDNIU2VObGcxdXJ3WjMyUWJWU1A4K3RzK002K010SHl3MzVsVT0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QjBjb2JGRkIvZkNNSjlYZUVsQzlEZ3VQNlFQMzd0MVRWS0tRN0taTDhVZz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1902523/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1911871/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
@@ -637,6 +701,66 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1896476/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1911871/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Valencia - Real Madrid",
+      "competition": "SPAIN: La Liga",
+      "date": "2026-11-07T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bkhXWnVsTHF1Q0RUa3h5SGI1dW45elBYRERxbnArODZ4elE5djVoWXBkOD0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R2tLcjBTZENjc3JPZ2k1S1pqRENlR0NUaVg1cThYWDY4Sy8vNUtrUjA3Zz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1911871/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1898086/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Excelsior - Go Ahead Eagles",
+      "competition": "NETHERLANDS: Eredivisie",
+      "date": "2026-11-07T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YkZ6emJ4KzFpSEYzdUd0aUxNT0pCUEVtd3ZVWVBacGZsSmxXYlpBbVRxbz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1898086/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1990593/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Peterborough United - Reading",
+      "competition": "ENGLAND: FA Cup",
+      "date": "2026-11-07T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YkVCcEsyOXVBUFFZaU1CcGNocU9pRlE2dDRCeUxINTlWUjU1SHdYU2hYZz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1990593/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1896476/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "St. Mirren - Rangers",
+      "competition": "SCOTLAND: Premier League",
+      "date": "2026-11-07T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UkNJMG8rRU9Ra0VBdFdzZDJqdXJuZDR1RFVPUmFJd1JOZ0Z5MDl5Wi9jVT0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1896476/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1901992/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
       "title": "Roma - Sassuolo",
       "competition": "ITALY: Serie A",
@@ -887,6 +1011,56 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1898745/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1901992/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Roma - Sassuolo",
+      "competition": "ITALY: Serie A",
+      "date": "2026-11-07T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aTRRK3NRQlVoSHAxNFAyUFllSHo4ZnVPb0xjQ1Bma0dTR0xVeGk4SHFqdz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1901992/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1898746/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Antwerp - Lommel United",
+      "competition": "BELGIUM: First Division A",
+      "date": "2026-11-07T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cEZSSkJjUCtOVU95V0V6eXNOVkRKVm1GTUtTalJZTVhpRWUvR0ZKUjcxcz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WTlRbER5SlY2NXVRbW9xR3NtTDBXYi9nTmNYY0k1MEk1TUhVK0ttaWJxYz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1898746/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1898745/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "RAAL La Louviere - Cercle Brugge",
+      "competition": "BELGIUM: First Division A",
+      "date": "2026-11-07T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bTlIR3RCYUhNSC9DTU9mYnBybXNOR2xYeWFBcWdTWUZrRnFsYXBxbkx3TT0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aFhDTFVnaS9aVTlZdEFJNmFBY0QrN2tMRTN1QnJZWVhZYlRoVFJJbEVSZz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1898745/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1894800/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
       "title": "Widzew - Pogon Szczecin",
       "competition": "POLAND: Ekstraklasa",
@@ -955,6 +1129,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1894800/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1894800/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Widzew - Pogon Szczecin",
+      "competition": "POLAND: Ekstraklasa",
+      "date": "2026-11-07T19:15:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cm9kdWRxc1BnRHQrYmVudnpvVzlRdTRNRnFYbGR3a3d3c2d0MVFyVGx0MD0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1894800/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1902520/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
@@ -1137,6 +1325,42 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1910542/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1902520/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Auxerre - Paris FC",
+      "competition": "FRANCE: Ligue 1",
+      "date": "2026-11-07T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q3oyTVNWcUhnMjZwZlkvOE45MGMvTHRwUzdtSTJCbkVzU0lkemVDVk11cz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1902520/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1910542/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Alverca - Casa Pia",
+      "competition": "PORTUGAL: Liga Portugal",
+      "date": "2026-11-07T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/a0hqTUIxYkNOc0psaUxFOXJtZlMzak5xRmVyVVNTaERlQ1Vpb3V1TnkzYz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "1-1 Ian Luccas",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/anhiNlVhYjZ0ZG9sVHhoN2p2WU9LVlhtUTVnVjFBY3cyelBCN3M3VGxXOD0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "0-1 Selvi",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aG1JdUFRbnJseWN3MmpzZGo3NDJwSm14N2Nra0VBd2RpL1hVTC9WejhxND0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1910542/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1898084/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
       "title": "ADO Den Haag - Sparta Rotterdam",
       "competition": "NETHERLANDS: Eredivisie",
@@ -1275,6 +1499,34 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1896477/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1898084/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "ADO Den Haag - Sparta Rotterdam",
+      "competition": "NETHERLANDS: Eredivisie",
+      "date": "2026-11-07T17:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YlpCaFZwc0l5SGwydk5BTG8zZmhQUU1CUlhhV0w1bVhtUUEzRmJCaWZPbz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1898084/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1896477/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Aberdeen - Hibernian",
+      "competition": "SCOTLAND: Premier League",
+      "date": "2026-11-07T17:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cEZjUTB2ZEhnT291YmYvRkp3VDZVb295MmF4TzRxSmZqNkFscCtUZzdqYz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1896477/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1891012/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
@@ -1557,6 +1809,62 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1912264/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1891012/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Nottingham Forest - Manchester City",
+      "competition": "ENGLAND: Premier League",
+      "date": "2026-11-07T17:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dmw0L21jTXI0WXJ0bzRweEN0MHRxdkFMM2pubEdSaDAwNDJRUU5jcUg3UT0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1891012/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1990592/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Altrincham - Notts County",
+      "competition": "ENGLAND: FA Cup",
+      "date": "2026-11-07T17:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/b2VCbGxSSHVtZ0h0dzF4dDRYWjN4eXRTTndkNkxyVkhwMkUyUUQxY0FHZz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1990592/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1911868/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Osasuna - Athletic Bilbao",
+      "competition": "SPAIN: La Liga",
+      "date": "2026-11-07T17:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QnpDalJqWXhOUW04bkZpbVo4WTBKbENwNmRJUUhkdlIxSmxJNVFqTWc3Zz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1911868/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1912264/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Stuttgart - Werder Bremen",
+      "competition": "GERMANY: Bundesliga",
+      "date": "2026-11-07T17:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Y2YwTVJhZzRIQzB5dzB1U1RHbk1IcWlWeW5aNVdKN2gwempROC8vandYMD0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1912264/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1898744/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
       "title": "Oud-Heverlee - Mechelen",
       "competition": "BELGIUM: First Division A",
@@ -1645,6 +1953,24 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1898744/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1898744/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Oud-Heverlee - Mechelen",
+      "competition": "BELGIUM: First Division A",
+      "date": "2026-11-07T17:15:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/V2dBY0dIcVFyangyeHRwaEhoeUw2eHNLNWtlZmhiQmh1ejFEc3J0bjZPYz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/amFqVU05ek5FbXhydk5mbjVZaU9iK2J2b212c0lJUUZtMXpYeHNFcVpuQT0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1898744/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1901998/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
@@ -1857,6 +2183,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1923660/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1901998/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Parma - Bologna",
+      "competition": "ITALY: Serie A",
+      "date": "2026-11-07T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cFVyVzlBV2p0eVY0OTAwQ3F0ZkJKd3pvdkdvanpXTmVDYWkxMnFmK1huaz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1901998/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1897180/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "NK Istra 1961 - Rijeka",
+      "competition": "CROATIA: HNL",
+      "date": "2026-11-07T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZmtJUnd4RWp5Q0loSENaRldpNmxLT2NlS2x1L2MyOERCOE5jays0Z21YRT0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1897180/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1923660/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Olympiakos Nicosia - Apollon Limassol",
+      "competition": "CYPRUS: 1. Division",
+      "date": "2026-11-07T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TzFXOWNDRGwrekJFZFJ2RG5DNWU4T0F6TFRUZHRPLzFZeWhpNm52SUZHcz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1923660/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1891004/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
       "title": "Arsenal - Hull City",
       "competition": "ENGLAND: Premier League",
@@ -1945,6 +2313,24 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1891004/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1891004/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Arsenal - Hull City",
+      "competition": "ENGLAND: Premier League",
+      "date": "2026-11-07T15:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TzlHbGpDUmtVL29zRFpUZnJtU1pzcXJpS1p0YUNEbWV2QWh5SFczUEJqYz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Y2lZRnhDNkJPTXVCa1AvcWZDNEkrTUY3Y3Z5ZExBU0tRUHpKYjlrYWU4UT0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1891004/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1912258/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
@@ -2087,6 +2473,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1912257/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1912258/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Borussia Dortmund - Elversberg",
+      "competition": "GERMANY: Bundesliga",
+      "date": "2026-11-07T14:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q09YRHZnMkgzSjN5ZlBveWtNU2dXazlGa2hqWlpzSEJOQ1ZyWmxYaGRMUT0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1912258/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1912257/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Mainz - Bayern Munich",
+      "competition": "GERMANY: Bundesliga",
+      "date": "2026-11-07T14:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RnpyQnlnSXQ1UXhjSlIrT3ErcmZ1ZEtDQTZnNEUzdmpwdnRjb1dmcEVYYz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1912257/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1891010/?token=NDE4MDI0XzE3OTQ3MDU0MDVfNDg2ZTE0MGY5YTAwYjQ5MmFjNDAzYjZkZDdjZDYzNTdjNmMzMDY0ZQ==",
       "title": "Leeds - Tottenham Hotspur",
       "competition": "ENGLAND: Premier League",
@@ -2155,6 +2569,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1891010/?token=NDE4MDI0XzE3OTQ3MjA5MzNfMDQ3N2NjYmIxYTI5MDEyMTE4MWRhOTkyOWZhYzc3ZjhiMGI5MGE5MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1891010/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==",
+      "title": "Leeds - Tottenham Hotspur",
+      "competition": "ENGLAND: Premier League",
+      "date": "2026-11-07T12:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aEZDak9GLzRMQzJxaTdXVTd5RzdjNGxSZWZxZDhHVmZYdDJ0Z2l6UHd3bz0=/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1891010/?token=NDE4MDI0XzE3OTQ3MjQ1NTlfYjdjMmU4OTA0YjYyYjI4MDc3YjBmYWI5Mzc2NWI1YjNlMzJmYTA4NQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1841767/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
@@ -2609,494 +3037,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2MzA3NjFfODg2Zjc4MTdmMTE3ZjJhNzczNjU1YTEyNGY4ODlmY2U1MzY4NjExNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2MzQyODVfMWRmZTQ1MTlmNTY2ZTBmZWU2MWZlMjc5MjVlZjY0ZmRmOTQzNGU1OQ==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2MzQyODVfMWRmZTQ1MTlmNTY2ZTBmZWU2MWZlMjc5MjVlZjY0ZmRmOTQzNGU1OQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2MzQyODVfMWRmZTQ1MTlmNTY2ZTBmZWU2MWZlMjc5MjVlZjY0ZmRmOTQzNGU1OQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2MzQyODVfMWRmZTQ1MTlmNTY2ZTBmZWU2MWZlMjc5MjVlZjY0ZmRmOTQzNGU1OQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2Mzc5MTdfNTU3MTkxMmJlNTMwMjcyMDQzODJkZmQ5MWVjOWRlYTZiNjc1NzVmNQ==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2Mzc5MTdfNTU3MTkxMmJlNTMwMjcyMDQzODJkZmQ5MWVjOWRlYTZiNjc1NzVmNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2Mzc5MTdfNTU3MTkxMmJlNTMwMjcyMDQzODJkZmQ5MWVjOWRlYTZiNjc1NzVmNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2Mzc5MTdfNTU3MTkxMmJlNTMwMjcyMDQzODJkZmQ5MWVjOWRlYTZiNjc1NzVmNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NDIyNDBfNmQ0MjFkZjkyMzQ0Zjk3MjQ5NWQ5MWVhMzk0YWVkNThhMDA3ZTc0NA==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NDIyNDBfNmQ0MjFkZjkyMzQ0Zjk3MjQ5NWQ5MWVhMzk0YWVkNThhMDA3ZTc0NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NDIyNDBfNmQ0MjFkZjkyMzQ0Zjk3MjQ5NWQ5MWVhMzk0YWVkNThhMDA3ZTc0NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NDIyNDBfNmQ0MjFkZjkyMzQ0Zjk3MjQ5NWQ5MWVhMzk0YWVkNThhMDA3ZTc0NA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NDUwMTJfMDg5MDJmNmI1YTRjYmU0YWQ3Zjk5Yzk2OTg2ZjgzNTIwMWUwOGNhZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NDg0MzVfMzhhZDA4YzAzY2U5ZTE4ZDNiZTRlYzg0YTI0YzlhYmJmNmI3OWIxYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NTE4MjJfNzkxYWQ4ZDQ0MGRmMjZjYzRiNmFmYzliNjYzYzdhZDhhYmJiNWFkYg==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NTE4MjJfNzkxYWQ4ZDQ0MGRmMjZjYzRiNmFmYzliNjYzYzdhZDhhYmJiNWFkYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NTE4MjJfNzkxYWQ4ZDQ0MGRmMjZjYzRiNmFmYzliNjYzYzdhZDhhYmJiNWFkYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NTE4MjJfNzkxYWQ4ZDQ0MGRmMjZjYzRiNmFmYzliNjYzYzdhZDhhYmJiNWFkYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NTUwMzdfM2JiY2M2MjY4YmZlNWJiYzY3NjIwYjNhMDBjN2QxNDFiNzU0Nzc3MQ==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NTUwMzdfM2JiY2M2MjY4YmZlNWJiYzY3NjIwYjNhMDBjN2QxNDFiNzU0Nzc3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NTUwMzdfM2JiY2M2MjY4YmZlNWJiYzY3NjIwYjNhMDBjN2QxNDFiNzU0Nzc3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NTUwMzdfM2JiY2M2MjY4YmZlNWJiYzY3NjIwYjNhMDBjN2QxNDFiNzU0Nzc3MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NTg3MDRfMTIwMzc3ODE2M2RiZTNiOTQ1ZWJmOWNlN2E3ZjI5NzEzYWE4ZjJiZA==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NTg3MDRfMTIwMzc3ODE2M2RiZTNiOTQ1ZWJmOWNlN2E3ZjI5NzEzYWE4ZjJiZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NTg3MDRfMTIwMzc3ODE2M2RiZTNiOTQ1ZWJmOWNlN2E3ZjI5NzEzYWE4ZjJiZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NTg3MDRfMTIwMzc3ODE2M2RiZTNiOTQ1ZWJmOWNlN2E3ZjI5NzEzYWE4ZjJiZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NjMzMjJfZjFhNzllODlhM2ZkYmE2NDA5MDI0MTJmNGY4YmFhNTEzOWI3YjVjMg==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NjMzMjJfZjFhNzllODlhM2ZkYmE2NDA5MDI0MTJmNGY4YmFhNTEzOWI3YjVjMg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NjMzMjJfZjFhNzllODlhM2ZkYmE2NDA5MDI0MTJmNGY4YmFhNTEzOWI3YjVjMg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NjMzMjJfZjFhNzllODlhM2ZkYmE2NDA5MDI0MTJmNGY4YmFhNTEzOWI3YjVjMg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NjYzMTJfODM0MWJmYWIwYTUyMTRkYTZhN2ZlYTZkZDk5OWU0YjE3ZTJhNzgxOA==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NjYzMTJfODM0MWJmYWIwYTUyMTRkYTZhN2ZlYTZkZDk5OWU0YjE3ZTJhNzgxOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NjYzMTJfODM0MWJmYWIwYTUyMTRkYTZhN2ZlYTZkZDk5OWU0YjE3ZTJhNzgxOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NjYzMTJfODM0MWJmYWIwYTUyMTRkYTZhN2ZlYTZkZDk5OWU0YjE3ZTJhNzgxOA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2Njk2NDRfNWI0Y2EwZWQyNjVhNTg2NmUwNDM3ZTVjNGZiNDBiYzVjZDFmZjBjOQ==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2Njk2NDRfNWI0Y2EwZWQyNjVhNTg2NmUwNDM3ZTVjNGZiNDBiYzVjZDFmZjBjOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2Njk2NDRfNWI0Y2EwZWQyNjVhNTg2NmUwNDM3ZTVjNGZiNDBiYzVjZDFmZjBjOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2Njk2NDRfNWI0Y2EwZWQyNjVhNTg2NmUwNDM3ZTVjNGZiNDBiYzVjZDFmZjBjOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NzMxNTlfYWRjZjY4Njk3MjI0ZDUwMDgzMDQ3MDhmNWQ3M2M4MzIzNTY2MWMyZQ==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NzMxNTlfYWRjZjY4Njk3MjI0ZDUwMDgzMDQ3MDhmNWQ3M2M4MzIzNTY2MWMyZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NzMxNTlfYWRjZjY4Njk3MjI0ZDUwMDgzMDQ3MDhmNWQ3M2M4MzIzNTY2MWMyZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NzMxNTlfYWRjZjY4Njk3MjI0ZDUwMDgzMDQ3MDhmNWQ3M2M4MzIzNTY2MWMyZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NzY2NjhfMjMzZGVjN2UxOWUwYjUxNTc1ZDBlZjgyMzJmMjYzNGM1MTAxMDk4ZA==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2NzY2NjhfMjMzZGVjN2UxOWUwYjUxNTc1ZDBlZjgyMzJmMjYzNGM1MTAxMDk4ZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2NzY2NjhfMjMzZGVjN2UxOWUwYjUxNTc1ZDBlZjgyMzJmMjYzNGM1MTAxMDk4ZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2NzY2NjhfMjMzZGVjN2UxOWUwYjUxNTc1ZDBlZjgyMzJmMjYzNGM1MTAxMDk4ZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2ODAxNDhfZTdmZWE1OTJlNzM5N2JmMjEyMGMxZmRiZDgxOTBlNDU2YzBlNmJlMw==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2ODAxNDhfZTdmZWE1OTJlNzM5N2JmMjEyMGMxZmRiZDgxOTBlNDU2YzBlNmJlMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2ODAxNDhfZTdmZWE1OTJlNzM5N2JmMjEyMGMxZmRiZDgxOTBlNDU2YzBlNmJlMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2ODAxNDhfZTdmZWE1OTJlNzM5N2JmMjEyMGMxZmRiZDgxOTBlNDU2YzBlNmJlMw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2ODI5MDlfMDU4OWViMTEyMDM3YTM5NjM4Y2MzNmFmZTBiNmU1YjFiM2E2NWE2Ng==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2ODI5MDlfMDU4OWViMTEyMDM3YTM5NjM4Y2MzNmFmZTBiNmU1YjFiM2E2NWE2Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2ODI5MDlfMDU4OWViMTEyMDM3YTM5NjM4Y2MzNmFmZTBiNmU1YjFiM2E2NWE2Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2ODI5MDlfMDU4OWViMTEyMDM3YTM5NjM4Y2MzNmFmZTBiNmU1YjFiM2E2NWE2Ng=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2ODU4MjFfY2Q5MjFiMjIxNTAwOWQwODE1NmJjNzY3M2M5ZDA4YjczNjQxMWM0Mw==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2ODU4MjFfY2Q5MjFiMjIxNTAwOWQwODE1NmJjNzY3M2M5ZDA4YjczNjQxMWM0Mw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2ODU4MjFfY2Q5MjFiMjIxNTAwOWQwODE1NmJjNzY3M2M5ZDA4YjczNjQxMWM0Mw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2ODU4MjFfY2Q5MjFiMjIxNTAwOWQwODE1NmJjNzY3M2M5ZDA4YjczNjQxMWM0Mw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2ODkyODJfMDE1MmFiNGE4N2U1ZTI4YTRiOGNkYjRiNTYxMTEzN2EzOTQyMTM4Nw==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2ODkyODJfMDE1MmFiNGE4N2U1ZTI4YTRiOGNkYjRiNTYxMTEzN2EzOTQyMTM4Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2ODkyODJfMDE1MmFiNGE4N2U1ZTI4YTRiOGNkYjRiNTYxMTEzN2EzOTQyMTM4Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2ODkyODJfMDE1MmFiNGE4N2U1ZTI4YTRiOGNkYjRiNTYxMTEzN2EzOTQyMTM4Nw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2OTI4MTFfYjdkYTVhYTFjNWZlN2Y4N2Q3OTc0NDQ2Mjc0OGRmNGU5ZmRmMjE2ZQ==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2OTI4MTFfYjdkYTVhYTFjNWZlN2Y4N2Q3OTc0NDQ2Mjc0OGRmNGU5ZmRmMjE2ZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2OTI4MTFfYjdkYTVhYTFjNWZlN2Y4N2Q3OTc0NDQ2Mjc0OGRmNGU5ZmRmMjE2ZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2OTI4MTFfYjdkYTVhYTFjNWZlN2Y4N2Q3OTc0NDQ2Mjc0OGRmNGU5ZmRmMjE2ZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2OTQ4NjNfMGJlNmYyNGU0NWUzNjVlNjFkNjVlNmM1OGNjYzk2OWY5NDI2MjY2MQ==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2OTQ4NjNfMGJlNmYyNGU0NWUzNjVlNjFkNjVlNmM1OGNjYzk2OWY5NDI2MjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2OTQ4NjNfMGJlNmYyNGU0NWUzNjVlNjFkNjVlNmM1OGNjYzk2OWY5NDI2MjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2OTQ4NjNfMGJlNmYyNGU0NWUzNjVlNjFkNjVlNmM1OGNjYzk2OWY5NDI2MjY2MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2OTgxNDlfNDU0Y2FhY2E4NDI0YjQ5MDM0OTA4N2JjZjAzMmViMDYwMzJiNzRhMw==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ2OTgxNDlfNDU0Y2FhY2E4NDI0YjQ5MDM0OTA4N2JjZjAzMmViMDYwMzJiNzRhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ2OTgxNDlfNDU0Y2FhY2E4NDI0YjQ5MDM0OTA4N2JjZjAzMmViMDYwMzJiNzRhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ2OTgxNDlfNDU0Y2FhY2E4NDI0YjQ5MDM0OTA4N2JjZjAzMmViMDYwMzJiNzRhMw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ3MDAyMjRfNmJmMTU1MmU2Njk4MWU5ODM2ZTRiYTdhNDk0OGUxZTVlNDg2MDM5Mg==",
-      "title": "Famalicao - Arouca",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-06T20:45:00+00:00",
-      "videos": [
-        {
-          "title": "1-0 Paulo Moreira",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WndwbllsQzJ2bkczOWpEQWtFTWEvaGtxOEVRcktnOXdCVVQ3NUljL2p5bz0=/?token=NDE4MDI0XzE3OTQ3MDAyMjRfNmJmMTU1MmU2Njk4MWU5ODM2ZTRiYTdhNDk0OGUxZTVlNDg2MDM5Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K2ZzMzVHNmoyM1FqeGNWdXdZQVRBMlVZRUlNbmxRdkpKcEd1K2l1d0ZHUT0=/?token=NDE4MDI0XzE3OTQ3MDAyMjRfNmJmMTU1MmU2Njk4MWU5ODM2ZTRiYTdhNDk0OGUxZTVlNDg2MDM5Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910543/?token=NDE4MDI0XzE3OTQ3MDAyMjRfNmJmMTU1MmU2Njk4MWU5ODM2ZTRiYTdhNDk0OGUxZTVlNDg2MDM5Mg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1911870/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
-      "title": "Sevilla - Alaves",
-      "competition": "SPAIN: La Liga",
-      "date": "2026-11-06T20:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/b0RzNnpIYjNISUtQM1pDU2gvSlNHVERjdmJ1emtKWVpmTkxtK1RpNE1lMD0=/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ODN0TmJDRFBPc3M5SXZyQXRGY215YnZ3NEhoZjlvbGN4b2pxUlhyMUN3ST0=/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1911870/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1900145/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
-      "title": "Derby County - Bolton",
-      "competition": "ENGLAND: Championship",
-      "date": "2026-11-06T20:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RHd3UExVYlF6OS81OHVsdTVPNFAxMkNuc24ybG13dHZDQ2s4ZDNUQXlzVT0=/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1900145/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1891007/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==",
-      "title": "Everton - Coventry",
-      "competition": "ENGLAND: Premier League",
-      "date": "2026-11-06T20:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bytQR1QrYkR6ZjBTdkc5ZFVYbTNlRGxuL1R6UXQyeW5kc0Rxa1cwSHkraz0=/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1891007/?token=NDE4MDI0XzE3OTQ2MTU1NTdfMzIzMTViYTAwYmZkNGFhMGIzNDlhYzJkZTNjNDU2NmVlNGIyMTM2Mg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1911870/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ==",
-      "title": "Sevilla - Alaves",
-      "competition": "SPAIN: La Liga",
-      "date": "2026-11-06T20:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/b0RzNnpIYjNISUtQM1pDU2gvSlNHVERjdmJ1emtKWVpmTkxtK1RpNE1lMD0=/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ODN0TmJDRFBPc3M5SXZyQXRGY215YnZ3NEhoZjlvbGN4b2pxUlhyMUN3ST0=/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1911870/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1900145/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ==",
-      "title": "Derby County - Bolton",
-      "competition": "ENGLAND: Championship",
-      "date": "2026-11-06T20:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RHd3UExVYlF6OS81OHVsdTVPNFAxMkNuc24ybG13dHZDQ2s4ZDNUQXlzVT0=/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1900145/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1891007/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ==",
-      "title": "Everton - Coventry",
-      "competition": "ENGLAND: Premier League",
-      "date": "2026-11-06T20:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bytQR1QrYkR6ZjBTdkc5ZFVYbTNlRGxuL1R6UXQyeW5kc0Rxa1cwSHkraz0=/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1891007/?token=NDE4MDI0XzE3OTQ2MjA4MjBfYTAwMDQzYTI0NmY3NjVlMGFjZjFiOWY1MjMyNTY2NDI0Mzg2NmQyOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1911870/?token=NDE4MDI0XzE3OTQ2MjM1MjBfNmY5YWYxYzM4OTY0OGM2MTY3YzhlZWZjMTliYzgxZWFhYmU3NGNkNA==",
-      "title": "Sevilla - Alaves",
-      "competition": "SPAIN: La Liga",
-      "date": "2026-11-06T20:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/b0RzNnpIYjNISUtQM1pDU2gvSlNHVERjdmJ1emtKWVpmTkxtK1RpNE1lMD0=/?token=NDE4MDI0XzE3OTQ2MjM1MjBfNmY5YWYxYzM4OTY0OGM2MTY3YzhlZWZjMTliYzgxZWFhYmU3NGNkNA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ODN0TmJDRFBPc3M5SXZyQXRGY215YnZ3NEhoZjlvbGN4b2pxUlhyMUN3ST0=/?token=NDE4MDI0XzE3OTQ2MjM1MjBfNmY5YWYxYzM4OTY0OGM2MTY3YzhlZWZjMTliYzgxZWFhYmU3NGNkNA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1911870/?token=NDE4MDI0XzE3OTQ2MjM1MjBfNmY5YWYxYzM4OTY0OGM2MTY3YzhlZWZjMTliYzgxZWFhYmU3NGNkNA=="
     }
   ]
 }
