@@ -1,6 +1,6 @@
 {
-  "healthy": true,
-  "checked_at": "2026-11-16T10:00:12.933889+00:00",
+  "healthy": false,
+  "checked_at": "2026-11-16T13:35:13.607516+00:00",
   "checks": {
     "homepage": {
       "ok": true,
@@ -23,8 +23,8 @@
       "detail": "sitemap.xml وrobots.txt سليمان"
     },
     "sports_data": {
-      "ok": true,
-      "detail": "JSON سليم؛ 25 بطولة؛ 0 مباراة؛ 100 خبر؛ عمر البيانات 35 دقيقة"
+      "ok": false,
+      "detail": "البيانات قديمة منذ 101 دقيقة"
     }
   }
 }
