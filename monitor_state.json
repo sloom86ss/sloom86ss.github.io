@@ -1,6 +1,6 @@
 {
-  "healthy": false,
-  "checked_at": "2026-11-17T11:43:16.271611+00:00",
+  "healthy": true,
+  "checked_at": "2026-11-17T12:41:09.144945+00:00",
   "checks": {
     "homepage": {
       "ok": true,
@@ -19,12 +19,12 @@
       "detail": "ملف الشات متاح ويقرأ بيانات الموقع"
     },
     "seo_files": {
-      "ok": false,
-      "detail": "خطأ في ملفات SEO: HTTP Error 503: Service Unavailable"
+      "ok": true,
+      "detail": "sitemap.xml وrobots.txt سليمان"
     },
     "sports_data": {
       "ok": true,
-      "detail": "JSON سليم؛ 25 بطولة؛ 6 مباراة؛ 100 خبر؛ عمر البيانات 14 دقيقة"
+      "detail": "JSON سليم؛ 25 بطولة؛ 6 مباراة؛ 100 خبر؛ عمر البيانات 20 دقيقة"
     }
   }
 }
