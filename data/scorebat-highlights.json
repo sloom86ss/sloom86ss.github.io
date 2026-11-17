@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T03:32:09.358929+00:00",
+  "updated_at": "2026-11-17T04:39:25.169675+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -45,6 +45,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTQ4ODYzMjlfZTM0ZjAzMDU5NWJmZjk4ZTVlYjg1YTRhYTQ4NjE5YmM5MGE2YjI0ZA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Plymouth Parkway - Berkhamsted",
+      "competition": "ENGLAND: FA Cup",
+      "date": "2026-11-09T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aDNaNjhqL0FZdmZTTWs0V1ZSdHpnL2ZiaFFlV1ZzOHpublNISythNm5FZz0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==",
       "title": "Leon - Guadalajara",
       "competition": "MEXICO: Primera Division, Apertura",
@@ -87,6 +101,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTQ4ODYzMjlfZTM0ZjAzMDU5NWJmZjk4ZTVlYjg1YTRhYTQ4NjE5YmM5MGE2YjI0ZA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Leon - Guadalajara",
+      "competition": "MEXICO: Primera Division, Apertura",
+      "date": "2026-11-09T02:10:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZlYwOVJXL0JZNzZveVZORitjaU9FeFZBbGFtOE1tazJ5Qm5rT3lWTlZsMD0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==",
       "title": "Queretaro - Puebla",
       "competition": "MEXICO: Primera Division, Apertura",
@@ -127,6 +155,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ4ODYzMjlfZTM0ZjAzMDU5NWJmZjk4ZTVlYjg1YTRhYTQ4NjE5YmM5MGE2YjI0ZA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Queretaro - Puebla",
+      "competition": "MEXICO: Primera Division, Apertura",
+      "date": "2026-11-09T00:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ3ODkyMThfMDJkNmFkYWI3MTRkNjYzNWFhMDUxM2IyMGNhYjYzMzIwZmE4ZmU1Zg==",
@@ -1169,6 +1211,58 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4ODYzMjlfZTM0ZjAzMDU5NWJmZjk4ZTVlYjg1YTRhYTQ4NjE5YmM5MGE2YjI0ZA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Estrela Amadora - Benfica",
+      "competition": "PORTUGAL: Liga Portugal",
+      "date": "2026-11-08T20:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VVB5WWZQYTI3WTM0WWxiNHhYcE5HVG0vN0NvenhwYm1yNS83R1ZpQmZwZz0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "2-3 Pavlidis",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndLU1FncUQvWEN6NVMxUDhuaXlhNFhhcm1pOWRWKzRDU1dZMnY0SzBscz0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "2-2 L. Antonetti",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R2hIWktGS3djQmUvY3QzMHRZeHNXUTR6YjZyaTN3N011dlZOcTVka0dUST0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "1-2 Bernardo Schappo (p.b.)",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M0VIK1dVc3VjaitmTCtTQkxJRkw3eEFiZ0lxRXduUGpicHJDSEVwL2pHQT0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "1-1 L. Zvonarek",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNlamVaVDQycllyYlpmb0xoY1hMQk5CRVE2Y2duckFob00zWUFFSk1ZMD0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "0-1 Prestianni",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UzVxM0lraC9Gc253dEJOc3hzc1ZjTlFVdTRWSVp2dTgwM0NQZjhtY0UvQT0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Rio Ave - Braga",
+      "competition": "PORTUGAL: Liga Portugal",
+      "date": "2026-11-08T20:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNmWmQ5SXVmVitPUWlHN2V0MXA3Q1AzbTFFenFuR05tVDFGaHhuQUFiYz0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "0-1 Ricardo Horta",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YTh0OFRETytvRlNJdHRLRXZlcEtNOTNvQ0h6bXUvcjZQMFlOaC9pZUZlVT0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1911863/?token=NDE4MDI0XzE3OTQ3ODkyMThfMDJkNmFkYWI3MTRkNjYzNWFhMDUxM2IyMGNhYjYzMzIwZmE4ZmU1Zg==",
       "title": "Atletico Madrid - Barcelona",
       "competition": "SPAIN: La Liga",
@@ -1527,6 +1621,24 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1911863/?token=NDE4MDI0XzE3OTQ4ODYzMjlfZTM0ZjAzMDU5NWJmZjk4ZTVlYjg1YTRhYTQ4NjE5YmM5MGE2YjI0ZA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1911863/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Atletico Madrid - Barcelona",
+      "competition": "SPAIN: La Liga",
+      "date": "2026-11-08T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NjJ3Qm5XK2JHMk45OGRVdGxQaW4wKzEzYmNOWUd4NkdEMjh6WFM2bllxND0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dUw3SURFYnNrNjdvdWZWcGprcTNLeWtHcUwvM2s4ZEJWN3JxNDVSaFFRQT0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1911863/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1901994/?token=NDE4MDI0XzE3OTQ3ODkyMThfMDJkNmFkYWI3MTRkNjYzNWFhMDUxM2IyMGNhYjYzMzIwZmE4ZmU1Zg==",
@@ -2169,6 +2281,38 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1902524/?token=NDE4MDI0XzE3OTQ4ODYzMjlfZTM0ZjAzMDU5NWJmZjk4ZTVlYjg1YTRhYTQ4NjE5YmM5MGE2YjI0ZA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1901994/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Fiorentina - Juventus",
+      "competition": "ITALY: Serie A",
+      "date": "2026-11-08T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/REJTbG1mUGY5cHpMY2tlK3k2TFFIbzBWMmpCdHN4TlNjeHlSV3FPQUxWVT0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1901994/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1902524/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Lens - Marseille",
+      "competition": "FRANCE: Ligue 1",
+      "date": "2026-11-08T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SUJKdWhzTy80Y2J0bGc4UHY0VHQwVDVqVWtKaVVTamhMdzUwby9iK2gzST0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RWpjUVpDazRodzI1TUhhZUVjMEZpdG1nRGNOZkxjd2V6WG0wR3BlZUdtTT0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1902524/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1894796/?token=NDE4MDI0XzE3OTQ3ODkyMThfMDJkNmFkYWI3MTRkNjYzNWFhMDUxM2IyMGNhYjYzMzIwZmE4ZmU1Zg==",
       "title": "Lech - Zaglebie L",
       "competition": "POLAND: Ekstraklasa",
@@ -2449,6 +2593,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1894796/?token=NDE4MDI0XzE3OTQ4ODYzMjlfZTM0ZjAzMDU5NWJmZjk4ZTVlYjg1YTRhYTQ4NjE5YmM5MGE2YjI0ZA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1894796/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Lech - Zaglebie L",
+      "competition": "POLAND: Ekstraklasa",
+      "date": "2026-11-08T19:15:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZUNJT3RtODljaU5xSnZCYTJkS005UWdoMlhtZEdSSHV3ZnI3N21RdE5iND0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1894796/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1912263/?token=NDE4MDI0XzE3OTQ3ODkyMThfMDJkNmFkYWI3MTRkNjYzNWFhMDUxM2IyMGNhYjYzMzIwZmE4ZmU1Zg==",
       "title": "Hoffenheim - Schalke",
       "competition": "GERMANY: Bundesliga",
@@ -2727,6 +2885,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1912263/?token=NDE4MDI0XzE3OTQ4ODYzMjlfZTM0ZjAzMDU5NWJmZjk4ZTVlYjg1YTRhYTQ4NjE5YmM5MGE2YjI0ZA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1912263/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Hoffenheim - Schalke",
+      "competition": "GERMANY: Bundesliga",
+      "date": "2026-11-08T18:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/c1p0SHNvQ1pxTkMwTjYweHcyaC9OL2Mzblh6MDcxZUtFNVhmbDhwOTNCTT0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1912263/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1898748/?token=NDE4MDI0XzE3OTQ3ODkyMThfMDJkNmFkYWI3MTRkNjYzNWFhMDUxM2IyMGNhYjYzMzIwZmE4ZmU1Zg==",
@@ -3087,6 +3259,24 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1898748/?token=NDE4MDI0XzE3OTQ4ODYzMjlfZTM0ZjAzMDU5NWJmZjk4ZTVlYjg1YTRhYTQ4NjE5YmM5MGE2YjI0ZA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1898748/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==",
+      "title": "Sint-Truiden - Zulte-Waregem",
+      "competition": "BELGIUM: First Division A",
+      "date": "2026-11-08T18:15:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dTIyUkNjd2xsQVBVY2xDUlF5WFFCTmVMZnlHbXhvL1IyKy8xYnF1TXFBST0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aEpIZjRRdUpxalkzUkxKd1pob1dZTlB4anZSSnBHSzh0UHRCV1QyaUE0WT0=/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1898748/?token=NDE4MDI0XzE3OTQ4OTAzNjVfZjI2ZjI4NDRkMWYxN2ZiYjFjZTkwODIyMmE3MWM1ZGJkYWUxNjY2MQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ3ODkyMThfMDJkNmFkYWI3MTRkNjYzNWFhMDUxM2IyMGNhYjYzMzIwZmE4ZmU1Zg==",
@@ -3487,220 +3677,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NDc3NzJfZWUxMDkxNzQwNDYzNTdlZjU2OTNhYTcxNDlhZmNjMDBkZWM1OGNkMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4NTI2MTdfYjBmZGNlYzk5YmM0ODBkY2EyOGVmNjg1MmMwZDMxZmE4NGVmM2Y1ZQ==",
-      "title": "Besiktas - Genclerbirligi",
-      "competition": "TURKIYE: Super Lig",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/a3VYR21xb2M2cjFaWm5UTll0ZFlUOVh2M0VVcy9iR1lSd1p1L0d0cXgvOD0=/?token=NDE4MDI0XzE3OTQ4NTI2MTdfYjBmZGNlYzk5YmM0ODBkY2EyOGVmNjg1MmMwZDMxZmE4NGVmM2Y1ZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4NTI2MTdfYjBmZGNlYzk5YmM0ODBkY2EyOGVmNjg1MmMwZDMxZmE4NGVmM2Y1ZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NTI2MTdfYjBmZGNlYzk5YmM0ODBkY2EyOGVmNjg1MmMwZDMxZmE4NGVmM2Y1ZQ==",
-      "title": "Guimaraes - Porto",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cElBQVJvbnVIMml3bGVLaUwwMzJPNDI2d1AvTzdUM0J2UW8xSW1PSHNMWT0=/?token=NDE4MDI0XzE3OTQ4NTI2MTdfYjBmZGNlYzk5YmM0ODBkY2EyOGVmNjg1MmMwZDMxZmE4NGVmM2Y1ZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-2 Martim Fernandes",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/S1VuWit1Vks2TnRmYldyTG5VYjJmUVZRL2hmNkMvSzNVMmRzMnB6S0srTT0=/?token=NDE4MDI0XzE3OTQ4NTI2MTdfYjBmZGNlYzk5YmM0ODBkY2EyOGVmNjg1MmMwZDMxZmE4NGVmM2Y1ZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-1 Alan",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VkJsb3IzL3RGL3JDYm95R3pBeGtEdWtLK2hldVREdjR2Q3ZsdDU2Q3FxZz0=/?token=NDE4MDI0XzE3OTQ4NTI2MTdfYjBmZGNlYzk5YmM0ODBkY2EyOGVmNjg1MmMwZDMxZmE4NGVmM2Y1ZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Borja Sainz",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/T3NDeHhqMU5RZE45ZE5DQ20yRmhIQWt1V0R3enVUaFliQ2dZdVorSjBVdz0=/?token=NDE4MDI0XzE3OTQ4NTI2MTdfYjBmZGNlYzk5YmM0ODBkY2EyOGVmNjg1MmMwZDMxZmE4NGVmM2Y1ZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NTI2MTdfYjBmZGNlYzk5YmM0ODBkY2EyOGVmNjg1MmMwZDMxZmE4NGVmM2Y1ZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4NTU5MzFfM2I0NDZlZDkxOWVhMDVhMjhjZTIxZGJlM2M4ZGIxMzJhMDUzMTc3YQ==",
-      "title": "Besiktas - Genclerbirligi",
-      "competition": "TURKIYE: Super Lig",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/a3VYR21xb2M2cjFaWm5UTll0ZFlUOVh2M0VVcy9iR1lSd1p1L0d0cXgvOD0=/?token=NDE4MDI0XzE3OTQ4NTU5MzFfM2I0NDZlZDkxOWVhMDVhMjhjZTIxZGJlM2M4ZGIxMzJhMDUzMTc3YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4NTU5MzFfM2I0NDZlZDkxOWVhMDVhMjhjZTIxZGJlM2M4ZGIxMzJhMDUzMTc3YQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NTU5MzFfM2I0NDZlZDkxOWVhMDVhMjhjZTIxZGJlM2M4ZGIxMzJhMDUzMTc3YQ==",
-      "title": "Guimaraes - Porto",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cElBQVJvbnVIMml3bGVLaUwwMzJPNDI2d1AvTzdUM0J2UW8xSW1PSHNMWT0=/?token=NDE4MDI0XzE3OTQ4NTU5MzFfM2I0NDZlZDkxOWVhMDVhMjhjZTIxZGJlM2M4ZGIxMzJhMDUzMTc3YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-2 Martim Fernandes",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/S1VuWit1Vks2TnRmYldyTG5VYjJmUVZRL2hmNkMvSzNVMmRzMnB6S0srTT0=/?token=NDE4MDI0XzE3OTQ4NTU5MzFfM2I0NDZlZDkxOWVhMDVhMjhjZTIxZGJlM2M4ZGIxMzJhMDUzMTc3YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-1 Alan",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VkJsb3IzL3RGL3JDYm95R3pBeGtEdWtLK2hldVREdjR2Q3ZsdDU2Q3FxZz0=/?token=NDE4MDI0XzE3OTQ4NTU5MzFfM2I0NDZlZDkxOWVhMDVhMjhjZTIxZGJlM2M4ZGIxMzJhMDUzMTc3YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Borja Sainz",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/T3NDeHhqMU5RZE45ZE5DQ20yRmhIQWt1V0R3enVUaFliQ2dZdVorSjBVdz0=/?token=NDE4MDI0XzE3OTQ4NTU5MzFfM2I0NDZlZDkxOWVhMDVhMjhjZTIxZGJlM2M4ZGIxMzJhMDUzMTc3YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NTU5MzFfM2I0NDZlZDkxOWVhMDVhMjhjZTIxZGJlM2M4ZGIxMzJhMDUzMTc3YQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4NTk0NjRfNDk5YmM0NTMzYWZmOTBiNjM4NTdjMDc3YzgyNDk2NjRiZWE4NWRlYQ==",
-      "title": "Besiktas - Genclerbirligi",
-      "competition": "TURKIYE: Super Lig",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/a3VYR21xb2M2cjFaWm5UTll0ZFlUOVh2M0VVcy9iR1lSd1p1L0d0cXgvOD0=/?token=NDE4MDI0XzE3OTQ4NTk0NjRfNDk5YmM0NTMzYWZmOTBiNjM4NTdjMDc3YzgyNDk2NjRiZWE4NWRlYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4NTk0NjRfNDk5YmM0NTMzYWZmOTBiNjM4NTdjMDc3YzgyNDk2NjRiZWE4NWRlYQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NTk0NjRfNDk5YmM0NTMzYWZmOTBiNjM4NTdjMDc3YzgyNDk2NjRiZWE4NWRlYQ==",
-      "title": "Guimaraes - Porto",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cElBQVJvbnVIMml3bGVLaUwwMzJPNDI2d1AvTzdUM0J2UW8xSW1PSHNMWT0=/?token=NDE4MDI0XzE3OTQ4NTk0NjRfNDk5YmM0NTMzYWZmOTBiNjM4NTdjMDc3YzgyNDk2NjRiZWE4NWRlYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-2 Martim Fernandes",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/S1VuWit1Vks2TnRmYldyTG5VYjJmUVZRL2hmNkMvSzNVMmRzMnB6S0srTT0=/?token=NDE4MDI0XzE3OTQ4NTk0NjRfNDk5YmM0NTMzYWZmOTBiNjM4NTdjMDc3YzgyNDk2NjRiZWE4NWRlYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-1 Alan",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VkJsb3IzL3RGL3JDYm95R3pBeGtEdWtLK2hldVREdjR2Q3ZsdDU2Q3FxZz0=/?token=NDE4MDI0XzE3OTQ4NTk0NjRfNDk5YmM0NTMzYWZmOTBiNjM4NTdjMDc3YzgyNDk2NjRiZWE4NWRlYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Borja Sainz",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/T3NDeHhqMU5RZE45ZE5DQ20yRmhIQWt1V0R3enVUaFliQ2dZdVorSjBVdz0=/?token=NDE4MDI0XzE3OTQ4NTk0NjRfNDk5YmM0NTMzYWZmOTBiNjM4NTdjMDc3YzgyNDk2NjRiZWE4NWRlYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NTk0NjRfNDk5YmM0NTMzYWZmOTBiNjM4NTdjMDc3YzgyNDk2NjRiZWE4NWRlYQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4NjI2ODFfOTIxZDZkOWMyZTJmZWYyYjg0OGM3YWNjYjBiYWQzZDcyOGFkMmY0YQ==",
-      "title": "Besiktas - Genclerbirligi",
-      "competition": "TURKIYE: Super Lig",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/a3VYR21xb2M2cjFaWm5UTll0ZFlUOVh2M0VVcy9iR1lSd1p1L0d0cXgvOD0=/?token=NDE4MDI0XzE3OTQ4NjI2ODFfOTIxZDZkOWMyZTJmZWYyYjg0OGM3YWNjYjBiYWQzZDcyOGFkMmY0YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4NjI2ODFfOTIxZDZkOWMyZTJmZWYyYjg0OGM3YWNjYjBiYWQzZDcyOGFkMmY0YQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NjI2ODFfOTIxZDZkOWMyZTJmZWYyYjg0OGM3YWNjYjBiYWQzZDcyOGFkMmY0YQ==",
-      "title": "Guimaraes - Porto",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cElBQVJvbnVIMml3bGVLaUwwMzJPNDI2d1AvTzdUM0J2UW8xSW1PSHNMWT0=/?token=NDE4MDI0XzE3OTQ4NjI2ODFfOTIxZDZkOWMyZTJmZWYyYjg0OGM3YWNjYjBiYWQzZDcyOGFkMmY0YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-2 Martim Fernandes",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/S1VuWit1Vks2TnRmYldyTG5VYjJmUVZRL2hmNkMvSzNVMmRzMnB6S0srTT0=/?token=NDE4MDI0XzE3OTQ4NjI2ODFfOTIxZDZkOWMyZTJmZWYyYjg0OGM3YWNjYjBiYWQzZDcyOGFkMmY0YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-1 Alan",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VkJsb3IzL3RGL3JDYm95R3pBeGtEdWtLK2hldVREdjR2Q3ZsdDU2Q3FxZz0=/?token=NDE4MDI0XzE3OTQ4NjI2ODFfOTIxZDZkOWMyZTJmZWYyYjg0OGM3YWNjYjBiYWQzZDcyOGFkMmY0YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Borja Sainz",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/T3NDeHhqMU5RZE45ZE5DQ20yRmhIQWt1V0R3enVUaFliQ2dZdVorSjBVdz0=/?token=NDE4MDI0XzE3OTQ4NjI2ODFfOTIxZDZkOWMyZTJmZWYyYjg0OGM3YWNjYjBiYWQzZDcyOGFkMmY0YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NjI2ODFfOTIxZDZkOWMyZTJmZWYyYjg0OGM3YWNjYjBiYWQzZDcyOGFkMmY0YQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4NjYyMjlfZGM2MWZmY2M2OTRjY2VjOGM4YTU4MmUwYzEzZDFhMDhhZTYzZjhlYw==",
-      "title": "Besiktas - Genclerbirligi",
-      "competition": "TURKIYE: Super Lig",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/a3VYR21xb2M2cjFaWm5UTll0ZFlUOVh2M0VVcy9iR1lSd1p1L0d0cXgvOD0=/?token=NDE4MDI0XzE3OTQ4NjYyMjlfZGM2MWZmY2M2OTRjY2VjOGM4YTU4MmUwYzEzZDFhMDhhZTYzZjhlYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4NjYyMjlfZGM2MWZmY2M2OTRjY2VjOGM4YTU4MmUwYzEzZDFhMDhhZTYzZjhlYw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NjYyMjlfZGM2MWZmY2M2OTRjY2VjOGM4YTU4MmUwYzEzZDFhMDhhZTYzZjhlYw==",
-      "title": "Guimaraes - Porto",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cElBQVJvbnVIMml3bGVLaUwwMzJPNDI2d1AvTzdUM0J2UW8xSW1PSHNMWT0=/?token=NDE4MDI0XzE3OTQ4NjYyMjlfZGM2MWZmY2M2OTRjY2VjOGM4YTU4MmUwYzEzZDFhMDhhZTYzZjhlYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-2 Martim Fernandes",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/S1VuWit1Vks2TnRmYldyTG5VYjJmUVZRL2hmNkMvSzNVMmRzMnB6S0srTT0=/?token=NDE4MDI0XzE3OTQ4NjYyMjlfZGM2MWZmY2M2OTRjY2VjOGM4YTU4MmUwYzEzZDFhMDhhZTYzZjhlYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-1 Alan",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VkJsb3IzL3RGL3JDYm95R3pBeGtEdWtLK2hldVREdjR2Q3ZsdDU2Q3FxZz0=/?token=NDE4MDI0XzE3OTQ4NjYyMjlfZGM2MWZmY2M2OTRjY2VjOGM4YTU4MmUwYzEzZDFhMDhhZTYzZjhlYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Borja Sainz",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/T3NDeHhqMU5RZE45ZE5DQ20yRmhIQWt1V0R3enVUaFliQ2dZdVorSjBVdz0=/?token=NDE4MDI0XzE3OTQ4NjYyMjlfZGM2MWZmY2M2OTRjY2VjOGM4YTU4MmUwYzEzZDFhMDhhZTYzZjhlYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910547/?token=NDE4MDI0XzE3OTQ4NjYyMjlfZGM2MWZmY2M2OTRjY2VjOGM4YTU4MmUwYzEzZDFhMDhhZTYzZjhlYw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4Njk3ODFfZTQ3YTlkM2UwNTE0YWQ4YzRkYjhlOTVhYzM2YTUwYzQyMDZjMjJiZA==",
-      "title": "Besiktas - Genclerbirligi",
-      "competition": "TURKIYE: Super Lig",
-      "date": "2026-11-08T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/a3VYR21xb2M2cjFaWm5UTll0ZFlUOVh2M0VVcy9iR1lSd1p1L0d0cXgvOD0=/?token=NDE4MDI0XzE3OTQ4Njk3ODFfZTQ3YTlkM2UwNTE0YWQ4YzRkYjhlOTVhYzM2YTUwYzQyMDZjMjJiZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1937864/?token=NDE4MDI0XzE3OTQ4Njk3ODFfZTQ3YTlkM2UwNTE0YWQ4YzRkYjhlOTVhYzM2YTUwYzQyMDZjMjJiZA=="
     }
   ]
 }
