@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T17:17:00.890928+00:00",
+  "updated_at": "2026-11-18T18:07:53.642394+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -211,6 +211,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUwMjIyMjBfY2I3MzZmOWY2MWU1NDAyYTQ0MTFlNmZlNzIzYzE4ODllYmI1NzM1MQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==",
+      "title": "Tavernes - Valencia",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndYLzE3bExCU2VJcVQ5NllnMkhSV3pyclVjWFRDUjVzcTJUc0ExbCtBOD0=/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
@@ -843,6 +857,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUwMjIyMjBfY2I3MzZmOWY2MWU1NDAyYTQ0MTFlNmZlNzIzYzE4ODllYmI1NzM1MQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==",
+      "title": "Mijas Las Lagunas - Real Jaen",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MExkZ1lCd0loTnpZTFpHNjhyZlNXQ2dHcXBSTW9CRUJIS1lITWRkRjJvdz0=/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988811/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==",
+      "title": "Amorebieta - UD Logrones",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NDhtTFNNbk91MCs5TzVqbGpPNzBzdGhaZkZheFNVd3EreGpYejRjVC92RT0=/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988811/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==",
+      "title": "Trival Valderas - Leganes",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UmRrOEMyanNHczdyQVFzaDdaUDQ0bEF6NGJ0UWpNckhoWDhyOXViT2Jvdz0=/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
       "title": "Pamplona - Eibar",
       "competition": "SPAIN: National Cup",
@@ -1263,6 +1319,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMjIyMjBfY2I3MzZmOWY2MWU1NDAyYTQ0MTFlNmZlNzIzYzE4ODllYmI1NzM1MQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==",
+      "title": "Pamplona - Eibar",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==",
+      "title": "Anaitasuna FT - Alaves",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
       "title": "Vietnam U-23 - Thailand U-23",
       "competition": "WORLD: International Friendlies",
@@ -1471,6 +1555,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTUwMjIyMjBfY2I3MzZmOWY2MWU1NDAyYTQ0MTFlNmZlNzIzYzE4ODllYmI1NzM1MQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==",
+      "title": "Vietnam U-23 - Thailand U-23",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-10T12:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VEI3QWlZVGtIQ1I0Wjl4S0FhYVdReXpDdDZPbTAza1AzOGJCb0dOQnYxWT0=/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==",
@@ -1991,6 +2089,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMjIyMjBfY2I3MzZmOWY2MWU1NDAyYTQ0MTFlNmZlNzIzYzE4ODllYmI1NzM1MQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==",
+      "title": "Plymouth Parkway - Berkhamsted",
+      "competition": "ENGLAND: FA Cup",
+      "date": "2026-11-09T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aDNaNjhqL0FZdmZTTWs0V1ZSdHpnL2ZiaFFlV1ZzOHpublNISythNm5FZz0=/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==",
       "title": "Leon - Guadalajara",
       "competition": "MEXICO: Primera Division, Apertura",
@@ -2509,6 +2621,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTUwMjIyMjBfY2I3MzZmOWY2MWU1NDAyYTQ0MTFlNmZlNzIzYzE4ODllYmI1NzM1MQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==",
+      "title": "Leon - Guadalajara",
+      "competition": "MEXICO: Primera Division, Apertura",
+      "date": "2026-11-09T02:10:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZlYwOVJXL0JZNzZveVZORitjaU9FeFZBbGFtOE1tazJ5Qm5rT3lWTlZsMD0=/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTUwMjUyNzNfMTFkNjVhYTBhYWZiYTc3MTIyYWVkZmY2NGM5OTg1YzU0NzYwMWY3NA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==",
       "title": "Queretaro - Puebla",
       "competition": "MEXICO: Primera Division, Apertura",
@@ -2675,132 +2801,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5MjM3OTVfYTI5Y2IwZGNmOWVjMTllYzQ2OWY1ZGNmZDRmZTNkNTMwNmJmNTM1Mg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5Mjc3MTlfNjdhMmM5MjFmNDZmYmEzODZmYmZlYzBjMTNhNTZkNmFmOGYzYjBjMg==",
-      "title": "Queretaro - Puebla",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTQ5Mjc3MTlfNjdhMmM5MjFmNDZmYmEzODZmYmZlYzBjMTNhNTZkNmFmOGYzYjBjMg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5Mjc3MTlfNjdhMmM5MjFmNDZmYmEzODZmYmZlYzBjMTNhNTZkNmFmOGYzYjBjMg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5MzE0OTlfMzUwMDI0MzA1NjRlODVlNzk4NWZmMGFhOWFjODI5MDJiZjdmN2YwMw==",
-      "title": "Queretaro - Puebla",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTQ5MzE0OTlfMzUwMDI0MzA1NjRlODVlNzk4NWZmMGFhOWFjODI5MDJiZjdmN2YwMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5MzE0OTlfMzUwMDI0MzA1NjRlODVlNzk4NWZmMGFhOWFjODI5MDJiZjdmN2YwMw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5MzU2NzdfYzhhY2M4N2FjODE1NGJiMjdhZTllMjA0ZmNmZDIxZjVlMWMzYzkyYQ==",
-      "title": "Queretaro - Puebla",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTQ5MzU2NzdfYzhhY2M4N2FjODE1NGJiMjdhZTllMjA0ZmNmZDIxZjVlMWMzYzkyYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5MzU2NzdfYzhhY2M4N2FjODE1NGJiMjdhZTllMjA0ZmNmZDIxZjVlMWMzYzkyYQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5MzkwNjJfMTM1ZTliZGUzYTIzNzYzMDY0ODY0ZDZkNmUwMTk2NmRmZmMzYjg4ZA==",
-      "title": "Queretaro - Puebla",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTQ5MzkwNjJfMTM1ZTliZGUzYTIzNzYzMDY0ODY0ZDZkNmUwMTk2NmRmZmMzYjg4ZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5MzkwNjJfMTM1ZTliZGUzYTIzNzYzMDY0ODY0ZDZkNmUwMTk2NmRmZmMzYjg4ZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5NDI3NDRfYWRjMmU3Y2JhYTYxNDQxNGFmOTMzNmQ1NzFmMGZmZGJiMDJmYWVmZQ==",
-      "title": "Queretaro - Puebla",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTQ5NDI3NDRfYWRjMmU3Y2JhYTYxNDQxNGFmOTMzNmQ1NzFmMGZmZGJiMDJmYWVmZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5NDI3NDRfYWRjMmU3Y2JhYTYxNDQxNGFmOTMzNmQ1NzFmMGZmZGJiMDJmYWVmZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5NDY0NjVfNmU0MmMwMzM4YmQ0OTJmYmM5Y2VkZjlmOTQ4YzlkODkyZjQxNTM2NQ==",
-      "title": "Queretaro - Puebla",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTQ5NDY0NjVfNmU0MmMwMzM4YmQ0OTJmYmM5Y2VkZjlmOTQ4YzlkODkyZjQxNTM2NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5NDY0NjVfNmU0MmMwMzM4YmQ0OTJmYmM5Y2VkZjlmOTQ4YzlkODkyZjQxNTM2NQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5NDk0NjRfNzI2ZGI1MWY0NjFlYTA2NWQ1ZjZmOTQ3MTJiZGI4ZTVkYzFjODY2Yg==",
-      "title": "Queretaro - Puebla",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTQ5NDk0NjRfNzI2ZGI1MWY0NjFlYTA2NWQ1ZjZmOTQ3MTJiZGI4ZTVkYzFjODY2Yg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5NDk0NjRfNzI2ZGI1MWY0NjFlYTA2NWQ1ZjZmOTQ3MTJiZGI4ZTVkYzFjODY2Yg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5NTI4MzRfMWFiZDM3YjNjNDg1YzEzZGZjMzUyNjRjNWZmYzAwYzgxY2MzZGY1Zg==",
-      "title": "Queretaro - Puebla",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTQ5NTI4MzRfMWFiZDM3YjNjNDg1YzEzZGZjMzUyNjRjNWZmYzAwYzgxY2MzZGY1Zg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5NTI4MzRfMWFiZDM3YjNjNDg1YzEzZGZjMzUyNjRjNWZmYzAwYzgxY2MzZGY1Zg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5NTY1MjVfZjUzY2UxM2M1OGM3ZWY2YWU3MjA3NzRiM2Q2OWJlZDNlYWM4MDBkNw==",
-      "title": "Queretaro - Puebla",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTQ5NTY1MjVfZjUzY2UxM2M1OGM3ZWY2YWU3MjA3NzRiM2Q2OWJlZDNlYWM4MDBkNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ5NTY1MjVfZjUzY2UxM2M1OGM3ZWY2YWU3MjA3NzRiM2Q2OWJlZDNlYWM4MDBkNw=="
     }
   ]
 }
