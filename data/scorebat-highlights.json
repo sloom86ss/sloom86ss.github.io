@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T13:56:37.216191+00:00",
+  "updated_at": "2026-11-18T15:07:06.805911+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -169,6 +169,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==",
+      "title": "Tavernes - Valencia",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndYLzE3bExCU2VJcVQ5NllnMkhSV3pyclVjWFRDUjVzcTJUc0ExbCtBOD0=/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
@@ -675,6 +689,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==",
+      "title": "Mijas Las Lagunas - Real Jaen",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MExkZ1lCd0loTnpZTFpHNjhyZlNXQ2dHcXBSTW9CRUJIS1lITWRkRjJvdz0=/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988811/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==",
+      "title": "Amorebieta - UD Logrones",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NDhtTFNNbk91MCs5TzVqbGpPNzBzdGhaZkZheFNVd3EreGpYejRjVC92RT0=/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988811/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==",
+      "title": "Trival Valderas - Leganes",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UmRrOEMyanNHczdyQVFzaDdaUDQ0bEF6NGJ0UWpNckhoWDhyOXViT2Jvdz0=/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
       "title": "Pamplona - Eibar",
       "competition": "SPAIN: National Cup",
@@ -1011,6 +1067,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==",
+      "title": "Pamplona - Eibar",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==",
+      "title": "Anaitasuna FT - Alaves",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
       "title": "Vietnam U-23 - Thailand U-23",
       "competition": "WORLD: International Friendlies",
@@ -1177,6 +1261,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==",
+      "title": "Vietnam U-23 - Thailand U-23",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-10T12:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VEI3QWlZVGtIQ1I0Wjl4S0FhYVdReXpDdDZPbTAza1AzOGJCb0dOQnYxWT0=/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==",
@@ -1655,6 +1753,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==",
+      "title": "Plymouth Parkway - Berkhamsted",
+      "competition": "ENGLAND: FA Cup",
+      "date": "2026-11-09T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aDNaNjhqL0FZdmZTTWs0V1ZSdHpnL2ZiaFFlV1ZzOHpublNISythNm5FZz0=/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==",
       "title": "Leon - Guadalajara",
       "competition": "MEXICO: Primera Division, Apertura",
@@ -2129,6 +2241,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==",
+      "title": "Leon - Guadalajara",
+      "competition": "MEXICO: Primera Division, Apertura",
+      "date": "2026-11-09T02:10:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZlYwOVJXL0JZNzZveVZORitjaU9FeFZBbGFtOE1tazJ5Qm5rT3lWTlZsMD0=/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==",
@@ -2607,6 +2733,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==",
+      "title": "Queretaro - Puebla",
+      "competition": "MEXICO: Primera Division, Apertura",
+      "date": "2026-11-09T00:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RVVEK3p4R1BZMzNteVNMeGtPVExQUFBZU21tbHFnbitEQldYa2Rha1k0Yz0=/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1893352/?token=NDE4MDI0XzE3OTUwMTQ0MjZfYzg1Mjc3MDlmMTc2ZDk0YmZiZDJjYjUwMjdlODdkODA5N2M4NWMyYw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ3ODkyMThfMDJkNmFkYWI3MTRkNjYzNWFhMDUxM2IyMGNhYjYzMzIwZmE4ZmU1Zg==",
       "title": "Estrela Amadora - Benfica",
       "competition": "PORTUGAL: Liga Portugal",
@@ -2709,266 +2849,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ3OTQ5NDBfNGQwYTM3N2JkOWFiOWNlYTY4OWRkMTdjMjJmM2I1MzFlYjhkYjFlOA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA==",
-      "title": "Estrela Amadora - Benfica",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T20:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VVB5WWZQYTI3WTM0WWxiNHhYcE5HVG0vN0NvenhwYm1yNS83R1ZpQmZwZz0=/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "2-3 Pavlidis",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndLU1FncUQvWEN6NVMxUDhuaXlhNFhhcm1pOWRWKzRDU1dZMnY0SzBscz0=/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "2-2 L. Antonetti",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R2hIWktGS3djQmUvY3QzMHRZeHNXUTR6YjZyaTN3N011dlZOcTVka0dUST0=/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-2 Bernardo Schappo (p.b.)",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M0VIK1dVc3VjaitmTCtTQkxJRkw3eEFiZ0lxRXduUGpicHJDSEVwL2pHQT0=/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-1 L. Zvonarek",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNlamVaVDQycllyYlpmb0xoY1hMQk5CRVE2Y2duckFob00zWUFFSk1ZMD0=/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Prestianni",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UzVxM0lraC9Gc253dEJOc3hzc1ZjTlFVdTRWSVp2dTgwM0NQZjhtY0UvQT0=/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA==",
-      "title": "Rio Ave - Braga",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T20:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNmWmQ5SXVmVitPUWlHN2V0MXA3Q1AzbTFFenFuR05tVDFGaHhuQUFiYz0=/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Ricardo Horta",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YTh0OFRETytvRlNJdHRLRXZlcEtNOTNvQ0h6bXUvcjZQMFlOaC9pZUZlVT0=/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ3OTgzNjlfNzcyMDg0ZDQxOGUyNWFjYzgwOTllM2U0ZDM0MjQ3ODU1ODhhNmU3NA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ==",
-      "title": "Estrela Amadora - Benfica",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T20:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VVB5WWZQYTI3WTM0WWxiNHhYcE5HVG0vN0NvenhwYm1yNS83R1ZpQmZwZz0=/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "2-3 Pavlidis",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndLU1FncUQvWEN6NVMxUDhuaXlhNFhhcm1pOWRWKzRDU1dZMnY0SzBscz0=/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "2-2 L. Antonetti",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R2hIWktGS3djQmUvY3QzMHRZeHNXUTR6YjZyaTN3N011dlZOcTVka0dUST0=/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-2 Bernardo Schappo (p.b.)",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M0VIK1dVc3VjaitmTCtTQkxJRkw3eEFiZ0lxRXduUGpicHJDSEVwL2pHQT0=/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-1 L. Zvonarek",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNlamVaVDQycllyYlpmb0xoY1hMQk5CRVE2Y2duckFob00zWUFFSk1ZMD0=/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Prestianni",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UzVxM0lraC9Gc253dEJOc3hzc1ZjTlFVdTRWSVp2dTgwM0NQZjhtY0UvQT0=/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ==",
-      "title": "Rio Ave - Braga",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T20:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNmWmQ5SXVmVitPUWlHN2V0MXA3Q1AzbTFFenFuR05tVDFGaHhuQUFiYz0=/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Ricardo Horta",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YTh0OFRETytvRlNJdHRLRXZlcEtNOTNvQ0h6bXUvcjZQMFlOaC9pZUZlVT0=/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4MDMzODZfZTZmY2JmOTAyZTQ4N2RkYTlmNTc4ZjllMjg2MGQ1ZWJjMDA3OWFjNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw==",
-      "title": "Estrela Amadora - Benfica",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T20:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VVB5WWZQYTI3WTM0WWxiNHhYcE5HVG0vN0NvenhwYm1yNS83R1ZpQmZwZz0=/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "2-3 Pavlidis",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndLU1FncUQvWEN6NVMxUDhuaXlhNFhhcm1pOWRWKzRDU1dZMnY0SzBscz0=/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "2-2 L. Antonetti",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R2hIWktGS3djQmUvY3QzMHRZeHNXUTR6YjZyaTN3N011dlZOcTVka0dUST0=/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-2 Bernardo Schappo (p.b.)",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M0VIK1dVc3VjaitmTCtTQkxJRkw3eEFiZ0lxRXduUGpicHJDSEVwL2pHQT0=/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-1 L. Zvonarek",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNlamVaVDQycllyYlpmb0xoY1hMQk5CRVE2Y2duckFob00zWUFFSk1ZMD0=/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Prestianni",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UzVxM0lraC9Gc253dEJOc3hzc1ZjTlFVdTRWSVp2dTgwM0NQZjhtY0UvQT0=/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw==",
-      "title": "Rio Ave - Braga",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T20:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNmWmQ5SXVmVitPUWlHN2V0MXA3Q1AzbTFFenFuR05tVDFGaHhuQUFiYz0=/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Ricardo Horta",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YTh0OFRETytvRlNJdHRLRXZlcEtNOTNvQ0h6bXUvcjZQMFlOaC9pZUZlVT0=/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4MDg1MzlfYmZkYTMwMDdkYmEyOTc4NjE2NmE4YTU1YmUzNzhlYzk5NThlYzJjMw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ==",
-      "title": "Estrela Amadora - Benfica",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T20:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VVB5WWZQYTI3WTM0WWxiNHhYcE5HVG0vN0NvenhwYm1yNS83R1ZpQmZwZz0=/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "2-3 Pavlidis",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndLU1FncUQvWEN6NVMxUDhuaXlhNFhhcm1pOWRWKzRDU1dZMnY0SzBscz0=/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "2-2 L. Antonetti",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R2hIWktGS3djQmUvY3QzMHRZeHNXUTR6YjZyaTN3N011dlZOcTVka0dUST0=/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-2 Bernardo Schappo (p.b.)",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M0VIK1dVc3VjaitmTCtTQkxJRkw3eEFiZ0lxRXduUGpicHJDSEVwL2pHQT0=/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-1 L. Zvonarek",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNlamVaVDQycllyYlpmb0xoY1hMQk5CRVE2Y2duckFob00zWUFFSk1ZMD0=/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Prestianni",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UzVxM0lraC9Gc253dEJOc3hzc1ZjTlFVdTRWSVp2dTgwM0NQZjhtY0UvQT0=/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ==",
-      "title": "Rio Ave - Braga",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T20:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNmWmQ5SXVmVitPUWlHN2V0MXA3Q1AzbTFFenFuR05tVDFGaHhuQUFiYz0=/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Ricardo Horta",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YTh0OFRETytvRlNJdHRLRXZlcEtNOTNvQ0h6bXUvcjZQMFlOaC9pZUZlVT0=/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4MTk0MjhfMTcxN2UxMTBjMDlkMGQwOWM1ZTI4MzE3NzhkNTYwMzM4ODI3ODMwYQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ==",
-      "title": "Estrela Amadora - Benfica",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T20:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VVB5WWZQYTI3WTM0WWxiNHhYcE5HVG0vN0NvenhwYm1yNS83R1ZpQmZwZz0=/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "2-3 Pavlidis",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndLU1FncUQvWEN6NVMxUDhuaXlhNFhhcm1pOWRWKzRDU1dZMnY0SzBscz0=/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "2-2 L. Antonetti",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R2hIWktGS3djQmUvY3QzMHRZeHNXUTR6YjZyaTN3N011dlZOcTVka0dUST0=/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-2 Bernardo Schappo (p.b.)",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M0VIK1dVc3VjaitmTCtTQkxJRkw3eEFiZ0lxRXduUGpicHJDSEVwL2pHQT0=/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "1-1 L. Zvonarek",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNlamVaVDQycllyYlpmb0xoY1hMQk5CRVE2Y2duckFob00zWUFFSk1ZMD0=/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Prestianni",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UzVxM0lraC9Gc253dEJOc3hzc1ZjTlFVdTRWSVp2dTgwM0NQZjhtY0UvQT0=/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910540/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ==",
-      "title": "Rio Ave - Braga",
-      "competition": "PORTUGAL: Liga Portugal",
-      "date": "2026-11-08T20:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/akNmWmQ5SXVmVitPUWlHN2V0MXA3Q1AzbTFFenFuR05tVDFGaHhuQUFiYz0=/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "0-1 Ricardo Horta",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YTh0OFRETytvRlNJdHRLRXZlcEtNOTNvQ0h6bXUvcjZQMFlOaC9pZUZlVT0=/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1910544/?token=NDE4MDI0XzE3OTQ4MjU5MjZfMDhlMDZlZDQzZTMyYjQ4OGFmNzlkMTU3MzI1Nzc5OGMwOTVhN2E0MQ=="
     }
   ]
 }
