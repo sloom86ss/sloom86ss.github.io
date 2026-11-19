@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T17:16:06.674075+00:00",
+  "updated_at": "2026-11-19T18:07:13.764384+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -519,6 +519,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUxMDg1NjZfYTcyZDFkZWE4ZmNmMmE2YzgxNDQ3NTE4NTYxZmZiNTMxMGNmMzg2ZA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA==",
+      "title": "Tavernes - Valencia",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndYLzE3bExCU2VJcVQ5NllnMkhSV3pyclVjWFRDUjVzcTJUc0ExbCtBOD0=/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
@@ -2075,6 +2089,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUxMDg1NjZfYTcyZDFkZWE4ZmNmMmE2YzgxNDQ3NTE4NTYxZmZiNTMxMGNmMzg2ZA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA==",
+      "title": "Mijas Las Lagunas - Real Jaen",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MExkZ1lCd0loTnpZTFpHNjhyZlNXQ2dHcXBSTW9CRUJIS1lITWRkRjJvdz0=/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988811/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA==",
+      "title": "Amorebieta - UD Logrones",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NDhtTFNNbk91MCs5TzVqbGpPNzBzdGhaZkZheFNVd3EreGpYejRjVC92RT0=/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988811/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA==",
+      "title": "Trival Valderas - Leganes",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UmRrOEMyanNHczdyQVFzaDdaUDQ0bEF6NGJ0UWpNckhoWDhyOXViT2Jvdz0=/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUxMTE2MzNfMTkyZWI2OWE4NjI1YWMzMjQ0MmJlYjYzZmZlOGVhOWY0NGE3YzUxOA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
       "title": "Pamplona - Eibar",
       "competition": "SPAIN: National Cup",
@@ -2745,62 +2801,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwNTU3MDRfNWZmNmVhYmMxZGMxYWE4MmIzNjNhNTExNTY4ZmExNDI3YjY4OGY2MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwNTk0MTVfYTkwMGJmODA3ZTJjYjc5M2Q2ZDM1OGY1OGY3MWVkZDc0ZDI3Zjk0ZA==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTUwNTk0MTVfYTkwMGJmODA3ZTJjYjc5M2Q2ZDM1OGY1OGY3MWVkZDc0ZDI3Zjk0ZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwNTk0MTVfYTkwMGJmODA3ZTJjYjc5M2Q2ZDM1OGY1OGY3MWVkZDc0ZDI3Zjk0ZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwNTk0MTVfYTkwMGJmODA3ZTJjYjc5M2Q2ZDM1OGY1OGY3MWVkZDc0ZDI3Zjk0ZA==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTUwNTk0MTVfYTkwMGJmODA3ZTJjYjc5M2Q2ZDM1OGY1OGY3MWVkZDc0ZDI3Zjk0ZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwNTk0MTVfYTkwMGJmODA3ZTJjYjc5M2Q2ZDM1OGY1OGY3MWVkZDc0ZDI3Zjk0ZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwNjM0MjlfZmU0MzAxODQ1YjhmMWFiOGE3YTQ3YTI1NGQ3ZjE1NmFmOWU0MmI2MQ==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTUwNjM0MjlfZmU0MzAxODQ1YjhmMWFiOGE3YTQ3YTI1NGQ3ZjE1NmFmOWU0MmI2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwNjM0MjlfZmU0MzAxODQ1YjhmMWFiOGE3YTQ3YTI1NGQ3ZjE1NmFmOWU0MmI2MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwNjM0MjlfZmU0MzAxODQ1YjhmMWFiOGE3YTQ3YTI1NGQ3ZjE1NmFmOWU0MmI2MQ==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTUwNjM0MjlfZmU0MzAxODQ1YjhmMWFiOGE3YTQ3YTI1NGQ3ZjE1NmFmOWU0MmI2MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwNjM0MjlfZmU0MzAxODQ1YjhmMWFiOGE3YTQ3YTI1NGQ3ZjE1NmFmOWU0MmI2MQ=="
     }
   ]
 }
