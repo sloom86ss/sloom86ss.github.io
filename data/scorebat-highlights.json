@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T23:57:49.064447+00:00",
+  "updated_at": "2026-11-19T01:25:06.404050+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -309,6 +309,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUwNDYyNjlfZGM2MWQ5OWI3OWY3YzU4MTZhY2E5M2YwN2FiOTQ1YmFmMTg0OTJkNQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==",
+      "title": "Tavernes - Valencia",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndYLzE3bExCU2VJcVQ5NllnMkhSV3pyclVjWFRDUjVzcTJUc0ExbCtBOD0=/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
@@ -1235,6 +1249,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUwNDYyNjlfZGM2MWQ5OWI3OWY3YzU4MTZhY2E5M2YwN2FiOTQ1YmFmMTg0OTJkNQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==",
+      "title": "Mijas Las Lagunas - Real Jaen",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MExkZ1lCd0loTnpZTFpHNjhyZlNXQ2dHcXBSTW9CRUJIS1lITWRkRjJvdz0=/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988811/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==",
+      "title": "Amorebieta - UD Logrones",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NDhtTFNNbk91MCs5TzVqbGpPNzBzdGhaZkZheFNVd3EreGpYejRjVC92RT0=/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988811/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==",
+      "title": "Trival Valderas - Leganes",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UmRrOEMyanNHczdyQVFzaDdaUDQ0bEF6NGJ0UWpNckhoWDhyOXViT2Jvdz0=/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
       "title": "Pamplona - Eibar",
       "competition": "SPAIN: National Cup",
@@ -1851,6 +1907,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwNDYyNjlfZGM2MWQ5OWI3OWY3YzU4MTZhY2E5M2YwN2FiOTQ1YmFmMTg0OTJkNQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==",
+      "title": "Pamplona - Eibar",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==",
+      "title": "Anaitasuna FT - Alaves",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
       "title": "Vietnam U-23 - Thailand U-23",
       "competition": "WORLD: International Friendlies",
@@ -2157,6 +2241,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTUwNDYyNjlfZGM2MWQ5OWI3OWY3YzU4MTZhY2E5M2YwN2FiOTQ1YmFmMTg0OTJkNQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==",
+      "title": "Vietnam U-23 - Thailand U-23",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-10T12:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VEI3QWlZVGtIQ1I0Wjl4S0FhYVdReXpDdDZPbTAza1AzOGJCb0dOQnYxWT0=/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992018/?token=NDE4MDI0XzE3OTUwNTE1MDJfYmFiMTI2NGFjYjRlMTRlMDFjMWEwZWE3N2NkMTUyNjUwMGY5NDBmOA=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==",
@@ -2703,104 +2801,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMjg3ODhfNjc5NjU5NThjMzA4NDgxNTgyMmUyOTY2YzNjZjM2MDhlOWZiOWNiNg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMzI1MDRfMWFlYjQ3MGNkZTVjMGY5OGI1Y2UzYWEwZTVjYzUzNjZkYjJlNWJiZg==",
-      "title": "Plymouth Parkway - Berkhamsted",
-      "competition": "ENGLAND: FA Cup",
-      "date": "2026-11-09T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aDNaNjhqL0FZdmZTTWs0V1ZSdHpnL2ZiaFFlV1ZzOHpublNISythNm5FZz0=/?token=NDE4MDI0XzE3OTUwMzI1MDRfMWFlYjQ3MGNkZTVjMGY5OGI1Y2UzYWEwZTVjYzUzNjZkYjJlNWJiZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMzI1MDRfMWFlYjQ3MGNkZTVjMGY5OGI1Y2UzYWEwZTVjYzUzNjZkYjJlNWJiZg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMzU3OTdfMDc0ZTNhNDdlZDJjNDJhMTYwNDBiNzAyOGZlMjQyM2E4OTZiYTY3NA==",
-      "title": "Plymouth Parkway - Berkhamsted",
-      "competition": "ENGLAND: FA Cup",
-      "date": "2026-11-09T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aDNaNjhqL0FZdmZTTWs0V1ZSdHpnL2ZiaFFlV1ZzOHpublNISythNm5FZz0=/?token=NDE4MDI0XzE3OTUwMzU3OTdfMDc0ZTNhNDdlZDJjNDJhMTYwNDBiNzAyOGZlMjQyM2E4OTZiYTY3NA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMzU3OTdfMDc0ZTNhNDdlZDJjNDJhMTYwNDBiNzAyOGZlMjQyM2E4OTZiYTY3NA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMzkxNTBfZjZlNDI0ZDAzYzFjNWY4MmNjYjkzOWQ5YmJlNzI1ZmY0ZDgzODcyNQ==",
-      "title": "Plymouth Parkway - Berkhamsted",
-      "competition": "ENGLAND: FA Cup",
-      "date": "2026-11-09T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aDNaNjhqL0FZdmZTTWs0V1ZSdHpnL2ZiaFFlV1ZzOHpublNISythNm5FZz0=/?token=NDE4MDI0XzE3OTUwMzkxNTBfZjZlNDI0ZDAzYzFjNWY4MmNjYjkzOWQ5YmJlNzI1ZmY0ZDgzODcyNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwMzkxNTBfZjZlNDI0ZDAzYzFjNWY4MmNjYjkzOWQ5YmJlNzI1ZmY0ZDgzODcyNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwNDI3OThfNmFiZWNkMWNiMTlmMzczZmRlYTkzMmI0MDJlZGFlNzYzY2MyNDY2Yw==",
-      "title": "Plymouth Parkway - Berkhamsted",
-      "competition": "ENGLAND: FA Cup",
-      "date": "2026-11-09T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aDNaNjhqL0FZdmZTTWs0V1ZSdHpnL2ZiaFFlV1ZzOHpublNISythNm5FZz0=/?token=NDE4MDI0XzE3OTUwNDI3OThfNmFiZWNkMWNiMTlmMzczZmRlYTkzMmI0MDJlZGFlNzYzY2MyNDY2Yw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwNDI3OThfNmFiZWNkMWNiMTlmMzczZmRlYTkzMmI0MDJlZGFlNzYzY2MyNDY2Yw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwNDYyNjlfZGM2MWQ5OWI3OWY3YzU4MTZhY2E5M2YwN2FiOTQ1YmFmMTg0OTJkNQ==",
-      "title": "Plymouth Parkway - Berkhamsted",
-      "competition": "ENGLAND: FA Cup",
-      "date": "2026-11-09T19:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aDNaNjhqL0FZdmZTTWs0V1ZSdHpnL2ZiaFFlV1ZzOHpublNISythNm5FZz0=/?token=NDE4MDI0XzE3OTUwNDYyNjlfZGM2MWQ5OWI3OWY3YzU4MTZhY2E5M2YwN2FiOTQ1YmFmMTg0OTJkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990598/?token=NDE4MDI0XzE3OTUwNDYyNjlfZGM2MWQ5OWI3OWY3YzU4MTZhY2E5M2YwN2FiOTQ1YmFmMTg0OTJkNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==",
-      "title": "Leon - Guadalajara",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T02:10:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZlYwOVJXL0JZNzZveVZORitjaU9FeFZBbGFtOE1tazJ5Qm5rT3lWTlZsMD0=/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTQ4Nzg1NThfZTkxNTUwYzM3YjU4ZTM5ZGJjOGRkMjYxZWY4MzlmMzUxODAyNzliNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTQ4ODI5NDBfYWQ0Y2Y5ZjQ3YmZlNzU2ZDU0ZWE1Yjg2MDQxMjYxN2Q2YzA2ODg5OA==",
-      "title": "Leon - Guadalajara",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-09T02:10:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZlYwOVJXL0JZNzZveVZORitjaU9FeFZBbGFtOE1tazJ5Qm5rT3lWTlZsMD0=/?token=NDE4MDI0XzE3OTQ4ODI5NDBfYWQ0Y2Y5ZjQ3YmZlNzU2ZDU0ZWE1Yjg2MDQxMjYxN2Q2YzA2ODg5OA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893353/?token=NDE4MDI0XzE3OTQ4ODI5NDBfYWQ0Y2Y5ZjQ3YmZlNzU2ZDU0ZWE1Yjg2MDQxMjYxN2Q2YzA2ODg5OA=="
     }
   ]
 }
