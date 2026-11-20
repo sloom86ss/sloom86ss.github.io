@@ -1,7 +1,277 @@
 {
-  "updated_at": "2026-11-19T23:53:35.406844+00:00",
+  "updated_at": "2026-11-20T01:18:31.169219+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991426/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Bonaire - Cuba",
+      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
+      "date": "2026-11-12T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eTVrU2RHbDFkazdDdzE1cDF1cWJKNTczbHM5WGFMeVJQOGh5YmE5Yjh6cz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991426/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991413/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Italy - France",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-12T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MUF4cG85ZWlnM2lkaW9GWXpWZHdyVVJ6NGVMZStQWUc5MWFzYUNqK3FlMD0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991413/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991412/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "England - Croatia",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-12T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QlI0eE9nYzcwUXZsbncvUVp6MjNLaDU0SzgrMDBKVDA3MXNKdzdpQVdmMD0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991412/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991415/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Albania - Finland",
+      "competition": "EUROPE: UEFA Nations League C, Group Stage",
+      "date": "2026-11-12T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UHVmZEx3dWRJN1oyL1VHeXZETjlRa29GRzU5NFhRZHc0TDJLYWNYUUNncz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991415/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1990812/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Senegal - Sudan",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-12T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UVFYSHF6TFVtSEpPR3BLRGtqRWpNY0NSdmUwYkVQVm1xVTZaUWNMVUo5MD0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1990812/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991425/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Cayman Islands - Guyana",
+      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
+      "date": "2026-11-12T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VWxPMmtWeEhKcGQxNmpzZkRhVU9PYmMvVzdPVzk3NjZrWjVzV2NlU1B1ND0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991425/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991424/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Barbados - Guadalope",
+      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
+      "date": "2026-11-12T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/a1ArQ0lETzdnMFJFOXdUQWt1UUliWThzOWFlYXY0NVNnYytXK2hiYmNYTT0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991424/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991421/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Cote d’Ivoire - Gambia",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-12T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZitYbkRQNCtQaEd4UEJtZjM4STdhcWdVZ25ZSlFrenV1VFMzb3lpZmY1cz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991421/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1990804/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Cameroon - Namibia",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-12T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ekVoNm1LYXhmVVFYZnlvRzlSRHhkM3FTQW1TdHZDZGFFMFE5V3psaFlPMD0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1990804/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988822/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Navalcarnero - Real Betis",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-12T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cFhXREpPMHhDRmZiYUxGdDFQaDlFMUxvOG9FS0pVNkVWTUFseTBVNHNQYz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988822/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991410/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Turkey - Belgium",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-12T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NW81ZzdPT1pRajRyclJZd2x0T2Z3STlYVDBQdlhqMG82UTZpU3JBZ1ZvOD0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991410/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991414/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Armenia - Cyprus",
+      "competition": "EUROPE: UEFA Nations League C, Group Stage",
+      "date": "2026-11-12T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cW9DSUVnSTZ4V2RUTm1qbHZSN1Bzc0lTMjZOVU1rVmVNRXh3UFVlcmpjdz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991414/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991420/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Guinea - Eritrea",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-12T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RXJlVDdwQWVHQnBxWVQ0UWJwWUh2S3o2K1BnUTNlbVZlY0E4N05IMnQ2WT0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991420/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1990809/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Madagascar - Guinea Bissau",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-12T16:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/c0NyN0lXbDFJZ3NOVU1oS01IQTNnaHZXTUxPWTRnMVVSKzJJS01hNGl1TT0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1990809/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1990807/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "DR Congo - Sierra Leone",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-12T16:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/V3dpbTROckllWlR5c1lBdUJ4Z1dkclo1ZVE2cHlPbEdmbUNvUlJQOWFPST0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1990807/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992030/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "France U-20 - Denmark U-20",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-12T16:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q2w1Uk04VjlRdDU4VFV6UWN6RkJEWWtweDczZVlwM1BuUDU2K2l3NXJmMD0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992030/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992029/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Uzbekistan - Russia",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-12T15:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Zlk2YURyZlFXRXJkem9qaXBKV3o1RHBld0hzM25oemdZaWlMWkZtSXhNdz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bjFhbUhOQzFWTzJ4UHlmUElVZ3lsQjNVNmxzQ0hWTlhEMFdBTDZDczhCbz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992029/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991418/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Ghana - Somalia",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-12T15:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YUozSjNyNElEMGhhZ204QVJnTzdvTmo0SWprTTdZWXRsZE9CbHkra3B1dz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991418/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992353/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Kazakhstan U-21 - Belarus U-21",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-12T09:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UEhLZGFwT2cyNnR2TnJsMG51V0xIZjhMSnFpTUhWRUllc2JrK3lkTFJWaz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992353/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
       "title": "Tavernes - Valencia",
@@ -617,6 +887,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUxMzI0MTVfZWY3MjBkZDgwOTExY2YyNGE0NjhhNTNhZGYzZGJiODMxZWFlNGQyYQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Tavernes - Valencia",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UndYLzE3bExCU2VJcVQ5NllnMkhSV3pyclVjWFRDUjVzcTJUc0ExbCtBOD0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988824/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
@@ -2467,6 +2751,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUxMzI0MTVfZWY3MjBkZDgwOTExY2YyNGE0NjhhNTNhZGYzZGJiODMxZWFlNGQyYQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Mijas Las Lagunas - Real Jaen",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MExkZ1lCd0loTnpZTFpHNjhyZlNXQ2dHcXBSTW9CRUJIS1lITWRkRjJvdz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988814/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988811/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Amorebieta - UD Logrones",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NDhtTFNNbk91MCs5TzVqbGpPNzBzdGhaZkZheFNVd3EreGpYejRjVC92RT0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988811/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==",
+      "title": "Trival Valderas - Leganes",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-10T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UmRrOEMyanNHczdyQVFzaDdaUDQ0bEF6NGJ0UWpNckhoWDhyOXViT2Jvdz0=/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988817/?token=NDE4MDI0XzE3OTUxMzc1MTBfMDRkZjMyZTkzNDk1ZjZlMjNmYTM1NDdjOWU1YzA4ZDM2ZmM1Mzk4Mg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
       "title": "Pamplona - Eibar",
       "competition": "SPAIN: National Cup",
@@ -2479,328 +2805,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5NjUyMzZfOGYyNjExNzZjMmU3MGUxMDUyOWM1NWM0MTM4NTZhOWNiZDcyNzYzZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NjkzOTRfNzE5ZDNkZDIzNzg4ZjI3Y2Q5YjVkZjMwOWI1MGIzZjU0NjBmOGE3Yw==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTQ5NjkzOTRfNzE5ZDNkZDIzNzg4ZjI3Y2Q5YjVkZjMwOWI1MGIzZjU0NjBmOGE3Yw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NjkzOTRfNzE5ZDNkZDIzNzg4ZjI3Y2Q5YjVkZjMwOWI1MGIzZjU0NjBmOGE3Yw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5NjkzOTRfNzE5ZDNkZDIzNzg4ZjI3Y2Q5YjVkZjMwOWI1MGIzZjU0NjBmOGE3Yw==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTQ5NjkzOTRfNzE5ZDNkZDIzNzg4ZjI3Y2Q5YjVkZjMwOWI1MGIzZjU0NjBmOGE3Yw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5NjkzOTRfNzE5ZDNkZDIzNzg4ZjI3Y2Q5YjVkZjMwOWI1MGIzZjU0NjBmOGE3Yw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NzI5NjNfZDJhMTNhMjFiZWVlN2Y0OGYxNTFlM2M4ODU4YzlkYWRmZjc3ZmQ5OA==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTQ5NzI5NjNfZDJhMTNhMjFiZWVlN2Y0OGYxNTFlM2M4ODU4YzlkYWRmZjc3ZmQ5OA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NzI5NjNfZDJhMTNhMjFiZWVlN2Y0OGYxNTFlM2M4ODU4YzlkYWRmZjc3ZmQ5OA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5NzI5NjNfZDJhMTNhMjFiZWVlN2Y0OGYxNTFlM2M4ODU4YzlkYWRmZjc3ZmQ5OA==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTQ5NzI5NjNfZDJhMTNhMjFiZWVlN2Y0OGYxNTFlM2M4ODU4YzlkYWRmZjc3ZmQ5OA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5NzI5NjNfZDJhMTNhMjFiZWVlN2Y0OGYxNTFlM2M4ODU4YzlkYWRmZjc3ZmQ5OA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NzY4OTlfYjA2ODA4OWVjOTIwMDc1ZGRkYmIwMmI5NWE0MDBkN2JjZWNlMDQzYw==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTQ5NzY4OTlfYjA2ODA4OWVjOTIwMDc1ZGRkYmIwMmI5NWE0MDBkN2JjZWNlMDQzYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5NzY4OTlfYjA2ODA4OWVjOTIwMDc1ZGRkYmIwMmI5NWE0MDBkN2JjZWNlMDQzYw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5NzY4OTlfYjA2ODA4OWVjOTIwMDc1ZGRkYmIwMmI5NWE0MDBkN2JjZWNlMDQzYw==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTQ5NzY4OTlfYjA2ODA4OWVjOTIwMDc1ZGRkYmIwMmI5NWE0MDBkN2JjZWNlMDQzYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5NzY4OTlfYjA2ODA4OWVjOTIwMDc1ZGRkYmIwMmI5NWE0MDBkN2JjZWNlMDQzYw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5ODA1NzlfMjJiNmViNzFiMDcyNzNmOWM1OWM3MDMyZTExNzc5YmI2ZDdiNDc3Ng==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTQ5ODA1NzlfMjJiNmViNzFiMDcyNzNmOWM1OWM3MDMyZTExNzc5YmI2ZDdiNDc3Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5ODA1NzlfMjJiNmViNzFiMDcyNzNmOWM1OWM3MDMyZTExNzc5YmI2ZDdiNDc3Ng=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5ODA1NzlfMjJiNmViNzFiMDcyNzNmOWM1OWM3MDMyZTExNzc5YmI2ZDdiNDc3Ng==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTQ5ODA1NzlfMjJiNmViNzFiMDcyNzNmOWM1OWM3MDMyZTExNzc5YmI2ZDdiNDc3Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5ODA1NzlfMjJiNmViNzFiMDcyNzNmOWM1OWM3MDMyZTExNzc5YmI2ZDdiNDc3Ng=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5ODQxODRfNDZiNGIyNzhjY2E4ZTA2ZDFhMjdlNjI4ZjhmZDJjNGFiZDJjZDQxNA==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTQ5ODQxODRfNDZiNGIyNzhjY2E4ZTA2ZDFhMjdlNjI4ZjhmZDJjNGFiZDJjZDQxNA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5ODQxODRfNDZiNGIyNzhjY2E4ZTA2ZDFhMjdlNjI4ZjhmZDJjNGFiZDJjZDQxNA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5ODQxODRfNDZiNGIyNzhjY2E4ZTA2ZDFhMjdlNjI4ZjhmZDJjNGFiZDJjZDQxNA==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTQ5ODQxODRfNDZiNGIyNzhjY2E4ZTA2ZDFhMjdlNjI4ZjhmZDJjNGFiZDJjZDQxNA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5ODQxODRfNDZiNGIyNzhjY2E4ZTA2ZDFhMjdlNjI4ZjhmZDJjNGFiZDJjZDQxNA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5ODg2NzdfYmI4YjI3ZmRhZWY3NzNmZmM0ZGJmMjBiMzE1NzBlOTYzYTEzYmVjNw==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTQ5ODg2NzdfYmI4YjI3ZmRhZWY3NzNmZmM0ZGJmMjBiMzE1NzBlOTYzYTEzYmVjNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5ODg2NzdfYmI4YjI3ZmRhZWY3NzNmZmM0ZGJmMjBiMzE1NzBlOTYzYTEzYmVjNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5ODg2NzdfYmI4YjI3ZmRhZWY3NzNmZmM0ZGJmMjBiMzE1NzBlOTYzYTEzYmVjNw==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTQ5ODg2NzdfYmI4YjI3ZmRhZWY3NzNmZmM0ZGJmMjBiMzE1NzBlOTYzYTEzYmVjNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5ODg2NzdfYmI4YjI3ZmRhZWY3NzNmZmM0ZGJmMjBiMzE1NzBlOTYzYTEzYmVjNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5OTMyNjFfYzllMTFiODU1MDE5ZWJkMjdjMWQ4MDljOTBmYTE0NTg1YmE4ZDBkNg==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTQ5OTMyNjFfYzllMTFiODU1MDE5ZWJkMjdjMWQ4MDljOTBmYTE0NTg1YmE4ZDBkNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5OTMyNjFfYzllMTFiODU1MDE5ZWJkMjdjMWQ4MDljOTBmYTE0NTg1YmE4ZDBkNg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5OTMyNjFfYzllMTFiODU1MDE5ZWJkMjdjMWQ4MDljOTBmYTE0NTg1YmE4ZDBkNg==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTQ5OTMyNjFfYzllMTFiODU1MDE5ZWJkMjdjMWQ4MDljOTBmYTE0NTg1YmE4ZDBkNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5OTMyNjFfYzllMTFiODU1MDE5ZWJkMjdjMWQ4MDljOTBmYTE0NTg1YmE4ZDBkNg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5OTcyMDNfM2E2Y2NiYWQyMDBiYmFhOWFlNGQ4NjlmMjkzM2Q3YWY0OTU0ZWQ2Mg==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTQ5OTcyMDNfM2E2Y2NiYWQyMDBiYmFhOWFlNGQ4NjlmMjkzM2Q3YWY0OTU0ZWQ2Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTQ5OTcyMDNfM2E2Y2NiYWQyMDBiYmFhOWFlNGQ4NjlmMjkzM2Q3YWY0OTU0ZWQ2Mg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5OTcyMDNfM2E2Y2NiYWQyMDBiYmFhOWFlNGQ4NjlmMjkzM2Q3YWY0OTU0ZWQ2Mg==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTQ5OTcyMDNfM2E2Y2NiYWQyMDBiYmFhOWFlNGQ4NjlmMjkzM2Q3YWY0OTU0ZWQ2Mg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTQ5OTcyMDNfM2E2Y2NiYWQyMDBiYmFhOWFlNGQ4NjlmMjkzM2Q3YWY0OTU0ZWQ2Mg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwMDE4NDNfOGZkNmE2ZDU2NGNkNGZhYTYyNzg5ZTYxYjdjNjlkODM1NTRhZDA4YQ==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTUwMDE4NDNfOGZkNmE2ZDU2NGNkNGZhYTYyNzg5ZTYxYjdjNjlkODM1NTRhZDA4YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwMDE4NDNfOGZkNmE2ZDU2NGNkNGZhYTYyNzg5ZTYxYjdjNjlkODM1NTRhZDA4YQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMDE4NDNfOGZkNmE2ZDU2NGNkNGZhYTYyNzg5ZTYxYjdjNjlkODM1NTRhZDA4YQ==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTUwMDE4NDNfOGZkNmE2ZDU2NGNkNGZhYTYyNzg5ZTYxYjdjNjlkODM1NTRhZDA4YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMDE4NDNfOGZkNmE2ZDU2NGNkNGZhYTYyNzg5ZTYxYjdjNjlkODM1NTRhZDA4YQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwMDU1OTBfMDZhN2I0MzU5ZTU1NTQ4ZDVmYTZjNDUwZjUwYzFlYmNmODE2NTE4NQ==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTUwMDU1OTBfMDZhN2I0MzU5ZTU1NTQ4ZDVmYTZjNDUwZjUwYzFlYmNmODE2NTE4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwMDU1OTBfMDZhN2I0MzU5ZTU1NTQ4ZDVmYTZjNDUwZjUwYzFlYmNmODE2NTE4NQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMDU1OTBfMDZhN2I0MzU5ZTU1NTQ4ZDVmYTZjNDUwZjUwYzFlYmNmODE2NTE4NQ==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTUwMDU1OTBfMDZhN2I0MzU5ZTU1NTQ4ZDVmYTZjNDUwZjUwYzFlYmNmODE2NTE4NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMDU1OTBfMDZhN2I0MzU5ZTU1NTQ4ZDVmYTZjNDUwZjUwYzFlYmNmODE2NTE4NQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw==",
-      "title": "Pamplona - Eibar",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TGtaU21jN0VqWkNpWG1DbHkxcGtjMkloK3oycDFHVTE1YU9IdzQrRGk0az0=/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988804/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw==",
-      "title": "Anaitasuna FT - Alaves",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-10T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SGRYYmJ5bVFFcXpJSzg3eFZIZDNLYWRuUzN1TkFEMDhTWEFGcFhmVXkxdz0=/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988802/?token=NDE4MDI0XzE3OTUwMTAxOTZfNGRmNDljODdkNGVhMTc3OGFjZTE4NmE2MDlmNTA1Y2U4NzhkNmZlNw=="
     }
   ]
 }
