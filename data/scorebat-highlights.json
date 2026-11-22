@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T09:56:22.655545+00:00",
+  "updated_at": "2026-11-22T10:55:06.348457+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -129,6 +129,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Chapecoense - Vasco",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-14T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Queretaro - Monterrey",
       "competition": "MEXICO: Primera Division, Apertura",
@@ -255,6 +269,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Queretaro - Monterrey",
+      "competition": "MEXICO: Primera Division, Apertura",
+      "date": "2026-11-14T23:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841773/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Mirassol - Atletico-MG",
       "competition": "BRAZIL: Serie A",
@@ -379,6 +407,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841773/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841773/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Mirassol - Atletico-MG",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-14T21:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WTYvcW52K01Td0ZKM0pyeURYL1ZuMW5CbWpxVTZPZGJFSE5NbXhhZ00yST0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841773/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1991917/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
@@ -885,6 +927,62 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1991916/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991917/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Northern Ireland - Ukraine",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-14T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cDZsaHZTdTdXUG1WWWQwb0daQmIxYmdrNElwWnJ1Unc2eEtrd09qZ1RPZz0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991917/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991919/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Sweden - Bosnia and Herzegovina",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-14T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WGd6S1ZpTGdKUU1qQmlTQW1uV01mNkptMlhZbFFMS2toZ1RSSFU1OXJXdz0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991919/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991918/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Romania - Poland",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-14T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K0U5cGY4QWUvV2R0ZGNYbHZOTklZNk9Yd3p2c0RBU0ZHaGpIakFwZGF4ND0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991918/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991916/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Austria - Ireland",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-14T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VmIvZVlNa1RyRXRqTEtFY3JmKzQyM3A4N2FBYUlaNHBYQmZaNWMvTU9RQT0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991916/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1991912/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Sint Maarten - French Guyana",
       "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
@@ -1299,6 +1397,52 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1991908/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991912/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Sint Maarten - French Guyana",
+      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
+      "date": "2026-11-14T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SmQybFNhd0Jvb0VtMEpwbTlrUVJJTVdEUkVCaXIwYm93dVgyTkVob2o3RT0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eDh4RTNUT1VxYUJ1TXFSclMzYm5lY1YzaDlDcVBzOHhDak5ETDFjM0p0Zz0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991912/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991909/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Angola - South Sudan",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-14T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VUJoMTMzUTRtVEFNMm1FL1liYTZSZHpDR0pCVDFyT3RNUGoyMkcxWlNaOD0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991909/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991908/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Algeria - Togo",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-14T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QkJQVXIxM1ZCWnRUVzV4dUNtV1JLc3VzV1VNaklpc3BINklQdkY1dE1NZz0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991908/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1991906/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Norway - Wales",
       "competition": "EUROPE: UEFA Nations League A, Group Stage",
@@ -1425,6 +1569,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1991906/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991906/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Norway - Wales",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-14T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R2VwSTZYY0xOWWRuV0o2MElOSUhjR3lqQ0lBVEpuYVNNWUV0ek5Zb2xUbz0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991906/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Uganda - Botswana",
       "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
@@ -1549,6 +1707,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Uganda - Botswana",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-14T16:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1900680/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
@@ -2181,6 +2353,76 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1900690/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900680/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Wimbledon - Blackpool",
+      "competition": "ENGLAND: League One",
+      "date": "2026-11-14T15:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q3lIU0lRZExSMU9oWTlaMjVpU2ZHTkNpUW5iQ1pXUHM5N3hVa1JMcUE2MD0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900680/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900687/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Sheffield Wednesday - Plymouth",
+      "competition": "ENGLAND: League One",
+      "date": "2026-11-14T15:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TXphR2hXSS9tbnZOV0FoRGFwYm1nUG9SQ1BlQnVKeTN4dlhNaFhvQ3dLYz0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900687/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900685/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Milton Keynes Dons - Burton Albion",
+      "competition": "ENGLAND: League One",
+      "date": "2026-11-14T15:00:00+00:00",
+      "videos": [
+        {
+          "title": "Extended Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NWpVcnZqM0VrRHlrVm5YMXFINXo5b2FScFRhTVMwbGlWVHJ0emtvVlhhVT0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900685/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900689/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Stockport - Reading",
+      "competition": "ENGLAND: League One",
+      "date": "2026-11-14T15:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QzVFQ0lxckxTQkVVZ29UTDkwMnRRaUlwRHhadTN4eDhkTXpPdlc5V2xsVT0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900689/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900690/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Wigan - Barnsley",
+      "competition": "ENGLAND: League One",
+      "date": "2026-11-14T15:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/STRESitDdFdhMmR6eHYwalhscVBOaUsyNjk4UWJVakpJVk41b2I3b2VoQT0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900690/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1991914/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Kosovo - Israel",
       "competition": "EUROPE: UEFA Nations League B, Group Stage",
@@ -2307,6 +2549,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1991914/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991914/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Kosovo - Israel",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-14T14:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U2ZOY3A3dUtMN0Foc20zR21YcFJRekhnenlQdFljUWxVRkRuMXFsSU8yST0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991914/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1992057/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Japan - Brazil",
       "competition": "WORLD: International Friendlies",
@@ -2431,6 +2687,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992057/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992057/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
+      "title": "Japan - Brazil",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-14T10:15:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SzUydmx4a2FIeU1hQi9MaFI0VDBydk1lRy9LenBFZjRSWEYyUVhOY1VBaz0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992057/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1992049/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
@@ -2571,272 +2841,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992050/?token=NDE4MDI0XzE3OTUzMjU4NjhfODQ3NmQ1ZTRmZGI4YmQ1YjYyZTQ5ZWEwYTcwYzBmMWNkNDljNzI5ZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992049/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg==",
-      "title": "Colombia - Chile",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-14T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YWlFS3FRSXRkSUVrcWRLNXBCK0VwQ3N2Zzl3bnhPY3IyY3Bxci9LcU96QT0=/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992049/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992050/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg==",
-      "title": "Ecuador - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-14T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZzdUUDQvaDZoSTVuVjdDM0hlUXk3bDdLcERmSUJpNDE5S1k5NHNwT3dBUT0=/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992050/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992049/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA==",
-      "title": "Colombia - Chile",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-14T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YWlFS3FRSXRkSUVrcWRLNXBCK0VwQ3N2Zzl3bnhPY3IyY3Bxci9LcU96QT0=/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992049/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992050/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA==",
-      "title": "Ecuador - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-14T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZzdUUDQvaDZoSTVuVjdDM0hlUXk3bDdLcERmSUJpNDE5S1k5NHNwT3dBUT0=/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992050/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992049/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ==",
-      "title": "Colombia - Chile",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-14T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YWlFS3FRSXRkSUVrcWRLNXBCK0VwQ3N2Zzl3bnhPY3IyY3Bxci9LcU96QT0=/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992049/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992050/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ==",
-      "title": "Ecuador - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-14T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZzdUUDQvaDZoSTVuVjdDM0hlUXk3bDdLcERmSUJpNDE5S1k5NHNwT3dBUT0=/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992050/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992049/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg==",
-      "title": "Colombia - Chile",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-14T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YWlFS3FRSXRkSUVrcWRLNXBCK0VwQ3N2Zzl3bnhPY3IyY3Bxci9LcU96QT0=/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992049/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992050/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg==",
-      "title": "Ecuador - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-14T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZzdUUDQvaDZoSTVuVjdDM0hlUXk3bDdLcERmSUJpNDE5S1k5NHNwT3dBUT0=/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992050/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyMjQxODBfYjlmYjhjODc5ZDgwYjY2M2M5NDI1NTMzOTlhNDU0NzNmMmQ0NDE4OQ==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyMjQxODBfYjlmYjhjODc5ZDgwYjY2M2M5NDI1NTMzOTlhNDU0NzNmMmQ0NDE4OQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyMjQxODBfYjlmYjhjODc5ZDgwYjY2M2M5NDI1NTMzOTlhNDU0NzNmMmQ0NDE4OQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyMjgzOTdfMWIzNDZmYmFlZTU0OThlOWQ5OWFhYWJkYzBiN2ZlYWUzZDg3NWE5Ng==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyMjgzOTdfMWIzNDZmYmFlZTU0OThlOWQ5OWFhYWJkYzBiN2ZlYWUzZDg3NWE5Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyMjgzOTdfMWIzNDZmYmFlZTU0OThlOWQ5OWFhYWJkYzBiN2ZlYWUzZDg3NWE5Ng=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyMzE5NDdfYzk1YTk4NzQ4ZWVjN2RlNWRiNWEyMjQzN2YzZTBkOWJiYWFhNzgyZA==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyMzE5NDdfYzk1YTk4NzQ4ZWVjN2RlNWRiNWEyMjQzN2YzZTBkOWJiYWFhNzgyZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyMzE5NDdfYzk1YTk4NzQ4ZWVjN2RlNWRiNWEyMjQzN2YzZTBkOWJiYWFhNzgyZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyMzU5MDhfYjk3ZGM0YmE2NTNjMjBiNzc2OGYzYzkxYTZhZTcyODYwOGUyODhiYw==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyMzU5MDhfYjk3ZGM0YmE2NTNjMjBiNzc2OGYzYzkxYTZhZTcyODYwOGUyODhiYw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyMzU5MDhfYjk3ZGM0YmE2NTNjMjBiNzc2OGYzYzkxYTZhZTcyODYwOGUyODhiYw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyMzk1MTlfNTBmZGYxMzBhM2VmMzYzNzM0OTdmOGU2NWRkZWRhMTYwNTExOWUzZA==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyMzk1MTlfNTBmZGYxMzBhM2VmMzYzNzM0OTdmOGU2NWRkZWRhMTYwNTExOWUzZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyMzk1MTlfNTBmZGYxMzBhM2VmMzYzNzM0OTdmOGU2NWRkZWRhMTYwNTExOWUzZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNDMyNjJfYzJkZGVmNGQxZGVmMzI4NzMwYmFlNjJlZTIzNTgzZDliMjRkMTkyOA==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyNDMyNjJfYzJkZGVmNGQxZGVmMzI4NzMwYmFlNjJlZTIzNTgzZDliMjRkMTkyOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNDMyNjJfYzJkZGVmNGQxZGVmMzI4NzMwYmFlNjJlZTIzNTgzZDliMjRkMTkyOA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNDc2MzRfOWQyMDdkMzNjOTkzNzhjOTBjM2I0OWVmYjlmMmRkNzlkNGFhMzU2Zg==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyNDc2MzRfOWQyMDdkMzNjOTkzNzhjOTBjM2I0OWVmYjlmMmRkNzlkNGFhMzU2Zg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNDc2MzRfOWQyMDdkMzNjOTkzNzhjOTBjM2I0OWVmYjlmMmRkNzlkNGFhMzU2Zg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNTE0MjJfMTJmODc3ODc0YzFjMDhhNDBjZTAxZWM0ZDUwOTU1M2ZiYjI0NWIxMw==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyNTE0MjJfMTJmODc3ODc0YzFjMDhhNDBjZTAxZWM0ZDUwOTU1M2ZiYjI0NWIxMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNTE0MjJfMTJmODc3ODc0YzFjMDhhNDBjZTAxZWM0ZDUwOTU1M2ZiYjI0NWIxMw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNTQ5OTRfZDFiMTI0NThhNDFiYTVlNzBiYzllYmUyY2ZhYWVjMjgxN2QwZTRjNQ==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyNTQ5OTRfZDFiMTI0NThhNDFiYTVlNzBiYzllYmUyY2ZhYWVjMjgxN2QwZTRjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNTQ5OTRfZDFiMTI0NThhNDFiYTVlNzBiYzllYmUyY2ZhYWVjMjgxN2QwZTRjNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNTg1NTNfYTNhMTgzZTE4NzA5NGY0N2U3NDc0NmZlNWUwNDdjZjRhOTkwY2FiMw==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyNTg1NTNfYTNhMTgzZTE4NzA5NGY0N2U3NDc0NmZlNWUwNDdjZjRhOTkwY2FiMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNTg1NTNfYTNhMTgzZTE4NzA5NGY0N2U3NDc0NmZlNWUwNDdjZjRhOTkwY2FiMw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNjIwMTdfYjE5MzAwMGMzOTU2NDkzMDNlMTA2YzNlNDA1ZTgxZTc2NjNkZDdkZA==",
-      "title": "Argentina - Uruguay",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-13T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M1hZR1VEWHlOYlZPaU14ZkpaQUxvT05OTDRncjJtTVd4VjhBeUU1enpHYz0=/?token=NDE4MDI0XzE3OTUyNjIwMTdfYjE5MzAwMGMzOTU2NDkzMDNlMTA2YzNlNDA1ZTgxZTc2NjNkZDdkZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992047/?token=NDE4MDI0XzE3OTUyNjIwMTdfYjE5MzAwMGMzOTU2NDkzMDNlMTA2YzNlNDA1ZTgxZTc2NjNkZDdkZA=="
     }
   ]
 }
