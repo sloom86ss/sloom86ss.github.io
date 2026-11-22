@@ -10,6 +10,7 @@
   const count=root.querySelector('#sloomArchiveCount');
   let matches=[];
   let playSequence=0;
+  let activeFailureHandler=null;
 
   function getMatchKey(match){
     const id=String(match?.video_id||match?.source_url||'').match(/matchview\/(\d+)/i);
@@ -88,10 +89,26 @@
     if(!match)return;
     const video=(match.videos||[])[Number(videoSelect.value)];
     const url=getVideoUrl(video);
+    if(activeFailureHandler){window.removeEventListener('message',activeFailureHandler);activeFailureHandler=null;}
     player.replaceChildren();
     if(!url){player.textContent='رابط الفيديو غير متاح من المصدر حالياً';return;}
     const iframe=document.createElement('iframe');
     iframe.id='sloomArchiveIframe';
+    const playerOrigin=new URL(url).origin;
+    activeFailureHandler=(event)=>{
+      if(event.origin!==playerOrigin||event.source!==iframe.contentWindow)return;
+      let message;
+      try{message=typeof event.data==='string'?JSON.parse(event.data):event.data;}catch(e){return;}
+      if(!message||message.type!=='scorebat-playback-failed')return;
+      if(!['provider-error','timeout'].includes(message.reason))return;
+      window.removeEventListener('message',activeFailureHandler);
+      activeFailureHandler=null;
+      if(iframe.isConnected){
+        iframe.remove();
+        player.textContent='هذا الملخص غير متاح للتشغيل حالياً من المصدر.';
+      }
+    };
+    window.addEventListener('message',activeFailureHandler);
     iframe.src=url;
     iframe.title=video.title||'ملخص المباراة';
     iframe.allow='fullscreen; picture-in-picture';
