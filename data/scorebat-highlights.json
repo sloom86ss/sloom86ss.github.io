@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T17:51:08.267295+00:00",
+  "updated_at": "2026-11-22T18:58:35.393365+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -241,6 +241,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNjk4NjhfNjRmY2FlZWM2MDM5ZDdjZTQwMGE4NDFkZGE1ODc5ZDE4Yzk0MTdjOQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Chapecoense - Vasco",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-14T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Queretaro - Monterrey",
       "competition": "MEXICO: Primera Division, Apertura",
@@ -479,6 +493,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNjk4NjhfNjRmY2FlZWM2MDM5ZDdjZTQwMGE4NDFkZGE1ODc5ZDE4Yzk0MTdjOQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Queretaro - Monterrey",
+      "competition": "MEXICO: Primera Division, Apertura",
+      "date": "2026-11-14T23:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841773/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Mirassol - Atletico-MG",
       "competition": "BRAZIL: Serie A",
@@ -715,6 +743,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841773/?token=NDE4MDI0XzE3OTUzNjk4NjhfNjRmY2FlZWM2MDM5ZDdjZTQwMGE4NDFkZGE1ODc5ZDE4Yzk0MTdjOQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841773/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Mirassol - Atletico-MG",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-14T21:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WTYvcW52K01Td0ZKM0pyeURYL1ZuMW5CbWpxVTZPZGJFSE5NbXhhZ00yST0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841773/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1991917/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
@@ -1669,6 +1711,62 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1991916/?token=NDE4MDI0XzE3OTUzNjk4NjhfNjRmY2FlZWM2MDM5ZDdjZTQwMGE4NDFkZGE1ODc5ZDE4Yzk0MTdjOQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991917/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Northern Ireland - Ukraine",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-14T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cDZsaHZTdTdXUG1WWWQwb0daQmIxYmdrNElwWnJ1Unc2eEtrd09qZ1RPZz0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991917/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991919/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Sweden - Bosnia and Herzegovina",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-14T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WGd6S1ZpTGdKUU1qQmlTQW1uV01mNkptMlhZbFFMS2toZ1RSSFU1OXJXdz0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991919/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991918/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Romania - Poland",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-14T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K0U5cGY4QWUvV2R0ZGNYbHZOTklZNk9Yd3p2c0RBU0ZHaGpIakFwZGF4ND0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991918/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991916/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Austria - Ireland",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-14T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VmIvZVlNa1RyRXRqTEtFY3JmKzQyM3A4N2FBYUlaNHBYQmZaNWMvTU9RQT0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991916/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1991912/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Sint Maarten - French Guyana",
       "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
@@ -2451,6 +2549,52 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1991908/?token=NDE4MDI0XzE3OTUzNjk4NjhfNjRmY2FlZWM2MDM5ZDdjZTQwMGE4NDFkZGE1ODc5ZDE4Yzk0MTdjOQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991912/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Sint Maarten - French Guyana",
+      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
+      "date": "2026-11-14T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SmQybFNhd0Jvb0VtMEpwbTlrUVJJTVdEUkVCaXIwYm93dVgyTkVob2o3RT0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eDh4RTNUT1VxYUJ1TXFSclMzYm5lY1YzaDlDcVBzOHhDak5ETDFjM0p0Zz0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991912/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991909/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Angola - South Sudan",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-14T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VUJoMTMzUTRtVEFNMm1FL1liYTZSZHpDR0pCVDFyT3RNUGoyMkcxWlNaOD0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991909/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991908/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Algeria - Togo",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-14T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QkJQVXIxM1ZCWnRUVzV4dUNtV1JLc3VzV1VNaklpc3BINklQdkY1dE1NZz0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991908/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1991906/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Norway - Wales",
       "competition": "EUROPE: UEFA Nations League A, Group Stage",
@@ -2689,6 +2833,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1991906/?token=NDE4MDI0XzE3OTUzNjk4NjhfNjRmY2FlZWM2MDM5ZDdjZTQwMGE4NDFkZGE1ODc5ZDE4Yzk0MTdjOQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1991906/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
+      "title": "Norway - Wales",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-14T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R2VwSTZYY0xOWWRuV0o2MElOSUhjR3lqQ0lBVEpuYVNNWUV0ek5Zb2xUbz0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1991906/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Uganda - Botswana",
       "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
@@ -2715,160 +2873,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMTQ5NDVfOWFmYmQyY2ZkN2RhNjM0NGMwMzdhZWVkMzU1YTY1OTViYzQyYjQ1MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMTg0NDZfOTQ3YmE5NmRkZDNhNWE4ZTExMTM5OTlhOWJkYTgwMDk3MDhiOTAyOA==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzMTg0NDZfOTQ3YmE5NmRkZDNhNWE4ZTExMTM5OTlhOWJkYTgwMDk3MDhiOTAyOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMTg0NDZfOTQ3YmE5NmRkZDNhNWE4ZTExMTM5OTlhOWJkYTgwMDk3MDhiOTAyOA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMjI0NjZfYmU4ZjFjZWIyMGMyYjY3ZGFlNmExOWE0ZTNiYmRiNzU1MjkxODQwOA==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzMjI0NjZfYmU4ZjFjZWIyMGMyYjY3ZGFlNmExOWE0ZTNiYmRiNzU1MjkxODQwOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMjI0NjZfYmU4ZjFjZWIyMGMyYjY3ZGFlNmExOWE0ZTNiYmRiNzU1MjkxODQwOA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMjU4NjhfODQ3NmQ1ZTRmZGI4YmQ1YjYyZTQ5ZWEwYTcwYzBmMWNkNDljNzI5ZA==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzMjU4NjhfODQ3NmQ1ZTRmZGI4YmQ1YjYyZTQ5ZWEwYTcwYzBmMWNkNDljNzI5ZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMjU4NjhfODQ3NmQ1ZTRmZGI4YmQ1YjYyZTQ5ZWEwYTcwYzBmMWNkNDljNzI5ZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNDgzMzVfZmJlOThjOTZiNzY4ZGZkNzBmMWExY2I2MTQ3Y2M1M2Y3NTYyNmMxNw==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzNDgzMzVfZmJlOThjOTZiNzY4ZGZkNzBmMWExY2I2MTQ3Y2M1M2Y3NTYyNmMxNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNDgzMzVfZmJlOThjOTZiNzY4ZGZkNzBmMWExY2I2MTQ3Y2M1M2Y3NTYyNmMxNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNTI3MjJfNGViYzBmM2FiODI4YzUxNDdjZWViZWYxN2RmZmNlZjg0ODMwNTBjYg==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzNTI3MjJfNGViYzBmM2FiODI4YzUxNDdjZWViZWYxN2RmZmNlZjg0ODMwNTBjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNTI3MjJfNGViYzBmM2FiODI4YzUxNDdjZWViZWYxN2RmZmNlZjg0ODMwNTBjYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNTYzNTZfYjU4ZmVmMmQ5ZmMyNGZjMDMyOGQzYjI4NmFjZDIzM2FmYjIxMjcwOQ==",
-      "title": "Uganda - Botswana",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-14T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Nk1OOStkNGhmdlBWRDAreDdCelo2b0N3bUtDVzN3TzBLSEU1M2VYUCtxRT0=/?token=NDE4MDI0XzE3OTUzNTYzNTZfYjU4ZmVmMmQ5ZmMyNGZjMDMyOGQzYjI4NmFjZDIzM2FmYjIxMjcwOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1990815/?token=NDE4MDI0XzE3OTUzNTYzNTZfYjU4ZmVmMmQ5ZmMyNGZjMDMyOGQzYjI4NmFjZDIzM2FmYjIxMjcwOQ=="
     }
   ]
 }
