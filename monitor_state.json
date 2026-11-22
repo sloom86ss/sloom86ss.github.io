@@ -1,6 +1,6 @@
 {
-  "healthy": false,
-  "checked_at": "2026-11-22T16:13:24.118741+00:00",
+  "healthy": true,
+  "checked_at": "2026-11-22T17:03:28.673030+00:00",
   "checks": {
     "homepage": {
       "ok": true,
@@ -23,8 +23,8 @@
       "detail": "sitemap.xml وrobots.txt سليمان"
     },
     "sports_data": {
-      "ok": false,
-      "detail": "تعذر قراءة data.json: HTTP Error 503: Service Unavailable"
+      "ok": true,
+      "detail": "JSON سليم؛ 25 بطولة؛ 111 مباراة؛ 100 خبر؛ عمر البيانات 15 دقيقة"
     }
   }
 }
