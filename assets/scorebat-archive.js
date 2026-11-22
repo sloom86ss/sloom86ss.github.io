@@ -9,11 +9,44 @@
   const player=root.querySelector('#sloomArchivePlayer');
   const count=root.querySelector('#sloomArchiveCount');
   let matches=[];
-  let youtubePlayer=null;
   let playSequence=0;
 
-  function isYouTube(host){
-    return ['youtube.com','www.youtube.com','youtu.be','youtube-nocookie.com','www.youtube-nocookie.com'].includes(host);
+  function getMatchKey(match){
+    const id=String(match?.video_id||match?.source_url||'').match(/matchview\/(\d+)/i);
+    return id?'match:'+id[1]:[match?.title||'',match?.competition||'',match?.date||''].join('|');
+  }
+
+  function getVideoKey(video){
+    let src=String(video?.url||'').trim();
+    if(!src){
+      const embed=String(video?.embed||'');
+      const doc=new DOMParser().parseFromString(embed,'text/html');
+      src=doc.querySelector('iframe')?.getAttribute('src')||'';
+      if(!src && /^https:\/\//i.test(embed))src=embed;
+    }
+    const path=src.match(/^https:\/\/www?\.scorebat\.com(\/embed\/v\/[^?#]+)/i);
+    return path?path[1]:String(video?.title||'');
+  }
+
+  function deduplicateMatches(items){
+    const grouped=new Map();
+    (Array.isArray(items)?items:[]).forEach(item=>{
+      if(!item||!Array.isArray(item.videos)||!item.videos.length)return;
+      const key=getMatchKey(item);
+      if(!grouped.has(key))grouped.set(key,{...item,videos:[]});
+      const target=grouped.get(key);
+      const videoMap=new Map(target.videos.map(video=>[getVideoKey(video),video]));
+      item.videos.forEach(video=>{
+        const videoKey=getVideoKey(video);
+        if(videoKey)videoMap.set(videoKey,video);
+      });
+      target.videos=[...videoMap.values()];
+      if(item.title)target.title=item.title;
+      if(item.competition)target.competition=item.competition;
+      if(item.date)target.date=item.date;
+      if(item.source_url)target.source_url=item.source_url;
+    });
+    return [...grouped.values()];
   }
 
   function getVideoUrl(video){
@@ -26,36 +59,11 @@
     }
     try{
       const u=new URL(src);
-      const allowed=['scorebat.com','www.scorebat.com','youtube.com','www.youtube.com','youtu.be','youtube-nocookie.com','www.youtube-nocookie.com','vimeo.com','player.vimeo.com','www.dailymotion.com','dailymotion.com'];
-      if(u.protocol!=='https:'||!allowed.includes(u.hostname))return null;
-      u.searchParams.set('autoplay','1');
-      if(isYouTube(u.hostname)){
-        u.searchParams.set('mute','1');
-        u.searchParams.set('enablejsapi','1');
-        u.searchParams.set('playsinline','1');
-        u.searchParams.set('origin',location.origin);
-      }
+      if(u.protocol!=='https:'||!['scorebat.com','www.scorebat.com'].includes(u.hostname))return null;
       return u.href;
     }catch(e){return null;}
   }
 
-  function loadYouTubeApi(){
-    if(window.YT&&window.YT.Player)return Promise.resolve();
-    if(window.sloomYouTubeApiPromise)return window.sloomYouTubeApiPromise;
-    window.sloomYouTubeApiPromise=new Promise(resolve=>{
-      const previous=window.onYouTubeIframeAPIReady;
-      window.onYouTubeIframeAPIReady=function(){
-        if(typeof previous==='function')previous();
-        resolve();
-      };
-      if(!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')){
-        const script=document.createElement('script');
-        script.src='https://www.youtube.com/iframe_api';
-        document.head.appendChild(script);
-      }
-    });
-    return window.sloomYouTubeApiPromise;
-  }
 
   function advanceVideo(){
     const matchIndex=Number(matchSelect.value);
@@ -76,10 +84,6 @@
 
   function showVideo(){
     const sequence=++playSequence;
-    if(youtubePlayer&&typeof youtubePlayer.destroy==='function'){
-      try{youtubePlayer.destroy();}catch(e){}
-      youtubePlayer=null;
-    }
     const match=matches[Number(matchSelect.value)];
     if(!match)return;
     const video=(match.videos||[])[Number(videoSelect.value)];
@@ -90,22 +94,13 @@
     iframe.id='sloomArchiveIframe';
     iframe.src=url;
     iframe.title=video.title||'ملخص المباراة';
-    iframe.allow='autoplay; fullscreen; picture-in-picture';
+    iframe.allow='fullscreen; picture-in-picture';
     iframe.allowFullscreen=true;
     iframe.loading='eager';
     iframe.referrerPolicy='strict-origin-when-cross-origin';
     iframe.style.cssText='width:100%;aspect-ratio:16/9;border:0;display:block';
     player.appendChild(iframe);
-    const host=new URL(url).hostname;
-    if(isYouTube(host)){
-      loadYouTubeApi().then(()=>{
-        if(sequence!==playSequence||!iframe.isConnected)return;
-        youtubePlayer=new YT.Player(iframe,{events:{
-          onReady:event=>{try{event.target.mute();event.target.playVideo();}catch(e){}},
-          onStateChange:event=>{if(event.data===YT.PlayerState.ENDED&&sequence===playSequence)advanceVideo();}
-        }});
-      }).catch(()=>{});
-    }
+
   }
 
   function fillVideos(){
@@ -125,8 +120,7 @@
   fetch('./data/scorebat-highlights.json?ts='+Date.now(),{cache:'no-store'})
     .then(response=>{if(!response.ok)throw new Error('archive unavailable');return response.json();})
     .then(data=>{
-      matches=Array.isArray(data.response)?data.response:[];
-      matches=matches.filter(match=>match&&Array.isArray(match.videos)&&match.videos.length);
+      matches=deduplicateMatches(data.response);
       matches.sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));
       matchSelect.replaceChildren();
       matches.forEach((match,index)=>{
@@ -137,7 +131,7 @@
         option.textContent=(match.title||'مباراة')+' — '+(match.competition||'')+dateText;
         matchSelect.appendChild(option);
       });
-      count.textContent='الأرشيف المشترك: '+matches.length+' مباراة — التشغيل التلقائي مفعّل';
+      count.textContent='أرشيف ScoreBat: '+matches.length+' مباراة متاحة';
       if(matches.length){matchSelect.value='0';fillVideos();}
       else player.textContent='سيظهر الأرشيف هنا بعد أول مزامنة للمباريات';
     })
