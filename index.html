@@ -2643,9 +2643,9 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
 
 
 <script>
-/* SLOOM365 weather: Al Seeb fallback + explicit GPS permission */
+/* SLOOM365 weather: Al Buraimi fallback + explicit GPS permission */
 (()=>{
- const fallback={lat:23.67,lon:58.18,name:'السيب، عُمان'};
+ const fallback={lat:24.25,lon:55.79,name:'البريمي، عُمان'};
  const $=id=>document.getElementById(id);
  const weatherCode=code=>{
   if(code===0)return ['☀️','سماء صافية'];
@@ -2675,7 +2675,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
   $('sloomWeatherStatus').textContent='آخر تحديث: '+new Intl.DateTimeFormat('ar-OM',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Muscat'}).format(new Date());
  }
  async function fallbackWeather(message){
-  try{await loadWeather(fallback.lat,fallback.lon,fallback.name);$('sloomWeatherStatus').textContent=message||'الطقس الافتراضي: السيب';}
+  try{await loadWeather(fallback.lat,fallback.lon,fallback.name);$('sloomWeatherStatus').textContent=message||'الطقس الافتراضي: البريمي';}
   catch(e){$('sloomWeatherDesc').textContent='تعذر جلب حالة الطقس حالياً';ensureTicker();if($('sloomWeatherTicker'))$('sloomWeatherTicker').textContent='🌤️ تعذر تحديث الطقس حالياً';$('sloomWeatherStatus').textContent='تعذر الطقس';}
  }
  const button=$('sloomWeatherGPS');
@@ -2698,10 +2698,10 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
     const lat=position.coords.latitude,lon=position.coords.longitude;
     await loadWeather(lat,lon,'موقعك الحالي');
     $('sloomWeatherStatus').textContent='محدّث';if(button)button.setAttribute('aria-pressed','true');
-   }catch(e){await fallbackWeather('تعذر تحديث موقعك؛ نعرض طقس السيب');if(button)button.setAttribute('aria-pressed','false');}
+   }catch(e){await fallbackWeather('تعذر تحديث موقعك؛ نعرض طقس البريمي');if(button)button.setAttribute('aria-pressed','false');}
    finally{if(button)button.disabled=false;}
   },async error=>{
-   const reason=error.code===1?'لم تسمح بإذن الموقع؛ نعرض طقس السيب':error.code===2?'تعذر تحديد الموقع؛ نعرض طقس السيب':'انتهت مهلة GPS؛ نعرض طقس السيب';
+   const reason=error.code===1?'لم تسمح بإذن الموقع؛ نعرض طقس البريمي':error.code===2?'تعذر تحديد الموقع؛ نعرض طقس البريمي':'انتهت مهلة GPS؛ نعرض طقس البريمي';
    await fallbackWeather(reason);if(button){button.setAttribute('aria-pressed','false');button.disabled=false;}
   },{enableHighAccuracy:false,timeout:12000,maximumAge:600000});
  });
@@ -2712,7 +2712,7 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.se
    // Keep the last permitted coordinates private in memory only; refresh is intentionally not automatic.
    return;
   }
-  fallbackWeather('تحديث تلقائي لطقس السيب');
+  fallbackWeather('تحديث تلقائي لطقس البريمي');
  },30*60*1000);
 })();
 </script>
