@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T18:34:59.389273+00:00",
+  "updated_at": "2026-11-23T19:45:02.238700+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -633,6 +633,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1992127/?token=NDE4MDI0XzE3OTU0NTg4OTlfNWM5ZWM5YTYwODc5MzI3ODA4YjMzZTM0OTMxYzI4NGJmNDFiNTZlNA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992128/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==",
+      "title": "Spain - England",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-15T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZXl6WnMwTHZKaTg5dm91dWxPSzl2VHJUbkNFTGpKMzZkOU04WnBDTWZDcz0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992128/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992125/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==",
+      "title": "Belgium - Italy",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-15T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dmFPcU5sQXFqeXR2dk4vTkQ0RVllcy9KdlN2ZEFFTTY5LzNYNlhjcmdqWT0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992125/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992127/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==",
+      "title": "France - Turkey",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-15T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZDZOVDRQVEVrRjZKd1A2bXR5bDlYUEZMRzhPSyt5M2ZtV0NrZTRKZE1EST0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992127/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1992132/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==",
       "title": "Finland - San Marino",
       "competition": "EUROPE: UEFA Nations League C, Group Stage",
@@ -1051,6 +1093,34 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992131/?token=NDE4MDI0XzE3OTU0NTg4OTlfNWM5ZWM5YTYwODc5MzI3ODA4YjMzZTM0OTMxYzI4NGJmNDFiNTZlNA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992132/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==",
+      "title": "Finland - San Marino",
+      "competition": "EUROPE: UEFA Nations League C, Group Stage",
+      "date": "2026-11-15T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZVpabFEvbUNBUGpvYzl4aWg0UllxNkFQS0FML25KaEZXUGNUZHNXZlRjOD0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992132/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992131/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==",
+      "title": "Belarus - Albania",
+      "competition": "EUROPE: UEFA Nations League C, Group Stage",
+      "date": "2026-11-15T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cXVmMC9pa3I2bmlhSXZ4S3R0TmpoZGZGUjNDck1TVXgyOEVEZHN0VHlpOD0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992131/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1992067/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==",
@@ -1473,6 +1543,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1993461/?token=NDE4MDI0XzE3OTU0NTg4OTlfNWM5ZWM5YTYwODc5MzI3ODA4YjMzZTM0OTMxYzI4NGJmNDFiNTZlNA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992067/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==",
+      "title": "France U-20 - Denmark U-20",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-15T13:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NWhpcFcwZmlhZkcwUW1ITkM1MXF1TVEyY2Z4TEo2RmxSTlN0M1BickVHQT0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992067/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1993461/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==",
+      "title": "Paris 13 - Red Star",
+      "competition": "FRANCE: National Cup",
+      "date": "2026-11-15T13:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WS9jU0k3SEEvVjhrcXpyRmhTcUIwV1A5MnNhUmFrbUg2cDBTVTdiY09Gaz0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1993461/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1992362/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==",
       "title": "Kazakhstan U-21 - Belarus U-21",
       "competition": "WORLD: International Friendlies",
@@ -1681,6 +1779,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992362/?token=NDE4MDI0XzE3OTU0NTg4OTlfNWM5ZWM5YTYwODc5MzI3ODA4YjMzZTM0OTMxYzI4NGJmNDFiNTZlNA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992362/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==",
+      "title": "Kazakhstan U-21 - Belarus U-21",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-15T09:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q3lYOGVXVXdMNi9iQVZ2RVlkNWppY3VWcDhXQjR4MDFrQ3B5aTVSTFN4UT0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992362/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==",
@@ -1951,6 +2063,24 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0NTg4OTlfNWM5ZWM5YTYwODc5MzI3ODA4YjMzZTM0OTMxYzI4NGJmNDFiNTZlNA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==",
+      "title": "St.Vincent and the G... - Belize",
+      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
+      "date": "2026-11-15T00:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QTdKdWJubEpIQ0dmOXZvQzdtZlZrU0VsTWtlWDFYMkdycFJXWEtnS2hobz0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NDRZdFNCRkVNVW5XQ0FSKzBhSlpRaHRZdndWSjJ6V3pjdzd4ZWJoS3hhRT0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
@@ -2485,6 +2615,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTU0NTg4OTlfNWM5ZWM5YTYwODc5MzI3ODA4YjMzZTM0OTMxYzI4NGJmNDFiNTZlNA=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==",
+      "title": "Chapecoense - Vasco",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-14T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
       "title": "Queretaro - Monterrey",
       "competition": "MEXICO: Primera Division, Apertura",
@@ -2721,146 +2865,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNjk4NjhfNjRmY2FlZWM2MDM5ZDdjZTQwMGE4NDFkZGE1ODc5ZDE4Yzk0MTdjOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
-      "title": "Queretaro - Monterrey",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-14T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNzczODFfMjU4Nzg2YmU3Y2UyYTQxZjZiZDU3NjFiNzNjYWI5NGMxZTY4ODQyMQ==",
-      "title": "Queretaro - Monterrey",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-14T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTUzNzczODFfMjU4Nzg2YmU3Y2UyYTQxZjZiZDU3NjFiNzNjYWI5NGMxZTY4ODQyMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzNzczODFfMjU4Nzg2YmU3Y2UyYTQxZjZiZDU3NjFiNzNjYWI5NGMxZTY4ODQyMQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzODA4NDVfZDhkOTA3ZGU1YmU2ZTA4MTFmYjVjNTRmOTcyNDgwODk0NzY0NDJmMg==",
-      "title": "Queretaro - Monterrey",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-14T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTUzODA4NDVfZDhkOTA3ZGU1YmU2ZTA4MTFmYjVjNTRmOTcyNDgwODk0NzY0NDJmMg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzODA4NDVfZDhkOTA3ZGU1YmU2ZTA4MTFmYjVjNTRmOTcyNDgwODk0NzY0NDJmMg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzODQ0MThfMmNkYjNiYWZhMzc0NTQ0OTZiYjMzZDEzMzgxMDFkYjM5NTkxZDY2Yg==",
-      "title": "Queretaro - Monterrey",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-14T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTUzODQ0MThfMmNkYjNiYWZhMzc0NTQ0OTZiYjMzZDEzMzgxMDFkYjM5NTkxZDY2Yg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzODQ0MThfMmNkYjNiYWZhMzc0NTQ0OTZiYjMzZDEzMzgxMDFkYjM5NTkxZDY2Yg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzODgwMjFfMTg3ZjQ1MzQ1NzY0YmU2OThlNGQ2OGExOTk2ZWRhZTgwZDNmYmI0ZQ==",
-      "title": "Queretaro - Monterrey",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-14T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTUzODgwMjFfMTg3ZjQ1MzQ1NzY0YmU2OThlNGQ2OGExOTk2ZWRhZTgwZDNmYmI0ZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzODgwMjFfMTg3ZjQ1MzQ1NzY0YmU2OThlNGQ2OGExOTk2ZWRhZTgwZDNmYmI0ZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzOTE1MDRfOGVhYTY4NGI3Y2NhMTY2MmYyNDU0OGFhOTY3NDllOThlMDNkYzk5Nw==",
-      "title": "Queretaro - Monterrey",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-14T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTUzOTE1MDRfOGVhYTY4NGI3Y2NhMTY2MmYyNDU0OGFhOTY3NDllOThlMDNkYzk5Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzOTE1MDRfOGVhYTY4NGI3Y2NhMTY2MmYyNDU0OGFhOTY3NDllOThlMDNkYzk5Nw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==",
-      "title": "Queretaro - Monterrey",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-14T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTU0MDE1OThfODgzNjcxNjQ5ZWRjMmViZmM5OWI2ZDFhMjE1MGU5MDhkNmY1MWVmNw==",
-      "title": "Queretaro - Monterrey",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-14T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTU0MDE1OThfODgzNjcxNjQ5ZWRjMmViZmM5OWI2ZDFhMjE1MGU5MDhkNmY1MWVmNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTU0MDE1OThfODgzNjcxNjQ5ZWRjMmViZmM5OWI2ZDFhMjE1MGU5MDhkNmY1MWVmNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTU0MDUxODdfYTJlN2Y5MzdhMTk5NGYyMGY2ZjA3NmRjYTg1Yzc3NjhhMTFhMDAyYg==",
-      "title": "Queretaro - Monterrey",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-14T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTU0MDUxODdfYTJlN2Y5MzdhMTk5NGYyMGY2ZjA3NmRjYTg1Yzc3NjhhMTFhMDAyYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTU0MDUxODdfYTJlN2Y5MzdhMTk5NGYyMGY2ZjA3NmRjYTg1Yzc3NjhhMTFhMDAyYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTU0MDk1ODNfYTI2MGMzMDU0N2I4ZGNiMzRjYjc2OTVjNzkwMmU2MGY2MTIyYjdiZg==",
-      "title": "Queretaro - Monterrey",
-      "competition": "MEXICO: Primera Division, Apertura",
-      "date": "2026-11-14T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q01Ga3ZMM1IyRDVCSk5tYnQzSENtdWx0OFpvcGZDTk5Va1hIYkdodndGYz0=/?token=NDE4MDI0XzE3OTU0MDk1ODNfYTI2MGMzMDU0N2I4ZGNiMzRjYjc2OTVjNzkwMmU2MGY2MTIyYjdiZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1893267/?token=NDE4MDI0XzE3OTU0MDk1ODNfYTI2MGMzMDU0N2I4ZGNiMzRjYjc2OTVjNzkwMmU2MGY2MTIyYjdiZg=="
     }
   ]
 }
