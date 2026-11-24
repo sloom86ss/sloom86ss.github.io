@@ -1,7 +1,239 @@
 {
-  "updated_at": "2026-11-23T23:33:21.219379+00:00",
+  "updated_at": "2026-11-24T00:32:24.595450+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992402/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Germany - Netherlands",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-16T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/OG5EM0pRdDRVeXgyaTl4a0RWWWl0Rk1MUHRUMjlKcldmNUNPaHloK3JCWT0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cFBoS1dLQ0RkOEFXck9pMng5a09LZzFuRjdoVklVRldva21icENLZTdmND0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992402/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992439/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Gibraltar - Malta",
+      "competition": "EUROPE: UEFA Nations League D, Group Stage",
+      "date": "2026-11-16T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eXgxdW0vZGtOc3hjdXhqZGMvRzNWZHpZMmNWSVJZTzNqSlY5RkdaNzVRdz0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992439/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992437/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Switzerland - Scotland",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-16T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M0tXM2RkVzNTTElsTDJtbVA4bW9pMGFZRGw3SmM2aTF5N0pLT3d1VE8zZz0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992437/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992403/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Greece - Serbia",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-16T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dVhJeFpIVC9PR3VDdzQ0QzBGam5JcWpvdlNoY2xBL2I0SkUzeS9LSnB6Yz0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992403/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992378/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "England U-21 - France U-21",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-16T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M3RNYlZJR0tmWFV1bDdWdmk3bzFIRmZNU244RU5DQ0VQbDBLdko2dUMxYz0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992378/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992429/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Cuba - Grenada",
+      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
+      "date": "2026-11-16T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmRoV2NMT3drZy96Tmx5UkZpR2xvdGNrY2NlU3hSZWVlc2kzODVzejNrWT0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eWtaZHRBRUhSUFRFU29raFgwb3VXVnlJNUtQbWEzeVBvREtsNDZGV2hFaz0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992429/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992377/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Chile U-20 - Mexico U-20",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-16T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Streaming",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RmtUSndPV016ckE3aDRWcTEydTA3bWpMUFd4SEowMEwzb00rSi9NWnU0ND0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992377/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992373/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Italy U-21 - Belgium U-21",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-16T17:15:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WmVXZ2NTYS84a1BUQVNySkVWcWxqSm9INWM1TE04Z3haMWhpQzRnV2Y1UT0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992373/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Eritrea - Guinea",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-16T16:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VjAxTTFSOGpXUXlSWnJUQ3VNeDdYVFhiVVgvaUM3Qm1jQ1FRak45WlZyWT0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Central-Africa - Benin",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-16T16:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ODl4RHozeDlibGdReWpqQSt3VnVqWlRlMURoNFFjOGFJK2UyS1A5NVYzND0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992404/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Faroe Islandes - Moldova",
+      "competition": "EUROPE: UEFA Nations League C, Group Stage",
+      "date": "2026-11-16T15:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MGkxNS9adkVBV1ZoS2U0N3gxdkJaa1BIN1VRRnVXS0xreXZPT0JVbUhBRT0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992404/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992411/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Somalia - Ghana",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-16T15:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VjJhbHNCTG9yMzFSZUdhbS9MZ3FXYkhhdWpDTFNjYitMazBBRkdOVC9Ucz0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992411/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992410/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Zimbabwe - Equatorial Guinea",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-16T13:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QmY5MzBJdkRjV2F3bWV0TzQ2cHRDNXY1OHFtaHprdWVycHd1aThiNmVOST0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992410/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992409/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Sudan - Senegal",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-16T13:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dFFnYkRGazJvcDNxNEQvNGtFNkJjSEx6TjhoZS9nUXNodFl6cWRaT3lIZz0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992409/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992408/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Namibia - Cameroon",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-16T13:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UlFuUzRkM01FdTR6aEJMSCtWcmRiZGhJWW9iYlJGajRzZ2xXTk9UTjdIZz0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992408/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992369/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Uzbekistan U-20 - Venezuela U-20",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-16T11:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RGkvM0xWVVdjWjhIV3pHZnZ4dXcwMFdzTHgxOXU1dDRGdHJYR0Z6SWlCMD0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992369/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1992128/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==",
       "title": "Spain - England",
@@ -843,6 +1075,48 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1992127/?token=NDE4MDI0XzE3OTU0NzY4MDBfM2I5MzM3OWVmMTIzYzY1NDQxNTUxNTUwZDc3ZTVlODM5NGEwMjJkMg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992128/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Spain - England",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-15T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZXl6WnMwTHZKaTg5dm91dWxPSzl2VHJUbkNFTGpKMzZkOU04WnBDTWZDcz0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992128/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992125/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Belgium - Italy",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-15T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dmFPcU5sQXFqeXR2dk4vTkQ0RVllcy9KdlN2ZEFFTTY5LzNYNlhjcmdqWT0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992125/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992127/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "France - Turkey",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-15T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZDZOVDRQVEVrRjZKd1A2bXR5bDlYUEZMRzhPSyt5M2ZtV0NrZTRKZE1EST0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992127/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1992132/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==",
       "title": "Finland - San Marino",
       "competition": "EUROPE: UEFA Nations League C, Group Stage",
@@ -1401,6 +1675,34 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992131/?token=NDE4MDI0XzE3OTU0NzY4MDBfM2I5MzM3OWVmMTIzYzY1NDQxNTUxNTUwZDc3ZTVlODM5NGEwMjJkMg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992132/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Finland - San Marino",
+      "competition": "EUROPE: UEFA Nations League C, Group Stage",
+      "date": "2026-11-15T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ZVpabFEvbUNBUGpvYzl4aWg0UllxNkFQS0FML25KaEZXUGNUZHNXZlRjOD0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992132/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992131/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Belarus - Albania",
+      "competition": "EUROPE: UEFA Nations League C, Group Stage",
+      "date": "2026-11-15T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cXVmMC9pa3I2bmlhSXZ4S3R0TmpoZGZGUjNDck1TVXgyOEVEZHN0VHlpOD0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992131/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1992067/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==",
@@ -1963,6 +2265,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1993461/?token=NDE4MDI0XzE3OTU0NzY4MDBfM2I5MzM3OWVmMTIzYzY1NDQxNTUxNTUwZDc3ZTVlODM5NGEwMjJkMg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992067/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "France U-20 - Denmark U-20",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-15T13:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NWhpcFcwZmlhZkcwUW1ITkM1MXF1TVEyY2Z4TEo2RmxSTlN0M1BickVHQT0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992067/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1993461/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Paris 13 - Red Star",
+      "competition": "FRANCE: National Cup",
+      "date": "2026-11-15T13:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WS9jU0k3SEEvVjhrcXpyRmhTcUIwV1A5MnNhUmFrbUg2cDBTVTdiY09Gaz0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1993461/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1992362/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==",
       "title": "Kazakhstan U-21 - Belarus U-21",
       "competition": "WORLD: International Friendlies",
@@ -2241,6 +2571,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992362/?token=NDE4MDI0XzE3OTU0NzY4MDBfM2I5MzM3OWVmMTIzYzY1NDQxNTUxNTUwZDc3ZTVlODM5NGEwMjJkMg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992362/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
+      "title": "Kazakhstan U-21 - Belarus U-21",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-15T09:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q3lYOGVXVXdMNi9iQVZ2RVlkNWppY3VWcDhXQjR4MDFrQ3B5aTVSTFN4UT0=/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992362/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTUzOTcxNTFfOTQzZGE3NWEwYzE5YzQxOGY3YTc5MTJkMjYxZGQwM2Q2Y2I2ZDhmNQ==",
@@ -2529,358 +2873,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0NjMxMDFfMTgwOGU1OTlkYTk5ZTVhZDgxMzc0MTNkNjFmYWRkNjE2NTlhOTNmNg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0NjU4OTZfMzljZmNhZTk3M2U4OGJiZGMzNDRmMTdkYzIyYjM0MGIwNjQ1Zjg4MQ==",
-      "title": "St.Vincent and the G... - Belize",
-      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
-      "date": "2026-11-15T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QTdKdWJubEpIQ0dmOXZvQzdtZlZrU0VsTWtlWDFYMkdycFJXWEtnS2hobz0=/?token=NDE4MDI0XzE3OTU0NjU4OTZfMzljZmNhZTk3M2U4OGJiZGMzNDRmMTdkYzIyYjM0MGIwNjQ1Zjg4MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Live Stream",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NDRZdFNCRkVNVW5XQ0FSKzBhSlpRaHRZdndWSjJ6V3pjdzd4ZWJoS3hhRT0=/?token=NDE4MDI0XzE3OTU0NjU4OTZfMzljZmNhZTk3M2U4OGJiZGMzNDRmMTdkYzIyYjM0MGIwNjQ1Zjg4MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0NjU4OTZfMzljZmNhZTk3M2U4OGJiZGMzNDRmMTdkYzIyYjM0MGIwNjQ1Zjg4MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0Njk1ODNfM2U5ZWU4NTViYmYyNWUxMDhiMWM3YTkzMWI3MGMyMDI0ODY5YjE5NQ==",
-      "title": "St.Vincent and the G... - Belize",
-      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
-      "date": "2026-11-15T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QTdKdWJubEpIQ0dmOXZvQzdtZlZrU0VsTWtlWDFYMkdycFJXWEtnS2hobz0=/?token=NDE4MDI0XzE3OTU0Njk1ODNfM2U5ZWU4NTViYmYyNWUxMDhiMWM3YTkzMWI3MGMyMDI0ODY5YjE5NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Live Stream",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NDRZdFNCRkVNVW5XQ0FSKzBhSlpRaHRZdndWSjJ6V3pjdzd4ZWJoS3hhRT0=/?token=NDE4MDI0XzE3OTU0Njk1ODNfM2U5ZWU4NTViYmYyNWUxMDhiMWM3YTkzMWI3MGMyMDI0ODY5YjE5NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0Njk1ODNfM2U5ZWU4NTViYmYyNWUxMDhiMWM3YTkzMWI3MGMyMDI0ODY5YjE5NQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0NzMyMzVfMTdjN2Q0MTllYjQ5NWRlZGM5YjczN2I4YmM4MDQ5ZWY1MDU2YzZlNg==",
-      "title": "St.Vincent and the G... - Belize",
-      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
-      "date": "2026-11-15T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QTdKdWJubEpIQ0dmOXZvQzdtZlZrU0VsTWtlWDFYMkdycFJXWEtnS2hobz0=/?token=NDE4MDI0XzE3OTU0NzMyMzVfMTdjN2Q0MTllYjQ5NWRlZGM5YjczN2I4YmM4MDQ5ZWY1MDU2YzZlNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Live Stream",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NDRZdFNCRkVNVW5XQ0FSKzBhSlpRaHRZdndWSjJ6V3pjdzd4ZWJoS3hhRT0=/?token=NDE4MDI0XzE3OTU0NzMyMzVfMTdjN2Q0MTllYjQ5NWRlZGM5YjczN2I4YmM4MDQ5ZWY1MDU2YzZlNg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0NzMyMzVfMTdjN2Q0MTllYjQ5NWRlZGM5YjczN2I4YmM4MDQ5ZWY1MDU2YzZlNg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0NzY4MDBfM2I5MzM3OWVmMTIzYzY1NDQxNTUxNTUwZDc3ZTVlODM5NGEwMjJkMg==",
-      "title": "St.Vincent and the G... - Belize",
-      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
-      "date": "2026-11-15T00:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QTdKdWJubEpIQ0dmOXZvQzdtZlZrU0VsTWtlWDFYMkdycFJXWEtnS2hobz0=/?token=NDE4MDI0XzE3OTU0NzY4MDBfM2I5MzM3OWVmMTIzYzY1NDQxNTUxNTUwZDc3ZTVlODM5NGEwMjJkMg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        },
-        {
-          "title": "Live Stream",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NDRZdFNCRkVNVW5XQ0FSKzBhSlpRaHRZdndWSjJ6V3pjdzd4ZWJoS3hhRT0=/?token=NDE4MDI0XzE3OTU0NzY4MDBfM2I5MzM3OWVmMTIzYzY1NDQxNTUxNTUwZDc3ZTVlODM5NGEwMjJkMg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992143/?token=NDE4MDI0XzE3OTU0NzY4MDBfM2I5MzM3OWVmMTIzYzY1NDQxNTUxNTUwZDc3ZTVlODM5NGEwMjJkMg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMTAzMjBfMWVmYzhjNTE0NDE0OTRmMjE0ZWQ4NjQzYTkyOTcwMjlhNTRiNDRkYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMTQ5NDVfOWFmYmQyY2ZkN2RhNjM0NGMwMzdhZWVkMzU1YTY1OTViYzQyYjQ1MQ==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzMTQ5NDVfOWFmYmQyY2ZkN2RhNjM0NGMwMzdhZWVkMzU1YTY1OTViYzQyYjQ1MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMTQ5NDVfOWFmYmQyY2ZkN2RhNjM0NGMwMzdhZWVkMzU1YTY1OTViYzQyYjQ1MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMTg0NDZfOTQ3YmE5NmRkZDNhNWE4ZTExMTM5OTlhOWJkYTgwMDk3MDhiOTAyOA==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzMTg0NDZfOTQ3YmE5NmRkZDNhNWE4ZTExMTM5OTlhOWJkYTgwMDk3MDhiOTAyOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMTg0NDZfOTQ3YmE5NmRkZDNhNWE4ZTExMTM5OTlhOWJkYTgwMDk3MDhiOTAyOA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMjI0NjZfYmU4ZjFjZWIyMGMyYjY3ZGFlNmExOWE0ZTNiYmRiNzU1MjkxODQwOA==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzMjI0NjZfYmU4ZjFjZWIyMGMyYjY3ZGFlNmExOWE0ZTNiYmRiNzU1MjkxODQwOA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMjI0NjZfYmU4ZjFjZWIyMGMyYjY3ZGFlNmExOWE0ZTNiYmRiNzU1MjkxODQwOA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMjU4NjhfODQ3NmQ1ZTRmZGI4YmQ1YjYyZTQ5ZWEwYTcwYzBmMWNkNDljNzI5ZA==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzMjU4NjhfODQ3NmQ1ZTRmZGI4YmQ1YjYyZTQ5ZWEwYTcwYzBmMWNkNDljNzI5ZA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMjU4NjhfODQ3NmQ1ZTRmZGI4YmQ1YjYyZTQ5ZWEwYTcwYzBmMWNkNDljNzI5ZA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMjk1MDNfZWMxNTVmODFhZjc1NGE3OTFjNjE5MzQ2OTk2Yjc3NTFmZDhkZmEzYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMzQwNjdfZTk1NDcwNTFlN2IxMmJiM2RmM2Q4MGY4MzM3OWQ4MzAwYWUwYjUzMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzMzc4MTlfMWJhYWNmYjJjYTVhYTJjODlmYzYzNzdlMjE1MWZkNGVmODc1NDVkOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNDEzODJfYzZlZmFmYTMyMWU2M2MxZjY1MDllNjhlYjQzMWFkM2Y1ZDE0YzE1Zg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNDQ5MDZfM2M2MTRmYzkyOWZjYzZhMjdmMmY3Njk4MmU5ZGMwNzk2ZTU0MTE2MA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNDgzMzVfZmJlOThjOTZiNzY4ZGZkNzBmMWExY2I2MTQ3Y2M1M2Y3NTYyNmMxNw==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNDgzMzVfZmJlOThjOTZiNzY4ZGZkNzBmMWExY2I2MTQ3Y2M1M2Y3NTYyNmMxNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNDgzMzVfZmJlOThjOTZiNzY4ZGZkNzBmMWExY2I2MTQ3Y2M1M2Y3NTYyNmMxNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNTI3MjJfNGViYzBmM2FiODI4YzUxNDdjZWViZWYxN2RmZmNlZjg0ODMwNTBjYg==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNTI3MjJfNGViYzBmM2FiODI4YzUxNDdjZWViZWYxN2RmZmNlZjg0ODMwNTBjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNTI3MjJfNGViYzBmM2FiODI4YzUxNDdjZWViZWYxN2RmZmNlZjg0ODMwNTBjYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNTYzNTZfYjU4ZmVmMmQ5ZmMyNGZjMDMyOGQzYjI4NmFjZDIzM2FmYjIxMjcwOQ==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNTYzNTZfYjU4ZmVmMmQ5ZmMyNGZjMDMyOGQzYjI4NmFjZDIzM2FmYjIxMjcwOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNTYzNTZfYjU4ZmVmMmQ5ZmMyNGZjMDMyOGQzYjI4NmFjZDIzM2FmYjIxMjcwOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNTk0MzlfMjIzYTYyYjcwMDIyMDMwMDI3NWFiMjY5MzZhZTkyNjVjYWNmOTkyYQ==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNTk0MzlfMjIzYTYyYjcwMDIyMDMwMDI3NWFiMjY5MzZhZTkyNjVjYWNmOTkyYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNTk0MzlfMjIzYTYyYjcwMDIyMDMwMDI3NWFiMjY5MzZhZTkyNjVjYWNmOTkyYQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNjI4ODRfOGY3Yjg4NWUxMTZiMTQyODI0NGY2MDJhNzFiZDE4M2IzMWIwMDZhMw==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNjI4ODRfOGY3Yjg4NWUxMTZiMTQyODI0NGY2MDJhNzFiZDE4M2IzMWIwMDZhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNjI4ODRfOGY3Yjg4NWUxMTZiMTQyODI0NGY2MDJhNzFiZDE4M2IzMWIwMDZhMw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNjY1NzdfZmVkMDQwNGE5MDkwYzFlZDI3ZTI4YjM3Zjk4YjA2ZmFkMTA0ZGM0Ng==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNjY1NzdfZmVkMDQwNGE5MDkwYzFlZDI3ZTI4YjM3Zjk4YjA2ZmFkMTA0ZGM0Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNjY1NzdfZmVkMDQwNGE5MDkwYzFlZDI3ZTI4YjM3Zjk4YjA2ZmFkMTA0ZGM0Ng=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNjk4NjhfNjRmY2FlZWM2MDM5ZDdjZTQwMGE4NDFkZGE1ODc5ZDE4Yzk0MTdjOQ==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNjk4NjhfNjRmY2FlZWM2MDM5ZDdjZTQwMGE4NDFkZGE1ODc5ZDE4Yzk0MTdjOQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNjk4NjhfNjRmY2FlZWM2MDM5ZDdjZTQwMGE4NDFkZGE1ODc5ZDE4Yzk0MTdjOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNzM5MTVfOWNkZWMyMzA0MTk2MWJlNGYyODJkOTUxYTYzNjNhNDU2YTZjYWQ3Nw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNzczODFfMjU4Nzg2YmU3Y2UyYTQxZjZiZDU3NjFiNzNjYWI5NGMxZTY4ODQyMQ==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzNzczODFfMjU4Nzg2YmU3Y2UyYTQxZjZiZDU3NjFiNzNjYWI5NGMxZTY4ODQyMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzNzczODFfMjU4Nzg2YmU3Y2UyYTQxZjZiZDU3NjFiNzNjYWI5NGMxZTY4ODQyMQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzODA4NDVfZDhkOTA3ZGU1YmU2ZTA4MTFmYjVjNTRmOTcyNDgwODk0NzY0NDJmMg==",
-      "title": "Chapecoense - Vasco",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-14T23:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1lpNmljaitDb1hIdDJLWmQwYkhvR1lkYUd6KzEzVWo1UnlaVE9BODRWRT0=/?token=NDE4MDI0XzE3OTUzODA4NDVfZDhkOTA3ZGU1YmU2ZTA4MTFmYjVjNTRmOTcyNDgwODk0NzY0NDJmMg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841630/?token=NDE4MDI0XzE3OTUzODA4NDVfZDhkOTA3ZGU1YmU2ZTA4MTFmYjVjNTRmOTcyNDgwODk0NzY0NDJmMg=="
     }
   ]
 }
