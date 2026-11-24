@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T22:39:32.947232+00:00",
+  "updated_at": "2026-11-24T23:31:56.740835+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -1203,6 +1203,66 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1992403/?token=NDE4MDI0XzE3OTU1NTk5NzJfMmUyOWFmNjQ2NWU5YjJjNGI1MGI5YTk3ZGQ4MjVjNjhkZTc1NzhlNw=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992402/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==",
+      "title": "Germany - Netherlands",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-16T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/OG5EM0pRdDRVeXgyaTl4a0RWWWl0Rk1MUHRUMjlKcldmNUNPaHloK3JCWT0=/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/cFBoS1dLQ0RkOEFXck9pMng5a09LZzFuRjdoVklVRldva21icENLZTdmND0=/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992402/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992439/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==",
+      "title": "Gibraltar - Malta",
+      "competition": "EUROPE: UEFA Nations League D, Group Stage",
+      "date": "2026-11-16T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eXgxdW0vZGtOc3hjdXhqZGMvRzNWZHpZMmNWSVJZTzNqSlY5RkdaNzVRdz0=/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992439/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992437/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==",
+      "title": "Switzerland - Scotland",
+      "competition": "EUROPE: UEFA Nations League B, Group Stage",
+      "date": "2026-11-16T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M0tXM2RkVzNTTElsTDJtbVA4bW9pMGFZRGw3SmM2aTF5N0pLT3d1VE8zZz0=/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992437/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992403/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==",
+      "title": "Greece - Serbia",
+      "competition": "EUROPE: UEFA Nations League A, Group Stage",
+      "date": "2026-11-16T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dVhJeFpIVC9PR3VDdzQ0QzBGam5JcWpvdlNoY2xBL2I0SkUzeS9LSnB6Yz0=/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992403/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1992378/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
       "title": "England U-21 - France U-21",
       "competition": "WORLD: International Friendlies",
@@ -1481,6 +1541,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992378/?token=NDE4MDI0XzE3OTU1NTk5NzJfMmUyOWFmNjQ2NWU5YjJjNGI1MGI5YTk3ZGQ4MjVjNjhkZTc1NzhlNw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992378/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==",
+      "title": "England U-21 - France U-21",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-16T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/M3RNYlZJR0tmWFV1bDdWdmk3bzFIRmZNU244RU5DQ0VQbDBLdko2dUMxYz0=/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992378/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1992429/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
@@ -2123,6 +2197,38 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1992377/?token=NDE4MDI0XzE3OTU1NTk5NzJfMmUyOWFmNjQ2NWU5YjJjNGI1MGI5YTk3ZGQ4MjVjNjhkZTc1NzhlNw=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992429/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==",
+      "title": "Cuba - Grenada",
+      "competition": "NORTH AND CENTRAL AMERICA: Nations League, League B",
+      "date": "2026-11-16T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmRoV2NMT3drZy96Tmx5UkZpR2xvdGNrY2NlU3hSZWVlc2kzODVzejNrWT0=/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eWtaZHRBRUhSUFRFU29raFgwb3VXVnlJNUtQbWEzeVBvREtsNDZGV2hFaz0=/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992429/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992377/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==",
+      "title": "Chile U-20 - Mexico U-20",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-16T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Live Streaming",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RmtUSndPV016ckE3aDRWcTEydTA3bWpMUFd4SEowMEwzb00rSi9NWnU0ND0=/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992377/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1992373/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
       "title": "Italy U-21 - Belgium U-21",
       "competition": "WORLD: International Friendlies",
@@ -2401,6 +2507,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992373/?token=NDE4MDI0XzE3OTU1NTk5NzJfMmUyOWFmNjQ2NWU5YjJjNGI1MGI5YTk3ZGQ4MjVjNjhkZTc1NzhlNw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1992373/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==",
+      "title": "Italy U-21 - Belgium U-21",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-16T17:15:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WmVXZ2NTYS84a1BUQVNySkVWcWxqSm9INWM1TE04Z3haMWhpQzRnV2Y1UT0=/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1992373/?token=NDE4MDI0XzE3OTU1NjMxMTZfYzg3MTNmY2I2MWVlYmI3MDEwMmYwZjMzZTM5ZmI3MGZkMDkyOTJhMw=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU0ODAzNDRfNTJmMzA3NzJlNzIzYjQ1NjBmNTQ2OWRkNDUwOTgzYTgyMmZmYzg1MA==",
@@ -2849,118 +2969,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU1NDUzMDZfMThjMjRjYTM5NjRiYTg4ZjZhMDg2MWUzNGRiNDIyZDFlZjU3OGNmOA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU1NDk1MTJfNDhjZmU4OTkyNDA4YjRkMDc4ZDM4Y2Y4ZTM5N2YyNTYxNWRhNDNjMQ==",
-      "title": "Eritrea - Guinea",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-16T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VjAxTTFSOGpXUXlSWnJUQ3VNeDdYVFhiVVgvaUM3Qm1jQ1FRak45WlZyWT0=/?token=NDE4MDI0XzE3OTU1NDk1MTJfNDhjZmU4OTkyNDA4YjRkMDc4ZDM4Y2Y4ZTM5N2YyNTYxNWRhNDNjMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU1NDk1MTJfNDhjZmU4OTkyNDA4YjRkMDc4ZDM4Y2Y4ZTM5N2YyNTYxNWRhNDNjMQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU1NDk1MTJfNDhjZmU4OTkyNDA4YjRkMDc4ZDM4Y2Y4ZTM5N2YyNTYxNWRhNDNjMQ==",
-      "title": "Central-Africa - Benin",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-16T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ODl4RHozeDlibGdReWpqQSt3VnVqWlRlMURoNFFjOGFJK2UyS1A5NVYzND0=/?token=NDE4MDI0XzE3OTU1NDk1MTJfNDhjZmU4OTkyNDA4YjRkMDc4ZDM4Y2Y4ZTM5N2YyNTYxNWRhNDNjMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU1NDk1MTJfNDhjZmU4OTkyNDA4YjRkMDc4ZDM4Y2Y4ZTM5N2YyNTYxNWRhNDNjMQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU1NTI0NDVfNTU5YTIwYjUyMWY1YTY4ZDkzZDQ2MDBkMmRjNWY1ZWFiZjAzODFjYg==",
-      "title": "Eritrea - Guinea",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-16T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VjAxTTFSOGpXUXlSWnJUQ3VNeDdYVFhiVVgvaUM3Qm1jQ1FRak45WlZyWT0=/?token=NDE4MDI0XzE3OTU1NTI0NDVfNTU5YTIwYjUyMWY1YTY4ZDkzZDQ2MDBkMmRjNWY1ZWFiZjAzODFjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU1NTI0NDVfNTU5YTIwYjUyMWY1YTY4ZDkzZDQ2MDBkMmRjNWY1ZWFiZjAzODFjYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU1NTI0NDVfNTU5YTIwYjUyMWY1YTY4ZDkzZDQ2MDBkMmRjNWY1ZWFiZjAzODFjYg==",
-      "title": "Central-Africa - Benin",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-16T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ODl4RHozeDlibGdReWpqQSt3VnVqWlRlMURoNFFjOGFJK2UyS1A5NVYzND0=/?token=NDE4MDI0XzE3OTU1NTI0NDVfNTU5YTIwYjUyMWY1YTY4ZDkzZDQ2MDBkMmRjNWY1ZWFiZjAzODFjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU1NTI0NDVfNTU5YTIwYjUyMWY1YTY4ZDkzZDQ2MDBkMmRjNWY1ZWFiZjAzODFjYg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU1NTYzMThfZDZmMjZlZTRmYTAyOTc3NWJlNWIwOTg4MDAyNjA2ODE2NTYzOGRkMA==",
-      "title": "Eritrea - Guinea",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-16T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VjAxTTFSOGpXUXlSWnJUQ3VNeDdYVFhiVVgvaUM3Qm1jQ1FRak45WlZyWT0=/?token=NDE4MDI0XzE3OTU1NTYzMThfZDZmMjZlZTRmYTAyOTc3NWJlNWIwOTg4MDAyNjA2ODE2NTYzOGRkMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU1NTYzMThfZDZmMjZlZTRmYTAyOTc3NWJlNWIwOTg4MDAyNjA2ODE2NTYzOGRkMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU1NTYzMThfZDZmMjZlZTRmYTAyOTc3NWJlNWIwOTg4MDAyNjA2ODE2NTYzOGRkMA==",
-      "title": "Central-Africa - Benin",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-16T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ODl4RHozeDlibGdReWpqQSt3VnVqWlRlMURoNFFjOGFJK2UyS1A5NVYzND0=/?token=NDE4MDI0XzE3OTU1NTYzMThfZDZmMjZlZTRmYTAyOTc3NWJlNWIwOTg4MDAyNjA2ODE2NTYzOGRkMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU1NTYzMThfZDZmMjZlZTRmYTAyOTc3NWJlNWIwOTg4MDAyNjA2ODE2NTYzOGRkMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU1NTk5NzJfMmUyOWFmNjQ2NWU5YjJjNGI1MGI5YTk3ZGQ4MjVjNjhkZTc1NzhlNw==",
-      "title": "Eritrea - Guinea",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-16T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VjAxTTFSOGpXUXlSWnJUQ3VNeDdYVFhiVVgvaUM3Qm1jQ1FRak45WlZyWT0=/?token=NDE4MDI0XzE3OTU1NTk5NzJfMmUyOWFmNjQ2NWU5YjJjNGI1MGI5YTk3ZGQ4MjVjNjhkZTc1NzhlNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992413/?token=NDE4MDI0XzE3OTU1NTk5NzJfMmUyOWFmNjQ2NWU5YjJjNGI1MGI5YTk3ZGQ4MjVjNjhkZTc1NzhlNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU1NTk5NzJfMmUyOWFmNjQ2NWU5YjJjNGI1MGI5YTk3ZGQ4MjVjNjhkZTc1NzhlNw==",
-      "title": "Central-Africa - Benin",
-      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
-      "date": "2026-11-16T16:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ODl4RHozeDlibGdReWpqQSt3VnVqWlRlMURoNFFjOGFJK2UyS1A5NVYzND0=/?token=NDE4MDI0XzE3OTU1NTk5NzJfMmUyOWFmNjQ2NWU5YjJjNGI1MGI5YTk3ZGQ4MjVjNjhkZTc1NzhlNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1992412/?token=NDE4MDI0XzE3OTU1NTk5NzJfMmUyOWFmNjQ2NWU5YjJjNGI1MGI5YTk3ZGQ4MjVjNjhkZTc1NzhlNw=="
     }
   ]
 }
