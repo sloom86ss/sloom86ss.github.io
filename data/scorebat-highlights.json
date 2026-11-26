@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T06:40:04.787628+00:00",
+  "updated_at": "2026-11-26T08:08:39.318192+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -171,6 +171,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841770/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Cruzeiro - Palmeiras",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R3pLRXBFaW5NOHlmb0FqVjlmR0lOaHFzV0x1aWFvc2hZazNtU0F0MTBnaz0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841770/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Flamengo - Atletico-PR",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/N3VTQjNGR3lIbzQ0d0Q5aWxMcm5ERDhuTzdTQ1BpRTFYd1hwMWcxQk5XND0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Remo - Chapecoense",
       "competition": "BRAZIL: Serie A",
@@ -255,6 +283,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Remo - Chapecoense",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmQ3Vm5vUEJWSTVHV1QyeU1veit4ck5JbGN2emJJenIwanFzalJaa25Hdz0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Coritiba - Santos",
       "competition": "BRAZIL: Serie A",
@@ -337,6 +379,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Coritiba - Santos",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Y2F2V1NPQjM4RVM0RC9abTQ3MkU4d1R1WklOZHdaNmhheEE4c3NadG10TT0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1988820/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
@@ -507,6 +563,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988819/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988820/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Reddis - Barakaldo",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXY1Y3JYY1pMTlIwQWVZbTJhMFJZaDZLMVRmZVlqdktFbitBT3VwY3Zyaz0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988820/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988819/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Deportivo Minera - Cartagena",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eWRYUjJET0ErSGxBWXpoTUlTMDVsajlxYmhwY2phQ3pDVjJnTkNjRnRaUT0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988819/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Alcoyano - Mallorca",
       "competition": "SPAIN: National Cup",
@@ -675,6 +759,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Alcoyano - Mallorca",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QzdEMFU2cURkVlBNM2RqekdETExTNmlVRmswdHhIZmZXNFI2SVdsY3RmOD0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Badajoz - Tenerife",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TWFYRG5ubmdRdDN2cTdnaThSQXRYWjAwWHRlaUUyYWZKM3BiK2lRWkVZaz0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Utebo - Sabadell",
       "competition": "SPAIN: National Cup",
@@ -841,6 +953,34 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1988807/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Utebo - Sabadell",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QWJmdmoybnAvSGxJNUVsWDlxNXVuZlVhd2NTNnRLOTNaUmJXcVhLTllLVT0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988807/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Portugalete - Real Union",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U3BMWkFEc1plS2dIc0JBYVBnOU1tMlVVd1FSM0lZdDN4SVNiZkFSWmx5RT0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988807/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU1NjY3NDhfYWU2YjhmNjMzMGZmNGRkZjRiZDZlOTNkMjAxYTY3YTg2NTdlNTgwMg==",
@@ -1221,6 +1361,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Argentina - Costa Rica",
+      "competition": "WORLD: International Friendlies",
+      "date": "2026-11-17T23:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1993117/?token=NDE4MDI0XzE3OTU1NjY3NDhfYWU2YjhmNjMzMGZmNGRkZjRiZDZlOTNkMjAxYTY3YTg2NTdlNTgwMg==",
       "title": "Niger - Morocco",
       "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
@@ -1597,6 +1751,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1993117/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1993117/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
+      "title": "Niger - Morocco",
+      "competition": "AFRICA: Africa Cup of Nations, Preliminary Round",
+      "date": "2026-11-17T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/WmdMNlIxYUNweTdXSWhDc201ZDYxcWZ3VHhIV3UzTTBTVXBwZnRCOHV3RT0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1993117/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1993099/?token=NDE4MDI0XzE3OTU1NjY3NDhfYWU2YjhmNjMzMGZmNGRkZjRiZDZlOTNkMjAxYTY3YTg2NTdlNTgwMg==",
@@ -2633,174 +2801,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1993128/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993127/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA==",
-      "title": "Poland - Sweden",
-      "competition": "EUROPE: UEFA Nations League B, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RldpbFAyUDYvOGVSLzRwMzlmSG13cHg4V1kraDJlQWQ2TUtvemhqSythaz0=/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993127/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993124/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA==",
-      "title": "Hungary - Northern Ireland",
-      "competition": "EUROPE: UEFA Nations League B, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NlFheXJBYUlwZ0dnOGJUdVdnb2ZOejJMK2ViNFI2ZU1oYXlGbUxoaU10VT0=/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993124/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993123/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA==",
-      "title": "Bosnia and Herzegovina - Romania",
-      "competition": "EUROPE: UEFA Nations League B, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RldLMWlxeHloSCtLaVFDb0gxRy9JSnNLMG8vS0VSZzNyaTVGbUZ1UlJSUT0=/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993123/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993125/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA==",
-      "title": "Ireland - Kosovo",
-      "competition": "EUROPE: UEFA Nations League B, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/blA1aFloVnJCUGhIbzlqbVBJdVRQZ1N2dG9rbGJIdVdjS0xIL29tcUMycz0=/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993125/?token=NDE4MDI0XzE3OTU2MTk5NDFfNDliY2RkZGVlMzI2MGFkMzg3OThjNmRiNjk2ZWYzMzI1YTdkMWRmMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993099/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==",
-      "title": "Wales - Portugal",
-      "competition": "EUROPE: UEFA Nations League A, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Z1R3T0ZVU295WjMycnRJcWJ1cWgzSWhQS1kxM09PNHFSbUNuUEhTV3hjYz0=/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993099/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993128/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==",
-      "title": "Ukraine - Georgia",
-      "competition": "EUROPE: UEFA Nations League B, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UnBycFFsczdrV2tySFJ2ZFpYUWFVaGNuWXNYSHhNcWFmSmRZVmVpeU9hOD0=/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993128/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993127/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==",
-      "title": "Poland - Sweden",
-      "competition": "EUROPE: UEFA Nations League B, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RldpbFAyUDYvOGVSLzRwMzlmSG13cHg4V1kraDJlQWQ2TUtvemhqSythaz0=/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993127/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993124/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==",
-      "title": "Hungary - Northern Ireland",
-      "competition": "EUROPE: UEFA Nations League B, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/NlFheXJBYUlwZ0dnOGJUdVdnb2ZOejJMK2ViNFI2ZU1oYXlGbUxoaU10VT0=/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993124/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993123/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==",
-      "title": "Bosnia and Herzegovina - Romania",
-      "competition": "EUROPE: UEFA Nations League B, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/RldLMWlxeHloSCtLaVFDb0gxRy9JSnNLMG8vS0VSZzNyaTVGbUZ1UlJSUT0=/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993123/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993125/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==",
-      "title": "Ireland - Kosovo",
-      "competition": "EUROPE: UEFA Nations League B, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/blA1aFloVnJCUGhIbzlqbVBJdVRQZ1N2dG9rbGJIdVdjS0xIL29tcUMycz0=/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993125/?token=NDE4MDI0XzE3OTU2MjUwNjZfN2Y4MjVjN2RlMTI4N2IxMDIxZDE1NTJjYjZhMGQ1ZDFkYzFiZjI1Mw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993099/?token=NDE4MDI0XzE3OTU2Mjc4ODdfMWU3MTI4OGE3ZjIzMzQ5M2EwN2ZiZDc5OGE5ODNmMzM2MDUwMzhmZg==",
-      "title": "Wales - Portugal",
-      "competition": "EUROPE: UEFA Nations League A, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Z1R3T0ZVU295WjMycnRJcWJ1cWgzSWhQS1kxM09PNHFSbUNuUEhTV3hjYz0=/?token=NDE4MDI0XzE3OTU2Mjc4ODdfMWU3MTI4OGE3ZjIzMzQ5M2EwN2ZiZDc5OGE5ODNmMzM2MDUwMzhmZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993099/?token=NDE4MDI0XzE3OTU2Mjc4ODdfMWU3MTI4OGE3ZjIzMzQ5M2EwN2ZiZDc5OGE5ODNmMzM2MDUwMzhmZg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993128/?token=NDE4MDI0XzE3OTU2Mjc4ODdfMWU3MTI4OGE3ZjIzMzQ5M2EwN2ZiZDc5OGE5ODNmMzM2MDUwMzhmZg==",
-      "title": "Ukraine - Georgia",
-      "competition": "EUROPE: UEFA Nations League B, Group Stage",
-      "date": "2026-11-17T19:45:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/UnBycFFsczdrV2tySFJ2ZFpYUWFVaGNuWXNYSHhNcWFmSmRZVmVpeU9hOD0=/?token=NDE4MDI0XzE3OTU2Mjc4ODdfMWU3MTI4OGE3ZjIzMzQ5M2EwN2ZiZDc5OGE5ODNmMzM2MDUwMzhmZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993128/?token=NDE4MDI0XzE3OTU2Mjc4ODdfMWU3MTI4OGE3ZjIzMzQ5M2EwN2ZiZDc5OGE5ODNmMzM2MDUwMzhmZg=="
     }
   ]
 }
