@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T19:47:22.229325+00:00",
+  "updated_at": "2026-11-26T21:03:44.460723+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -479,6 +479,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU3MjI0NDJfODgwZGUwN2YwNzE5NjBjYjQyYmU5YzYzYmVhMjJmMmE2MmM5OGJhZQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841770/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==",
+      "title": "Cruzeiro - Palmeiras",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R3pLRXBFaW5NOHlmb0FqVjlmR0lOaHFzV0x1aWFvc2hZazNtU0F0MTBnaz0=/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841770/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==",
+      "title": "Flamengo - Atletico-PR",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/N3VTQjNGR3lIbzQ0d0Q5aWxMcm5ERDhuTzdTQ1BpRTFYd1hwMWcxQk5XND0=/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Remo - Chapecoense",
       "competition": "BRAZIL: Serie A",
@@ -717,6 +745,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU3MjI0NDJfODgwZGUwN2YwNzE5NjBjYjQyYmU5YzYzYmVhMjJmMmE2MmM5OGJhZQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==",
+      "title": "Remo - Chapecoense",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmQ3Vm5vUEJWSTVHV1QyeU1veit4ck5JbGN2emJJenIwanFzalJaa25Hdz0=/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Coritiba - Santos",
       "competition": "BRAZIL: Serie A",
@@ -953,6 +995,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU3MjI0NDJfODgwZGUwN2YwNzE5NjBjYjQyYmU5YzYzYmVhMjJmMmE2MmM5OGJhZQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==",
+      "title": "Coritiba - Santos",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Y2F2V1NPQjM4RVM0RC9abTQ3MkU4d1R1WklOZHdaNmhheEE4c3NadG10TT0=/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1988820/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
@@ -1431,6 +1487,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988819/?token=NDE4MDI0XzE3OTU3MjI0NDJfODgwZGUwN2YwNzE5NjBjYjQyYmU5YzYzYmVhMjJmMmE2MmM5OGJhZQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988820/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==",
+      "title": "Reddis - Barakaldo",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXY1Y3JYY1pMTlIwQWVZbTJhMFJZaDZLMVRmZVlqdktFbitBT3VwY3Zyaz0=/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988820/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988819/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==",
+      "title": "Deportivo Minera - Cartagena",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eWRYUjJET0ErSGxBWXpoTUlTMDVsajlxYmhwY2phQ3pDVjJnTkNjRnRaUT0=/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988819/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Alcoyano - Mallorca",
       "competition": "SPAIN: National Cup",
@@ -1891,6 +1975,34 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU3MjI0NDJfODgwZGUwN2YwNzE5NjBjYjQyYmU5YzYzYmVhMjJmMmE2MmM5OGJhZQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==",
+      "title": "Alcoyano - Mallorca",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QzdEMFU2cURkVlBNM2RqekdETExTNmlVRmswdHhIZmZXNFI2SVdsY3RmOD0=/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==",
+      "title": "Badajoz - Tenerife",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T19:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TWFYRG5ubmdRdDN2cTdnaThSQXRYWjAwWHRlaUUyYWZKM3BiK2lRWkVZaz0=/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
@@ -2369,6 +2481,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988807/?token=NDE4MDI0XzE3OTU3MjI0NDJfODgwZGUwN2YwNzE5NjBjYjQyYmU5YzYzYmVhMjJmMmE2MmM5OGJhZQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==",
+      "title": "Utebo - Sabadell",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QWJmdmoybnAvSGxJNUVsWDlxNXVuZlVhd2NTNnRLOTNaUmJXcVhLTllLVT0=/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988807/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==",
+      "title": "Portugalete - Real Union",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T18:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U3BMWkFEc1plS2dIc0JBYVBnOU1tMlVVd1FSM0lZdDN4SVNiZkFSWmx5RT0=/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988807/?token=NDE4MDI0XzE3OTU3MjcwMjRfY2QxNzdlNmMwOGQzYTRlODY5OGI5ZDhiMjU3MDNmMzQzNDIzMTRlMQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU1NjY3NDhfYWU2YjhmNjMzMGZmNGRkZjRiZDZlOTNkMjAxYTY3YTg2NTdlNTgwMg==",
       "title": "Argentina - Costa Rica",
       "competition": "WORLD: International Friendlies",
@@ -2661,146 +2801,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NDk1MDlfYzM1NDRiZDU1OWMzYzJhZGQ0ODM3NDk1MjVhODg2YjZhNDY3ZGUwOQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
-      "title": "Argentina - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-17T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NTg0ODJfMWNjNzhmNzE4NWYxMTllMGExODAwMTU5ZTk5NGFhMmEzY2NmYzdmMA==",
-      "title": "Argentina - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-17T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2NTg0ODJfMWNjNzhmNzE4NWYxMTllMGExODAwMTU5ZTk5NGFhMmEzY2NmYzdmMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NTg0ODJfMWNjNzhmNzE4NWYxMTllMGExODAwMTU5ZTk5NGFhMmEzY2NmYzdmMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NjIzNDNfZGY3NjhmM2Q4ODI3YjVjMDZlMTY4NGY1ZDZjNDNlZTNmZGQyN2RjZg==",
-      "title": "Argentina - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-17T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2NjIzNDNfZGY3NjhmM2Q4ODI3YjVjMDZlMTY4NGY1ZDZjNDNlZTNmZGQyN2RjZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NjIzNDNfZGY3NjhmM2Q4ODI3YjVjMDZlMTY4NGY1ZDZjNDNlZTNmZGQyN2RjZg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NjY0NTZfYjVlZDFhZTU5MzRjMDIyYWU2MmMyODdhNDE2NTUxZjk4Yjk0MzQ1MQ==",
-      "title": "Argentina - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-17T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2NjY0NTZfYjVlZDFhZTU5MzRjMDIyYWU2MmMyODdhNDE2NTUxZjk4Yjk0MzQ1MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NjY0NTZfYjVlZDFhZTU5MzRjMDIyYWU2MmMyODdhNDE2NTUxZjk4Yjk0MzQ1MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NzA3MTBfNmQ1OTJmOTUxM2MwMTAwYTExZWJmZjIxMDdkZTNjYTI3YTk3NGVlMw==",
-      "title": "Argentina - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-17T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2NzA3MTBfNmQ1OTJmOTUxM2MwMTAwYTExZWJmZjIxMDdkZTNjYTI3YTk3NGVlMw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NzA3MTBfNmQ1OTJmOTUxM2MwMTAwYTExZWJmZjIxMDdkZTNjYTI3YTk3NGVlMw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg==",
-      "title": "Argentina - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-17T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2NzUyMDRfMzY3MTY1OTM3MjZhOGMxZTQyYjBjMzBhOWU3NWVmZThiZjNhZmI1Yg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==",
-      "title": "Argentina - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-17T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2ODA1MTlfZjMzN2NkZTVlNTA5OGY4ZTg3ZjBmNDA0NjcxNzkyZmM3OWI0MmM3MQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2ODQ4MTVfYzM5MWE1NzZhMjAzYmRjZTA0Mjc2ODBhMTUwZWVjMGY5NjkxY2JkNw==",
-      "title": "Argentina - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-17T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2ODQ4MTVfYzM5MWE1NzZhMjAzYmRjZTA0Mjc2ODBhMTUwZWVjMGY5NjkxY2JkNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2ODQ4MTVfYzM5MWE1NzZhMjAzYmRjZTA0Mjc2ODBhMTUwZWVjMGY5NjkxY2JkNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2ODk1NjRfNzU4YmRhOGYyNTZmODFiZjIzYWI5NDgzMTc2OGIxZmRmNmE0Y2E1YQ==",
-      "title": "Argentina - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-17T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2ODk1NjRfNzU4YmRhOGYyNTZmODFiZjIzYWI5NDgzMTc2OGIxZmRmNmE0Y2E1YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2ODk1NjRfNzU4YmRhOGYyNTZmODFiZjIzYWI5NDgzMTc2OGIxZmRmNmE0Y2E1YQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2OTMwNzNfNzA3ZjBjYzYyMjU0NjZmZWQ2Y2JjMDE1Y2FmMDQ5NTI1YTM3NjAzMQ==",
-      "title": "Argentina - Costa Rica",
-      "competition": "WORLD: International Friendlies",
-      "date": "2026-11-17T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/ajVPMmNRTzV5T2lqWTNQZlVCZmsxVCs5ditSOVlUUWRGR2MzU3BiUWx0ST0=/?token=NDE4MDI0XzE3OTU2OTMwNzNfNzA3ZjBjYzYyMjU0NjZmZWQ2Y2JjMDE1Y2FmMDQ5NTI1YTM3NjAzMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1993097/?token=NDE4MDI0XzE3OTU2OTMwNzNfNzA3ZjBjYzYyMjU0NjZmZWQ2Y2JjMDE1Y2FmMDQ5NTI1YTM3NjAzMQ=="
     }
   ]
 }
