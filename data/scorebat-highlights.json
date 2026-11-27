@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T21:37:32.759561+00:00",
+  "updated_at": "2026-11-27T22:38:21.059816+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -563,6 +563,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841776/?token=NDE4MDI0XzE3OTU4MTU0NTJfZDE4YmY1MzFjNzNkZjcyNDcwNzA5NGEwZDFlMjRjMmQ0ZTE1YmUyNw=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841777/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==",
+      "title": "Vitoria - RB Bragantino",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-19T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SnFZTFN2UEk2d3Z1QkVCdXRBM1BIbG5kTTVvbnF1QUd1WFFmOUNFTWdhUT0=/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841777/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841776/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==",
+      "title": "Vasco - Internacional",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-19T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dTFZWnMzeFhYR3AwWGxoZ1Q1MmwrMjV5Wm5vOGhjZXhqbUtZcGludmxkTT0=/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841776/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU3Mzc5MzBfZjY4MzE2NjhhYmRkZDNiNTA4ZDc1ZmRjMzE2ZDNkM2EwYTEwN2YwMQ==",
       "title": "Gremio - Bahia",
       "competition": "BRAZIL: Serie A",
@@ -1121,6 +1149,34 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MTU0NTJfZDE4YmY1MzFjNzNkZjcyNDcwNzA5NGEwZDFlMjRjMmQ0ZTE1YmUyNw=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==",
+      "title": "Gremio - Bahia",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-19T00:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U01tK1dubUdJTlc1aG94bXhJczZZQUwzclZUMzkrTG5ZZnZZSUw4bEYwVT0=/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==",
+      "title": "Corinthians - Botafogo",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-19T00:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXI2TTBvYWhwY2FyamZRbHkwZW94a053RXVDN20zTHNLdnR2SWZnQzZrTT0=/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1841770/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
@@ -2243,6 +2299,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU4MTU0NTJfZDE4YmY1MzFjNzNkZjcyNDcwNzA5NGEwZDFlMjRjMmQ0ZTE1YmUyNw=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841770/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==",
+      "title": "Cruzeiro - Palmeiras",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R3pLRXBFaW5NOHlmb0FqVjlmR0lOaHFzV0x1aWFvc2hZazNtU0F0MTBnaz0=/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841770/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==",
+      "title": "Flamengo - Atletico-PR",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/N3VTQjNGR3lIbzQ0d0Q5aWxMcm5ERDhuTzdTQ1BpRTFYd1hwMWcxQk5XND0=/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Remo - Chapecoense",
       "competition": "BRAZIL: Serie A",
@@ -2717,90 +2801,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU3OTIwODhfNWIwOTkwNWEyNTMwMGYwZTNkYWU2NDQ0MjNjMjA0Y2Q4NTI1ODNlNg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU3OTYxMzhfYTdkMGEyYzVhMzRiZjI0MDk0NzQyYTdhZDY1MzdjZjBkYzFkMTZlYQ==",
-      "title": "Remo - Chapecoense",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-18T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmQ3Vm5vUEJWSTVHV1QyeU1veit4ck5JbGN2emJJenIwanFzalJaa25Hdz0=/?token=NDE4MDI0XzE3OTU3OTYxMzhfYTdkMGEyYzVhMzRiZjI0MDk0NzQyYTdhZDY1MzdjZjBkYzFkMTZlYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU3OTYxMzhfYTdkMGEyYzVhMzRiZjI0MDk0NzQyYTdhZDY1MzdjZjBkYzFkMTZlYQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU4MDAyMjBfM2IzYWI2ZjExODgxMTk1Y2ZkZDdkM2RlMGE1NzYzZDJjZmQ3YjA1NQ==",
-      "title": "Remo - Chapecoense",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-18T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmQ3Vm5vUEJWSTVHV1QyeU1veit4ck5JbGN2emJJenIwanFzalJaa25Hdz0=/?token=NDE4MDI0XzE3OTU4MDAyMjBfM2IzYWI2ZjExODgxMTk1Y2ZkZDdkM2RlMGE1NzYzZDJjZmQ3YjA1NQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU4MDAyMjBfM2IzYWI2ZjExODgxMTk1Y2ZkZDdkM2RlMGE1NzYzZDJjZmQ3YjA1NQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU4MDQzMTNfZmVlZDQ2YThhOWZlMmI5MDkwMTBiOWEwMGZjYmZmMWI4NzYzMGU0Ng==",
-      "title": "Remo - Chapecoense",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-18T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmQ3Vm5vUEJWSTVHV1QyeU1veit4ck5JbGN2emJJenIwanFzalJaa25Hdz0=/?token=NDE4MDI0XzE3OTU4MDQzMTNfZmVlZDQ2YThhOWZlMmI5MDkwMTBiOWEwMGZjYmZmMWI4NzYzMGU0Ng==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU4MDQzMTNfZmVlZDQ2YThhOWZlMmI5MDkwMTBiOWEwMGZjYmZmMWI4NzYzMGU0Ng=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU4MDg1NjBfMTljOWFhNWNiYTQzYTZmMTkwZDcwNDc0NDE2N2Q5ZmQxYWY5YTYzYQ==",
-      "title": "Remo - Chapecoense",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-18T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmQ3Vm5vUEJWSTVHV1QyeU1veit4ck5JbGN2emJJenIwanFzalJaa25Hdz0=/?token=NDE4MDI0XzE3OTU4MDg1NjBfMTljOWFhNWNiYTQzYTZmMTkwZDcwNDc0NDE2N2Q5ZmQxYWY5YTYzYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU4MDg1NjBfMTljOWFhNWNiYTQzYTZmMTkwZDcwNDc0NDE2N2Q5ZmQxYWY5YTYzYQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU4MTE3ODJfOTc3NjE5ZDgzMjk2ZWEwNjc3MmE3MTZjMDdjZjE5NWM3NjJkYmFhMg==",
-      "title": "Remo - Chapecoense",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-18T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmQ3Vm5vUEJWSTVHV1QyeU1veit4ck5JbGN2emJJenIwanFzalJaa25Hdz0=/?token=NDE4MDI0XzE3OTU4MTE3ODJfOTc3NjE5ZDgzMjk2ZWEwNjc3MmE3MTZjMDdjZjE5NWM3NjJkYmFhMg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU4MTE3ODJfOTc3NjE5ZDgzMjk2ZWEwNjc3MmE3MTZjMDdjZjE5NWM3NjJkYmFhMg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU4MTU0NTJfZDE4YmY1MzFjNzNkZjcyNDcwNzA5NGEwZDFlMjRjMmQ0ZTE1YmUyNw==",
-      "title": "Remo - Chapecoense",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-18T23:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmQ3Vm5vUEJWSTVHV1QyeU1veit4ck5JbGN2emJJenIwanFzalJaa25Hdz0=/?token=NDE4MDI0XzE3OTU4MTU0NTJfZDE4YmY1MzFjNzNkZjcyNDcwNzA5NGEwZDFlMjRjMmQ0ZTE1YmUyNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU4MTU0NTJfZDE4YmY1MzFjNzNkZjcyNDcwNzA5NGEwZDFlMjRjMmQ0ZTE1YmUyNw=="
     }
   ]
 }
