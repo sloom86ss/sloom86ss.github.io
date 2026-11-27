@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T02:42:14.505029+00:00",
+  "updated_at": "2026-11-27T03:40:28.214183+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -87,6 +87,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841776/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841777/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==",
+      "title": "Vitoria - RB Bragantino",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-19T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SnFZTFN2UEk2d3Z1QkVCdXRBM1BIbG5kTTVvbnF1QUd1WFFmOUNFTWdhUT0=/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841777/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841776/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==",
+      "title": "Vasco - Internacional",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-19T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dTFZWnMzeFhYR3AwWGxoZ1Q1MmwrMjV5Wm5vOGhjZXhqbUtZcGludmxkTT0=/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841776/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU3Mzc5MzBfZjY4MzE2NjhhYmRkZDNiNTA4ZDc1ZmRjMzE2ZDNkM2EwYTEwN2YwMQ==",
       "title": "Gremio - Bahia",
       "competition": "BRAZIL: Serie A",
@@ -169,6 +197,34 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==",
+      "title": "Gremio - Bahia",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-19T00:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U01tK1dubUdJTlc1aG94bXhJczZZQUwzclZUMzkrTG5ZZnZZSUw4bEYwVT0=/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==",
+      "title": "Corinthians - Botafogo",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-19T00:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXI2TTBvYWhwY2FyamZRbHkwZW94a053RXVDN20zTHNLdnR2SWZnQzZrTT0=/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1841770/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
@@ -815,6 +871,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841770/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==",
+      "title": "Cruzeiro - Palmeiras",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/R3pLRXBFaW5NOHlmb0FqVjlmR0lOaHFzV0x1aWFvc2hZazNtU0F0MTBnaz0=/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841770/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==",
+      "title": "Flamengo - Atletico-PR",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/N3VTQjNGR3lIbzQ0d0Q5aWxMcm5ERDhuTzdTQ1BpRTFYd1hwMWcxQk5XND0=/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841771/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Remo - Chapecoense",
       "competition": "BRAZIL: Serie A",
@@ -1137,6 +1221,20 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==",
+      "title": "Remo - Chapecoense",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T23:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bmQ3Vm5vUEJWSTVHV1QyeU1veit4ck5JbGN2emJJenIwanFzalJaa25Hdz0=/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841774/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Coritiba - Santos",
       "competition": "BRAZIL: Serie A",
@@ -1457,6 +1555,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==",
+      "title": "Coritiba - Santos",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-18T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Y2F2V1NPQjM4RVM0RC9abTQ3MkU4d1R1WklOZHdaNmhheEE4c3NadG10TT0=/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841769/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1988820/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
@@ -2103,6 +2215,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1988819/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988820/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==",
+      "title": "Reddis - Barakaldo",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXY1Y3JYY1pMTlIwQWVZbTJhMFJZaDZLMVRmZVlqdktFbitBT3VwY3Zyaz0=/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988820/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1988819/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==",
+      "title": "Deportivo Minera - Cartagena",
+      "competition": "SPAIN: National Cup",
+      "date": "2026-11-18T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/eWRYUjJET0ErSGxBWXpoTUlTMDVsajlxYmhwY2phQ3pDVjJnTkNjRnRaUT0=/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1988819/?token=NDE4MDI0XzE3OTU3NTA4MjhfZmQyMzdmYjM3NGIyZDk4NWYyYTFhMTg3OGU1MmU2NzQxOGQ5YTVjYg=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
       "title": "Alcoyano - Mallorca",
       "competition": "SPAIN: National Cup",
@@ -2661,146 +2801,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU3Mzc5MzBfZjY4MzE2NjhhYmRkZDNiNTA4ZDc1ZmRjMzE2ZDNkM2EwYTEwN2YwMQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU3Mzc5MzBfZjY4MzE2NjhhYmRkZDNiNTA4ZDc1ZmRjMzE2ZDNkM2EwYTEwN2YwMQ==",
-      "title": "Badajoz - Tenerife",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-18T19:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TWFYRG5ubmdRdDN2cTdnaThSQXRYWjAwWHRlaUUyYWZKM3BiK2lRWkVZaz0=/?token=NDE4MDI0XzE3OTU3Mzc5MzBfZjY4MzE2NjhhYmRkZDNiNTA4ZDc1ZmRjMzE2ZDNkM2EwYTEwN2YwMQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU3Mzc5MzBfZjY4MzE2NjhhYmRkZDNiNTA4ZDc1ZmRjMzE2ZDNkM2EwYTEwN2YwMQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU3NDMwMThfYjY5ZTMyNmMzN2Q5MjRjYmNlMjZhMTFhZGY0YmQyYjM3ODEwNDhlZQ==",
-      "title": "Alcoyano - Mallorca",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-18T19:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QzdEMFU2cURkVlBNM2RqekdETExTNmlVRmswdHhIZmZXNFI2SVdsY3RmOD0=/?token=NDE4MDI0XzE3OTU3NDMwMThfYjY5ZTMyNmMzN2Q5MjRjYmNlMjZhMTFhZGY0YmQyYjM3ODEwNDhlZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU3NDMwMThfYjY5ZTMyNmMzN2Q5MjRjYmNlMjZhMTFhZGY0YmQyYjM3ODEwNDhlZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU3NDMwMThfYjY5ZTMyNmMzN2Q5MjRjYmNlMjZhMTFhZGY0YmQyYjM3ODEwNDhlZQ==",
-      "title": "Badajoz - Tenerife",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-18T19:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TWFYRG5ubmdRdDN2cTdnaThSQXRYWjAwWHRlaUUyYWZKM3BiK2lRWkVZaz0=/?token=NDE4MDI0XzE3OTU3NDMwMThfYjY5ZTMyNmMzN2Q5MjRjYmNlMjZhMTFhZGY0YmQyYjM3ODEwNDhlZQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU3NDMwMThfYjY5ZTMyNmMzN2Q5MjRjYmNlMjZhMTFhZGY0YmQyYjM3ODEwNDhlZQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ==",
-      "title": "Alcoyano - Mallorca",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-18T19:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QzdEMFU2cURkVlBNM2RqekdETExTNmlVRmswdHhIZmZXNFI2SVdsY3RmOD0=/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988810/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ==",
-      "title": "Badajoz - Tenerife",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-18T19:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/TWFYRG5ubmdRdDN2cTdnaThSQXRYWjAwWHRlaUUyYWZKM3BiK2lRWkVZaz0=/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988812/?token=NDE4MDI0XzE3OTU3NDczMzRfMjRjNWQ3YTA2OGNiY2Q3Y2UyZmQ4YjJjYTM3ODI5Y2ZlODY0ZTk4OQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
-      "title": "Utebo - Sabadell",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-18T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QWJmdmoybnAvSGxJNUVsWDlxNXVuZlVhd2NTNnRLOTNaUmJXcVhLTllLVT0=/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988807/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==",
-      "title": "Portugalete - Real Union",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-18T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U3BMWkFEc1plS2dIc0JBYVBnOU1tMlVVd1FSM0lZdDN4SVNiZkFSWmx5RT0=/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988807/?token=NDE4MDI0XzE3OTU2NTMyMjJfNWFiMWEzMzllZGY5ZjBmOWU3OGJjZGEwNjdlMDlhNjgyNzhhMzA3OA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU2NTg0ODJfMWNjNzhmNzE4NWYxMTllMGExODAwMTU5ZTk5NGFhMmEzY2NmYzdmMA==",
-      "title": "Utebo - Sabadell",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-18T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QWJmdmoybnAvSGxJNUVsWDlxNXVuZlVhd2NTNnRLOTNaUmJXcVhLTllLVT0=/?token=NDE4MDI0XzE3OTU2NTg0ODJfMWNjNzhmNzE4NWYxMTllMGExODAwMTU5ZTk5NGFhMmEzY2NmYzdmMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU2NTg0ODJfMWNjNzhmNzE4NWYxMTllMGExODAwMTU5ZTk5NGFhMmEzY2NmYzdmMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988807/?token=NDE4MDI0XzE3OTU2NTg0ODJfMWNjNzhmNzE4NWYxMTllMGExODAwMTU5ZTk5NGFhMmEzY2NmYzdmMA==",
-      "title": "Portugalete - Real Union",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-18T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U3BMWkFEc1plS2dIc0JBYVBnOU1tMlVVd1FSM0lZdDN4SVNiZkFSWmx5RT0=/?token=NDE4MDI0XzE3OTU2NTg0ODJfMWNjNzhmNzE4NWYxMTllMGExODAwMTU5ZTk5NGFhMmEzY2NmYzdmMA==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988807/?token=NDE4MDI0XzE3OTU2NTg0ODJfMWNjNzhmNzE4NWYxMTllMGExODAwMTU5ZTk5NGFhMmEzY2NmYzdmMA=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU2NjIzNDNfZGY3NjhmM2Q4ODI3YjVjMDZlMTY4NGY1ZDZjNDNlZTNmZGQyN2RjZg==",
-      "title": "Utebo - Sabadell",
-      "competition": "SPAIN: National Cup",
-      "date": "2026-11-18T18:00:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QWJmdmoybnAvSGxJNUVsWDlxNXVuZlVhd2NTNnRLOTNaUmJXcVhLTllLVT0=/?token=NDE4MDI0XzE3OTU2NjIzNDNfZGY3NjhmM2Q4ODI3YjVjMDZlMTY4NGY1ZDZjNDNlZTNmZGQyN2RjZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1988809/?token=NDE4MDI0XzE3OTU2NjIzNDNfZGY3NjhmM2Q4ODI3YjVjMDZlMTY4NGY1ZDZjNDNlZTNmZGQyN2RjZg=="
     }
   ]
 }
