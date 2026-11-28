@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-28T08:35:24.762846+00:00",
+  "updated_at": "2026-11-28T09:34:44.084272+00:00",
   "provider": "ScoreBat Free Feed",
   "response": [
     {
@@ -259,6 +259,38 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1911873/?token=NDE4MDI0XzE3OTU4NTQ5MjRfNzY3YWE1ZDQ0NGU0ZmRhMDg4ZGJiZDEyNmEwOWUzOGQxZGVjNzNlOQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1900692/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Barnsley - Sheffield Wednesday",
+      "competition": "ENGLAND: League One",
+      "date": "2026-11-20T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/VjMwVEk3YlB6OUlTcG1pUTlzK1ZkOGszZERkM2tSckhybUpMWEJTVUw3ST0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1900692/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1911873/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Athletic Bilbao - Espanyol",
+      "competition": "SPAIN: La Liga",
+      "date": "2026-11-20T20:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/aVp6NkhrcGo0WFpaamRLNDRUZmpRdHdJdm94clQxQ1pHRWc1c1VENmNpdz0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d0lCZHV5b1p6aGFBNkt6eDdBYzd3UmFxaGtFdXlpSDJLVmVHc3hjbGZ1RT0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1911873/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1898750/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ==",
       "title": "Cercle Brugge - Westerlo",
       "competition": "BELGIUM: First Division A",
@@ -481,6 +513,34 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1902536/?token=NDE4MDI0XzE3OTU4NTQ5MjRfNzY3YWE1ZDQ0NGU0ZmRhMDg4ZGJiZDEyNmEwOWUzOGQxZGVjNzNlOQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1898750/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Cercle Brugge - Westerlo",
+      "competition": "BELGIUM: First Division A",
+      "date": "2026-11-20T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Q0VFclFKZitHUmNjSGRmV1YyMms0NXA0clpBVW9EbG1UdW1wS2tiZkJXcz0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1898750/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1902536/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Troyes - Le Havre",
+      "competition": "FRANCE: Ligue 1",
+      "date": "2026-11-20T19:45:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/YzV5TFVJZmFrVFlSTVRTa0tXNXhiOWx6MDlueXVSby9CWjNQU04rM2w1az0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1902536/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1912270/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ==",
@@ -707,6 +767,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1894806/?token=NDE4MDI0XzE3OTU4NTQ5MjRfNzY3YWE1ZDQ0NGU0ZmRhMDg4ZGJiZDEyNmEwOWUzOGQxZGVjNzNlOQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1912270/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Bayern Munich - Koln",
+      "competition": "GERMANY: Bundesliga",
+      "date": "2026-11-20T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U09XTFRqWkt6YStNbGZOLysreGgxN1pGUnRPRTJCUkRaeWN3QVI4MEdldz0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1912270/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1894806/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Pogon Szczecin - Slask",
+      "competition": "POLAND: Ekstraklasa",
+      "date": "2026-11-20T19:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K1RvTVBqOWFQVjNSNk5VK2pQRFNxMTc2dkF3c3ZHUjZiOWdpWlY0aW9Idz0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1894806/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1894805/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ==",
       "title": "Piast Gliwice - Korona",
       "competition": "POLAND: Ekstraklasa",
@@ -817,6 +905,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1894805/?token=NDE4MDI0XzE3OTU4NTQ5MjRfNzY3YWE1ZDQ0NGU0ZmRhMDg4ZGJiZDEyNmEwOWUzOGQxZGVjNzNlOQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1894805/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Piast Gliwice - Korona",
+      "competition": "POLAND: Ekstraklasa",
+      "date": "2026-11-20T17:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/d1g0ZWtCQ3VUMG1FNFB5UEd6YmRTbm9VS2ovbHl3MWdIbG9JeGpJSnhCcz0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1894805/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1897761/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ==",
@@ -1187,6 +1289,52 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1897754/?token=NDE4MDI0XzE3OTU4NTQ5MjRfNzY3YWE1ZDQ0NGU0ZmRhMDg4ZGJiZDEyNmEwOWUzOGQxZGVjNzNlOQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1897761/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Vissel Kobe - Mito Hollyhock",
+      "competition": "JAPAN: J-League",
+      "date": "2026-11-20T10:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/bXd6dGxXZmUvZ3crbXhaS3ZhLytSc3c3UzlxeVhIT0E1Y09uMFp5emQ1ND0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1897761/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1897755/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Kashiwa Reysol - JEF United Ichihara",
+      "competition": "JAPAN: J-League",
+      "date": "2026-11-20T10:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/MnIvMjgxSnk1ZHlhMVNaZUovZ01uL1plVmN2L3hGMDJ4S05leWNGRTVNST0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        },
+        {
+          "title": "Live Stream",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/K09YRTE5U2dUaWIyYWNyd0UrQThNZnVuMkZkOTcwNmRUVlQ3RDZOSEljWT0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1897755/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1897754/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Kashima Antlers - Shimizu S-Pulse",
+      "competition": "JAPAN: J-League",
+      "date": "2026-11-20T10:00:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/QUYrSzRJQnlTNjJid0tOc0F2R0hDMGVZbVlvU2tFMzBrRzJqaE5uYjBMYz0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1897754/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841775/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ==",
       "title": "Sao Paulo - Fluminense",
       "competition": "BRAZIL: Serie A",
@@ -1297,6 +1445,20 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841775/?token=NDE4MDI0XzE3OTU4NTQ5MjRfNzY3YWE1ZDQ0NGU0ZmRhMDg4ZGJiZDEyNmEwOWUzOGQxZGVjNzNlOQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841775/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Sao Paulo - Fluminense",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-20T00:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/Z0dTcGNWZnl2SitMTEh4NTUzWkpRWDAzc3RDbEFTZlZKTEhic0ZlcXRJYz0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841775/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
     },
     {
       "video_id": "https://www.scorebat.com/embed/matchview/1841777/?token=NDE4MDI0XzE3OTU3Mzc5MzBfZjY4MzE2NjhhYmRkZDNiNTA4ZDc1ZmRjMzE2ZDNkM2EwYTEwN2YwMQ==",
@@ -2139,6 +2301,34 @@
       "source_url": "https://www.scorebat.com/embed/matchview/1841776/?token=NDE4MDI0XzE3OTU4NTQ5MjRfNzY3YWE1ZDQ0NGU0ZmRhMDg4ZGJiZDEyNmEwOWUzOGQxZGVjNzNlOQ=="
     },
     {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841777/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Vitoria - RB Bragantino",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-19T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/SnFZTFN2UEk2d3Z1QkVCdXRBM1BIbG5kTTVvbnF1QUd1WFFmOUNFTWdhUT0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841777/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
+    },
+    {
+      "video_id": "https://www.scorebat.com/embed/matchview/1841776/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==",
+      "title": "Vasco - Internacional",
+      "competition": "BRAZIL: Serie A",
+      "date": "2026-11-19T22:30:00+00:00",
+      "videos": [
+        {
+          "title": "Highlights",
+          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dTFZWnMzeFhYR3AwWGxoZ1Q1MmwrMjV5Wm5vOGhjZXhqbUtZcGludmxkTT0=/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
+        }
+      ],
+      "source": "ScoreBat",
+      "source_url": "https://www.scorebat.com/embed/matchview/1841776/?token=NDE4MDI0XzE3OTU4NTg0ODRfZmNmYjM5OTI1MzM5NTI3ZWYzOGViODA1YjliYmIzMGYyNDNmMTRkNQ=="
+    },
+    {
       "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU3Mzc5MzBfZjY4MzE2NjhhYmRkZDNiNTA4ZDc1ZmRjMzE2ZDNkM2EwYTEwN2YwMQ==",
       "title": "Gremio - Bahia",
       "competition": "BRAZIL: Serie A",
@@ -2683,188 +2873,6 @@
       ],
       "source": "ScoreBat",
       "source_url": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MTU0NTJfZDE4YmY1MzFjNzNkZjcyNDcwNzA5NGEwZDFlMjRjMmQ0ZTE1YmUyNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MTU0NTJfZDE4YmY1MzFjNzNkZjcyNDcwNzA5NGEwZDFlMjRjMmQ0ZTE1YmUyNw==",
-      "title": "Corinthians - Botafogo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXI2TTBvYWhwY2FyamZRbHkwZW94a053RXVDN20zTHNLdnR2SWZnQzZrTT0=/?token=NDE4MDI0XzE3OTU4MTU0NTJfZDE4YmY1MzFjNzNkZjcyNDcwNzA5NGEwZDFlMjRjMmQ0ZTE1YmUyNw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MTU0NTJfZDE4YmY1MzFjNzNkZjcyNDcwNzA5NGEwZDFlMjRjMmQ0ZTE1YmUyNw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==",
-      "title": "Gremio - Bahia",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U01tK1dubUdJTlc1aG94bXhJczZZQUwzclZUMzkrTG5ZZnZZSUw4bEYwVT0=/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==",
-      "title": "Corinthians - Botafogo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXI2TTBvYWhwY2FyamZRbHkwZW94a053RXVDN20zTHNLdnR2SWZnQzZrTT0=/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MTkxMDBfZTVhMzA2YmE4ZGM2NTMxNGY3NWU2NTk0ZmU0OGI0ZGQzY2VmNTcyZg=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MjI0NDRfYjQ5NDAzMDc0OTUwMWZhMmFkN2Q0YzdhODZjZDUwMzg3MGYzNjVhYQ==",
-      "title": "Gremio - Bahia",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U01tK1dubUdJTlc1aG94bXhJczZZQUwzclZUMzkrTG5ZZnZZSUw4bEYwVT0=/?token=NDE4MDI0XzE3OTU4MjI0NDRfYjQ5NDAzMDc0OTUwMWZhMmFkN2Q0YzdhODZjZDUwMzg3MGYzNjVhYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MjI0NDRfYjQ5NDAzMDc0OTUwMWZhMmFkN2Q0YzdhODZjZDUwMzg3MGYzNjVhYQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MjI0NDRfYjQ5NDAzMDc0OTUwMWZhMmFkN2Q0YzdhODZjZDUwMzg3MGYzNjVhYQ==",
-      "title": "Corinthians - Botafogo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXI2TTBvYWhwY2FyamZRbHkwZW94a053RXVDN20zTHNLdnR2SWZnQzZrTT0=/?token=NDE4MDI0XzE3OTU4MjI0NDRfYjQ5NDAzMDc0OTUwMWZhMmFkN2Q0YzdhODZjZDUwMzg3MGYzNjVhYQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MjI0NDRfYjQ5NDAzMDc0OTUwMWZhMmFkN2Q0YzdhODZjZDUwMzg3MGYzNjVhYQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ==",
-      "title": "Gremio - Bahia",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U01tK1dubUdJTlc1aG94bXhJczZZQUwzclZUMzkrTG5ZZnZZSUw4bEYwVT0=/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ==",
-      "title": "Corinthians - Botafogo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXI2TTBvYWhwY2FyamZRbHkwZW94a053RXVDN20zTHNLdnR2SWZnQzZrTT0=/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MjYwMDVfOTMzMWM0OWUyZjEzYmEzZTJjNDAxYjA0ZjNlMDJmMmU4MTQxYWZjNQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MzExODZfYThmYjBhMWVlNzBlODE5YzM1MzgxM2ZmMThiYTFlNjc3Y2MwY2E0Yw==",
-      "title": "Gremio - Bahia",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U01tK1dubUdJTlc1aG94bXhJczZZQUwzclZUMzkrTG5ZZnZZSUw4bEYwVT0=/?token=NDE4MDI0XzE3OTU4MzExODZfYThmYjBhMWVlNzBlODE5YzM1MzgxM2ZmMThiYTFlNjc3Y2MwY2E0Yw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MzExODZfYThmYjBhMWVlNzBlODE5YzM1MzgxM2ZmMThiYTFlNjc3Y2MwY2E0Yw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MzExODZfYThmYjBhMWVlNzBlODE5YzM1MzgxM2ZmMThiYTFlNjc3Y2MwY2E0Yw==",
-      "title": "Corinthians - Botafogo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXI2TTBvYWhwY2FyamZRbHkwZW94a053RXVDN20zTHNLdnR2SWZnQzZrTT0=/?token=NDE4MDI0XzE3OTU4MzExODZfYThmYjBhMWVlNzBlODE5YzM1MzgxM2ZmMThiYTFlNjc3Y2MwY2E0Yw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MzExODZfYThmYjBhMWVlNzBlODE5YzM1MzgxM2ZmMThiYTFlNjc3Y2MwY2E0Yw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MzQ5MTVfMmY2NGJjNDQ2M2QyNjFlOGY0MzdiMWZkNzM4ZjViOWVmNTk5OTU5Mw==",
-      "title": "Gremio - Bahia",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U01tK1dubUdJTlc1aG94bXhJczZZQUwzclZUMzkrTG5ZZnZZSUw4bEYwVT0=/?token=NDE4MDI0XzE3OTU4MzQ5MTVfMmY2NGJjNDQ2M2QyNjFlOGY0MzdiMWZkNzM4ZjViOWVmNTk5OTU5Mw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4MzQ5MTVfMmY2NGJjNDQ2M2QyNjFlOGY0MzdiMWZkNzM4ZjViOWVmNTk5OTU5Mw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MzQ5MTVfMmY2NGJjNDQ2M2QyNjFlOGY0MzdiMWZkNzM4ZjViOWVmNTk5OTU5Mw==",
-      "title": "Corinthians - Botafogo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXI2TTBvYWhwY2FyamZRbHkwZW94a053RXVDN20zTHNLdnR2SWZnQzZrTT0=/?token=NDE4MDI0XzE3OTU4MzQ5MTVfMmY2NGJjNDQ2M2QyNjFlOGY0MzdiMWZkNzM4ZjViOWVmNTk5OTU5Mw==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4MzQ5MTVfMmY2NGJjNDQ2M2QyNjFlOGY0MzdiMWZkNzM4ZjViOWVmNTk5OTU5Mw=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4Mzg3NzVfZDFiMWI1OTY3NTM2YWQ4ZTdjNmMxODNlNTg5ZGQwMGQ5YTUzMDM0YQ==",
-      "title": "Gremio - Bahia",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/U01tK1dubUdJTlc1aG94bXhJczZZQUwzclZUMzkrTG5ZZnZZSUw4bEYwVT0=/?token=NDE4MDI0XzE3OTU4Mzg3NzVfZDFiMWI1OTY3NTM2YWQ4ZTdjNmMxODNlNTg5ZGQwMGQ5YTUzMDM0YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841772/?token=NDE4MDI0XzE3OTU4Mzg3NzVfZDFiMWI1OTY3NTM2YWQ4ZTdjNmMxODNlNTg5ZGQwMGQ5YTUzMDM0YQ=="
-    },
-    {
-      "video_id": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4Mzg3NzVfZDFiMWI1OTY3NTM2YWQ4ZTdjNmMxODNlNTg5ZGQwMGQ5YTUzMDM0YQ==",
-      "title": "Corinthians - Botafogo",
-      "competition": "BRAZIL: Serie A",
-      "date": "2026-11-19T00:30:00+00:00",
-      "videos": [
-        {
-          "title": "Highlights",
-          "embed": "<div style='width:100%;height:0px;position:relative;padding-bottom:56.250%;background:#000;'><iframe src='https://www.scorebat.com/embed/v/dXI2TTBvYWhwY2FyamZRbHkwZW94a053RXVDN20zTHNLdnR2SWZnQzZrTT0=/?token=NDE4MDI0XzE3OTU4Mzg3NzVfZDFiMWI1OTY3NTM2YWQ4ZTdjNmMxODNlNTg5ZGQwMGQ5YTUzMDM0YQ==&utm_source=api&utm_medium=video&utm_campaign=free-feed' frameborder='0' width='100%' height='100%' allowfullscreen allow='autoplay; fullscreen' style='width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;'></iframe></div>"
-        }
-      ],
-      "source": "ScoreBat",
-      "source_url": "https://www.scorebat.com/embed/matchview/1841768/?token=NDE4MDI0XzE3OTU4Mzg3NzVfZDFiMWI1OTY3NTM2YWQ4ZTdjNmMxODNlNTg5ZGQwMGQ5YTUzMDM0YQ=="
     }
   ]
 }
